@@ -31,7 +31,7 @@ class UrlShortenerHooks {
 	 */
 	public static function setupSchema( DatabaseUpdater $du ) {
 		$base = __DIR__ . '/schemas';
-		$du->addExtensionTable( 'urlshortcoddes', '$base/urlshortcodes.sql' );
+		$du->addExtensionTable( 'urlshortcoddes', "$base/urlshortcodes.sql" );
 		return true;
 	}
 }
