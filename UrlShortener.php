@@ -27,6 +27,13 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  */
 $wgUrlShortenerTemplate = false;
 
+/**
+ * If you're running a wiki farm, you probably just want to have one
+ * central database with all of your short urls.
+ * If not set, uses the local wiki's database.
+ */
+$wgUrlShortenerDBName = false;
+
 // Extension credits that will show up on Special:Version
 $wgExtensionCredits['specialpage'][] = array(
 	'path' => __FILE__,

@@ -30,7 +30,7 @@ class UrlShortenerUtils {
 		$memcKey = wfMemcKey( 'urlshortcode', 'title', md5( $url ) );
 		$id = $wgMemc->get( $memcKey );
 		if ( !$id ) {
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = self::getDB( DB_SLAVE );
 			$entry = $dbr->selectRow(
 				'urlshortcodes',
 				array( 'usc_id' ),
@@ -42,7 +42,7 @@ class UrlShortenerUtils {
 			if ( $entry !== false ) {
 				$id = $entry->usc_id;
 			} else {
-				$dbw = wfGetDB( DB_MASTER );
+				$dbw = self::getDB( DB_MASTER );
 				// FIXME: Potential race condition since we're checking a slave first for existance
 				// but writing to Master, and there's a unique constraint on the url column.
 				// Should be rare, but we should handle it properly anyway.
@@ -81,7 +81,7 @@ class UrlShortenerUtils {
 				return false;
 			}
 
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = self::getDB( DB_SLAVE );
 			$entry = $dbr->selectRow(
 				'urlshortcodes',
 				array( 'usc_url' ),
@@ -100,5 +100,18 @@ class UrlShortenerUtils {
 			$wgMemc->set( $memcKey, $url );
 		}
 		return $url;
+	}
+
+	/**
+	 * @param int $type DB_SLAVE or DB_MASTER
+	 * @return DatabaseBase
+	 */
+	public static function getDB( $type ) {
+		global $wgUrlShortenerDBName;
+		if ( $wgUrlShortenerDBName !== false ) {
+			return wfGetDB( $type, array(), $wgUrlShortenerDBName );
+		} else {
+			return wfGetDB( $type );
+		}
 	}
 }
