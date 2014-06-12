@@ -51,11 +51,15 @@ $wgExtensionMessagesFiles['UrlShortenerAlias'] = __DIR__ . '/UrlShortener.alias.
 $wgAutoloadClasses['UrlShortenerUtils'] = __DIR__ . '/UrlShortener.utils.php';
 $wgAutoloadClasses['UrlShortenerHooks'] = __DIR__ . '/UrlShortener.hooks.php';
 $wgAutoloadClasses['SpecialUrlShortener'] = __DIR__ . '/SpecialUrlShortener.php';
+$wgAutoloadClasses['ApiShortenUrl'] = __DIR__ . '/ApiShortenUrl.php';
+
 $wgSpecialPages['UrlShortener'] = 'SpecialUrlShortener';
 $wgSpecialPageGroups['UrlShortener'] = 'pagetools';
 
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'UrlShortenerHooks::onLoadExtensionSchemaUpdates';
 $wgHooks['WebRequestPathInfoRouter'][] = 'UrlShortenerHooks::onWebRequestPathInfoRouter';
+
+$wgAPIModules['shortenurl'] = 'ApiShortenUrl';
 
 $wgResourceModules['ext.urlShortener.special'] = array(
 	'styles' => 'less/ext.urlShortener.special.less',

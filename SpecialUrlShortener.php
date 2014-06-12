@@ -66,35 +66,13 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 * @return bool|string true if url is valid, error message otherwise
 	 */
 	public function validateURL( $url, $allData ) {
-		// TODO: Add more validation here!
-		if ( wfParseUrl( $url ) !== false ) {
+		$validity_check =  UrlShortenerUtils::validateUrl( $url );
+		if ( $validity_check === true ) {
 			return true;
-		} else {
-			return $this->msg( 'urlshortener-error-malformed-url' )->text();
 		}
+		return $this->msg( $validity_check )->text();
 	}
 
-	/**
-	 * Create a fully qualified short URL for the given shortcode.
-	 *
-	 * @param $shortCode shortcode to generate URL For.
-	 * @return String The fully qualified URL
-	 */
-	public function makeUrl( $shortCode ) {
-		global $wgUrlShortenerTemplate, $wgServer;
-
-		if ( !is_string( $wgUrlShortenerTemplate ) ) {
-			$urlTemplate = SpecialPage::getTitleFor( $this->getName(), '$1' )->getFullUrl();
-		} else {
-			$urlTemplate = $wgServer . $wgUrlShortenerTemplate;
-		}
-		$url = str_replace( '$1', $shortCode, $urlTemplate );
-
-		// Make sure the URL is fully qualified
-		$url = wfExpandUrl( $url );
-
-		return $url;
-	}
 
 	/**
 	 * Generate the form used to input the URL to shorten.
@@ -135,7 +113,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 			'type' => 'text',
 			'readonly' => true,
 			'id' => 'mwe-urlshortener-url-textbox',
-			'value' => $this->makeUrl( UrlShortenerUtils::getShortCode( $data['url']  ) )
+			'value' => UrlShortenerUtils::makeUrl( UrlShortenerUtils::getShortCode( $data['url']  ) )
 		));
 		$out->addHTML( $html );
 		return true;

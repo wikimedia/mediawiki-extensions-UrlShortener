@@ -114,4 +114,40 @@ class UrlShortenerUtils {
 			return wfGetDB( $type );
 		}
 	}
+
+	/**
+	 * Create a fully qualified short URL for the given shortcode.
+	 *
+	 * @param $shortCode String base64 shortcode to generate URL For.
+	 * @return String The fully qualified URL
+	 */
+	public static function makeUrl( $shortCode ) {
+		global $wgUrlShortenerTemplate, $wgServer;
+
+		if ( !is_string( $wgUrlShortenerTemplate ) ) {
+			$urlTemplate = SpecialPage::getTitleFor( 'UrlShortener', '$1' )->getFullUrl();
+		} else {
+			$urlTemplate = $wgServer . $wgUrlShortenerTemplate;
+		}
+		$url = str_replace( '$1', $shortCode, $urlTemplate );
+
+		// Make sure the URL is fully qualified
+		$url = wfExpandUrl( $url );
+
+		return $url;
+	}
+
+	/**
+	 * Validates a given URL to see if it is allowed to be used to create a short URL
+	 *
+	 * @param $url String Url to Validate
+	 * @return bool|string true if it is valid, or error message key if invalid
+	 */
+	public static function validateUrl( $url ) {
+		if ( wfParseUrl( $url ) !== false ) {
+			return true;
+		} else {
+			return 'urlshortener-error-malformed-url';
+		}
+	}
 }
