@@ -112,7 +112,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 			),
 			'submit' => array(
 				'class' => 'HTMLSubmitField',
-				'value' => $this->msg( 'urlshortener-url-input-submit' )->text(),
+				'default' => $this->msg( 'urlshortener-url-input-submit' )->text(),
 				'cssclass' => 'mw-ui-button mw-ui-progressive',
 				'id' => 'mwe-urlshortener-url-submit'
 			)
