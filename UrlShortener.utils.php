@@ -1,0 +1,104 @@
+<?php
+/**
+ * Functions used for decoding/encoding URLs
+ *
+ * @file
+ * @ingroup Extensions
+ * @author Yuvi Panda, http://yuvi.in
+ * @copyright © 2011 Yuvaraj Pandian (yuvipanda@yuvi.in)
+ * @licence Modified BSD License
+ */
+
+if ( !defined( 'MEDIAWIKI' ) ) {
+	exit( 1 );
+}
+
+class UrlShortenerUtils {
+
+	/**
+	 * Gets the short code for the given URL.
+	 *
+	 * If it already exists in cache or the database, just returns that.
+	 * Otherwise, a new shortcode entry is created and returned.
+	 *
+	 * @param $url URL to encode
+	 * @return string base36 encoded shortcode that refers to the $url
+	 */
+	public static function getShortCode( $url ) {
+		global $wgMemc;
+
+		$memcKey = wfMemcKey( 'urlshortcode', 'title', md5( $url ) );
+		$id = $wgMemc->get( $memcKey );
+		if ( !$id ) {
+			$dbr = wfGetDB( DB_SLAVE );
+			$entry = $dbr->selectRow(
+				'urlshortcodes',
+				array( 'usc_id' ),
+				array(
+					'usc_url_hash' => md5( $url ),
+				),
+				__METHOD__
+			);
+			if ( $entry !== false ) {
+				$id = $entry->usc_id;
+			} else {
+				$dbw = wfGetDB( DB_MASTER );
+				// FIXME: Potential race condition since we're checking a slave first for existance
+				// but writing to Master, and there's a unique constraint on the url column.
+				// Should be rare, but we should handle it properly anyway.
+				$rowData = array(
+					'usc_url' => $url,
+					'usc_url_hash' => md5( $url )
+				);
+				$dbw->insert( 'urlshortcodes', $rowData, __METHOD__ );
+				$id = $dbw->insertId();
+
+				// Delete any negative cache entries for this shortcode we might have
+				$shortCodeKey = wfMemcKey( 'urlshortcode', 'id', $id );
+				$wgMemc->delete( $shortCodeKey );
+			}
+			$wgMemc->set( $memcKey, $id );
+		}
+		return base_convert( $id, 10, 36 );
+	}
+
+	/**
+	 * Retreives a URL for the given shortcode, or false if there's none.
+	 *
+	 * @param $shortCode String
+	 * @return String
+	 */
+	public static function getURL( $shortCode ) {
+		global $wgMemc;
+
+		$id = intval( base_convert( $shortCode, 36, 10 ) );
+		$memcKey = wfMemcKey( 'urlshortcode', 'id', $id );
+		$url = $wgMemc->get( $memcKey );
+		if ( !$url ) {
+
+			// check if this is cached to not exist
+			if ( $url === '!!NOEXIST!!' ) {
+				return false;
+			}
+
+			$dbr = wfGetDB( DB_SLAVE );
+			$entry = $dbr->selectRow(
+				'urlshortcodes',
+				array( 'usc_url' ),
+				array( 'usc_id' => $id ),
+				__METHOD__
+			);
+
+			if ( $entry === false ) {
+				// No such shortcode exists.
+				// We will still cache this, but the entry will be purged when this
+				// shortcode actually comes into being.
+				$wgMemc->set( $memcKey, '!!NOEXIST!!' );
+				return false;
+			}
+			$url = $entry->usc_url;
+			$wgMemc->set( $memcKey, $url );
+		}
+		return $url;
+	}
+}
