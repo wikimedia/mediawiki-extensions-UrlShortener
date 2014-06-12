@@ -38,22 +38,21 @@ $wgExtensionCredits['specialpage'][] = array(
 );
 
 // Set up the new special page
-$dir = __DIR__ . '/';
 $wgMessagesDirs['UrlShortener'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['UrlShortenerAlias'] = $dir . 'UrlShortener.alias.php';
+$wgExtensionMessagesFiles['UrlShortenerAlias'] = __DIR__ . '/UrlShortener.alias.php';
 
-$wgAutoloadClasses['UrlShortenerUtils'] = $dir . 'UrlShortener.utils.php';
-$wgAutoloadClasses['UrlShortenerHooks'] = $dir . 'UrlShortener.hooks.php';
-$wgAutoloadClasses['SpecialUrlShortener'] = $dir . 'SpecialUrlShortener.php';
+$wgAutoloadClasses['UrlShortenerUtils'] = __DIR__ . '/UrlShortener.utils.php';
+$wgAutoloadClasses['UrlShortenerHooks'] = __DIR__ . '/UrlShortener.hooks.php';
+$wgAutoloadClasses['SpecialUrlShortener'] = __DIR__ . '/SpecialUrlShortener.php';
 $wgSpecialPages['UrlShortener'] = 'SpecialUrlShortener';
 $wgSpecialPageGroups['UrlShortener'] = 'pagetools';
 
-$wgHooks['LoadExtensionSchemaUpdates'][] = 'UrlShortenerHooks::setupSchema';
-$wgHooks['WebRequestPathInfoRouter'][] = 'UrlShortenerHooks::setupUrlRouting';
+$wgHooks['LoadExtensionSchemaUpdates'][] = 'UrlShortenerHooks::onLoadExtensionSchemaUpdates';
+$wgHooks['WebRequestPathInfoRouter'][] = 'UrlShortenerHooks::onWebRequestPathInfoRouter';
 
 $wgResourceModules['ext.urlShortener.special'] = array(
 	'styles' => 'less/ext.urlShortener.special.less',
-	'localBasePath' => dirname( __FILE__ ),
+	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'UrlShortener',
 	'dependencies' => array(
 		'mediawiki.ui'
