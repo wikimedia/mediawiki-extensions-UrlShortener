@@ -30,7 +30,9 @@ class SpecialUrlShortener extends FormSpecialPage {
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		if ( $par === null ) {
-			$out->addModules( 'ext.urlShortener.special' );
+			// Seperate out CSS/JS calls, to help make sure things work with no-js
+			$out->addModuleStyles( 'ext.urlShortener.special' );
+			$out->addModuleScripts( 'ext.urlShortener.special' );
 			parent::execute( $par );
 		} else {
 			$url = UrlShortenerUtils::getURL( $par );
@@ -54,6 +56,20 @@ class SpecialUrlShortener extends FormSpecialPage {
 			Html::element( "span", array( "id" => "mwe-urlshortener-form-header" ),
 				$this->msg( 'urlshortener-form-header' )->text()
 			)
+		);
+		$form->addFooterText(
+			Html::rawElement( 'div', array( 'id' => 'mwe-urlshortener-form-footer' ),
+				Html::element( 'span', array( 'id' => 'mwe-urlshortener-shortened-url-label' ),
+					$this->msg( 'urlshortener-shortened-url-label')->text()
+				) .
+				Html::rawElement( 'div', array(
+						// Using a div instead of an <input> so we don't have to worry about sizing the
+						// input to match the length of the shortened URL
+						'id' => 'mwe-urlshortener-url-shorturl-display',
+					)
+				)
+			) .
+			Html::rawElement( 'div', array( 'id' => 'mwe-urlshortener-form-error' ) )
 		);
 	}
 
@@ -107,12 +123,12 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 */
 	public function onSubmit( array $data ) {
 		$out = $this->getOutput();
-		$out->addModules( 'ext.urlShortener.special' );
+		$out->addModuleStyles( 'ext.urlShortener.special' );
 
 		$html = Html::element( 'input', array(
 			'type' => 'text',
 			'readonly' => true,
-			'id' => 'mwe-urlshortener-url-textbox',
+			'id' => 'mwe-urlshortener-url-display',
 			'value' => UrlShortenerUtils::makeUrl( UrlShortenerUtils::getShortCode( $data['url']  ) )
 		));
 		$out->addHTML( $html );

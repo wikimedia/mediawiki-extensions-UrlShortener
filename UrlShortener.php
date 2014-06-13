@@ -63,10 +63,14 @@ $wgAPIModules['shortenurl'] = 'ApiShortenUrl';
 
 $wgResourceModules['ext.urlShortener.special'] = array(
 	'styles' => 'less/ext.urlShortener.special.less',
+	'scripts' => array(
+		'js/ext.urlShortener.special.js',
+	),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'UrlShortener',
 	'dependencies' => array(
-		'mediawiki.ui'
+		'mediawiki.ui',
+		'mediawiki.api'
 	),
 	"position" => "top"
 );
