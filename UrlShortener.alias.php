@@ -11,5 +11,5 @@ $specialPageAliases = array();
 
 /** English (English) */
 $specialPageAliases['en'] = array(
-	'UrlShortener' => array( 'UrlShortener' )
+	'UrlShortener' => array( 'UrlShortener' ),
 );

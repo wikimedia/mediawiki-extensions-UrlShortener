@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"urlshortener": "URL-Kürzung",
+	"urlshortener-desc": "URL-Kürzungswerkzeug für beliebige URLs",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Kürzen",
+	"urlshortener-not-found-title": "Kurz-URL nicht gefunden",
+	"urlshortener-not-found-message": "Die gesuchte URL konnte leider nicht gefunden werden.",
+	"urlshortener-form-header": "Hier deine lange URL einfügen",
+	"urlshortener-error-malformed-url": "Keine gültige URL"
+}
