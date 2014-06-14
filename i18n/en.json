@@ -12,5 +12,6 @@
 	"urlshortener-not-found-message": "Sorry, the URL you are looking for has not been found.",
 	"urlshortener-form-header": "Paste your long URL here",
 	"urlshortener-error-malformed-url": "Not a valid URL",
-	"urlshortener-shortened-url-label": "Shortened URL"
+	"urlshortener-shortened-url-label": "Shortened URL",
+	"urlshortener-error-disallowed-url": "URLs to domain $1 are not allowed to be shortened"
 }

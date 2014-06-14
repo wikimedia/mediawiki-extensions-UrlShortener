@@ -141,13 +141,32 @@ class UrlShortenerUtils {
 	 * Validates a given URL to see if it is allowed to be used to create a short URL
 	 *
 	 * @param $url String Url to Validate
-	 * @return bool|string true if it is valid, or error message key if invalid
+	 * @return bool|Message true if it is valid, or error Message object if invalid
 	 */
 	public static function validateUrl( $url ) {
-		if ( wfParseUrl( $url ) !== false ) {
-			return true;
+		global $wgUrlShortenerDomainsWhitelist, $wgServer;
+		$urlParts = wfParseUrl( $url );
+		if ( $urlParts === false ) {
+			return wfMessage( 'urlshortener-error-malformed-url' );
 		} else {
-			return 'urlshortener-error-malformed-url';
+			if ( $wgUrlShortenerDomainsWhitelist === false ) {
+				// Domain Whitelist not configured, default to wgServer
+				$serverParts = wfParseUrl( $wgServer );
+				$domainsWhitelist = preg_quote( $serverParts['host'], '/' );
+			} else {
+				// Collapse the whitelist into a single string, so we have to run regex check only once
+				$domainsWhitelist = implode( '|', array_map(
+					function( $item ) { return '^' . $item . '$'; },
+					$wgUrlShortenerDomainsWhitelist
+				) );
+			}
+			$domain = $urlParts['host'];
+
+			if ( preg_match( '/' . $domainsWhitelist . '/', $domain ) === 1 ) {
+				return true;
+			}
+
+			return wfMessage( 'urlshortener-error-disallowed-url' )->params( htmlentities( $domain ) );
 		}
 	}
 }

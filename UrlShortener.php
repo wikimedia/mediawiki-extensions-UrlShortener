@@ -28,6 +28,28 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgUrlShortenerTemplate = false;
 
 /**
+ * Configurable whitelist of domains to allow URL Shortening for.
+ *
+ * Setting to false only allows shortening to $wgServer.
+ *
+ * Set to an array of regexes (that can be consumed by preg_match) to allow
+ * only Domains that match one of the regexes. A '^' and '$' are prepended
+ * and appended to the regex provided to ensure that domain substring matches
+ * are not allowed. No need to add the '/' delimiters either.
+ *
+ * Examples:
+ * 	// Allow only three domains and all their subdomains
+ * 	$wgUrlShortenerDomainsWhitelist = array(
+ * 		'(.*\.)?wikimedia\.org',
+ * 		'(.*\.)?wikipedia\.org',
+ * );
+ *
+ * // Allow *all* domains
+ * $wgUrlShortenerDomainsWhitelist = array( '.*' );
+ */
+$wgUrlShortenerDomainsWhitelist = false;
+
+/**
  * If you're running a wiki farm, you probably just want to have one
  * central database with all of your short urls.
  * If not set, uses the local wiki's database.
