@@ -21,30 +21,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 	}
 
 	/**
-	 * Generate form to create new Short URLs if no param is passed.
-	 *
-	 * If a param is passed, attempt to redirect user to the page that corresponds to that.
-	 *
-	 * @param $par String|null base36 shortcode of the short URL, or null if we want the form.
-	 */
-	public function execute( $par ) {
-		$out = $this->getOutput();
-		if ( $par === null ) {
-			// Seperate out CSS/JS calls, to help make sure things work with no-js
-			$out->addModuleStyles( 'ext.urlShortener.special' );
-			$out->addModuleScripts( 'ext.urlShortener.special' );
-			parent::execute( $par );
-		} else {
-			$url = UrlShortenerUtils::getURL( $par );
-			if ( $url !== false ) {
-				$out->redirect( $url, '301' );
-			} else {
-				$out->showErrorPage( 'urlshortener-not-found-title', 'urlshortener-not-found-message' );
-			}
-		}
-	}
-
-	/**
 	 * Remove the legend wrapper and also use the agora styles.
 	 * @param HTMLForm $form
 	 */
@@ -71,6 +47,10 @@ class SpecialUrlShortener extends FormSpecialPage {
 			) .
 			Html::rawElement( 'div', array( 'id' => 'mwe-urlshortener-form-error' ) )
 		);
+
+		$this->getOutput()->addModuleStyles( 'ext.urlShortener.special' );
+		$this->getOutput()->addModuleScripts( 'ext.urlShortener.special' );
+
 	}
 
 

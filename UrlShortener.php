@@ -47,13 +47,19 @@ $wgExtensionCredits['specialpage'][] = array(
 // Set up the new special page
 $wgMessagesDirs['UrlShortener'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['UrlShortenerAlias'] = __DIR__ . '/UrlShortener.alias.php';
+$wgExtensionMessagesFiles['UrlShortenerNoTranslateAlias'] = __DIR__ . '/UrlShortener.notranslate-alias.php';
+
 
 $wgAutoloadClasses['UrlShortenerUtils'] = __DIR__ . '/UrlShortener.utils.php';
 $wgAutoloadClasses['UrlShortenerHooks'] = __DIR__ . '/UrlShortener.hooks.php';
 $wgAutoloadClasses['SpecialUrlShortener'] = __DIR__ . '/SpecialUrlShortener.php';
+$wgAutoloadClasses['SpecialUrlRedirector'] = __DIR__ . '/SpecialUrlRedirector.php';
+
 $wgAutoloadClasses['ApiShortenUrl'] = __DIR__ . '/ApiShortenUrl.php';
 
 $wgSpecialPages['UrlShortener'] = 'SpecialUrlShortener';
+$wgSpecialPages['UrlRedirector'] = 'SpecialUrlRedirector';
+
 $wgSpecialPageGroups['UrlShortener'] = 'pagetools';
 
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'UrlShortenerHooks::onLoadExtensionSchemaUpdates';

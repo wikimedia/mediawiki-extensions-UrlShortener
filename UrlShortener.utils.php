@@ -125,7 +125,7 @@ class UrlShortenerUtils {
 		global $wgUrlShortenerTemplate, $wgServer;
 
 		if ( !is_string( $wgUrlShortenerTemplate ) ) {
-			$urlTemplate = SpecialPage::getTitleFor( 'UrlShortener', '$1' )->getFullUrl();
+			$urlTemplate = SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getFullUrl();
 		} else {
 			$urlTemplate = $wgServer . $wgUrlShortenerTemplate;
 		}
