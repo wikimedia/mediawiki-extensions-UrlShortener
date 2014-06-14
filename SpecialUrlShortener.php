@@ -48,8 +48,9 @@ class SpecialUrlShortener extends FormSpecialPage {
 			Html::rawElement( 'div', array( 'id' => 'mwe-urlshortener-form-error' ) )
 		);
 
-		$this->getOutput()->addModuleStyles( 'ext.urlShortener.special' );
-		$this->getOutput()->addModuleScripts( 'ext.urlShortener.special' );
+		$this->getOutput()->addModules( 'ext.urlShortener.special' );
+		// Send Styles anyway, even without JS
+		$this->getOutput()->addModuleStyles( 'ext.urlShortener.special.styles' );
 
 	}
 
@@ -103,7 +104,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 */
 	public function onSubmit( array $data ) {
 		$out = $this->getOutput();
-		$out->addModuleStyles( 'ext.urlShortener.special' );
+		$out->addModuleStyles( 'ext.urlShortener.special.styles' );
 
 		$html = Html::element( 'input', array(
 			'type' => 'text',
