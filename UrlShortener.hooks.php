@@ -19,7 +19,7 @@ class UrlShortenerHooks {
 		global $wgUrlShortenerTemplate;
 		if ( $wgUrlShortenerTemplate ) {
 			$router->add( $wgUrlShortenerTemplate,
-				array( 'title' => SpecialPage::getTitleFor( 'UrlShortener', '$1' )->getPrefixedText() )
+				array( 'title' => SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getPrefixedText() )
 			);
 		}
 		return true;
