@@ -89,16 +89,26 @@ $wgHooks['WebRequestPathInfoRouter'][] = 'UrlShortenerHooks::onWebRequestPathInf
 
 $wgAPIModules['shortenurl'] = 'ApiShortenUrl';
 
-$wgResourceModules['ext.urlShortener.special'] = array(
+// Served both to JS and non-JS clients
+$wgResourceModules['ext.urlShortener.special.styles'] = array(
 	'styles' => 'less/ext.urlShortener.special.less',
+	'position' => 'top',
+	'dependencies' => array(
+		'mediawiki.ui',
+	),
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'UrlShortener',
+);
+
+// Served only to JS clients
+$wgResourceModules['ext.urlShortener.special'] = array(
 	'scripts' => array(
 		'js/ext.urlShortener.special.js',
 	),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'UrlShortener',
 	'dependencies' => array(
-		'mediawiki.ui',
-		'mediawiki.api'
+		'mediawiki.api',
 	),
 	"position" => "top"
 );
