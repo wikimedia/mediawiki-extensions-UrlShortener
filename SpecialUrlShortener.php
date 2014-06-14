@@ -41,7 +41,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 				Html::rawElement( 'div', array(
 						// Using a div instead of an <input> so we don't have to worry about sizing the
 						// input to match the length of the shortened URL
-						'id' => 'mwe-urlshortener-url-shorturl-display',
+						'id' => 'mwe-urlshortener-shorturl-display',
 					)
 				)
 			) .
@@ -109,7 +109,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 		$html = Html::element( 'input', array(
 			'type' => 'text',
 			'readonly' => true,
-			'id' => 'mwe-urlshortener-url-display',
+			'id' => 'mwe-urlshortener-shorturl-display',
 			'value' => UrlShortenerUtils::makeUrl( UrlShortenerUtils::getShortCode( $data['url']  ) )
 		));
 		$out->addHTML( $html );

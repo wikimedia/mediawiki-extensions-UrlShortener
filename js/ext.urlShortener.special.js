@@ -9,7 +9,7 @@
 	 */
 	UrlShortener.prototype.init = function () {
 		$( '#mwe-urlshortener-url-submit' ).click( $.proxy( this.onSubmit, this ) );
-		$( '#mwe-urlshortener-url-shorturl-display' ).click( function () {
+		$( '#mwe-urlshortener-shorturl-display' ).click( function () {
 			selectElement( this );
 		} );
 		this.api = new mw.Api();
@@ -25,7 +25,7 @@
 		).done( function ( shorturl ) {
 				$( "#mwe-urlshortener-form-footer" ).show();
 				// The selectElement() call makes the text selected, so the user can just ctrl-C it
-				selectElement( $( "#mwe-urlshortener-url-shorturl-display" ).text( shorturl )[0] );
+				selectElement( $( "#mwe-urlshortener-shorturl-display" ).text( shorturl )[0] );
 			} ).fail( function ( err ) {
 				$( '#mwe-urlshortener-form-footer' ).hide();
 				$( '#mwe-urlshortener-form-error' ).text( err.info ).show();
