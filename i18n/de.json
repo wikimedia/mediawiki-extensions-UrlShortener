@@ -11,5 +11,7 @@
 	"urlshortener-not-found-title": "Kurz-URL nicht gefunden",
 	"urlshortener-not-found-message": "Die gesuchte URL konnte leider nicht gefunden werden.",
 	"urlshortener-form-header": "Hier deine lange URL einfügen",
-	"urlshortener-error-malformed-url": "Keine gültige URL"
+	"urlshortener-error-malformed-url": "Keine gültige URL",
+	"urlshortener-shortened-url-label": "Gekürzte URL",
+	"urlshortener-error-disallowed-url": "URLs zur Domain $1 dürfen nicht gekürzt werden"
 }

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"urlshortener": "短网址",
+	"urlshortener-desc": "任意URL的缩短器",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "简短",
+	"urlshortener-not-found-title": "未找到短网址",
+	"urlshortener-not-found-message": "抱歉，找不到您要查找的URL。",
+	"urlshortener-form-header": "将您的长URL粘贴至此",
+	"urlshortener-error-malformed-url": "URL无效"
+}

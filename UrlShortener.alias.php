@@ -13,3 +13,8 @@ $specialPageAliases = array();
 $specialPageAliases['en'] = array(
 	'UrlShortener' => array( 'UrlShortener' ),
 );
+
+/** German (Deutsch) */
+$specialPageAliases['de'] = array(
+	'UrlShortener' => array( 'URL-Kürzung' ),
+);

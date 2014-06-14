@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-error-malformed-url": "Nieprawidłowy adres URL",
+	"urlshortener-shortened-url-label": "Skrócony URL"
+}

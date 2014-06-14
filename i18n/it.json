@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"PeppeAeco"
+		]
+	},
+	"urlshortener": "Url corto",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Accorcia",
+	"urlshortener-not-found-title": "URL breve non trovato",
+	"urlshortener-not-found-message": "Siamo spiacenti, l'URL che stai cercando non è stato trovato.",
+	"urlshortener-form-header": "Incolla l'URL lungo qui",
+	"urlshortener-error-malformed-url": "URL non valido",
+	"urlshortener-shortened-url-label": "URL abbreviato"
+}
