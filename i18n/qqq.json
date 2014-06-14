@@ -11,5 +11,6 @@
 	"urlshortener-not-found-title": "Title for page shown when user tries to access a short url that does not exist",
 	"urlshortener-not-found-message": "Message for page shown when user tries to access a short url that does not exist",
 	"urlshortener-form-header": "Message shown above the form where the user can paste a URL to be shortened",
-	"urlshortener-error-malformed-url": "Message shown to the user when they try to submit a malformed URL"
+	"urlshortener-error-malformed-url": "Message shown to the user when they try to submit a malformed URL",
+	"urlshortener-shortened-url-label": "Message shown to user above the shortened URL"
 }
