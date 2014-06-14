@@ -86,6 +86,7 @@ $wgSpecialPageGroups['UrlShortener'] = 'pagetools';
 
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'UrlShortenerHooks::onLoadExtensionSchemaUpdates';
 $wgHooks['WebRequestPathInfoRouter'][] = 'UrlShortenerHooks::onWebRequestPathInfoRouter';
+$wgHooks['ResourceLoaderGetConfigVars'][] = 'UrlShortenerHooks::onResourceLoaderGetConfigVars';
 
 $wgAPIModules['shortenurl'] = 'ApiShortenUrl';
 
@@ -105,10 +106,15 @@ $wgResourceModules['ext.urlShortener.special'] = array(
 	'scripts' => array(
 		'js/ext.urlShortener.special.js',
 	),
+	'messages' => array(
+		'urlshortener-error-malformed-url',
+		'urlshortener-error-disallowed-url',
+	),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'UrlShortener',
 	'dependencies' => array(
 		'mediawiki.api',
+		'mediawiki.Uri',
 	),
 	"position" => "top"
 );

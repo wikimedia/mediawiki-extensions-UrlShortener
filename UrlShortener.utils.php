@@ -137,6 +137,23 @@ class UrlShortenerUtils {
 		return $url;
 	}
 
+	public static function getWhitelistRegex() {
+		global $wgUrlShortenerDomainsWhitelist, $wgServer;
+		if ( $wgUrlShortenerDomainsWhitelist === false ) {
+			// Domain Whitelist not configured, default to wgServer
+			$serverParts = wfParseUrl( $wgServer );
+			$domainsWhitelist = preg_quote( $serverParts['host'], '/' );
+		} else {
+			// Collapse the whitelist into a single string, so we have to run regex check only once
+			$domainsWhitelist = implode( '|', array_map(
+				function( $item ) { return '^' . $item . '$'; },
+				$wgUrlShortenerDomainsWhitelist
+			) );
+		}
+
+		return $domainsWhitelist;
+	}
+
 	/**
 	 * Validates a given URL to see if it is allowed to be used to create a short URL
 	 *
@@ -149,20 +166,9 @@ class UrlShortenerUtils {
 		if ( $urlParts === false ) {
 			return wfMessage( 'urlshortener-error-malformed-url' );
 		} else {
-			if ( $wgUrlShortenerDomainsWhitelist === false ) {
-				// Domain Whitelist not configured, default to wgServer
-				$serverParts = wfParseUrl( $wgServer );
-				$domainsWhitelist = preg_quote( $serverParts['host'], '/' );
-			} else {
-				// Collapse the whitelist into a single string, so we have to run regex check only once
-				$domainsWhitelist = implode( '|', array_map(
-					function( $item ) { return '^' . $item . '$'; },
-					$wgUrlShortenerDomainsWhitelist
-				) );
-			}
 			$domain = $urlParts['host'];
 
-			if ( preg_match( '/' . $domainsWhitelist . '/', $domain ) === 1 ) {
+			if ( preg_match( '/' . self::getWhitelistRegex() . '/', $domain ) === 1 ) {
 				return true;
 			}
 

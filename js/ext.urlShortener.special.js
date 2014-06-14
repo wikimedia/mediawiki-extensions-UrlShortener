@@ -51,16 +51,52 @@
 	 *                         fails with an error object on failure
 	 */
 	UrlShortener.prototype.shortenUrl = function ( url ) {
-		var d = new $.Deferred();
-		this.api.get( {
-			action: 'shortenurl',
-			url: url
-		} ).done( function ( data ) {
-			d.resolve( data.shortenurl.shorturl );
-		} ).fail( function ( errCode, data ) {
-			d.reject( data.error );
-		} );
+		var d = new $.Deferred(),
+			validate = this.validateInput( url );
+		if ( validate === true ) {
+			this.api.get( {
+				action: 'shortenurl',
+				url: url
+			} ).done( function ( data ) {
+				d.resolve( data.shortenurl.shorturl );
+			} ).fail( function ( errCode, data ) {
+				d.reject( data.error );
+			} );
+
+		} else {
+			d.reject( validate );
+		}
 		return d.promise();
+	};
+
+	/**
+	 * Validate the input URL clientside. Note that this is not the
+	 * only check - they are checked serverside too.
+	 *
+	 * Checks for both URL validity and whitelist matching.
+	 *
+	 * @param input String the URL that is to be shortened
+	 * @returns Boolean|Object true if object is validated, an object matching what is
+	 *                         returned by the API in case of error.
+	 */
+	UrlShortener.prototype.validateInput = function( input ) {
+		var parsed;
+		try {
+			parsed = new mw.Uri( input );
+		} catch ( e ) {
+			return {
+				code: 'urlshortener-error-malformed-url',
+				info: mw.msg( 'urlshortener-error-malformed-url' )
+			};
+		}
+		if ( parsed.host.match( new RegExp( mw.config.get( 'wgUrlShortenerDomainsWhitelist' ) ) ) ) {
+			return true;
+		} else {
+			return {
+				code: 'urlshortener-error-disallowed-url',
+				info: mw.msg( 'urlshortener-error-disallowed-url', parsed.host )
+			};
+		}
 	};
 
 	/**
