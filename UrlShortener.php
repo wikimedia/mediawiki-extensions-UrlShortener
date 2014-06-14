@@ -93,6 +93,7 @@ $wgAPIModules['shortenurl'] = 'ApiShortenUrl';
 // Served both to JS and non-JS clients
 $wgResourceModules['ext.urlShortener.special.styles'] = array(
 	'styles' => 'less/ext.urlShortener.special.less',
+	'targets' => array ( 'desktop', 'mobile' ),
 	'position' => 'top',
 	'dependencies' => array(
 		'mediawiki.ui',
@@ -116,5 +117,6 @@ $wgResourceModules['ext.urlShortener.special'] = array(
 		'mediawiki.api',
 		'mediawiki.Uri',
 	),
+	'targets' => array ( 'desktop', 'mobile' ),
 	"position" => "top"
 );
