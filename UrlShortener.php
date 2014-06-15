@@ -5,8 +5,8 @@
  * @file
  * @ingroup Extensions
  * @author Yuvi Panda, http://yuvi.in
- * @copyright © 2014 Yuvaraj Pandian (yuvipanda@yuvi.in)
- * @licence Modified BSD License
+ * @copyright © 2014 Yuvaraj Pandian (yuvipanda@gmail.com)
+ * @licence WTFPL
  */
 
 if ( !defined( 'MEDIAWIKI' ) ) {
