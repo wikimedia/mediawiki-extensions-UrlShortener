@@ -94,6 +94,10 @@ class SpecialUrlShortener extends FormSpecialPage {
 		);
 	}
 
+	public function onSuccess() {
+		// back-compat for pre-1.22
+	}
+
 	/**
 	 * Process the form on POST submission.
 	 *
