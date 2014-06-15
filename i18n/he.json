@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"SGTTechnologicBunny"
+		]
+	},
+	"urlshortener-url-input-submit": "מקוצר",
+	"urlshortener-shortened-url-label": "כתובת מקוצרת",
+	"urlshortener-error-disallowed-url": "אין אפשרות לקצר קישורים לדומיין $1"
+}

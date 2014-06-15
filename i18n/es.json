@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"urlshortener": "Acortador de URL",
+	"urlshortener-desc": "Acortador de URL arbitrarios",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Acortar",
+	"urlshortener-not-found-title": "No se encontró el URL corto",
+	"urlshortener-not-found-message": "No se encuentra el URL que has solicitado.",
+	"urlshortener-form-header": "Pega el URL largo aquí",
+	"urlshortener-error-malformed-url": "No es un URL válido",
+	"urlshortener-shortened-url-label": "URL acortado",
+	"urlshortener-error-disallowed-url": "No se permite acortar URL hacia el dominio «$1»"
+}

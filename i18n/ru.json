@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Okras"
+		]
+	},
+	"urlshortener": "Сокращатель URL-адресов",
+	"urlshortener-desc": "Сокращатель произвольных URL-адресов",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Сократить",
+	"urlshortener-not-found-title": "Короткий URL не найден",
+	"urlshortener-not-found-message": "К сожалению, адрес, который вы ищете, не найден.",
+	"urlshortener-form-header": "Вставьте длинный URL-адрес сюда",
+	"urlshortener-error-malformed-url": "Недопустимый URL-адрес",
+	"urlshortener-shortened-url-label": "Сокращённый URL-адрес",
+	"urlshortener-error-disallowed-url": "URL-адреса для домена $1 не разрешены для сокращения"
+}
