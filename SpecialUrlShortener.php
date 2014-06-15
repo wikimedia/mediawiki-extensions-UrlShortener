@@ -94,8 +94,12 @@ class SpecialUrlShortener extends FormSpecialPage {
 		);
 	}
 
+	/**
+	 * Stub to make this compatible with MW1.21, since this was
+	 * abstract in that version.
+	 */
 	public function onSuccess() {
-		// back-compat for pre-1.22
+		parent::onSuccess();
 	}
 
 	/**
