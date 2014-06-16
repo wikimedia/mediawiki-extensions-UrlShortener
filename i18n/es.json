@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Macofe"
 		]
 	},
 	"urlshortener": "Acortador de URL",
@@ -13,5 +14,5 @@
 	"urlshortener-form-header": "Pega el URL largo aquí",
 	"urlshortener-error-malformed-url": "No es un URL válido",
 	"urlshortener-shortened-url-label": "URL acortado",
-	"urlshortener-error-disallowed-url": "No se permite acortar URL hacia el dominio «$1»"
+	"urlshortener-error-disallowed-url": "No se permite acortar URL hacia el dominio $1"
 }
