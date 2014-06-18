@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tlustulimu"
+		]
+	},
+	"urlshortener": "URL-mallongigo",
+	"urlshortener-desc": "URL-mallongigilo por ajnaj URLoj",
+	"urlshortener-url-input-submit": "Mallongigi",
+	"urlshortener-not-found-title": "Mallonga URL ne trovita",
+	"urlshortener-shortened-url-label": "Mallongigita URL",
+	"urlshortener-error-disallowed-url": "URLoj al la domajno $1 ne rajtas esti mallongigataj"
+}
