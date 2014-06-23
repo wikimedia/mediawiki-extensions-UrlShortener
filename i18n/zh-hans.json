@@ -11,5 +11,7 @@
 	"urlshortener-not-found-title": "未找到短网址",
 	"urlshortener-not-found-message": "抱歉，找不到您要查找的URL。",
 	"urlshortener-form-header": "将您的长URL粘贴至此",
-	"urlshortener-error-malformed-url": "URL无效"
+	"urlshortener-error-malformed-url": "URL无效",
+	"urlshortener-shortened-url-label": "已缩短的URL",
+	"urlshortener-error-disallowed-url": "连入$1的URL不允许缩短"
 }
