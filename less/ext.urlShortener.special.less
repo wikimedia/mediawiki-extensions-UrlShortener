@@ -1,5 +1,13 @@
 @import "../../../resources/src/mediawiki.ui/mixins/forms";
 
+#firstHeading, #mwe-urlshortener-shortened-url-label {
+	font: 16px sans-serif !important;
+	font-weight: bold !important;
+	color: #444;
+	border: none;
+	margin-bottom: 0;
+}
+
 #mwe-urlshortener-url-textbox {
 	.agora-field-styling();
 	font-size: 1em;
@@ -9,25 +17,30 @@
 
 #mwe-urlshortener-form-header {
 	display: block;
-	font-weight: bold;
-	margin-left: 2px;
+	font: 14px sans-serif;
 	margin-bottom: 8px;
 }
 
 #mwe-urlshortener-url-input {
 	.agora-field-styling();
-	font-size: 1em;
+	font-size: 1.2em;
+	border-radius: 2px;
 	line-height: 1.4em;
 }
 
 #mwe-urlshortener-form-footer {
 	display: none;
 	margin-top: 1em;
-	padding: 0.5em;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-bototm: 3px solid #e1e1e1;
+	background: #eee;
+	width: 430px;
+	box-radius: 2px;
 }
 
 #mwe-urlshortener-shorturl-display {
-	font-size: 1.2em;
+	font: 1.5em monospace;
 	line-height: 1.6em;
 }
 

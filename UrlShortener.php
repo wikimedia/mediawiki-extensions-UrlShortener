@@ -111,6 +111,8 @@ $wgResourceModules['ext.urlShortener.special'] = array(
 	'messages' => array(
 		'urlshortener-error-malformed-url',
 		'urlshortener-error-disallowed-url',
+		'urlshortener-url-input-submit',
+		'urlshortener-url-input-submitting',
 	),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'UrlShortener',

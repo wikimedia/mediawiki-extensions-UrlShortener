@@ -8,6 +8,7 @@
 	"urlshortener-desc": "URL shortener for arbitrary URLs",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Shorten",
+	"urlshortener-url-input-submitting": "Shortening…",
 	"urlshortener-not-found-title": "Short URL not found",
 	"urlshortener-not-found-message": "Sorry, the URL you are looking for has not been found.",
 	"urlshortener-form-header": "Paste your long URL here",

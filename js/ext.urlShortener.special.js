@@ -25,17 +25,20 @@
 	 * Event Handler for the 'shorten' button
 	 */
 	UrlShortener.prototype.onSubmit = function () {
-		$( '#mwe-urlshortener-form-error' ).hide();
+		$( "#mwe-urlshortener-form-footer" ).hide( 'blind' );
+		$( '#mwe-urlshortener-url-submit' ).val( mw.message( 'urlshortener-url-input-submitting' ).text() );
 		this.shortenUrl(
 			this.getLongUrl()
 		).done( function ( shorturl ) {
-				$( "#mwe-urlshortener-form-footer" ).show();
+				$( '#mwe-urlshortener-url-submit' ).val( mw.message( 'urlshortener-url-input-submit' ).text() );
+				$( "#mwe-urlshortener-form-footer" ).show( 'blind' );
 				// The selectElement() call makes the text selected, so the user can just ctrl-C it
 				$( '#mwe-urlshortener-url-input' )
 					.attr( 'title', '' )
 					.attr( 'original-title', '' );
 				selectElement( $( "#mwe-urlshortener-shorturl-display" ).text( shorturl )[0] );
 			} ).fail( function ( err ) {
+				$( '#mwe-urlshortener-url-submit' ).val( mw.message( 'urlshortener-url-input-submit' ).text() );
 				$( '#mwe-urlshortener-form-footer' ).hide();
 				$( '#mwe-urlshortener-url-input' )
 					.attr( 'title', err.info )
