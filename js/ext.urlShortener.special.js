@@ -12,6 +12,12 @@
 		$( '#mwe-urlshortener-shorturl-display' ).click( function () {
 			selectElement( this );
 		} );
+		$( '#mwe-urlshortener-url-input' ).tipsy( {
+			gravity: 'n',
+			fade: true,
+			tigger: 'manual',
+			className: 'mwe-urlshortener-tipsy'
+		} );
 		this.api = new mw.Api();
 	};
 
@@ -25,10 +31,15 @@
 		).done( function ( shorturl ) {
 				$( "#mwe-urlshortener-form-footer" ).show();
 				// The selectElement() call makes the text selected, so the user can just ctrl-C it
+				$( '#mwe-urlshortener-url-input' )
+					.attr( 'title', '' )
+					.attr( 'original-title', '' );
 				selectElement( $( "#mwe-urlshortener-shorturl-display" ).text( shorturl )[0] );
 			} ).fail( function ( err ) {
 				$( '#mwe-urlshortener-form-footer' ).hide();
-				$( '#mwe-urlshortener-form-error' ).text( err.info ).show();
+				$( '#mwe-urlshortener-url-input' )
+					.attr( 'title', err.info )
+					.tipsy( 'show' );
 			} );
 		return false;
 	};
