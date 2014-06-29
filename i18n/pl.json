@@ -5,6 +5,9 @@
 		]
 	},
 	"urlshortener-url-input-label": "URL",
+	"urlshortener-not-found-title": "Nie znaleziono krótkiego adresu URL",
+	"urlshortener-not-found-message": "Przepraszamy, nie znaleziono adresu URL, którego szukasz.",
+	"urlshortener-form-header": "Wklej tutaj długi adres URL",
 	"urlshortener-error-malformed-url": "Nieprawidłowy adres URL",
 	"urlshortener-shortened-url-label": "Skrócony URL"
 }

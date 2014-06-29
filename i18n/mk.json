@@ -8,6 +8,7 @@
 	"urlshortener-desc": "Скратувач на произволни URL-адреси",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Скрати",
+	"urlshortener-url-input-submitting": "Скратувам…",
 	"urlshortener-not-found-title": "Не ја најдов кратката URL-адреса",
 	"urlshortener-not-found-message": "За жал, не ја најдов URL-адресата што ја барате.",
 	"urlshortener-form-header": "Тука ставете ја долгата URL-адреса",

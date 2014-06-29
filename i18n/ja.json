@@ -8,6 +8,7 @@
 	"urlshortener-desc": "任意の URL を短縮する",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "短縮",
+	"urlshortener-url-input-submitting": "短縮中…",
 	"urlshortener-not-found-title": "短縮 URL が見つかりません",
 	"urlshortener-not-found-message": "申し訳ありませんが、お探しの URL が見つかりませんでした。",
 	"urlshortener-form-header": "長い URL をここに貼り付けてください",

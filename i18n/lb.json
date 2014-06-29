@@ -6,6 +6,7 @@
 	},
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Kierzen",
+	"urlshortener-url-input-submitting": "Kierzen...",
 	"urlshortener-not-found-title": "Kuerz URL gouf net fonnt",
 	"urlshortener-error-malformed-url": "Keng valabel URL",
 	"urlshortener-shortened-url-label": "Gekierzt URL"

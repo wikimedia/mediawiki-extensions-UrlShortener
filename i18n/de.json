@@ -8,6 +8,7 @@
 	"urlshortener-desc": "URL-Kürzungswerkzeug für beliebige URLs",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Kürzen",
+	"urlshortener-url-input-submitting": "Kürze …",
 	"urlshortener-not-found-title": "Kurz-URL nicht gefunden",
 	"urlshortener-not-found-message": "Die gesuchte URL konnte leider nicht gefunden werden.",
 	"urlshortener-form-header": "Hier deine lange URL einfügen",
