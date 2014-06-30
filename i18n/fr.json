@@ -8,6 +8,7 @@
 	"urlshortener-desc": "Raccourcisseur d’URL pour des URLs quelconques",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Raccourcir",
+	"urlshortener-url-input-submitting": "En cours…",
 	"urlshortener-not-found-title": "URL courte non trouvée",
 	"urlshortener-not-found-message": "Désolé, l’URL que vous recherchez n’a pas été trouvée.",
 	"urlshortener-form-header": "Copiez votre URL longue ici",
