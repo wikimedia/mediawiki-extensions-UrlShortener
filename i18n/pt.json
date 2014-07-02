@@ -7,6 +7,7 @@
 	"urlshortener": "Encurtar URL",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Encurtar",
+	"urlshortener-url-input-submitting": "A encurtar...",
 	"urlshortener-not-found-title": "URL encurtada não encontrada",
 	"urlshortener-not-found-message": "Desculpe, a URL que procura não foi encontrada.",
 	"urlshortener-form-header": "Cole a sua URL completa aqui",
