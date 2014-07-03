@@ -8,6 +8,7 @@
 	"urlshortener-desc": "Сокращатель произвольных URL-адресов",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Сократить",
+	"urlshortener-url-input-submitting": "Сокращение…",
 	"urlshortener-not-found-title": "Короткий URL не найден",
 	"urlshortener-not-found-message": "К сожалению, адрес, который вы ищете, не найден.",
 	"urlshortener-form-header": "Вставьте длинный URL-адрес сюда",
