@@ -49,6 +49,9 @@ class SpecialUrlShortener extends FormSpecialPage {
 		);
 
 		$this->getOutput()->addModules( 'ext.urlShortener.special' );
+		$this->getOutput()->addJsConfigVars( array(
+			'wgUrlShortenerDomainsWhitelist' => UrlShortenerUtils::getWhitelistRegex(),
+		) );
 		// Send Styles anyway, even without JS
 		$this->getOutput()->addModuleStyles( 'ext.urlShortener.special.styles' );
 

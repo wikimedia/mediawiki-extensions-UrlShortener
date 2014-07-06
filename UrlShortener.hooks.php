@@ -34,13 +34,4 @@ class UrlShortenerHooks {
 		$du->addExtensionTable( 'urlshortcodes', "$base/urlshortcodes.sql" );
 		return true;
 	}
-
-	/**
-	 * Add the whitelist regex to JS so we can do clientside validation
-	 */
-	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		$vars['wgUrlShortenerDomainsWhitelist'] = UrlShortenerUtils::getWhitelistRegex();
-
-		return true;
-	}
 }
