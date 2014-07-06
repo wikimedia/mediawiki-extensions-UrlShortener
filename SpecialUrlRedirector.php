@@ -12,7 +12,7 @@ class SpecialUrlRedirector extends UnlistedSpecialPage {
 			$this->getOutput()->redirect( SpecialPage::getTitleFor( 'UrlShortener' )->getFullURL() );
 			return;
 		}
-		$url = UrlShortenerUtils::getURL( $par );
+		$url = UrlShortenerUtils::getURL( $par, PROTO_CURRENT );
 		if ( $url !== false ) {
 			$this->getOutput()->redirect( $url, '301' );
 		} else {

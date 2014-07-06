@@ -22,11 +22,16 @@ class UrlShortenerUtils {
 	 * If it already exists in cache or the database, just returns that.
 	 * Otherwise, a new shortcode entry is created and returned.
 	 *
-	 * @param $url URL to encode
+	 * @param string $url URL to encode
 	 * @return string base36 encoded shortcode that refers to the $url
 	 */
 	public static function getShortCode( $url ) {
 		global $wgMemc;
+
+		// First, cannonicalize the URL
+		// store everything in the db as HTTP, we'll convert it before
+		// redirecting users
+		$url = self::convertToProtocol( $url, PROTO_HTTP );
 
 		$memcKey = wfMemcKey( 'urlshortcode', 'title', md5( $url ) );
 		$id = $wgMemc->get( $memcKey );
@@ -60,12 +65,28 @@ class UrlShortenerUtils {
 	}
 
 	/**
+	 * Converts a possibly protocol'd url to the one specified
+	 *
+	 * @param string $url
+	 * @param string|int $proto PROTO_* constant
+	 * @return string
+	 */
+	public static function convertToProtocol( $url, $proto = PROTO_RELATIVE ) {
+		$parsed = wfParseUrl( $url );
+		unset( $parsed['scheme'] );
+		$parsed['delimiter'] = '//';
+
+		return wfExpandUrl( wfAssembleUrl( $parsed ), $proto );
+	}
+
+	/**
 	 * Retreives a URL for the given shortcode, or false if there's none.
 	 *
-	 * @param $shortCode String
+	 * @param string $shortCode
+	 * @param string|int $proto PROTO_* constant
 	 * @return String
 	 */
-	public static function getURL( $shortCode ) {
+	public static function getURL( $shortCode, $proto = PROTO_RELATIVE ) {
 		global $wgMemc;
 
 		$id = self::decodeId( $shortCode );
@@ -98,7 +119,8 @@ class UrlShortenerUtils {
 			$url = $entry->usc_url;
 			$wgMemc->set( $memcKey, $url );
 		}
-		return $url;
+
+		return self::convertToProtocol( $url, $proto );
 	}
 
 	/**
