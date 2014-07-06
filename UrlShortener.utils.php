@@ -122,12 +122,16 @@ class UrlShortenerUtils {
 	 * @return String The fully qualified URL
 	 */
 	public static function makeUrl( $shortCode ) {
-		global $wgUrlShortenerTemplate, $wgServer;
+		global $wgUrlShortenerTemplate, $wgUrlShortenerServer, $wgServer;
+
+		if ( $wgUrlShortenerServer === false ) {
+			$wgUrlShortenerServer = $wgServer;
+		}
 
 		if ( !is_string( $wgUrlShortenerTemplate ) ) {
 			$urlTemplate = SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getFullUrl();
 		} else {
-			$urlTemplate = $wgServer . $wgUrlShortenerTemplate;
+			$urlTemplate = $wgUrlShortenerServer . $wgUrlShortenerTemplate;
 		}
 		$url = str_replace( '$1', $shortCode, $urlTemplate );
 

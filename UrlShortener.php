@@ -56,6 +56,12 @@ $wgUrlShortenerDomainsWhitelist = false;
  */
 $wgUrlShortenerDBName = false;
 
+/**
+ * If you have a custom short domain name, set it here.
+ * If not set, uses $wgServer
+ */
+$wgUrlShortenerServer = false;
+
 // Extension credits that will show up on Special:Version
 $wgExtensionCredits['specialpage'][] = array(
 	'path' => __FILE__,
