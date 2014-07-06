@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^/s/(.*)$ /w/index.php?title=Special:UrlRedirector/$1 [PT]
+RewriteRule ^/r/(.*)$ /w/index.php?title=Special:UrlRedirector/$1 [PT]
