@@ -93,7 +93,6 @@ $wgSpecialPageGroups['UrlShortener'] = 'pagetools';
 
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'UrlShortenerHooks::onLoadExtensionSchemaUpdates';
 $wgHooks['WebRequestPathInfoRouter'][] = 'UrlShortenerHooks::onWebRequestPathInfoRouter';
-$wgHooks['ResourceLoaderGetConfigVars'][] = 'UrlShortenerHooks::onResourceLoaderGetConfigVars';
 
 $wgAPIModules['shortenurl'] = 'ApiShortenUrl';
 
