@@ -161,7 +161,6 @@ class UrlShortenerUtils {
 	 * @return bool|Message true if it is valid, or error Message object if invalid
 	 */
 	public static function validateUrl( $url ) {
-		global $wgUrlShortenerDomainsWhitelist, $wgServer;
 		$urlParts = wfParseUrl( $url );
 		if ( $urlParts === false ) {
 			return wfMessage( 'urlshortener-error-malformed-url' );
