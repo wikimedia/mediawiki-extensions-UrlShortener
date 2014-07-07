@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ата"
+		]
+	},
+	"urlshortener": "Скорочувач URL-адрес",
+	"urlshortener-desc": "Скорочувач довільних URL-адрес",
+	"urlshortener-url-input-label": "URL-адреса",
+	"urlshortener-url-input-submit": "Скоротити",
+	"urlshortener-url-input-submitting": "Скорочення…",
+	"urlshortener-not-found-title": "Коротку URL-адресу не знайдено",
+	"urlshortener-not-found-message": "Вибачте, URL-адресу, яку ви шукаєте, не знайдено.",
+	"urlshortener-form-header": "Вставте вашу довгу URL-адресу тут",
+	"urlshortener-error-malformed-url": "Неприпустима URL-адреса",
+	"urlshortener-shortened-url-label": "Скорочений URL",
+	"urlshortener-error-disallowed-url": "URL-адреси у домені $1 не можуть бути скорочені"
+}
