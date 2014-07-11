@@ -65,22 +65,18 @@
 	 *                         fails with an error object on failure
 	 */
 	UrlShortener.prototype.shortenUrl = function ( url ) {
-		var d = new $.Deferred(),
-			validate = this.validateInput( url );
-		if ( validate === true ) {
-			this.api.get( {
+		var validate = this.validateInput( url );
+		if ( validate !== true ) {
+			return $.Deferred().reject( validate ).promise();
+		}
+		return this.api.get( {
 				action: 'shortenurl',
 				url: url
-			} ).done( function ( data ) {
-				d.resolve( data.shortenurl.shorturl );
-			} ).fail( function ( errCode, data ) {
-				d.reject( data.error );
+			} ).then( function ( data ) {
+				return data.shortenurl.shorturl;
+			}, function ( errCode, data ) {
+				return data.error;
 			} );
-
-		} else {
-			d.reject( validate );
-		}
-		return d.promise();
 	};
 
 	/**
