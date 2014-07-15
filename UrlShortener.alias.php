@@ -14,6 +14,16 @@ $specialPageAliases['en'] = array(
 	'UrlShortener' => array( 'UrlShortener' ),
 );
 
+/** Arabic (العربية) */
+$specialPageAliases['ar'] = array(
+	'UrlShortener' => array( 'تقصير_المسار' ),
+);
+
+/** Egyptian Spoken Arabic (مصرى) */
+$specialPageAliases['arz'] = array(
+	'UrlShortener' => array( 'تقصير_المسار' ),
+);
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'UrlShortener' => array( 'URL-Kürzung' ),
