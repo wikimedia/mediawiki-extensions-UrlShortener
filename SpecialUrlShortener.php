@@ -52,6 +52,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 		$this->getOutput()->addJsConfigVars( array(
 			'wgUrlShortenerDomainsWhitelist' => UrlShortenerUtils::getWhitelistRegex(),
 		) );
+		$this->getOutput()->addModuleStyles( 'mediawiki.ui' );
 		// Send Styles anyway, even without JS
 		$this->getOutput()->addModuleStyles( 'ext.urlShortener.special.styles' );
 
@@ -82,6 +83,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 		return array(
 			'url' => array(
 				'class' => 'HTMLTextField',
+				'cssclass' => 'mw-ui-input',
 				'validation-callback' => array( $this, 'validateURL' ),
 				'required' => true,
 				'type' => 'url',
