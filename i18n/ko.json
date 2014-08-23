@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kwj2772"
+		]
+	},
+	"urlshortener": "URL 단축기",
+	"urlshortener-desc": "임의 URL에 대한 단축기",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "단축",
+	"urlshortener-url-input-submitting": "단축하는 중..."
+}
