@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Stryn"
+		]
+	},
+	"urlshortener": "URL-lyhentäjä",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Lyhennä",
+	"urlshortener-url-input-submitting": "Lyhennetään…",
+	"urlshortener-shortened-url-label": "Lyhennetty URL"
+}
