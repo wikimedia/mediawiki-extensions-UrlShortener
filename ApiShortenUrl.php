@@ -39,7 +39,7 @@ class ApiShortenUrl extends ApiBase {
 		);
 	}
 
-	public function getFinalParamDescription() {
+	public function getParamDescription() {
 		return array(
 			'url' => 'URL to be shortened'
 		);
