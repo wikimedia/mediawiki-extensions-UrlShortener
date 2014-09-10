@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wikimon"
+		]
+	},
+	"urlshortener": "URL-förkortare",
+	"urlshortener-desc": "URL-förkortare för arbiträra URL:er",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Förkorta",
+	"urlshortener-url-input-submitting": "Förkortar...",
+	"urlshortener-not-found-title": "Kort URL hittades inte",
+	"urlshortener-not-found-message": "Beklagar, den URL du söker har inte hittats.",
+	"urlshortener-form-header": "Klistra in din långa URL här",
+	"urlshortener-error-malformed-url": "Ej en giltig URL",
+	"urlshortener-shortened-url-label": "Förkortad URL",
+	"urlshortener-error-disallowed-url": "URL:er för domänen $1 tillåts inte att förkortas"
+}
