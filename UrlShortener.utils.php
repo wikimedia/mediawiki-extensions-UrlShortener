@@ -14,6 +14,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 class UrlShortenerUtils {
+	static $decodeMap;
 
 	/**
 	 * Gets the short code for the given URL.
@@ -59,7 +60,7 @@ class UrlShortenerUtils {
 			}
 			$wgMemc->set( $memcKey, $id );
 		}
-		return base_convert( $id, 10, 36 );
+		return self::encodeId( $id );
 	}
 
 	/**
@@ -71,7 +72,10 @@ class UrlShortenerUtils {
 	public static function getURL( $shortCode ) {
 		global $wgMemc;
 
-		$id = intval( base_convert( $shortCode, 36, 10 ) );
+		$id = self::decodeId( $shortCode );
+		if ( $id === false ) {
+			return false;
+		}
 		$memcKey = wfMemcKey( 'urlshortcode', 'id', $id );
 		$url = $wgMemc->get( $memcKey );
 		if ( !$url ) {
@@ -177,5 +181,53 @@ class UrlShortenerUtils {
 
 			return wfMessage( 'urlshortener-error-disallowed-url' )->params( htmlentities( $domain ) );
 		}
+	}
+
+	/**
+	 * Encode an integer into a compact string representation. This is basically
+	 * a generalisation of base_convert().
+	 *
+	 * @param $x integer
+	 * @return string
+	 */
+	public static function encodeId( $x ) {
+		global $wgUrlShortenerIdSet;
+		$s = '';
+		$x = intval( $x );
+		$n = strlen( $wgUrlShortenerIdSet );
+		while ( $x ) {
+			$remainder = $x % $n;
+			$x = ( $x - $remainder ) / $n;
+			$s = $wgUrlShortenerIdSet[$remainder] . $s;
+		}
+		return $s;
+	}
+
+	/**
+	 * Decode a compact string to produce an integer, or false if the input is invalid.
+	 *
+	 * @param $s string
+	 * @return integer|false
+	 */
+	public static function decodeId( $s ) {
+		global $wgUrlShortenerIdSet;
+
+		$n = strlen( $wgUrlShortenerIdSet );
+		if ( self::$decodeMap === null ) {
+			self::$decodeMap = array();
+			for ( $i = 0; $i < $n; $i++ ) {
+				self::$decodeMap[$wgUrlShortenerIdSet[$i]] = $i;
+			}
+		}
+		$x = 0;
+		for ( $i = 0; $i < strlen( $s ); $i++ ) {
+			$x *= $n;
+			if ( isset( self::$decodeMap[$s[$i]] ) ) {
+				$x += self::$decodeMap[$s[$i]];
+			} else {
+				return false;
+			}
+		}
+		return $x;
 	}
 }

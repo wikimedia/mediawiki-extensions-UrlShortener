@@ -62,6 +62,13 @@ $wgUrlShortenerDBName = false;
  */
 $wgUrlShortenerServer = false;
 
+/**
+ * A string giving the list of characters that is used as a symbol set for 
+ * base conversion of the shortcode IDs. If you change this, any existing short
+ * URLs will go to the wrong destination.
+ */
+$wgUrlShortenerIdSet = '023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$-_.!';
+
 // Extension credits that will show up on Special:Version
 $wgExtensionCredits['specialpage'][] = array(
 	'path' => __FILE__,
