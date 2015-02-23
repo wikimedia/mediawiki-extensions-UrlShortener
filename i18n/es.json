@@ -10,7 +10,7 @@
 	"urlshortener-desc": "Acortador de URL arbitrarios",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Acortar",
-	"urlshortener-url-input-submitting": "Acortando...",
+	"urlshortener-url-input-submitting": "Acortando…",
 	"urlshortener-not-found-title": "No se encontró el URL corto",
 	"urlshortener-not-found-message": "No se encuentra el URL que has solicitado.",
 	"urlshortener-form-header": "Pega el URL largo aquí",
