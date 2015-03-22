@@ -29,6 +29,11 @@ $specialPageAliases['de'] = array(
 	'UrlShortener' => array( 'URL-Kürzung' ),
 );
 
+/** Hebrew (עברית) */
+$specialPageAliases['he'] = array(
+	'UrlShortener' => array( 'מקצר_כתובות' ),
+);
+
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'UrlShortener' => array( 'СкратувачНаURL' ),
