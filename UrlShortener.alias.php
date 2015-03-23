@@ -43,3 +43,8 @@ $specialPageAliases['mk'] = array(
 $specialPageAliases['zh-hans'] = array(
 	'UrlShortener' => array( 'URL缩短程序' ),
 );
+
+/** Traditional Chinese (中文（繁體）‎) */
+$specialPageAliases['zh-hant'] = array(
+	'UrlShortener' => array( 'URL縮短程式' ),
+);
