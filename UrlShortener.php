@@ -133,6 +133,5 @@ $wgResourceModules['ext.urlShortener.special'] = array(
 		'mediawiki.Uri',
 		'jquery.tipsy',
 	),
-	'targets' => array ( 'desktop', 'mobile' ),
 	"position" => "top"
 );
