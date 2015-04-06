@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"बिप्लब आनन्द"
+		]
+	},
+	"urlshortener": "यूआरएल संक्षिप्तीकरण",
+	"urlshortener-desc": "स्वेच्छा अनुसारको यूआरएलको लागि यूआरएल संक्षिप्तीकरण",
+	"urlshortener-url-input-label": "यूआरएल",
+	"urlshortener-url-input-submit": "संक्षिप्त",
+	"urlshortener-url-input-submitting": "संक्षिप्तीकरण गर्दै...",
+	"urlshortener-not-found-title": "संक्षिप्त यूआरएल भेटिएन",
+	"urlshortener-not-found-message": "क्षमा गर्नुहोला, तपाईंले खोज्नुभएको यूआरएल भेटिएन।",
+	"urlshortener-form-header": "तपाईं आफ्नो लामो यूआरएल यहाँ पेस्ट गर्नुहोस",
+	"urlshortener-error-malformed-url": "अमान्य यूआरएल",
+	"urlshortener-shortened-url-label": "संक्षिप्त यूआरएल",
+	"urlshortener-error-disallowed-url": "डोमेन $1 को लागि यूआरएलहरू संक्षिप्तीकरण असमर्थ गरिएको छ"
+}
