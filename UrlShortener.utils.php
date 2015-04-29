@@ -53,10 +53,6 @@ class UrlShortenerUtils {
 				);
 				$dbw->insert( 'urlshortcodes', $rowData, __METHOD__ );
 				$id = $dbw->insertId();
-
-				// Delete any negative cache entries for this shortcode we might have
-				$shortCodeKey = wfMemcKey( 'urlshortcode', 'id', $id );
-				$wgMemc->delete( $shortCodeKey );
 			}
 			$wgMemc->set( $memcKey, $id );
 		}
@@ -78,12 +74,13 @@ class UrlShortenerUtils {
 		}
 		$memcKey = wfMemcKey( 'urlshortcode', 'id', $id );
 		$url = $wgMemc->get( $memcKey );
-		if ( !$url ) {
 
-			// check if this is cached to not exist
-			if ( $url === '!!NOEXIST!!' ) {
-				return false;
-			}
+		// check if this is cached to not exist
+		if ( $url === '!!NOEXIST!!' ) {
+			return false;
+		}
+
+		if ( !$url ) {
 
 			$dbr = self::getDB( DB_SLAVE );
 			$entry = $dbr->selectRow(
@@ -94,10 +91,8 @@ class UrlShortenerUtils {
 			);
 
 			if ( $entry === false ) {
-				// No such shortcode exists.
-				// We will still cache this, but the entry will be purged when this
-				// shortcode actually comes into being.
-				$wgMemc->set( $memcKey, '!!NOEXIST!!' );
+				// No such shortcode exists; briefly cache negatives
+				$wgMemc->set( $memcKey, '!!NOEXIST!!', 300 );
 				return false;
 			}
 			$url = $entry->usc_url;
