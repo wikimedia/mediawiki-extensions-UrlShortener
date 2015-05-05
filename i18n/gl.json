@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm"
+		]
+	},
+	"urlshortener": "Acurtador de URL",
+	"urlshortener-desc": "Acurtador de URL arbitrarios",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Acurtar",
+	"urlshortener-url-input-submitting": "Acurtando…",
+	"urlshortener-not-found-title": "Non se atopou a URL acurtada",
+	"urlshortener-not-found-message": "Sentímolo, a URL que está a buscar non se atopou.",
+	"urlshortener-form-header": "Copie a URL larga aquí",
+	"urlshortener-error-malformed-url": "Non é unha URL válida",
+	"urlshortener-shortened-url-label": "URL acurtada",
+	"urlshortener-error-disallowed-url": "Non se permite acurtar URL cara ó dominio $1"
+}
