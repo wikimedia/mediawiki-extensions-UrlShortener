@@ -19,7 +19,7 @@ $specialPageAliases['ar'] = array(
 	'UrlShortener' => array( 'تقصير_المسار' ),
 );
 
-/** Egyptian Spoken Arabic (مصرى) */
+/** Egyptian Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
 	'UrlShortener' => array( 'تقصير_المسار' ),
 );
