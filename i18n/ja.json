@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki"
+			"Shirayuki",
+			"2nd-player"
 		]
 	},
 	"urlshortener": "URL短縮",
@@ -12,5 +13,7 @@
 	"urlshortener-not-found-title": "短縮 URL が見つかりません",
 	"urlshortener-not-found-message": "申し訳ありませんが、お探しの URL が見つかりませんでした。",
 	"urlshortener-form-header": "長い URL をここに貼り付けてください",
-	"urlshortener-error-malformed-url": "有効な URL ではありません"
+	"urlshortener-error-malformed-url": "有効な URL ではありません",
+	"urlshortener-shortened-url-label": "短縮後のURL",
+	"urlshortener-error-disallowed-url": "ドメイン $1 への URL は短縮が認められていません"
 }
