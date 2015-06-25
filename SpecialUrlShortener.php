@@ -128,4 +128,8 @@ class SpecialUrlShortener extends FormSpecialPage {
 		$out->addHTML( $html );
 		return true;
 	}
+
+	protected function getGroupName() {
+		return 'pagetools';
+	}
 }
