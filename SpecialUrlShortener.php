@@ -20,42 +20,22 @@ class SpecialUrlShortener extends FormSpecialPage {
 		parent::__construct( 'UrlShortener' );
 	}
 
+	protected function getDisplayFormat() {
+		return 'ooui';
+	}
+
 	/**
-	 * Remove the legend wrapper and also use the agora styles.
 	 * @param HTMLForm $form
 	 */
 	protected function alterForm( HTMLForm $form ) {
-		$form->setWrapperLegend( false );
-		$form->setDisplayFormat( 'raw' );
-		$form->suppressDefaultSubmit( true );
-		$form->addHeaderText(
-			Html::element( "span", array( "id" => "mwe-urlshortener-form-header" ),
-				$this->msg( 'urlshortener-form-header' )->text()
-			)
-		);
-		$form->addFooterText(
-			Html::rawElement( 'div', array( 'id' => 'mwe-urlshortener-form-footer' ),
-				Html::element( 'span', array( 'id' => 'mwe-urlshortener-shortened-url-label' ),
-					$this->msg( 'urlshortener-shortened-url-label')->text()
-				) .
-				Html::rawElement( 'div', array(
-						// Using a div instead of an <input> so we don't have to worry about sizing the
-						// input to match the length of the shortened URL
-						'id' => 'mwe-urlshortener-shorturl-display',
-					)
-				)
-			) .
-			Html::rawElement( 'div', array( 'id' => 'mwe-urlshortener-form-error' ) )
-		);
+		$form->setMethod( 'GET' );
+		$form->setSubmitID( 'mw-urlshortener-submit' );
+		$form->setSubmitTextMsg( 'urlshortener-url-input-submit' );
 
 		$this->getOutput()->addModules( 'ext.urlShortener.special' );
 		$this->getOutput()->addJsConfigVars( array(
 			'wgUrlShortenerDomainsWhitelist' => UrlShortenerUtils::getWhitelistRegex(),
 		) );
-		$this->getOutput()->addModuleStyles( 'mediawiki.ui' );
-		// Send Styles anyway, even without JS
-		$this->getOutput()->addModuleStyles( 'ext.urlShortener.special.styles' );
-
 	}
 
 
@@ -67,6 +47,10 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 * @return bool|string true if url is valid, error message otherwise
 	 */
 	public function validateURL( $url, $allData ) {
+		if ( $url === null ) {
+			// No input
+			return true;
+		}
 		$validity_check =  UrlShortenerUtils::validateUrl( $url );
 		if ( $validity_check === true ) {
 			return true;
@@ -82,29 +66,16 @@ class SpecialUrlShortener extends FormSpecialPage {
 	protected function getFormFields() {
 		return array(
 			'url' => array(
-				'class' => 'HTMLTextField',
-				'cssclass' => 'mw-ui-input',
 				'validation-callback' => array( $this, 'validateURL' ),
 				'required' => true,
 				'type' => 'url',
-				'id' => 'mwe-urlshortener-url-input',
+				'name' => 'url',
+				'label-message' => 'urlshortener-form-header',
+				'autofocus' => true,
+				'id' => 'mw-urlshortener-url-input',
 				'placeholder' => $this->msg( 'urlshortener-url-input-label' )->text()
 			),
-			'submit' => array(
-				'class' => 'HTMLSubmitField',
-				'default' => $this->msg( 'urlshortener-url-input-submit' )->text(),
-				'cssclass' => 'mw-ui-button mw-ui-progressive',
-				'id' => 'mwe-urlshortener-url-submit'
-			)
 		);
-	}
-
-	/**
-	 * Stub to make this compatible with MW1.21, since this was
-	 * abstract in that version.
-	 */
-	public function onSuccess() {
-		parent::onSuccess();
 	}
 
 	/**
@@ -117,14 +88,15 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 */
 	public function onSubmit( array $data ) {
 		$out = $this->getOutput();
-		$out->addModuleStyles( 'ext.urlShortener.special.styles' );
+		$out->enableOOUI();
+		if ( $data['url'] === null ) {
+			return false;
+		}
 
-		$html = Html::element( 'input', array(
-			'type' => 'text',
-			'readonly' => true,
-			'id' => 'mwe-urlshortener-shorturl-display',
-			'value' => UrlShortenerUtils::makeUrl( UrlShortenerUtils::getShortCode( $data['url']  ) )
-		));
+		$html = new OOUI\TextInputWidget( array(
+			'value' => UrlShortenerUtils::makeUrl( UrlShortenerUtils::getShortCode( $data['url']  ) ),
+			'readOnly' => true,
+		) );
 		$out->addHTML( $html );
 		return true;
 	}

@@ -101,35 +101,23 @@ $wgHooks['WebRequestPathInfoRouter'][] = 'UrlShortenerHooks::onWebRequestPathInf
 
 $wgAPIModules['shortenurl'] = 'ApiShortenUrl';
 
-// Served both to JS and non-JS clients
-$wgResourceModules['ext.urlShortener.special.styles'] = array(
-	'styles' => 'less/ext.urlShortener.special.less',
-	'targets' => array ( 'desktop', 'mobile' ),
-	'position' => 'top',
-	'dependencies' => array(
-		'mediawiki.ui',
-	),
-	'localBasePath' => __DIR__,
-	'remoteExtPath' => 'UrlShortener',
-);
-
 // Served only to JS clients
 $wgResourceModules['ext.urlShortener.special'] = array(
 	'scripts' => array(
-		'js/ext.urlShortener.special.js',
+		'modules/ext.urlShortener.special.js',
 	),
 	'messages' => array(
 		'urlshortener-error-malformed-url',
 		'urlshortener-error-disallowed-url',
 		'urlshortener-url-input-submit',
 		'urlshortener-url-input-submitting',
+		'urlshortener-shortened-url-label',
 	),
 	'localBasePath' => __DIR__,
 	'remoteExtPath' => 'UrlShortener',
 	'dependencies' => array(
+		'oojs-ui',
 		'mediawiki.api',
 		'mediawiki.Uri',
-		'jquery.tipsy',
 	),
-	"position" => "top"
 );
