@@ -15,5 +15,6 @@
 	"urlshortener-form-header": "Message shown above the form where the user can paste a URL to be shortened",
 	"urlshortener-error-malformed-url": "Message shown to the user when they try to submit a malformed URL",
 	"urlshortener-shortened-url-label": "Message shown to user above the shortened URL",
-	"urlshortener-error-disallowed-url": "Message shown to user when they try to shorten URLs to a domain that isn't whitelisted. $1 refers to the domain of the URL that the user tried to shorten"
+	"urlshortener-error-disallowed-url": "Message shown to user when they try to shorten URLs to a domain that isn't whitelisted. $1 refers to the domain of the URL that the user tried to shorten",
+	"urlshortener-approved-domains": "Help message displayed on Special:UrlShortener showing which domains can be shortened. $1 is the number of domains, $2 is a comma separated list of domains."
 }

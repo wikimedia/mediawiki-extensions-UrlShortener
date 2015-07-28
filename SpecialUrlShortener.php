@@ -24,6 +24,23 @@ class SpecialUrlShortener extends FormSpecialPage {
 		return 'ooui';
 	}
 
+	private function getApprovedDomainsMessage() {
+		global $wgUrlShortenerApprovedDomains, $wgServer;
+		if ( $wgUrlShortenerApprovedDomains ) {
+			$domains = $wgUrlShortenerApprovedDomains;
+		} else {
+			$parsed = wfParseUrl( $wgServer );
+			$domains = array( $parsed['host'] );
+		}
+
+		$lang = $this->getLanguage();
+		return $this->msg( 'urlshortener-approved-domains' )
+			->numParams( count( $domains ) )
+			->params( $lang->listToText( array_map( function( $i ) {
+				return "<code>$i</code>";
+			}, $domains ) ) );
+	}
+
 	/**
 	 * @param HTMLForm $form
 	 */
@@ -31,7 +48,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 		$form->setMethod( 'GET' );
 		$form->setSubmitID( 'mw-urlshortener-submit' );
 		$form->setSubmitTextMsg( 'urlshortener-url-input-submit' );
-
+		$form->setFooterText( $this->getApprovedDomainsMessage()->parse() );
 		$this->getOutput()->addModules( 'ext.urlShortener.special' );
 		$this->getOutput()->addJsConfigVars( array(
 			'wgUrlShortenerDomainsWhitelist' => UrlShortenerUtils::getWhitelistRegex(),

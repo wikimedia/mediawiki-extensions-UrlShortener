@@ -14,5 +14,6 @@
 	"urlshortener-form-header": "Paste your long URL here",
 	"urlshortener-error-malformed-url": "Not a valid URL",
 	"urlshortener-shortened-url-label": "Shortened URL",
-	"urlshortener-error-disallowed-url": "URLs to domain $1 are not allowed to be shortened"
+	"urlshortener-error-disallowed-url": "URLs to domain $1 are not allowed to be shortened",
+	"urlshortener-approved-domains": "Links to the following {{PLURAL:$1|domain|domains}} may be shortened: $2."
 }

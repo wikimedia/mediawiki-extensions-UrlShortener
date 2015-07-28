@@ -46,8 +46,25 @@ $wgUrlShortenerTemplate = false;
  *
  * // Allow *all* domains
  * $wgUrlShortenerDomainsWhitelist = array( '.*' );
+ *
+ * @var array|bool
  */
 $wgUrlShortenerDomainsWhitelist = false;
+
+/**
+ * A human readable version of $wgUrlShortenerDomainsWhitelist.
+ *
+ * This is ONLY for documentation. It is not used in any validation function.
+ *
+ * Example:
+ * 	$wgUrlShortenerApprovedDomains = array(
+ * 		'*.wikimedia.org',
+ * 		'*.wikipedia.org',
+ * 	);
+ *
+ * @var array|bool
+ */
+$wgUrlShortenerApprovedDomains = false;
 
 /**
  * If you're running a wiki farm, you probably just want to have one
