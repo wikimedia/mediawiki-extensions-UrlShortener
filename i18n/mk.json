@@ -14,5 +14,6 @@
 	"urlshortener-form-header": "Тука ставете ја долгата URL-адреса",
 	"urlshortener-error-malformed-url": "Ова не претставува важечка URL-адреса",
 	"urlshortener-shortened-url-label": "Скратена URL",
-	"urlshortener-error-disallowed-url": "Не е дозволено кратење URL-адреси до доменот $1"
+	"urlshortener-error-disallowed-url": "Не е дозволено кратење URL-адреси до доменот $1",
+	"urlshortener-approved-domains": "Врските што водат кон {{PLURAL:$1|следниов домен|следниве домени}} може да се скратат: $2."
 }

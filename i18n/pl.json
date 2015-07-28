@@ -9,5 +9,6 @@
 	"urlshortener-not-found-message": "Przepraszamy, nie znaleziono adresu URL, którego szukasz.",
 	"urlshortener-form-header": "Wklej tutaj długi adres URL",
 	"urlshortener-error-malformed-url": "Nieprawidłowy adres URL",
-	"urlshortener-shortened-url-label": "Skrócony URL"
+	"urlshortener-shortened-url-label": "Skrócony URL",
+	"urlshortener-approved-domains": "Linki do {{PLURAL:$1|następującej domeny|następujących domen}} mogą być skrócone: $2."
 }
