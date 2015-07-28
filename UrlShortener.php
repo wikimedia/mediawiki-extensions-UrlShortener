@@ -80,7 +80,7 @@ $wgUrlShortenerDBName = false;
 $wgUrlShortenerServer = false;
 
 /**
- * A string giving the list of characters that is used as a symbol set for 
+ * A string giving the list of characters that is used as a symbol set for
  * base conversion of the shortcode IDs. If you change this, any existing short
  * URLs will go to the wrong destination.
  */
@@ -116,6 +116,8 @@ $wgSpecialPages['UrlRedirector'] = 'SpecialUrlRedirector';
 $wgHooks['UnitTestsList'][] = 'UrlShortenerHooks::onUnitTestsList';
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'UrlShortenerHooks::onLoadExtensionSchemaUpdates';
 $wgHooks['WebRequestPathInfoRouter'][] = 'UrlShortenerHooks::onWebRequestPathInfoRouter';
+$wgHooks['BeforePageDisplay'][] = 'UrlShortenerHooks::onBeforePageDisplay';
+$wgHooks['BaseTemplateToolbox'][] = 'UrlShortenerHooks::onBaseTemplateToolbox';
 
 $wgAPIModules['shortenurl'] = 'ApiShortenUrl';
 
@@ -138,4 +140,23 @@ $wgResourceModules['ext.urlShortener.special'] = array(
 		'mediawiki.api',
 		'mediawiki.Uri',
 	),
+);
+
+$wgResourceModules['ext.urlShortener.toolbar'] = array(
+	'scripts' => array(
+		'modules/ext.urlShortener.toolbar.js',
+	),
+	'styles' => array(
+		'modules/ext.urlShortener.popup.less',
+	),
+	'dependencies' => array(
+		'oojs-ui',
+	),
+	'messages' => array(
+		'urlshortener-url-input-submitting',
+		'urlshortener-shortened-url-label',
+		'urlshortener-ratelimit',
+	),
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'UrlShortener',
 );
