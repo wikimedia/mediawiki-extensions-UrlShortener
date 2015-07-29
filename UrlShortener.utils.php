@@ -37,21 +37,32 @@ class UrlShortenerUtils {
 		$id = $dbw->selectField(
 			'urlshortcodes',
 			'usc_id',
-			array(
-				'usc_url_hash' => md5( $url ),
-			),
+			array( 'usc_url_hash' => md5( $url ) ),
 			__METHOD__
 		);
 		if ( $id === false ) {
 			if ( $user->pingLimiter( 'urlshortcode' ) ) {
 				return Status::newFatal( 'urlshortener-ratelimit' );
 			}
+
 			$rowData = array(
 				'usc_url' => $url,
 				'usc_url_hash' => md5( $url )
 			);
-			$dbw->insert( 'urlshortcodes', $rowData, __METHOD__ );
-			$id = $dbw->insertId();
+			$dbw->insert( 'urlshortcodes', $rowData, __METHOD__, array( 'IGNORE' ) );
+
+			if ( $dbw->affectedRows() ) {
+				$id = $dbw->insertId();
+			} else {
+				// Raced out; get the winning ID
+				$id = $dbw->selectField(
+					'urlshortcodes',
+					'usc_id',
+					array( 'usc_url_hash' => md5( $url ) ),
+					__METHOD__,
+					array( 'LOCK IN SHARE MODE' ) // ignore snapshot
+				);
+			}
 		}
 
 		return Status::newGood( self::encodeId( $id ) );
