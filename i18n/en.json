@@ -16,5 +16,5 @@
 	"urlshortener-shortened-url-label": "Shortened URL",
 	"urlshortener-error-disallowed-url": "URLs to domain $1 are not allowed to be shortened",
 	"urlshortener-approved-domains": "Links to the following {{PLURAL:$1|domain|domains}} may be shortened: $2.",
-	"urlshortener-ratelimit": "Please wait some time before shortening more urls."
+	"urlshortener-ratelimit": "Please wait some time before shortening more URLs."
 }
