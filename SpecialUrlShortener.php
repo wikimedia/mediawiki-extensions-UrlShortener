@@ -45,7 +45,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 * @param HTMLForm $form
 	 */
 	protected function alterForm( HTMLForm $form ) {
-		$form->setMethod( 'GET' );
 		$form->setSubmitID( 'mw-urlshortener-submit' );
 		$form->setSubmitTextMsg( 'urlshortener-url-input-submit' );
 		$form->setFooterText( $this->getApprovedDomainsMessage()->parse() );

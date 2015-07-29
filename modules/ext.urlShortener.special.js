@@ -112,7 +112,7 @@
 		 * @return {jQuery.Promise}
 		 */
 		shortenUrl: function ( url ) {
-			return this.api.get( {
+			return this.api.post( {
 				action: 'shortenurl',
 				url: url
 			} ).then( function ( data ) {

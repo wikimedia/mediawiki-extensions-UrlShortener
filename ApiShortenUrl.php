@@ -31,6 +31,10 @@ class ApiShortenUrl extends ApiBase {
 
 	}
 
+	public function mustBePosted() {
+		return true;
+	}
+
 	protected function getAllowedParams() {
 		return array(
 			'url' => array(
