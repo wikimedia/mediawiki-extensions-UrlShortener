@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirws"
+		]
+	},
+	"urlshortener-approved-domains": "Link ke {{PLURAL:$1|domain|domain}} dapat dipersingkat: $2."
+}

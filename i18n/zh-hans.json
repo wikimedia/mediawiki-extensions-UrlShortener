@@ -14,5 +14,7 @@
 	"urlshortener-form-header": "将您的长URL粘贴至此",
 	"urlshortener-error-malformed-url": "URL无效",
 	"urlshortener-shortened-url-label": "已缩短的URL",
-	"urlshortener-error-disallowed-url": "连入$1的URL不允许缩短"
+	"urlshortener-error-disallowed-url": "连入$1的URL不允许缩短",
+	"urlshortener-approved-domains": "至以下{{PLURAL:$1|域名}}的链接可被缩短：$2。",
+	"urlshortener-ratelimit": "在缩短更多url前，请等待一段时间。"
 }

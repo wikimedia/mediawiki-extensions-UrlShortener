@@ -4,5 +4,6 @@
 			"Purodha"
 		]
 	},
-	"urlshortener-approved-domains": "Lengks op heh di {{PLURAL:$1|<i lang=\"en\" xml:lang=\"en\" dir=\"ltr\">domain<i>|<i lang=\"en\" xml:lang=\"en\" dir=\"ltr\">domains<i>|keinelei <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\">domain<i>}} künne verkööz wähde: $2."
+	"urlshortener-approved-domains": "Lengks op heh di {{PLURAL:$1|<i lang=\"en\" xml:lang=\"en\" dir=\"ltr\">domain<i>|<i lang=\"en\" xml:lang=\"en\" dir=\"ltr\">domains<i>|keinelei <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\">domain<i>}} künne verkööz wähde: $2.",
+	"urlshortener-ratelimit": "Bes esu johd un waad e Wihlsche, ih dat De noch mih <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Uniform Ressource Locator\">URLs</i> kööter maache löhß."
 }

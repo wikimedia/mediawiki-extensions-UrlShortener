@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Wladek92"
 		]
 	},
 	"urlshortener": "Raccourcisseur d’URL",
@@ -14,5 +15,6 @@
 	"urlshortener-form-header": "Copiez votre URL longue ici",
 	"urlshortener-error-malformed-url": "URL non valide",
 	"urlshortener-shortened-url-label": "URL reccourcie",
-	"urlshortener-error-disallowed-url": "Les URLs vers le domaine $1 n’ont pas le droit d’être raccourcies"
+	"urlshortener-error-disallowed-url": "Les URLs vers le domaine $1 n’ont pas le droit d’être raccourcies",
+	"urlshortener-approved-domains": "Les liens vers {{PLURAL:$1|le domaine suivant|les domaines suivants}} peuvent être raccourcis : $2."
 }

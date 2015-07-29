@@ -15,5 +15,6 @@
 	"urlshortener-error-malformed-url": "Keine gültige URL",
 	"urlshortener-shortened-url-label": "Gekürzte URL",
 	"urlshortener-error-disallowed-url": "URLs zur Domain $1 dürfen nicht gekürzt werden",
-	"urlshortener-approved-domains": "Links {{PLURAL:$1|zur folgenden Domain|zu den folgenden Domains}} können gekürzt werden: $2."
+	"urlshortener-approved-domains": "Links {{PLURAL:$1|zur folgenden Domain|zu den folgenden Domains}} können gekürzt werden: $2.",
+	"urlshortener-ratelimit": "Bitte warte einige Zeit vor dem Kürzen weiterer URLs."
 }

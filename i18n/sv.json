@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wikimon"
+			"Wikimon",
+			"Jopparn"
 		]
 	},
 	"urlshortener": "URL-förkortare",
@@ -14,5 +15,6 @@
 	"urlshortener-form-header": "Klistra in din långa URL här",
 	"urlshortener-error-malformed-url": "Ej en giltig URL",
 	"urlshortener-shortened-url-label": "Förkortad URL",
-	"urlshortener-error-disallowed-url": "URL:er för domänen $1 tillåts inte att förkortas"
+	"urlshortener-error-disallowed-url": "URL:er för domänen $1 tillåts inte att förkortas",
+	"urlshortener-ratelimit": "Var vänlig vänta en viss tid innan du kortar ned fler webbadresser."
 }
