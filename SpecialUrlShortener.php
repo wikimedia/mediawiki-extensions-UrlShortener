@@ -100,7 +100,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 * Creates the short URL and displays it back to the user.
 	 *
 	 * @param array $data
-	 * @return bool|array True for success, false for didn't-try, array of errors on failure
+	 * @return bool|Status True for success, false for didn't-try, Status (with errors) on failure
 	 */
 	public function onSubmit( array $data ) {
 		$out = $this->getOutput();
@@ -109,8 +109,12 @@ class SpecialUrlShortener extends FormSpecialPage {
 			return false;
 		}
 
+		$status = UrlShortenerUtils::maybeCreateShortCode( $data['url'], $this->getUser() );
+		if ( !$status->isOK() ) {
+			return $status;
+		}
 		$html = new OOUI\TextInputWidget( array(
-			'value' => UrlShortenerUtils::makeUrl( UrlShortenerUtils::getShortCode( $data['url']  ) ),
+			'value' => UrlShortenerUtils::makeUrl( $status->getValue() ),
 			'readOnly' => true,
 		) );
 		$out->addHTML( $html );

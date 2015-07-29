@@ -13,17 +13,21 @@ class ApiShortenUrl extends ApiBase {
 	public function execute() {
 		$params = $this->extractRequestParams();
 
-		// You get the cached response, YOU get the cached response, EVERYONE gets the cached response.
-		$this->getMain()->setCacheMode( "public" );
-		$this->getMain()->setCacheMaxAge( 30 * 24 * 60 * 60 );
-
 		$url = $params['url'];
 
 		$validity_check = UrlShortenerUtils::validateUrl( $url );
 		if ( $validity_check !== true ) {
 			$this->dieStatus( Status::newFatal( $validity_check ) );
 		}
-		$shortUrl = UrlShortenerUtils::makeUrl( UrlShortenerUtils::getShortCode( $url ) );
+		$status = UrlShortenerUtils::maybeCreateShortCode( $url, $this->getUser() );
+		if ( !$status->isOK() ) {
+			$this->dieStatus( $status );
+		}
+		$shortUrl = UrlShortenerUtils::makeUrl( $status->getValue() );
+
+		// You get the cached response, YOU get the cached response, EVERYONE gets the cached response.
+		$this->getMain()->setCacheMode( "public" );
+		$this->getMain()->setCacheMaxAge( 30 * 24 * 60 * 60 );
 
 		$this->getResult()->addValue( null, $this->getModuleName(),
 			array( 'shorturl' => $shortUrl )

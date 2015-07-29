@@ -17,67 +17,44 @@ class UrlShortenerUtils {
 	static $decodeMap;
 
 	/**
-	 * wfMemcKey() helper
-	 *
-	 * @param string $type
-	 * @param string $id
-	 * @return string
-	 */
-	private static function memcKey( $type, $id ) {
-		global $wgUrlShortenerDBName;
-		if ( $wgUrlShortenerDBName !== false ) {
-			return wfGlobalCacheKey( $wgUrlShortenerDBName, 'urlshortcode', $type, $id );
-		} else {
-			return wfMemcKey( 'urlshortcode', $type, $id );
-		}
-	}
-
-	/**
-	 * Gets the short code for the given URL.
+	 * Gets the short code for the given URL, creating if it doesn't
+	 * have one already.
 	 *
 	 * If it already exists in cache or the database, just returns that.
 	 * Otherwise, a new shortcode entry is created and returned.
 	 *
 	 * @param string $url URL to encode
-	 * @return string base36 encoded shortcode that refers to the $url
+	 * @param User $user User requesting the url, for rate limiting
+	 * @return Status with value of base36 encoded shortcode that refers to the $url
 	 */
-	public static function getShortCode( $url ) {
-		global $wgMemc;
-
+	public static function maybeCreateShortCode( $url, User $user ) {
 		// First, cannonicalize the URL
 		// store everything in the db as HTTP, we'll convert it before
 		// redirecting users
 		$url = self::convertToProtocol( $url, PROTO_HTTP );
 
-		$memcKey = self::memcKey( 'title', md5( $url ) );
-		$id = $wgMemc->get( $memcKey );
-		if ( !$id ) {
-			$dbr = self::getDB( DB_SLAVE );
-			$entry = $dbr->selectRow(
-				'urlshortcodes',
-				array( 'usc_id' ),
-				array(
-					'usc_url_hash' => md5( $url ),
-				),
-				__METHOD__
-			);
-			if ( $entry !== false ) {
-				$id = $entry->usc_id;
-			} else {
-				$dbw = self::getDB( DB_MASTER );
-				// FIXME: Potential race condition since we're checking a slave first for existance
-				// but writing to Master, and there's a unique constraint on the url column.
-				// Should be rare, but we should handle it properly anyway.
-				$rowData = array(
-					'usc_url' => $url,
-					'usc_url_hash' => md5( $url )
-				);
-				$dbw->insert( 'urlshortcodes', $rowData, __METHOD__ );
-				$id = $dbw->insertId();
+		$dbw = self::getDB( DB_MASTER );
+		$id = $dbw->selectField(
+			'urlshortcodes',
+			'usc_id',
+			array(
+				'usc_url_hash' => md5( $url ),
+			),
+			__METHOD__
+		);
+		if ( $id === false ) {
+			if ( $user->pingLimiter( 'urlshortcode' ) ) {
+				return Status::newFatal( 'urlshortener-ratelimit' );
 			}
-			$wgMemc->set( $memcKey, $id );
+			$rowData = array(
+				'usc_url' => $url,
+				'usc_url_hash' => md5( $url )
+			);
+			$dbw->insert( 'urlshortcodes', $rowData, __METHOD__ );
+			$id = $dbw->insertId();
 		}
-		return self::encodeId( $id );
+
+		return Status::newGood( self::encodeId( $id ) );
 	}
 
 	/**
@@ -103,37 +80,21 @@ class UrlShortenerUtils {
 	 * @return String
 	 */
 	public static function getURL( $shortCode, $proto = PROTO_RELATIVE ) {
-		global $wgMemc;
-
 		$id = self::decodeId( $shortCode );
 		if ( $id === false ) {
 			return false;
 		}
-		$memcKey = self::memcKey( 'id', $id );
-		$url = $wgMemc->get( $memcKey );
 
-		// check if this is cached to not exist
-		if ( $url === '!!NOEXIST!!' ) {
+		$dbr = self::getDB( DB_SLAVE );
+		$url = $dbr->selectField(
+			'urlshortcodes',
+			'usc_url',
+			array( 'usc_id' => $id ),
+			__METHOD__
+		);
+
+		if ( $url === false ) {
 			return false;
-		}
-
-		if ( !$url ) {
-
-			$dbr = self::getDB( DB_SLAVE );
-			$entry = $dbr->selectRow(
-				'urlshortcodes',
-				array( 'usc_url' ),
-				array( 'usc_id' => $id ),
-				__METHOD__
-			);
-
-			if ( $entry === false ) {
-				// No such shortcode exists; briefly cache negatives
-				$wgMemc->set( $memcKey, '!!NOEXIST!!', 300 );
-				return false;
-			}
-			$url = $entry->usc_url;
-			$wgMemc->set( $memcKey, $url );
 		}
 
 		return self::convertToProtocol( $url, $proto );
