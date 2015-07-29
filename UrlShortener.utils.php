@@ -17,6 +17,22 @@ class UrlShortenerUtils {
 	static $decodeMap;
 
 	/**
+	 * wfMemcKey() helper
+	 *
+	 * @param string $type
+	 * @param string $id
+	 * @return string
+	 */
+	private static function memcKey( $type, $id ) {
+		global $wgUrlShortenerDBName;
+		if ( $wgUrlShortenerDBName !== false ) {
+			return wfGlobalCacheKey( $wgUrlShortenerDBName, 'urlshortcode', $type, $id );
+		} else {
+			return wfMemcKey( 'urlshortcode', $type, $id );
+		}
+	}
+
+	/**
 	 * Gets the short code for the given URL.
 	 *
 	 * If it already exists in cache or the database, just returns that.
@@ -33,7 +49,7 @@ class UrlShortenerUtils {
 		// redirecting users
 		$url = self::convertToProtocol( $url, PROTO_HTTP );
 
-		$memcKey = wfMemcKey( 'urlshortcode', 'title', md5( $url ) );
+		$memcKey = self::memcKey( 'title', md5( $url ) );
 		$id = $wgMemc->get( $memcKey );
 		if ( !$id ) {
 			$dbr = self::getDB( DB_SLAVE );
@@ -93,7 +109,7 @@ class UrlShortenerUtils {
 		if ( $id === false ) {
 			return false;
 		}
-		$memcKey = wfMemcKey( 'urlshortcode', 'id', $id );
+		$memcKey = self::memcKey( 'id', $id );
 		$url = $wgMemc->get( $memcKey );
 
 		// check if this is cached to not exist
