@@ -113,6 +113,7 @@ $wgAutoloadClasses['ApiShortenUrl'] = __DIR__ . '/ApiShortenUrl.php';
 $wgSpecialPages['UrlShortener'] = 'SpecialUrlShortener';
 $wgSpecialPages['UrlRedirector'] = 'SpecialUrlRedirector';
 
+$wgHooks['UnitTestsList'][] = 'UrlShortenerHooks::onUnitTestsList';
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'UrlShortenerHooks::onLoadExtensionSchemaUpdates';
 $wgHooks['WebRequestPathInfoRouter'][] = 'UrlShortenerHooks::onWebRequestPathInfoRouter';
 
