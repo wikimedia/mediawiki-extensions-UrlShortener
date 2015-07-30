@@ -17,5 +17,6 @@
 	"urlshortener-error-malformed-url": "No es un URL válido",
 	"urlshortener-shortened-url-label": "URL acortado",
 	"urlshortener-error-disallowed-url": "No se permite acortar URL hacia el dominio $1",
-	"urlshortener-approved-domains": "Los enlaces {{PLURAL:$1|al siguiente dominio|a los siguientes dominios}} pueden acortarse: $2."
+	"urlshortener-approved-domains": "Los enlaces {{PLURAL:$1|al siguiente dominio|a los siguientes dominios}} pueden acortarse: $2.",
+	"urlshortener-ratelimit": "Espera un poco antes de acortar más URL."
 }
