@@ -10,5 +10,6 @@
 	"urlshortener-form-header": "Wklej tutaj długi adres URL",
 	"urlshortener-error-malformed-url": "Nieprawidłowy adres URL",
 	"urlshortener-shortened-url-label": "Skrócony URL",
-	"urlshortener-approved-domains": "Linki do {{PLURAL:$1|następującej domeny|następujących domen}} mogą być skrócone: $2."
+	"urlshortener-approved-domains": "Linki do {{PLURAL:$1|następującej domeny|następujących domen}} mogą być skrócone: $2.",
+	"urlshortener-ratelimit": "Proszę poczekać jakiś czas przed skracaniem kolejnych adresów URL."
 }
