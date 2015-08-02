@@ -9,5 +9,6 @@
 	"urlshortener-url-input-submitting": "Kierzen...",
 	"urlshortener-not-found-title": "Kuerz URL gouf net fonnt",
 	"urlshortener-error-malformed-url": "Keng valabel URL",
-	"urlshortener-shortened-url-label": "Gekierzt URL"
+	"urlshortener-shortened-url-label": "Gekierzt URL",
+	"urlshortener-approved-domains": "Linken op {{PLURAL:$1|dësen Domain|dës Domaine}} kënne gekierzt ginn: $2."
 }
