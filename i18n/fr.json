@@ -16,5 +16,6 @@
 	"urlshortener-error-malformed-url": "URL non valide",
 	"urlshortener-shortened-url-label": "URL reccourcie",
 	"urlshortener-error-disallowed-url": "Les URLs vers le domaine $1 n’ont pas le droit d’être raccourcies",
-	"urlshortener-approved-domains": "Les liens vers {{PLURAL:$1|le domaine suivant|les domaines suivants}} peuvent être raccourcis : $2."
+	"urlshortener-approved-domains": "Les liens vers {{PLURAL:$1|le domaine suivant|les domaines suivants}} peuvent être raccourcis : $2.",
+	"urlshortener-ratelimit": "Veuillez attendre quelques intants avant de raccourcir plus d'URLs."
 }
