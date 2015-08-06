@@ -1,18 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
-			"Elisardojm"
+			"Elisardojm",
+			"Toliño"
 		]
 	},
-	"urlshortener": "Acurtador de URL",
-	"urlshortener-desc": "Acurtador de URL arbitrarios",
+	"urlshortener": "Acurtador de enderezos URL",
+	"urlshortener-desc": "Acurtador de enderezos URL para enderezos URL arbitrarios",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Acurtar",
 	"urlshortener-url-input-submitting": "Acurtando…",
-	"urlshortener-not-found-title": "Non se atopou a URL acurtada",
-	"urlshortener-not-found-message": "Sentímolo, a URL que está a buscar non se atopou.",
-	"urlshortener-form-header": "Copie a URL larga aquí",
-	"urlshortener-error-malformed-url": "Non é unha URL válida",
-	"urlshortener-shortened-url-label": "URL acurtada",
-	"urlshortener-error-disallowed-url": "Non se permite acurtar URL cara ó dominio $1"
+	"urlshortener-not-found-title": "Non se atopou o enderezo URL acurtado",
+	"urlshortener-not-found-message": "Sentímolo, o enderezo URL que está a buscar non se atopou.",
+	"urlshortener-form-header": "Copie o enderezo URL longo aquí",
+	"urlshortener-error-malformed-url": "Non é un enderezo URL válido",
+	"urlshortener-shortened-url-label": "URL acurtado",
+	"urlshortener-error-disallowed-url": "Non se permite acurtar os enderezos URL pertencentes ao dominio $1",
+	"urlshortener-approved-domains": "Pódense acurtar as ligazóns {{PLURAL:$1|ao seguinte dominio|aos seguintes dominios}}: $2.",
+	"urlshortener-ratelimit": "Agarde uns intres antes de acurtar máis enderezos URL."
 }
