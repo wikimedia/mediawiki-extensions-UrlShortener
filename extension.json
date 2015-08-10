@@ -1,7 +1,12 @@
 {
 	"name": "UrlShortener",
 	"version": "1.0.0",
-	"author": "Yuvi Panda",
+	"author": [
+		"Yuvi Panda",
+		"Prateek Saxena",
+		"Tim Starling",
+		"Kunal Mehta"
+	],
 	"url": "https://www.mediawiki.org/wiki/Extension:UrlShortener",
 	"descriptionmsg": "urlshortener-desc",
 	"type": "specialpage",
