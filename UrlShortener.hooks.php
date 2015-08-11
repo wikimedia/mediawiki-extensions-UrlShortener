@@ -17,7 +17,8 @@ class UrlShortenerHooks {
 	 */
 	public static function onWebRequestPathInfoRouter( $router ) {
 		global $wgUrlShortenerTemplate;
-		if ( $wgUrlShortenerTemplate ) {
+		// If a template is set, and it is not the root, register it
+		if ( $wgUrlShortenerTemplate && $wgUrlShortenerTemplate !== '/$1' ) {
 			$router->add( $wgUrlShortenerTemplate,
 				array( 'title' => SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getPrefixedText() )
 			);
