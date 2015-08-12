@@ -36,6 +36,16 @@ your wiki farm. If set to false (default), it will use the wiki's normal databas
 $wgUrlShortenerDBName = false;
 </source>
 
+=== Allow arbitrary ports ===
+
+By default, only URLs with ports 80 and 443 are accepted and are automatically removed.
+If your wiki is set up using a custom port, set this to true to allow shortening URLs
+that have arbitrary ports.
+
+<source lang="php">
+$wgUrlShortenerAllowArbitraryPorts = true
+</source>
+
 === Whitelist regex ===
 
 Configures the acceptable domains that users can submit links for. This is an

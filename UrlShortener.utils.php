@@ -174,10 +174,19 @@ class UrlShortenerUtils {
 	 * @return bool|Message true if it is valid, or error Message object if invalid
 	 */
 	public static function validateUrl( $url ) {
+		global $wgUrlShortenerAllowArbitraryPorts;
+
 		$urlParts = wfParseUrl( $url );
 		if ( $urlParts === false ) {
 			return wfMessage( 'urlshortener-error-malformed-url' );
 		} else {
+			if ( isset( $urlParts['port'] ) && !$wgUrlShortenerAllowArbitraryPorts ) {
+				if ( $urlParts['port'] === 80 || $urlParts['port'] === 443 ) {
+					unset( $urlParts['port'] );
+				} else {
+					return wfMessage( 'urlshortener-error-badports' );
+				}
+			}
 			$domain = $urlParts['host'];
 
 			if ( preg_match( '/' . self::getWhitelistRegex() . '/', $domain ) === 1 ) {

@@ -45,12 +45,14 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 * @param HTMLForm $form
 	 */
 	protected function alterForm( HTMLForm $form ) {
+		global $wgUrlShortenerAllowArbitraryPorts;
 		$form->setSubmitID( 'mw-urlshortener-submit' );
 		$form->setSubmitTextMsg( 'urlshortener-url-input-submit' );
 		$form->setFooterText( $this->getApprovedDomainsMessage()->parse() );
 		$this->getOutput()->addModules( 'ext.urlShortener.special' );
 		$this->getOutput()->addJsConfigVars( array(
 			'wgUrlShortenerDomainsWhitelist' => UrlShortenerUtils::getWhitelistRegex(),
+			'wgUrlShortenerAllowArbitraryPorts' => $wgUrlShortenerAllowArbitraryPorts,
 		) );
 	}
 

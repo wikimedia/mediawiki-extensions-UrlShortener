@@ -12,6 +12,11 @@
 		regex: new RegExp( mw.config.get( 'wgUrlShortenerDomainsWhitelist' ) ),
 
 		/**
+		 * @var {boolean}
+		 */
+		allowArbitraryPorts: mw.config.get( 'wgUrlShortenerAllowArbitraryPorts' ),
+
+		/**
 		 * @var {OO.ui.TextInputWidget}
 		 */
 		shortened: null,
@@ -36,21 +41,29 @@
 		 *                         returned by the API in case of error.
 		 */
 		validateInput: function ( input ) {
-			var parsed, error, self = mw.urlshortener;
+			var parsed,
+				self = mw.urlshortener,
+				showError = function ( error ) {
+					self.input.setLabel( error );
+					return false;
+				};
 			try {
 				parsed = new mw.Uri( input );
-				if ( parsed.host.match( self.regex ) ) {
-					this.setLabel( null );
-					return true;
-				} else {
-					error = mw.msg( 'urlshortener-error-disallowed-url', parsed.host );
-				}
 			} catch ( e ) {
-				error = mw.msg( 'urlshortener-error-malformed-url' );
+				return showError( mw.msg( 'urlshortener-error-malformed-url' ) );
+			}
+			if ( !parsed.host.match( self.regex ) ) {
+				return showError( mw.msg( 'urlshortener-error-disallowed-url', parsed.host ) );
+			}
+			if ( parsed.port &&
+				!self.allowArbitraryPorts &&
+				!( parsed.port === '80' || parsed.port === '443' )
+			) {
+				return showError( 'urlshortener-error-badports' );
 			}
 
-			this.setLabel( error );
-			return false;
+			self.input.setLabel( null );
+			return true;
 		},
 
 		/**

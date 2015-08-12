@@ -55,6 +55,7 @@
 			"messages": [
 				"urlshortener-error-malformed-url",
 				"urlshortener-error-disallowed-url",
+				"urlshortener-error-badports",
 				"urlshortener-url-input-submit",
 				"urlshortener-url-input-submitting",
 				"urlshortener-shortened-url-label"
@@ -96,7 +97,8 @@
 		"UrlShortenerDomainsWhitelist": false,
 		"UrlShortenerIdSet": "023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$-_.!",
 		"UrlShortenerServer": false,
-		"UrlShortenerTemplate": false
+		"UrlShortenerTemplate": false,
+		"UrlShortenerAllowArbitraryPorts": false
 	},
 	"manifest_version": 1
 }
