@@ -1,10 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
-			"SGTTechnologicBunny"
+			"SGTTechnologicBunny",
+			"Amire80"
 		]
 	},
-	"urlshortener-url-input-submit": "מקוצר",
+	"urlshortener": "מקצר כתובות",
+	"urlshortener-desc": "מקצר כתובות לכל URL",
+	"urlshortener-url-input-label": "כתובת URL",
+	"urlshortener-url-input-submit": "לקצר",
+	"urlshortener-url-input-submitting": "קיצור...",
+	"urlshortener-not-found-title": "לא נמצאה כתובת מקוצרת",
+	"urlshortener-not-found-message": "סליחה, הכתובת שחיפשת לא נמצאה.",
+	"urlshortener-form-header": "נא לרשום את הכתובת הארוכה שלך כאן",
+	"urlshortener-error-malformed-url": "לא כתובת תקינה",
 	"urlshortener-shortened-url-label": "כתובת מקוצרת",
-	"urlshortener-error-disallowed-url": "אין אפשרות לקצר קישורים לדומיין $1"
+	"urlshortener-error-disallowed-url": "לא ניתן לקצר כתובות למתחם $1",
+	"urlshortener-approved-domains": "אפשר לקצר קישורים {{PLURAL:$1|למתחם הבא|למתחמים הבאים}}: $2.",
+	"urlshortener-ratelimit": "נא לחכות זמן־מה לפני קיצור כתובות נוספות."
 }
