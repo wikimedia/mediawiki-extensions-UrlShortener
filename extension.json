@@ -1,0 +1,96 @@
+{
+	"name": "UrlShortener",
+	"version": "1.0.0",
+	"author": "Yuvi Panda",
+	"url": "https://www.mediawiki.org/wiki/Extension:UrlShortener",
+	"descriptionmsg": "urlshortener-desc",
+	"type": "specialpage",
+	"APIModules": {
+		"shortenurl": "ApiShortenUrl"
+	},
+	"AutoloadClasses": {
+		"UrlShortenerUtils": "UrlShortener.utils.php",
+		"UrlShortenerHooks": "UrlShortener.hooks.php",
+		"SpecialUrlShortener": "SpecialUrlShortener.php",
+		"SpecialUrlRedirector": "SpecialUrlRedirector.php",
+		"ApiShortenUrl": "ApiShortenUrl.php"
+	},
+	"ExtensionMessagesFiles": {
+		"UrlShortenerAlias": "UrlShortener.alias.php",
+		"UrlShortenerNoTranslateAlias": "UrlShortener.notranslate-alias.php"
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": [
+			"UrlShortenerHooks::onLoadExtensionSchemaUpdates"
+		],
+		"WebRequestPathInfoRouter": [
+			"UrlShortenerHooks::onWebRequestPathInfoRouter"
+		],
+		"BeforePageDisplay": [
+			"UrlShortenerHooks::onBeforePageDisplay"
+		],
+		"BaseTemplateToolbox": [
+			"UrlShortenerHooks::onBaseTemplateToolbox"
+		],
+		"UnitTestsList": [
+			"UrlShortenerHooks::onUnitTestsList"
+		]
+	},
+	"MessagesDirs": {
+		"UrlShortener": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.urlShortener.special": {
+			"scripts": [
+				"modules/ext.urlShortener.special.js"
+			],
+			"messages": [
+				"urlshortener-error-malformed-url",
+				"urlshortener-error-disallowed-url",
+				"urlshortener-url-input-submit",
+				"urlshortener-url-input-submitting",
+				"urlshortener-shortened-url-label"
+			],
+			"dependencies": [
+				"oojs-ui",
+				"mediawiki.api",
+				"mediawiki.Uri"
+			]
+		},
+		"ext.urlShortener.toolbar": {
+			"scripts": [
+				"modules/ext.urlShortener.toolbar.js"
+			],
+			"styles": [
+				"modules/ext.urlShortener.popup.less"
+			],
+			"dependencies": [
+				"oojs-ui"
+			],
+			"messages": [
+				"urlshortener-url-input-submitting",
+				"urlshortener-shortened-url-label",
+				"urlshortener-ratelimit"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "UrlShortener"
+	},
+	"SpecialPages": {
+		"UrlShortener": "SpecialUrlShortener",
+		"UrlRedirector": "SpecialUrlRedirector"
+	},
+	"config": {
+		"UrlShortenerApprovedDomains": false,
+		"UrlShortenerDBName": false,
+		"UrlShortenerDomainsWhitelist": false,
+		"UrlShortenerIdSet": "023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$-_.!",
+		"UrlShortenerServer": false,
+		"UrlShortenerTemplate": false
+	},
+	"manifest_version": 1
+}

@@ -1,0 +1,95 @@
+The UrlShortener extension is a MediaWiki extension that accepts arbitrary urls
+from whitelisted domains and shortens them.
+
+== Configuration ==
+
+=== URL routing configuration ===
+
+Configures the template to use when generating the shortened URL. Using this
+feature will require mod_rewrite (or an equivalent). If set to false (default),
+the short URLs will use the not-so-short
+<code>/wiki/Special:UrlShortener/5234</code> since it will work regardless of
+web server configuration.
+
+If you wanted your short URLs in the form of <code>domain.org/r/5234<code>, you would set:
+<source lang="php">
+$wgUrlShortenerTemplate = '/r/$1';
+</source>
+
+
+=== Short domain name ===
+
+If you have a custom short domain name, you can set it by using:
+
+<source lang="php">
+$wgUrlShortenerServer = "short.wiki";
+</source>
+
+If set to false (default), it will use $wgServer.
+
+=== Global database ===
+
+Set this to the name of a database if you wish to use one central database for
+your wiki farm. If set to false (default), it will use the wiki's normal database.
+
+<source lang="php">
+$wgUrlShortenerDBName = false;
+</source>
+
+=== Whitelist regex ===
+
+Configures the acceptable domains that users can submit links for. This is an
+array of regular expressions. If set to false (default), it will set up a
+whitelist for the current domain (using $wgServer).
+
+<source lang="php">
+$wgUrlShortenerDomainsWhitelist = false;
+</source>
+
+For example, to only whitelist links to wikipedia.org or wikimedia.org, we would use the following:
+<source lang="php">
+$wgUrlShortenerDomainsWhitelist = array(
+	'(.*\.)?wikimedia\.org',
+	'(.*\.)?wikipedia\.org',
+);
+</source>
+
+If we wanted to whitelist any domain:
+<source lang="php">
+$wgUrlShortenerDomainsWhitelist = array( '.*' );
+</source>
+
+=== Whitelist documentation ===
+
+To provide human-readable documentation of the whitelist, this is an array of
+the whitelisted domains that will be displayed on Special:UrlShortener.
+
+If set to false (default), it will output a normalized version of $wgServer.
+
+<source lang="php">
+$wgUrlShortenerApprovedDomains = false;
+</source>
+
+If you only whitelisted wikipedia.org and wikimedia.org in the above example:
+
+<source lang="php">
+$wgUrlShortenerApprovedDomains = array(
+	'*.wikimedia.org',
+	'*.wikipedia.org',
+);
+</source>
+
+=== Shortcode character set ===
+
+If you want to customize the character set the shortcodes use, you can override
+this setting. If changed, any existing short URLs will go to the wrong
+destination.
+
+<source lang="php">
+$wgUrlShortenerIdSet = '023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$-_.!';
+</source>
+
+== License ==
+
+© 2014 Yuvaraj Pandian (yuvipanda@gmail.com) under the WTFPL, see the COPYING
+file for the full license.
