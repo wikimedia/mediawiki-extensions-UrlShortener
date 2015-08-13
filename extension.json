@@ -9,6 +9,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:UrlShortener",
 	"descriptionmsg": "urlshortener-desc",
+	"license-name": "WTFPL",
 	"type": "specialpage",
 	"APIModules": {
 		"shortenurl": "ApiShortenUrl"
