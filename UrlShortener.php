@@ -98,7 +98,6 @@ $wgExtensionCredits['specialpage'][] = array(
 
 // Set up the new special page
 $wgMessagesDirs['UrlShortener'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['UrlShortener'] = __DIR__ . '/UrlShortener.i18n.php';
 $wgExtensionMessagesFiles['UrlShortenerAlias'] = __DIR__ . '/UrlShortener.alias.php';
 $wgExtensionMessagesFiles['UrlShortenerNoTranslateAlias'] = __DIR__ . '/UrlShortener.notranslate-alias.php';
 
