@@ -26,6 +26,35 @@ class UrlShortenerHooks {
 		return true;
 	}
 
+	public static function onBeforePageDisplay( OutputPage $out ) {
+		$out->addModules( 'ext.urlShortener.toolbar' );
+	}
+
+	/**
+	 * Adds a link to the toolbox to Special:UrlShortener
+	 *
+	 * @param BaseTemplate $template
+	 * @param array $toolbox
+	 */
+	public static function onBaseTemplateToolbox( BaseTemplate $template, array &$toolbox ) {
+		$skin = $template->getSkin();
+		if ( $skin->getTitle()->isSpecial( 'UrlShortener' ) ) {
+			return;
+		}
+		$query = $skin->getRequest()->getQueryValues();
+		if ( isset( $query['title'] ) ) {
+			// We already know the title
+			unset( $query['title'] );
+		}
+		$linkToShorten = $skin->getTitle()->getFullURL( $query, '', PROTO_CANONICAL );
+		$link = SpecialPage::getTitleFor( 'UrlShortener' )->getLocalURL( array( 'url' => $linkToShorten ) );
+		$toolbox['urlshortener'] = array(
+			'id' => 't-urlshortener',
+			'href' => $link,
+			'msg' => 'urlshortener-toolbox'
+		);
+	}
+
 	/**
 	 * Load our unit tests
 	 */
