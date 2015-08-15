@@ -6,6 +6,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-jscs' );
 	grunt.loadNpmTasks( 'grunt-tyops' );
 
+	var conf = grunt.file.readJSON( 'extension.json' );
 	grunt.initConfig( {
 		tyops: {
 			options: {
@@ -28,9 +29,7 @@ module.exports = function ( grunt ) {
 		jscs: {
 			src: '<%= jshint.all %>'
 		},
-		banana: {
-			all: [ 'i18n/' ]
-		},
+		banana: conf.MessagesDirs,
 		jsonlint: {
 			all: [
 				'**/*.json',
