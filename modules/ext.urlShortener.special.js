@@ -59,7 +59,11 @@
 				!self.allowArbitraryPorts &&
 				!( parsed.port === '80' || parsed.port === '443' )
 			) {
-				return showError( 'urlshortener-error-badports' );
+				return showError( mw.msg( 'urlshortener-error-badports' ) );
+			}
+
+			if ( parsed.user || parsed.password ) {
+				return showError( mw.msg( 'urlshortener-error-nouserpass' ) );
 			}
 
 			self.input.setLabel( null );

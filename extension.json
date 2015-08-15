@@ -56,6 +56,7 @@
 				"urlshortener-error-malformed-url",
 				"urlshortener-error-disallowed-url",
 				"urlshortener-error-badports",
+				"urlshortener-error-nouserpass",
 				"urlshortener-url-input-submit",
 				"urlshortener-url-input-submitting",
 				"urlshortener-shortened-url-label"

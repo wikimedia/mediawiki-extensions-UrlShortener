@@ -187,6 +187,11 @@ class UrlShortenerUtils {
 					return wfMessage( 'urlshortener-error-badports' );
 				}
 			}
+
+			if ( isset( $urlParts['user'] ) || isset( $urlParts['pass'] ) ) {
+				return wfMessage( 'urlshortener-error-nouserpass' );
+			}
+
 			$domain = $urlParts['host'];
 
 			if ( preg_match( '/' . self::getWhitelistRegex() . '/', $domain ) === 1 ) {
