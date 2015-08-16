@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ата",
-			"Base"
+			"Base",
+			"Dars"
 		]
 	},
 	"urlshortener": "Скорочувач URL-адрес",
@@ -15,5 +16,7 @@
 	"urlshortener-form-header": "Вставте вашу довгу URL-адресу тут",
 	"urlshortener-error-malformed-url": "Неприпустимий URL",
 	"urlshortener-shortened-url-label": "Скорочений URL",
-	"urlshortener-error-disallowed-url": "URL-адреси у домені $1 не можуть бути скорочені"
+	"urlshortener-error-disallowed-url": "URL-адреси у домені $1 не можуть бути скорочені",
+	"urlshortener-toolbox": "Отримати вкорочену URL-адресу",
+	"urlshortener-error-badports": "URL-адреси, які містять порти, не можуть бути вкорочені"
 }

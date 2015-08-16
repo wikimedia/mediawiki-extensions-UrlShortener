@@ -11,5 +11,6 @@
 	"urlshortener-error-malformed-url": "Keng valabel URL",
 	"urlshortener-shortened-url-label": "Gekierzt URL",
 	"urlshortener-approved-domains": "Linken op {{PLURAL:$1|dësen Domain|dës Domaine}} kënne gekierzt ginn: $2.",
-	"urlshortener-ratelimit": "Waart w.e.g. e bësse ier Dir méi URLe kierzt."
+	"urlshortener-ratelimit": "Waart w.e.g. e bësse ier Dir méi URLe kierzt.",
+	"urlshortener-toolbox": "Gekierzt URL kréien"
 }
