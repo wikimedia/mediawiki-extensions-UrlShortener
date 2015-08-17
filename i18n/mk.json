@@ -18,5 +18,6 @@
 	"urlshortener-approved-domains": "Врските што водат кон {{PLURAL:$1|следниов домен|следниве домени}} може да се скратат: $2.",
 	"urlshortener-ratelimit": "Почекајте некое време пред да ги скратите URL-ата.",
 	"urlshortener-toolbox": "Дај скратен URL",
-	"urlshortener-error-badports": "URL-а што содржат порти кои не е допуштено да се кратат"
+	"urlshortener-error-badports": "URL-а што содржат порти кои не е допуштено да се кратат",
+	"urlshortener-error-nouserpass": "Не е дозволено кратење на URL-ата што содржат корисничко име или лозинка"
 }

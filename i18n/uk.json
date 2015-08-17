@@ -18,5 +18,6 @@
 	"urlshortener-shortened-url-label": "Скорочений URL",
 	"urlshortener-error-disallowed-url": "URL-адреси у домені $1 не можуть бути скорочені",
 	"urlshortener-toolbox": "Отримати вкорочену URL-адресу",
-	"urlshortener-error-badports": "URL-адреси, які містять порти, не можуть бути вкорочені"
+	"urlshortener-error-badports": "URL-адреси, які містять порти, не можуть бути вкорочені",
+	"urlshortener-error-nouserpass": "Веб-адреси, які містять ім'я користувача або пароль, не можуть бути вкорочені"
 }

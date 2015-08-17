@@ -20,5 +20,6 @@
 	"urlshortener-approved-domains": "Los enlaces {{PLURAL:$1|al siguiente dominio|a los siguientes dominios}} pueden acortarse: $2.",
 	"urlshortener-ratelimit": "Espera un poco antes de acortar más URL.",
 	"urlshortener-toolbox": "Obtener URL acortado",
-	"urlshortener-error-badports": "No se permite acortar URL que contengan puertos"
+	"urlshortener-error-badports": "No se permite acortar URL que contengan puertos",
+	"urlshortener-error-nouserpass": "No se permiten acortar URL que contengan un nombre de usuario o una contraseña"
 }
