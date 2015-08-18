@@ -17,6 +17,8 @@
 	"urlshortener-error-malformed-url": "Неприпустимий URL",
 	"urlshortener-shortened-url-label": "Скорочений URL",
 	"urlshortener-error-disallowed-url": "URL-адреси у домені $1 не можуть бути скорочені",
+	"urlshortener-approved-domains": "Посилання на {{PLURAL:$1|наступні домени|наступний домен}} можуть бути скорочено: $2.",
+	"urlshortener-ratelimit": "Будь ласка, зачекайте деякий час перш ніж скорочувати більше URLів.",
 	"urlshortener-toolbox": "Отримати вкорочену URL-адресу",
 	"urlshortener-error-badports": "URL-адреси, які містять порти, не можуть бути вкорочені",
 	"urlshortener-error-nouserpass": "Веб-адреси, які містять ім'я користувача або пароль, не можуть бути вкорочені"
