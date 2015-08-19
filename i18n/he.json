@@ -17,5 +17,8 @@
 	"urlshortener-shortened-url-label": "כתובת מקוצרת",
 	"urlshortener-error-disallowed-url": "לא ניתן לקצר כתובות למתחם $1",
 	"urlshortener-approved-domains": "אפשר לקצר קישורים {{PLURAL:$1|למתחם הבא|למתחמים הבאים}}: $2.",
-	"urlshortener-ratelimit": "נא לחכות זמן־מה לפני קיצור כתובות נוספות."
+	"urlshortener-ratelimit": "נא לחכות זמן־מה לפני קיצור כתובות נוספות.",
+	"urlshortener-toolbox": "קבלת כתובת מקוצרת",
+	"urlshortener-error-badports": "לא ניתן לקצר כתובות שמכילות פתחות",
+	"urlshortener-error-nouserpass": "לא ניתן לקצר כתובות שמכילות שם משתמש או ססמה"
 }
