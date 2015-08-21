@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
-			"Wladek92"
+			"Wladek92",
+			"Titip1995"
 		]
 	},
 	"urlshortener": "Raccourcisseur d’URL",
@@ -17,5 +18,8 @@
 	"urlshortener-shortened-url-label": "URL reccourcie",
 	"urlshortener-error-disallowed-url": "Les URLs vers le domaine $1 n’ont pas le droit d’être raccourcies",
 	"urlshortener-approved-domains": "Les liens vers {{PLURAL:$1|le domaine suivant|les domaines suivants}} peuvent être raccourcis : $2.",
-	"urlshortener-ratelimit": "Veuillez attendre quelques intants avant de raccourcir plus d'URLs."
+	"urlshortener-ratelimit": "Veuillez attendre quelques intants avant de raccourcir plus d'URLs.",
+	"urlshortener-toolbox": "Obtenir l'URL raccoucie",
+	"urlshortener-error-badports": "Les URL qui contiennent un port ne peuvent pas être raccourcis",
+	"urlshortener-error-nouserpass": "Les URL qui contiennent un nom d'utilisateur ou un mot de passe ne peuvent pas être raccourcis"
 }
