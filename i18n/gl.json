@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Elisardojm",
-			"Toliño"
+			"Toliño",
+			"Banjo"
 		]
 	},
 	"urlshortener": "Acurtador de enderezos URL",
@@ -17,5 +18,8 @@
 	"urlshortener-shortened-url-label": "URL acurtado",
 	"urlshortener-error-disallowed-url": "Non se permite acurtar os enderezos URL pertencentes ao dominio $1",
 	"urlshortener-approved-domains": "Pódense acurtar as ligazóns {{PLURAL:$1|ao seguinte dominio|aos seguintes dominios}}: $2.",
-	"urlshortener-ratelimit": "Agarde uns intres antes de acurtar máis enderezos URL."
+	"urlshortener-ratelimit": "Agarde uns intres antes de acurtar máis enderezos URL.",
+	"urlshortener-toolbox": "Xerar URL acurtado",
+	"urlshortener-error-badports": "As URLs que conteñen portos non poden acurtarse",
+	"urlshortener-error-nouserpass": "As URLs que conteñen un nome de usuario ou contrasinal non poden acurtarse"
 }
