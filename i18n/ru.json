@@ -14,5 +14,6 @@
 	"urlshortener-form-header": "Вставьте длинный URL-адрес сюда",
 	"urlshortener-error-malformed-url": "Недопустимый URL-адрес",
 	"urlshortener-shortened-url-label": "Сокращённый URL-адрес",
-	"urlshortener-error-disallowed-url": "URL-адреса для домена $1 не разрешены для сокращения"
+	"urlshortener-error-disallowed-url": "URL-адреса для домена $1 не разрешены для сокращения",
+	"urlshortener-toolbox": "Получить сокращённый URL-адрес"
 }
