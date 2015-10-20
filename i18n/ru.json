@@ -15,5 +15,9 @@
 	"urlshortener-error-malformed-url": "Недопустимый URL-адрес",
 	"urlshortener-shortened-url-label": "Сокращённый URL-адрес",
 	"urlshortener-error-disallowed-url": "URL-адреса для домена $1 не разрешены для сокращения",
-	"urlshortener-toolbox": "Получить сокращённый URL-адрес"
+	"urlshortener-approved-domains": "Ссылки на {{PLURAL:$1|следующий домен|следующие домены}} могут быть сокращены: $2.",
+	"urlshortener-ratelimit": "Пожалуйста, подождите некоторое время, прежде чем продолжить сокращать URL-адреса.",
+	"urlshortener-toolbox": "Получить сокращённый URL-адрес",
+	"urlshortener-error-badports": "URL-адреса, содержащие номера портов, не разрешены для сокращения",
+	"urlshortener-error-nouserpass": "URL-адреса, содержащие имя пользователя или пароль, не разрешены для сокращения"
 }
