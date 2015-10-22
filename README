@@ -36,6 +36,12 @@ your wiki farm. If set to false (default), it will use the wiki's normal databas
 $wgUrlShortenerDBName = false;
 </source>
 
+If the database is on an external cluster, you will also need to configure that.
+
+<source lang="php">
+$wgUrlShortenerDBCluster = false;
+</source>
+
 === Allow arbitrary ports ===
 
 By default, only URLs with ports 80 and 443 are accepted and are automatically removed.

@@ -94,6 +94,7 @@
 	},
 	"config": {
 		"UrlShortenerApprovedDomains": false,
+		"UrlShortenerDBCluster": false,
 		"UrlShortenerDBName": false,
 		"UrlShortenerDomainsWhitelist": false,
 		"UrlShortenerIdSet": "023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$-_.!",

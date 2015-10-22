@@ -121,15 +121,15 @@ class UrlShortenerUtils {
 
 	/**
 	 * @param int $type DB_SLAVE or DB_MASTER
-	 * @return DatabaseBase
+	 * @return IDatabase
 	 */
 	public static function getDB( $type ) {
-		global $wgUrlShortenerDBName;
-		if ( $wgUrlShortenerDBName !== false ) {
-			return wfGetDB( $type, array(), $wgUrlShortenerDBName );
-		} else {
-			return wfGetDB( $type );
-		}
+		global $wgUrlShortenerDBName, $wgUrlShortenerDBCluster;
+		$lb = $wgUrlShortenerDBCluster
+			? wfGetLBFactory()->getExternalLB( $wgUrlShortenerDBCluster )
+			: wfGetLB( $wgUrlShortenerDBName );
+
+		return $lb->getConnectionRef( $type, array(), $wgUrlShortenerDBName );
 	}
 
 	/**
