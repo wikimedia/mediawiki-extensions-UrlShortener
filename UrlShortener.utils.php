@@ -14,6 +14,14 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 class UrlShortenerUtils {
+
+	/**
+	 * How long to cache things in Squid (one month)
+	 *
+	 * @var int
+	 */
+	const CACHE_TIME = 2592000;
+
 	static $decodeMap;
 
 	/**

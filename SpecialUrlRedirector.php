@@ -7,17 +7,19 @@ class SpecialUrlRedirector extends UnlistedSpecialPage {
 	}
 
 	public function execute( $par ) {
+		$out = $this->getOutput();
 		if ( $par === null ) {
 			// Send them to the form
-			$this->getOutput()->redirect( SpecialPage::getTitleFor( 'UrlShortener' )->getFullURL() );
+			$out->redirect( SpecialPage::getTitleFor( 'UrlShortener' )->getFullURL() );
 			return;
 		}
 		$url = UrlShortenerUtils::getURL( $par, PROTO_CURRENT );
 		if ( $url !== false ) {
-			$this->getOutput()->redirect( $url, '301' );
+			$out->setSquidMaxage( UrlShortenerUtils::CACHE_TIME );
+			$out->redirect( $url, '301' );
 		} else {
 			// Invalid $par
-			$this->getOutput()->showErrorPage( 'urlshortener-not-found-title', 'urlshortener-not-found-message' );
+			$out->showErrorPage( 'urlshortener-not-found-title', 'urlshortener-not-found-message' );
 		}
 	}
 }
