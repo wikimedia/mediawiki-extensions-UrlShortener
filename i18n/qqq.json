@@ -20,5 +20,6 @@
 	"urlshortener-ratelimit": "Error message shown when a user shortens too many urls in a short period of time",
 	"urlshortener-toolbox": "Text of link in toolbox to get shortened URL",
 	"urlshortener-error-badports": "Error message shown when the URL cannot be shortened because it contains a port (e.g. http://example.org:90/path)",
-	"urlshortener-error-nouserpass": "Error message shown when the URL cannot be shortened because it contains a username or password (e.g. http://user:password@example.org/)"
+	"urlshortener-error-nouserpass": "Error message shown when the URL cannot be shortened because it contains a username or password (e.g. http://user:password@example.org/)",
+	"urlshortener-failed-try-again": "Generic failure message with option to try again"
 }
