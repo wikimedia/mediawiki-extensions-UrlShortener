@@ -19,5 +19,6 @@
 	"urlshortener-ratelimit": "Почекајте некое време пред да ги скратите URL-ата.",
 	"urlshortener-toolbox": "Дај скратен URL",
 	"urlshortener-error-badports": "URL-а што содржат порти кои не е допуштено да се кратат",
-	"urlshortener-error-nouserpass": "Не е дозволено кратење на URL-ата што содржат корисничко име или лозинка"
+	"urlshortener-error-nouserpass": "Не е дозволено кратење на URL-ата што содржат корисничко име или лозинка",
+	"urlshortener-failed-try-again": "Не успеа. Да се обидам повторно?"
 }

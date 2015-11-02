@@ -19,5 +19,6 @@
 	"urlshortener-ratelimit": "Bitte warte einige Zeit vor dem Kürzen weiterer URLs.",
 	"urlshortener-toolbox": "Gekürzte URL abrufen",
 	"urlshortener-error-badports": "URLs, die Ports enthalten, dürfen nicht gekürzt werden.",
-	"urlshortener-error-nouserpass": "URLs, die einen Benutzernamen oder ein Passwort enthalten, dürfen nicht gekürzt werden."
+	"urlshortener-error-nouserpass": "URLs, die einen Benutzernamen oder ein Passwort enthalten, dürfen nicht gekürzt werden.",
+	"urlshortener-failed-try-again": "Fehlgeschlagen. Erneut versuchen?"
 }

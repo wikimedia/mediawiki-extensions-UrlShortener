@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Shirayuki",
-			"2nd-player"
+			"2nd-player",
+			"Sujiniku"
 		]
 	},
 	"urlshortener": "URL短縮",
@@ -15,5 +16,6 @@
 	"urlshortener-form-header": "長い URL をここに貼り付けてください",
 	"urlshortener-error-malformed-url": "有効な URL ではありません",
 	"urlshortener-shortened-url-label": "短縮後のURL",
-	"urlshortener-error-disallowed-url": "ドメイン $1 への URL は短縮が認められていません"
+	"urlshortener-error-disallowed-url": "ドメイン $1 への URL は短縮が認められていません",
+	"urlshortener-failed-try-again": "失敗しました。もう一度、試しますか？"
 }
