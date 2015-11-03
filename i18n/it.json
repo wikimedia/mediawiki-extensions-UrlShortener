@@ -15,5 +15,6 @@
 	"urlshortener-error-malformed-url": "URL non valido",
 	"urlshortener-shortened-url-label": "URL abbreviato",
 	"urlshortener-error-disallowed-url": "Gli URL per il dominio $1 non possono essere abbreviati",
-	"urlshortener-error-nouserpass": "URL contenenti un nome utente o una password che non è consentito abbreviare"
+	"urlshortener-error-nouserpass": "URL contenenti un nome utente o una password che non è consentito abbreviare",
+	"urlshortener-failed-try-again": "Non riuscito. Riprovare?"
 }
