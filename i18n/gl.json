@@ -21,5 +21,6 @@
 	"urlshortener-ratelimit": "Agarde uns intres antes de acurtar máis enderezos URL.",
 	"urlshortener-toolbox": "Xerar URL acurtado",
 	"urlshortener-error-badports": "As URLs que conteñen portos non poden acurtarse",
-	"urlshortener-error-nouserpass": "As URLs que conteñen un nome de usuario ou contrasinal non poden acurtarse"
+	"urlshortener-error-nouserpass": "As URLs que conteñen un nome de usuario ou contrasinal non poden acurtarse",
+	"urlshortener-failed-try-again": "Fallou. Intentalo de novo?"
 }

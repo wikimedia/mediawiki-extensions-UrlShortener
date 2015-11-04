@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kwj2772",
-			"Revi"
+			"Revi",
+			"Hwangjy9"
 		]
 	},
 	"urlshortener": "URL 단축기",
@@ -20,5 +21,6 @@
 	"urlshortener-ratelimit": "URL을 축약하는 동안 기다려 주세요.",
 	"urlshortener-toolbox": "축약된 URL 얻기",
 	"urlshortener-error-badports": "포트를 포함하는 URL은 축약될 수 없습니다",
-	"urlshortener-error-nouserpass": "사용자명이나 비밀번호를 포함하는 URL은 축약될 수 없습니다"
+	"urlshortener-error-nouserpass": "사용자명이나 비밀번호를 포함하는 URL은 축약될 수 없습니다",
+	"urlshortener-failed-try-again": "실패했습니다. 다시 시도하시겠습니까?"
 }
