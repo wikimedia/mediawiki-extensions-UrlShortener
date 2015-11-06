@@ -79,6 +79,9 @@
 				"urlshortener-failed-try-again",
 				"urlshortener-shortened-url-label",
 				"urlshortener-ratelimit"
+			],
+			"dependencies": [
+				"mediawiki.api"
 			]
 		}
 	},
