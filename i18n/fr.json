@@ -21,5 +21,6 @@
 	"urlshortener-ratelimit": "Veuillez attendre quelques intants avant de raccourcir plus d'URLs.",
 	"urlshortener-toolbox": "Obtenir l'URL raccoucie",
 	"urlshortener-error-badports": "Les URL qui contiennent un port ne peuvent pas être raccourcis",
-	"urlshortener-error-nouserpass": "Les URL qui contiennent un nom d'utilisateur ou un mot de passe ne peuvent pas être raccourcis"
+	"urlshortener-error-nouserpass": "Les URL qui contiennent un nom d'utilisateur ou un mot de passe ne peuvent pas être raccourcis",
+	"urlshortener-failed-try-again": "Échec. Réessayer ?"
 }
