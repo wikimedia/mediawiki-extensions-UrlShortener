@@ -20,5 +20,6 @@
 	"urlshortener-ratelimit": "נא לחכות זמן־מה לפני קיצור כתובות נוספות.",
 	"urlshortener-toolbox": "קבלת כתובת מקוצרת",
 	"urlshortener-error-badports": "לא ניתן לקצר כתובות שמכילות פתחות",
-	"urlshortener-error-nouserpass": "לא ניתן לקצר כתובות שמכילות שם משתמש או ססמה"
+	"urlshortener-error-nouserpass": "לא ניתן לקצר כתובות שמכילות שם משתמש או ססמה",
+	"urlshortener-failed-try-again": "זה לא עבד. לנסות שוב?"
 }
