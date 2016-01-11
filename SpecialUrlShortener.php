@@ -1,6 +1,6 @@
 <?php
 /**
- * A special page that provides redirects to articles via their page IDs
+ * A special page that creates redirects to arbitrary URLs
  *
  * @file
  * @ingroup Extensions
