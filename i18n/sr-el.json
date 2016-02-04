@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Milicevic01"
+		]
+	},
+	"urlshortener": "URL skraćivač",
+	"urlshortener-url-input-submit": "Skrati",
+	"urlshortener-url-input-submitting": "Skraćujem...",
+	"urlshortener-form-header": "Nalepite dugački URL ovde",
+	"urlshortener-error-malformed-url": "Neispravan URL",
+	"urlshortener-shortened-url-label": "Skraćeni URL"
+}
