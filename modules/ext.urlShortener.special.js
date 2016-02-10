@@ -107,9 +107,6 @@
 		},
 
 		init: function () {
-			// Infuse the parent FieldLayout of #mw-urlshortener-url-input as a workaround for T106313
-			OO.ui.infuse( $( '#mw-urlshortener-url-input' ).closest( '.oo-ui-fieldLayout' )[ 0 ] );
-
 			this.input = OO.ui.infuse( 'mw-urlshortener-url-input' );
 			this.input.setValidation( this.validateInput );
 			this.submit = OO.ui.infuse( 'mw-urlshortener-submit' );
