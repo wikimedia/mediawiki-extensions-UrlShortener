@@ -3,7 +3,8 @@
 		"authors": [
 			"Ата",
 			"Base",
-			"Dars"
+			"Dars",
+			"Piramidion"
 		]
 	},
 	"urlshortener": "Скорочувач URL-адрес",
@@ -21,5 +22,6 @@
 	"urlshortener-ratelimit": "Будь ласка, зачекайте деякий час перш ніж скорочувати більше URLів.",
 	"urlshortener-toolbox": "Отримати вкорочену URL-адресу",
 	"urlshortener-error-badports": "URL-адреси, які містять порти, не можуть бути вкорочені",
-	"urlshortener-error-nouserpass": "Веб-адреси, які містять ім'я користувача або пароль, не можуть бути вкорочені"
+	"urlshortener-error-nouserpass": "Веб-адреси, які містять ім'я користувача або пароль, не можуть бути вкорочені",
+	"urlshortener-failed-try-again": "Не вдалося. Спробувати ще раз?"
 }
