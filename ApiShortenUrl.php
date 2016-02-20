@@ -47,19 +47,10 @@ class ApiShortenUrl extends ApiBase {
 		);
 	}
 
-	public function getParamDescription() {
+	public function getExamplesMessages() {
 		return array(
-			'url' => 'URL to be shortened'
-		);
-	}
-
-	protected function getDescription() {
-		return 'Shorten a long URL into a shorter one';
-	}
-
-	public function getExamples() {
-		return array(
-			'api.php?action=shortenurl&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FArctica',
+			'api.php?action=shortenurl&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FArctica'
+				=> 'apihelp-shortenurl-example-1',
 		);
 	}
 }
