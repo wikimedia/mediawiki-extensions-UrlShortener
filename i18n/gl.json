@@ -22,5 +22,7 @@
 	"urlshortener-toolbox": "Xerar URL acurtado",
 	"urlshortener-error-badports": "As URLs que conteñen portos non poden acurtarse",
 	"urlshortener-error-nouserpass": "As URLs que conteñen un nome de usuario ou contrasinal non poden acurtarse",
-	"urlshortener-failed-try-again": "Fallou. Intentalo de novo?"
+	"urlshortener-failed-try-again": "Fallou. Intentalo de novo?",
+	"apihelp-shortenurl-description": "Acurtar unha URL longa nunha máis curta.",
+	"apihelp-shortenurl-param-url": "URL a acurtar."
 }
