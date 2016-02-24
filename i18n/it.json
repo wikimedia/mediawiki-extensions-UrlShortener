@@ -16,5 +16,8 @@
 	"urlshortener-shortened-url-label": "URL abbreviato",
 	"urlshortener-error-disallowed-url": "Gli URL per il dominio $1 non possono essere abbreviati",
 	"urlshortener-error-nouserpass": "URL contenenti un nome utente o una password che non è consentito abbreviare",
-	"urlshortener-failed-try-again": "Non riuscito. Riprovare?"
+	"urlshortener-failed-try-again": "Non riuscito. Riprovare?",
+	"apihelp-shortenurl-description": "Abbrevia un URL lungo in uno più corto.",
+	"apihelp-shortenurl-param-url": "URL da abbreviare.",
+	"apihelp-shortenurl-example-1": "Ottieni l'URL breve per <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>."
 }
