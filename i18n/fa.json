@@ -1,9 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Reza1615"
+			"Reza1615",
+			"Ladsgroup"
 		]
 	},
 	"urlshortener-url-input-label": "نشانی اینترنتی",
-	"urlshortener-not-found-title": "نشانی کوتاه یافت نشد"
+	"urlshortener-not-found-title": "نشانی کوتاه یافت نشد",
+	"apihelp-shortenurl-description": "یک آدرس اینترنتی بلند را کوتاه می‌کند",
+	"apihelp-shortenurl-param-url": "آدرس اینترنتی برای کوتاه شدن",
+	"apihelp-shortenurl-example-1": "آدرس اینترنتی کوتاه شده <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> را بگیر"
 }

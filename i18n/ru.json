@@ -20,5 +20,8 @@
 	"urlshortener-toolbox": "Получить сокращённый URL-адрес",
 	"urlshortener-error-badports": "URL-адреса, содержащие номера портов, не разрешены для сокращения",
 	"urlshortener-error-nouserpass": "URL-адреса, содержащие имя пользователя или пароль, не разрешены для сокращения",
-	"urlshortener-failed-try-again": "Не получилось. Попробовать снова?"
+	"urlshortener-failed-try-again": "Не получилось. Попробовать снова?",
+	"apihelp-shortenurl-description": "Сократить длинный URL-адрес в более короткий.",
+	"apihelp-shortenurl-param-url": "URL-адрес для сокращения.",
+	"apihelp-shortenurl-example-1": "Получить короткий URL-адрес для <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>."
 }
