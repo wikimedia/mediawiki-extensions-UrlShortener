@@ -12,5 +12,6 @@
 	"urlshortener-shortened-url-label": "Skrócony URL",
 	"urlshortener-approved-domains": "Linki do {{PLURAL:$1|następującej domeny|następujących domen}} mogą być skrócone: $2.",
 	"urlshortener-ratelimit": "Proszę poczekać jakiś czas przed skracaniem kolejnych adresów URL.",
-	"urlshortener-failed-try-again": "Nie udało się. Spróbujesz ponownie?"
+	"urlshortener-failed-try-again": "Nie udało się. Spróbujesz ponownie?",
+	"apihelp-shortenurl-param-url": "Adres URL do skrócenia."
 }
