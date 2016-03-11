@@ -15,7 +15,7 @@ class SpecialUrlRedirector extends UnlistedSpecialPage {
 		}
 		$url = UrlShortenerUtils::getURL( $par, PROTO_CURRENT );
 		if ( $url !== false ) {
-			$out->setSquidMaxage( UrlShortenerUtils::CACHE_TIME );
+			$out->setCdnMaxage( UrlShortenerUtils::CACHE_TIME );
 			$out->redirect( $url, '301' );
 		} else {
 			// Invalid $par
