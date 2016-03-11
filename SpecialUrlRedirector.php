@@ -19,7 +19,13 @@ class SpecialUrlRedirector extends UnlistedSpecialPage {
 			$out->redirect( $url, '301' );
 		} else {
 			// Invalid $par
-			$out->showErrorPage( 'urlshortener-not-found-title', 'urlshortener-not-found-message' );
+			// This page is being served from the short domain, so we can't use
+			// any of the MediaWiki interface because all relative URLs will be wrong.
+			// And force English because we likely don't know the proper interface lang :(
+			$title = $this->msg( 'urlshortener-not-found-title' )->inLanguage( 'en' )->text();
+			$text = $this->msg( 'urlshortener-not-found-message' )->inLanguage( 'en' )->text();
+			// wfHttpError does escaping
+			wfHttpError( 404, $title, $text );
 		}
 	}
 }
