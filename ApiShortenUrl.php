@@ -11,6 +11,12 @@
 class ApiShortenUrl extends ApiBase {
 
 	public function execute() {
+		global $wgUrlShortenerReadOnly;
+
+		if ( $wgUrlShortenerReadOnly ) {
+			$this->dieUsage( 'No new short urls may be created', 'urlshortener-disabled' );
+		}
+
 		$params = $this->extractRequestParams();
 
 		$url = $params['url'];

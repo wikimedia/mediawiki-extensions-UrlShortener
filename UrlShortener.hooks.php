@@ -27,7 +27,11 @@ class UrlShortenerHooks {
 	}
 
 	public static function onBeforePageDisplay( OutputPage $out ) {
-		$out->addModules( 'ext.urlShortener.toolbar' );
+		global $wgUrlShortenerReadOnly;
+
+		if ( !$wgUrlShortenerReadOnly ) {
+			$out->addModules( 'ext.urlShortener.toolbar' );
+		}
 	}
 
 	/**
@@ -37,6 +41,12 @@ class UrlShortenerHooks {
 	 * @param array $toolbox
 	 */
 	public static function onBaseTemplateToolbox( BaseTemplate $template, array &$toolbox ) {
+		global $wgUrlShortenerReadOnly;
+
+		if ( $wgUrlShortenerReadOnly ) {
+			return;
+		}
+
 		$skin = $template->getSkin();
 		if ( $skin->getTitle()->isSpecial( 'UrlShortener' ) ) {
 			return;

@@ -22,6 +22,7 @@
 	"urlshortener-error-badports": "Error message shown when the URL cannot be shortened because it contains a port (e.g. http://example.org:90/path)",
 	"urlshortener-error-nouserpass": "Error message shown when the URL cannot be shortened because it contains a username or password (e.g. http://user:password@example.org/)",
 	"urlshortener-failed-try-again": "Generic failure message with option to try again",
+	"urlshortener-disabled": "Error message shown when the extension is configured in read-only mode.",
 	"apihelp-shortenurl-description": "{{doc-apihelp-description|shortenurl}}",
 	"apihelp-shortenurl-param-url": "{{doc-apihelp-param|shortenurl|url}}",
 	"apihelp-shortenurl-example-1": "{{doc-apihelp-example|shortenurl}}"

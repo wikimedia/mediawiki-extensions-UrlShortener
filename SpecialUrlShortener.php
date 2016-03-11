@@ -20,6 +20,17 @@ class SpecialUrlShortener extends FormSpecialPage {
 		parent::__construct( 'UrlShortener' );
 	}
 
+	public function execute( $par ) {
+		global $wgUrlShortenerReadOnly;
+
+		if ( $wgUrlShortenerReadOnly ) {
+			$this->setHeaders();
+			$this->getOutput()->addWikiMsg( 'urlshortener-disabled' );
+		} else {
+			parent::execute( $par );
+		}
+	}
+
 	protected function getDisplayFormat() {
 		return 'ooui';
 	}
@@ -125,5 +136,16 @@ class SpecialUrlShortener extends FormSpecialPage {
 
 	protected function getGroupName() {
 		return 'pagetools';
+	}
+
+	/**
+	 * Don't list this page if in read only mode
+	 *
+	 * @return bool
+	 */
+	public function isListed() {
+		global $wgUrlShortenerReadOnly;
+
+		return !$wgUrlShortenerReadOnly;
 	}
 }

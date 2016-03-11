@@ -104,7 +104,8 @@
 		"UrlShortenerIdSet": "023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$-_.!",
 		"UrlShortenerServer": false,
 		"UrlShortenerTemplate": false,
-		"UrlShortenerAllowArbitraryPorts": false
+		"UrlShortenerAllowArbitraryPorts": false,
+		"UrlShortenerReadOnly": false
 	},
 	"manifest_version": 1
 }

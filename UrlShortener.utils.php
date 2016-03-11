@@ -53,6 +53,13 @@ class UrlShortenerUtils {
 				return Status::newFatal( 'urlshortener-ratelimit' );
 			}
 
+			global $wgUrlShortenerReadOnly;
+			if ( $wgUrlShortenerReadOnly ) {
+				// All code paths should already have checked for this,
+				// but lets be on the safe side.
+				return Status::newFatal( 'urlshortener-disabled' );
+			}
+
 			$rowData = array(
 				'usc_url' => $url,
 				'usc_url_hash' => md5( $url )
