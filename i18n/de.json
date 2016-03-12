@@ -21,6 +21,7 @@
 	"urlshortener-error-badports": "URLs, die Ports enthalten, dürfen nicht gekürzt werden.",
 	"urlshortener-error-nouserpass": "URLs, die einen Benutzernamen oder ein Passwort enthalten, dürfen nicht gekürzt werden.",
 	"urlshortener-failed-try-again": "Fehlgeschlagen. Erneut versuchen?",
+	"urlshortener-disabled": "Das Erstellen neuer Kurz-URLs ist derzeit deaktiviert.",
 	"apihelp-shortenurl-description": "Kürzt eine lange URL auf eine kürzere.",
 	"apihelp-shortenurl-param-url": "Zu kürzende URL.",
 	"apihelp-shortenurl-example-1": "Ruft die Kurz-URL für <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> ab."
