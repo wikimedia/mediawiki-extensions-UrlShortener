@@ -13,5 +13,6 @@
 	"urlshortener-approved-domains": "Linki do {{PLURAL:$1|następującej domeny|następujących domen}} mogą być skrócone: $2.",
 	"urlshortener-ratelimit": "Proszę poczekać jakiś czas przed skracaniem kolejnych adresów URL.",
 	"urlshortener-failed-try-again": "Nie udało się. Spróbujesz ponownie?",
+	"urlshortener-disabled": "Tworzenie nowych skróconych adresów URL jest czasowo wyłączone.",
 	"apihelp-shortenurl-param-url": "Adres URL do skrócenia."
 }

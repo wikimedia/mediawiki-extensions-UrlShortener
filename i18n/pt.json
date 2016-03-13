@@ -13,5 +13,6 @@
 	"urlshortener-form-header": "Cole a sua URL completa aqui",
 	"urlshortener-error-malformed-url": "A URL não é válida",
 	"urlshortener-shortened-url-label": "URL encurtada",
-	"urlshortener-error-disallowed-url": "URL para o domínio $1 não podem ser encurtadas"
+	"urlshortener-error-disallowed-url": "URL para o domínio $1 não podem ser encurtadas",
+	"urlshortener-disabled": "A criação de novos URL curtos está temporariamente desativada."
 }

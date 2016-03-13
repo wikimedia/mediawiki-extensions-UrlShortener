@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"SGTTechnologicBunny",
-			"Amire80"
+			"Amire80",
+			"MojoMann"
 		]
 	},
 	"urlshortener": "מקצר כתובות",
@@ -21,5 +22,6 @@
 	"urlshortener-toolbox": "קבלת כתובת מקוצרת",
 	"urlshortener-error-badports": "לא ניתן לקצר כתובות שמכילות פתחות",
 	"urlshortener-error-nouserpass": "לא ניתן לקצר כתובות שמכילות שם משתמש או ססמה",
-	"urlshortener-failed-try-again": "זה לא עבד. לנסות שוב?"
+	"urlshortener-failed-try-again": "זה לא עבד. לנסות שוב?",
+	"urlshortener-disabled": "יצירת כתובות מקוצרות מוגבלת באופן זמני."
 }
