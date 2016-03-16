@@ -24,6 +24,9 @@ class DumpURLs extends Maintenance {
 		$file = $this->getArg( 0 );
 		$this->output( "Writing to $file...\n" );
 		$handle = fopen( $file, 'w' );
+		if ( $handle === false ) {
+			$this->error( "Error opening $file. Check permissions?", 1 );
+		}
 		$id = 0;
 		do {
 			$text = '';
