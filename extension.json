@@ -9,7 +9,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:UrlShortener",
 	"descriptionmsg": "urlshortener-desc",
-	"license-name": "WTFPL",
+	"license-name": "Apache-2.0",
 	"type": "specialpage",
 	"requires": {
 		"MediaWiki": ">= 1.27.0"
