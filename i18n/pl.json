@@ -1,18 +1,28 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrumps"
+			"Chrumps",
+			"Woytecr"
 		]
 	},
+	"urlshortener": "Skracarka URL",
 	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Skróć",
+	"urlshortener-url-input-submitting": "Skracanie...",
 	"urlshortener-not-found-title": "Nie znaleziono krótkiego adresu URL",
 	"urlshortener-not-found-message": "Przepraszamy, nie znaleziono adresu URL, którego szukasz.",
 	"urlshortener-form-header": "Wklej tutaj długi adres URL",
 	"urlshortener-error-malformed-url": "Nieprawidłowy adres URL",
 	"urlshortener-shortened-url-label": "Skrócony URL",
+	"urlshortener-error-disallowed-url": "URL w domenie $1 nie mogą być skracane",
 	"urlshortener-approved-domains": "Linki do {{PLURAL:$1|następującej domeny|następujących domen}} mogą być skrócone: $2.",
 	"urlshortener-ratelimit": "Proszę poczekać jakiś czas przed skracaniem kolejnych adresów URL.",
+	"urlshortener-toolbox": "Zobacz skrócony adres URL",
+	"urlshortener-error-badports": "Adresy URL, które zawierają numery portów nie mogą być skracane",
+	"urlshortener-error-nouserpass": "Adresy URL zawierające nazwę użytkownika lub hasło nie mogą być skracane",
 	"urlshortener-failed-try-again": "Nie udało się. Spróbujesz ponownie?",
 	"urlshortener-disabled": "Tworzenie nowych skróconych adresów URL jest czasowo wyłączone.",
-	"apihelp-shortenurl-param-url": "Adres URL do skrócenia."
+	"apihelp-shortenurl-description": "Skróć długi adres URL do krótszej postaci.",
+	"apihelp-shortenurl-param-url": "Adres URL do skrócenia.",
+	"apihelp-shortenurl-example-1": "Otrzymaj skrócony adres URL dla <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>."
 }
