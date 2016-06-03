@@ -93,6 +93,9 @@ class UrlShortenerUtils {
 		// it to a different one when redirecting
 		$url = self::convertToProtocol( $url, PROTO_HTTP );
 
+		// Decode it...
+		$url = urldecode( $url );
+
 		// If the wiki is using an article path (e.g. /wiki/$1) try
 		// and convert plain index.php?title=$1 URLs to the canonical form
 		if ( $wgArticlePath !== false && strpos( $url, '?' ) !== false ) {

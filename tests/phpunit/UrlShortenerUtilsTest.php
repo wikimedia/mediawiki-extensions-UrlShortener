@@ -36,6 +36,8 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 
 	public static function provideNormalizeUrl() {
 		return array(
+			// HTTPS -> HTTP
+			array( 'https://example.org', 'http://example.org' ),
 			// Article normalized
 			array( 'http://example.com/w/index.php?title=Main_Page', 'http://example.com/wiki/Main_Page' ),
 			// Already normalized
@@ -48,6 +50,9 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 			array( 'http://example.com/w/index.php.php?foo=bar', 'http://example.com/w/index.php.php?foo=bar' ),
 			// Additional parameter not normalized
 			array( 'http://example.com/w/index.php?title=Special:Version&baz=bar', 'http://example.com/w/index.php?title=Special:Version&baz=bar' ),
+			// urldecoded
+			array( 'http://example.org/wiki/Scott_Morrison_%28politician%29', 'http://example.org/wiki/Scott_Morrison_(politician)' ),
+			array( 'http://example.org/wiki/Scott_Morrison_(politician)', 'http://example.org/wiki/Scott_Morrison_(politician)' ),
 		);
 	}
 
