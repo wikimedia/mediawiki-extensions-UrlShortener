@@ -36,10 +36,7 @@ class UrlShortenerUtils {
 	 * @return Status with value of base36 encoded shortcode that refers to the $url
 	 */
 	public static function maybeCreateShortCode( $url, User $user ) {
-		// First, cannonicalize the URL
-		// store everything in the db as HTTP, we'll convert it before
-		// redirecting users
-		$url = self::convertToProtocol( $url, PROTO_HTTP );
+		$url = self::normalizeUrl( $url );
 
 		$dbw = self::getDB( DB_MASTER );
 		$id = $dbw->selectField(
@@ -81,6 +78,34 @@ class UrlShortenerUtils {
 		}
 
 		return Status::newGood( self::encodeId( $id ) );
+	}
+
+	/**
+	 * Normalizes URL from its `/w/index.php?title=$1` form to
+	 * `/wiki/$1`.
+	 *
+	 * @param string $url
+	 * @return string
+	 */
+	public static function normalizeUrl( $url ) {
+		global $wgArticlePath;
+		// First, force the protocol to HTTP, we'll convert
+		// it to a different one when redirecting
+		$url = self::convertToProtocol( $url, PROTO_HTTP );
+
+		// If the wiki is using an article path (e.g. /wiki/$1) try
+		// and convert plain index.php?title=$1 URLs to the canonical form
+		if ( $wgArticlePath !== false && strpos( $url, '?' ) !== false ) {
+			$parsed = wfParseUrl( $url );
+			$query = wfCgiToArray( $parsed['query'] );
+			if ( count( $query ) === 1 && isset( $query['title'] ) && $parsed['path'] === wfScript() ) {
+				$parsed['path'] = str_replace( '$1', $query['title'], $wgArticlePath );
+				unset( $parsed['query'] );
+			}
+			$url = wfAssembleUrl( $parsed );
+		}
+
+		return $url;
 	}
 
 	/**
