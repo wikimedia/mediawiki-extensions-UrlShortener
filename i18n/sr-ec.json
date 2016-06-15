@@ -1,13 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
-			"Milicevic01"
+			"Milicevic01",
+			"Rancher"
 		]
 	},
-	"urlshortener": "URL скраћивач",
+	"urlshortener": "Скраћивање URL адреса",
+	"urlshortener-desc": "Скраћивање произвољних URL адреса.",
+	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Скрати",
-	"urlshortener-url-input-submitting": "Скраћујем...",
-	"urlshortener-form-header": "Налепите дугачки URL овде",
+	"urlshortener-url-input-submitting": "Скраћујем…",
+	"urlshortener-not-found-title": "Кратки URL није пронађен",
+	"urlshortener-not-found-message": "Нажалост, тражена URL адреса није пронађена.",
+	"urlshortener-form-header": "Овде налепите URL",
 	"urlshortener-error-malformed-url": "Неисправан URL",
-	"urlshortener-shortened-url-label": "Скраћени URL"
+	"urlshortener-shortened-url-label": "Скраћени URL",
+	"urlshortener-error-disallowed-url": "Скраћивање URL адреса за домен $1 није дозвољено",
+	"urlshortener-approved-domains": "Везе до {{PLURAL:$1|следећег домена|следећих домена}} могу бити скраћене: $2.",
+	"urlshortener-ratelimit": "Сачекајте неко време пре него што наставите са скраћивањем URL-ова.",
+	"urlshortener-toolbox": "Преузми скраћени URL",
+	"urlshortener-error-badports": "Скраћивање URL адресе која садржи број порта није дозвољено",
+	"urlshortener-error-nouserpass": "Скраћивање URL адресе која садржи корисничко име или лозинку није дозвољено",
+	"urlshortener-failed-try-again": "Дошло је до грешке. Покушати поново?",
+	"urlshortener-disabled": "Скраћивање нових URL адреса је тренутно онемогућено.",
+	"apihelp-shortenurl-description": "Направите краћи URL.",
+	"apihelp-shortenurl-param-url": "URL за скраћивање.",
+	"apihelp-shortenurl-example-1": "Преузмите кратки URL за <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>."
 }
