@@ -1,8 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nguyên Lê"
+			"Nguyên Lê",
+			"Minh Nguyen"
 		]
 	},
-	"urlshortener-failed-try-again": "Đã thất bại. Thử lại?"
+	"urlshortener": "Rút gọn URL",
+	"urlshortener-desc": "Rút gọn bất cứ URL nào đó",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Rút gọn",
+	"urlshortener-url-input-submitting": "Đang rút gọn…",
+	"urlshortener-not-found-title": "Không tìm thấy URL ngắn gọn",
+	"urlshortener-not-found-message": "Rất tiếc, không tìm thấy được URL mà bạn muốn xem.",
+	"urlshortener-form-header": "Dán URL đầy đủ vào đây",
+	"urlshortener-error-malformed-url": "URL không hợp lệ",
+	"urlshortener-shortened-url-label": "URL ngắn gọn",
+	"urlshortener-error-disallowed-url": "Không cho phép rút gọn các URL có tên miền $1",
+	"urlshortener-approved-domains": "Có thể rút gọn các URL đến {{PLURAL:$1|tên miền|các tên miền}} sau: $2.",
+	"urlshortener-ratelimit": "Xin vui lòng chờ một chút trước khi rút gọn thêm URL.",
+	"urlshortener-toolbox": "Lấy URL ngắn gọn",
+	"urlshortener-error-badports": "Không cho phép rút gọn các URL có cổng",
+	"urlshortener-error-nouserpass": "Không cho phép rút gọn các URL có tên người dùng hoặc mật khẩu",
+	"urlshortener-failed-try-again": "Đã thất bại. Thử lại?",
+	"urlshortener-disabled": "Chức năng tạo URL ngắn gọn mới bị tắt tạm thời.",
+	"apihelp-shortenurl-description": "Rút gọn một URL đầy đủ thành một URL ngắn gọn hơn.",
+	"apihelp-shortenurl-param-url": "URL để rút gọn.",
+	"apihelp-shortenurl-example-1": "Lấy URL ngắn gọn của <kbd><nowiki>https://vi.wikipedia.org/wiki/Arctica</nowiki></kbd>."
 }
