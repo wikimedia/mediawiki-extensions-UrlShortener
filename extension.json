@@ -101,7 +101,7 @@
 		"UrlShortenerDBCluster": false,
 		"UrlShortenerDBName": false,
 		"UrlShortenerDomainsWhitelist": false,
-		"UrlShortenerIdSet": "023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$_",
+		"UrlShortenerIdSet": "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$_",
 		"UrlShortenerServer": false,
 		"UrlShortenerTemplate": false,
 		"UrlShortenerAllowArbitraryPorts": false,
