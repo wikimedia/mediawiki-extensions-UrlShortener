@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Muhammad Shuaib"
+		]
+	},
+	"urlshortener": "یوآرایل مختصر کنندہ",
+	"urlshortener-desc": "یوآرایل مختصر کنندہ برائے خود ساختہ یوآرایل",
+	"urlshortener-url-input-label": "یوآرایل",
+	"urlshortener-url-input-submit": "مختصر کریں",
+	"urlshortener-url-input-submitting": "جاری۔۔۔",
+	"urlshortener-not-found-title": "مختصر یوآرایل نہیں مل سکا",
+	"urlshortener-not-found-message": "معذرت، جس یوآرایل کو آپ تلاش کر رہے ہیں وہ نہیں مل سکا۔",
+	"urlshortener-form-header": "اپنے طویل یوآرایل کو یہاں چسپاں کیجیے",
+	"urlshortener-error-malformed-url": "یہ درست یوآرایل نہیں ہے",
+	"urlshortener-shortened-url-label": "مختصر کردہ یوآرایل",
+	"urlshortener-error-disallowed-url": "$1 ڈومین کے یوآرایل کو مختصر کرنے کی اجازت نہیں ہے",
+	"urlshortener-toolbox": "مختصر کردہ یوآرایل حاصل کریں",
+	"urlshortener-error-nouserpass": "صارف نام یا پاسورڈ پر مشتمل یوآرایل کو مختصر کرنے کی اجازت نہیں ہے",
+	"urlshortener-failed-try-again": "ناکام۔ دوبارہ کوشش کریں؟",
+	"urlshortener-disabled": "نئے مختصر یوآرایل کی تخلیق عارضی طور پر بند کی گئی ہے۔"
+}
