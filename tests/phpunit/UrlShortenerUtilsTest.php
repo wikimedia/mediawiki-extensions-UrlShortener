@@ -66,7 +66,7 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 		// Set default
 		$this->setMwGlobals(
 			'wgUrlShortenerIdSet',
-			'023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$-_.!'
+			'023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$_'
 		);
 		for ( $i = 0; $i < 1000; $i++ ) {
 			$int = rand();

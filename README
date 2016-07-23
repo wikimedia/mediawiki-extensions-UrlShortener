@@ -102,7 +102,7 @@ this setting. If changed, any existing short URLs will go to the wrong
 destination.
 
 <source lang="php">
-$wgUrlShortenerIdSet = '023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$-_.!';
+$wgUrlShortenerIdSet = '023456789ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$_';
 </source>
 
 === Read-only mode ===
