@@ -40,9 +40,6 @@
 		],
 		"BaseTemplateToolbox": [
 			"UrlShortenerHooks::onBaseTemplateToolbox"
-		],
-		"UnitTestsList": [
-			"UrlShortenerHooks::onUnitTestsList"
 		]
 	},
 	"MessagesDirs": {
