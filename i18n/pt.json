@@ -1,18 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"Hamilton Abreu"
 		]
 	},
 	"urlshortener": "Encurtar URL",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Encurtar",
 	"urlshortener-url-input-submitting": "A encurtar...",
-	"urlshortener-not-found-title": "URL encurtada não encontrada",
-	"urlshortener-not-found-message": "Desculpe, a URL que procura não foi encontrada.",
-	"urlshortener-form-header": "Cole a sua URL completa aqui",
-	"urlshortener-error-malformed-url": "A URL não é válida",
-	"urlshortener-shortened-url-label": "URL encurtada",
-	"urlshortener-error-disallowed-url": "URL para o domínio $1 não podem ser encurtadas",
+	"urlshortener-not-found-title": "URL encurtado não encontrado",
+	"urlshortener-not-found-message": "Desculpe, o URL que procura não foi encontrado.",
+	"urlshortener-form-header": "Cole o seu URL completo aqui",
+	"urlshortener-error-malformed-url": "O URL não é válido",
+	"urlshortener-shortened-url-label": "URL encurtado",
+	"urlshortener-error-disallowed-url": "Os URL para o domínio $1 não podem ser encurtados",
 	"urlshortener-disabled": "A criação de novos URL curtos está temporariamente desativada."
 }
