@@ -55,7 +55,7 @@ class ApiShortenUrl extends ApiBase {
 
 	public function getExamplesMessages() {
 		return array(
-			'api.php?action=shortenurl&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FArctica'
+			'action=shortenurl&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FArctica'
 				=> 'apihelp-shortenurl-example-1',
 		);
 	}
