@@ -25,5 +25,6 @@
 	"urlshortener-disabled": "Error message shown when the extension is configured in read-only mode.",
 	"apihelp-shortenurl-description": "{{doc-apihelp-description|shortenurl}}",
 	"apihelp-shortenurl-param-url": "{{doc-apihelp-param|shortenurl|url}}",
-	"apihelp-shortenurl-example-1": "{{doc-apihelp-example|shortenurl}}"
+	"apihelp-shortenurl-example-1": "{{doc-apihelp-example|shortenurl}}",
+	"apierror-urlshortener-disabled": "{{doc-apierror}}"
 }
