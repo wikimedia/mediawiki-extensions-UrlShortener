@@ -16,7 +16,7 @@
 	"urlshortener-shortened-url-label": "已缩短的URL",
 	"urlshortener-error-disallowed-url": "连入$1的URL不允许缩短",
 	"urlshortener-approved-domains": "至以下{{PLURAL:$1|域名}}的链接可被缩短：$2。",
-	"urlshortener-ratelimit": "在缩短更多url前，请等待一段时间。",
+	"urlshortener-ratelimit": "在缩短更多URL前，请等待一段时间。",
 	"urlshortener-toolbox": "获取缩短的URL",
 	"urlshortener-error-badports": "包含端口的URL不允许被缩短",
 	"urlshortener-error-nouserpass": "包含用户名或密码的URL不允许被缩短",
@@ -24,5 +24,6 @@
 	"urlshortener-disabled": "创建新的缩短URL被临时禁用。",
 	"apihelp-shortenurl-description": "将一个长URL缩短。",
 	"apihelp-shortenurl-param-url": "将被缩短的URL。",
-	"apihelp-shortenurl-example-1": "获取用于<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>的短URL。"
+	"apihelp-shortenurl-example-1": "获取用于<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>的短URL。",
+	"apierror-urlshortener-disabled": "不能新建短url"
 }

@@ -24,5 +24,6 @@
 	"urlshortener-disabled": "Создавањето на URL-адреси е времено оневозможено.",
 	"apihelp-shortenurl-description": "Скратување на долга URL во покус облик.",
 	"apihelp-shortenurl-param-url": "URL за скратување.",
-	"apihelp-shortenurl-example-1": "Дај пократка URL за <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>."
+	"apihelp-shortenurl-example-1": "Дај пократка URL за <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Не можам да создадам кратки URL-а"
 }

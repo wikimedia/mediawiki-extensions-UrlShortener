@@ -14,5 +14,6 @@
 	"urlshortener-ratelimit": "Waart w.e.g. e bësse ier Dir méi URLe kierzt.",
 	"urlshortener-toolbox": "Gekierzt URL kréien",
 	"urlshortener-failed-try-again": "Huet net fonctionnéiert. Nach eng Kéier probéieren?",
-	"apihelp-shortenurl-param-url": "URL fir ze kierzen"
+	"apihelp-shortenurl-param-url": "URL fir ze kierzen",
+	"apierror-urlshortener-disabled": "Et kënne keng nei kuerz URLen ugeluecht ginn"
 }
