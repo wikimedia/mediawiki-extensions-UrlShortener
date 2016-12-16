@@ -47,6 +47,13 @@
 			"i18n"
 		]
 	},
+	"RateLimits": {
+		"urlshortcode": {
+			"ip": [ 10, 120 ],
+			"newbie": [ 10, 120 ],
+			"user": [ 50, 120 ]
+		}
+	},
 	"ResourceModules": {
 		"ext.urlShortener.special": {
 			"scripts": [
