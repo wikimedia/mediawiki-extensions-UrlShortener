@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Felipe L. Ewald"
+		]
+	},
+	"urlshortener": "Encurtador de URL",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Encurtar",
+	"urlshortener-url-input-submitting": "Encurtando",
+	"urlshortener-not-found-title": "URL encurtado não encontrado",
+	"urlshortener-not-found-message": "Desculpe, o URL que você está procurando não foi encontrado.",
+	"urlshortener-error-malformed-url": "O URL não é válido",
+	"urlshortener-shortened-url-label": "URL encurtado",
+	"urlshortener-error-disallowed-url": "Os URLs para o domínio $1 não podem ser encurtados",
+	"apihelp-shortenurl-param-url": "URL a ser encurtado."
+}
