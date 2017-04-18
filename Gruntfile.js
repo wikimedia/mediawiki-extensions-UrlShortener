@@ -5,6 +5,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-jscs' );
 	grunt.loadNpmTasks( 'grunt-tyops' );
+	grunt.loadNpmTasks( 'grunt-stylelint' );
 
 	var conf = grunt.file.readJSON( 'extension.json' );
 	grunt.initConfig( {
@@ -33,11 +34,18 @@ module.exports = function ( grunt ) {
 		jsonlint: {
 			all: [
 				'**/*.json',
+				'.stylelintrc',
+				'!node_modules/**'
+			]
+		},
+		stylelint: {
+			all: [
+				'**/*.less',
 				'!node_modules/**'
 			]
 		}
 	} );
 
-	grunt.registerTask( 'test', [ 'tyops', 'jshint', 'jscs', 'jsonlint', 'banana' ] );
+	grunt.registerTask( 'test', [ 'tyops', 'jshint', 'jscs', 'jsonlint', 'banana', 'stylelint' ] );
 	grunt.registerTask( 'default', 'test' );
 };
