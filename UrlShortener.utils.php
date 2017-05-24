@@ -22,7 +22,7 @@ class UrlShortenerUtils {
 	 */
 	const CACHE_TIME = 2592000;
 
-	static $decodeMap;
+	public static $decodeMap;
 
 	/**
 	 * Gets the short code for the given URL, creating if it doesn't
