@@ -57,7 +57,8 @@ class UrlShortenerHooks {
 			unset( $query['title'] );
 		}
 		$linkToShorten = $skin->getTitle()->getFullURL( $query, false, PROTO_CANONICAL );
-		$link = SpecialPage::getTitleFor( 'UrlShortener' )->getLocalURL( array( 'url' => $linkToShorten ) );
+		$link = SpecialPage::getTitleFor( 'UrlShortener' )
+			->getLocalURL( array( 'url' => $linkToShorten ) );
 		$toolbox['urlshortener'] = array(
 			'id' => 't-urlshortener',
 			'href' => $link,
