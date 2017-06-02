@@ -10,7 +10,7 @@
  */
 
 if ( !defined( 'MEDIAWIKI' ) ) {
-	echo( 'not a valid entry point.\n' );
+	echo 'not a valid entry point.\n';
 	die( 1 );
 }
 
@@ -41,7 +41,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 			$domains = $wgUrlShortenerApprovedDomains;
 		} else {
 			$parsed = wfParseUrl( $wgServer );
-			$domains = array( $parsed['host'] );
+			$domains = [ $parsed['host'] ];
 		}
 
 		$lang = $this->getLanguage();
@@ -61,12 +61,11 @@ class SpecialUrlShortener extends FormSpecialPage {
 		$form->setSubmitTextMsg( 'urlshortener-url-input-submit' );
 		$form->setFooterText( $this->getApprovedDomainsMessage()->parse() );
 		$this->getOutput()->addModules( 'ext.urlShortener.special' );
-		$this->getOutput()->addJsConfigVars( array(
+		$this->getOutput()->addJsConfigVars( [
 			'wgUrlShortenerDomainsWhitelist' => UrlShortenerUtils::getWhitelistRegex(),
 			'wgUrlShortenerAllowArbitraryPorts' => $wgUrlShortenerAllowArbitraryPorts,
-		) );
+		] );
 	}
-
 
 	/**
 	 * Validate the URL to ensure that we are allowed to create a shorturl for this.
@@ -87,15 +86,14 @@ class SpecialUrlShortener extends FormSpecialPage {
 		return $validity_check->text();
 	}
 
-
 	/**
 	 * Generate the form used to input the URL to shorten.
 	 * @return array A form defintion that can be used by HTMLForm
 	 */
 	protected function getFormFields() {
-		return array(
-			'url' => array(
-				'validation-callback' => array( $this, 'validateURL' ),
+		return [
+			'url' => [
+				'validation-callback' => [ $this, 'validateURL' ],
 				'required' => true,
 				'type' => 'url',
 				'name' => 'url',
@@ -103,8 +101,8 @@ class SpecialUrlShortener extends FormSpecialPage {
 				'autofocus' => true,
 				'id' => 'mw-urlshortener-url-input',
 				'placeholder' => $this->msg( 'urlshortener-url-input-label' )->text()
-			),
-		);
+			],
+		];
 	}
 
 	/**
@@ -126,10 +124,10 @@ class SpecialUrlShortener extends FormSpecialPage {
 		if ( !$status->isOK() ) {
 			return $status;
 		}
-		$html = new OOUI\TextInputWidget( array(
+		$html = new OOUI\TextInputWidget( [
 			'value' => UrlShortenerUtils::makeUrl( $status->getValue() ),
 			'readOnly' => true,
-		) );
+		] );
 		$out->addHTML( $html );
 		return true;
 	}

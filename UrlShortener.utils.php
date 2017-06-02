@@ -42,7 +42,7 @@ class UrlShortenerUtils {
 		$id = $dbw->selectField(
 			'urlshortcodes',
 			'usc_id',
-			array( 'usc_url_hash' => md5( $url ) ),
+			[ 'usc_url_hash' => md5( $url ) ],
 			__METHOD__
 		);
 		if ( $id === false ) {
@@ -57,11 +57,11 @@ class UrlShortenerUtils {
 				return Status::newFatal( 'urlshortener-disabled' );
 			}
 
-			$rowData = array(
+			$rowData = [
 				'usc_url' => $url,
 				'usc_url_hash' => md5( $url )
-			);
-			$dbw->insert( 'urlshortcodes', $rowData, __METHOD__, array( 'IGNORE' ) );
+			];
+			$dbw->insert( 'urlshortcodes', $rowData, __METHOD__, [ 'IGNORE' ] );
 
 			if ( $dbw->affectedRows() ) {
 				$id = $dbw->insertId();
@@ -70,9 +70,9 @@ class UrlShortenerUtils {
 				$id = $dbw->selectField(
 					'urlshortcodes',
 					'usc_id',
-					array( 'usc_url_hash' => md5( $url ) ),
+					[ 'usc_url_hash' => md5( $url ) ],
 					__METHOD__,
-					array( 'LOCK IN SHARE MODE' ) // ignore snapshot
+					[ 'LOCK IN SHARE MODE' ] // ignore snapshot
 				);
 			}
 		}
@@ -143,7 +143,7 @@ class UrlShortenerUtils {
 		$url = $dbr->selectField(
 			'urlshortcodes',
 			'usc_url',
-			array( 'usc_id' => $id ),
+			[ 'usc_id' => $id ],
 			__METHOD__
 		);
 
@@ -164,7 +164,7 @@ class UrlShortenerUtils {
 			? wfGetLBFactory()->getExternalLB( $wgUrlShortenerDBCluster )
 			: wfGetLB( $wgUrlShortenerDBName );
 
-		return $lb->getConnectionRef( $type, array(), $wgUrlShortenerDBName );
+		return $lb->getConnectionRef( $type, [], $wgUrlShortenerDBName );
 	}
 
 	/**
@@ -202,7 +202,9 @@ class UrlShortenerUtils {
 		} else {
 			// Collapse the whitelist into a single string, so we have to run regex check only once
 			$domainsWhitelist = implode( '|', array_map(
-				function( $item ) { return '^' . $item . '$'; },
+				function( $item ) {
+					return '^' . $item . '$';
+				},
 				$wgUrlShortenerDomainsWhitelist
 			) );
 		}
@@ -276,13 +278,13 @@ class UrlShortenerUtils {
 
 		$n = strlen( $wgUrlShortenerIdSet );
 		if ( self::$decodeMap === null ) {
-			self::$decodeMap = array();
+			self::$decodeMap = [];
 			for ( $i = 0; $i < $n; $i++ ) {
 				self::$decodeMap[$wgUrlShortenerIdSet[$i]] = $i;
 			}
 		}
 		$x = 0;
-		for ( $i = 0; $i < strlen( $s ); $i++ ) {
+		for ( $i = 0, $len = strlen( $s ); $i < $len; $i++ ) {
 			$x *= $n;
 			if ( isset( self::$decodeMap[$s[$i]] ) ) {
 				$x += self::$decodeMap[$s[$i]];

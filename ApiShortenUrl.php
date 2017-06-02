@@ -40,7 +40,7 @@ class ApiShortenUrl extends ApiBase {
 		$this->getMain()->setCacheMaxAge( UrlShortenerUtils::CACHE_TIME );
 
 		$this->getResult()->addValue( null, $this->getModuleName(),
-			array( 'shorturl' => $shortUrl )
+			[ 'shorturl' => $shortUrl ]
 		);
 
 	}
@@ -50,18 +50,17 @@ class ApiShortenUrl extends ApiBase {
 	}
 
 	protected function getAllowedParams() {
-		return array(
-			'url' => array(
+		return [
+			'url' => [
 				ApiBase::PARAM_REQUIRED => true,
-			)
-		);
+			]
+		];
 	}
 
 	public function getExamplesMessages() {
-		return array(
+		return [
 			'action=shortenurl&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FArctica'
 				=> 'apihelp-shortenurl-example-1',
-		);
+		];
 	}
 }
-

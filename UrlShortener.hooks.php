@@ -20,7 +20,7 @@ class UrlShortenerHooks {
 		// If a template is set, and it is not the root, register it
 		if ( $wgUrlShortenerTemplate && $wgUrlShortenerTemplate !== '/$1' ) {
 			$router->add( $wgUrlShortenerTemplate,
-				array( 'title' => SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getPrefixedText() )
+				[ 'title' => SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getPrefixedText() ]
 			);
 		}
 		return true;
@@ -58,12 +58,12 @@ class UrlShortenerHooks {
 		}
 		$linkToShorten = $skin->getTitle()->getFullURL( $query, false, PROTO_CANONICAL );
 		$link = SpecialPage::getTitleFor( 'UrlShortener' )
-			->getLocalURL( array( 'url' => $linkToShorten ) );
-		$toolbox['urlshortener'] = array(
+			->getLocalURL( [ 'url' => $linkToShorten ] );
+		$toolbox['urlshortener'] = [
 			'id' => 't-urlshortener',
 			'href' => $link,
 			'msg' => 'urlshortener-toolbox'
-		);
+		];
 	}
 
 	/**

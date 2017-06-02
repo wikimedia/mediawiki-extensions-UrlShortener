@@ -33,10 +33,10 @@ class DumpURLs extends Maintenance {
 			$text = '';
 			$rows = $dbr->select(
 				'urlshortcodes',
-				array( 'usc_url', 'usc_id' ),
-				array( 'usc_id > ' . $dbr->addQuotes( $id ) ),
+				[ 'usc_url', 'usc_id' ],
+				[ 'usc_id > ' . $dbr->addQuotes( $id ) ],
 				__METHOD__,
-				array( 'LIMIT' => $this->mBatchSize, 'ORDER BY' => 'usc_id ASC' )
+				[ 'LIMIT' => $this->mBatchSize, 'ORDER BY' => 'usc_id ASC' ]
 			);
 			foreach ( $rows as $row ) {
 				$shortCode = UrlShortenerUtils::encodeId( $row->usc_id );

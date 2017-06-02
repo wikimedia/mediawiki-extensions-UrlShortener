@@ -5,46 +5,45 @@
  * @file
  * @ingroup Extensions
  */
-// @codingStandardsIgnoreFile
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
 /** English (English) */
-$specialPageAliases['en'] = array(
-	'UrlShortener' => array( 'UrlShortener' ),
-);
+$specialPageAliases['en'] = [
+	'UrlShortener' => [ 'UrlShortener' ],
+];
 
 /** Arabic (العربية) */
-$specialPageAliases['ar'] = array(
-	'UrlShortener' => array( 'تقصير_المسار' ),
-);
+$specialPageAliases['ar'] = [
+	'UrlShortener' => [ 'تقصير_المسار' ],
+];
 
 /** Egyptian Arabic (مصرى) */
-$specialPageAliases['arz'] = array(
-	'UrlShortener' => array( 'تقصير_المسار' ),
-);
+$specialPageAliases['arz'] = [
+	'UrlShortener' => [ 'تقصير_المسار' ],
+];
 
 /** German (Deutsch) */
-$specialPageAliases['de'] = array(
-	'UrlShortener' => array( 'URL-Kürzung' ),
-);
+$specialPageAliases['de'] = [
+	'UrlShortener' => [ 'URL-Kürzung' ],
+];
 
 /** Hebrew (עברית) */
-$specialPageAliases['he'] = array(
-	'UrlShortener' => array( 'מקצר_כתובות' ),
-);
+$specialPageAliases['he'] = [
+	'UrlShortener' => [ 'מקצר_כתובות' ],
+];
 
 /** Macedonian (македонски) */
-$specialPageAliases['mk'] = array(
-	'UrlShortener' => array( 'СкратувачНаURL' ),
-);
+$specialPageAliases['mk'] = [
+	'UrlShortener' => [ 'СкратувачНаURL' ],
+];
 
 /** Simplified Chinese (中文（简体）‎) */
-$specialPageAliases['zh-hans'] = array(
-	'UrlShortener' => array( 'URL缩短程序' ),
-);
+$specialPageAliases['zh-hans'] = [
+	'UrlShortener' => [ 'URL缩短程序' ],
+];
 
 /** Traditional Chinese (中文（繁體）‎) */
-$specialPageAliases['zh-hant'] = array(
-	'UrlShortener' => array( 'URL縮短程式' ),
-);
+$specialPageAliases['zh-hant'] = [
+	'UrlShortener' => [ 'URL縮短程式' ],
+];
