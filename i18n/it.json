@@ -25,6 +25,7 @@
 	"urlshortener-failed-try-again": "Non riuscito. Riprovare?",
 	"urlshortener-disabled": "La creazione di nuovi URL brevi è temporaneamente disabilitata.",
 	"apihelp-shortenurl-description": "Abbrevia un URL lungo in uno più corto.",
+	"apihelp-shortenurl-summary": "Abbrevia un URL lungo in uno più corto.",
 	"apihelp-shortenurl-param-url": "URL da abbreviare.",
 	"apihelp-shortenurl-example-1": "Ottieni l'URL breve per <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>."
 }
