@@ -3,7 +3,8 @@
 		"authors": [
 			"SGTTechnologicBunny",
 			"Amire80",
-			"MojoMann"
+			"MojoMann",
+			"המקיסט"
 		]
 	},
 	"urlshortener": "מקצר כתובות",
@@ -25,6 +26,7 @@
 	"urlshortener-failed-try-again": "זה לא עבד. לנסות שוב?",
 	"urlshortener-disabled": "יצירת כתובות מקוצרות מוגבלת באופן זמני.",
 	"apihelp-shortenurl-description": "קיצור URL ארוך",
+	"apihelp-shortenurl-summary": "קצר כתובת אתר ארוכה",
 	"apihelp-shortenurl-param-url": "איזה URL לקצר.",
 	"apihelp-shortenurl-example-1": "קבלת URL קצר עבור <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "לא ניתן ליצור כתובות מקוצרות"
