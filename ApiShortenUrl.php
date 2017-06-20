@@ -42,7 +42,6 @@ class ApiShortenUrl extends ApiBase {
 		$this->getResult()->addValue( null, $this->getModuleName(),
 			[ 'shorturl' => $shortUrl ]
 		);
-
 	}
 
 	public function mustBePosted() {

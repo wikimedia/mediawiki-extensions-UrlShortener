@@ -202,7 +202,7 @@ class UrlShortenerUtils {
 		} else {
 			// Collapse the whitelist into a single string, so we have to run regex check only once
 			$domainsWhitelist = implode( '|', array_map(
-				function( $item ) {
+				function ( $item ) {
 					return '^' . $item . '$';
 				},
 				$wgUrlShortenerDomainsWhitelist
