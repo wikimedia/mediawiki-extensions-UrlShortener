@@ -26,6 +26,7 @@
 	"urlshortener-failed-try-again": "Échec. Réessayer ?",
 	"urlshortener-disabled": "La création de nouvelles Url courtes est temporairement désactivée.",
 	"apihelp-shortenurl-description": "Raccourcir une URL longue en une autre plus courte.",
+	"apihelp-shortenurl-summary": "Raccourcir une longue URL en une autre plus courte.",
 	"apihelp-shortenurl-param-url": "URL à raccourcir.",
 	"apihelp-shortenurl-example-1": "Obtenir l'URL courte pour <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "Aucune nouvelle url courte ne peut être créée"
