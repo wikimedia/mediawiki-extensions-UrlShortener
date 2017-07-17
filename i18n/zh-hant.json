@@ -1,9 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"LNDDYL"
 		]
 	},
-	"urlshortener": "縮短網域",
-	"urlshortener-url-input-label": "URL"
+	"urlshortener": "簡短網域",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "簡短",
+	"urlshortener-url-input-submitting": "簡短中...",
+	"urlshortener-not-found-title": "查無簡短 URL",
+	"urlshortener-shortened-url-label": "已簡短的 URL",
+	"urlshortener-toolbox": "取得簡短的 URL",
+	"urlshortener-error-badports": "禁止簡短包含埠的 URL",
+	"urlshortener-failed-try-again": "失敗了，是否重試？",
+	"urlshortener-disabled": "建立新的簡短 URL 被暫時停用。"
 }
