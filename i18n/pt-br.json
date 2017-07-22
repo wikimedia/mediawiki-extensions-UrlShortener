@@ -10,6 +10,7 @@
 	"urlshortener-url-input-submitting": "Encurtando...",
 	"urlshortener-not-found-title": "URL curta não localizada",
 	"urlshortener-not-found-message": "Desculpe, o URL que você está procurando não foi encontrado.",
+	"urlshortener-form-header": "Cole seu URL longo aqui",
 	"urlshortener-error-malformed-url": "O URL não é válido",
 	"urlshortener-shortened-url-label": "URL encurtado",
 	"urlshortener-error-disallowed-url": "Os URLs para o domínio $1 não podem ser encurtados",
