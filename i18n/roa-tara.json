@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"urlshortener": "Accorce l'URL",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Accorce",
+	"urlshortener-failed-try-again": "Fallite. Pruève arrete?"
+}
