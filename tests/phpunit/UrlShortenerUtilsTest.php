@@ -95,14 +95,47 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 				'http://example.com/w/index.php?title=Special:Version&baz=bar',
 				'http://example.com/w/index.php?title=Special:Version&baz=bar'
 			],
-			// urldecoded
+			// urlencoded
 			[
 				'http://example.org/wiki/Scott_Morrison_%28politician%29',
-				'http://example.org/wiki/Scott_Morrison_(politician)'
+				'http://example.org/wiki/Scott_Morrison_%28politician%29'
 			],
+			// urldecoded
 			[
 				'http://example.org/wiki/Scott_Morrison_(politician)',
 				'http://example.org/wiki/Scott_Morrison_(politician)'
+			],
+			// Ideally spaces should be replaced with underscores
+			[
+				'http://example.org/wiki/Scott Morrison (politician)',
+				'http://example.org/wiki/Scott Morrison (politician)'
+			],
+			// encoded # in URL that is not an anchor
+			[
+				'http://bots.wmflabs.org/logs/%23mediawiki/',
+				'http://bots.wmflabs.org/logs/%23mediawiki/',
+			],
+			// encoded + in URL that is not a space
+			[
+				'http://en.wikipedia.org/wiki/%2B_(disambiguation)',
+				'http://en.wikipedia.org/wiki/%2B_(disambiguation)'
+			],
+			// encoded + but not encoded / in URL
+			[
+				'http://en.wikipedia.org/wiki/Talk:C%2B%2B/Archive_1',
+				'http://en.wikipedia.org/wiki/Talk:C%2B%2B/Archive_1',
+			],
+			// Bad characters sourced from
+			// https://perishablepress.com/stop-using-unsafe-characters-in-urls/
+			// These should ideally be escaped after the first ?
+			[
+				'http://example.org/?;/?:@=&"<>#%{}|\^~[]`',
+				'http://example.org/?;/?:@=&"<>#%{}|\^~[]`',
+			],
+			// a real anchor
+			[
+				'http://example.org/this/is/#anchor',
+				'http://example.org/this/is/#anchor',
 			],
 		];
 	}

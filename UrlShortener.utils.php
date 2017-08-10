@@ -81,11 +81,12 @@ class UrlShortenerUtils {
 	}
 
 	/**
-	 * Normalizes URL from its `/w/index.php?title=$1` form to
-	 * `/wiki/$1`.
+	 * Normalizes URL into a somewhat canonical form, including:
+	 * * protocol to HTTP
+	 * * from its `/w/index.php?title=$1` form to `/wiki/$1`.
 	 *
-	 * @param string $url
-	 * @return string
+	 * @param string $url might be encoded or decoded (raw user input)
+	 * @return string URL that is saved in DB and used in Location header
 	 */
 	public static function normalizeUrl( $url ) {
 		global $wgArticlePath;
@@ -93,8 +94,9 @@ class UrlShortenerUtils {
 		// it to a different one when redirecting
 		$url = self::convertToProtocol( $url, PROTO_HTTP );
 
-		// Decode it...
-		$url = urldecode( $url );
+		// TODO: We should ideally decode/encode the URL for normalization,
+		// but we don't want to double-encode, nor unencode the URL that
+		// is directly provided by users (see test cases)
 
 		// If the wiki is using an article path (e.g. /wiki/$1) try
 		// and convert plain index.php?title=$1 URLs to the canonical form
