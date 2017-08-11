@@ -79,7 +79,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 			// No input
 			return true;
 		}
-		$validity_check =  UrlShortenerUtils::validateUrl( $url );
+		$validity_check = UrlShortenerUtils::validateUrl( $url );
 		if ( $validity_check === true ) {
 			return true;
 		}
