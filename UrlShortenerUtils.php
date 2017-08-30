@@ -94,9 +94,13 @@ class UrlShortenerUtils {
 		// it to a different one when redirecting
 		$url = self::convertToProtocol( $url, PROTO_HTTP );
 
+		$url = trim( $url );
+
 		// TODO: We should ideally decode/encode the URL for normalization,
 		// but we don't want to double-encode, nor unencode the URL that
 		// is directly provided by users (see test cases)
+		// So for now, just replace spaces with %20, as that's safe in all cases
+		$url = str_replace( ' ', '%20', $url );
 
 		// If the wiki is using an article path (e.g. /wiki/$1) try
 		// and convert plain index.php?title=$1 URLs to the canonical form

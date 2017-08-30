@@ -105,10 +105,10 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 				'http://example.org/wiki/Scott_Morrison_(politician)',
 				'http://example.org/wiki/Scott_Morrison_(politician)'
 			],
-			// Ideally spaces should be replaced with underscores
+			// Ideally spaces should be replaced with underscores for MediaWiki links
 			[
 				'http://example.org/wiki/Scott Morrison (politician)',
-				'http://example.org/wiki/Scott Morrison (politician)'
+				'http://example.org/wiki/Scott%20Morrison%20(politician)'
 			],
 			// encoded # in URL that is not an anchor
 			[
