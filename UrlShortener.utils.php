@@ -273,7 +273,7 @@ class UrlShortenerUtils {
 	 * Decode a compact string to produce an integer, or false if the input is invalid.
 	 *
 	 * @param $s string
-	 * @return integer|false
+	 * @return int|false
 	 */
 	public static function decodeId( $s ) {
 		global $wgUrlShortenerIdSet;
