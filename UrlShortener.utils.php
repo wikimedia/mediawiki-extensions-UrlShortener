@@ -141,7 +141,7 @@ class UrlShortenerUtils {
 			return false;
 		}
 
-		$dbr = self::getDB( DB_SLAVE );
+		$dbr = self::getDB( DB_REPLICA );
 		$url = $dbr->selectField(
 			'urlshortcodes',
 			'usc_url',

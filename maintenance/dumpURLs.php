@@ -21,7 +21,7 @@ class DumpURLs extends Maintenance {
 	}
 
 	public function execute() {
-		$dbr = UrlShortenerUtils::getDB( DB_SLAVE );
+		$dbr = UrlShortenerUtils::getDB( DB_REPLICA );
 		$file = $this->getArg( 0 );
 		$this->output( "Writing to $file...\n" );
 		$handle = fopen( $file, 'w' );
