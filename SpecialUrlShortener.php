@@ -70,8 +70,8 @@ class SpecialUrlShortener extends FormSpecialPage {
 	/**
 	 * Validate the URL to ensure that we are allowed to create a shorturl for this.
 	 *
-	 * @param $url String The URL to validate
-	 * @param $allData Array All the form fields!
+	 * @param string $url The URL to validate
+	 * @param array $allData All the form fields!
 	 * @return bool|string true if url is valid, error message otherwise
 	 */
 	public function validateURL( $url, $allData ) {

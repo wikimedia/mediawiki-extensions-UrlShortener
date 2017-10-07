@@ -172,8 +172,8 @@ class UrlShortenerUtils {
 	/**
 	 * Create a fully qualified short URL for the given shortcode.
 	 *
-	 * @param $shortCode String base64 shortcode to generate URL For.
-	 * @return String The fully qualified URL
+	 * @param string $shortCode base64 shortcode to generate URL For.
+	 * @return string The fully qualified URL
 	 */
 	public static function makeUrl( $shortCode ) {
 		global $wgUrlShortenerTemplate, $wgUrlShortenerServer, $wgServer;
@@ -217,7 +217,7 @@ class UrlShortenerUtils {
 	/**
 	 * Validates a given URL to see if it is allowed to be used to create a short URL
 	 *
-	 * @param $url String Url to Validate
+	 * @param string $url Url to Validate
 	 * @return bool|Message true if it is valid, or error Message object if invalid
 	 */
 	public static function validateUrl( $url ) {
@@ -253,7 +253,7 @@ class UrlShortenerUtils {
 	 * Encode an integer into a compact string representation. This is basically
 	 * a generalisation of base_convert().
 	 *
-	 * @param $x integer
+	 * @param int $x
 	 * @return string
 	 */
 	public static function encodeId( $x ) {
@@ -272,7 +272,7 @@ class UrlShortenerUtils {
 	/**
 	 * Decode a compact string to produce an integer, or false if the input is invalid.
 	 *
-	 * @param $s string
+	 * @param string $s
 	 * @return int|false
 	 */
 	public static function decodeId( $s ) {

@@ -10,7 +10,7 @@
 
 class UrlShortenerHooks {
 	/**
-	 * @param $router PathRouter
+	 * @param PathRouter $router
 	 * @return bool
 	 *
 	 * Adds UrlShortener rules to the URL router.
@@ -38,7 +38,7 @@ class UrlShortenerHooks {
 	 * Adds a link to the toolbox to Special:UrlShortener
 	 *
 	 * @param BaseTemplate $template
-	 * @param array $toolbox
+	 * @param array &$toolbox
 	 */
 	public static function onBaseTemplateToolbox( BaseTemplate $template, array &$toolbox ) {
 		global $wgUrlShortenerReadOnly;
@@ -67,7 +67,7 @@ class UrlShortenerHooks {
 	}
 
 	/**
-	 * @param $du DatabaseUpdater
+	 * @param DatabaseUpdater $du
 	 * @return bool
 	 */
 	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $du ) {
