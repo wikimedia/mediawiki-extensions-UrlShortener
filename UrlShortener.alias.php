@@ -38,6 +38,11 @@ $specialPageAliases['mk'] = [
 	'UrlShortener' => [ 'СкратувачНаURL' ],
 ];
 
+/** Urdu (اردو) */
+$specialPageAliases['ur'] = [
+	'UrlShortener' => [ 'یوآرایل_مختصر_کنندہ' ],
+];
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = [
 	'UrlShortener' => [ 'URL缩短程序' ],
