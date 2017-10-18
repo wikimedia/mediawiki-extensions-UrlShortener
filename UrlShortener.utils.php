@@ -157,7 +157,7 @@ class UrlShortenerUtils {
 	}
 
 	/**
-	 * @param int $type DB_SLAVE or DB_MASTER
+	 * @param int $type DB_REPLICA or DB_MASTER
 	 * @return IDatabase
 	 */
 	public static function getDB( $type ) {
