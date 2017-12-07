@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Sjoerddebruin",
-			"Mainframe98"
+			"Mainframe98",
+			"Mar(c)"
 		]
 	},
 	"urlshortener": "Url verkorter",
@@ -17,7 +18,7 @@
 	"urlshortener-approved-domains": "Koppelingen naar {{PLURAL:$1|het volgende domein|de volgende domeinen}} mogen verkort worden: $2.",
 	"urlshortener-toolbox": "Korte URL verkrijgen",
 	"urlshortener-error-badports": "Urls die poortnummers bevatten mogen niet worden verkort",
-	"urlshortener-error-nouserpass": "URLs die een gebruikernaam of wachtwoord bevatten mogen niet verkort worden",
+	"urlshortener-error-nouserpass": "URL's die een gebruikersnaam of wachtwoord bevatten mogen niet verkort worden",
 	"urlshortener-failed-try-again": "Mislukt. Opnieuw proberen?",
 	"urlshortener-disabled": "Het aanmaken van nieuwe korte URLs is tijdelijk uitgeschakeld.",
 	"apihelp-shortenurl-description": "Verkort een lange URL in een kortere.",
