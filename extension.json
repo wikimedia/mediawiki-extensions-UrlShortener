@@ -18,8 +18,8 @@
 		"shortenurl": "ApiShortenUrl"
 	},
 	"AutoloadClasses": {
-		"UrlShortenerUtils": "UrlShortener.utils.php",
-		"UrlShortenerHooks": "UrlShortener.hooks.php",
+		"UrlShortenerUtils": "UrlShortenerUtils.php",
+		"UrlShortenerHooks": "UrlShortenerHooks.php",
 		"SpecialUrlShortener": "SpecialUrlShortener.php",
 		"SpecialUrlRedirector": "SpecialUrlRedirector.php",
 		"ApiShortenUrl": "ApiShortenUrl.php"
