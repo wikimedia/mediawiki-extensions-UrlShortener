@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Liuxinyu970226",
-			"LNDDYL"
+			"LNDDYL",
+			"A2093064"
 		]
 	},
 	"urlshortener": "簡短網域",
@@ -10,6 +11,7 @@
 	"urlshortener-url-input-submit": "簡短",
 	"urlshortener-url-input-submitting": "簡短中...",
 	"urlshortener-not-found-title": "查無簡短 URL",
+	"urlshortener-form-header": "將您的長URL貼上至此",
 	"urlshortener-shortened-url-label": "已簡短的 URL",
 	"urlshortener-toolbox": "取得簡短的 URL",
 	"urlshortener-error-badports": "禁止簡短包含埠的 URL",
