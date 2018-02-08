@@ -13,6 +13,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
+use MediaWiki\MediaWikiServices;
+
 class UrlShortenerUtils {
 
 	/**
@@ -166,9 +168,10 @@ class UrlShortenerUtils {
 	 */
 	public static function getDB( $type ) {
 		global $wgUrlShortenerDBName, $wgUrlShortenerDBCluster;
+		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
 		$lb = $wgUrlShortenerDBCluster
-			? wfGetLBFactory()->getExternalLB( $wgUrlShortenerDBCluster )
-			: wfGetLB( $wgUrlShortenerDBName );
+			? $lbFactory->getExternalLB( $wgUrlShortenerDBCluster )
+			: $lbFactory->getMainLB( $wgUrlShortenerDBName );
 
 		return $lb->getConnectionRef( $type, [], $wgUrlShortenerDBName );
 	}
