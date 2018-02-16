@@ -5,9 +5,27 @@
 			"Ladsgroup"
 		]
 	},
+	"urlshortener": "کوتاه‌کننده URL",
+	"urlshortener-desc": "کوتاه‌کننده URL برای هرگونه URL دلخواه",
 	"urlshortener-url-input-label": "نشانی اینترنتی",
+	"urlshortener-url-input-submit": "کوتاه کن",
+	"urlshortener-url-input-submitting": "در حال کوتاه کردن",
 	"urlshortener-not-found-title": "نشانی کوتاه یافت نشد",
+	"urlshortener-not-found-message": "متاسفانه URLی که دنبالش هستید پیدا نشد.",
+	"urlshortener-form-header": "نشانی اینترنتی بلندتان را اینجا بچسبانید",
+	"urlshortener-error-malformed-url": "یک نشانی اینترنتی معتبر نیست",
+	"urlshortener-shortened-url-label": "URL کوتاه شده",
+	"urlshortener-error-disallowed-url": "نشانی‌های اینترنتی با دامنه $1 برای کوتاه شدن معتبر نیستند",
+	"urlshortener-approved-domains": "پیوند به این {{PLURAL:$1|دامنه|دامنه‌ها}} می‌تواند کوتاه شود: $2",
+	"urlshortener-ratelimit": "لطفا کمی قبل از کوتاه کردن پیوندهای بیشتر صبر کنید.",
+	"urlshortener-toolbox": "گرفتن پیوند کوتاه شده",
+	"urlshortener-error-badports": "URL شامل عباراتی است که مجاز به کوتاه کردن نیست",
+	"urlshortener-error-nouserpass": "نشانی‌های اینترنتی که در آن شناسه کاربری یا گذرواژه وجود دارد اجازه کوتاه شدن ندارند",
+	"urlshortener-failed-try-again": "شکست خورد، دوباره تلاش کنید؟",
+	"urlshortener-disabled": "ایجاد نشانی اینترنتی کوتاه موقتا غیرفعال شده‌است.",
 	"apihelp-shortenurl-description": "یک آدرس اینترنتی بلند را کوتاه می‌کند",
+	"apihelp-shortenurl-summary": "کوتاه کردن یک نشانی اینترنتی بلند به یک نشانی اینترنتی کوتاه",
 	"apihelp-shortenurl-param-url": "آدرس اینترنتی برای کوتاه شدن",
-	"apihelp-shortenurl-example-1": "آدرس اینترنتی کوتاه شده <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> را بگیر"
+	"apihelp-shortenurl-example-1": "آدرس اینترنتی کوتاه شده <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> را بگیر",
+	"apierror-urlshortener-disabled": "امکان ایجاد نشانی اینترنتی کوتاه جدید نیست."
 }
