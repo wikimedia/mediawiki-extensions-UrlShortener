@@ -3,7 +3,8 @@
 		"authors": [
 			"Shirayuki",
 			"2nd-player",
-			"Sujiniku"
+			"Sujiniku",
+			"Yusuke1109"
 		]
 	},
 	"urlshortener": "URL短縮",
@@ -17,5 +18,12 @@
 	"urlshortener-error-malformed-url": "有効な URL ではありません",
 	"urlshortener-shortened-url-label": "短縮後のURL",
 	"urlshortener-error-disallowed-url": "ドメイン $1 への URL は短縮が認められていません",
-	"urlshortener-failed-try-again": "失敗しました。もう一度、試しますか？"
+	"urlshortener-approved-domains": "次の{{PLURAL:$1|ドメイン}}へのリンクは短縮されます: $2。",
+	"urlshortener-toolbox": "短縮URLを取得する",
+	"urlshortener-error-badports": "ポートを含むURLは短縮できません",
+	"urlshortener-error-nouserpass": "ユーザー名またはパスワードを含むURLは短縮できません",
+	"urlshortener-failed-try-again": "失敗しました。もう一度、試しますか？",
+	"urlshortener-disabled": "新しい短縮URLの作成は一時的に無効になっています。",
+	"apihelp-shortenurl-description": "長いURLを短いURLに短縮します。",
+	"apihelp-shortenurl-summary": "長いURLを短いURLに短縮します。"
 }
