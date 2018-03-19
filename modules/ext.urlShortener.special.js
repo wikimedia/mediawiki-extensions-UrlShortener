@@ -41,7 +41,7 @@
 		 *                         returned by the API in case of error.
 		 */
 		validateInput: function ( input ) {
-			var parsed,
+			var parsed, url,
 				self = mw.urlshortener;
 
 			try {
@@ -51,7 +51,8 @@
 				return false;
 			}
 			if ( !parsed.host.match( self.regex ) ) {
-				self.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-disallowed-url', parsed.host ) ] );
+				url = parsed.protocol + '://' + mw.html.escape( parsed.host );
+				self.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-disallowed-url', url ) ] );
 				return false;
 			}
 			if ( parsed.port &&
