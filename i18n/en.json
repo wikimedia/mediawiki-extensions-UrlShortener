@@ -21,5 +21,11 @@
 	"urlshortener-error-badports": "URLs that contain ports are not allowed to be shortened",
 	"urlshortener-error-nouserpass": "URLs that contain a username or password are not allowed to be shortened",
 	"urlshortener-failed-try-again": "Failed. Try again?",
-	"urlshortener-disabled": "Creating new short URLs is temporarily disabled."
+	"urlshortener-disabled": "Creating new short URLs is temporarily disabled.",
+	"urlshortener-deleted": "This short URL has been deleted.",
+	"apihelp-shortenurl-description": "Shorten a long URL into a shorter one.",
+	"apihelp-shortenurl-summary": "Shorten a long URL into a shorter one.",
+	"apihelp-shortenurl-param-url": "URL to be shortened.",
+	"apihelp-shortenurl-example-1": "Get the short URL for <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "No new short urls may be created"
 }

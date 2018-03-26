@@ -42,42 +42,49 @@ class UrlShortenerUtils {
 		$url = self::normalizeUrl( $url );
 
 		$dbw = self::getDB( DB_MASTER );
-		$id = $dbw->selectField(
+		$row = $dbw->selectRow(
 			'urlshortcodes',
-			'usc_id',
+			[ 'usc_id', 'usc_deleted' ],
 			[ 'usc_url_hash' => md5( $url ) ],
 			__METHOD__
 		);
-		if ( $id === false ) {
-			if ( $user->pingLimiter( 'urlshortcode' ) ) {
-				return Status::newFatal( 'urlshortener-ratelimit' );
-			}
 
-			global $wgUrlShortenerReadOnly;
-			if ( $wgUrlShortenerReadOnly ) {
-				// All code paths should already have checked for this,
-				// but lets be on the safe side.
-				return Status::newFatal( 'urlshortener-disabled' );
+		if ( $row !== false ) {
+			if ( $row->usc_deleted ) {
+				return Status::newFatal( 'urlshortener-deleted' );
 			}
+			return Status::newGood( self::encodeId( $row->usc_id ) );
+		}
 
-			$rowData = [
-				'usc_url' => $url,
-				'usc_url_hash' => md5( $url )
-			];
-			$dbw->insert( 'urlshortcodes', $rowData, __METHOD__, [ 'IGNORE' ] );
+		// Didn't exist, we need to insert it
+		if ( $user->pingLimiter( 'urlshortcode' ) ) {
+			return Status::newFatal( 'urlshortener-ratelimit' );
+		}
 
-			if ( $dbw->affectedRows() ) {
-				$id = $dbw->insertId();
-			} else {
-				// Raced out; get the winning ID
-				$id = $dbw->selectField(
-					'urlshortcodes',
-					'usc_id',
-					[ 'usc_url_hash' => md5( $url ) ],
-					__METHOD__,
-					[ 'LOCK IN SHARE MODE' ] // ignore snapshot
-				);
-			}
+		global $wgUrlShortenerReadOnly;
+		if ( $wgUrlShortenerReadOnly ) {
+			// All code paths should already have checked for this,
+			// but lets be on the safe side.
+			return Status::newFatal( 'urlshortener-disabled' );
+		}
+
+		$rowData = [
+			'usc_url' => $url,
+			'usc_url_hash' => md5( $url )
+		];
+		$dbw->insert( 'urlshortcodes', $rowData, __METHOD__, [ 'IGNORE' ] );
+
+		if ( $dbw->affectedRows() ) {
+			$id = $dbw->insertId();
+		} else {
+			// Raced out; get the winning ID
+			$id = $dbw->selectField(
+				'urlshortcodes',
+				'usc_id',
+				[ 'usc_url_hash' => md5( $url ) ],
+				__METHOD__,
+				[ 'LOCK IN SHARE MODE' ] // ignore snapshot
+			);
 		}
 
 		return Status::newGood( self::encodeId( $id ) );
@@ -152,7 +159,7 @@ class UrlShortenerUtils {
 		$url = $dbr->selectField(
 			'urlshortcodes',
 			'usc_url',
-			[ 'usc_id' => $id ],
+			[ 'usc_id' => $id, 'usc_deleted' => 0 ],
 			__METHOD__
 		);
 
@@ -161,6 +168,37 @@ class UrlShortenerUtils {
 		}
 
 		return self::convertToProtocol( $url, $proto );
+	}
+
+	/**
+	 * Mark a URL as deleted
+	 *
+	 * @param string $shortcode
+	 *
+	 * @return bool False if the $shortCode was invalid
+	 */
+	public static function deleteURL( $shortcode ) {
+		global $wgUseSquid;
+
+		$id = self::decodeId( $shortcode );
+		if ( $id === false ) {
+			return false;
+		}
+
+		$dbw = self::getDB( DB_MASTER );
+		$dbw->update(
+			'urlshortcodes',
+			[ 'usc_deleted' => 1 ],
+			[ 'usc_id' => $id ],
+			__METHOD__
+		);
+
+		if ( $wgUseSquid ) {
+			$update = new CdnCacheUpdate( [ self::makeUrl( $shortcode ) ] );
+			DeferredUpdates::addUpdate( $update, DeferredUpdates::PRESEND );
+		}
+
+		return true;
 	}
 
 	/**

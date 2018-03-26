@@ -34,7 +34,7 @@ class DumpURLs extends Maintenance {
 			$rows = $dbr->select(
 				'urlshortcodes',
 				[ 'usc_url', 'usc_id' ],
-				[ 'usc_id > ' . $dbr->addQuotes( $id ) ],
+				[ 'usc_id > ' . $dbr->addQuotes( $id ), 'usc_deleted' => 0 ],
 				__METHOD__,
 				[ 'LIMIT' => $this->mBatchSize, 'ORDER BY' => 'usc_id ASC' ]
 			);

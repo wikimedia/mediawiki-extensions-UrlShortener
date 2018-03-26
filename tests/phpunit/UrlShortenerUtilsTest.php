@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @group Database
+ */
 class UrlShortenerUtilsTest extends MediaWikiTestCase {
 
 	/**
@@ -158,5 +161,20 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 			$decoded = UrlShortenerUtils::decodeId( $encoded );
 			$this->assertEquals( $int, $decoded );
 		}
+	}
+
+	/**
+	 * @covers UrlShortenerUtils::getURL
+	 */
+	public function testGetURL() {
+		$url = 'http://example.org/1';
+		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
+		$this->assertTrue( $status->isGood() );
+		$id = $status->getValue();
+		$storedUrl = UrlShortenerUtils::getURL( $id, PROTO_HTTP );
+		$this->assertEquals( $url, $storedUrl );
+		// Delete the URL
+		UrlShortenerUtils::deleteURL( $id );
+		$this->assertFalse( UrlShortenerUtils::getURL( $id, PROTO_HTTP ) );
 	}
 }

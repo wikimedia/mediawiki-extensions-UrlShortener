@@ -74,6 +74,8 @@ class UrlShortenerHooks {
 	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $du ) {
 		$base = dirname( __DIR__ ) . '/schemas';
 		$du->addExtensionTable( 'urlshortcodes', "$base/urlshortcodes.sql" );
+		$du->addExtensionField( 'urlshortcodes', 'usc_deleted',
+			"$base/patch-usc_deleted.sql" );
 		return true;
 	}
 }

@@ -8,7 +8,9 @@ CREATE TABLE IF NOT EXISTS /*_*/urlshortcodes (
 	-- md5 hash of the URL, used to make lookups based on URL indexable
 	usc_url_hash CHAR(32) NOT NULL,
 	-- Fully qualified URL that this shortcode should redirect to
-	usc_url BLOB NOT NULL
+	usc_url BLOB NOT NULL,
+	-- Whether the entry has been hidden from view
+	usc_deleted tinyint(1) NOT NULL DEFAULT 0
 ) /*$wgDBTableOptions*/;
 
 -- Used to lookup whether a URL already has a shortcode, so we can reuse it instead of
