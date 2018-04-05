@@ -14,6 +14,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 use MediaWiki\MediaWikiServices;
+use Wikimedia\Rdbms\IDatabase;
 
 class UrlShortenerUtils {
 
