@@ -1,8 +1,31 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ayatun"
+			"Ayatun",
+			"ديفيد"
 		]
 	},
-	"urlshortener-disabled": "إحداث روابط قصيرة جديدة معطل مؤقتا"
+	"urlshortener": "مقصر المسار",
+	"urlshortener-desc": "أداة تقصير مسار للمسارات العشوائية",
+	"urlshortener-url-input-label": "المسار",
+	"urlshortener-url-input-submit": "تقصير",
+	"urlshortener-url-input-submitting": "جارِ التقصير…",
+	"urlshortener-not-found-title": "لم يتم العثور على مسار قصير",
+	"urlshortener-not-found-message": "عذرا، لم يتم العثور على المسار الذي تبحث عنه.",
+	"urlshortener-form-header": "الصق المسار الطويل هنا",
+	"urlshortener-error-malformed-url": "ليس مسارا صالحا",
+	"urlshortener-shortened-url-label": "المسار المختصر",
+	"urlshortener-error-disallowed-url": "لا يُسمَح باختزال المسارات إلى النطاق $1",
+	"urlshortener-approved-domains": "قد يتم اختصار الروابط إلى {{PLURAL:$1|النطاق التالي|النطاقات التالية}}: $2.",
+	"urlshortener-ratelimit": "الرجاء الانتظار بعض الوقت قبل تقصير المزيد من المسارات.",
+	"urlshortener-toolbox": "احصل على مسار مختصر",
+	"urlshortener-error-badports": "لا يُسمَح بتقصير المسارات التي تحتوي على منافذ",
+	"urlshortener-error-nouserpass": "لا يُسمَح بتقصير المسارات التي تحتوي على اسم مستخدم أو كلمة مرور",
+	"urlshortener-failed-try-again": "فشل، حاول ثانية؟",
+	"urlshortener-disabled": "إحداث روابط قصيرة جديدة معطل مؤقتا",
+	"apihelp-shortenurl-description": "اختصر مسارا طويلا إلى واحد قصير.",
+	"apihelp-shortenurl-summary": "اختصر مسارا طويلا إلى واحد قصير.",
+	"apihelp-shortenurl-param-url": "مسار لتقصيره.",
+	"apihelp-shortenurl-example-1": "احصل على المسار المختصر لـ<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "لا يجوز إنشاء مسارات قصيرة جديدة"
 }
