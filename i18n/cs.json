@@ -2,10 +2,30 @@
 	"@metadata": {
 		"authors": [
 			"Kvetoslav47",
-			"Martin Urbanec"
+			"Martin Urbanec",
+			"Mormegil"
 		]
 	},
+	"urlshortener": "Zkracovač URL",
+	"urlshortener-desc": "Zkracovač pro libovolná URL",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Zkrátit",
+	"urlshortener-url-input-submitting": "Zkracuje se…",
+	"urlshortener-not-found-title": "Krátké URL nenalezeno",
+	"urlshortener-not-found-message": "Je nám líto, ale URL, které hledáte, nebylo nalezeno.",
+	"urlshortener-form-header": "Sem vlepte dlouhé URL",
+	"urlshortener-error-malformed-url": "Neplatné URL",
+	"urlshortener-shortened-url-label": "Zkrácené URL",
+	"urlshortener-error-disallowed-url": "URL s doménou $1 není dovoleno zkracovat",
+	"urlshortener-approved-domains": "Zkracovat je možno odkazy na následující {{PLURAL:$1|doménu|domény}}: $2.",
+	"urlshortener-ratelimit": "Před zkracováním dalších URL prosím chvíli počkejte.",
+	"urlshortener-toolbox": "Získat zkrácené URL",
+	"urlshortener-error-badports": "URL obsahující port není dovoleno zkracovat",
+	"urlshortener-error-nouserpass": "URL obsahující uživatelské jméno nebo heslo není dovoleno zkracovat",
+	"urlshortener-failed-try-again": "Došlo k chybě. Zkusit znovu?",
+	"urlshortener-disabled": "Vytváření nových krátkých URL je dočasně zakázáno.",
 	"apihelp-shortenurl-description": "Zkrácení dlouhé URL na kratší.",
+	"apihelp-shortenurl-summary": "Zkrátit dlouhé URL na kratší.",
 	"apihelp-shortenurl-param-url": "URL ke zkrácení.",
 	"apihelp-shortenurl-example-1": "Získejte krátkou URL pro <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "Žádné další zkrácené URL nemohou být vytvořeny"
