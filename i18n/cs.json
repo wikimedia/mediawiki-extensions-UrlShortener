@@ -3,7 +3,8 @@
 		"authors": [
 			"Kvetoslav47",
 			"Martin Urbanec",
-			"Mormegil"
+			"Mormegil",
+			"Dvorapa"
 		]
 	},
 	"urlshortener": "Zkracovač URL",
@@ -13,7 +14,7 @@
 	"urlshortener-url-input-submitting": "Zkracuje se…",
 	"urlshortener-not-found-title": "Krátké URL nenalezeno",
 	"urlshortener-not-found-message": "Je nám líto, ale URL, které hledáte, nebylo nalezeno.",
-	"urlshortener-form-header": "Sem vlepte dlouhé URL",
+	"urlshortener-form-header": "Sem vložte dlouhé URL",
 	"urlshortener-error-malformed-url": "Neplatné URL",
 	"urlshortener-shortened-url-label": "Zkrácené URL",
 	"urlshortener-error-disallowed-url": "URL s doménou $1 není dovoleno zkracovat",
