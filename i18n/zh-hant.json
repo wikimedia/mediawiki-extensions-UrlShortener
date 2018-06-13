@@ -3,7 +3,8 @@
 		"authors": [
 			"Liuxinyu970226",
 			"LNDDYL",
-			"A2093064"
+			"A2093064",
+			"Kly"
 		]
 	},
 	"urlshortener": "簡短網域",
@@ -11,7 +12,8 @@
 	"urlshortener-url-input-submit": "簡短",
 	"urlshortener-url-input-submitting": "簡短中...",
 	"urlshortener-not-found-title": "查無簡短 URL",
-	"urlshortener-form-header": "將您的長URL貼上至此",
+	"urlshortener-form-header": "將您的長 URL 貼上至此",
+	"urlshortener-error-malformed-url": "不是有效的 URL",
 	"urlshortener-shortened-url-label": "已簡短的 URL",
 	"urlshortener-toolbox": "取得簡短的 URL",
 	"urlshortener-error-badports": "禁止簡短包含埠的 URL",
