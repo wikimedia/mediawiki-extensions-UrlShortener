@@ -7,16 +7,27 @@
 			"Kly"
 		]
 	},
-	"urlshortener": "簡短網域",
+	"urlshortener": "URL 縮址",
+	"urlshortener-desc": "可用於各樣 URL 的 URL 縮址",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "簡短",
 	"urlshortener-url-input-submitting": "簡短中...",
 	"urlshortener-not-found-title": "查無簡短 URL",
+	"urlshortener-not-found-message": "很抱歉，查無您所找的 URL。",
 	"urlshortener-form-header": "將您的長 URL 貼上至此",
 	"urlshortener-error-malformed-url": "不是有效的 URL",
 	"urlshortener-shortened-url-label": "已簡短的 URL",
+	"urlshortener-error-disallowed-url": "網域為 $1 的 URL 不允許縮短",
+	"urlshortener-approved-domains": "連接至以下{{PLURAL:$1|網域|網域}}可被縮短：$2。",
+	"urlshortener-ratelimit": "在縮短完更多 URL 前請稍待。",
 	"urlshortener-toolbox": "取得簡短的 URL",
 	"urlshortener-error-badports": "禁止簡短包含埠的 URL",
+	"urlshortener-error-nouserpass": "包含使用者名稱或密碼的 URL 不允許縮短",
 	"urlshortener-failed-try-again": "失敗了，是否重試？",
-	"urlshortener-disabled": "建立新的簡短 URL 被暫時停用。"
+	"urlshortener-disabled": "建立新的簡短 URL 被暫時停用。",
+	"apihelp-shortenurl-description": "將長的 URL 給縮短。",
+	"apihelp-shortenurl-summary": "將長的 URL 給縮短。",
+	"apihelp-shortenurl-param-url": "要縮短的 URL。",
+	"apihelp-shortenurl-example-1": "取得 <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> 的縮短 URL。",
+	"apierror-urlshortener-disabled": "無法創建出新的短 Url"
 }
