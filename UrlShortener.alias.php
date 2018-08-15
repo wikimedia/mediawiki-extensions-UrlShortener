@@ -38,6 +38,16 @@ $specialPageAliases['mk'] = [
 	'UrlShortener' => [ 'СкратувачНаURL' ],
 ];
 
+/** Serbian (Cyrillic script) (српски (ћирилица)‎) */
+$specialPageAliases['sr-ec'] = [
+	'UrlShortener' => [ 'Скраћивач_адреса', 'Скраћивач_URL_адреса' ],
+];
+
+/** Serbian (Latin script) (srpski (latinica)‎) */
+$specialPageAliases['sr-el'] = [
+	'UrlShortener' => [ 'Skraćivač_adresa', 'Skraćivač_URL_adresa' ],
+];
+
 /** Urdu (اردو) */
 $specialPageAliases['ur'] = [
 	'UrlShortener' => [ 'یوآرایل_مختصر_کنندہ' ],
