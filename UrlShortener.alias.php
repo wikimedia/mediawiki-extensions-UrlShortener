@@ -23,6 +23,11 @@ $specialPageAliases['arz'] = [
 	'UrlShortener' => [ 'تقصير_المسار' ],
 ];
 
+/** Bosnian (bosanski) */
+$specialPageAliases['bs'] = [
+	'UrlShortener' => [ 'Skraćivač_adresa', 'Skraćivač_URL_adresa' ],
+];
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = [
 	'UrlShortener' => [ 'URL-Kürzung' ],
@@ -31,6 +36,11 @@ $specialPageAliases['de'] = [
 /** Hebrew (עברית) */
 $specialPageAliases['he'] = [
 	'UrlShortener' => [ 'מקצר_כתובות' ],
+];
+
+/** Croatian (hrvatski) */
+$specialPageAliases['hr'] = [
+	'UrlShortener' => [ 'Skraćivač_adresa', 'Skraćivač_URL_adresa' ],
 ];
 
 /** Macedonian (македонски) */

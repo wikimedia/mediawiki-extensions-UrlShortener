@@ -136,7 +136,7 @@ class UrlShortenerUtils {
 	}
 
 	/**
-	 * Retreives a URL for the given shortcode, or false if there's none.
+	 * Retrieves a URL for the given shortcode, or false if there's none.
 	 *
 	 * @param string $shortCode
 	 * @param string|int $proto PROTO_* constant
