@@ -18,11 +18,11 @@
 		"shortenurl": "ApiShortenUrl"
 	},
 	"AutoloadClasses": {
-		"UrlShortenerUtils": "UrlShortenerUtils.php",
-		"UrlShortenerHooks": "UrlShortenerHooks.php",
-		"SpecialUrlShortener": "SpecialUrlShortener.php",
-		"SpecialUrlRedirector": "SpecialUrlRedirector.php",
-		"ApiShortenUrl": "ApiShortenUrl.php"
+		"UrlShortenerUtils": "includes/UrlShortenerUtils.php",
+		"UrlShortenerHooks": "includes/UrlShortenerHooks.php",
+		"SpecialUrlShortener": "includes/SpecialUrlShortener.php",
+		"SpecialUrlRedirector": "includes/SpecialUrlRedirector.php",
+		"ApiShortenUrl": "includes/ApiShortenUrl.php"
 	},
 	"ExtensionMessagesFiles": {
 		"UrlShortenerAlias": "UrlShortener.alias.php",

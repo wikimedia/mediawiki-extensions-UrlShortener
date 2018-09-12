@@ -72,7 +72,7 @@ class UrlShortenerHooks {
 	 * @return bool
 	 */
 	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $du ) {
-		$base = __DIR__ . '/schemas';
+		$base = dirname( __DIR__ ) . '/schemas';
 		$du->addExtensionTable( 'urlshortcodes', "$base/urlshortcodes.sql" );
 		return true;
 	}
