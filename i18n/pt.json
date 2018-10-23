@@ -7,7 +7,7 @@
 		]
 	},
 	"urlshortener": "Encurtar URL",
-	"urlshortener-desc": "Encurtador de URLs arbitrários",
+	"urlshortener-desc": "Encurtador de URL arbitrários",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Encurtar",
 	"urlshortener-url-input-submitting": "A encurtar...",
@@ -18,15 +18,15 @@
 	"urlshortener-shortened-url-label": "URL encurtado",
 	"urlshortener-error-disallowed-url": "Os URL para o domínio $1 não podem ser encurtados",
 	"urlshortener-approved-domains": "As ligações para {{PLURAL:$1|o seguinte domínio|os seguintes domínios}} podem ser encurtadas: $2",
-	"urlshortener-ratelimit": "Por favor, aguarde por algum tempo antes de encurtar mais URLs.",
+	"urlshortener-ratelimit": "Espere um pouco antes de encurtar mais URL, por favor.",
 	"urlshortener-toolbox": "Obter URL encurtado",
-	"urlshortener-error-badports": "Os URLs que contêm portas não podem ser encurtados",
-	"urlshortener-error-nouserpass": "Os URLs que possuam um nome de utilizador ou uma palavra-passe não podem ser encurtados",
+	"urlshortener-error-badports": "Os URL que contêm portas não podem ser encurtados",
+	"urlshortener-error-nouserpass": "Os URL que tenham um nome de utilizador ou uma palavra-passe não podem ser encurtados",
 	"urlshortener-failed-try-again": "Falhou. Tentar novamente?",
 	"urlshortener-disabled": "A criação de novos URL curtos está temporariamente desativada.",
 	"apihelp-shortenurl-description": "Reduzir um URL longo para um mais curto.",
 	"apihelp-shortenurl-summary": "Reduzir um URL longo para um mais curto.",
 	"apihelp-shortenurl-param-url": "URL a ser encurtado.",
 	"apihelp-shortenurl-example-1": "Obter o URL curto para <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "Não é possível criar novos URLs curtos"
+	"apierror-urlshortener-disabled": "Não é possível criar novos URL curtos"
 }
