@@ -88,7 +88,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 
 	/**
 	 * Generate the form used to input the URL to shorten.
-	 * @return array A form defintion that can be used by HTMLForm
+	 * @return array A form definition that can be used by HTMLForm
 	 */
 	protected function getFormFields() {
 		return [
