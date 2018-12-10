@@ -1,4 +1,4 @@
-( function ( mw, $, OO ) {
+( function () {
 
 	mw.urlshortener = {
 		/**
@@ -81,28 +81,28 @@
 				self.shortenUrl(
 					self.input.getValue()
 				).done( function ( shorturl ) {
-						self.setSubmit( 'submit' );
-						self.input.popPending().setReadOnly( false );
+					self.setSubmit( 'submit' );
+					self.input.popPending().setReadOnly( false );
 
-						if ( !self.shortened ) {
-							self.shortened = new OO.ui.TextInputWidget( {
-								value: shorturl,
-								readOnly: true
-							} );
-							// Wrap in a FieldLayout so we get the label
-							self.input.$element.after( new OO.ui.FieldLayout( self.shortened, {
-								align: 'top',
-								label: mw.msg( 'urlshortener-shortened-url-label' )
-							} ).$element );
-						} else {
-							self.shortened.setValue( shorturl );
-						}
-						self.shortened.select();
-					} ).fail( function ( err ) {
-						self.setSubmit( 'submit' );
-						self.input.popPending().setReadOnly( false );
-						self.input.setLabel( err.info );
-					} );
+					if ( !self.shortened ) {
+						self.shortened = new OO.ui.TextInputWidget( {
+							value: shorturl,
+							readOnly: true
+						} );
+						// Wrap in a FieldLayout so we get the label
+						self.input.$element.after( new OO.ui.FieldLayout( self.shortened, {
+							align: 'top',
+							label: mw.msg( 'urlshortener-shortened-url-label' )
+						} ).$element );
+					} else {
+						self.shortened.setValue( shorturl );
+					}
+					self.shortened.select();
+				} ).fail( function ( err ) {
+					self.setSubmit( 'submit' );
+					self.input.popPending().setReadOnly( false );
+					self.input.setLabel( err.info );
+				} );
 			} );
 		},
 
@@ -142,4 +142,4 @@
 	$( function () {
 		mw.urlshortener.init();
 	} );
-} )( mediaWiki, jQuery, OO );
+}() );

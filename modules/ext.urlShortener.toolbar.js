@@ -1,4 +1,4 @@
-( function ( mw, $ ) {
+( function () {
 	$( function () {
 		var shortenUrlListItem = $( '#t-urlshortener' ),
 			api = new mw.Api();
@@ -27,4 +27,4 @@
 		} );
 	} );
 
-} )( mediaWiki, jQuery );
+}() );
