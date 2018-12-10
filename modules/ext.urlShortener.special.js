@@ -107,9 +107,9 @@
 		},
 
 		init: function () {
-			this.input = OO.ui.infuse( 'mw-urlshortener-url-input' );
+			this.input = OO.ui.infuse( $( '#mw-urlshortener-url-input' ) );
 			this.input.setValidation( this.validateInput );
-			this.submit = OO.ui.infuse( 'mw-urlshortener-submit' );
+			this.submit = OO.ui.infuse( $( '#mw-urlshortener-submit' ) );
 			this.submit.on( 'click', this.onSubmit );
 		},
 
