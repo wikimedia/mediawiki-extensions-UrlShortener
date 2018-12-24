@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yuvi Panda"
+		]
+    },
+	"apihelp-shortenurl-description": "{{doc-apihelp-description|shortenurl}}",
+	"apihelp-shortenurl-summary": "{{doc-apihelp-summary|shortenurl}}",
+	"apihelp-shortenurl-param-url": "{{doc-apihelp-param|shortenurl|url}}",
+	"apihelp-shortenurl-example-1": "{{doc-apihelp-example|shortenurl}}",
+	"apierror-urlshortener-disabled": "{{doc-apierror}}"
+}

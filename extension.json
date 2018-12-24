@@ -44,7 +44,8 @@
 	},
 	"MessagesDirs": {
 		"UrlShortener": [
-			"i18n"
+			"i18n",
+			"i18n/api"
 		]
 	},
 	"RateLimits": {
