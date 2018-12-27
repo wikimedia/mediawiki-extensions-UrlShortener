@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog"
+		]
+	},
+	"apihelp-shortenurl-description": "Скраћивање дугачке URL адресе на краћу.",
+	"apihelp-shortenurl-summary": "Скраћивање дугачке URL адресе на краћу.",
+	"apihelp-shortenurl-param-url": "URL адреса за скраћивање.",
+	"apihelp-shortenurl-example-1": "Набављање кратке URL адресе за <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Не могу се направити нове кратке URL адресе"
+}

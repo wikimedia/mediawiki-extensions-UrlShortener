@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ladsgroup"
+		]
+	},
+	"apihelp-shortenurl-description": "یک آدرس اینترنتی بلند را کوتاه می‌کند",
+	"apihelp-shortenurl-summary": "کوتاه کردن یک نشانی اینترنتی بلند به یک نشانی اینترنتی کوتاه",
+	"apihelp-shortenurl-param-url": "آدرس اینترنتی برای کوتاه شدن",
+	"apihelp-shortenurl-example-1": "آدرس اینترنتی کوتاه شده <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> را بگیر",
+	"apierror-urlshortener-disabled": "امکان ایجاد نشانی اینترنتی کوتاه جدید نیست."
+}

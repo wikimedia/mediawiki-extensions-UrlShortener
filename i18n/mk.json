@@ -21,10 +21,5 @@
 	"urlshortener-error-badports": "URL-а што содржат порти кои не е допуштено да се кратат",
 	"urlshortener-error-nouserpass": "Не е дозволено кратење на URL-ата што содржат корисничко име или лозинка",
 	"urlshortener-failed-try-again": "Не успеа. Да се обидам повторно?",
-	"urlshortener-disabled": "Создавањето на URL-адреси е времено оневозможено.",
-	"apihelp-shortenurl-description": "Скратување на долга URL во покус облик.",
-	"apihelp-shortenurl-summary": "Скратување на долга URL во покус облик.",
-	"apihelp-shortenurl-param-url": "URL за скратување.",
-	"apihelp-shortenurl-example-1": "Дај пократка URL за <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "Не можам да создадам кратки URL-а"
+	"urlshortener-disabled": "Создавањето на URL-адреси е времено оневозможено."
 }

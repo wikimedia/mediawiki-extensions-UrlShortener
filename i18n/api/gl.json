@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Banjo",
+			"Elisardojm"
+		]
+	},
+	"apihelp-shortenurl-description": "Acurtar unha URL longa nunha máis curta.",
+	"apihelp-shortenurl-summary": "Acurtar unha URL longa nunha máis curta.",
+	"apihelp-shortenurl-param-url": "URL a acurtar.",
+	"apihelp-shortenurl-example-1": "Obter o URL corto para <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Non poden crearse novos enderezos url curtos"
+}

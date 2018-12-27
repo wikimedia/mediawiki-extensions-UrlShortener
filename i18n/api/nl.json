@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98"
+		]
+	},
+	"apihelp-shortenurl-description": "Verkort een lange URL in een kortere.",
+	"apihelp-shortenurl-summary": "Verkort een lange URL in een kortere.",
+	"apihelp-shortenurl-param-url": "URL om te verkorten.",
+	"apierror-urlshortener-disabled": "Geen nieuwe korte urls mogen worden aangemaakt"
+}

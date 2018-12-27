@@ -3,7 +3,7 @@
 		"authors": [
 			"Yuvi Panda"
 		]
-    },
+	},
 	"apihelp-shortenurl-description": "{{doc-apihelp-description|shortenurl}}",
 	"apihelp-shortenurl-summary": "{{doc-apihelp-summary|shortenurl}}",
 	"apihelp-shortenurl-param-url": "{{doc-apihelp-param|shortenurl|url}}",

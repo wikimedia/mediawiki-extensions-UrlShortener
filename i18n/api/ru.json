@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Facenapalm",
+			"Okras"
+		]
+	},
+	"apihelp-shortenurl-description": "Сократить длинный URL-адрес в более короткий.",
+	"apihelp-shortenurl-summary": "Сократить длинный URL-адрес в более короткий.",
+	"apihelp-shortenurl-param-url": "URL-адрес для сокращения.",
+	"apihelp-shortenurl-example-1": "Получить короткий URL-адрес для <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Новые короткие URL-адреса не могут быть созданы."
+}

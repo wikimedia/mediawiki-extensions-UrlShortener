@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Railfail536",
+			"Woytecr"
+		]
+	},
+	"apihelp-shortenurl-description": "Skróć długi adres URL do krótszej postaci.",
+	"apihelp-shortenurl-summary": "Skróć długi adres URL do krótszej postaci.",
+	"apihelp-shortenurl-param-url": "Adres URL do skrócenia.",
+	"apihelp-shortenurl-example-1": "Otrzymaj skrócony adres URL dla <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>."
+}

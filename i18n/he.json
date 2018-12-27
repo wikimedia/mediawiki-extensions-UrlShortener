@@ -25,10 +25,5 @@
 	"urlshortener-error-badports": "לא ניתן לקצר כתובות שמכילות פתחות",
 	"urlshortener-error-nouserpass": "לא ניתן לקצר כתובות שמכילות שם משתמש או ססמה",
 	"urlshortener-failed-try-again": "זה לא עבד. לנסות שוב?",
-	"urlshortener-disabled": "יצירת כתובות מקוצרות מוגבלת באופן זמני.",
-	"apihelp-shortenurl-description": "קיצור URL ארוך",
-	"apihelp-shortenurl-summary": "קיצור כתובת URL ארוכה.",
-	"apihelp-shortenurl-param-url": "איזה URL לקצר.",
-	"apihelp-shortenurl-example-1": "קבלת URL קצר עבור <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "לא ניתן ליצור כתובות מקוצרות"
+	"urlshortener-disabled": "יצירת כתובות מקוצרות מוגבלת באופן זמני."
 }

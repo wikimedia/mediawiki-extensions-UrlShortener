@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"JackUKElliott"
+		]
+	},
+	"apihelp-shortenurl-description": "Uzun bir web adresini (URL) kısaltın.",
+	"apihelp-shortenurl-param-url": "Kısaltılacak web adresi (URL).",
+	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> için kısaltılmış web adresini (URL) alın."
+}

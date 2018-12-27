@@ -21,10 +21,5 @@
 	"urlshortener-error-badports": "包含端口的URL不允许被缩短",
 	"urlshortener-error-nouserpass": "包含用户名或密码的URL不允许被缩短",
 	"urlshortener-failed-try-again": "已失败。重试么？",
-	"urlshortener-disabled": "创建新的缩短URL被临时禁用。",
-	"apihelp-shortenurl-description": "将一个长URL缩短。",
-	"apihelp-shortenurl-summary": "将一个长URL缩短。",
-	"apihelp-shortenurl-param-url": "将被缩短的URL。",
-	"apihelp-shortenurl-example-1": "获取用于<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>的短URL。",
-	"apierror-urlshortener-disabled": "不能新建短url"
+	"urlshortener-disabled": "创建新的缩短URL被临时禁用。"
 }

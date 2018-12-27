@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Felipe L. Ewald"
+		]
+	},
+	"apihelp-shortenurl-description": "Reduzir um URL longo em um curto.",
+	"apihelp-shortenurl-summary": "Reduzir um URL longo em um curto.",
+	"apihelp-shortenurl-param-url": "URL a ser encurtado.",
+	"apihelp-shortenurl-example-1": "Obtenha o URL curto para <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Não podem ser criadas novas URLs curtas"
+}

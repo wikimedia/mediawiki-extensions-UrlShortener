@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen"
+		]
+	},
+	"apihelp-shortenurl-description": "Rút gọn một URL đầy đủ thành một URL ngắn gọn hơn.",
+	"apihelp-shortenurl-param-url": "URL để rút gọn.",
+	"apihelp-shortenurl-example-1": "Lấy URL ngắn gọn của <kbd><nowiki>https://vi.wikipedia.org/wiki/Arctica</nowiki></kbd>."
+}

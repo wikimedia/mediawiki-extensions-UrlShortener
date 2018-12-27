@@ -22,10 +22,5 @@
 	"urlshortener-error-badports": "لا يُسمَح بتقصير المسارات التي تحتوي على منافذ",
 	"urlshortener-error-nouserpass": "لا يُسمَح بتقصير المسارات التي تحتوي على اسم مستخدم أو كلمة مرور",
 	"urlshortener-failed-try-again": "فشل، حاول ثانية؟",
-	"urlshortener-disabled": "إحداث روابط قصيرة جديدة معطل مؤقتا",
-	"apihelp-shortenurl-description": "اختصر مسارا طويلا إلى واحد قصير.",
-	"apihelp-shortenurl-summary": "اختصر مسارا طويلا إلى واحد قصير.",
-	"apihelp-shortenurl-param-url": "مسار لتقصيره.",
-	"apihelp-shortenurl-example-1": "احصل على المسار المختصر لـ<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "لا يجوز إنشاء مسارات قصيرة جديدة"
+	"urlshortener-disabled": "إحداث روابط قصيرة جديدة معطل مؤقتا"
 }

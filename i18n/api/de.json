@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"apihelp-shortenurl-description": "Kürzt eine lange URL auf eine kürzere.",
+	"apihelp-shortenurl-summary": "Kürzt eine lange URL auf eine kürzere.",
+	"apihelp-shortenurl-param-url": "Zu kürzende URL.",
+	"apihelp-shortenurl-example-1": "Ruft die Kurz-URL für <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> ab.",
+	"apierror-urlshortener-disabled": "Es können keine neuen Kurz-URLs erstellt werden"
+}

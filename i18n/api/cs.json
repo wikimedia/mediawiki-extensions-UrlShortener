@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kvetoslav47",
+			"Martin Urbanec",
+			"Mormegil"
+		]
+	},
+	"apihelp-shortenurl-description": "Zkrácení dlouhé URL na kratší.",
+	"apihelp-shortenurl-summary": "Zkrátit dlouhé URL na kratší.",
+	"apihelp-shortenurl-param-url": "URL ke zkrácení.",
+	"apihelp-shortenurl-example-1": "Získejte krátkou URL pro <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Žádné další zkrácené URL nemohou být vytvořeny"
+}

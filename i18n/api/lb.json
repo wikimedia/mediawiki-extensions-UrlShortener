@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"apihelp-shortenurl-param-url": "URL fir ze kierzen",
+	"apierror-urlshortener-disabled": "Et kënne keng nei kuerz URLen ugeluecht ginn"
+}
