@@ -3,10 +3,10 @@
 		"authors": [
 			"Yuvi Panda"
 		]
-    },
+	},
 	"apihelp-shortenurl-description": "Shorten a long URL into a shorter one.",
 	"apihelp-shortenurl-summary": "Shorten a long URL into a shorter one.",
 	"apihelp-shortenurl-param-url": "URL to be shortened.",
 	"apihelp-shortenurl-example-1": "Get the short URL for <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-    "apierror-urlshortener-disabled": "No new short urls may be created"
+	"apierror-urlshortener-disabled": "No new short urls may be created"
 }
