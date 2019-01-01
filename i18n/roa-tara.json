@@ -5,7 +5,10 @@
 		]
 	},
 	"urlshortener": "Accorce l'URL",
+	"urlshortener-desc": "Accorciatore URL pe le URL arbitrarie",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Accorce",
+	"urlshortener-url-input-submitting": "Stoche accorce...",
+	"urlshortener-not-found-title": "URL corte none acchiate",
 	"urlshortener-failed-try-again": "Fallite. Pruève arrete?"
 }

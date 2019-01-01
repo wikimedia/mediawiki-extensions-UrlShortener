@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"apihelp-shortenurl-description": "Accorce 'n'URL luènghe jndr'à une cchiù curte.",
+	"apihelp-shortenurl-summary": "Accorce 'n'URL luènghe jndr'à une cchiù curte.",
+	"apihelp-shortenurl-param-url": "URL da accorcià.",
+	"apihelp-shortenurl-example-1": "Pigghie l'URL curte pe <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Nisciune url curte ha state ccrejate"
+}
