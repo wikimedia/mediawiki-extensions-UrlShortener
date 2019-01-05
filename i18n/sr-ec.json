@@ -6,9 +6,9 @@
 			"BadDog"
 		]
 	},
-	"urlshortener": "URL скраћивач",
-	"urlshortener-desc": "URL скраћивач за произвољне URL адресе.",
-	"urlshortener-url-input-label": "URL адреса",
+	"urlshortener": "Скраћивач URL-а",
+	"urlshortener-desc": "Скраћивач произвољних URL адреса",
+	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Скрати",
 	"urlshortener-url-input-submitting": "Скраћујем…",
 	"urlshortener-not-found-title": "Није пронађена кратка URL адреса",
