@@ -10,5 +10,9 @@
 	"urlshortener-url-input-submit": "Accorce",
 	"urlshortener-url-input-submitting": "Stoche accorce...",
 	"urlshortener-not-found-title": "URL corte none acchiate",
+	"urlshortener-not-found-message": "Ne despiace, l'URL ca ste cirche non g'ha state acchiate.",
+	"urlshortener-form-header": "'Ngolle l'URL luènghe aqquà",
+	"urlshortener-error-malformed-url": "Non g'è 'na URL valide",
+	"urlshortener-shortened-url-label": "URL corte",
 	"urlshortener-failed-try-again": "Fallite. Pruève arrete?"
 }
