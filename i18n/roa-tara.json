@@ -14,5 +14,12 @@
 	"urlshortener-form-header": "'Ngolle l'URL luènghe aqquà",
 	"urlshortener-error-malformed-url": "Non g'è 'na URL valide",
 	"urlshortener-shortened-url-label": "URL corte",
-	"urlshortener-failed-try-again": "Fallite. Pruève arrete?"
+	"urlshortener-error-disallowed-url": "Le URL pu dominie $1 non ge ponne essere tagghiate",
+	"urlshortener-approved-domains": "Le collegaminde {{PLURAL:$1|a stu dominie pò|a ste dominie ponne}} essere tagghiate: $2.",
+	"urlshortener-ratelimit": "Pe piacere aspitte 'nu picche apprime de tagghià otre URL.",
+	"urlshortener-toolbox": "Pigghie l'URL curte",
+	"urlshortener-error-badports": "Le URL ca tènene porte non ge ponne essere tagghiate",
+	"urlshortener-error-nouserpass": "Le URL ca tènene 'nu nome utende o passuord non ge ponne essere tagghiate",
+	"urlshortener-failed-try-again": "Fallite. Pruève arrete?",
+	"urlshortener-disabled": "?a ccrejazione de URL nuève curte jè pe mò disabbilitate."
 }
