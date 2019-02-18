@@ -1,22 +1,23 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Kghbln"
 		]
 	},
-	"urlshortener": "URL-Kürzung",
-	"urlshortener-desc": "URL-Kürzungswerkzeug für beliebige URLs",
+	"urlshortener": "URLs kürzen",
+	"urlshortener-desc": "Stellt ein Kurz-URL-Werkzeug für beliebige URLs bereit",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Kürzen",
 	"urlshortener-url-input-submitting": "Kürze …",
-	"urlshortener-not-found-title": "Kurz-URL nicht gefunden",
-	"urlshortener-not-found-message": "Die gesuchte URL konnte leider nicht gefunden werden.",
-	"urlshortener-form-header": "Hier deine lange URL einfügen",
-	"urlshortener-error-malformed-url": "Keine gültige URL",
-	"urlshortener-shortened-url-label": "Gekürzte URL",
-	"urlshortener-error-disallowed-url": "URLs zur Domain $1 dürfen nicht gekürzt werden",
+	"urlshortener-not-found-title": "Die Kurz-URL wurde nicht gefunden",
+	"urlshortener-not-found-message": "Die gesuchte Kurz-URL wurde leider nicht gefunden.",
+	"urlshortener-form-header": "Hier die lange URL einfügen:",
+	"urlshortener-error-malformed-url": "Dies ist keine gültige URL.",
+	"urlshortener-shortened-url-label": "Gekürzte URL:",
+	"urlshortener-error-disallowed-url": "URLs der Domain $1 dürfen nicht gekürzt werden.",
 	"urlshortener-approved-domains": "Links {{PLURAL:$1|zur folgenden Domain|zu den folgenden Domains}} können gekürzt werden: $2.",
-	"urlshortener-ratelimit": "Bitte warte einige Zeit vor dem Kürzen weiterer URLs.",
+	"urlshortener-ratelimit": "Bitte warte etwas, bevor du weitere URLs kürzt.",
 	"urlshortener-toolbox": "Gekürzte URL abrufen",
 	"urlshortener-error-badports": "URLs, die Ports enthalten, dürfen nicht gekürzt werden.",
 	"urlshortener-error-nouserpass": "URLs, die einen Benutzernamen oder ein Passwort enthalten, dürfen nicht gekürzt werden.",
