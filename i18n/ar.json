@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ayatun",
-			"ديفيد"
+			"ديفيد",
+			"Meno25"
 		]
 	},
 	"urlshortener": "مقصر المسار",
@@ -22,5 +23,5 @@
 	"urlshortener-error-badports": "لا يُسمَح بتقصير المسارات التي تحتوي على منافذ",
 	"urlshortener-error-nouserpass": "لا يُسمَح بتقصير المسارات التي تحتوي على اسم مستخدم أو كلمة مرور",
 	"urlshortener-failed-try-again": "فشل، حاول ثانية؟",
-	"urlshortener-disabled": "إحداث روابط قصيرة جديدة معطل مؤقتا"
+	"urlshortener-disabled": "إحداث وصلات قصيرة جديدة معطل مؤقتا."
 }
