@@ -57,5 +57,5 @@ class DumpURLs extends Maintenance {
 
 }
 
-$maintClass = "DumpURLs";
+$maintClass = DumpURLs::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
