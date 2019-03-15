@@ -5,6 +5,11 @@
  */
 class UrlShortenerUtilsTest extends MediaWikiTestCase {
 
+	protected function setUp() {
+		parent::setUp();
+		$this->tablesUsed[] = 'urlshortcodes';
+	}
+
 	/**
 	 * @dataProvider provideConvertToProtocol
 	 * @covers UrlShortenerUtils::convertToProtocol
@@ -172,10 +177,38 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 		$this->assertTrue( $status->isGood() );
 		$id = $status->getValue();
 		$storedUrl = UrlShortenerUtils::getURL( $id, PROTO_HTTP );
+
 		$this->assertEquals( $url, $storedUrl );
-		// Delete the URL
+	}
+
+	/**
+	 * @covers UrlShortenerUtils::deleteURL
+	 * @covers UrlShortenerUtils::isURLDeleted
+	 */
+	public function testDeleteURL() {
+		$url = 'http://example.org/1';
+		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
+		$id = $status->getValue();
+
 		UrlShortenerUtils::deleteURL( $id );
+
 		$this->assertFalse( UrlShortenerUtils::getURL( $id, PROTO_HTTP ) );
+		$this->assertTrue( UrlShortenerUtils::isURLDeleted( $id ) );
+	}
+
+	/**
+	 * @covers UrlShortenerUtils::restoreURL
+	 */
+	public function testRestoreURL() {
+		$url = 'http://example.org/1';
+		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
+		$id = $status->getValue();
+		UrlShortenerUtils::deleteURL( $id );
+
+		UrlShortenerUtils::restoreURL( $id );
+
+		$storedUrl = UrlShortenerUtils::getURL( $id, PROTO_HTTP );
+		$this->assertEquals( $url, $storedUrl );
 	}
 
 	/**

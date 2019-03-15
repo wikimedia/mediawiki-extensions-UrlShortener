@@ -22,6 +22,7 @@
 		"UrlShortenerHooks": "includes/UrlShortenerHooks.php",
 		"SpecialUrlShortener": "includes/SpecialUrlShortener.php",
 		"SpecialUrlRedirector": "includes/SpecialUrlRedirector.php",
+		"SpecialManageShortUrls": "includes/SpecialManageShortUrls.php",
 		"ApiShortenUrl": "includes/ApiShortenUrl.php"
 	},
 	"ExtensionMessagesFiles": {
@@ -99,7 +100,19 @@
 	},
 	"SpecialPages": {
 		"UrlShortener": "SpecialUrlShortener",
-		"UrlRedirector": "SpecialUrlRedirector"
+		"UrlRedirector": "SpecialUrlRedirector",
+		"ManageShortUrls": "SpecialManageShortUrls"
+	},
+	"AvailableRights": [
+		"urlshortener-manage-url"
+	],
+	"GroupPermissions": {
+		"*": {
+			"urlshortener-manage-url": false
+		},
+		"sysop": {
+			"urlshortener-manage-url": true
+		}
 	},
 	"config": {
 		"UrlShortenerApprovedDomains": false,

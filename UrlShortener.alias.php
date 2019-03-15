@@ -11,6 +11,7 @@ $specialPageAliases = [];
 /** English (English) */
 $specialPageAliases['en'] = [
 	'UrlShortener' => [ 'UrlShortener' ],
+	'ManageShortUrls' => [ 'ManageShortUrls' ],
 ];
 
 /** Arabic (العربية) */

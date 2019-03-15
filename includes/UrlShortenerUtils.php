@@ -176,6 +176,33 @@ class UrlShortenerUtils {
 	}
 
 	/**
+	 * Whether a URL is deleted or not
+	 *
+	 * @param string $shortCode
+	 * @return String
+	 */
+	public static function isURLDeleted( $shortCode ) {
+		$id = self::decodeId( $shortCode );
+		if ( $id === false ) {
+			return false;
+		}
+
+		$dbr = self::getDB( DB_REPLICA );
+		$url = $dbr->selectField(
+			'urlshortcodes',
+			'usc_url',
+			[ 'usc_id' => $id, 'usc_deleted' => 1 ],
+			__METHOD__
+		);
+
+		if ( $url === false ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
 	 * Mark a URL as deleted
 	 *
 	 * @param string $shortcode
@@ -194,6 +221,37 @@ class UrlShortenerUtils {
 		$dbw->update(
 			'urlshortcodes',
 			[ 'usc_deleted' => 1 ],
+			[ 'usc_id' => $id ],
+			__METHOD__
+		);
+
+		if ( $wgUseSquid ) {
+			$update = new CdnCacheUpdate( [ self::makeUrl( $shortcode ) ] );
+			DeferredUpdates::addUpdate( $update, DeferredUpdates::PRESEND );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Mark a URL as undeleted
+	 *
+	 * @param string $shortcode
+	 *
+	 * @return bool False if the $shortCode was invalid
+	 */
+	public static function restoreURL( $shortcode ) {
+		global $wgUseSquid;
+
+		$id = self::decodeId( $shortcode );
+		if ( $id === false ) {
+			return false;
+		}
+
+		$dbw = self::getDB( DB_MASTER );
+		$dbw->update(
+			'urlshortcodes',
+			[ 'usc_deleted' => 0 ],
 			[ 'usc_id' => $id ],
 			__METHOD__
 		);

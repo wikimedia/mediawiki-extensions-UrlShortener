@@ -23,5 +23,16 @@
 	"urlshortener-error-nouserpass": "URLs that contain a username or password are not allowed to be shortened",
 	"urlshortener-failed-try-again": "Failed. Try again?",
 	"urlshortener-disabled": "Creating new short URLs is temporarily disabled.",
-	"urlshortener-deleted": "This short URL has been deleted."
+	"urlshortener-deleted": "This short URL has been deleted.",
+	"action-urlshortener-mange-url": "Manage short URLs",
+	"manageshorturls": "Manage short URLs",
+	"right-urlshortener-manage-url": "Manage short URLs",
+	"urlshortener-action-done": "URLs have been deleted and/or restored",
+	"urlshortener-enter-short-code-delete": "URL short code to delete",
+	"urlshortener-enter-short-code-restore": "URL short code to restore",
+	"urlshortener-short-code-not-found": "URL short code is not found or deleted",
+	"urlshortener-short-code-is-not-deleted": "URL short code is not deleted",
+	"urlshortener-manage-delete-failed": "Deleting URL failed",
+	"urlshortener-manage-restore-failed": "Restoring URL failed",
+	"urlshortener-manage-not-enough-data": "You need to determine one URL short code to delete or restore"
 }
