@@ -24,5 +24,10 @@
 	"urlshortener-error-badports": "URL obsahující port není dovoleno zkracovat",
 	"urlshortener-error-nouserpass": "URL obsahující uživatelské jméno nebo heslo není dovoleno zkracovat",
 	"urlshortener-failed-try-again": "Došlo k chybě. Zkusit znovu?",
-	"urlshortener-disabled": "Vytváření nových krátkých URL je dočasně zakázáno."
+	"urlshortener-disabled": "Vytváření nových krátkých URL je dočasně zakázáno.",
+	"apihelp-shortenurl-description": "Zkrácení dlouhé URL na kratší.",
+	"apihelp-shortenurl-summary": "Zkrátit dlouhé URL na kratší.",
+	"apihelp-shortenurl-param-url": "URL ke zkrácení.",
+	"apihelp-shortenurl-example-1": "Získejte krátkou URL pro <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Žádné další zkrácené URL nemohou být vytvořeny"
 }

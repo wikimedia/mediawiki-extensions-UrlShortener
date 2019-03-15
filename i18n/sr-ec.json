@@ -23,5 +23,10 @@
 	"urlshortener-error-badports": "Скраћивање URL адреса које садрже портове није дозвољено",
 	"urlshortener-error-nouserpass": "Скраћивање URL адреса које садрже корисничко име или лозинку није дозвољено",
 	"urlshortener-failed-try-again": "Није успело. Покушати поново?",
-	"urlshortener-disabled": "Прављење нових кратких URL адреса је тренутно онемогућено."
+	"urlshortener-disabled": "Прављење нових кратких URL адреса је тренутно онемогућено.",
+	"apihelp-shortenurl-description": "Скраћивање дугачке URL адресе на краћу.",
+	"apihelp-shortenurl-summary": "Скраћивање дугачке URL адресе на краћу.",
+	"apihelp-shortenurl-param-url": "URL адреса за скраћивање.",
+	"apihelp-shortenurl-example-1": "Набављање кратке URL адресе за <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Не могу се направити нове кратке URL адресе"
 }

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Eduardo Addad de Oliveira"
 		]
 	},
 	"urlshortener": "Encurtador de URL",
@@ -21,5 +22,11 @@
 	"urlshortener-error-badports": "Os URLs que contêm portas não podem ser encurtados",
 	"urlshortener-error-nouserpass": "Os URLs que contêm um nome de usuário ou senha não podem ser encurtados",
 	"urlshortener-failed-try-again": "Falhou. Tente novamente?",
-	"urlshortener-disabled": "A criação de novos URLs curtos está temporariamente desabilitada."
+	"urlshortener-disabled": "A criação de novos URLs curtos está temporariamente desabilitada.",
+	"urlshortener-deleted": "Este URL curto foi excluído.",
+	"apihelp-shortenurl-description": "Reduzir um URL longo em um curto.",
+	"apihelp-shortenurl-summary": "Reduzir um URL longo em um curto.",
+	"apihelp-shortenurl-param-url": "URL a ser encurtado.",
+	"apihelp-shortenurl-example-1": "Obtenha o URL curto para <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Não podem ser criadas novas URLs curtas"
 }

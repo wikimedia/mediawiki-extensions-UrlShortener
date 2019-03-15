@@ -21,5 +21,10 @@
 	"urlshortener-error-badports": "Nun se permite encurtiar URLs que contengan puertos",
 	"urlshortener-error-nouserpass": "Nun se permite encurtiar URL que contengan un nome d'usuariu o una contraseña",
 	"urlshortener-failed-try-again": "Falló. ¿Volver a intentalo?",
-	"urlshortener-disabled": "La creación de nueves URLs curties ta desactivada temporalmente."
+	"urlshortener-disabled": "La creación de nueves URLs curties ta desactivada temporalmente.",
+	"apihelp-shortenurl-description": "Acurtiar una URL llarga a una más curtia.",
+	"apihelp-shortenurl-summary": "Acurtiar una URL llarga a una más curtia.",
+	"apihelp-shortenurl-param-url": "URL a acurtiar.",
+	"apihelp-shortenurl-example-1": "Algamar la URL curtia pa <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Nun pueden crease URL curties nueves"
 }

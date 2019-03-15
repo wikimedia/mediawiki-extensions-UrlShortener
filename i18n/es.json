@@ -3,7 +3,8 @@
 		"authors": [
 			"Fitoschido",
 			"Macofe",
-			"Kroji"
+			"Kroji",
+			"MarcoAurelio"
 		]
 	},
 	"urlshortener": "Acortador de URL",
@@ -23,5 +24,11 @@
 	"urlshortener-error-badports": "No se permite acortar URL que contengan puertos",
 	"urlshortener-error-nouserpass": "No se permiten acortar URL que contengan un nombre de usuario o una contraseña",
 	"urlshortener-failed-try-again": "Falló. Inténtalo de nuevo.",
-	"urlshortener-disabled": "Se desactivó temporalmente la creación de URL cortos."
+	"urlshortener-disabled": "Se desactivó temporalmente la creación de URL cortos.",
+	"urlshortener-deleted": "Esta URL corta ha sido borrada.",
+	"apihelp-shortenurl-description": "Reducir un dirección URL larga a una más corta.",
+	"apihelp-shortenurl-summary": "Acortar un URL largo.",
+	"apihelp-shortenurl-param-url": "URL que se acortará.",
+	"apihelp-shortenurl-example-1": "Obtener el URL corto para <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "No se pueden crear URL cortas nuevas"
 }

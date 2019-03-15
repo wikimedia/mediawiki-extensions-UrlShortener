@@ -23,5 +23,9 @@
 	"urlshortener-error-badports": "Adresy URL, które zawierają numery portów nie mogą być skracane",
 	"urlshortener-error-nouserpass": "Adresy URL zawierające nazwę użytkownika lub hasło nie mogą być skracane",
 	"urlshortener-failed-try-again": "Nie udało się. Spróbujesz ponownie?",
-	"urlshortener-disabled": "Tworzenie nowych skróconych adresów URL jest czasowo wyłączone."
+	"urlshortener-disabled": "Tworzenie nowych skróconych adresów URL jest czasowo wyłączone.",
+	"apihelp-shortenurl-description": "Skróć długi adres URL do krótszej postaci.",
+	"apihelp-shortenurl-summary": "Skróć długi adres URL do krótszej postaci.",
+	"apihelp-shortenurl-param-url": "Adres URL do skrócenia.",
+	"apihelp-shortenurl-example-1": "Otrzymaj skrócony adres URL dla <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>."
 }

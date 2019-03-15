@@ -24,5 +24,10 @@
 	"urlshortener-error-badports": "URL-адреси, які містять порти, не можуть бути вкорочені",
 	"urlshortener-error-nouserpass": "Веб-адреси, які містять ім'я користувача або пароль, не можуть бути вкорочені",
 	"urlshortener-failed-try-again": "Не вдалося. Спробувати ще раз?",
-	"urlshortener-disabled": "Створення нових коротких URL-адрес тимчасово вимкнене."
+	"urlshortener-disabled": "Створення нових коротких URL-адрес тимчасово вимкнене.",
+	"apihelp-shortenurl-description": "Скоротити довгу URL-адресу, створивши коротку.",
+	"apihelp-shortenurl-summary": "Перетворити довгу URL-адресу в коротку",
+	"apihelp-shortenurl-param-url": "URL-адреса, яку треба скоротити.",
+	"apihelp-shortenurl-example-1": "Отримати коротку URL-адресу для <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Не можна створювати нових коротких URL-адрес"
 }

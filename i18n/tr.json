@@ -5,5 +5,8 @@
 			"JackUKElliott"
 		]
 	},
-	"urlshortener-failed-try-again": "Başarısız oldu. Tekrar denensin mi?"
+	"urlshortener-failed-try-again": "Başarısız oldu. Tekrar denensin mi?",
+	"apihelp-shortenurl-description": "Uzun bir web adresini (URL) kısaltın.",
+	"apihelp-shortenurl-param-url": "Kısaltılacak web adresi (URL).",
+	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> için kısaltılmış web adresini (URL) alın."
 }
