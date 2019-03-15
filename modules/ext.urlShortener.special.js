@@ -30,6 +30,8 @@
 		 */
 		submit: null,
 
+		errors: {},
+
 		/**
 		 * Validate the input URL clientside. Note that this is not the
 		 * only check - they are checked serverside too.
@@ -41,10 +43,22 @@
 		 *                         returned by the API in case of error.
 		 */
 		validateInput: function ( input ) {
-			var parsed,
+			var parsed, errorKey,
 				self = mw.urlshortener,
 				showError = function ( error ) {
-					self.input.setLabel( error );
+					var $errorObject;
+
+					if ( !( error in self.errors ) ) {
+						$errorObject = new OO.ui.FieldLayout(
+							new OO.ui.LabelWidget(), { errors: [ error ] } ).$element;
+						for ( errorKey in self.errors ) {
+							self.errors[ errorKey ].remove();
+						}
+
+						self.input.$element.after( $errorObject );
+						self.errors = { error: $errorObject };
+					}
+
 					return false;
 				};
 			try {
@@ -66,7 +80,12 @@
 				return showError( mw.msg( 'urlshortener-error-nouserpass' ) );
 			}
 
-			self.input.setLabel( null );
+			for ( errorKey in self.errors ) {
+				self.errors[ errorKey ].remove();
+			}
+
+			self.errors = {};
+
 			return true;
 		},
 
