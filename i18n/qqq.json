@@ -18,6 +18,7 @@
 	"urlshortener-error-disallowed-url": "Message shown to user when they try to shorten URLs to a domain that isn't whitelisted. $1 refers to the domain of the URL that the user tried to shorten",
 	"urlshortener-approved-domains": "Help message displayed on Special:UrlShortener showing which domains can be shortened. $1 is the number of domains, $2 is a comma separated list of domains.",
 	"urlshortener-ratelimit": "Error message shown when a user shortens too many urls in a short period of time",
+	"urlshortener-blocked": "Error message shown when the user is blocked",
 	"urlshortener-toolbox": "Text of link in toolbox to get shortened URL",
 	"urlshortener-error-badports": "Error message shown when the URL cannot be shortened because it contains a port (e.g. http://example.org:90/path)",
 	"urlshortener-error-nouserpass": "Error message shown when the URL cannot be shortened because it contains a username or password (e.g. http://user:password@example.org/)",

@@ -177,4 +177,25 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 		UrlShortenerUtils::deleteURL( $id );
 		$this->assertFalse( UrlShortenerUtils::getURL( $id, PROTO_HTTP ) );
 	}
+
+	/**
+	 * @covers UrlShortenerUtils::maybeCreateShortCode
+	 */
+	public function testGetURLBlocked() {
+		$url = 'http://example.org/75';
+		$user = $this->getMockBuilder( User::class )
+			->disableOriginalConstructor()
+			->getMock();
+
+		$user->expects( $this->atLeastOnce() )
+			->method( 'isBlocked' )
+			->willReturn( true );
+
+		$status = UrlShortenerUtils::maybeCreateShortCode( $url, $user );
+
+		$this->assertFalse( $status->isGood() );
+		$this->assertEquals( 'urlshortener-blocked', $status->getErrors()[0]['message'] );
+		$this->assertEquals( 'error', $status->getErrors()[0]['type'] );
+	}
+
 }
