@@ -26,6 +26,7 @@
 	"urlshortener-error-nouserpass": "לא ניתן לקצר כתובות שמכילות שם משתמש או ססמה",
 	"urlshortener-failed-try-again": "זה לא עבד. לנסות שוב?",
 	"urlshortener-disabled": "יצירת כתובות מקוצרות מוגבלת באופן זמני.",
+	"urlshortener-deleted": "הכתובת הקצרה הזאת נמחקה.",
 	"apihelp-shortenurl-description": "קיצור URL ארוך",
 	"apihelp-shortenurl-summary": "קיצור כתובת URL ארוכה.",
 	"apihelp-shortenurl-param-url": "איזה URL לקצר.",

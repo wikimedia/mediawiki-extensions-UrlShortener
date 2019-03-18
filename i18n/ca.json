@@ -4,5 +4,6 @@
 			"Fitoschido"
 		]
 	},
-	"urlshortener-url-input-label": "URL"
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-deleted": "S’ha suprimit aquest URL curt."
 }
