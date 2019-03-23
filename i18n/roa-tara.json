@@ -22,6 +22,7 @@
 	"urlshortener-error-nouserpass": "Le URL ca tènene 'nu nome utende o passuord non ge ponne essere tagghiate",
 	"urlshortener-failed-try-again": "Fallite. Pruève arrete?",
 	"urlshortener-disabled": "?a ccrejazione de URL nuève curte jè pe mò disabbilitate.",
+	"urlshortener-deleted": "Sta URL corte ha state scangellate.",
 	"apihelp-shortenurl-description": "Accorce 'n'URL luènghe jndr'à une cchiù curte.",
 	"apihelp-shortenurl-summary": "Accorce 'n'URL luènghe jndr'à une cchiù curte.",
 	"apihelp-shortenurl-param-url": "URL da accorcià.",
