@@ -57,6 +57,11 @@ class UrlShortenerUtils {
 		}
 
 		// Didn't exist, we need to insert it
+
+		if ( $user->isBlocked() || $user->isBlockedGlobally() ) {
+			return Status::newFatal( 'urlshortener-blocked' );
+		}
+
 		if ( $user->pingLimiter( 'urlshortcode' ) ) {
 			return Status::newFatal( 'urlshortener-ratelimit' );
 		}

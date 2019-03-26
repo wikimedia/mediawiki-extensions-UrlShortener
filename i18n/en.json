@@ -17,6 +17,7 @@
 	"urlshortener-error-disallowed-url": "URLs to domain $1 are not allowed to be shortened",
 	"urlshortener-approved-domains": "Links to the following {{PLURAL:$1|domain|domains}} may be shortened: $2.",
 	"urlshortener-ratelimit": "Please wait some time before shortening more URLs.",
+	"urlshortener-blocked": "Blocked users can't make short URLs.",
 	"urlshortener-toolbox": "Get shortened URL",
 	"urlshortener-error-badports": "URLs that contain ports are not allowed to be shortened",
 	"urlshortener-error-nouserpass": "URLs that contain a username or password are not allowed to be shortened",
