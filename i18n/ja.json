@@ -23,7 +23,5 @@
 	"urlshortener-error-badports": "ポートを含むURLは短縮できません",
 	"urlshortener-error-nouserpass": "ユーザー名またはパスワードを含むURLは短縮できません",
 	"urlshortener-failed-try-again": "失敗しました。もう一度、試しますか？",
-	"urlshortener-disabled": "新しい短縮URLの作成は一時的に無効になっています。",
-	"apihelp-shortenurl-description": "長いURLを短いURLに短縮します。",
-	"apihelp-shortenurl-summary": "長いURLを短いURLに短縮します。"
+	"urlshortener-disabled": "新しい短縮URLの作成は一時的に無効になっています。"
 }

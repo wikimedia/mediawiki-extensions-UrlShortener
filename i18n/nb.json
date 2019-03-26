@@ -21,10 +21,5 @@
 	"urlshortener-error-badports": "URL-er som inneholder porter kan ikke forkortes",
 	"urlshortener-error-nouserpass": "URL-er som inneholder brukernavn eller passord kan ikke forkortes",
 	"urlshortener-failed-try-again": "Mislyktes. Prøve igjen?",
-	"urlshortener-disabled": "Oppretting av nye korte URL-er er midlertidig slått av.",
-	"apihelp-shortenurl-description": "Forkort en lang URL.",
-	"apihelp-shortenurl-summary": "Gjør en lang URL kort.",
-	"apihelp-shortenurl-param-url": "URL som skal forkortes.",
-	"apihelp-shortenurl-example-1": "Hent kort URL for <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "Ingen nye korte URL-er kan opprettes"
+	"urlshortener-disabled": "Oppretting av nye korte URL-er er midlertidig slått av."
 }

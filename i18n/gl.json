@@ -23,10 +23,5 @@
 	"urlshortener-error-badports": "As URLs que conteñen portos non poden acurtarse",
 	"urlshortener-error-nouserpass": "As URLs que conteñen un nome de usuario ou contrasinal non poden acurtarse",
 	"urlshortener-failed-try-again": "Fallou. Intentalo de novo?",
-	"urlshortener-disabled": "A creación de novos URLs curtos está temporalmente desactivada.",
-	"apihelp-shortenurl-description": "Acurtar unha URL longa nunha máis curta.",
-	"apihelp-shortenurl-summary": "Acurtar unha URL longa nunha máis curta.",
-	"apihelp-shortenurl-param-url": "URL a acurtar.",
-	"apihelp-shortenurl-example-1": "Obter o URL corto para <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "Non poden crearse novos enderezos url curtos"
+	"urlshortener-disabled": "A creación de novos URLs curtos está temporalmente desactivada."
 }

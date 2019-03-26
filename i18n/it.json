@@ -24,9 +24,5 @@
 	"urlshortener-error-nouserpass": "URL contenenti un nome utente o una password che non è consentito abbreviare",
 	"urlshortener-failed-try-again": "Non riuscito. Riprovare?",
 	"urlshortener-disabled": "La creazione di nuovi URL brevi è temporaneamente disabilitata.",
-	"urlshortener-deleted": "Questo URL breve è stato cancellato",
-	"apihelp-shortenurl-description": "Abbrevia un URL lungo in uno più corto.",
-	"apihelp-shortenurl-summary": "Abbrevia un URL lungo in uno più corto.",
-	"apihelp-shortenurl-param-url": "URL da abbreviare.",
-	"apihelp-shortenurl-example-1": "Ottieni l'URL breve per <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>."
+	"urlshortener-deleted": "Questo URL breve è stato cancellato"
 }

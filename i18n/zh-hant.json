@@ -25,10 +25,5 @@
 	"urlshortener-error-nouserpass": "包含使用者名稱或密碼的 URL 不允許縮短",
 	"urlshortener-failed-try-again": "失敗了，是否重試？",
 	"urlshortener-disabled": "建立新的簡短 URL 被暫時停用。",
-	"urlshortener-deleted": "此 URL 縮址已被刪除。",
-	"apihelp-shortenurl-description": "將長的 URL 給縮短。",
-	"apihelp-shortenurl-summary": "將長的 URL 給縮短。",
-	"apihelp-shortenurl-param-url": "要縮短的 URL。",
-	"apihelp-shortenurl-example-1": "取得 <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> 的縮短 URL。",
-	"apierror-urlshortener-disabled": "無法創建出新的短 Url"
+	"urlshortener-deleted": "此 URL 縮址已被刪除。"
 }
