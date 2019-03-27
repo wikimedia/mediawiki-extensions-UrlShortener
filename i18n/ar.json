@@ -19,6 +19,7 @@
 	"urlshortener-error-disallowed-url": "لا يُسمَح باختزال المسارات إلى النطاق $1",
 	"urlshortener-approved-domains": "قد يتم اختصار الروابط إلى {{PLURAL:$1|النطاق التالي|النطاقات التالية}}: $2.",
 	"urlshortener-ratelimit": "الرجاء الانتظار بعض الوقت قبل تقصير المزيد من المسارات.",
+	"urlshortener-blocked": "لا يمكن للمستخدمين الممنوعين إنشاء مسارات قصيرة.",
 	"urlshortener-toolbox": "احصل على مسار مختصر",
 	"urlshortener-error-badports": "لا يُسمَح بتقصير المسارات التي تحتوي على منافذ",
 	"urlshortener-error-nouserpass": "لا يُسمَح بتقصير المسارات التي تحتوي على اسم مستخدم أو كلمة مرور",

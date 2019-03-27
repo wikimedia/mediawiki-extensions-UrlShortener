@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tlustulimu"
+			"Tlustulimu",
+			"Luis Miguel Obando"
 		]
 	},
 	"urlshortener": "URL-mallongigo",
@@ -9,5 +10,6 @@
 	"urlshortener-url-input-submit": "Mallongigi",
 	"urlshortener-not-found-title": "Mallonga URL ne trovita",
 	"urlshortener-shortened-url-label": "Mallongigita URL",
-	"urlshortener-error-disallowed-url": "URLoj al la domajno $1 ne rajtas esti mallongigataj"
+	"urlshortener-error-disallowed-url": "URLoj al la domajno $1 ne rajtas esti mallongigataj",
+	"urlshortener-blocked": "Blokitaj uzantoj ne povas fari mallongan URLs."
 }

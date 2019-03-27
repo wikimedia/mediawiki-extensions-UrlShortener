@@ -18,6 +18,7 @@
 	"urlshortener-error-disallowed-url": "URLs der Domain $1 dürfen nicht gekürzt werden.",
 	"urlshortener-approved-domains": "Links {{PLURAL:$1|zur folgenden Domain|zu den folgenden Domains}} können gekürzt werden: $2.",
 	"urlshortener-ratelimit": "Bitte warte etwas, bevor du weitere URLs kürzt.",
+	"urlshortener-blocked": "Gesperrte Benutzer können keine Kurz-URLs erstellen.",
 	"urlshortener-toolbox": "Gekürzte URL abrufen",
 	"urlshortener-error-badports": "URLs, die Ports enthalten, dürfen nicht gekürzt werden.",
 	"urlshortener-error-nouserpass": "URLs, die einen Benutzernamen oder ein Passwort enthalten, dürfen nicht gekürzt werden.",

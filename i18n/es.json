@@ -20,10 +20,11 @@
 	"urlshortener-error-disallowed-url": "No se permite acortar URL hacia el dominio $1",
 	"urlshortener-approved-domains": "Los enlaces {{PLURAL:$1|al siguiente dominio|a los siguientes dominios}} pueden acortarse: $2.",
 	"urlshortener-ratelimit": "Espera un poco antes de acortar más URL.",
+	"urlshortener-blocked": "Los usuarios bloqueados no pueden crear URL cortos.",
 	"urlshortener-toolbox": "Obtener URL acortado",
 	"urlshortener-error-badports": "No se permite acortar URL que contengan puertos",
 	"urlshortener-error-nouserpass": "No se permiten acortar URL que contengan un nombre de usuario o una contraseña",
 	"urlshortener-failed-try-again": "Falló. Inténtalo de nuevo.",
 	"urlshortener-disabled": "Se desactivó temporalmente la creación de URL cortos.",
-	"urlshortener-deleted": "Esta URL corta ha sido borrada."
+	"urlshortener-deleted": "Se ha borrado este URL corto."
 }

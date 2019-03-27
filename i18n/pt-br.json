@@ -18,6 +18,7 @@
 	"urlshortener-error-disallowed-url": "Os URLs para o domínio $1 não podem ser encurtados",
 	"urlshortener-approved-domains": "Os links para {{PLURAL:$1|o seguinte domínio|os seguintes domínios}} podem ser encurtados: $2.",
 	"urlshortener-ratelimit": "Por favor, aguarde algum tempo antes de encurtar mais URLs.",
+	"urlshortener-blocked": "Os usuários bloqueados não podem criar URLs curtos.",
 	"urlshortener-toolbox": "Obter URL encurtado",
 	"urlshortener-error-badports": "Os URLs que contêm portas não podem ser encurtados",
 	"urlshortener-error-nouserpass": "Os URLs que contêm um nome de usuário ou senha não podem ser encurtados",
