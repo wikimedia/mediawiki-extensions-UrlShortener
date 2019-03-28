@@ -24,5 +24,16 @@
 	"urlshortener-error-nouserpass": "Error message shown when the URL cannot be shortened because it contains a username or password (e.g. http://user:password@example.org/)",
 	"urlshortener-failed-try-again": "Generic failure message with option to try again",
 	"urlshortener-disabled": "Error message shown when the extension is configured in read-only mode.",
-	"urlshortener-deleted": "Error message shown if the shortened URL is deleted."
+	"urlshortener-deleted": "Error message shown if the shortened URL is deleted.",
+	"action-urlshortener-mange-url": "Name of the right for managing short URLs",
+	"right-urlshortener-manage-url": "Description of the right",
+	"manageshorturls": "Title of the special page",
+	"urlshortener-action-done": "Message when the action is done",
+	"urlshortener-enter-short-code-delete": "Label for input for URL short code to delete",
+	"urlshortener-enter-short-code-restore": "Label for input for URL short code to restore",
+	"urlshortener-short-code-not-found": "Error when short URL is not found or already deleted",
+	"urlshortener-short-code-is-not-deleted": "Error when the URL is not deleted (so it can't be restored)",
+	"urlshortener-manage-delete-failed": "Error message when deleting fails",
+	"urlshortener-manage-restore-failed": "Error message when restoring fails",
+	"urlshortener-manage-not-enough-data": "Error message when not enough provided to do any action"
 }
