@@ -110,7 +110,8 @@
 		"UrlShortenerServer": false,
 		"UrlShortenerTemplate": false,
 		"UrlShortenerAllowArbitraryPorts": false,
-		"UrlShortenerReadOnly": false
+		"UrlShortenerReadOnly": false,
+		"UrlShortenerEnableSidebar": true
 	},
 	"manifest_version": 1
 }
