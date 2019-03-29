@@ -42,9 +42,9 @@ class UrlShortenerHooks {
 	 * @param array &$toolbox
 	 */
 	public static function onBaseTemplateToolbox( BaseTemplate $template, array &$toolbox ) {
-		global $wgUrlShortenerReadOnly;
+		global $wgUrlShortenerReadOnly, $wgUrlShortenerEnableSidebar;
 
-		if ( $wgUrlShortenerReadOnly ) {
+		if ( $wgUrlShortenerReadOnly || !$wgUrlShortenerEnableSidebar ) {
 			return;
 		}
 
