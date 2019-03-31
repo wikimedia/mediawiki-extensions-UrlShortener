@@ -6,5 +6,8 @@
 	},
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-blocked": "Els usuaris blocats no poden crear URL curts.",
-	"urlshortener-deleted": "S’ha suprimit aquest URL curt."
+	"urlshortener-deleted": "S’ha suprimit aquest URL curt.",
+	"right-urlshortener-manage-url": "Gestiona els URL curts",
+	"urlshortener-action-done": "S’han suprimit o restaurat URL",
+	"urlshortener-manage-delete-failed": "Ha fallat la supressió de l’URL"
 }

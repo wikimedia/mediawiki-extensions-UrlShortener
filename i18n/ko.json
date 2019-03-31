@@ -24,5 +24,7 @@
 	"urlshortener-error-badports": "포트를 포함하는 URL은 축약될 수 없습니다",
 	"urlshortener-error-nouserpass": "사용자명이나 비밀번호를 포함하는 URL은 축약될 수 없습니다",
 	"urlshortener-failed-try-again": "실패했습니다. 다시 시도하시겠습니까?",
-	"urlshortener-deleted": "이 단축 URL은 삭제되었습니다."
+	"urlshortener-deleted": "이 단축 URL은 삭제되었습니다.",
+	"urlshortener-action-done": "URL이 삭제 또는 복구되었습니다",
+	"urlshortener-manage-delete-failed": "URL 삭제를 실패했습니다"
 }

@@ -24,5 +24,10 @@
 	"urlshortener-error-nouserpass": "URL contenenti un nome utente o una password che non è consentito abbreviare",
 	"urlshortener-failed-try-again": "Non riuscito. Riprovare?",
 	"urlshortener-disabled": "La creazione di nuovi URL brevi è temporaneamente disabilitata.",
-	"urlshortener-deleted": "Questo URL breve è stato cancellato"
+	"urlshortener-deleted": "Questo URL breve è stato cancellato",
+	"action-urlshortener-mange-url": "gestire URL brevi",
+	"manageshorturls": "Gestisci URL brevi",
+	"right-urlshortener-manage-url": "Gestisce URL brevi",
+	"urlshortener-action-done": "Gli URL sono stati cancellati e/o ripristinati",
+	"urlshortener-manage-delete-failed": "La cancellazione dell'URL non è riuscita"
 }

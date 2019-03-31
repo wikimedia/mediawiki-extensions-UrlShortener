@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"আফতাবুজ্জামান"
+		]
+	},
+	"action-urlshortener-mange-url": "সংক্ষিপ্ত URLগুলি পরিচালনা করার",
+	"urlshortener-action-done": "ইউআরএল মুছে ফেলা হয়েছে ও/বা পুনরুদ্ধার করা হয়েছে",
+	"urlshortener-enter-short-code-restore": "পুনরুদ্ধার করতে URL সংক্ষিপ্ত কোড",
+	"urlshortener-short-code-not-found": "ইউআরএল সংক্ষিপ্ত কোড পাওয়া যায়নি বা অপসারিত হয়েছে",
+	"urlshortener-short-code-is-not-deleted": "ইউআরএল সংক্ষিপ্ত কোড অপসারিত হয়নি",
+	"urlshortener-manage-delete-failed": "URL অপসারণ ব্যর্থ হয়েছে",
+	"urlshortener-manage-restore-failed": "URL পুনরুদ্ধার ব্যর্থ হয়েছে"
+}

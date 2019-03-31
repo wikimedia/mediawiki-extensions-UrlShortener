@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Wikimon",
-			"Jopparn"
+			"Jopparn",
+			"WikiPhoenix"
 		]
 	},
 	"urlshortener": "URL-förkortare",
@@ -16,5 +17,12 @@
 	"urlshortener-error-malformed-url": "Ej en giltig URL",
 	"urlshortener-shortened-url-label": "Förkortad URL",
 	"urlshortener-error-disallowed-url": "URL:er för domänen $1 tillåts inte att förkortas",
-	"urlshortener-ratelimit": "Var vänlig vänta en viss tid innan du kortar ned fler webbadresser."
+	"urlshortener-ratelimit": "Var vänlig vänta en viss tid innan du kortar ned fler webbadresser.",
+	"urlshortener-blocked": "Blockerade användare kan inte skapa korta webbadresser.",
+	"action-urlshortener-mange-url": "Hantera korta webbadresser",
+	"manageshorturls": "Hantera korta webbadresser",
+	"right-urlshortener-manage-url": "Hantera korta webbadresser",
+	"urlshortener-action-done": "Webbadresser har raderats och/eller återställts",
+	"urlshortener-manage-delete-failed": "Misslyckades att radera webbadressen",
+	"urlshortener-manage-restore-failed": "Misslyckades att återställa webbadressen"
 }

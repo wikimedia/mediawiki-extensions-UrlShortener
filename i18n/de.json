@@ -24,5 +24,16 @@
 	"urlshortener-error-nouserpass": "URLs, die einen Benutzernamen oder ein Passwort enthalten, dürfen nicht gekürzt werden.",
 	"urlshortener-failed-try-again": "Fehlgeschlagen. Erneut versuchen?",
 	"urlshortener-disabled": "Das Erstellen neuer Kurz-URLs ist derzeit deaktiviert.",
-	"urlshortener-deleted": "Diese Kurz-URL wurde gelöscht."
+	"urlshortener-deleted": "Diese Kurz-URL wurde gelöscht.",
+	"action-urlshortener-mange-url": "Kurz-URLs zu verwalten",
+	"manageshorturls": "Kurz-URLs verwalten",
+	"right-urlshortener-manage-url": "Kurz-URLs verwalten",
+	"urlshortener-action-done": "Die URLs wurden gelöscht und/oder wiederhergestellt",
+	"urlshortener-enter-short-code-delete": "Zu löschender URL-Kurzcode",
+	"urlshortener-enter-short-code-restore": "Wiederherzustellender URL-Kurzcode",
+	"urlshortener-short-code-not-found": "Der URL-Kurzcode wurde nicht gefunden oder gelöscht",
+	"urlshortener-short-code-is-not-deleted": "Der URL-Kurzcode wurde nicht gelöscht",
+	"urlshortener-manage-delete-failed": "Das Löschen der URL ist fehlgeschlagen",
+	"urlshortener-manage-restore-failed": "Wiederherstellung der URL fehlgeschlagen",
+	"urlshortener-manage-not-enough-data": "Du musst einen zu löschenden oder wiederherzustellenden URL-Kurzcode bestimmen"
 }

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Yuvi Panda",
-			"Shirayuki"
+			"Shirayuki",
+			"Beta16"
 		]
 	},
 	"urlshortener": "{{doc-special|UrlShortner}}",
@@ -25,9 +26,9 @@
 	"urlshortener-failed-try-again": "Generic failure message with option to try again",
 	"urlshortener-disabled": "Error message shown when the extension is configured in read-only mode.",
 	"urlshortener-deleted": "Error message shown if the shortened URL is deleted.",
-	"action-urlshortener-mange-url": "Name of the right for managing short URLs",
-	"right-urlshortener-manage-url": "Description of the right",
+	"action-urlshortener-mange-url": "{{Doc-action|urlshortener-mange-url}}",
 	"manageshorturls": "Title of the special page",
+	"right-urlshortener-manage-url": "{{Doc-right}}",
 	"urlshortener-action-done": "Message when the action is done",
 	"urlshortener-enter-short-code-delete": "Label for input for URL short code to delete",
 	"urlshortener-enter-short-code-restore": "Label for input for URL short code to restore",

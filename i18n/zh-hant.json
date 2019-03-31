@@ -20,10 +20,22 @@
 	"urlshortener-error-disallowed-url": "網域為 $1 的 URL 不允許縮短",
 	"urlshortener-approved-domains": "連接至以下{{PLURAL:$1|網域|網域}}可被縮短：$2。",
 	"urlshortener-ratelimit": "在縮短完更多 URL 前請稍待。",
+	"urlshortener-blocked": "已封鎖使用者不可建立 URL 縮址。",
 	"urlshortener-toolbox": "取得簡短的 URL",
 	"urlshortener-error-badports": "禁止簡短包含埠的 URL",
 	"urlshortener-error-nouserpass": "包含使用者名稱或密碼的 URL 不允許縮短",
 	"urlshortener-failed-try-again": "失敗了，是否重試？",
 	"urlshortener-disabled": "建立新的簡短 URL 被暫時停用。",
-	"urlshortener-deleted": "此 URL 縮址已被刪除。"
+	"urlshortener-deleted": "此 URL 縮址已被刪除。",
+	"action-urlshortener-mange-url": "管理簡短 URL",
+	"manageshorturls": "管理簡短 URL",
+	"right-urlshortener-manage-url": "管理簡短 URL",
+	"urlshortener-action-done": "URL 短代碼已被刪除且/或已恢復",
+	"urlshortener-enter-short-code-delete": "要刪除的 URL 短代碼",
+	"urlshortener-enter-short-code-restore": "要恢復的 URL 短代碼",
+	"urlshortener-short-code-not-found": "URL 短代碼查無結果或已被刪除",
+	"urlshortener-short-code-is-not-deleted": "URL 短代碼尚未被刪除",
+	"urlshortener-manage-delete-failed": "刪除 URL 失敗",
+	"urlshortener-manage-restore-failed": "恢復 URL 失敗",
+	"urlshortener-manage-not-enough-data": "您需要確定出要刪除或恢復的 URL 短代碼"
 }

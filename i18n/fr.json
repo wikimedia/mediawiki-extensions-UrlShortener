@@ -26,5 +26,16 @@
 	"urlshortener-error-nouserpass": "Les URL qui contiennent un nom d'utilisateur ou un mot de passe ne peuvent pas être raccourcis",
 	"urlshortener-failed-try-again": "Échec. Réessayer ?",
 	"urlshortener-disabled": "La création de nouvelles Url courtes est temporairement désactivée.",
-	"urlshortener-deleted": "Cette URL courte a été supprimée."
+	"urlshortener-deleted": "Cette URL courte a été supprimée.",
+	"action-urlshortener-mange-url": "Gérer les URLs courtes",
+	"manageshorturls": "Gérer les URLs courtes",
+	"right-urlshortener-manage-url": "Gérer les URLs courtes",
+	"urlshortener-action-done": "Les URL ont été supprimées et/ou restaurées",
+	"urlshortener-enter-short-code-delete": "code court d'URL à supprimer",
+	"urlshortener-enter-short-code-restore": "code court d'URL à restituer",
+	"urlshortener-short-code-not-found": "Le code court de l’URL n’a pas été trouvé ou est supprimé",
+	"urlshortener-short-code-is-not-deleted": "Le code court de l'URL n'est pas supprimé",
+	"urlshortener-manage-delete-failed": "Erreur durant la supression d'URL",
+	"urlshortener-manage-restore-failed": "La restauration de l’URL a échoué",
+	"urlshortener-manage-not-enough-data": "Vous devez indiquer un code court d’URL à supprimer ou à restaurer"
 }
