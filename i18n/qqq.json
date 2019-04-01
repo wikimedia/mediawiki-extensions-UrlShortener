@@ -34,6 +34,7 @@
 	"urlshortener-enter-short-code-restore": "Label for input for URL short code to restore",
 	"urlshortener-short-code-not-found": "Error when short URL is not found or already deleted",
 	"urlshortener-short-code-is-not-deleted": "Error when the URL is not deleted (so it can't be restored)",
+	"urlshortener-url-too-long": "Error message when URL is too long, $1 is the limit",
 	"urlshortener-manage-delete-failed": "Error message when deleting fails",
 	"urlshortener-manage-restore-failed": "Error message when restoring fails",
 	"urlshortener-manage-not-enough-data": "Error message when not enough provided to do any action"

@@ -39,6 +39,7 @@ class UrlShortenerUtils {
 	 * @return Status with value of base36 encoded shortcode that refers to the $url
 	 */
 	public static function maybeCreateShortCode( $url, User $user ) {
+		global $wgUrlShortenerUrlSizeLimit;
 		$url = self::normalizeUrl( $url );
 
 		$dbw = self::getDB( DB_MASTER );
@@ -71,6 +72,12 @@ class UrlShortenerUtils {
 			// All code paths should already have checked for this,
 			// but lets be on the safe side.
 			return Status::newFatal( 'urlshortener-disabled' );
+		}
+
+		if ( mb_strlen( $url ) > $wgUrlShortenerUrlSizeLimit ) {
+			return Status::newFatal(
+				wfMessage( 'urlshortener-url-too-long' )->numParams( $wgUrlShortenerUrlSizeLimit )
+			);
 		}
 
 		$rowData = [
