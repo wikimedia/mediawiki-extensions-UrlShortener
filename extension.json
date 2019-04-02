@@ -124,7 +124,8 @@
 		"UrlShortenerTemplate": false,
 		"UrlShortenerAllowArbitraryPorts": false,
 		"UrlShortenerReadOnly": false,
-		"UrlShortenerEnableSidebar": true
+		"UrlShortenerEnableSidebar": true,
+		"UrlShortenerUrlSizeLimit": 2000
 	},
 	"manifest_version": 1
 }

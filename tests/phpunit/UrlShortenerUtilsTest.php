@@ -182,6 +182,20 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 	}
 
 	/**
+	 * @covers UrlShortenerUtils::maybeCreateShortCode
+	 */
+	public function testTooLongURL() {
+		$url = 'http://example.org/1';
+		$this->setMwGlobals( 'wgUrlShortenerUrlSizeLimit', 5 );
+
+		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
+
+		$this->assertFalse( $status->isGood() );
+		$this->assertEquals( 'urlshortener-url-too-long', $status->getErrors()[0]['message']->getKey() );
+		$this->assertEquals( 'error', $status->getErrors()[0]['type'] );
+	}
+
+	/**
 	 * @covers UrlShortenerUtils::deleteURL
 	 * @covers UrlShortenerUtils::isURLDeleted
 	 */
