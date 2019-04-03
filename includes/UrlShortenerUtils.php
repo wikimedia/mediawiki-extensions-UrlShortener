@@ -50,21 +50,8 @@ class UrlShortenerUtils {
 			__METHOD__
 		);
 
-		if ( $row !== false ) {
-			if ( $row->usc_deleted ) {
-				return Status::newFatal( 'urlshortener-deleted' );
-			}
-			return Status::newGood( self::encodeId( $row->usc_id ) );
-		}
-
-		// Didn't exist, we need to insert it
-
 		if ( $user->isBlocked() || $user->isBlockedGlobally() ) {
 			return Status::newFatal( 'urlshortener-blocked' );
-		}
-
-		if ( $user->pingLimiter( 'urlshortcode' ) ) {
-			return Status::newFatal( 'urlshortener-ratelimit' );
 		}
 
 		global $wgUrlShortenerReadOnly;
@@ -78,6 +65,17 @@ class UrlShortenerUtils {
 			return Status::newFatal(
 				wfMessage( 'urlshortener-url-too-long' )->numParams( $wgUrlShortenerUrlSizeLimit )
 			);
+		}
+
+		if ( $user->pingLimiter( 'urlshortcode' ) ) {
+			return Status::newFatal( 'urlshortener-ratelimit' );
+		}
+
+		if ( $row !== false ) {
+			if ( $row->usc_deleted ) {
+				return Status::newFatal( 'urlshortener-deleted' );
+			}
+			return Status::newGood( self::encodeId( $row->usc_id ) );
 		}
 
 		$rowData = [
