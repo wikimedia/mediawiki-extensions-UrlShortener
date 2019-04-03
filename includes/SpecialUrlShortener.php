@@ -136,6 +136,10 @@ class SpecialUrlShortener extends FormSpecialPage {
 		return 'pagetools';
 	}
 
+	public function doesWrites() {
+		return true;
+	}
+
 	/**
 	 * Don't list this page if in read only mode
 	 *
