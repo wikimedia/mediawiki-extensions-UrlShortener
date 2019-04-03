@@ -42,14 +42,6 @@ class UrlShortenerUtils {
 		global $wgUrlShortenerUrlSizeLimit;
 		$url = self::normalizeUrl( $url );
 
-		$dbr = self::getDB( DB_REPLICA );
-		$row = $dbr->selectRow(
-			'urlshortcodes',
-			[ 'usc_id', 'usc_deleted' ],
-			[ 'usc_url_hash' => md5( $url ) ],
-			__METHOD__
-		);
-
 		if ( $user->isBlocked() || $user->isBlockedGlobally() ) {
 			return Status::newFatal( 'urlshortener-blocked' );
 		}
@@ -71,6 +63,13 @@ class UrlShortenerUtils {
 			return Status::newFatal( 'urlshortener-ratelimit' );
 		}
 
+		$dbr = self::getDB( DB_REPLICA );
+		$row = $dbr->selectRow(
+			'urlshortcodes',
+			[ 'usc_id', 'usc_deleted' ],
+			[ 'usc_url_hash' => md5( $url ) ],
+			__METHOD__
+		);
 		if ( $row !== false ) {
 			if ( $row->usc_deleted ) {
 				return Status::newFatal( 'urlshortener-deleted' );
