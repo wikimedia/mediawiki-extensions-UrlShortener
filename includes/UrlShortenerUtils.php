@@ -42,8 +42,8 @@ class UrlShortenerUtils {
 		global $wgUrlShortenerUrlSizeLimit;
 		$url = self::normalizeUrl( $url );
 
-		$dbw = self::getDB( DB_MASTER );
-		$row = $dbw->selectRow(
+		$dbr = self::getDB( DB_REPLICA );
+		$row = $dbr->selectRow(
 			'urlshortcodes',
 			[ 'usc_id', 'usc_deleted' ],
 			[ 'usc_url_hash' => md5( $url ) ],
@@ -84,6 +84,7 @@ class UrlShortenerUtils {
 			'usc_url' => $url,
 			'usc_url_hash' => md5( $url )
 		];
+		$dbw = self::getDB( DB_MASTER );
 		$dbw->insert( 'urlshortcodes', $rowData, __METHOD__, [ 'IGNORE' ] );
 
 		if ( $dbw->affectedRows() ) {
