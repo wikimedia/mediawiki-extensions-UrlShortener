@@ -19,7 +19,7 @@
 	"urlshortener-error-disallowed-url": "URL:er för domänen $1 tillåts inte att förkortas",
 	"urlshortener-ratelimit": "Var vänlig vänta en viss tid innan du kortar ned fler webbadresser.",
 	"urlshortener-blocked": "Blockerade användare kan inte skapa korta webbadresser.",
-	"action-urlshortener-mange-url": "Hantera korta webbadresser",
+	"action-urlshortener-manage-url": "Hantera korta webbadresser",
 	"manageshorturls": "Hantera korta webbadresser",
 	"right-urlshortener-manage-url": "Hantera korta webbadresser",
 	"urlshortener-action-done": "Webbadresser har raderats och/eller återställts",

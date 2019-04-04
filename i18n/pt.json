@@ -26,7 +26,7 @@
 	"urlshortener-failed-try-again": "Falhou. Tentar novamente?",
 	"urlshortener-disabled": "A criação de novos URL curtos está temporariamente desativada.",
 	"urlshortener-deleted": "Este URL curto foi eliminado.",
-	"action-urlshortener-mange-url": "Gerir URL curtos",
+	"action-urlshortener-manage-url": "Gerir URL curtos",
 	"manageshorturls": "Gerir URL curtos",
 	"right-urlshortener-manage-url": "Gerir URL curtos",
 	"urlshortener-action-done": "Os URL foram eliminados e/ou restaurados",
@@ -34,6 +34,7 @@
 	"urlshortener-enter-short-code-restore": "Código curto de URL a restaurar",
 	"urlshortener-short-code-not-found": "Código curto de URL não foi encontrado ou foi eliminado",
 	"urlshortener-short-code-is-not-deleted": "Código curto de URL não foi eliminado",
+	"urlshortener-url-too-long": "O URL é demasiado longo; o comprimento máximo é {{PLURAL:$1|um carácter|$1 caracteres}}",
 	"urlshortener-manage-delete-failed": "A eliminação do URL falhou",
 	"urlshortener-manage-restore-failed": "A restauração do URL falhou",
 	"urlshortener-manage-not-enough-data": "Precisa de determinar um código curto de URL para eliminar ou restaurar"

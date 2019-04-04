@@ -28,7 +28,7 @@
 	"urlshortener-failed-try-again": "זה לא עבד. לנסות שוב?",
 	"urlshortener-disabled": "יצירת כתובות מקוצרות מוגבלת באופן זמני.",
 	"urlshortener-deleted": "הכתובת הקצרה הזאת נמחקה.",
-	"action-urlshortener-mange-url": "לנהל כתובות מקוצרות",
+	"action-urlshortener-manage-url": "לנהל כתובות מקוצרות",
 	"manageshorturls": "ניהול כתובות מקוצרות",
 	"right-urlshortener-manage-url": "ניהול כתובות מקוצרות",
 	"urlshortener-action-done": "כתובות נמחקו או שוחזרו",
@@ -36,6 +36,7 @@
 	"urlshortener-enter-short-code-restore": "איזה קוד כתובת קצרה לשחזר",
 	"urlshortener-short-code-not-found": "קוד כתובת קצרה לא נמצא או נמחק",
 	"urlshortener-short-code-is-not-deleted": "קוד כתובת קצרה לא מחוק",
+	"urlshortener-url-too-long": "ה־URL ארוך מדי, האורך המרבי הוא {{PLURAL:$1|תו אחד|$1 תווים}}",
 	"urlshortener-manage-delete-failed": "מחיקת הכתובת נכשלה",
 	"urlshortener-manage-restore-failed": "שחזור הכתובת נכשל",
 	"urlshortener-manage-not-enough-data": "חובה להגדיר קוד כתובת קצרה אחד למחוק או לשחזר"

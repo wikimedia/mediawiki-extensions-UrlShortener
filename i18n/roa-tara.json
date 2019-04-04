@@ -23,5 +23,17 @@
 	"urlshortener-error-nouserpass": "Le URL ca tènene 'nu nome utende o passuord non ge ponne essere tagghiate",
 	"urlshortener-failed-try-again": "Fallite. Pruève arrete?",
 	"urlshortener-disabled": "?a ccrejazione de URL nuève curte jè pe mò disabbilitate.",
-	"urlshortener-deleted": "Sta URL corte ha state scangellate."
+	"urlshortener-deleted": "Sta URL corte ha state scangellate.",
+	"action-urlshortener-manage-url": "Gestisce le URL curte",
+	"manageshorturls": "Gestisce le URL curte",
+	"right-urlshortener-manage-url": "Gestisce le URL curte",
+	"urlshortener-action-done": "Le URL onne state scangellate e/o repristinate",
+	"urlshortener-enter-short-code-delete": "Codece de l'URL curte da scangellà",
+	"urlshortener-enter-short-code-restore": "Codece de l'URL curte da repristinà",
+	"urlshortener-short-code-not-found": "Codece de l'URL curte non acchiate o scangellate",
+	"urlshortener-short-code-is-not-deleted": "Codece de l'URL curte non scangellate",
+	"urlshortener-url-too-long": "'A URL jè troppe longhe, 'a dimenzione mssime jè de {{PLURAL:$1|'nu|$1}} carattere",
+	"urlshortener-manage-delete-failed": "'A scangellazione de l'URL sciute a male",
+	"urlshortener-manage-restore-failed": "'U repristine de l'URL ha sciute a male",
+	"urlshortener-manage-not-enough-data": "E' abbesogne de determinà 'nu codece URL curte da scangellà o repristinà"
 }

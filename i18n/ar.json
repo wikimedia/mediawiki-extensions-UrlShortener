@@ -26,7 +26,7 @@
 	"urlshortener-failed-try-again": "فشل، حاول ثانية؟",
 	"urlshortener-disabled": "إحداث وصلات قصيرة جديدة معطل مؤقتا.",
 	"urlshortener-deleted": "تم حذف القصير هذا المسار المختصر.",
-	"action-urlshortener-mange-url": "إدارة المسارات المختصرة",
+	"action-urlshortener-manage-url": "إدارة المسارات المختصرة",
 	"manageshorturls": "إدارة المسارات المختصرة",
 	"right-urlshortener-manage-url": "إدارة المسارات المختصرة",
 	"urlshortener-action-done": "تم حذف و/أو استعادة المسارات",
@@ -34,6 +34,7 @@
 	"urlshortener-enter-short-code-restore": "المسارات المختصر لاستعادته",
 	"urlshortener-short-code-not-found": "لم يتم العثور على أو حذف رمز مسار مختصر",
 	"urlshortener-short-code-is-not-deleted": "لم يتم حذف رمز مسار مختصر",
+	"urlshortener-url-too-long": "المسار طويل جدا، والحد الأقصى للحجم هو {{PLURAL:$1|حرف واحد|$1 حروف}}",
 	"urlshortener-manage-delete-failed": "فشل حذف المسار",
 	"urlshortener-manage-restore-failed": "فشلت استعادة المسار",
 	"urlshortener-manage-not-enough-data": "تحتاج إلى تحديد رمز مسار مختصر لحذفه أو استعادته"

@@ -27,7 +27,7 @@
 	"urlshortener-failed-try-again": "Falló. Inténtalo de nuevo.",
 	"urlshortener-disabled": "Se desactivó temporalmente la creación de URL cortos.",
 	"urlshortener-deleted": "Se ha borrado este URL corto.",
-	"action-urlshortener-mange-url": "Gestionar URL cortos",
+	"action-urlshortener-manage-url": "Gestionar URL cortos",
 	"manageshorturls": "Gestionar URL cortos",
 	"right-urlshortener-manage-url": "Gestionar URL cortos",
 	"urlshortener-manage-restore-failed": "Falló la restauración del URL"

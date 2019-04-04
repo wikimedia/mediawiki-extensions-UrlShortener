@@ -24,7 +24,7 @@
 	"urlshortener-failed-try-again": "Не успеа. Да се обидам повторно?",
 	"urlshortener-disabled": "Создавањето на URL-адреси е времено оневозможено.",
 	"urlshortener-deleted": "Оваа картка URL е избришана.",
-	"action-urlshortener-mange-url": "Раководи со кратки URL-а",
+	"action-urlshortener-manage-url": "Раководи со кратки URL-а",
 	"manageshorturls": "Раководи со кратки URL-а",
 	"right-urlshortener-manage-url": "Раководи со кратки URL-а",
 	"urlshortener-action-done": "URL-ата се избришани и/или повратени",
