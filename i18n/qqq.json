@@ -3,7 +3,8 @@
 		"authors": [
 			"Yuvi Panda",
 			"Shirayuki",
-			"Beta16"
+			"Beta16",
+			"Umherirrender"
 		]
 	},
 	"urlshortener": "{{doc-special|UrlShortner}}",
@@ -28,7 +29,7 @@
 	"urlshortener-deleted": "Error message shown if the shortened URL is deleted.",
 	"action-urlshortener-manage-url": "{{Doc-action|urlshortener-manage-url}}",
 	"manageshorturls": "Title of the special page",
-	"right-urlshortener-manage-url": "{{Doc-right}}",
+	"right-urlshortener-manage-url": "{{doc-right|urlshortener-manage-url}}",
 	"urlshortener-action-done": "Message when the action is done",
 	"urlshortener-enter-short-code-delete": "Label for input for URL short code to delete",
 	"urlshortener-enter-short-code-restore": "Label for input for URL short code to restore",
