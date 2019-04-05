@@ -19,11 +19,18 @@ use Wikimedia\Rdbms\IDatabase;
 class UrlShortenerUtils {
 
 	/**
-	 * How long to cache things in Squid (one month)
+	 * How long to cache valid redirects in CDN (one month)
 	 *
 	 * @var int
 	 */
-	const CACHE_TIME = 2592000;
+	const CACHE_TTL_VALID = 2592000;
+
+	/**
+	 * How long to cache invalid redirects in CDN (fifteen minutes)
+	 *
+	 * @var int
+	 */
+	const CACHE_TTL_INVALID = 900;
 
 	public static $decodeMap;
 
