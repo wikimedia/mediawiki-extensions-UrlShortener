@@ -32,6 +32,7 @@
 	"urlshortener-enter-short-code-restore": "Краток код за повраток на URL",
 	"urlshortener-short-code-not-found": "Краткиот код за URL не е пронајден или е избришан",
 	"urlshortener-short-code-is-not-deleted": "Краткиот код за URL не е избришан",
+	"urlshortener-url-too-long": "URL-то е предолго. {{PLURAL:$1|Допуштен е највеќе еден знак|Допуштени се највеќе $1 знаци}}",
 	"urlshortener-manage-delete-failed": "Бришењето на URL-то не успеа",
 	"urlshortener-manage-restore-failed": "Повратокот на URL-то не успеа",
 	"urlshortener-manage-not-enough-data": "Ќе треба да определите еден краток код за URL што сакате да го избришете или повратите"
