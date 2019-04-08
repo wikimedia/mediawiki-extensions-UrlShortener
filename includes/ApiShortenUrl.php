@@ -33,7 +33,7 @@ class ApiShortenUrl extends ApiBase {
 
 		// You get the cached response, YOU get the cached response, EVERYONE gets the cached response.
 		$this->getMain()->setCacheMode( "public" );
-		$this->getMain()->setCacheMaxAge( UrlShortenerUtils::CACHE_TIME );
+		$this->getMain()->setCacheMaxAge( UrlShortenerUtils::CACHE_TTL_VALID );
 
 		$this->getResult()->addValue( null, $this->getModuleName(),
 			[ 'shorturl' => $shortUrl ]

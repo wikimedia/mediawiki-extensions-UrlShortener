@@ -15,7 +15,7 @@ class SpecialUrlRedirector extends UnlistedSpecialPage {
 		}
 		$url = UrlShortenerUtils::getURL( $par, PROTO_CURRENT );
 		if ( $url !== false ) {
-			$out->setCdnMaxage( UrlShortenerUtils::CACHE_TIME );
+			$out->setCdnMaxage( UrlShortenerUtils::CACHE_TTL_VALID );
 			$out->redirect( $url, '301' );
 		} else {
 			// Invalid $par
@@ -24,6 +24,7 @@ class SpecialUrlRedirector extends UnlistedSpecialPage {
 			// And force English because we likely don't know the proper interface lang :(
 			$title = $this->msg( 'urlshortener-not-found-title' )->inLanguage( 'en' )->text();
 			$text = $this->msg( 'urlshortener-not-found-message' )->inLanguage( 'en' )->text();
+			$out->setCdnMaxage( UrlShortenerUtils::CACHE_TTL_INVALID );
 			// wfHttpError does escaping
 			wfHttpError( 404, $title, $text );
 		}
