@@ -94,9 +94,9 @@
 		 */
 		onSubmit: function () {
 			var self = mw.urlshortener;
-			self.input.pushPending().setReadOnly( true );
-			self.setSubmit( 'submitting' );
-			self.input.isValid().done( function () {
+			self.input.getValidity().done( function () {
+				self.input.pushPending().setReadOnly( true );
+				self.setSubmit( 'submitting' );
 				self.shortenUrl(
 					self.input.getValue()
 				).done( function ( shorturl ) {
