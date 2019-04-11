@@ -57,13 +57,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 */
 	protected function alterForm( HTMLForm $form ) {
 		global $wgUrlShortenerAllowArbitraryPorts;
-		$form->setSubmitID( 'mw-urlshortener-submit' );
-		$form->setSubmitTextMsg( 'urlshortener-url-input-submit' );
-		$form->addFooterText( Html::rawElement(
-			'p',
-			[],
-			$this->getApprovedDomainsMessage()->parse()
-		) );
+		$form->suppressDefaultSubmit();
 		$this->getOutput()->addModules( 'ext.urlShortener.special' );
 		$this->getOutput()->addJsConfigVars( [
 			'wgUrlShortenerDomainsWhitelist' => UrlShortenerUtils::getWhitelistRegex(),
@@ -99,11 +93,17 @@ class SpecialUrlShortener extends FormSpecialPage {
 			'url' => [
 				'validation-callback' => [ $this, 'validateURL' ],
 				'required' => true,
-				'type' => 'url',
+				'type' => 'textwithbutton',
+				'inputtype' => 'url',
+				'buttontype' => 'submit',
+				'buttondefault' => $this->msg( 'urlshortener-url-input-submit' )->text(),
+				'buttonflags' => [ 'primary', 'progressive' ],
+				'buttonid' => 'mw-urlshortener-submit',
 				'name' => 'url',
 				'label-message' => 'urlshortener-form-header',
 				'autofocus' => true,
 				'id' => 'mw-urlshortener-url-input',
+				'help' => $this->getApprovedDomainsMessage()->parse(),
 				'placeholder' => $this->msg( 'urlshortener-url-input-label' )->text()
 			],
 		];
