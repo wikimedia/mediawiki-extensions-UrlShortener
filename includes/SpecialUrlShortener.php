@@ -59,7 +59,11 @@ class SpecialUrlShortener extends FormSpecialPage {
 		global $wgUrlShortenerAllowArbitraryPorts;
 		$form->setSubmitID( 'mw-urlshortener-submit' );
 		$form->setSubmitTextMsg( 'urlshortener-url-input-submit' );
-		$form->setFooterText( $this->getApprovedDomainsMessage()->parse() );
+		$form->addFooterText( Html::rawElement(
+			'p',
+			[],
+			$this->getApprovedDomainsMessage()->parse()
+		) );
 		$this->getOutput()->addModules( 'ext.urlShortener.special' );
 		$this->getOutput()->addJsConfigVars( [
 			'wgUrlShortenerDomainsWhitelist' => UrlShortenerUtils::getWhitelistRegex(),
