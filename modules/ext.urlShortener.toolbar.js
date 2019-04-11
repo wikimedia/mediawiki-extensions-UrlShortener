@@ -1,5 +1,6 @@
 ( function () {
 	$( function () {
+		// eslint-disable-next-line no-jquery/no-global-selector
 		var shortenUrlListItem = $( '#t-urlshortener' ),
 			api = new mw.Api();
 
@@ -13,7 +14,7 @@
 			} ).done( function ( data ) {
 				var $input = $( '<input>' ).val( data.shortenurl.shorturl );
 				shortenUrlListItem.empty().append( $input );
-				$input.focus().select();
+				$input.trigger( 'focus' ).trigger( 'select' );
 			} ).fail( function () {
 				link.text( mw.msg( 'urlshortener-failed-try-again' ) );
 			} ).always( function () {
