@@ -126,8 +126,10 @@
 		},
 
 		init: function () {
+			// eslint-disable-next-line no-jquery/no-global-selector
 			this.input = OO.ui.infuse( $( '#mw-urlshortener-url-input' ) );
 			this.input.setValidation( this.validateInput );
+			// eslint-disable-next-line no-jquery/no-global-selector
 			this.submit = OO.ui.infuse( $( '#mw-urlshortener-submit' ) );
 			this.submit.on( 'click', this.onSubmit );
 		},
