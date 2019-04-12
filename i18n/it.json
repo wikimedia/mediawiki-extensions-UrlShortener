@@ -17,7 +17,7 @@
 	"urlshortener-error-malformed-url": "URL non valido",
 	"urlshortener-shortened-url-label": "URL abbreviato",
 	"urlshortener-error-disallowed-url": "Gli URL per il dominio $1 non possono essere abbreviati",
-	"urlshortener-approved-domains": "I collegamenti {{PLURAL:$1|al seguente dominio|ai seguenti domini}} possono essere abbreviati: $2.",
+	"urlshortener-approved-domains": "Possono essere abbreviati i collegamenti {{PLURAL:$1|al seguente dominio|ai seguenti domini}}: $2.",
 	"urlshortener-ratelimit": "Attendi un po' di tempo prima di abbreviare altri URL.",
 	"urlshortener-blocked": "Gli utenti bloccati non possono creare URL brevi.",
 	"urlshortener-toolbox": "Ottieni URL breve",
