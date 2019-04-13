@@ -11,11 +11,11 @@ the short URLs will use the not-so-short
 <code>/wiki/Special:UrlShortener/5234</code> since it will work regardless of
 web server configuration.
 
-If you wanted your short URLs in the form of <code>domain.org/r/5234<code>, you would set:
+If you wanted your short URLs in the form of <code>domain.org/r/5234</code>, you would set:
+
 <source lang="php">
 $wgUrlShortenerTemplate = '/r/$1';
 </source>
-
 
 === Short domain name ===
 
@@ -63,6 +63,7 @@ $wgUrlShortenerDomainsWhitelist = false;
 </source>
 
 For example, to only whitelist links to wikipedia.org or wikimedia.org, we would use the following:
+
 <source lang="php">
 $wgUrlShortenerDomainsWhitelist = array(
 	'(.*\.)?wikimedia\.org',
@@ -71,6 +72,7 @@ $wgUrlShortenerDomainsWhitelist = array(
 </source>
 
 If we wanted to whitelist any domain:
+
 <source lang="php">
 $wgUrlShortenerDomainsWhitelist = array( '.*' );
 </source>
