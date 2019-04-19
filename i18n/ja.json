@@ -4,7 +4,8 @@
 			"Shirayuki",
 			"2nd-player",
 			"Sujiniku",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Takot"
 		]
 	},
 	"urlshortener": "URL短縮",
@@ -18,7 +19,7 @@
 	"urlshortener-error-malformed-url": "有効な URL ではありません",
 	"urlshortener-shortened-url-label": "短縮後のURL",
 	"urlshortener-error-disallowed-url": "ドメイン $1 への URL は短縮が認められていません",
-	"urlshortener-approved-domains": "次の{{PLURAL:$1|ドメイン}}へのリンクは短縮されます: $2。",
+	"urlshortener-approved-domains": "以下の{{PLURAL:$1|ドメイン}}へのリンクのみが短縮可能です。 $2",
 	"urlshortener-toolbox": "短縮URLを取得する",
 	"urlshortener-error-badports": "ポートを含むURLは短縮できません",
 	"urlshortener-error-nouserpass": "ユーザー名またはパスワードを含むURLは短縮できません",
