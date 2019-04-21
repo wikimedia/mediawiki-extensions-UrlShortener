@@ -30,7 +30,22 @@
 		 */
 		submit: null,
 
-		errors: {},
+		errors: [],
+
+		/**
+		 * Show an error
+		 *
+		 * @param {string} error Error
+		 */
+		showError: function ( error ) {
+			var self = mw.urlshortener;
+
+			if ( self.errors.indexOf( error ) === -1 ) {
+				self.errors.push( error );
+			}
+
+			self.fieldLayout.setErrors( self.errors );
+		},
 
 		/**
 		 * Validate the input URL clientside. Note that this is not the
@@ -43,48 +58,34 @@
 		 *                         returned by the API in case of error.
 		 */
 		validateInput: function ( input ) {
-			var parsed, errorKey,
-				self = mw.urlshortener,
-				showError = function ( error ) {
-					var $errorObject;
+			var parsed,
+				self = mw.urlshortener;
 
-					if ( !( error in self.errors ) ) {
-						$errorObject = new OO.ui.FieldLayout(
-							new OO.ui.LabelWidget(), { errors: [ error ] } ).$element;
-						for ( errorKey in self.errors ) {
-							self.errors[ errorKey ].remove();
-						}
-
-						self.input.$element.after( $errorObject );
-						self.errors = { error: $errorObject };
-					}
-
-					return false;
-				};
 			try {
 				parsed = new mw.Uri( input );
 			} catch ( e ) {
-				return showError( mw.msg( 'urlshortener-error-malformed-url' ) );
+				self.showError( mw.msg( 'urlshortener-error-malformed-url' ) );
+				return false;
 			}
 			if ( !parsed.host.match( self.regex ) ) {
-				return showError( mw.msg( 'urlshortener-error-disallowed-url', parsed.host ) );
+				self.showError( mw.msg( 'urlshortener-error-disallowed-url', parsed.host ) );
+				return false;
 			}
 			if ( parsed.port &&
 				!self.allowArbitraryPorts &&
 				!( parsed.port === '80' || parsed.port === '443' )
 			) {
-				return showError( mw.msg( 'urlshortener-error-badports' ) );
+				self.showError( mw.msg( 'urlshortener-error-badports' ) );
+				return false;
 			}
 
 			if ( parsed.user || parsed.password ) {
-				return showError( mw.msg( 'urlshortener-error-nouserpass' ) );
+				self.showError( mw.msg( 'urlshortener-error-nouserpass' ) );
+				return false;
 			}
 
-			for ( errorKey in self.errors ) {
-				self.errors[ errorKey ].remove();
-			}
-
-			self.errors = {};
+			self.errors = [];
+			self.fieldLayout.setErrors( self.errors );
 
 			return true;
 		},
@@ -109,7 +110,7 @@
 							readOnly: true
 						} );
 						// Wrap in a FieldLayout so we get the label
-						self.input.$element.after( new OO.ui.FieldLayout( self.shortened, {
+						self.fieldLayout.$element.after( new OO.ui.FieldLayout( self.shortened, {
 							align: 'top',
 							label: mw.msg( 'urlshortener-shortened-url-label' )
 						} ).$element );
@@ -120,17 +121,18 @@
 				} ).fail( function ( err ) {
 					self.setSubmit( 'submit' );
 					self.input.popPending().setReadOnly( false );
-					self.input.setLabel( err.info );
+					self.errors.push( err.info );
+					self.fieldLayout.setErrors( self.errors );
 				} );
 			} );
 		},
 
 		init: function () {
 			// eslint-disable-next-line no-jquery/no-global-selector
-			this.input = OO.ui.infuse( $( '#mw-urlshortener-url-input' ) );
+			this.fieldLayout = OO.ui.infuse( $( 'form > .mw-htmlform-field-HTMLTextFieldWithButton' ) );
+			this.input = this.fieldLayout.fieldWidget;
 			this.input.setValidation( this.validateInput );
-			// eslint-disable-next-line no-jquery/no-global-selector
-			this.submit = OO.ui.infuse( $( '#mw-urlshortener-submit' ) );
+			this.submit = this.fieldLayout.buttonWidget;
 			this.submit.on( 'click', this.onSubmit );
 		},
 
