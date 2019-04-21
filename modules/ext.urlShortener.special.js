@@ -30,23 +30,6 @@
 		 */
 		submit: null,
 
-		errors: [],
-
-		/**
-		 * Show an error
-		 *
-		 * @param {string} error Error
-		 */
-		showError: function ( error ) {
-			var self = mw.urlshortener;
-
-			if ( self.errors.indexOf( error ) === -1 ) {
-				self.errors.push( error );
-			}
-
-			self.fieldLayout.setErrors( self.errors );
-		},
-
 		/**
 		 * Validate the input URL clientside. Note that this is not the
 		 * only check - they are checked serverside too.
@@ -64,29 +47,27 @@
 			try {
 				parsed = new mw.Uri( input );
 			} catch ( e ) {
-				self.showError( mw.msg( 'urlshortener-error-malformed-url' ) );
+				self.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-malformed-url' ) ] );
 				return false;
 			}
 			if ( !parsed.host.match( self.regex ) ) {
-				self.showError( mw.msg( 'urlshortener-error-disallowed-url', parsed.host ) );
+				self.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-disallowed-url', parsed.host ) ] );
 				return false;
 			}
 			if ( parsed.port &&
 				!self.allowArbitraryPorts &&
 				!( parsed.port === '80' || parsed.port === '443' )
 			) {
-				self.showError( mw.msg( 'urlshortener-error-badports' ) );
+				self.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-badports' ) ] );
 				return false;
 			}
 
 			if ( parsed.user || parsed.password ) {
-				self.showError( mw.msg( 'urlshortener-error-nouserpass' ) );
+				self.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-nouserpass' ) ] );
 				return false;
 			}
 
-			self.errors = [];
-			self.fieldLayout.setErrors( self.errors );
-
+			self.fieldLayout.setErrors( [] );
 			return true;
 		},
 
@@ -121,8 +102,7 @@
 				} ).fail( function ( err ) {
 					self.setSubmit( 'submit' );
 					self.input.popPending().setReadOnly( false );
-					self.errors.push( err.info );
-					self.fieldLayout.setErrors( self.errors );
+					self.fieldLayout.setErrors( [ err.info ] );
 				} );
 			} );
 		},
