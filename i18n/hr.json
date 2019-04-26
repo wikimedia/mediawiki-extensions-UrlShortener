@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bugoslav"
+		]
+	},
+	"urlshortener": "Skraćivač URL-ova",
+	"urlshortener-desc": "Skraćivač URL-a za proizvoljne URL-ove",
+	"urlshortener-url-input-label": "URL adresa",
+	"urlshortener-url-input-submit": "Skrati",
+	"urlshortener-url-input-submitting": "Skraćujem…",
+	"urlshortener-not-found-title": "Nije pronađena kratka URL adresa",
+	"urlshortener-not-found-message": "Oprostite, URL adresu koju ste tražili nije bilo moguće pronaći.",
+	"urlshortener-form-header": "Ovdje zalijepite Vaš dugačak URL",
+	"urlshortener-error-malformed-url": "Nevrijedeća URL adresa",
+	"urlshortener-shortened-url-label": "Skraćeni URL",
+	"urlshortener-error-disallowed-url": "Skraćivanje URL-ova za domenu $1 nije dopušteno",
+	"urlshortener-ratelimit": "Molimo Vas, pričekajte neko vrijeme prije skraćivanja daljnjih URL-ova.",
+	"urlshortener-blocked": "Blokirani suradnici ne mogu stvarati kratke URL-ove.",
+	"urlshortener-toolbox": "Skraćeni URL",
+	"urlshortener-error-badports": "Skraćivanje URL-ova koji sadrže portove nije dopušteno",
+	"urlshortener-error-nouserpass": "Nije dopušteno skraćivanje URL-ova koji sadrže suradnička imena ili zaporke",
+	"urlshortener-failed-try-again": "Neuspješno. Pokušati ponovo?",
+	"urlshortener-disabled": "Stvaranje novih kratkih URL-ova privremeno je onemogućeno.",
+	"urlshortener-deleted": "Ovaj kratki URL je izbrisan.",
+	"action-urlshortener-manage-url": "Upravljaj kratkim URL-ovima",
+	"manageshorturls": "Upravljanje kratkim URL-ovima",
+	"right-urlshortener-manage-url": "Upravljanje kratkim URL-ovima",
+	"urlshortener-action-done": "URL-ovi koji su izbrisani i/ili vraćeni",
+	"urlshortener-enter-short-code-delete": "Kratki kôd URL-a za brisanje",
+	"urlshortener-enter-short-code-restore": "Kratki kôd URL-a za vraćanje",
+	"urlshortener-short-code-not-found": "Kratki kôd URL-a nije pronađen ili je izbrisan",
+	"urlshortener-short-code-is-not-deleted": "Kratki kôd URL-a nije izbrisan",
+	"urlshortener-url-too-long": "URL je predug, najveća dužina je {{PLURAL:$1|1=jedan znak|$1 znak|$1 znaka|$1 znakova}}",
+	"urlshortener-manage-delete-failed": "Brisanje URL-a nije uspjelo",
+	"urlshortener-manage-restore-failed": "Vraćanje URL-a nije uspjelo",
+	"urlshortener-manage-not-enough-data": "Trebate utvrditi jedan kratki kôd URL-a koji želite izbrisati ili vratiti"
+}
