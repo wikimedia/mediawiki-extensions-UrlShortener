@@ -62,6 +62,9 @@
 				"modules/ext.urlShortener.special.js"
 			],
 			"messages": [
+				"urlshortener-copy",
+				"urlshortener-copy-fail",
+				"urlshortener-copy-success",
 				"urlshortener-error-badports",
 				"urlshortener-error-disallowed-url",
 				"urlshortener-error-malformed-url",
@@ -72,9 +75,11 @@
 			],
 			"dependencies": [
 				"oojs-ui",
+				"oojs-ui.styles.icons-content",
 				"mediawiki.api",
 				"mediawiki.Uri",
-				"mediawiki.htmlform.ooui"
+				"mediawiki.htmlform.ooui",
+				"mediawiki.notify"
 			]
 		},
 		"ext.urlShortener.toolbar": {
