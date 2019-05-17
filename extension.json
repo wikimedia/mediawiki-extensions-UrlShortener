@@ -62,13 +62,13 @@
 				"modules/ext.urlShortener.special.js"
 			],
 			"messages": [
-				"urlshortener-error-malformed-url",
-				"urlshortener-error-disallowed-url",
 				"urlshortener-error-badports",
+				"urlshortener-error-disallowed-url",
+				"urlshortener-error-malformed-url",
 				"urlshortener-error-nouserpass",
+				"urlshortener-shortened-url-label",
 				"urlshortener-url-input-submit",
-				"urlshortener-url-input-submitting",
-				"urlshortener-shortened-url-label"
+				"urlshortener-url-input-submitting"
 			],
 			"dependencies": [
 				"oojs-ui",
@@ -85,10 +85,10 @@
 				"modules/ext.urlShortener.toolbar.less"
 			],
 			"messages": [
-				"urlshortener-url-input-submitting",
 				"urlshortener-failed-try-again",
+				"urlshortener-ratelimit",
 				"urlshortener-shortened-url-label",
-				"urlshortener-ratelimit"
+				"urlshortener-url-input-submitting"
 			],
 			"dependencies": [
 				"mediawiki.api"
