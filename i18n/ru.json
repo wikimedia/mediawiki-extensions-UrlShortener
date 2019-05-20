@@ -2,25 +2,28 @@
 	"@metadata": {
 		"authors": [
 			"Okras",
-			"Facenapalm"
+			"Facenapalm",
+			"1233qwer1234qwer4"
 		]
 	},
 	"urlshortener": "Сокращатель URL-адресов",
-	"urlshortener-desc": "Сокращатель произвольных URL-адресов",
-	"urlshortener-url-input-label": "URL",
-	"urlshortener-url-input-submit": "Сократить",
-	"urlshortener-url-input-submitting": "Сокращение…",
-	"urlshortener-not-found-title": "Короткий URL не найден",
-	"urlshortener-not-found-message": "К сожалению, адрес, который вы ищете, не найден.",
-	"urlshortener-form-header": "Вставьте длинный URL-адрес сюда",
-	"urlshortener-error-malformed-url": "Недопустимый URL-адрес",
-	"urlshortener-shortened-url-label": "Сокращённый URL-адрес",
-	"urlshortener-error-disallowed-url": "URL-адреса для домена $1 не разрешены для сокращения",
 	"urlshortener-approved-domains": "Ссылки на {{PLURAL:$1|следующий домен|следующие домены}} могут быть сокращены: $2.",
-	"urlshortener-ratelimit": "Пожалуйста, подождите некоторое время, прежде чем продолжить сокращать URL-адреса.",
-	"urlshortener-toolbox": "Получить сокращённый URL-адрес",
+	"urlshortener-copy": "Скопировать",
+	"urlshortener-copy-success": "Адрес скопирован в буфер обмена.",
+	"urlshortener-desc": "Сокращатель произвольных URL-адресов",
+	"urlshortener-disabled": "Создание новых коротких URL-адресов временно отключено.",
 	"urlshortener-error-badports": "URL-адреса, содержащие номера портов, не разрешены для сокращения",
+	"urlshortener-error-disallowed-url": "URL-адреса для домена $1 не разрешены для сокращения",
+	"urlshortener-error-malformed-url": "Недопустимый URL-адрес",
 	"urlshortener-error-nouserpass": "URL-адреса, содержащие имя пользователя или пароль, не разрешены для сокращения",
 	"urlshortener-failed-try-again": "Не получилось. Попробовать снова?",
-	"urlshortener-disabled": "Создание новых коротких URL-адресов временно отключено."
+	"urlshortener-form-header": "Вставьте длинный URL-адрес сюда",
+	"urlshortener-not-found-message": "К сожалению, адрес, который вы ищете, не найден.",
+	"urlshortener-not-found-title": "Короткий URL не найден",
+	"urlshortener-ratelimit": "Пожалуйста, подождите некоторое время, прежде чем продолжить сокращать URL-адреса.",
+	"urlshortener-shortened-url-label": "Сокращённый URL-адрес",
+	"urlshortener-toolbox": "Получить сокращённый URL-адрес",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Сократить",
+	"urlshortener-url-input-submitting": "Сокращение…"
 }

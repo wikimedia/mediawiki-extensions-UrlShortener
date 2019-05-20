@@ -6,9 +6,9 @@
 		]
 	},
 	"urlshortener": "URL-lyhentäjä",
+	"urlshortener-ratelimit": "Odota jonkin aikaa ennen kuin lyhennät lisää verkko-osoitteita.",
+	"urlshortener-shortened-url-label": "Lyhennetty URL",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Lyhennä",
-	"urlshortener-url-input-submitting": "Lyhennetään…",
-	"urlshortener-shortened-url-label": "Lyhennetty URL",
-	"urlshortener-ratelimit": "Odota jonkin aikaa ennen kuin lyhennät lisää verkko-osoitteita."
+	"urlshortener-url-input-submitting": "Lyhennetään…"
 }

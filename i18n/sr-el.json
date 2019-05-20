@@ -5,9 +5,9 @@
 		]
 	},
 	"urlshortener": "URL skraćivač",
-	"urlshortener-url-input-submit": "Skrati",
-	"urlshortener-url-input-submitting": "Skraćujem...",
-	"urlshortener-form-header": "Nalepite dugački URL ovde",
 	"urlshortener-error-malformed-url": "Neispravan URL",
-	"urlshortener-shortened-url-label": "Skraćeni URL"
+	"urlshortener-form-header": "Nalepite dugački URL ovde",
+	"urlshortener-shortened-url-label": "Skraćeni URL",
+	"urlshortener-url-input-submit": "Skrati",
+	"urlshortener-url-input-submitting": "Skraćujem..."
 }

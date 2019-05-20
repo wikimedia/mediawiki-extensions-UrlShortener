@@ -6,13 +6,13 @@
 	},
 	"urlshortener": "യു.ആർ.എൽ. ചെറുതാക്കൽ ഉപകരണം",
 	"urlshortener-desc": "ഏതെങ്കിലും യു.ആർ.എല്ലുകൾ ചെറുതാക്കാനുള്ള ഉപകരണം",
+	"urlshortener-disabled": "പുതിയ ചെറു യു.ആർ.എല്ലുകൾ സൃഷ്ടിക്കുന്നത് താത്കാലികമായി പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു.",
+	"urlshortener-error-malformed-url": "സാധുവായ യൂ.ആർ.എൽ. അല്ല",
+	"urlshortener-form-header": "വലിയ യു.ആർ.എൽ. ഇവിടെ ചേർക്കുക",
+	"urlshortener-not-found-message": "ക്ഷമിക്കൂ, താങ്കൾ നോക്കിയ യു.ആർ.എൽ. കണ്ടെത്താനായില്ല.",
+	"urlshortener-not-found-title": "ചെറു യൂ.ആർ.എൽ. കണ്ടെത്താനായില്ല",
+	"urlshortener-shortened-url-label": "ചെറുതാക്കിയ യു.ആർ.എൽ.",
 	"urlshortener-url-input-label": "യൂ.ആർ.എൽ.",
 	"urlshortener-url-input-submit": "ചെറുതാക്കുക",
-	"urlshortener-url-input-submitting": "ചെറുതാക്കുന്നു...",
-	"urlshortener-not-found-title": "ചെറു യൂ.ആർ.എൽ. കണ്ടെത്താനായില്ല",
-	"urlshortener-not-found-message": "ക്ഷമിക്കൂ, താങ്കൾ നോക്കിയ യു.ആർ.എൽ. കണ്ടെത്താനായില്ല.",
-	"urlshortener-form-header": "വലിയ യു.ആർ.എൽ. ഇവിടെ ചേർക്കുക",
-	"urlshortener-error-malformed-url": "സാധുവായ യൂ.ആർ.എൽ. അല്ല",
-	"urlshortener-shortened-url-label": "ചെറുതാക്കിയ യു.ആർ.എൽ.",
-	"urlshortener-disabled": "പുതിയ ചെറു യു.ആർ.എല്ലുകൾ സൃഷ്ടിക്കുന്നത് താത്കാലികമായി പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു."
+	"urlshortener-url-input-submitting": "ചെറുതാക്കുന്നു..."
 }

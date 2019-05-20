@@ -4,10 +4,10 @@
 			"Papuass"
 		]
 	},
+	"urlshortener-blocked": "Bloķēti lietotāji nevar veidot īsos URL.",
+	"urlshortener-failed-try-again": "Neizdevās. Mēģināt vēlreiz?",
+	"urlshortener-shortened-url-label": "Saīsinātais URL",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Saīsināt",
-	"urlshortener-url-input-submitting": "Saīsina...",
-	"urlshortener-shortened-url-label": "Saīsinātais URL",
-	"urlshortener-blocked": "Bloķēti lietotāji nevar veidot īsos URL.",
-	"urlshortener-failed-try-again": "Neizdevās. Mēģināt vēlreiz?"
+	"urlshortener-url-input-submitting": "Saīsina..."
 }

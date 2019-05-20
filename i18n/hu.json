@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"ViDam"
+			"ViDam",
+			"Misibacsi"
 		]
 	},
+	"urlshortener-copy": "Másolás",
+	"urlshortener-copy-success": "URL a vágólapra másolva.",
 	"urlshortener-url-input-submitting": "Rövidítés..."
 }
