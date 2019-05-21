@@ -80,6 +80,10 @@
 				"mediawiki.Uri",
 				"mediawiki.htmlform.ooui",
 				"mediawiki.notify"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
 			]
 		},
 		"ext.urlShortener.toolbar": {
