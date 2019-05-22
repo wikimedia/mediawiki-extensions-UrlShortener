@@ -11,7 +11,6 @@
 	"urlshortener-action-done": "URLs have been deleted and/or restored",
 	"urlshortener-approved-domains": "Links to the following {{PLURAL:$1|domain|domains}} may be shortened: $2.",
 	"urlshortener-blocked": "Blocked users can't make short URLs.",
-	"urlshortener-copy": "Copy",
 	"urlshortener-copy-fail": "Failed to copy URL to clipboard.",
 	"urlshortener-copy-success": "URL copied to clipboard.",
 	"urlshortener-deleted": "This short URL has been deleted.",

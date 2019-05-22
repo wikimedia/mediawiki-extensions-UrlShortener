@@ -62,7 +62,6 @@
 				"modules/ext.urlShortener.special.js"
 			],
 			"messages": [
-				"urlshortener-copy",
 				"urlshortener-copy-fail",
 				"urlshortener-copy-success",
 				"urlshortener-error-badports",
@@ -79,7 +78,7 @@
 				"mediawiki.api",
 				"mediawiki.Uri",
 				"mediawiki.htmlform.ooui",
-				"mediawiki.notify"
+				"mediawiki.widgets"
 			],
 			"targets": [
 				"desktop",

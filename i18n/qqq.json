@@ -15,7 +15,6 @@
 	"urlshortener-action-done": "Message when the action is done",
 	"urlshortener-approved-domains": "Help message displayed on Special:UrlShortener showing which domains can be shortened. $1 is the number of domains, $2 is a comma separated list of domains.",
 	"urlshortener-blocked": "Error message shown when the user is blocked",
-	"urlshortener-copy": "Label of button to copy generated URL to clipboard.",
 	"urlshortener-copy-fail": "Message shown when copyging to clipboard failed.",
 	"urlshortener-copy-success": "Message shown when copyging to clipboard was successful.",
 	"urlshortener-deleted": "Error message shown if the shortened URL is deleted.",

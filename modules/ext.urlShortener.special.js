@@ -82,47 +82,23 @@
 				self.shortenUrl(
 					self.input.getValue()
 				).done( function ( shorturl ) {
-					var copyButton;
-
 					self.setSubmit( 'submit' );
 					self.input.popPending().setReadOnly( false );
 
 					if ( !self.shortened ) {
-						self.shortened = new OO.ui.TextInputWidget( {
-							value: shorturl,
-							readOnly: true
-						} );
-						copyButton = new OO.ui.ButtonWidget( {
-							label: mw.msg( 'urlshortener-copy' ),
-							icon: 'articles'
-						} );
-						copyButton.on( 'click', function () {
-							var copied;
-							self.shortened.select();
-							try {
-								copied = document.execCommand( 'copy' );
-							} catch ( e ) {
-								copied = false;
-							}
-							if ( copied ) {
-								mw.notify( mw.msg( 'urlshortener-copy-success' ) );
-							} else {
-								mw.notify( mw.msg( 'urlshortener-copy-fail' ), { type: 'error' } );
-							}
+						self.shortened = new mw.widgets.CopyTextLayout( {
+							align: 'top',
+							label: mw.msg( 'urlshortener-shortened-url-label' ),
+							copyText: shorturl,
+							successMessage: mw.msg( 'urlshortener-copy-success' ),
+							failMessage: mw.msg( 'urlshortener-copy-fail' )
 						} );
 						// Wrap in a FieldLayout so we get the label
-						self.fieldLayout.$element.after( new OO.ui.ActionFieldLayout(
-							self.shortened,
-							copyButton,
-							{
-								align: 'top',
-								label: mw.msg( 'urlshortener-shortened-url-label' )
-							}
-						).$element );
+						self.fieldLayout.$element.after( self.shortened.$element );
 					} else {
-						self.shortened.setValue( shorturl );
+						self.shortened.input.setValue( shorturl );
 					}
-					self.shortened.select();
+					self.shortened.input.select();
 				} ).fail( function ( err ) {
 					self.setSubmit( 'submit' );
 					self.input.popPending().setReadOnly( false );
