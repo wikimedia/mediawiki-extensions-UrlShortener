@@ -93,14 +93,14 @@
 							readOnly: true
 						} );
 						copyButton = new OO.ui.ButtonWidget( {
-							label: 'Copy',
+							label: mw.msg( 'urlshortener-copy' ),
 							icon: 'articles'
 						} );
 						copyButton.on( 'click', function () {
 							var copied;
 							self.shortened.select();
 							try {
-								copied = document.execCommand( mw.msg( 'urlshortener-copy' ) );
+								copied = document.execCommand( 'copy' );
 							} catch ( e ) {
 								copied = false;
 							}
