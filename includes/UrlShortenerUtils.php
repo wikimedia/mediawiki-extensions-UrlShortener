@@ -222,7 +222,7 @@ class UrlShortenerUtils {
 	 * @return bool False if the $shortCode was invalid
 	 */
 	public static function deleteURL( $shortcode ) {
-		global $wgUseSquid;
+		global $wgUseCdn;
 
 		$id = self::decodeId( $shortcode );
 		if ( $id === false ) {
@@ -237,7 +237,7 @@ class UrlShortenerUtils {
 			__METHOD__
 		);
 
-		if ( $wgUseSquid ) {
+		if ( $wgUseCdn ) {
 			$update = new CdnCacheUpdate( [ self::makeUrl( $shortcode ) ] );
 			DeferredUpdates::addUpdate( $update, DeferredUpdates::PRESEND );
 		}
@@ -253,7 +253,7 @@ class UrlShortenerUtils {
 	 * @return bool False if the $shortCode was invalid
 	 */
 	public static function restoreURL( $shortcode ) {
-		global $wgUseSquid;
+		global $wgUseCdn;
 
 		$id = self::decodeId( $shortcode );
 		if ( $id === false ) {
@@ -268,7 +268,7 @@ class UrlShortenerUtils {
 			__METHOD__
 		);
 
-		if ( $wgUseSquid ) {
+		if ( $wgUseCdn ) {
 			$update = new CdnCacheUpdate( [ self::makeUrl( $shortcode ) ] );
 			DeferredUpdates::addUpdate( $update, DeferredUpdates::PRESEND );
 		}
