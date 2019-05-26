@@ -9,10 +9,6 @@
  * @license Apache-2.0
  */
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	exit( 1 );
-}
-
 use MediaWiki\MediaWikiServices;
 use Wikimedia\Rdbms\IDatabase;
 

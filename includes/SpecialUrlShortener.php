@@ -9,11 +9,6 @@
  * @license Apache-2.0
  */
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	echo 'not a valid entry point.\n';
-	die( 1 );
-}
-
 class SpecialUrlShortener extends FormSpecialPage {
 
 	public function __construct() {
