@@ -11,7 +11,6 @@
 	"urlshortener-action-done": "Le URL onne state scangellate e/o repristinate",
 	"urlshortener-approved-domains": "Le collegaminde {{PLURAL:$1|a stu dominie pò|a ste dominie ponne}} essere tagghiate: $2.",
 	"urlshortener-blocked": "Le utinde bloccate non ge ponne fà le URL curte.",
-	"urlshortener-copy": "Copie",
 	"urlshortener-copy-fail": "Copie d'a URL jndr'à l'appunde fallite.",
 	"urlshortener-copy-success": "URL copiate jndr'à l'appunde.",
 	"urlshortener-deleted": "Sta URL corte ha state scangellate.",

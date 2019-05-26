@@ -14,7 +14,6 @@
 	"urlshortener-action-done": "URL 短代碼已被刪除且/或已恢復",
 	"urlshortener-approved-domains": "連接至以下{{PLURAL:$1|網域|網域}}可被縮短：$2。",
 	"urlshortener-blocked": "已封鎖使用者不可建立 URL 縮址。",
-	"urlshortener-copy": "複製",
 	"urlshortener-copy-fail": "複製 URL 到剪貼簿上失敗。",
 	"urlshortener-copy-success": "URL 已複製到剪貼簿上。",
 	"urlshortener-deleted": "此 URL 縮址已被刪除。",

@@ -16,7 +16,6 @@
 	"urlshortener-action-done": "URLが削除または復元されました",
 	"urlshortener-approved-domains": "以下の{{PLURAL:$1|ドメイン}}へのリンクのみが短縮可能です。 $2",
 	"urlshortener-blocked": "ブロックされたユーザーは短いURLを作ることができません。",
-	"urlshortener-copy": "コピー",
 	"urlshortener-copy-fail": "URLをクリップボードにコピーできませんでした。",
 	"urlshortener-copy-success": "URLがクリップボードにコピーされました。",
 	"urlshortener-deleted": "このURLは削除されました。",

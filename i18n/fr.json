@@ -14,7 +14,6 @@
 	"urlshortener-action-done": "Les URL ont été supprimées et/ou restaurées",
 	"urlshortener-approved-domains": "Les liens vers {{PLURAL:$1|le domaine suivant|les domaines suivants}} peuvent être raccourcis : $2.",
 	"urlshortener-blocked": "Les utilisateurs bloqués ne peuvent pas faire d’URL courtes.",
-	"urlshortener-copy": "Copier",
 	"urlshortener-copy-fail": "Échec de copie de l’URL vers le presse-papier.",
 	"urlshortener-copy-success": "URL copiée dans le presse-papier.",
 	"urlshortener-deleted": "Cette URL courte a été supprimée.",

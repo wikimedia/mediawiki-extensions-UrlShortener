@@ -11,6 +11,8 @@
 	"urlshortener-action-done": "URL-ата се избришани и/или повратени",
 	"urlshortener-approved-domains": "Врските што водат кон {{PLURAL:$1|следниов домен|следниве домени}} може да се скратат: $2.",
 	"urlshortener-blocked": "Скратувањето на URL-а не им е дозволено на блокораните корисници.",
+	"urlshortener-copy-fail": "Не успав да го ископирам URL-то во меѓускладот.",
+	"urlshortener-copy-success": "URL-то е ископирано во меѓускладот.",
 	"urlshortener-deleted": "Оваа картка URL е избришана.",
 	"urlshortener-desc": "Скратувач на произволни URL-адреси",
 	"urlshortener-disabled": "Создавањето на URL-адреси е времено оневозможено.",

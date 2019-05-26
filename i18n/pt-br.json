@@ -12,7 +12,6 @@
 	"urlshortener-action-done": "URLs foram excluídos e/ou restaurados",
 	"urlshortener-approved-domains": "Os links para {{PLURAL:$1|o seguinte domínio|os seguintes domínios}} podem ser encurtados: $2.",
 	"urlshortener-blocked": "Os usuários bloqueados não podem criar URLs curtos.",
-	"urlshortener-copy": "Copiar",
 	"urlshortener-copy-fail": "Falha ao copiar o URL para a área de transferência.",
 	"urlshortener-copy-success": "URL copiado para a área de transferência.",
 	"urlshortener-deleted": "Este URL curto foi excluído.",

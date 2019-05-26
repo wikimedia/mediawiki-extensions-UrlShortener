@@ -8,7 +8,6 @@
 	},
 	"urlshortener": "Skracarka URL",
 	"urlshortener-approved-domains": "Linki do {{PLURAL:$1|następującej domeny|następujących domen}} mogą być skrócone: $2.",
-	"urlshortener-copy": "Skopiuj",
 	"urlshortener-copy-fail": "Kopiowanie adresu URL do schowka nie powiodło się.",
 	"urlshortener-copy-success": "Skopiowano adres URL do schowka.",
 	"urlshortener-desc": "Skracarka adresu dla dowolnego adresu URL",

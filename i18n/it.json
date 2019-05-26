@@ -13,7 +13,6 @@
 	"urlshortener-action-done": "Gli URL sono stati cancellati e/o ripristinati",
 	"urlshortener-approved-domains": "Possono essere abbreviati i collegamenti {{PLURAL:$1|al seguente dominio|ai seguenti domini}}: $2.",
 	"urlshortener-blocked": "Gli utenti bloccati non possono creare URL brevi.",
-	"urlshortener-copy": "Copia",
 	"urlshortener-copy-success": "URL copiato negli appunti.",
 	"urlshortener-deleted": "Questo URL breve è stato cancellato",
 	"urlshortener-desc": "Abbreviatore URL per URL arbitrari",

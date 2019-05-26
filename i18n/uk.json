@@ -10,7 +10,6 @@
 	},
 	"urlshortener": "Скорочувач URL-адрес",
 	"urlshortener-approved-domains": "Посилання на {{PLURAL:$1|наступні домени|наступний домен}} можуть бути скорочено: $2.",
-	"urlshortener-copy": "Копіювати",
 	"urlshortener-copy-fail": "Не вдалося скопіювати URL до буфера.",
 	"urlshortener-copy-success": "URL скопійовано в буфер обміну.",
 	"urlshortener-deleted": "Цей короткий URL вилучено.",

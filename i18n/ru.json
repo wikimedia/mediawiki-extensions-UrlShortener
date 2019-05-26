@@ -8,7 +8,6 @@
 	},
 	"urlshortener": "Сокращатель URL-адресов",
 	"urlshortener-approved-domains": "Ссылки на {{PLURAL:$1|следующий домен|следующие домены}} могут быть сокращены: $2.",
-	"urlshortener-copy": "Скопировать",
 	"urlshortener-copy-success": "Адрес скопирован в буфер обмена.",
 	"urlshortener-desc": "Сокращатель произвольных URL-адресов",
 	"urlshortener-disabled": "Создание новых коротких URL-адресов временно отключено.",

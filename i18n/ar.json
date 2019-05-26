@@ -13,7 +13,6 @@
 	"urlshortener-action-done": "تم حذف و/أو استعادة المسارات",
 	"urlshortener-approved-domains": "قد يتم اختصار الروابط إلى {{PLURAL:$1|النطاق التالي|النطاقات التالية}}: $2.",
 	"urlshortener-blocked": "لا يمكن للمستخدمين الممنوعين إنشاء مسارات قصيرة.",
-	"urlshortener-copy": "نسخ",
 	"urlshortener-copy-fail": "فشل نسخ المسار إلى الحافظة.",
 	"urlshortener-copy-success": "تم نسخ المسار إلى الحافظة.",
 	"urlshortener-deleted": "تم حذف القصير هذا المسار المختصر.",

@@ -12,7 +12,6 @@
 	"urlshortener-action-done": "Die URLs wurden gelöscht und/oder wiederhergestellt",
 	"urlshortener-approved-domains": "Links {{PLURAL:$1|zur folgenden Domain|zu den folgenden Domains}} können gekürzt werden: $2.",
 	"urlshortener-blocked": "Gesperrte Benutzer können keine Kurz-URLs erstellen.",
-	"urlshortener-copy": "Kopieren",
 	"urlshortener-copy-fail": "Die URL konnte nicht in die Zwischenablage kopiert werden.",
 	"urlshortener-copy-success": "URL in die Zwischenablage kopiert.",
 	"urlshortener-deleted": "Diese Kurz-URL wurde gelöscht.",
