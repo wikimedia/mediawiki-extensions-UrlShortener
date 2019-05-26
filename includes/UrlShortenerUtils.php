@@ -222,8 +222,6 @@ class UrlShortenerUtils {
 	 * @return bool False if the $shortCode was invalid
 	 */
 	public static function deleteURL( $shortcode ) {
-		global $wgUseCdn;
-
 		$id = self::decodeId( $shortcode );
 		if ( $id === false ) {
 			return false;
@@ -237,10 +235,7 @@ class UrlShortenerUtils {
 			__METHOD__
 		);
 
-		if ( $wgUseCdn ) {
-			$update = new CdnCacheUpdate( [ self::makeUrl( $shortcode ) ] );
-			DeferredUpdates::addUpdate( $update, DeferredUpdates::PRESEND );
-		}
+		self::purgeCdn( $shortcode );
 
 		return true;
 	}
@@ -253,8 +248,6 @@ class UrlShortenerUtils {
 	 * @return bool False if the $shortCode was invalid
 	 */
 	public static function restoreURL( $shortcode ) {
-		global $wgUseCdn;
-
 		$id = self::decodeId( $shortcode );
 		if ( $id === false ) {
 			return false;
@@ -268,12 +261,21 @@ class UrlShortenerUtils {
 			__METHOD__
 		);
 
+		self::purgeCdn( $shortcode );
+
+		return true;
+	}
+
+	/**
+	 * If configured, purge CDN for the given shortcode
+	 * @param string $shortcode
+	 */
+	private static function purgeCdn( $shortcode ) {
+		global $wgUseCdn;
 		if ( $wgUseCdn ) {
 			$update = new CdnCacheUpdate( [ self::makeUrl( $shortcode ) ] );
 			DeferredUpdates::addUpdate( $update, DeferredUpdates::PRESEND );
 		}
-
-		return true;
 	}
 
 	/**
