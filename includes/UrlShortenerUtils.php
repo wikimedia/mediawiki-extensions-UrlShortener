@@ -131,15 +131,19 @@ class UrlShortenerUtils {
 
 		// If the wiki is using an article path (e.g. /wiki/$1) try
 		// and convert plain index.php?title=$1 URLs to the canonical form
-		if ( $wgArticlePath !== false && strpos( $url, '?' ) !== false ) {
-			$parsed = wfParseUrl( $url );
+		$parsed = wfParseUrl( $url );
+		if ( !isset( $parsed['path'] ) ) {
+			// T220718: Ensure each URL has a / after the domain name
+			$parsed['path'] = '/';
+		}
+		if ( $wgArticlePath !== false && isset( $parsed['query'] ) ) {
 			$query = wfCgiToArray( $parsed['query'] );
 			if ( count( $query ) === 1 && isset( $query['title'] ) && $parsed['path'] === wfScript() ) {
 				$parsed['path'] = str_replace( '$1', $query['title'], $wgArticlePath );
 				unset( $parsed['query'] );
 			}
-			$url = wfAssembleUrl( $parsed );
 		}
+		$url = wfAssembleUrl( $parsed );
 
 		return $url;
 	}

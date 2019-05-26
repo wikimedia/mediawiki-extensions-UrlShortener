@@ -70,8 +70,18 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 		return [
 			// HTTPS -> HTTP
 			[
-				'https://example.org',
-				'http://example.org'
+				'https://example.org/',
+				'http://example.org/'
+			],
+			// No trailing slash -> trailing slash
+			[
+				'http://example.org',
+				'http://example.org/'
+			],
+			// ? with no query string is stripped
+			[
+				'http://example.org/?',
+				'http://example.org/'
 			],
 			// Article normalized
 			[
