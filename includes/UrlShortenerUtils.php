@@ -104,7 +104,11 @@ class UrlShortenerUtils {
 			);
 		}
 
-		return Status::newGood( self::encodeId( $id ) );
+		$shortcode = self::encodeId( $id );
+		// In case our CDN cached an earlier 404/error, purge it
+		self::purgeCdn( $shortcode );
+
+		return Status::newGood( $shortcode );
 	}
 
 	/**
