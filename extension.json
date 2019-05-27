@@ -23,7 +23,8 @@
 		"SpecialUrlShortener": "includes/SpecialUrlShortener.php",
 		"SpecialUrlRedirector": "includes/SpecialUrlRedirector.php",
 		"SpecialManageShortUrls": "includes/SpecialManageShortUrls.php",
-		"ApiShortenUrl": "includes/ApiShortenUrl.php"
+		"ApiShortenUrl": "includes/ApiShortenUrl.php",
+		"DumpURLs": "maintenance/dumpURLs.php"
 	},
 	"ExtensionMessagesFiles": {
 		"UrlShortenerAlias": "UrlShortener.alias.php",
