@@ -15,6 +15,8 @@
 	"urlshortener-action-done": "כתובות נמחקו או שוחזרו",
 	"urlshortener-approved-domains": "אפשר לקצר קישורים {{PLURAL:$1|למתחם הבא|למתחמים הבאים}}: $2.",
 	"urlshortener-blocked": "משתמשים חסומים אינם יכולים לעשות כתובות URL קצרות.",
+	"urlshortener-copy-fail": "העתקת ה־URL ללוח נכשלה.",
+	"urlshortener-copy-success": "ה־URL הועתק ללוח.",
 	"urlshortener-deleted": "הכתובת הקצרה הזאת נמחקה.",
 	"urlshortener-desc": "מקצר כתובות לכל URL",
 	"urlshortener-disabled": "יצירת כתובות מקוצרות מוגבלת באופן זמני.",
