@@ -17,6 +17,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 
 	public function execute( $par ) {
 		global $wgUrlShortenerReadOnly;
+		$this->addHelpLink( 'Help:UrlShortener' );
 
 		if ( $wgUrlShortenerReadOnly ) {
 			$this->setHeaders();
