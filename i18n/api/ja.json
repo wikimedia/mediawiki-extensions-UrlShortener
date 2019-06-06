@@ -1,9 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yusuke1109"
+			"Yusuke1109",
+			"Omotecho"
 		]
 	},
 	"apihelp-shortenurl-description": "長いURLを短いURLに短縮します。",
-	"apihelp-shortenurl-summary": "長いURLを短いURLに短縮します。"
+	"apihelp-shortenurl-summary": "長いURLを短いURLに短縮します。",
+	"apihelp-shortenurl-param-url": "短縮する対象のURL。",
+	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>の短縮URLを生成。",
+	"apierror-urlshortener-disabled": "短縮URLは新規に生成されません"
 }
