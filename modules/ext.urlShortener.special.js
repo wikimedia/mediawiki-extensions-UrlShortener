@@ -96,9 +96,9 @@
 						// Wrap in a FieldLayout so we get the label
 						self.fieldLayout.$element.after( self.shortened.$element );
 					} else {
-						self.shortened.input.setValue( shorturl );
+						self.shortened.textInput.setValue( shorturl );
 					}
-					self.shortened.input.select();
+					self.shortened.textInput.select();
 				} ).fail( function ( err ) {
 					self.setSubmit( 'submit' );
 					self.input.popPending().setReadOnly( false );
