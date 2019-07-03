@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"神樂坂秀吉"
 		]
 	},
 	"apihelp-shortenurl-description": "将一个长URL缩短。",
 	"apihelp-shortenurl-summary": "将一个长URL缩短。",
-	"apihelp-shortenurl-param-url": "将被缩短的URL。",
+	"apihelp-shortenurl-param-url": "将缩短的URL。",
 	"apihelp-shortenurl-example-1": "获取用于<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>的短URL。",
 	"apierror-urlshortener-disabled": "不能新建短url"
 }
