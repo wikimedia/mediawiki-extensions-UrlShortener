@@ -11,6 +11,8 @@
 	"urlshortener-action-done": "ইউআরএল মুছে ফেলা হয়েছে ও/বা পুনরুদ্ধার করা হয়েছে",
 	"urlshortener-approved-domains": "নিন্মলিখিত {{PLURAL:$1|ডোমেইনের|ডোমেইনগুলির}} সংযোগ সংক্ষিপ্ত করা যাবে: $2।",
 	"urlshortener-blocked": "অবরুদ্ধ ব্যবহারকারীরা সংক্ষিপ্ত ইউআরএল তৈরি করতে পারবে না।",
+	"urlshortener-copy-fail": "ক্লিপবোর্ডে URL অনুলিপি করা ব্যর্থ হয়েছে।",
+	"urlshortener-copy-success": "ক্লিপবোর্ডে URL অনুলিপি করা হয়েছে।",
 	"urlshortener-deleted": "এই সংক্ষিপ্ত ইউআরএল মুছে ফেলা হয়েছে।",
 	"urlshortener-desc": "অবাধ URLগুলির জন্য URL সংক্ষেপক",
 	"urlshortener-disabled": "নতুন সংক্ষিপ্ত ইউআরএল তৈরি করা সাময়িকভাবে নিষ্ক্রিয়।",

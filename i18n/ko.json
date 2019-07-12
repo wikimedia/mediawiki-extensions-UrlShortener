@@ -7,9 +7,11 @@
 			"Ykhwong"
 		]
 	},
+	"action-urlshortener-manage-url": "단축 URL을 관리할",
 	"urlshortener": "URL 단축기",
 	"urlshortener-action-done": "URL이 삭제 또는 복구되었습니다",
 	"urlshortener-approved-domains": "다음 {{PLURAL:$1|도메인}}으로의 링크는 축약될 수 없습니다: $2",
+	"urlshortener-blocked": "차단된 사용자는 단축 URL을 생성할 수 없습니다.",
 	"urlshortener-copy-fail": "URL을 클리보드에 복사하는데 실패했습니다.",
 	"urlshortener-copy-success": "URL이 클립보드에 복사되었습니다.",
 	"urlshortener-deleted": "이 단축 URL은 삭제되었습니다.",

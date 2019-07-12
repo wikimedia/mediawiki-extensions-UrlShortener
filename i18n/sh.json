@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"action-urlshortener-manage-url": "Upravljaj kratkim URL-ovima",
+	"manageshorturls": "Upravljaj kratkim URL-ovima",
+	"right-urlshortener-manage-url": "Upravljaj kratkim URL-ovima",
+	"urlshortener": "Skraćivač URL-ova",
+	"urlshortener-action-done": "URL-ovi su izbrisani i/ili vraćeni",
+	"urlshortener-approved-domains": "Linkovi što vode na {{PLURAL: $ 1 |sljedeću domenu|sljedeće domene}} mogu biti skraćeni: $2.",
+	"urlshortener-blocked": "Skraćivanje URL-ova nisu dopušteni blokoranima korisnicima.",
+	"urlshortener-copy-fail": "Nije uspjelo iskopirati URL u međuspremnik.",
+	"urlshortener-copy-success": "URL je iskopirano u međuspremnik.",
+	"urlshortener-deleted": "Ova kartka URL je izbrisana.",
+	"urlshortener-desc": "Skraćivač proizvoljnih URL-adresa",
+	"urlshortener-disabled": "Stvaranje URL-adresa vremeno je onemogućeno.",
+	"urlshortener-enter-short-code-delete": "Kratki kôd za brisanje URL-a",
+	"urlshortener-enter-short-code-restore": "Kratki kôd za povratak URL-a",
+	"urlshortener-error-badports": "URL-ovi što sadrže portove kojima nije dopušteno se skraćivati",
+	"urlshortener-error-disallowed-url": "Nije dozvoljeno kratenje URL-adresa za domenu $1",
+	"urlshortener-error-malformed-url": "Ovo nije predstavlja vrijedeću URL",
+	"urlshortener-error-nouserpass": "Nije dozvoljeno kratenje URL-ova što sadrže suradnička imena ili zaporke",
+	"urlshortener-failed-try-again": "Neuspjelo. Pokušati ponovo?",
+	"urlshortener-form-header": "Ovdje zalijepite dugački URL",
+	"urlshortener-manage-delete-failed": "Brisanje URL-a nije uspjelo",
+	"urlshortener-manage-not-enough-data": "Trebat ćete opredjeliti jedan kratki kôd za URL što želite izbrisati ili oporaviti",
+	"urlshortener-manage-restore-failed": "Povratak URL-a nije uspjelo",
+	"urlshortener-not-found-message": "Nažalost, nisam našao URL-adresu što ste tražili.",
+	"urlshortener-not-found-title": "Nisam našao kratku URL-adresu",
+	"urlshortener-ratelimit": "Pričekajte neko vrijeme prije skraćivanja URL-ova.",
+	"urlshortener-short-code-is-not-deleted": "Kratki kôd za URL nije izbrisan",
+	"urlshortener-short-code-not-found": "Kratki kôd za URL nije pronađen ili je izbrisan",
+	"urlshortener-shortened-url-label": "Skraćena URL",
+	"urlshortener-toolbox": "Daj skraćeni URL",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Skrati",
+	"urlshortener-url-input-submitting": "Skraćujem…",
+	"urlshortener-url-too-long": "URL je predug. {{PLURAL:$1|1=Dopušten je najviše jedan znak|Dopušten je najviše $1 znak|Dopušteni su najviše $1 znaka|Dopušteno je najviše $1 znakova}}"
+}
