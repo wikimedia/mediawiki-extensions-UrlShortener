@@ -8,6 +8,7 @@
 		]
 	},
 	"action-urlshortener-manage-url": "단축 URL을 관리할",
+	"right-urlshortener-manage-url": "단축 URL 관리하기",
 	"urlshortener": "URL 단축기",
 	"urlshortener-action-done": "URL이 삭제 또는 복구되었습니다",
 	"urlshortener-approved-domains": "다음 {{PLURAL:$1|도메인}}으로의 링크는 축약될 수 없습니다: $2",
