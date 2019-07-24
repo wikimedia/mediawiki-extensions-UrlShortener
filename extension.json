@@ -114,14 +114,17 @@
 		"ManageShortUrls": "SpecialManageShortUrls"
 	},
 	"AvailableRights": [
-		"urlshortener-manage-url"
+		"urlshortener-manage-url",
+		"urlshortener-create-url"
 	],
 	"GroupPermissions": {
 		"*": {
-			"urlshortener-manage-url": false
+			"urlshortener-manage-url": false,
+			"urlshortener-create-url": true
 		},
 		"sysop": {
-			"urlshortener-manage-url": true
+			"urlshortener-manage-url": true,
+			"urlshortener-create-url": true
 		}
 	},
 	"config": {

@@ -12,7 +12,7 @@
 class SpecialUrlShortener extends FormSpecialPage {
 
 	public function __construct() {
-		parent::__construct( 'UrlShortener' );
+		parent::__construct( 'UrlShortener', 'urlshortener-create-url' );
 	}
 
 	public function execute( $par ) {

@@ -17,6 +17,8 @@ class ApiShortenUrl extends ApiBase {
 			$this->dieWithError( 'apierror-urlshortener-disabled' );
 		}
 
+		$this->checkUserRightsAny( 'urlshortener-create-url' );
+
 		$params = $this->extractRequestParams();
 
 		$url = $params['url'];
