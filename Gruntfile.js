@@ -4,7 +4,6 @@ module.exports = function ( grunt ) {
 
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
-	grunt.loadNpmTasks( 'grunt-jsonlint' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
 	grunt.loadNpmTasks( 'grunt-tyops' );
 
@@ -22,20 +21,16 @@ module.exports = function ( grunt ) {
 		eslint: {
 			options: {
 				reportUnusedDisableDirectives: true,
+				extensions: [ '.js', '.json' ],
 				cache: true
 			},
 			all: [
-				'modules/**/*.js'
-			]
-		},
-		banana: conf.MessagesDirs,
-		jsonlint: {
-			all: [
-				'**/*.json',
+				'**/*.{js,json}',
 				'!node_modules/**',
 				'!vendor/**'
 			]
 		},
+		banana: conf.MessagesDirs,
 		stylelint: {
 			all: [
 				'**/*.less',
@@ -45,6 +40,6 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'test', [ 'tyops', 'eslint', 'jsonlint', 'banana', 'stylelint' ] );
+	grunt.registerTask( 'test', [ 'tyops', 'eslint', 'banana', 'stylelint' ] );
 	grunt.registerTask( 'default', 'test' );
 };
