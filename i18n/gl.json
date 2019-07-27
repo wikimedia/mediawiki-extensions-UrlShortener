@@ -3,7 +3,8 @@
 		"authors": [
 			"Elisardojm",
 			"Toliño",
-			"Banjo"
+			"Banjo",
+			"Navhy"
 		]
 	},
 	"urlshortener": "Acurtador de enderezos URL",
@@ -16,7 +17,7 @@
 	"urlshortener-error-nouserpass": "As URLs que conteñen un nome de usuario ou contrasinal non poden acurtarse",
 	"urlshortener-failed-try-again": "Fallou. Intentalo de novo?",
 	"urlshortener-form-header": "Copie o enderezo URL longo aquí",
-	"urlshortener-not-found-message": "Sentímolo, o enderezo URL que está a buscar non se atopou.",
+	"urlshortener-not-found-message": "Sentímolo, o enderezo URL que está a procurar non se atopou.",
 	"urlshortener-not-found-title": "Non se atopou o enderezo URL acurtado",
 	"urlshortener-ratelimit": "Agarde uns intres antes de acurtar máis enderezos URL.",
 	"urlshortener-shortened-url-label": "URL acurtado",

@@ -6,10 +6,16 @@
 			"Railfail536"
 		]
 	},
+	"action-urlshortener-manage-url": "zarządzania skracaniem URL-i",
+	"manageshorturls": "Zarządzanie skracaniem URL-i",
+	"right-urlshortener-manage-url": "Zarządzanie skracaniem URL-i",
 	"urlshortener": "Skracarka URL",
+	"urlshortener-action-done": "URL-e zostały usunięte i/lub przywrócone",
 	"urlshortener-approved-domains": "Linki do {{PLURAL:$1|następującej domeny|następujących domen}} mogą być skrócone: $2.",
+	"urlshortener-blocked": "Zablokowani użytkownicy nie mogą tworzyć skróconych URL-i.",
 	"urlshortener-copy-fail": "Kopiowanie adresu URL do schowka nie powiodło się.",
 	"urlshortener-copy-success": "Skopiowano adres URL do schowka.",
+	"urlshortener-deleted": "Ten skrócony URL został usunięty.",
 	"urlshortener-desc": "Skracarka adresu dla dowolnego adresu URL",
 	"urlshortener-disabled": "Tworzenie nowych skróconych adresów URL jest czasowo wyłączone.",
 	"urlshortener-error-badports": "Adresy URL, które zawierają numery portów nie mogą być skracane",
@@ -18,6 +24,8 @@
 	"urlshortener-error-nouserpass": "Adresy URL zawierające nazwę użytkownika lub hasło nie mogą być skracane",
 	"urlshortener-failed-try-again": "Nie udało się. Spróbujesz ponownie?",
 	"urlshortener-form-header": "Wklej tutaj długi adres URL",
+	"urlshortener-manage-delete-failed": "Usuwanie URL-a nie powiodło się",
+	"urlshortener-manage-restore-failed": "Przywracanie URL-a nie powiodło się",
 	"urlshortener-not-found-message": "Przepraszamy, nie znaleziono adresu URL, którego szukasz.",
 	"urlshortener-not-found-title": "Nie znaleziono krótkiego adresu URL",
 	"urlshortener-ratelimit": "Proszę poczekać jakiś czas przed skracaniem kolejnych adresów URL.",
@@ -25,5 +33,6 @@
 	"urlshortener-toolbox": "Zobacz skrócony adres URL",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Skróć",
-	"urlshortener-url-input-submitting": "Skracanie..."
+	"urlshortener-url-input-submitting": "Skracanie…",
+	"urlshortener-url-too-long": "Adres URL jest zbyt długi. Maksymalny rozmiar to {{PLURAL:$1|jeden znak|$1 znaki|$1 znaków}}"
 }
