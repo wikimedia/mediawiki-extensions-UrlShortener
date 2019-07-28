@@ -137,7 +137,7 @@
 			} ).then( function ( data ) {
 				return data.shortenurl.shorturl;
 			}, function ( errCode, data ) {
-				return data.error;
+				return $.Deferred().reject( data.error );
 			} );
 		}
 	};
