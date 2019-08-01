@@ -8,6 +8,8 @@
 			"Hamilton Abreu"
 		]
 	},
+	"action-urlshortener-create-url": "{{Doc-action|urlshortener-create-url}}",
+	"right-urlshortener-create-url": "{{doc-right|urlshortener-create-url}}",
 	"action-urlshortener-manage-url": "{{Doc-action|urlshortener-manage-url}}",
 	"manageshorturls": "Title of the special page",
 	"right-urlshortener-manage-url": "{{doc-right|urlshortener-manage-url}}",
