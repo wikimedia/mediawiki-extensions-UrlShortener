@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"बिप्लब आनन्द"
+			"बिप्लब आनन्द",
+			"सरोज कुमार ढकाल"
 		]
 	},
 	"urlshortener": "यूआरएल संक्षिप्तीकरण",
 	"urlshortener-desc": "स्वेच्छा अनुसारको यूआरएलको लागि यूआरएल संक्षिप्तीकरण",
 	"urlshortener-error-disallowed-url": "डोमेन $1 को लागि यूआरएलहरू संक्षिप्तीकरण असमर्थ गरिएको छ",
 	"urlshortener-error-malformed-url": "अमान्य यूआरएल",
-	"urlshortener-form-header": "तपाईं आफ्नो लामो यूआरएल यहाँ पेस्ट गर्नुहोस",
+	"urlshortener-form-header": "तपाईँ आफ्नो लामो युआरएल यहाँ पेस्ट गर्नुहोस",
 	"urlshortener-not-found-message": "क्षमा गर्नुहोला, तपाईंले खोज्नुभएको यूआरएल भेटिएन।",
 	"urlshortener-not-found-title": "संक्षिप्त यूआरएल भेटिएन",
 	"urlshortener-shortened-url-label": "संक्षिप्त यूआरएल",

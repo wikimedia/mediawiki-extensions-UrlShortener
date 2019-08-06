@@ -4,9 +4,13 @@
 			"Sjoerddebruin",
 			"Mainframe98",
 			"Mar(c)",
-			"Jeroen N"
+			"Jeroen N",
+			"Elderson"
 		]
 	},
+	"action-urlshortener-create-url": "verkorte URLs aan te maken",
+	"right-urlshortener-create-url": "Verkorte URLs aanmaken",
+	"action-urlshortener-manage-url": "verkorte URLs te beheren",
 	"urlshortener": "URL-verkorter",
 	"urlshortener-approved-domains": "Koppelingen naar {{PLURAL:$1|het volgende domein|de volgende domeinen}} mogen verkort worden: $2.",
 	"urlshortener-disabled": "Het aanmaken van nieuwe korte URL's is tijdelijk uitgeschakeld.",

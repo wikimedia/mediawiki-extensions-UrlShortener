@@ -4,9 +4,11 @@
 			"Bjankuloski06"
 		]
 	},
-	"action-urlshortener-manage-url": "Раководи со кратки URL-а",
-	"manageshorturls": "Раководи со кратки URL-а",
-	"right-urlshortener-manage-url": "Раководи со кратки URL-а",
+	"action-urlshortener-create-url": "создавање на кратки URL-а",
+	"right-urlshortener-create-url": "Создавање на кратки URL-а",
+	"action-urlshortener-manage-url": "раководење со кратки URL-а",
+	"manageshorturls": "Раководење со кратки URL-а",
+	"right-urlshortener-manage-url": "Раководење со кратки URL-а",
 	"urlshortener": "Скратувач на URL",
 	"urlshortener-action-done": "URL-ата се избришани и/или повратени",
 	"urlshortener-approved-domains": "Врските што водат кон {{PLURAL:$1|следниов домен|следниве домени}} може да се скратат: $2.",

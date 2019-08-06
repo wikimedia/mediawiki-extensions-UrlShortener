@@ -7,6 +7,8 @@
 			"Kly"
 		]
 	},
+	"action-urlshortener-create-url": "建立簡短 URL",
+	"right-urlshortener-create-url": "建立簡短 URL",
 	"action-urlshortener-manage-url": "管理簡短 URL",
 	"manageshorturls": "管理簡短 URL",
 	"right-urlshortener-manage-url": "管理簡短 URL",

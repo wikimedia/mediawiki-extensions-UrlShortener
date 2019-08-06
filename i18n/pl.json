@@ -6,6 +6,8 @@
 			"Railfail536"
 		]
 	},
+	"action-urlshortener-create-url": "tworzenia krótkich adresów URL",
+	"right-urlshortener-create-url": "Tworzenie krótkich adresów URL",
 	"action-urlshortener-manage-url": "zarządzania skracaniem URL-i",
 	"manageshorturls": "Zarządzanie skracaniem URL-i",
 	"right-urlshortener-manage-url": "Zarządzanie skracaniem URL-i",

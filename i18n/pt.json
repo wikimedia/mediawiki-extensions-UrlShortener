@@ -6,7 +6,9 @@
 			"Fúlvio"
 		]
 	},
-	"action-urlshortener-manage-url": "Gerir URL curtos",
+	"action-urlshortener-create-url": "criar URL curtos",
+	"right-urlshortener-create-url": "Criar URL curtos",
+	"action-urlshortener-manage-url": "gerir URL curtos",
 	"manageshorturls": "Gerir URL curtos",
 	"right-urlshortener-manage-url": "Gerir URL curtos",
 	"urlshortener": "Encurtador de URL",

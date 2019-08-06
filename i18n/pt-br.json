@@ -5,7 +5,9 @@
 			"Eduardo Addad de Oliveira"
 		]
 	},
-	"action-urlshortener-manage-url": "Gerenciar URLs curtos",
+	"action-urlshortener-create-url": "criar URL curtos",
+	"right-urlshortener-create-url": "Criar URL curtos",
+	"action-urlshortener-manage-url": "gerenciar URLs curtos",
 	"manageshorturls": "Gerenciar URLs curtos",
 	"right-urlshortener-manage-url": "Gerenciar URLs curtos",
 	"urlshortener": "Encurtador de URL",

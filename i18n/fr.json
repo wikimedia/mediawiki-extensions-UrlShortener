@@ -7,7 +7,9 @@
 			"Derugon"
 		]
 	},
-	"action-urlshortener-manage-url": "Gérer les URLs courtes",
+	"action-urlshortener-create-url": "créer des URL courtes",
+	"right-urlshortener-create-url": "Créer des URL courtes",
+	"action-urlshortener-manage-url": "gérer les URL courtes",
 	"manageshorturls": "Gérer les URLs courtes",
 	"right-urlshortener-manage-url": "Gérer les URLs courtes",
 	"urlshortener": "Raccourcisseur d’URL",

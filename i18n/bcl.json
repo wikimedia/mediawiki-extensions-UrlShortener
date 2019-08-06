@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Brazal.dang"
+		]
+	},
+	"action-urlshortener-create-url": "Maggibo nin halipot na URL",
+	"right-urlshortener-create-url": "Maggibo ni halipot na URL",
+	"action-urlshortener-manage-url": "Manehiron an halipot na URL"
+}

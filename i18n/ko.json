@@ -7,6 +7,8 @@
 			"Ykhwong"
 		]
 	},
+	"action-urlshortener-create-url": "단축 URL을 만들",
+	"right-urlshortener-create-url": "단축 URL 만들기",
 	"action-urlshortener-manage-url": "단축 URL을 관리할",
 	"right-urlshortener-manage-url": "단축 URL 관리하기",
 	"urlshortener": "URL 단축기",
