@@ -7,7 +7,9 @@
 			"MarcoAurelio"
 		]
 	},
-	"action-urlshortener-manage-url": "Gestionar URL cortos",
+	"action-urlshortener-create-url": "crear URL cortos",
+	"right-urlshortener-create-url": "Crear URL cortos",
+	"action-urlshortener-manage-url": "gestionar URL cortos",
 	"manageshorturls": "Gestionar URL cortos",
 	"right-urlshortener-manage-url": "Gestionar URL cortos",
 	"urlshortener": "Acortador de URL",
