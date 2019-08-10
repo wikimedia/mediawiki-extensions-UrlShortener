@@ -8,5 +8,6 @@
 	"apihelp-shortenurl-summary": "{{doc-apihelp-summary|shortenurl}}",
 	"apihelp-shortenurl-param-url": "{{doc-apihelp-param|shortenurl|url}}",
 	"apihelp-shortenurl-example-1": "{{doc-apihelp-example|shortenurl}}",
-	"apierror-urlshortener-disabled": "{{doc-apierror}}"
+	"apierror-urlshortener-disabled": "{{doc-apierror}}",
+	"apierror-urlshortener-permissiondenied": "{{doc-apierror}}"
 }
