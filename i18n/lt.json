@@ -4,5 +4,7 @@
 			"Eitvys200"
 		]
 	},
-	"urlshortener-copy": "Kopijuoti"
+	"action-urlshortener-create-url": "kurti trumpus URL",
+	"right-urlshortener-create-url": "Kurti trumpus URL",
+	"action-urlshortener-manage-url": "tvarkyti trumpus URL"
 }

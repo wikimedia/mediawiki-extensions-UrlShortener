@@ -4,12 +4,14 @@
 			"Vlad5250"
 		]
 	},
-	"action-urlshortener-manage-url": "Upravljaj kratkim URL-ovima",
-	"manageshorturls": "Upravljaj kratkim URL-ovima",
-	"right-urlshortener-manage-url": "Upravljaj kratkim URL-ovima",
+	"action-urlshortener-create-url": "pravljenje kratkih URL-ova",
+	"right-urlshortener-create-url": "Pravljenje kratkih URL-ova",
+	"action-urlshortener-manage-url": "upravljanje kratkim URL-ovima",
+	"manageshorturls": "Upravljanje kratkim URL-ovima",
+	"right-urlshortener-manage-url": "Upravljanje kratkim URL-ovima",
 	"urlshortener": "Skraćivač URL-ova",
 	"urlshortener-action-done": "URL-ovi su izbrisani i/ili vraćeni",
-	"urlshortener-approved-domains": "Linkovi što vode na {{PLURAL: $ 1 |sljedeću domenu|sljedeće domene}} mogu biti skraćeni: $2.",
+	"urlshortener-approved-domains": "Linkovi što vode na {{PLURAL:$1|sljedeću domenu|sljedeće domene}} mogu biti skraćeni: $2.",
 	"urlshortener-blocked": "Skraćivanje URL-ova nisu dopušteni blokoranima korisnicima.",
 	"urlshortener-copy-fail": "Nije uspjelo iskopirati URL u međuspremnik.",
 	"urlshortener-copy-success": "URL je iskopirano u međuspremnik.",
