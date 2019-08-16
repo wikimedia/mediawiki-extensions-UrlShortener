@@ -104,7 +104,16 @@ this setting. If changed, any existing short URLs will go to the wrong
 destination.
 
 <source lang="php">
-$wgUrlShortenerIdSet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$';
+$wgUrlShortenerIdSet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz-';
+</source>
+
+In addition, for decoding a character mapping can be specified.
+This can be used to map any symbol onto another and maintain
+backwards-compatibility for previously generated URLs.
+The following example maps the `$` symbol to `-`:
+
+<source lang="php">
+$wgUrlShortenerIdMapping = [ '$' => '-' ];
 </source>
 
 === Read-only mode ===

@@ -166,6 +166,7 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 	 */
 	public function testEncodeAndDecodeIds() {
 		// Set default
+		UrlShortenerUtils::$decodeMap = null;
 		$this->setMwGlobals(
 			'wgUrlShortenerIdSet',
 			'23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$'
@@ -176,6 +177,35 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 			$decoded = UrlShortenerUtils::decodeId( $encoded );
 			$this->assertEquals( $int, $decoded );
 		}
+	}
+
+	/**
+	 * Test that decode performs ID mapping
+	 *
+	 * @covers UrlShortenerUtils::encodeId
+	 * @covers UrlShortenerUtils::decodeId
+	 */
+	public function testDecodeIdMapping() {
+		// Set default
+		UrlShortenerUtils::$decodeMap = null;
+		$this->setMwGlobals(
+			'wgUrlShortenerIdSet',
+			'23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz-'
+		);
+		$this->setMwGlobals(
+			'wgUrlShortenerIdMapping',
+			[
+				'$' => '-',
+				'0' => 'o'
+			]
+		);
+		$int = 198463;
+		$encoded = UrlShortenerUtils::encodeId( $int );
+		$this->assertEquals( '32-o', $encoded );
+		$decoded = UrlShortenerUtils::decodeId( '32$0' );
+		$this->assertEquals( $int, $decoded );
+		$decoded = UrlShortenerUtils::decodeId( '32-o' );
+		$this->assertEquals( $int, $decoded );
 	}
 
 	/**
