@@ -65,16 +65,16 @@ $wgUrlShortenerDomainsWhitelist = false;
 For example, to only whitelist links to wikipedia.org or wikimedia.org, we would use the following:
 
 <source lang="php">
-$wgUrlShortenerDomainsWhitelist = array(
+$wgUrlShortenerDomainsWhitelist = [
 	'(.*\.)?wikimedia\.org',
 	'(.*\.)?wikipedia\.org',
-);
+];
 </source>
 
 If we wanted to whitelist any domain:
 
 <source lang="php">
-$wgUrlShortenerDomainsWhitelist = array( '.*' );
+$wgUrlShortenerDomainsWhitelist = [ '.*' ];
 </source>
 
 === Whitelist documentation ===
@@ -91,10 +91,10 @@ $wgUrlShortenerApprovedDomains = false;
 If you only whitelisted wikipedia.org and wikimedia.org in the above example:
 
 <source lang="php">
-$wgUrlShortenerApprovedDomains = array(
+$wgUrlShortenerApprovedDomains = [
 	'*.wikimedia.org',
 	'*.wikipedia.org',
-);
+];
 </source>
 
 === Shortcode character set ===
