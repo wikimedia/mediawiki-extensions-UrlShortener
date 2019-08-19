@@ -14,7 +14,8 @@ class DumpURLs extends Maintenance {
 
 	public function __construct() {
 		parent::__construct();
-		$this->mDescription = 'Create a pipe-separated dump of all the short URL codes and their targets';
+		$this->addDescription( 'Create a pipe-separated dump of all the short URL codes and ' .
+			'their targets' );
 		$this->addArg( 'file', 'Location to save the dump', true );
 		$this->setBatchSize( 1000 );
 		$this->requireExtension( 'UrlShortener' );
