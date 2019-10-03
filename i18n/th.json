@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aefgh39622"
+			"Aefgh39622",
+			"Geonuch"
 		]
 	},
+	"right-urlshortener-create-url": "สร้าง URL สั้น",
 	"urlshortener-failed-try-again": "ล้มเหลว ลองอีกครั้ง?"
 }
