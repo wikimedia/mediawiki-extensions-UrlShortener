@@ -13,12 +13,12 @@ class DumpURLsTest extends MaintenanceBaseTestCase {
 		return DumpURLs::class;
 	}
 
-	public function setUp() {
+	public function setUp() : void {
 		parent::setUp();
 		$this->tmp = tempnam( wfTempDir(), __CLASS__ );
 	}
 
-	public function tearDown() {
+	public function tearDown() : void {
 		unlink( $this->tmp );
 		parent::tearDown();
 	}
