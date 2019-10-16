@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ерней"
+		]
+	},
+	"apihelp-shortenurl-description": "Озын URL адресын кыскарту.",
+	"apihelp-shortenurl-summary": "Озын URL адресын кыскарту.",
+	"apihelp-shortenurl-param-url": "Кыскарту өчен URL.",
+	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> өчен кыска URL алу.",
+	"apierror-urlshortener-disabled": "Яңа кыска URL адресларын төзеп булмый."
+}

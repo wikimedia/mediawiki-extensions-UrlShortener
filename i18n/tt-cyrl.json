@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ерней"
+		]
+	},
+	"urlshortener": "URL кыскартучы",
+	"urlshortener-error-malformed-url": "Ярамаган URL",
+	"urlshortener-not-found-title": "Кыска URL табылмады",
+	"urlshortener-shortened-url-label": "Кыскартылган URL",
+	"urlshortener-toolbox": "Кыскартылган URL алу",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Кыскарту",
+	"urlshortener-url-input-submitting": "Кыскартыла…",
+	"urlshortener-url-too-long": "URL бигрәк тә озын, иң зур озынлыгы {{PLURAL:$1|бер генә билге|$1 билге}} була"
+}
