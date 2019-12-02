@@ -6,7 +6,8 @@
 			"Titip1995",
 			"Derugon",
 			"Thibaut120094",
-			"Verdy p"
+			"Verdy p",
+			"Zarisi"
 		]
 	},
 	"action-urlshortener-create-url": "créer des URL courtes",
@@ -39,7 +40,7 @@
 	"urlshortener-ratelimit": "Veuillez attendre quelques instants avant de raccourcir d’autres URL.",
 	"urlshortener-short-code-is-not-deleted": "Le code court de l'URL n'est pas supprimé",
 	"urlshortener-short-code-not-found": "Le code court de l’URL n’a pas été trouvé ou est supprimé",
-	"urlshortener-shortened-url-label": "URL reccourcie",
+	"urlshortener-shortened-url-label": "URL raccourcie",
 	"urlshortener-toolbox": "Obtenir l'URL raccoucie",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Raccourcir",
