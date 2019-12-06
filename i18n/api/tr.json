@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"JackUKElliott"
+			"JackUKElliott",
+			"BaRaN6161 TURK"
 		]
 	},
 	"apihelp-shortenurl-description": "Uzun bir web adresini (URL) kısaltın.",
+	"apihelp-shortenurl-summary": "Kısa bir URL'ye uzun bir URL kısaltın.",
 	"apihelp-shortenurl-param-url": "Kısaltılacak web adresi (URL).",
-	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> için kısaltılmış web adresini (URL) alın."
+	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> için kısaltılmış web adresini (URL) alın.",
+	"apierror-urlshortener-disabled": "Yeni kısa url'ler oluşturulamaz"
 }
