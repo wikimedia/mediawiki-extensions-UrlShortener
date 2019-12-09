@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Metalhead64",
-			"Kghbln"
+			"Kghbln",
+			"Tobi 406"
 		]
 	},
+	"action-urlshortener-create-url": "Kurz-URLs erstellen",
+	"right-urlshortener-create-url": "Kurz-URLs erstellen",
 	"action-urlshortener-manage-url": "Kurz-URLs zu verwalten",
 	"manageshorturls": "Kurz-URLs verwalten",
 	"right-urlshortener-manage-url": "Kurz-URLs verwalten",
