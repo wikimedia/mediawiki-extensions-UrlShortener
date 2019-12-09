@@ -167,8 +167,8 @@ class UrlShortenerUtils {
 	 * Retrieves a URL for the given shortcode, or false if there's none.
 	 *
 	 * @param string $shortCode
-	 * @param string|int $proto PROTO_* constant
-	 * @return String
+	 * @param string|int|null $proto PROTO_* constant
+	 * @return string|false
 	 */
 	public static function getURL( $shortCode, $proto = PROTO_RELATIVE ) {
 		$id = self::decodeId( $shortCode );
@@ -195,7 +195,7 @@ class UrlShortenerUtils {
 	 * Whether a URL is deleted or not
 	 *
 	 * @param string $shortCode
-	 * @return String
+	 * @return string|bool
 	 */
 	public static function isURLDeleted( $shortCode ) {
 		$id = self::decodeId( $shortCode );
