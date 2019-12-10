@@ -17,7 +17,7 @@ class ApiShortenUrl extends ApiBase {
 			$this->dieWithError( 'apierror-urlshortener-disabled' );
 		}
 
-		$this->checkUserRightsAny( 'urlshortener-create-url' );
+		$this->checkUserRights();
 
 		$params = $this->extractRequestParams();
 
@@ -40,6 +40,18 @@ class ApiShortenUrl extends ApiBase {
 		$this->getResult()->addValue( null, $this->getModuleName(),
 			[ 'shorturl' => $shortUrl ]
 		);
+	}
+
+	/**
+	 * Check that the user can create a short url
+	 * @throws ApiUsageException if the user lacks the rights
+	 */
+	public function checkUserRights() {
+		$user = $this->getUser();
+		if ( !$user->isAllowedAny( 'urlshortener-create-url' ) ) {
+			$this->dieWithError( [ 'apierror-permissiondenied',
+				$this->msg( "apierror-urlshortener-permissiondenied" ) ] );
+		}
 	}
 
 	public function mustBePosted() {

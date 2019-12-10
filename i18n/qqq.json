@@ -44,5 +44,6 @@
 	"urlshortener-url-input-label": "Label for the box the user inputs the URL to shorten.\n{{Identical|URL}}",
 	"urlshortener-url-input-submit": "Label for the submit button that shortens the URL",
 	"urlshortener-url-input-submitting": "Label for the submit button while the user waits for the result",
-	"urlshortener-url-too-long": "Error message when URL is too long, $1 is the limit"
+	"urlshortener-url-too-long": "Error message when URL is too long, $1 is the limit",
+	"urlshortener-badaccessgroups": "Error message when the user does not have the rights needed to create a short url"
 }

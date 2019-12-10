@@ -39,5 +39,6 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Shorten",
 	"urlshortener-url-input-submitting": "Shortening…",
-	"urlshortener-url-too-long": "The URL is too long, the maximum size is {{PLURAL:$1|one character|$1 characters}}"
+	"urlshortener-url-too-long": "The URL is too long, the maximum size is {{PLURAL:$1|one character|$1 characters}}",
+	"urlshortener-badaccessgroups": "You do not have the right to create short urls"
 }

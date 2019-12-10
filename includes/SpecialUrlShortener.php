@@ -27,6 +27,13 @@ class SpecialUrlShortener extends FormSpecialPage {
 		}
 	}
 
+	/**
+	 * @inheritDoc
+	 */
+	public function displayRestrictionError() {
+		throw new PermissionsError( 'urlshortener-create-url', [ 'urlshortener-badaccessgroups' ] );
+	}
+
 	protected function getDisplayFormat() {
 		return 'ooui';
 	}
