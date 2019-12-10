@@ -44,6 +44,21 @@
 			"UrlShortenerHooks::onBaseTemplateToolbox"
 		]
 	},
+	"LogTypes": [
+		"urlshortener"
+	],
+	"LogActionsHandlers": {
+		"urlshortener/*": "LogFormatter"
+	},
+	"ActionFilteredLogs": {
+		"urlshortener": {
+			"delete":  [ "delete" ],
+			"restore": [ "restore" ]
+		}
+	},
+	"LogRestrictions": {
+		"urlshortener": "urlshortener-view-log"
+	},
 	"MessagesDirs": {
 		"UrlShortener": [
 			"i18n",
@@ -115,15 +130,18 @@
 	},
 	"AvailableRights": [
 		"urlshortener-manage-url",
-		"urlshortener-create-url"
+		"urlshortener-create-url",
+		"urlshortener-view-log"
 	],
 	"GroupPermissions": {
 		"*": {
 			"urlshortener-manage-url": false,
+			"urlshortener-view-log": false,
 			"urlshortener-create-url": true
 		},
 		"sysop": {
 			"urlshortener-manage-url": true,
+			"urlshortener-view-log": true,
 			"urlshortener-create-url": true
 		}
 	},

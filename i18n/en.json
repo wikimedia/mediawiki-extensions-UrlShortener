@@ -1,15 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yuvi Panda"
+			"Yuvi Panda",
+			"Ammar Abdulhamid"
 		]
 	},
 	"action-urlshortener-create-url": "create short URLs",
 	"right-urlshortener-create-url": "Create short URLs",
 	"action-urlshortener-manage-url": "manage short URLs",
+	"action-urlshortener-view-log": "view short URLs management log",
 	"manageshorturls": "Manage short URLs",
 	"right-urlshortener-manage-url": "Manage short URLs",
 	"grant-shortenurls": "Create short URLs",
+	"right-urlshortener-view-log": "View short URLs management log",
 	"urlshortener": "URL Shortener",
 	"urlshortener-action-done": "URLs have been deleted and/or restored",
 	"urlshortener-approved-domains": "Links to the following {{PLURAL:$1|domain|domains}} may be shortened: $2.",
@@ -30,6 +33,7 @@
 	"urlshortener-manage-delete-failed": "Deleting URL failed",
 	"urlshortener-manage-not-enough-data": "You need to determine one URL short code to delete or restore",
 	"urlshortener-manage-restore-failed": "Restoring URL failed",
+	"urlshortener-manage-reason": "Reason",
 	"urlshortener-not-found-message": "Sorry, the URL you are looking for has not been found.",
 	"urlshortener-not-found-title": "Short URL not found",
 	"urlshortener-ratelimit": "Please wait some time before shortening more URLs.",
@@ -41,5 +45,13 @@
 	"urlshortener-url-input-submit": "Shorten",
 	"urlshortener-url-input-submitting": "Shortening…",
 	"urlshortener-url-too-long": "The URL is too long, the maximum size is {{PLURAL:$1|one character|$1 characters}}",
-	"urlshortener-badaccessgroups": "You do not have the right to create short urls"
+	"urlshortener-badaccessgroups": "You do not have the right to create short urls",
+	"log-name-urlshortener": "Short URLs management log",
+	"log-description-urlshortener": "This log shows deletion and restoration of short URLs. It does not show creation of new ones",
+	"logentry-urlshortener-delete": "$1 {{GENDER:$2|deleted}} the short url \"$4\"",
+	"logentry-urlshortener-restore": "$1 {{GENDER:$2|restored}} the short url \"$4\"",
+	"logeventslist-urlshortener-log": "Short URLs management log",
+	"log-action-filter-urlshortener": "Type of management",
+	"log-action-filter-urlshortener-delete": "URL Deletion",
+	"log-action-filter-urlshortener-restore": "URL Restoration"
 }

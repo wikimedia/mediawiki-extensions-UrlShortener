@@ -48,6 +48,12 @@ class SpecialManageShortUrls extends FormSpecialPage {
 				'label-message' => 'urlshortener-enter-short-code-restore',
 				'name' => 'shortCodeRestore'
 			],
+			'reason' => [
+				'type' => 'text',
+				'default' => '',
+				'label-message' => 'urlshortener-manage-reason',
+				'name' => 'reason'
+			],
 		];
 	}
 
@@ -72,6 +78,7 @@ class SpecialManageShortUrls extends FormSpecialPage {
 		$success = false;
 		$delete = $formData['shortCodeDelete'];
 		$restore = $formData['shortCodeRestore'];
+		$reason = $formData['reason'];
 
 		if ( !$delete && !$restore ) {
 			return [ 'urlshortener-manage-not-enough-data' ];
@@ -100,8 +107,24 @@ class SpecialManageShortUrls extends FormSpecialPage {
 		}
 
 		if ( $errors === [] ) {
+			$subtype = $delete ? 'delete' : 'restore';
+			$target = $delete ?: $restore;
+
+			// Log the action
+			$logEntry = new ManualLogEntry( 'urlshortener', $subtype );
+			$logEntry->setPerformer( $this->getUser() );
+			// Set some dummy title. It is required to be set, otherwise we're not using it.
+			$logEntry->setTarget( $this->getTitleFor( 'UrlShortener' ) );
+			$logEntry->setComment( $reason );
+			$logEntry->setParameters(
+				[ '4::realtarget' => $target ]
+			);
+			$logId = $logEntry->insert();
+			$logEntry->publish( $logId );
+
 			return $success;
 		}
+
 		return $errors;
 	}
 

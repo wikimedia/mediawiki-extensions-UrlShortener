@@ -6,15 +6,18 @@
 			"Beta16",
 			"Umherirrender",
 			"Hamilton Abreu",
-			"Skalman"
+			"Skalman",
+			"Ammar Abdulhamid"
 		]
 	},
-	"action-urlshortener-create-url": "{{Doc-action|urlshortener-create-url}}",
+	"action-urlshortener-create-url": "{{doc-action|urlshortener-create-url}}",
 	"right-urlshortener-create-url": "{{doc-right|urlshortener-create-url}}",
-	"action-urlshortener-manage-url": "{{Doc-action|urlshortener-manage-url}}",
+	"action-urlshortener-manage-url": "{{doc-action|urlshortener-manage-url}}",
+	"action-urlshortener-view-log": "{{doc-action|urlshortener-view-log}}",
 	"manageshorturls": "Title of the special page",
 	"right-urlshortener-manage-url": "{{doc-right|urlshortener-manage-url}}",
 	"grant-shortenurls": "Name for grant \"shortenurls\".\n{{Related|Grant}}",
+	"right-urlshortener-view-log": "{{doc-right|urlshortener-view-log}}",
 	"urlshortener": "{{doc-special|UrlShortner}}",
 	"urlshortener-action-done": "Message when the action is done",
 	"urlshortener-approved-domains": "Help message displayed on Special:UrlShortener showing which domains can be shortened. $1 is the number of domains, $2 is a comma separated list of domains.",
@@ -35,6 +38,7 @@
 	"urlshortener-manage-delete-failed": "Error message when deleting fails",
 	"urlshortener-manage-not-enough-data": "Error message when not enough provided to do any action",
 	"urlshortener-manage-restore-failed": "Error message when restoring fails",
+	"urlshortener-manage-reason": "Label for reason field for URL short code deletion or restoration",
 	"urlshortener-not-found-message": "Message for page shown when user tries to access a short url that does not exist.\n\nThe page title for this message is {{msg-mw|Urlshortener-not-found-title}}.",
 	"urlshortener-not-found-title": "Title for page shown when user tries to access a short url that does not exist\n\nThe body for this title is:\n* {{msg-mw|Urlshortener-not-found-message}}",
 	"urlshortener-ratelimit": "Error message shown when a user shortens too many urls in a short period of time",
@@ -46,5 +50,13 @@
 	"urlshortener-url-input-submit": "Label for the submit button that shortens the URL",
 	"urlshortener-url-input-submitting": "Label for the submit button while the user waits for the result",
 	"urlshortener-url-too-long": "Error message when URL is too long, $1 is the limit",
-	"urlshortener-badaccessgroups": "Error message when the user does not have the rights needed to create a short url"
+	"urlshortener-badaccessgroups": "Error message when the user does not have the rights needed to create a short url",
+	"log-name-urlshortener": "Name of log that appears as heading of [[Special:Log]].",
+	"log-description-urlshortener": "Description of log that appears when URL management log is selected at [[Special:Log]].",
+	"logentry-urlshortener-delete": "Log entry that is created when a user deleted a short URL. Parameters:\n* $1 is a username of the acting user.\n* $2 is the action (deletion) and can be used with GENDER magicword.\n* $4 is the deleted URL",
+	"logentry-urlshortener-restore": "Log entry that is created when a user restored a short URL. Parameters:\n* $1 is a username of the acting user.\n* $2 is the action (restoration) and can be used with GENDER magicword.\n* $4 is the restored URL",
+	"logeventslist-urlshortener-log": "Option label to select URL management log that appears in dropdown at [[Special:Log]]",
+	"log-action-filter-urlshortener": "Label message for filtering log",
+	"log-action-filter-urlshortener-delete": "Option to filter URL deletions at [[Special:Log]]",
+	"log-action-filter-urlshortener-restore": "Option to filter URL restorations at [[Special:Log]]"
 }
