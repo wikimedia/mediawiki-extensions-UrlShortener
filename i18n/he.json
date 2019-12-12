@@ -43,5 +43,6 @@
 	"urlshortener-url-input-label": "כתובת URL",
 	"urlshortener-url-input-submit": "לקצר",
 	"urlshortener-url-input-submitting": "קיצור...",
-	"urlshortener-url-too-long": "ה־URL ארוך מדי, האורך המרבי הוא {{PLURAL:$1|תו אחד|$1 תווים}}"
+	"urlshortener-url-too-long": "ה־URL ארוך מדי, האורך המרבי הוא {{PLURAL:$1|תו אחד|$1 תווים}}",
+	"urlshortener-badaccessgroups": "אין לך הרשאה ליצור כתובות URL קצרות"
 }

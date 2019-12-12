@@ -39,5 +39,6 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Скрати",
 	"urlshortener-url-input-submitting": "Скратувам…",
-	"urlshortener-url-too-long": "URL-то е предолго. {{PLURAL:$1|Допуштен е највеќе еден знак|Допуштени се највеќе $1 знаци}}"
+	"urlshortener-url-too-long": "URL-то е предолго. {{PLURAL:$1|Допуштен е највеќе еден знак|Допуштени се највеќе $1 знаци}}",
+	"urlshortener-badaccessgroups": "Немате право да создавање кратки URL-а"
 }

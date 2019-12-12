@@ -8,5 +8,6 @@
 	"apihelp-shortenurl-summary": "Gjør en lang URL kort.",
 	"apihelp-shortenurl-param-url": "URL som skal forkortes.",
 	"apihelp-shortenurl-example-1": "Hent kort URL for <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "Ingen nye korte URL-er kan opprettes"
+	"apierror-urlshortener-disabled": "Ingen nye korte URL-er kan opprettes",
+	"apierror-urlshortener-permissiondenied": "Du har ikke rettigheter til å opprette korte URL-er"
 }

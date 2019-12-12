@@ -42,5 +42,6 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "簡短",
 	"urlshortener-url-input-submitting": "簡短中...",
-	"urlshortener-url-too-long": "URL 太長，最大長度是 {{PLURAL:$1|1|$1}} 個字元"
+	"urlshortener-url-too-long": "URL 太長，最大長度是 {{PLURAL:$1|1|$1}} 個字元",
+	"urlshortener-badaccessgroups": "您沒有權限來建立簡短的 URL"
 }

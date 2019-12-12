@@ -8,5 +8,6 @@
 	"apihelp-shortenurl-summary": "اختصر مسارا طويلا إلى واحد قصير.",
 	"apihelp-shortenurl-param-url": "مسار لتقصيره.",
 	"apihelp-shortenurl-example-1": "احصل على المسار المختصر لـ<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "لا يجوز إنشاء مسارات قصيرة جديدة"
+	"apierror-urlshortener-disabled": "لا يجوز إنشاء مسارات قصيرة جديدة",
+	"apierror-urlshortener-permissiondenied": "ليست لديك صلاحية لإنشاء مسارات قصيرة"
 }

@@ -8,5 +8,6 @@
 	"apihelp-shortenurl-summary": "Acurtiar una URL llarga a una más curtia.",
 	"apihelp-shortenurl-param-url": "URL a acurtiar.",
 	"apihelp-shortenurl-example-1": "Algamar la URL curtia pa <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "Nun pueden crease URL curties nueves"
+	"apierror-urlshortener-disabled": "Nun pueden crease URL curties nueves",
+	"apierror-urlshortener-permissiondenied": "Nun tienes permisu pa crear urls curties"
 }

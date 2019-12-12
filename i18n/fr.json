@@ -45,5 +45,6 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Raccourcir",
 	"urlshortener-url-input-submitting": "En cours…",
-	"urlshortener-url-too-long": "L’URL est trop longue, la taille maximale est de {{PLURAL:$1|un caractère|$1 caractères}}"
+	"urlshortener-url-too-long": "L’URL est trop longue, la taille maximale est de {{PLURAL:$1|un caractère|$1 caractères}}",
+	"urlshortener-badaccessgroups": "Vous n’êtes pas autorisé{{GENDER:||e}} à créer des URL raccourcies."
 }

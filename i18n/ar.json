@@ -41,5 +41,6 @@
 	"urlshortener-url-input-label": "المسار",
 	"urlshortener-url-input-submit": "تقصير",
 	"urlshortener-url-input-submitting": "جارِ التقصير…",
-	"urlshortener-url-too-long": "المسار طويل جدا، والحد الأقصى للحجم هو {{PLURAL:$1|حرف واحد|$1 حروف}}"
+	"urlshortener-url-too-long": "المسار طويل جدا، والحد الأقصى للحجم هو {{PLURAL:$1|حرف واحد|$1 حروف}}",
+	"urlshortener-badaccessgroups": "ليست لديك صلاحية لإنشاء مسارات قصيرة"
 }
