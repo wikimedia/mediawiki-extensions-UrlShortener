@@ -4,5 +4,6 @@
 			"Ykhwong"
 		]
 	},
-	"apihelp-shortenurl-summary": "긴 URL을 짧게 줄입니다."
+	"apihelp-shortenurl-summary": "긴 URL을 짧게 줄입니다.",
+	"apierror-urlshortener-permissiondenied": "단축 URL을 만들 권한이 없습니다"
 }

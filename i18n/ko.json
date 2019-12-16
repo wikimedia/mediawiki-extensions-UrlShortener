@@ -43,5 +43,6 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "단축",
 	"urlshortener-url-input-submitting": "단축하는 중...",
-	"urlshortener-url-too-long": "URL이 너무 깁니다, 최대 크기는 {{PLURAL:$1|1개 문자|$1개 문자}}입니다."
+	"urlshortener-url-too-long": "URL이 너무 깁니다, 최대 크기는 {{PLURAL:$1|1개 문자|$1개 문자}}입니다.",
+	"urlshortener-badaccessgroups": "단축 URL을 만들 권한이 없습니다"
 }
