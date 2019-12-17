@@ -39,5 +39,6 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Accorce",
 	"urlshortener-url-input-submitting": "Stoche accorce...",
-	"urlshortener-url-too-long": "'A URL jè troppe longhe, 'a dimenzione mssime jè de {{PLURAL:$1|'nu|$1}} carattere"
+	"urlshortener-url-too-long": "'A URL jè troppe longhe, 'a dimenzione mssime jè de {{PLURAL:$1|'nu|$1}} carattere",
+	"urlshortener-badaccessgroups": "Non ge tìne le deritte pe ccrejà le URL curte"
 }
