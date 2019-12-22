@@ -69,6 +69,7 @@ class SpecialManageShortUrls extends FormSpecialPage {
 	 */
 	public function onSubmit( array $formData ) {
 		$errors = [];
+		$success = false;
 		$delete = $formData['shortCodeDelete'];
 		$restore = $formData['shortCodeRestore'];
 
