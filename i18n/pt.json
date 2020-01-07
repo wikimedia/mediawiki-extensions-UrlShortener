@@ -41,5 +41,6 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Encurtar",
 	"urlshortener-url-input-submitting": "A encurtar...",
-	"urlshortener-url-too-long": "O URL é demasiado longo; o comprimento máximo é {{PLURAL:$1|um carácter|$1 caracteres}}"
+	"urlshortener-url-too-long": "O URL é demasiado longo; o comprimento máximo é {{PLURAL:$1|um carácter|$1 caracteres}}",
+	"urlshortener-badaccessgroups": "Não tem o direito de criar URL curtos"
 }
