@@ -9,5 +9,6 @@
 	"apihelp-shortenurl-summary": "Reduzir um URL longo para um mais curto.",
 	"apihelp-shortenurl-param-url": "URL a ser encurtado.",
 	"apihelp-shortenurl-example-1": "Obter o URL curto para <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "Não é possível criar novos URL curtos"
+	"apierror-urlshortener-disabled": "Não é possível criar novos URL curtos",
+	"apierror-urlshortener-permissiondenied": "Não tem o direito de criar URL curtos"
 }
