@@ -120,7 +120,9 @@
 		 * @param {string} status either 'submitting' or 'submit'
 		 */
 		setSubmit: function ( status ) {
-			// urlshortener-url-input-submitting, urlshortener-url-input-submit
+			// The following messages are used here:
+			// * urlshortener-url-input-submitting
+			// * urlshortener-url-input-submit
 			this.submit.setLabel( mw.message( 'urlshortener-url-input-' + status ).text() );
 		},
 
