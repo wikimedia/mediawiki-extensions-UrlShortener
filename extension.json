@@ -30,6 +30,7 @@
 		"UrlShortenerAlias": "UrlShortener.alias.php",
 		"UrlShortenerNoTranslateAlias": "UrlShortener.notranslate-alias.php"
 	},
+	"callback": "UrlShortenerHooks::onRegistration",
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": [
 			"UrlShortenerHooks::onLoadExtensionSchemaUpdates"
@@ -97,6 +98,7 @@
 				"urlshortener-error-disallowed-url",
 				"urlshortener-error-malformed-url",
 				"urlshortener-error-nouserpass",
+				"urlshortener-shortened-url-alt",
 				"urlshortener-shortened-url-label",
 				"urlshortener-url-input-submit",
 				"urlshortener-url-input-submitting"
@@ -184,6 +186,9 @@
 		},
 		"UrlShortenerIdMapping": {
 			"value": []
+		},
+		"UrlShortenerAltPrefix": {
+			"value": "_"
 		},
 		"UrlShortenerServer": {
 			"value": false

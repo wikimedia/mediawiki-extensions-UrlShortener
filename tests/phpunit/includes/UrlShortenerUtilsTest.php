@@ -176,6 +176,10 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 			$encoded = UrlShortenerUtils::encodeId( $int );
 			$decoded = UrlShortenerUtils::decodeId( $encoded );
 			$this->assertEquals( $int, $decoded );
+			// Alternative URLs
+			$encoded = UrlShortenerUtils::encodeId( $int, true );
+			$decoded = UrlShortenerUtils::decodeId( $encoded );
+			$this->assertEquals( $int, $decoded );
 		}
 	}
 
@@ -215,7 +219,7 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 		$url = 'http://example.org/1';
 		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
 		$this->assertTrue( $status->isGood() );
-		$id = $status->getValue();
+		$id = $status->getValue()['url'];
 		$storedUrl = UrlShortenerUtils::getURL( $id, PROTO_HTTP );
 
 		$this->assertEquals( $url, $storedUrl );
@@ -242,7 +246,7 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 	public function testDeleteURL() {
 		$url = 'http://example.org/1';
 		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
-		$id = $status->getValue();
+		$id = $status->getValue()['url'];
 
 		UrlShortenerUtils::deleteURL( $id );
 
@@ -256,7 +260,7 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 	public function testRestoreURL() {
 		$url = 'http://example.org/1';
 		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
-		$id = $status->getValue();
+		$id = $status->getValue()['url'];
 		UrlShortenerUtils::deleteURL( $id );
 
 		UrlShortenerUtils::restoreURL( $id );

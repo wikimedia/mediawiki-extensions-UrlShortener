@@ -31,14 +31,17 @@ class ApiShortenUrl extends ApiBase {
 		if ( !$status->isOK() ) {
 			$this->dieStatus( $status );
 		}
-		$shortUrl = UrlShortenerUtils::makeUrl( $status->getValue() );
+		$shortUrls = $status->getValue();
 
 		// You get the cached response, YOU get the cached response, EVERYONE gets the cached response.
 		$this->getMain()->setCacheMode( "public" );
 		$this->getMain()->setCacheMaxAge( UrlShortenerUtils::CACHE_TTL_VALID );
 
 		$this->getResult()->addValue( null, $this->getModuleName(),
-			[ 'shorturl' => $shortUrl ]
+			[
+				'shorturl' => UrlShortenerUtils::makeUrl( $shortUrls[ 'url' ] ),
+				'shorturlalt' => UrlShortenerUtils::makeUrl( $shortUrls[ 'alt' ] )
+			]
 		);
 	}
 
