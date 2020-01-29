@@ -139,7 +139,7 @@
 			} ).then( function ( data ) {
 				return data.shortenurl.shorturl;
 			}, function ( errCode, data ) {
-				return $.Deferred().reject( data.error );
+				return $.Deferred().reject( data.error ).promise();
 			} );
 		}
 	};
