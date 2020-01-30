@@ -109,11 +109,14 @@
 
 		init: function () {
 			// eslint-disable-next-line no-jquery/no-global-selector
-			this.fieldLayout = OO.ui.infuse( $( 'form > .mw-htmlform-field-HTMLTextFieldWithButton' ) );
-			this.input = this.fieldLayout.fieldWidget;
-			this.input.setValidation( this.validateInput );
-			this.submit = this.fieldLayout.buttonWidget;
-			this.submit.on( 'click', this.onSubmit );
+			var $field = $( 'form > .mw-htmlform-field-HTMLTextFieldWithButton' );
+			if ( $field.length ) {
+				this.fieldLayout = OO.ui.infuse( $field );
+				this.input = this.fieldLayout.fieldWidget;
+				this.input.setValidation( this.validateInput );
+				this.submit = this.fieldLayout.buttonWidget;
+				this.submit.on( 'click', this.onSubmit );
+			}
 		},
 
 		/**
