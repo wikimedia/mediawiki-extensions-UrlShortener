@@ -23,7 +23,7 @@
 	"urlshortener-error-badports": "URL-а што содржат порти кои не е допуштено да се кратат",
 	"urlshortener-error-disallowed-url": "Не е дозволено кратење URL-адреси до доменот $1",
 	"urlshortener-error-malformed-url": "Ова не претставува важечка URL",
-	"urlshortener-error-nouserpass": "Не е дозволено кратење на URL-ата што содржат корисничко име или јавка",
+	"urlshortener-error-nouserpass": "Не е дозволено кратење на URL-ата што содржат корисничко име или лозинка",
 	"urlshortener-failed-try-again": "Не успеа. Да се обидам повторно?",
 	"urlshortener-form-header": "Тука ставете ја долгата URL",
 	"urlshortener-manage-delete-failed": "Бришењето на URL-то не успеа",
