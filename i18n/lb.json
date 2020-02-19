@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Soued031"
 		]
 	},
 	"urlshortener-approved-domains": "Linken op {{PLURAL:$1|dësen Domain|dës Domaine}} kënne gekierzt ginn: $2.",
@@ -9,7 +10,7 @@
 	"urlshortener-error-malformed-url": "Keng valabel URL",
 	"urlshortener-failed-try-again": "Huet net fonctionnéiert. Nach eng Kéier probéieren?",
 	"urlshortener-not-found-title": "Kuerz URL gouf net fonnt",
-	"urlshortener-ratelimit": "Waart w.e.g. e bësse ier Dir méi URLe kierzt.",
+	"urlshortener-ratelimit": "Waart wgl. e bësse ier Dir méi URLe kierzt.",
 	"urlshortener-shortened-url-label": "Gekierzt URL",
 	"urlshortener-toolbox": "Gekierzt URL kréien",
 	"urlshortener-url-input-label": "URL",
