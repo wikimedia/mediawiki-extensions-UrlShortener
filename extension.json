@@ -133,6 +133,7 @@
 		"UrlShortenerDBName": false,
 		"UrlShortenerDomainsWhitelist": false,
 		"UrlShortenerIdSet": "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$",
+		"UrlShortenerIdMapping": {},
 		"UrlShortenerServer": false,
 		"UrlShortenerTemplate": false,
 		"UrlShortenerAllowArbitraryPorts": false,

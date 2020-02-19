@@ -403,13 +403,16 @@ class UrlShortenerUtils {
 	 * @return int|false
 	 */
 	public static function decodeId( $s ) {
-		global $wgUrlShortenerIdSet;
+		global $wgUrlShortenerIdSet, $wgUrlShortenerIdMapping;
 
 		$n = strlen( $wgUrlShortenerIdSet );
 		if ( self::$decodeMap === null ) {
 			self::$decodeMap = [];
 			for ( $i = 0; $i < $n; $i++ ) {
 				self::$decodeMap[$wgUrlShortenerIdSet[$i]] = $i;
+			}
+			foreach ( $wgUrlShortenerIdMapping ?? [] as $k => $v ) {
+				self::$decodeMap[$k] = self::$decodeMap[$v];
 			}
 		}
 		$x = 0;
