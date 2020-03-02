@@ -15,7 +15,7 @@
 	"right-urlshortener-manage-url": "керування короткими посиланнями",
 	"urlshortener": "Скорочувач URL-адрес",
 	"urlshortener-action-done": "Посилання були вилучені та/або відновлені",
-	"urlshortener-approved-domains": "Посилання на {{PLURAL:$1|наступні домени|наступний домен}} можуть бути скорочено: $2.",
+	"urlshortener-approved-domains": "Скоротити можна посилання на {{PLURAL:$1|такий домен|такі домени}}: $2.",
 	"urlshortener-blocked": "Заблоковані користувачі не можуть створювати коротких посилань.",
 	"urlshortener-copy-fail": "Не вдалося скопіювати URL до буфера.",
 	"urlshortener-copy-success": "URL скопійовано в буфер обміну.",
@@ -43,5 +43,6 @@
 	"urlshortener-url-input-label": "URL-адреса",
 	"urlshortener-url-input-submit": "Скоротити",
 	"urlshortener-url-input-submitting": "Скорочення…",
-	"urlshortener-url-too-long": "Посилання надто довге, максимальний розмір становить {{PLURAL:$1|один символ|$1 символи|$1 символів}}"
+	"urlshortener-url-too-long": "Посилання надто довге, максимальний розмір становить {{PLURAL:$1|один символ|$1 символи|$1 символів}}",
+	"urlshortener-badaccessgroups": "У вас немає прав на створення коротких URL-адрес"
 }
