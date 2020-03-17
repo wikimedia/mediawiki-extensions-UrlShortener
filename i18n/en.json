@@ -30,6 +30,7 @@
 	"urlshortener-error-nouserpass": "URLs that contain a username or password are not allowed to be shortened",
 	"urlshortener-failed-try-again": "Failed. Try again?",
 	"urlshortener-form-header": "Paste your long URL here",
+	"urlshortener-manage-text": "Use the form below to delete a short URL or restore a deleted one.<br>After deleting a short URL here, the short link will no longer redirect to the page it used to. All links made with it will break. Please use this feature carefully. This action will be [[Special:Log/urlshortener|logged]].",
 	"urlshortener-manage-delete-failed": "Deleting URL failed",
 	"urlshortener-manage-not-enough-data": "You need to determine one URL short code to delete or restore",
 	"urlshortener-manage-restore-failed": "Restoring URL failed",

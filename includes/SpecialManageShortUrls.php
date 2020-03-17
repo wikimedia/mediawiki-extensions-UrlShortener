@@ -23,6 +23,7 @@ class SpecialManageShortUrls extends FormSpecialPage {
 			$this->setHeaders();
 			$this->getOutput()->addWikiMsg( 'urlshortener-disabled' );
 		} else {
+			$this->getOutput()->addWikiMsg( 'urlshortener-manage-text' );
 			parent::execute( $par );
 		}
 	}

@@ -35,6 +35,7 @@
 	"urlshortener-error-nouserpass": "Error message shown when the URL cannot be shortened because it contains a username or password (e.g. http://user:password@example.org/)",
 	"urlshortener-failed-try-again": "Generic failure message with option to try again",
 	"urlshortener-form-header": "Message shown above the form where the user can paste a URL to be shortened",
+	"urlshortener-manage-text": "Message shown on a special page where a user can delete or restore a short URL",
 	"urlshortener-manage-delete-failed": "Error message when deleting fails",
 	"urlshortener-manage-not-enough-data": "Error message when not enough provided to do any action",
 	"urlshortener-manage-restore-failed": "Error message when restoring fails",
