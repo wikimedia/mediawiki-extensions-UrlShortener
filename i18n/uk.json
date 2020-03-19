@@ -9,10 +9,10 @@
 		]
 	},
 	"action-urlshortener-create-url": "створення коротких посилань",
-	"right-urlshortener-create-url": "створення коротких посилань",
-	"action-urlshortener-manage-url": "керування короткими посиланнями",
+	"right-urlshortener-create-url": "Створення коротких посилань",
+	"action-urlshortener-manage-url": "керування короткими URL-адресами",
 	"manageshorturls": "керування короткими посиланнями",
-	"right-urlshortener-manage-url": "керування короткими посиланнями",
+	"right-urlshortener-manage-url": "Керування короткими URL-адресами",
 	"urlshortener": "Скорочувач URL-адрес",
 	"urlshortener-action-done": "Посилання були вилучені та/або відновлені",
 	"urlshortener-approved-domains": "Скоротити можна посилання на {{PLURAL:$1|такий домен|такі домени}}: $2.",
