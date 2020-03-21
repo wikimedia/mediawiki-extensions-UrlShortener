@@ -9,6 +9,7 @@
 	"action-urlshortener-manage-url": "manage short URLs",
 	"manageshorturls": "Manage short URLs",
 	"right-urlshortener-manage-url": "Manage short URLs",
+	"grant-shortenurls": "Create short URLs",
 	"urlshortener": "URL Shortener",
 	"urlshortener-action-done": "URLs have been deleted and/or restored",
 	"urlshortener-approved-domains": "Links to the following {{PLURAL:$1|domain|domains}} may be shortened: $2.",

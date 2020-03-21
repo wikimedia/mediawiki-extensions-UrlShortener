@@ -127,6 +127,14 @@
 			"urlshortener-create-url": true
 		}
 	},
+	"GrantPermissions": {
+		"shortenurls": {
+			"urlshortener-create-url": true
+		}
+	},
+	"GrantPermissionGroups": {
+		"shortenurls": "administration"
+	},
 	"config": {
 		"UrlShortenerApprovedDomains": false,
 		"UrlShortenerDBCluster": false,
