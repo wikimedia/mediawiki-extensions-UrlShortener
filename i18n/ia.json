@@ -4,5 +4,16 @@
 			"McDutchie"
 		]
 	},
-	"urlshortener-disabled": "Le creation de URLs curte es disactivate pro le momento."
+	"action-urlshortener-view-log": "vider le registro de gestion de URLs curte",
+	"right-urlshortener-view-log": "Vider le registro de gestion de URLs curte",
+	"urlshortener-disabled": "Le creation de URLs curte es disactivate pro le momento.",
+	"urlshortener-manage-reason": "Motivo",
+	"log-name-urlshortener": "Registro de gestion de URLs curte",
+	"log-description-urlshortener": "Iste registro monstra le deletion e restauration de URLs curte. Illo non monstra lor creation.",
+	"logentry-urlshortener-delete": "$1 {{GENDER:$2|ha delite}} le URL curte \"$4\"",
+	"logentry-urlshortener-restore": "$1 {{GENDER:$2|ha restaurate}} le URL curte \"$4\"",
+	"logeventslist-urlshortener-log": "Registro de gestion de URLs curte",
+	"log-action-filter-urlshortener": "Typo de gestion",
+	"log-action-filter-urlshortener-delete": "Deletion de URLs",
+	"log-action-filter-urlshortener-restore": "Restauration de URLs"
 }

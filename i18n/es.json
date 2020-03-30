@@ -12,6 +12,7 @@
 	"action-urlshortener-manage-url": "gestionar URL cortos",
 	"manageshorturls": "Gestionar URL cortos",
 	"right-urlshortener-manage-url": "Gestionar URL cortos",
+	"grant-shortenurls": "Crear URL cortos",
 	"urlshortener": "Acortador de URL",
 	"urlshortener-approved-domains": "Los enlaces {{PLURAL:$1|al siguiente dominio|a los siguientes dominios}} pueden acortarse: $2.",
 	"urlshortener-blocked": "Los usuarios bloqueados no pueden crear URL cortos.",

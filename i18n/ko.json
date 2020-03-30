@@ -13,6 +13,7 @@
 	"action-urlshortener-manage-url": "단축 URL을 관리할",
 	"manageshorturls": "단축 URL 관리하기",
 	"right-urlshortener-manage-url": "단축 URL 관리하기",
+	"grant-shortenurls": "단축 URL 만들기",
 	"urlshortener": "URL 단축기",
 	"urlshortener-action-done": "URL이 삭제 또는 복구되었습니다",
 	"urlshortener-approved-domains": "다음에 해당하는 {{PLURAL:$1|도메인}}을 축약할 수 있습니다: $2",
@@ -33,6 +34,7 @@
 	"urlshortener-manage-delete-failed": "URL을 삭제하지 못했습니다",
 	"urlshortener-manage-not-enough-data": "삭제하거나 복구할 한 개의 URL 단축 코드를 선택해야 합니다.",
 	"urlshortener-manage-restore-failed": "URL을 복구하지 못했습니다",
+	"urlshortener-manage-reason": "이유",
 	"urlshortener-not-found-message": "죄송합니다, 검색하신 URL을 찾을 수 없습니다.",
 	"urlshortener-not-found-title": "짧은 URL을 찾을 수 없습니다",
 	"urlshortener-ratelimit": "URL을 축약하는 동안 기다려 주세요.",
@@ -44,5 +46,7 @@
 	"urlshortener-url-input-submit": "단축",
 	"urlshortener-url-input-submitting": "단축하는 중...",
 	"urlshortener-url-too-long": "URL이 너무 깁니다, 최대 크기는 {{PLURAL:$1|1개 문자|$1개 문자}}입니다.",
-	"urlshortener-badaccessgroups": "단축 URL을 만들 권한이 없습니다"
+	"urlshortener-badaccessgroups": "단축 URL을 만들 권한이 없습니다",
+	"log-action-filter-urlshortener-delete": "URL 삭제",
+	"log-action-filter-urlshortener-restore": "URL 복원"
 }

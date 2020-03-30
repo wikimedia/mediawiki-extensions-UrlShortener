@@ -32,6 +32,7 @@
 	"urlshortener-manage-delete-failed": "Misslyckades att radera webbadressen",
 	"urlshortener-manage-not-enough-data": "Du måste bestämma en url:s korta kod att radera eller återställa",
 	"urlshortener-manage-restore-failed": "Misslyckades att återställa webbadressen",
+	"urlshortener-manage-reason": "Anledning",
 	"urlshortener-not-found-message": "Beklagar, den URL du söker har inte hittats.",
 	"urlshortener-not-found-title": "Kort URL hittades inte",
 	"urlshortener-ratelimit": "Var vänlig vänta en viss tid innan du kortar ned fler webbadresser.",

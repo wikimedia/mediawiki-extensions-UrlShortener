@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Y-M D"
+			"Y-M D",
+			"Fulup"
 		]
 	},
 	"urlshortener": "Berraer URLoù",
+	"urlshortener-manage-reason": "Abeg",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Berraet"
 }

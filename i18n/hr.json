@@ -1,12 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bugoslav"
+			"Bugoslav",
+			"Neptune, the Mystic"
 		]
 	},
-	"action-urlshortener-manage-url": "Upravljaj kratkim URL-ovima",
+	"action-urlshortener-create-url": "stvaranje kratkih URL-ova",
+	"right-urlshortener-create-url": "Stvaranje kratkih URL-ova",
+	"action-urlshortener-manage-url": "upravljanje kratkim URL-ovima",
+	"action-urlshortener-view-log": "pregled evidencije upravljanja kratkim URL-ovima",
 	"manageshorturls": "Upravljanje kratkim URL-ovima",
 	"right-urlshortener-manage-url": "Upravljanje kratkim URL-ovima",
+	"grant-shortenurls": "Oblikuj kratke URL-ove",
 	"urlshortener": "Skraćivač URL-ova",
 	"urlshortener-action-done": "URL-ovi koji su izbrisani i/ili vraćeni",
 	"urlshortener-blocked": "Blokirani suradnici ne mogu stvarati kratke URL-ove.",
@@ -34,5 +39,7 @@
 	"urlshortener-url-input-label": "URL adresa",
 	"urlshortener-url-input-submit": "Skrati",
 	"urlshortener-url-input-submitting": "Skraćujem…",
-	"urlshortener-url-too-long": "URL je predug, najveća dužina je {{PLURAL:$1|1=jedan znak|$1 znak|$1 znaka|$1 znakova}}"
+	"urlshortener-url-too-long": "URL je predug, najveća dužina je {{PLURAL:$1|1=jedan znak|$1 znak|$1 znaka|$1 znakova}}",
+	"logentry-urlshortener-delete": "$1 {{GENDER:$2|izbrisao|izbrisala|izbrisala / izbrisao}} je kratki URL »$4«",
+	"logentry-urlshortener-restore": "$1 {{GENDER:$2|vratio|vratila|vratila / vratio}} je kratki URL »$4«"
 }

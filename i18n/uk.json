@@ -8,11 +8,14 @@
 			"Vlad5250"
 		]
 	},
-	"action-urlshortener-create-url": "створення коротких посилань",
-	"right-urlshortener-create-url": "Створення коротких посилань",
+	"action-urlshortener-create-url": "створення коротких URL-адрес",
+	"right-urlshortener-create-url": "Створення коротких URL-адрес",
 	"action-urlshortener-manage-url": "керування короткими URL-адресами",
+	"action-urlshortener-view-log": "перегляд журналу керування короткими URL-адресами",
 	"manageshorturls": "керування короткими посиланнями",
 	"right-urlshortener-manage-url": "Керування короткими URL-адресами",
+	"grant-shortenurls": "Створення коротких URL-адрес",
+	"right-urlshortener-view-log": "Перегляд журналу керування короткими URL-адресами",
 	"urlshortener": "Скорочувач URL-адрес",
 	"urlshortener-action-done": "Посилання були вилучені та/або відновлені",
 	"urlshortener-approved-domains": "Скоротити можна посилання на {{PLURAL:$1|такий домен|такі домени}}: $2.",
@@ -33,6 +36,7 @@
 	"urlshortener-manage-delete-failed": "Не вдалося вилучити посилання",
 	"urlshortener-manage-not-enough-data": "Вам треба визначити один короткий код посилання для вилучення чи відновлення",
 	"urlshortener-manage-restore-failed": "Не вдалося відновити посилання",
+	"urlshortener-manage-reason": "Причина",
 	"urlshortener-not-found-message": "Вибачте, URL-адресу, яку ви шукаєте, не знайдено.",
 	"urlshortener-not-found-title": "Коротку URL-адресу не знайдено",
 	"urlshortener-ratelimit": "Будь ласка, зачекайте деякий час перш ніж скорочувати більше URLів.",
@@ -44,5 +48,13 @@
 	"urlshortener-url-input-submit": "Скоротити",
 	"urlshortener-url-input-submitting": "Скорочення…",
 	"urlshortener-url-too-long": "Посилання надто довге, максимальний розмір становить {{PLURAL:$1|один символ|$1 символи|$1 символів}}",
-	"urlshortener-badaccessgroups": "У вас немає прав на створення коротких URL-адрес"
+	"urlshortener-badaccessgroups": "У вас немає прав на створення коротких URL-адрес",
+	"log-name-urlshortener": "Журнал керування короткими URL-адресами",
+	"log-description-urlshortener": "Цей журнал показує вилучення і відновлення коротких URL-адрес. Він не показує створення нових.",
+	"logentry-urlshortener-delete": "$1 {{GENDER:$2|вилучив|вилучила}} коротку URL-адресу «$4»",
+	"logentry-urlshortener-restore": "$1 {{GENDER:$2|відновив|відновила}} коротку URL-адресу «$4»",
+	"logeventslist-urlshortener-log": "Журнал керування короткими URL-адресами",
+	"log-action-filter-urlshortener": "Різновид дії",
+	"log-action-filter-urlshortener-delete": "Вилучення URL-адреси",
+	"log-action-filter-urlshortener-restore": "Відновлення URL-адреси"
 }

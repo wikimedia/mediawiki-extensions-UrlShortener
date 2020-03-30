@@ -13,6 +13,7 @@
 	"action-urlshortener-manage-url": "管理短網址",
 	"manageshorturls": "管理短網址",
 	"right-urlshortener-manage-url": "管理短網址",
+	"grant-shortenurls": "建立短網址",
 	"urlshortener": "縮網址器",
 	"urlshortener-action-done": "網址已被刪除且/或恢復",
 	"urlshortener-approved-domains": "連接至以下{{PLURAL:$1|網域|網域}}可被縮短：$2。",

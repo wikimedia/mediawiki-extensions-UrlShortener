@@ -15,6 +15,7 @@
 	"action-urlshortener-manage-url": "gérer les URL courtes",
 	"manageshorturls": "Gérer les URL courtes",
 	"right-urlshortener-manage-url": "Gérer les URL courtes",
+	"grant-shortenurls": "Créer des URL courtes",
 	"urlshortener": "Raccourcisseur d’URL",
 	"urlshortener-action-done": "Les URL ont été supprimées et/ou restaurées",
 	"urlshortener-approved-domains": "Les liens vers {{PLURAL:$1|le domaine suivant|les domaines suivants}} peuvent être raccourcis : $2.",
@@ -35,6 +36,7 @@
 	"urlshortener-manage-delete-failed": "Erreur durant la supression d'URL",
 	"urlshortener-manage-not-enough-data": "Vous devez indiquer un code court d’URL à supprimer ou à restaurer",
 	"urlshortener-manage-restore-failed": "La restauration de l’URL a échoué",
+	"urlshortener-manage-reason": "Motif",
 	"urlshortener-not-found-message": "Désolé, l’URL que vous recherchez n’a pas été trouvée.",
 	"urlshortener-not-found-title": "URL courte non trouvée",
 	"urlshortener-ratelimit": "Veuillez attendre quelques instants avant de raccourcir d’autres URL.",
@@ -46,5 +48,9 @@
 	"urlshortener-url-input-submit": "Raccourcir",
 	"urlshortener-url-input-submitting": "En cours…",
 	"urlshortener-url-too-long": "L’URL est trop longue, la taille maximale est de {{PLURAL:$1|un caractère|$1 caractères}}",
-	"urlshortener-badaccessgroups": "Vous n’êtes pas autorisé{{GENDER:||e}} à créer des URL raccourcies."
+	"urlshortener-badaccessgroups": "Vous n’êtes pas autorisé{{GENDER:||e}} à créer des URL raccourcies.",
+	"log-name-urlshortener": "Journal de gestion des URLs courtes",
+	"logentry-urlshortener-delete": "$1 {{GENDER:$2|a supprimé}} l'URL courte « $4 »",
+	"log-action-filter-urlshortener": "Type de gestion",
+	"log-action-filter-urlshortener-delete": "Supression d'URL"
 }

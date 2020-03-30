@@ -13,6 +13,7 @@
 	"action-urlshortener-manage-url": "לנהל כתובות מקוצרות",
 	"manageshorturls": "ניהול כתובות מקוצרות",
 	"right-urlshortener-manage-url": "ניהול כתובות מקוצרות",
+	"grant-shortenurls": "יצירת כתובות מקוצרות",
 	"urlshortener": "מקצר כתובות",
 	"urlshortener-action-done": "כתובות נמחקו או שוחזרו",
 	"urlshortener-approved-domains": "אפשר לקצר קישורים {{PLURAL:$1|לתחום הבא|לתחומים הבאים}}: $2.",
