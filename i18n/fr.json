@@ -13,9 +13,11 @@
 	"action-urlshortener-create-url": "créer des URL courtes",
 	"right-urlshortener-create-url": "Créer des URL courtes",
 	"action-urlshortener-manage-url": "gérer les URL courtes",
+	"action-urlshortener-view-log": "afficher le journal de gestion des URL courtes",
 	"manageshorturls": "Gérer les URL courtes",
 	"right-urlshortener-manage-url": "Gérer les URL courtes",
 	"grant-shortenurls": "Créer des URL courtes",
+	"right-urlshortener-view-log": "Afficher le journal de gestion des URL courtes",
 	"urlshortener": "Raccourcisseur d’URL",
 	"urlshortener-action-done": "Les URL ont été supprimées et/ou restaurées",
 	"urlshortener-approved-domains": "Les liens vers {{PLURAL:$1|le domaine suivant|les domaines suivants}} peuvent être raccourcis : $2.",
@@ -50,7 +52,11 @@
 	"urlshortener-url-too-long": "L’URL est trop longue, la taille maximale est de {{PLURAL:$1|un caractère|$1 caractères}}",
 	"urlshortener-badaccessgroups": "Vous n’êtes pas autorisé{{GENDER:||e}} à créer des URL raccourcies.",
 	"log-name-urlshortener": "Journal de gestion des URLs courtes",
+	"log-description-urlshortener": "Ce journal affiche la suppression et la restauration des URL courtes. Il n’affiche pas la création de nouveaux",
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|a supprimé}} l'URL courte « $4 »",
+	"logentry-urlshortener-restore": "$1 {{GENDER:$2|a restauré}} l'URL courte « $4 »",
+	"logeventslist-urlshortener-log": "Journal de gestion des URL courtes",
 	"log-action-filter-urlshortener": "Type de gestion",
-	"log-action-filter-urlshortener-delete": "Supression d'URL"
+	"log-action-filter-urlshortener-delete": "Supression d'URL",
+	"log-action-filter-urlshortener-restore": "Restauration d’URL"
 }

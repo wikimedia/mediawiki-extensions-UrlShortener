@@ -26,6 +26,7 @@
 	"urlshortener-failed-try-again": "Falló. Inténtalo de nuevo.",
 	"urlshortener-form-header": "Pega el URL largo aquí",
 	"urlshortener-manage-restore-failed": "Falló la restauración del URL",
+	"urlshortener-manage-reason": "Motivo",
 	"urlshortener-not-found-message": "No se encuentra el URL que has solicitado.",
 	"urlshortener-not-found-title": "No se encontró el URL corto",
 	"urlshortener-ratelimit": "Espera un poco antes de acortar más URL.",
@@ -33,5 +34,11 @@
 	"urlshortener-toolbox": "Obtener URL acortado",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Acortar",
-	"urlshortener-url-input-submitting": "Acortando…"
+	"urlshortener-url-input-submitting": "Acortando…",
+	"log-name-urlshortener": "Registro de gestión de URL cortos",
+	"logentry-urlshortener-delete": "$1 {{GENDER:$2|eliminó}} el URL corto «$4»",
+	"logentry-urlshortener-restore": "$1 {{GENDER:$2|restauró}} el URL corto «$4»",
+	"logeventslist-urlshortener-log": "Registro de gestión de URL cortos",
+	"log-action-filter-urlshortener": "Tipo de gestión",
+	"log-action-filter-urlshortener-restore": "Restauración de URL"
 }

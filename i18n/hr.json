@@ -12,6 +12,7 @@
 	"manageshorturls": "Upravljanje kratkim URL-ovima",
 	"right-urlshortener-manage-url": "Upravljanje kratkim URL-ovima",
 	"grant-shortenurls": "Oblikuj kratke URL-ove",
+	"right-urlshortener-view-log": "Pregled evidencije upravljanja kratkim URL-ovima",
 	"urlshortener": "Skraćivač URL-ova",
 	"urlshortener-action-done": "URL-ovi koji su izbrisani i/ili vraćeni",
 	"urlshortener-blocked": "Blokirani suradnici ne mogu stvarati kratke URL-ove.",
@@ -41,5 +42,7 @@
 	"urlshortener-url-input-submitting": "Skraćujem…",
 	"urlshortener-url-too-long": "URL je predug, najveća dužina je {{PLURAL:$1|1=jedan znak|$1 znak|$1 znaka|$1 znakova}}",
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|izbrisao|izbrisala|izbrisala / izbrisao}} je kratki URL »$4«",
-	"logentry-urlshortener-restore": "$1 {{GENDER:$2|vratio|vratila|vratila / vratio}} je kratki URL »$4«"
+	"logentry-urlshortener-restore": "$1 {{GENDER:$2|vratio|vratila|vratila / vratio}} je kratki URL »$4«",
+	"log-action-filter-urlshortener-delete": "Brisanje URL-a",
+	"log-action-filter-urlshortener-restore": "Vraćanje URL-a"
 }
