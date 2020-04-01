@@ -36,9 +36,11 @@
 	"urlshortener-url-input-submit": "Acortar",
 	"urlshortener-url-input-submitting": "Acortando…",
 	"log-name-urlshortener": "Registro de gestión de URL cortos",
+	"log-description-urlshortener": "Este registro muestra la eliminación y restauración de los URL cortos. No muestra la creación de URL nuevos",
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|eliminó}} el URL corto «$4»",
 	"logentry-urlshortener-restore": "$1 {{GENDER:$2|restauró}} el URL corto «$4»",
 	"logeventslist-urlshortener-log": "Registro de gestión de URL cortos",
 	"log-action-filter-urlshortener": "Tipo de gestión",
+	"log-action-filter-urlshortener-delete": "Eliminación de URL",
 	"log-action-filter-urlshortener-restore": "Restauración de URL"
 }

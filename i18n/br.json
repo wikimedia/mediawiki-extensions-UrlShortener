@@ -8,5 +8,9 @@
 	"urlshortener": "Berraer URLoù",
 	"urlshortener-manage-reason": "Abeg",
 	"urlshortener-url-input-label": "URL",
-	"urlshortener-url-input-submit": "Berraet"
+	"urlshortener-url-input-submit": "Berraet",
+	"urlshortener-badaccessgroups": "N'hoc'h eus ket gwirioù da grouiñ URLoù berr",
+	"logentry-urlshortener-restore": "{{GENDER:$2|Assavet}} eo bet gant $1 an URL berr \"$4\"",
+	"log-action-filter-urlshortener-delete": "Dilemel un URL",
+	"log-action-filter-urlshortener-restore": "Assevel un URL"
 }
