@@ -5,12 +5,19 @@
 			"Fulup"
 		]
 	},
+	"action-urlshortener-view-log": "gwelet marilh merañ an URLoù berr",
+	"right-urlshortener-view-log": "Gwelet marilh merañ an URLoù berr",
 	"urlshortener": "Berraer URLoù",
 	"urlshortener-manage-reason": "Abeg",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Berraet",
 	"urlshortener-badaccessgroups": "N'hoc'h eus ket gwirioù da grouiñ URLoù berr",
+	"log-name-urlshortener": "Marilh merañ an URLoù berr",
+	"log-description-urlshortener": "Diskouez a ra ar marilh-mañ dilamidigezhioù hag assavidigezhioù an URLoù berr. Ne ziskouez ket krouidigezhioù ar re nevez.",
+	"logentry-urlshortener-delete": "{{GENDER:$2|Dilamet}} eo bet gant $1 an URL berr \"$4\"",
 	"logentry-urlshortener-restore": "{{GENDER:$2|Assavet}} eo bet gant $1 an URL berr \"$4\"",
+	"logeventslist-urlshortener-log": "Marilh merañ an URLoù berr",
+	"log-action-filter-urlshortener": "Seurt merañ",
 	"log-action-filter-urlshortener-delete": "Dilemel un URL",
 	"log-action-filter-urlshortener-restore": "Assevel un URL"
 }
