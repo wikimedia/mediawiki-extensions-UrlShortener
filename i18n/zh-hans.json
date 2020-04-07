@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"94rain",
 			"Liuxinyu970226",
-			"Viztor",
-			"94rain"
+			"Viztor"
 		]
 	},
 	"action-urlshortener-create-url": "创建短链接",

@@ -1,11 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Elisardojm",
-			"Toliño",
 			"Banjo",
-			"Navhy",
-			"Iváns"
+			"Elisardojm",
+			"Iváns",
+			"Toliño"
 		]
 	},
 	"urlshortener": "Acurtador de enderezos URL",

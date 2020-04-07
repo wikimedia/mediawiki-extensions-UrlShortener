@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kwj2772",
-			"Revi",
 			"Hwangjy9",
-			"Ykhwong",
-			"Namoroka"
+			"Kwj2772",
+			"Namoroka",
+			"Revi",
+			"Ykhwong"
 		]
 	},
 	"action-urlshortener-create-url": "단축 URL을 만들",

@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"BadDog",
 			"Milicevic01",
-			"Rancher",
-			"BadDog"
+			"Rancher"
 		]
 	},
 	"urlshortener": "Скраћивач URL-а",

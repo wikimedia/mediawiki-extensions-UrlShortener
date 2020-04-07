@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wikimon",
 			"Jopparn",
+			"Skalman",
 			"WikiPhoenix",
-			"Skalman"
+			"Wikimon"
 		]
 	},
 	"action-urlshortener-create-url": "skapa korta url:er",

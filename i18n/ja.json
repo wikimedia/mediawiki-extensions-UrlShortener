@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki",
 			"2nd-player",
-			"Sujiniku",
-			"Yusuke1109",
-			"Takot",
 			"Aefgh39622",
-			"Afaz"
+			"Afaz",
+			"Shirayuki",
+			"Sujiniku",
+			"Takot",
+			"Yusuke1109"
 		]
 	},
 	"action-urlshortener-create-url": "短いURLを作成",

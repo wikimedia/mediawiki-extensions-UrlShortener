@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sjoerddebruin",
+			"Elderson",
+			"Jeroen N",
 			"Mainframe98",
 			"Mar(c)",
-			"Jeroen N",
-			"Elderson"
+			"Sjoerddebruin"
 		]
 	},
 	"action-urlshortener-create-url": "verkorte URLs aan te maken",

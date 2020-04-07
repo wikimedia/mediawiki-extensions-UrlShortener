@@ -2,9 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Chrumps",
+			"Rail",
 			"Railfail536",
-			"Woytecr",
-			"Rail"
+			"Woytecr"
 		]
 	},
 	"apihelp-shortenurl-description": "Skróć długi adres URL do krótszej postaci.",

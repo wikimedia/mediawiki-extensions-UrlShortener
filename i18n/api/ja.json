@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yusuke1109",
-			"Omotecho"
+			"Omotecho",
+			"Yusuke1109"
 		]
 	},
 	"apihelp-shortenurl-description": "長いURLを短いURLに短縮します。",

@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yuvi Panda",
-			"Shirayuki",
+			"Ammar Abdulhamid",
 			"Beta16",
-			"Umherirrender",
 			"Hamilton Abreu",
+			"Shirayuki",
 			"Skalman",
-			"Ammar Abdulhamid"
+			"Umherirrender",
+			"Yuvi Panda"
 		]
 	},
 	"action-urlshortener-create-url": "{{doc-action|urlshortener-create-url}}",

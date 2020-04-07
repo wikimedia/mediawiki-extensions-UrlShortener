@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ата",
 			"Base",
 			"Dars",
 			"Piramidion",
-			"Vlad5250"
+			"Vlad5250",
+			"Ата"
 		]
 	},
 	"action-urlshortener-create-url": "створення коротких URL-адрес",

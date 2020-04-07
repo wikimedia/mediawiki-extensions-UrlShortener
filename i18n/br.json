@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Y-M D",
-			"Fulup"
+			"Fulup",
+			"Y-M D"
 		]
 	},
 	"action-urlshortener-view-log": "gwelet marilh merañ an URLoù berr",
+	"grant-shortenurls": "Krouiñ URLoù berr",
 	"right-urlshortener-view-log": "Gwelet marilh merañ an URLoù berr",
 	"urlshortener": "Berraer URLoù",
 	"urlshortener-manage-reason": "Abeg",
