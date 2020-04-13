@@ -7,5 +7,6 @@
 	"action-urlshortener-create-url": "krear kurta URL-i",
 	"right-urlshortener-create-url": "Krear kurta URL-i",
 	"action-urlshortener-manage-url": "administrar kurta URL-i",
+	"grant-shortenurls": "Krear kurta URL-i",
 	"urlshortener-manage-reason": "Motivo"
 }
