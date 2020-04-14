@@ -18,5 +18,6 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Kierzen",
 	"urlshortener-url-input-submitting": "Kierzen...",
-	"log-action-filter-urlshortener-delete": "URL Läschen"
+	"log-action-filter-urlshortener-delete": "URL Läschen",
+	"log-action-filter-urlshortener-restore": "URL Restauratioun"
 }
