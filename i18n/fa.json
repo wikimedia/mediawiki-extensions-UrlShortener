@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alireza Ivaz",
+			"FarsiNevis",
 			"Ladsgroup",
 			"Reza1615"
 		]
@@ -31,6 +32,7 @@
 	"urlshortener-manage-delete-failed": "حذف‌کردن نشانی شکست خورد",
 	"urlshortener-manage-not-enough-data": "برای حذف یا بازیابی باید یک کد کوتاه نشانی تعیین کنید",
 	"urlshortener-manage-restore-failed": "بازیابی نشانی شکست خورد",
+	"urlshortener-manage-reason": "دلیل",
 	"urlshortener-not-found-message": "متاسفانه URLی که دنبالش هستید پیدا نشد.",
 	"urlshortener-not-found-title": "نشانی کوتاه یافت نشد",
 	"urlshortener-ratelimit": "لطفا کمی قبل از کوتاه کردن پیوندهای بیشتر صبر کنید.",
