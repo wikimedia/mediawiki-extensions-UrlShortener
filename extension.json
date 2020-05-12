@@ -52,8 +52,12 @@
 	},
 	"ActionFilteredLogs": {
 		"urlshortener": {
-			"delete":  [ "delete" ],
-			"restore": [ "restore" ]
+			"delete": [
+				"delete"
+			],
+			"restore": [
+				"restore"
+			]
 		}
 	},
 	"LogRestrictions": {
@@ -67,9 +71,18 @@
 	},
 	"RateLimits": {
 		"urlshortcode": {
-			"ip": [ 10, 120 ],
-			"newbie": [ 10, 120 ],
-			"user": [ 50, 120 ]
+			"ip": [
+				10,
+				120
+			],
+			"newbie": [
+				10,
+				120
+			],
+			"user": [
+				50,
+				120
+			]
 		}
 	},
 	"ResourceModules": {
@@ -154,18 +167,42 @@
 		"shortenurls": "administration"
 	},
 	"config": {
-		"UrlShortenerApprovedDomains": false,
-		"UrlShortenerDBCluster": false,
-		"UrlShortenerDBName": false,
-		"UrlShortenerDomainsWhitelist": false,
-		"UrlShortenerIdSet": "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$",
-		"UrlShortenerIdMapping": {},
-		"UrlShortenerServer": false,
-		"UrlShortenerTemplate": false,
-		"UrlShortenerAllowArbitraryPorts": false,
-		"UrlShortenerReadOnly": false,
-		"UrlShortenerEnableSidebar": true,
-		"UrlShortenerUrlSizeLimit": 2000
+		"UrlShortenerApprovedDomains": {
+			"value": false
+		},
+		"UrlShortenerDBCluster": {
+			"value": false
+		},
+		"UrlShortenerDBName": {
+			"value": false
+		},
+		"UrlShortenerDomainsWhitelist": {
+			"value": false
+		},
+		"UrlShortenerIdSet": {
+			"value": "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$"
+		},
+		"UrlShortenerIdMapping": {
+			"value": []
+		},
+		"UrlShortenerServer": {
+			"value": false
+		},
+		"UrlShortenerTemplate": {
+			"value": false
+		},
+		"UrlShortenerAllowArbitraryPorts": {
+			"value": false
+		},
+		"UrlShortenerReadOnly": {
+			"value": false
+		},
+		"UrlShortenerEnableSidebar": {
+			"value": true
+		},
+		"UrlShortenerUrlSizeLimit": {
+			"value": 2000
+		}
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
