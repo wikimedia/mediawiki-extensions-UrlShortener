@@ -4,6 +4,7 @@
 			"Hwangjy9",
 			"Kwj2772",
 			"Namoroka",
+			"Nuevo Paso",
 			"Revi",
 			"Ykhwong"
 		]
@@ -21,7 +22,7 @@
 	"urlshortener-copy-fail": "URL을 클립보드에 복사하는데 실패했습니다.",
 	"urlshortener-copy-success": "URL이 클립보드에 복사되었습니다.",
 	"urlshortener-deleted": "이 단축 URL은 삭제되었습니다.",
-	"urlshortener-desc": "임의 URL에 대한 단축기",
+	"urlshortener-desc": "임의의 URL에 대한 단축키",
 	"urlshortener-disabled": "새로운 단축 URL을 만드는 것이 일시적으로 비활성화되었습니다.",
 	"urlshortener-enter-short-code-delete": "삭제할 URL 단축 코드",
 	"urlshortener-enter-short-code-restore": "복구한 URL 단축 코드",
