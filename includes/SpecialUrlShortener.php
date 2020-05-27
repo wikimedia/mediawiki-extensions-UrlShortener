@@ -19,6 +19,8 @@ class SpecialUrlShortener extends FormSpecialPage {
 		global $wgUrlShortenerReadOnly;
 		$this->addHelpLink( 'Help:UrlShortener' );
 
+		$this->checkPermissions();
+
 		if ( $wgUrlShortenerReadOnly ) {
 			$this->setHeaders();
 			$this->getOutput()->addWikiMsg( 'urlshortener-disabled' );

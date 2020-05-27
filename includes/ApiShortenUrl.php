@@ -13,11 +13,11 @@ class ApiShortenUrl extends ApiBase {
 	public function execute() {
 		global $wgUrlShortenerReadOnly;
 
+		$this->checkUserRights();
+
 		if ( $wgUrlShortenerReadOnly ) {
 			$this->dieWithError( 'apierror-urlshortener-disabled' );
 		}
-
-		$this->checkUserRights();
 
 		$params = $this->extractRequestParams();
 
