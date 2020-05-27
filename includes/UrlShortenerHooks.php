@@ -38,33 +38,33 @@ class UrlShortenerHooks {
 	/**
 	 * Adds a link to the toolbox to Special:UrlShortener
 	 *
-	 * @param BaseTemplate $template
-	 * @param array &$toolbox
+	 * @param Skin $skin
+	 * @param array &$sidebar
 	 */
-	public static function onBaseTemplateToolbox( BaseTemplate $template, array &$toolbox ) {
+	public static function onSidebarBeforeOutput( Skin $skin, array &$sidebar ) {
 		global $wgUrlShortenerReadOnly, $wgUrlShortenerEnableSidebar;
 
 		if ( $wgUrlShortenerReadOnly || !$wgUrlShortenerEnableSidebar ) {
 			return;
 		}
 
-		$skin = $template->getSkin();
 		if ( $skin->getTitle()->isSpecial( 'UrlShortener' ) ) {
 			return;
 		}
+
 		$query = $skin->getRequest()->getQueryValues();
 		if ( isset( $query['title'] ) ) {
 			// We already know the title
 			unset( $query['title'] );
 		}
-		$linkToShorten = $skin->getTitle()->getFullURL( $query, false, PROTO_CANONICAL );
-		$link = SpecialPage::getTitleFor( 'UrlShortener' )
-			->getLocalURL( [ 'url' => $linkToShorten ] );
-		$toolbox['urlshortener'] = [
-			'id' => 't-urlshortener',
-			'href' => $link,
-			'msg' => 'urlshortener-toolbox'
-		];
+
+		$fullURL = $skin->getTitle()->getFullURL( $query, false, PROTO_CANONICAL );
+		$localURL = SpecialPage::getTitleFor( 'UrlShortener' )->getLocalURL( [ 'url' => $fullURL ] );
+		$message = $skin->msg( 'urlshortener-toolbox' )->text();
+		$link = [ 'id' => 't-urlshortener', 'href' => $localURL, 'text' => $message ];
+
+		// Append link
+		$sidebar['TOOLBOX'][] = $link;
 	}
 
 	/**

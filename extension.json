@@ -40,8 +40,8 @@
 		"BeforePageDisplay": [
 			"UrlShortenerHooks::onBeforePageDisplay"
 		],
-		"BaseTemplateToolbox": [
-			"UrlShortenerHooks::onBaseTemplateToolbox"
+		"SidebarBeforeOutput": [
+			"UrlShortenerHooks::onSidebarBeforeOutput"
 		]
 	},
 	"LogTypes": [
