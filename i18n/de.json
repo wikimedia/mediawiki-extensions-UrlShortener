@@ -31,6 +31,7 @@
 	"urlshortener-error-nouserpass": "URLs, die einen Benutzernamen oder ein Passwort enthalten, dürfen nicht gekürzt werden.",
 	"urlshortener-failed-try-again": "Fehlgeschlagen. Erneut versuchen?",
 	"urlshortener-form-header": "Hier die lange URL einfügen:",
+	"urlshortener-manage-text": "Verwende das untenstehende Formular, um eine Kurz-URL zu löschen oder eine gelöschte wiederherzustellen.<br>Nach dem Löschen einer Kurz-URL hier wird der Kurzlink nicht mehr auf die Seite weiterleiten, zu der er früher führte. Alle Links, die mit ihm erstellt wurden, werden unterbrochen. Bitte benutze diese Funktion sorgfältig. Diese Aktion wird im [[Spezial:Log/urlshortener|Logbuch]] gespeichert.",
 	"urlshortener-manage-delete-failed": "Das Löschen der URL ist fehlgeschlagen",
 	"urlshortener-manage-not-enough-data": "Du musst einen zu löschenden oder wiederherzustellenden URL-Kurzcode bestimmen",
 	"urlshortener-manage-restore-failed": "Wiederherstellung der URL fehlgeschlagen",

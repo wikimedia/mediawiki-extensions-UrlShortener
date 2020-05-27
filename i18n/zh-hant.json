@@ -33,6 +33,7 @@
 	"urlshortener-error-nouserpass": "包含使用者名稱或密碼的網址不允許縮短",
 	"urlshortener-failed-try-again": "失敗了，是否重試？",
 	"urlshortener-form-header": "將您的長網址貼到這裡",
+	"urlshortener-manage-text": "使用下方表單來刪除短網址，或是已刪除的給恢復。<br>在刪除短網址後，該短網址將不再重新導向到曾使用的頁面。以它所建立的全部連結將被斷開，請小心使用此功能。另外此操作將會被[[Special:Log/urlshortener|記錄]]下來。",
 	"urlshortener-manage-delete-failed": "刪除網址失敗",
 	"urlshortener-manage-not-enough-data": "您需要決定要刪除或恢復的網址短代碼",
 	"urlshortener-manage-restore-failed": "恢復網址失敗",
