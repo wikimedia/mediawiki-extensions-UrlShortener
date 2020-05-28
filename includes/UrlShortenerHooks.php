@@ -61,10 +61,13 @@ class UrlShortenerHooks {
 		$fullURL = $skin->getTitle()->getFullURL( $query, false, PROTO_CANONICAL );
 		$localURL = SpecialPage::getTitleFor( 'UrlShortener' )->getLocalURL( [ 'url' => $fullURL ] );
 		$message = $skin->msg( 'urlshortener-toolbox' )->text();
-		$link = [ 'id' => 't-urlshortener', 'href' => $localURL, 'text' => $message ];
 
 		// Append link
-		$sidebar['TOOLBOX'][] = $link;
+		$sidebar['TOOLBOX']['urlshortener'] = [
+			'id' => 't-urlshortener',
+			'href' => $localURL,
+			'text' => $message
+		];
 	}
 
 	/**
