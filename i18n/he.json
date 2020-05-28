@@ -33,6 +33,7 @@
 	"urlshortener-error-nouserpass": "לא ניתן לקצר כתובות שמכילות שם משתמש או סיסמה",
 	"urlshortener-failed-try-again": "זה לא עבד. לנסות שוב?",
 	"urlshortener-form-header": "נא לרשום את הכתובת הארוכה שלך כאן",
+	"urlshortener-manage-text": "אפשר להשתמש בטופס להלן כדי למחוק כתובת URL קצרה או לשחזר כתובת מחוקה.<br>אחרי מחיקת כתובת URL מקוצרת כאן, הכתובת הקצרה כבר לא תפנה לדף שהיא הפנתה אליו קודם לכן. כל הקישורים שנעשו איתה יישברו. נא להשתמש באפשרות הזאת בזהירות. הפעולה הזאת [[Special:Log/urlshortener|תירשם ביומן]].",
 	"urlshortener-manage-delete-failed": "מחיקת הכתובת נכשלה",
 	"urlshortener-manage-not-enough-data": "חובה להגדיר קוד כתובת קצרה אחד למחוק או לשחזר",
 	"urlshortener-manage-restore-failed": "שחזור הכתובת נכשל",

@@ -29,6 +29,7 @@
 	"urlshortener-error-nouserpass": "Не е дозволено кратење на URL-ата што содржат корисничко име или лозинка",
 	"urlshortener-failed-try-again": "Не успеа. Да се обидам повторно?",
 	"urlshortener-form-header": "Тука ставете ја долгата URL",
+	"urlshortener-manage-text": "Со образецот подолу можете да избришете кратка URL или да повратите веќе избришана.<br>Откако ќе ја избришете овде, таа повеќе нема да пренасочува кон страницата. Сите врски направени со неа ќе се прекинат. Затоа, користете ја оваа можност внимателно. Ова дејство ќе биде [[Special:Log/urlshortener|заведено]].",
 	"urlshortener-manage-delete-failed": "Бришењето на URL-то не успеа",
 	"urlshortener-manage-not-enough-data": "Ќе треба да определите еден краток код за URL што сакате да го избришете или повратите",
 	"urlshortener-manage-restore-failed": "Повратокот на URL-то не успеа",
