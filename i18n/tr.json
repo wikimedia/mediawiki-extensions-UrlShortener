@@ -32,6 +32,7 @@
 	"urlshortener-error-nouserpass": "Kullanıcı adı veya şifre içeren URL'lerin kısaltılmasına izin verilmez",
 	"urlshortener-failed-try-again": "Başarısız oldu. Tekrar denensin mi?",
 	"urlshortener-form-header": "Uzun URL'nizi buraya yapıştırın",
+	"urlshortener-manage-text": "Kısa bir URL'yi silmek veya silinmiş bir URL'yi geri yüklemek için aşağıdaki formu kullanın.<br>Kısa bir URL'yi burada sildikten sonra, kısa bağlantı artık eskisine yönlendirilmeyecektir. Onunla yapılan tüm bağlantılar kopacaktır. Lütfen bu özelliği dikkatli kullanın. Bu işlem [[Special:Log/urlshortener|günlükte]] olacaktır.",
 	"urlshortener-manage-delete-failed": "URL silinemedi",
 	"urlshortener-manage-not-enough-data": "Silmek veya geri yüklemek için bir URL kısa kodu belirlemeniz gerekir",
 	"urlshortener-manage-restore-failed": "URL geri yüklenemedi",
