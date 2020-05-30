@@ -19,14 +19,14 @@ class UrlShortenerUtils {
 	 *
 	 * @var int
 	 */
-	const CACHE_TTL_VALID = 2592000;
+	public const CACHE_TTL_VALID = 2592000;
 
 	/**
 	 * How long to cache invalid redirects in CDN (fifteen minutes)
 	 *
 	 * @var int
 	 */
-	const CACHE_TTL_INVALID = 900;
+	public const CACHE_TTL_INVALID = 900;
 
 	public static $decodeMap;
 
