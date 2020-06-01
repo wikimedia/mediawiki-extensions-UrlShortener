@@ -30,6 +30,7 @@
 	"urlshortener-error-nouserpass": "Os URLs que contêm um nome de usuário ou senha não podem ser encurtados",
 	"urlshortener-failed-try-again": "Falhou. Tente novamente?",
 	"urlshortener-form-header": "Cole seu URL longo aqui",
+	"urlshortener-manage-text": "Use o formulário abaixo para excluir um URL curto ou restaurar um URL excluído. <br>Após excluir um URL curto aqui, o link curto não será mais redirecionado para a página que costumava ser. Todos os links feitos com ele serão quebrados. Por favor, use esse recurso com cuidado. Esta ação será [[Special:Log/urlshortener|registrada]].",
 	"urlshortener-manage-delete-failed": "A exclusão do URL falhou",
 	"urlshortener-manage-not-enough-data": "Você precisa determinar um código curto de URL para excluir ou restaurar",
 	"urlshortener-manage-restore-failed": "A restauração do URL falhou",

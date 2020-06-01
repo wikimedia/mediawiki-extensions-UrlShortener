@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"1233qwer1234qwer4",
+			"Diman Russkov",
 			"Facenapalm",
 			"Okras"
 		]
@@ -17,6 +18,7 @@
 	"urlshortener-error-nouserpass": "URL-адреса, содержащие имя пользователя или пароль, не разрешены для сокращения",
 	"urlshortener-failed-try-again": "Не получилось. Попробовать снова?",
 	"urlshortener-form-header": "Вставьте длинный URL-адрес сюда",
+	"urlshortener-manage-reason": "Причина",
 	"urlshortener-not-found-message": "К сожалению, адрес, который вы ищете, не найден.",
 	"urlshortener-not-found-title": "Короткий URL не найден",
 	"urlshortener-ratelimit": "Пожалуйста, подождите некоторое время, прежде чем продолжить сокращать URL-адреса.",

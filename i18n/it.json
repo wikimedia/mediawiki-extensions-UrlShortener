@@ -3,14 +3,17 @@
 		"authors": [
 			"Alexmar983",
 			"Beta16",
-			"PeppeAeco"
+			"PeppeAeco",
+			"Sakretsu"
 		]
 	},
 	"action-urlshortener-create-url": "creare URL brevi",
 	"right-urlshortener-create-url": "Crea URL brevi",
 	"action-urlshortener-manage-url": "gestire URL brevi",
+	"action-urlshortener-view-log": "visualizzare il registro di gestione degli URL abbreviati",
 	"manageshorturls": "Gestisci URL brevi",
 	"right-urlshortener-manage-url": "Gestisce URL brevi",
+	"right-urlshortener-view-log": "Visualizza il registro di gestione degli URL abbreviati",
 	"urlshortener": "Abbrevia URL",
 	"urlshortener-action-done": "Gli URL sono stati cancellati e/o ripristinati",
 	"urlshortener-approved-domains": "Possono essere abbreviati i collegamenti {{PLURAL:$1|al seguente dominio|ai seguenti domini}}: $2.",
@@ -40,5 +43,7 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Abbrevia",
 	"urlshortener-url-input-submitting": "Abbreviando…",
-	"urlshortener-url-too-long": "L'URL è troppo lungo, la dimensione massima è di {{PLURAL:$1|un carattere|$1 caratteri}}"
+	"urlshortener-url-too-long": "L'URL è troppo lungo, la dimensione massima è di {{PLURAL:$1|un carattere|$1 caratteri}}",
+	"log-name-urlshortener": "Gestione URL abbreviati",
+	"logeventslist-urlshortener-log": "Gestione URL abbreviati"
 }
