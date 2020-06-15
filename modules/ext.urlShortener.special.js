@@ -34,7 +34,7 @@
 		 * Validate the input URL clientside. Note that this is not the
 		 * only check - they are checked serverside too.
 		 *
-		 * Checks for both URL validity and whitelist matching.
+		 * Checks for both URL validity and AllowedDomains matching.
 		 *
 		 * @param {string} input the URL that is to be shortened
 		 * @return {boolean|Object} true if object is validated, an object matching what is

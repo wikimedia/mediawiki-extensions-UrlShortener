@@ -322,15 +322,15 @@ class UrlShortenerUtils {
 		return $url;
 	}
 
-	public static function getWhitelistRegex() {
+	public static function getAllowedDomainsRegex() {
 		global $wgUrlShortenerDomainsWhitelist, $wgServer;
 		if ( $wgUrlShortenerDomainsWhitelist === false ) {
-			// Domain Whitelist not configured, default to wgServer
+			// Allowed Domains not configured, default to wgServer
 			$serverParts = wfParseUrl( $wgServer );
-			$domainsWhitelist = preg_quote( $serverParts['host'], '/' );
+			$allowedDomains = preg_quote( $serverParts['host'], '/' );
 		} else {
-			// Collapse the whitelist into a single string, so we have to run regex check only once
-			$domainsWhitelist = implode( '|', array_map(
+			// Collapse the allowed domains into a single string, so we have to run regex check only once
+			$allowedDomains = implode( '|', array_map(
 				function ( $item ) {
 					return '^' . $item . '$';
 				},
@@ -338,7 +338,7 @@ class UrlShortenerUtils {
 			) );
 		}
 
-		return $domainsWhitelist;
+		return $allowedDomains;
 	}
 
 	/**
@@ -368,7 +368,7 @@ class UrlShortenerUtils {
 
 			$domain = $urlParts['host'];
 
-			if ( preg_match( '/' . self::getWhitelistRegex() . '/', $domain ) === 1 ) {
+			if ( preg_match( '/' . self::getAllowedDomainsRegex() . '/', $domain ) === 1 ) {
 				return true;
 			}
 

@@ -1,5 +1,5 @@
 The UrlShortener extension is a MediaWiki extension that accepts arbitrary urls
-from whitelisted domains and shortens them.
+from a list of allowed domains and shortens them.
 
 == Configuration ==
 
@@ -52,17 +52,16 @@ that have arbitrary ports.
 $wgUrlShortenerAllowArbitraryPorts = true
 </source>
 
-=== Whitelist regex ===
+=== AllowedDomains regex ===
 
 Configures the acceptable domains that users can submit links for. This is an
-array of regular expressions. If set to false (default), it will set up a
-whitelist for the current domain (using $wgServer).
+array of regular expressions. If set to false (default), it will set up a allow-list for the current domain (using $wgServer).
 
 <source lang="php">
 $wgUrlShortenerDomainsWhitelist = false;
 </source>
 
-For example, to only whitelist links to wikipedia.org or wikimedia.org, we would use the following:
+For example, to only allow links from wikipedia.org or wikimedia.org, we would use the following:
 
 <source lang="php">
 $wgUrlShortenerDomainsWhitelist = [
@@ -71,16 +70,15 @@ $wgUrlShortenerDomainsWhitelist = [
 ];
 </source>
 
-If we wanted to whitelist any domain:
+If we wanted to allow links from any domain:
 
 <source lang="php">
 $wgUrlShortenerDomainsWhitelist = [ '.*' ];
 </source>
 
-=== Whitelist documentation ===
+=== AllowedDomains documentation ===
 
-To provide human-readable documentation of the whitelist, this is an array of
-the whitelisted domains that will be displayed on Special:UrlShortener.
+To provide human-readable documentation of the list, this is an array of the allowed domains that will be displayed on Special:UrlShortener.
 
 If set to false (default), it will output a normalized version of $wgServer.
 
@@ -88,7 +86,7 @@ If set to false (default), it will output a normalized version of $wgServer.
 $wgUrlShortenerApprovedDomains = false;
 </source>
 
-If you only whitelisted wikipedia.org and wikimedia.org in the above example:
+If you only allow wikipedia.org and wikimedia.org in the above example:
 
 <source lang="php">
 $wgUrlShortenerApprovedDomains = [
