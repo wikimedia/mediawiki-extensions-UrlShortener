@@ -2,31 +2,31 @@
 
 	mw.urlshortener = {
 		/**
-		 * @var {mw.Api)
+		 * @member {mw.Api)
 		 */
 		api: new mw.Api(),
 
 		/**
-		 * @var {RegExp}
+		 * @member {RegExp}
 		 */
 		regex: new RegExp( mw.config.get( 'wgUrlShortenerDomainsWhitelist' ) ),
 
 		/**
-		 * @var {boolean}
+		 * @member {boolean}
 		 */
 		allowArbitraryPorts: mw.config.get( 'wgUrlShortenerAllowArbitraryPorts' ),
 
 		/**
-		 * @var {OO.ui.TextInputWidget}
+		 * @member {OO.ui.TextInputWidget}
 		 */
 		shortened: null,
 
 		/**
-		 * @var {OO.ui.TextInputWidget}
+		 * @member {OO.ui.TextInputWidget}
 		 */
 		input: null,
 		/**
-		 * @var {OO.ui.ButtonInputWidget}
+		 * @member {OO.ui.ButtonInputWidget}
 		 */
 		submit: null,
 
