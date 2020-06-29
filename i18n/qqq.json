@@ -57,7 +57,7 @@
 	"logentry-urlshortener-delete": "Log entry that is created when a user deleted a short URL. Parameters:\n* $1 is a username of the acting user.\n* $2 is the action (deletion) and can be used with GENDER magicword.\n* $4 is the deleted URL",
 	"logentry-urlshortener-restore": "Log entry that is created when a user restored a short URL. Parameters:\n* $1 is a username of the acting user.\n* $2 is the action (restoration) and can be used with GENDER magicword.\n* $4 is the restored URL",
 	"logeventslist-urlshortener-log": "Option label to select URL management log that appears in dropdown at [[Special:Log]]",
-	"log-action-filter-urlshortener": "Label message for filtering log",
-	"log-action-filter-urlshortener-delete": "Option to filter URL deletions at [[Special:Log]]",
-	"log-action-filter-urlshortener-restore": "Option to filter URL restorations at [[Special:Log]]"
+	"log-action-filter-urlshortener": "{{doc-log-action-filter-type|urlshortener}}\nLabel message for filtering log",
+	"log-action-filter-urlshortener-delete": "{{doc-log-action-filter-action|urlshortener|delete}}\nOption to filter URL deletions at [[Special:Log]]",
+	"log-action-filter-urlshortener-restore": "{{doc-log-action-filter-action|urlshortener|restore}}\nOption to filter URL restorations at [[Special:Log]]"
 }
