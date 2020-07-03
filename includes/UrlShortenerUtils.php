@@ -322,20 +322,36 @@ class UrlShortenerUtils {
 		return $url;
 	}
 
+	/**
+	 * Coalesce the regex of allowed domains into a single string regex.
+	 *
+	 * @return string Regex of allowed domains
+	 */
 	public static function getAllowedDomainsRegex() {
-		global $wgUrlShortenerDomainsWhitelist, $wgServer;
-		if ( $wgUrlShortenerDomainsWhitelist === false ) {
+		global $wgUrlShortenerDomainsWhitelist, $wgUrlShortenerAllowedDomains, $wgServer;
+		if ( $wgUrlShortenerDomainsWhitelist === false && $wgUrlShortenerAllowedDomains === false ) {
 			// Allowed Domains not configured, default to wgServer
 			$serverParts = wfParseUrl( $wgServer );
 			$allowedDomains = preg_quote( $serverParts['host'], '/' );
 		} else {
 			// Collapse the allowed domains into a single string, so we have to run regex check only once
-			$allowedDomains = implode( '|', array_map(
+			$allowedDomainsOld = implode( '|', array_map(
 				function ( $item ) {
 					return '^' . $item . '$';
 				},
+				// @phan-suppress-next-line PhanTypeMismatchArgumentInternal
 				$wgUrlShortenerDomainsWhitelist
 			) );
+
+			// Transition period: Collect and merge regex from the new config flag.
+			$allowedDomainsNew = implode( '|', array_map(
+				function ( $item ) {
+					return '^' . $item . '$';
+				},
+				$wgUrlShortenerAllowedDomains
+			) );
+
+			$allowedDomains = $allowedDomainsOld . '|' . $allowedDomainsNew;
 		}
 
 		return $allowedDomains;
