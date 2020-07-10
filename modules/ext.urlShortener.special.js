@@ -9,7 +9,7 @@
 		/**
 		 * @member {RegExp}
 		 */
-		regex: new RegExp( mw.config.get( 'wgUrlShortenerDomainsWhitelist' ) ),
+		regex: new RegExp( mw.config.get( 'wgUrlShortenerAllowedDomains' ) ),
 
 		/**
 		 * @member {boolean}

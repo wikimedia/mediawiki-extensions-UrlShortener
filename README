@@ -58,22 +58,22 @@ Configures the acceptable domains that users can submit links for. This is an
 array of regular expressions. If set to false (default), it will set up a allow-list for the current domain (using $wgServer).
 
 <source lang="php">
-$wgUrlShortenerDomainsWhitelist = false;
+$wgUrlShortenerAllowedDomains = false;
 </source>
 
 For example, to only allow links from wikipedia.org or wikimedia.org, we would use the following:
 
 <source lang="php">
-$wgUrlShortenerDomainsWhitelist = [
+$wgUrlShortenerAllowedDomains = [
 	'(.*\.)?wikimedia\.org',
 	'(.*\.)?wikipedia\.org',
 ];
 </source>
 
-If we wanted to allow links from any domain:
+If we want to allow links from any domain:
 
 <source lang="php">
-$wgUrlShortenerDomainsWhitelist = [ '.*' ];
+$wgUrlShortenerAllowedDomains = [ '.*' ];
 </source>
 
 === AllowedDomains documentation ===

@@ -179,6 +179,9 @@
 		"UrlShortenerDomainsWhitelist": {
 			"value": false
 		},
+		"UrlShortenerAllowedDomains": {
+			"value": false
+		},
 		"UrlShortenerIdSet": {
 			"value": "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$"
 		},
