@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tacsipacsi"
+		]
+	},
+	"apihelp-shortenurl-description": "Egy hosszú URL rövidítése.",
+	"apihelp-shortenurl-summary": "Egy hosszú URL rövidítése.",
+	"apihelp-shortenurl-param-url": "A rövidítendő URL.",
+	"apihelp-shortenurl-example-1": "Rövid URL lekérése a <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> URL-hez.",
+	"apierror-urlshortener-disabled": "Nem készíthetők új rövid URL-ek",
+	"apierror-urlshortener-permissiondenied": "Nincs jogosultságod rövid URL-ek készítéséhez"
+}
