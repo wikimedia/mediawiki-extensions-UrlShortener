@@ -27,12 +27,19 @@ class UrlShortenerHooks {
 		return true;
 	}
 
+	/**
+	 * Load toolbar module for the sidebar link
+	 *
+	 * @param OutputPage $out
+	 */
 	public static function onBeforePageDisplay( OutputPage $out ) {
-		global $wgUrlShortenerReadOnly;
+		global $wgUrlShortenerReadOnly, $wgUrlShortenerEnableSidebar;
 
-		if ( !$wgUrlShortenerReadOnly ) {
-			$out->addModules( 'ext.urlShortener.toolbar' );
+		if ( $wgUrlShortenerReadOnly || !$wgUrlShortenerEnableSidebar ) {
+			return;
 		}
+
+		$out->addModules( 'ext.urlShortener.toolbar' );
 	}
 
 	/**
