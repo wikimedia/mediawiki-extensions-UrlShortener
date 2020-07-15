@@ -348,7 +348,9 @@ class UrlShortenerUtils {
 				function ( $item ) {
 					return '^' . $item . '$';
 				},
-				$wgUrlShortenerAllowedDomains
+				is_array( $wgUrlShortenerAllowedDomains )
+					? $wgUrlShortenerAllowedDomains
+					: []
 			) );
 
 			$allowedDomains = $allowedDomainsOld . '|' . $allowedDomainsNew;
