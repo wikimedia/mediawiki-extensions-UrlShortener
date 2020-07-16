@@ -285,4 +285,71 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 		$this->assertEquals( 'error', $status->getErrors()[0]['type'] );
 	}
 
+	/**
+	 * @covers UrlShortenerUtils::getAllowedDomainsRegex
+	 */
+	public function testGetAllowedDomainsRegex() {
+		$this->setContentLang( 'qqx' );
+		$this->setMwGlobals( [ 'wgUrlShortenerAllowedDomains' => $this->getDomains() ] );
+
+		$checkUrl = UrlShortenerUtils::validateUrl( 'http://example.org/75' );
+		$checkUrl2 = UrlShortenerUtils::validateUrl( 'https://en.wikipedia.org/wiki/A' );
+
+		$this->assertTrue( $checkUrl2 );
+		$this->assertStringEndsWith( '$', UrlShortenerUtils::getAllowedDomainsRegex() );
+		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $checkUrl );
+	}
+
+	/**
+	 * @covers UrlShortenerUtils::getAllowedDomainsRegex
+	 */
+	public function testGetAllowedDomainsRegex2() {
+		$this->setContentLang( 'qqx' );
+		$this->setMwGlobals( [ 'wgUrlShortenerDomainsWhitelist' => $this->getDomains() ] );
+
+		$checkUrl = UrlShortenerUtils::validateUrl( 'http://example.org/75' );
+		$checkUrl2 = UrlShortenerUtils::validateUrl( 'https://en.wikipedia.org/wiki/A' );
+
+		$this->assertTrue( $checkUrl2 );
+		$this->assertStringEndsWith( '$', UrlShortenerUtils::getAllowedDomainsRegex() );
+		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $checkUrl );
+	}
+
+	/**
+	 * @covers UrlShortenerUtils::getAllowedDomainsRegex
+	 */
+	public function testGetAllowedDomainsRegex3() {
+		$this->setContentLang( 'qqx' );
+		$this->setMwGlobals( [
+			'wgUrlShortenerAllowedDomains' => $this->getDomains(),
+			'wgUrlShortenerDomainsWhitelist' => $this->getDomains()
+		] );
+
+		$checkUrl = UrlShortenerUtils::validateUrl( 'http://example.org/75' );
+		$checkUrl2 = UrlShortenerUtils::validateUrl( 'https://en.wikimedia.org/wiki/A' );
+		$allowedDomainsRegex = UrlShortenerUtils::getAllowedDomainsRegex();
+
+		$this->assertTrue( $checkUrl2 );
+		$this->assertStringEndsWith( '$', $allowedDomainsRegex );
+		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $checkUrl );
+
+		// This is the intersection point, when both variables are defined.
+		$this->assertStringContainsString( 'mediawiki\.org$|^(.*\.)?wikipedia', $allowedDomainsRegex );
+	}
+
+	private function getDomains() {
+		return [
+			'(.*\.)?wikipedia\.org',
+			'(.*\.)?wiktionary\.org',
+			'(.*\.)?wikibooks\.org',
+			'(.*\.)?wikinews\.org',
+			'(.*\.)?wikiquote\.org',
+			'(.*\.)?wikisource\.org',
+			'(.*\.)?wikiversity\.org',
+			'(.*\.)?wikivoyage\.org',
+			'(.*\.)?wikimedia\.org',
+			'(.*\.)?wikidata\.org',
+			'(.*\.)?mediawiki\.org',
+		];
+	}
 }
