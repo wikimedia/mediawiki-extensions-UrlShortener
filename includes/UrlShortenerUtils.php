@@ -339,8 +339,9 @@ class UrlShortenerUtils {
 				function ( $item ) {
 					return '^' . $item . '$';
 				},
-				// @phan-suppress-next-line PhanTypeMismatchArgumentInternal
-				$wgUrlShortenerDomainsWhitelist
+				is_array( $wgUrlShortenerDomainsWhitelist )
+					? $wgUrlShortenerDomainsWhitelist
+					: []
 			) );
 
 			// Transition period: Collect and merge regex from the new config flag.
@@ -353,7 +354,13 @@ class UrlShortenerUtils {
 					: []
 			) );
 
-			$allowedDomains = $allowedDomainsOld . '|' . $allowedDomainsNew;
+			if ( $wgUrlShortenerDomainsWhitelist && !$wgUrlShortenerAllowedDomains ) {
+				$allowedDomains = $allowedDomainsOld;
+			} elseif ( $wgUrlShortenerAllowedDomains && !$wgUrlShortenerDomainsWhitelist ) {
+				$allowedDomains = $allowedDomainsNew;
+			} else {
+				$allowedDomains = $allowedDomainsOld . '|' . $allowedDomainsNew;
+			}
 		}
 
 		return $allowedDomains;
