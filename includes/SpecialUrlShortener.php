@@ -65,7 +65,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 		$form->suppressDefaultSubmit();
 		$this->getOutput()->addModules( 'ext.urlShortener.special' );
 		$this->getOutput()->addJsConfigVars( [
-			'wgUrlShortenerDomainsWhitelist' => UrlShortenerUtils::getAllowedDomainsRegex(),
 			'wgUrlShortenerAllowedDomains' => UrlShortenerUtils::getAllowedDomainsRegex(),
 			'wgUrlShortenerAllowArbitraryPorts' => $wgUrlShortenerAllowArbitraryPorts,
 		] );

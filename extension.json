@@ -176,9 +176,6 @@
 		"UrlShortenerDBName": {
 			"value": false
 		},
-		"UrlShortenerDomainsWhitelist": {
-			"value": false
-		},
 		"UrlShortenerAllowedDomains": {
 			"value": false
 		},

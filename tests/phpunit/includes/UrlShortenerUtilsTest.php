@@ -292,12 +292,14 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 		$this->setContentLang( 'qqx' );
 		$this->setMwGlobals( [ 'wgUrlShortenerAllowedDomains' => $this->getDomains() ] );
 
-		$checkUrl = UrlShortenerUtils::validateUrl( 'http://example.org/75' );
-		$checkUrl2 = UrlShortenerUtils::validateUrl( 'https://en.wikipedia.org/wiki/A' );
+		$allowedUrl = UrlShortenerUtils::validateUrl( 'https://en.wikipedia.org/wiki/A' );
+		$disallowedUrl = UrlShortenerUtils::validateUrl( 'http://example.org/75' );
+		$allowedDomainsRegex = UrlShortenerUtils::getAllowedDomainsRegex();
 
-		$this->assertTrue( $checkUrl2 );
-		$this->assertStringEndsWith( '$', UrlShortenerUtils::getAllowedDomainsRegex() );
-		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $checkUrl );
+		$this->assertTrue( $allowedUrl );
+		$this->assertStringEndsWith( '$', $allowedDomainsRegex );
+		$this->assertStringContainsString( '(.*\.)?wikivoyage\.org', $allowedDomainsRegex );
+		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $disallowedUrl );
 	}
 
 	/**
@@ -305,36 +307,14 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 	 */
 	public function testGetAllowedDomainsRegex2() {
 		$this->setContentLang( 'qqx' );
-		$this->setMwGlobals( [ 'wgUrlShortenerDomainsWhitelist' => $this->getDomains() ] );
+		$this->setMwGlobals( [ 'wgServer' => 'http://example.org' ] );
 
-		$checkUrl = UrlShortenerUtils::validateUrl( 'http://example.org/75' );
-		$checkUrl2 = UrlShortenerUtils::validateUrl( 'https://en.wikipedia.org/wiki/A' );
+		$allowedUrl = UrlShortenerUtils::validateUrl( 'http://example.org/test' );
+		$disallowedUrl = UrlShortenerUtils::validateUrl( 'https://en.wikipedia.org/wiki/A' );
 
-		$this->assertTrue( $checkUrl2 );
-		$this->assertStringEndsWith( '$', UrlShortenerUtils::getAllowedDomainsRegex() );
-		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $checkUrl );
-	}
-
-	/**
-	 * @covers UrlShortenerUtils::getAllowedDomainsRegex
-	 */
-	public function testGetAllowedDomainsRegex3() {
-		$this->setContentLang( 'qqx' );
-		$this->setMwGlobals( [
-			'wgUrlShortenerAllowedDomains' => $this->getDomains(),
-			'wgUrlShortenerDomainsWhitelist' => $this->getDomains()
-		] );
-
-		$checkUrl = UrlShortenerUtils::validateUrl( 'http://example.org/75' );
-		$checkUrl2 = UrlShortenerUtils::validateUrl( 'https://en.wikimedia.org/wiki/A' );
-		$allowedDomainsRegex = UrlShortenerUtils::getAllowedDomainsRegex();
-
-		$this->assertTrue( $checkUrl2 );
-		$this->assertStringEndsWith( '$', $allowedDomainsRegex );
-		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $checkUrl );
-
-		// This is the intersection point, when both variables are defined.
-		$this->assertStringContainsString( 'mediawiki\.org$|^(.*\.)?wikipedia', $allowedDomainsRegex );
+		$this->assertTrue( $allowedUrl );
+		$this->assertSame( 'example\.org', UrlShortenerUtils::getAllowedDomainsRegex() );
+		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $disallowedUrl );
 	}
 
 	private function getDomains() {
