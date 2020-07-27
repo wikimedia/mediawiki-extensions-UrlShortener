@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"129femtoseconds",
 			"2nd-player",
 			"Aefgh39622",
 			"Afaz",
@@ -10,15 +11,17 @@
 			"Yusuke1109"
 		]
 	},
-	"action-urlshortener-create-url": "短いURLを作成",
-	"right-urlshortener-create-url": "短いURLを作成",
-	"action-urlshortener-manage-url": "短いURLの管理",
-	"manageshorturls": "短いURLを管理",
-	"right-urlshortener-manage-url": "短いURLを管理",
+	"action-urlshortener-create-url": "短縮URLを作成",
+	"right-urlshortener-create-url": "短縮URLを作成",
+	"action-urlshortener-manage-url": "短縮URLの管理",
+	"action-urlshortener-view-log": "短縮URLの管理記録を閲覧",
+	"manageshorturls": "短縮URLを管理",
+	"right-urlshortener-manage-url": "短縮URLを管理",
+	"right-urlshortener-view-log": "短縮URLの管理記録を閲覧",
 	"urlshortener": "URL短縮",
 	"urlshortener-action-done": "URLが削除または復元されました",
 	"urlshortener-approved-domains": "以下の{{PLURAL:$1|ドメイン}}へのリンクのみが短縮可能です。 $2",
-	"urlshortener-blocked": "ブロックされたユーザーは短いURLを作ることができません。",
+	"urlshortener-blocked": "ブロックされたユーザーは短縮URLを作ることができません。",
 	"urlshortener-copy-fail": "URLをクリップボードにコピーできませんでした。",
 	"urlshortener-copy-success": "URLがクリップボードにコピーされました。",
 	"urlshortener-deleted": "このURLは削除されました。",
@@ -33,7 +36,7 @@
 	"urlshortener-failed-try-again": "失敗しました。もう一度、試しますか？",
 	"urlshortener-form-header": "長い URL をここに貼り付けてください",
 	"urlshortener-manage-delete-failed": "URLの削除に失敗しました",
-	"urlshortener-manage-not-enough-data": "削除または復元するURLの短いコードを1つ決める必要があります",
+	"urlshortener-manage-not-enough-data": "削除または復元する短縮URLを指定する必要があります",
 	"urlshortener-manage-restore-failed": "URLの復元に失敗しました",
 	"urlshortener-not-found-message": "申し訳ありませんが、お探しの URL が見つかりませんでした。",
 	"urlshortener-not-found-title": "短縮 URL が見つかりません",
