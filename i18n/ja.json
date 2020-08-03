@@ -11,10 +11,10 @@
 			"Yusuke1109"
 		]
 	},
-	"action-urlshortener-create-url": "短縮URLを作成",
+	"action-urlshortener-create-url": "短縮URLの作成",
 	"right-urlshortener-create-url": "短縮URLを作成",
 	"action-urlshortener-manage-url": "短縮URLの管理",
-	"action-urlshortener-view-log": "短縮URLの管理記録を閲覧",
+	"action-urlshortener-view-log": "短縮URLの管理記録の閲覧",
 	"manageshorturls": "短縮URLを管理",
 	"right-urlshortener-manage-url": "短縮URLを管理",
 	"right-urlshortener-view-log": "短縮URLの管理記録を閲覧",
