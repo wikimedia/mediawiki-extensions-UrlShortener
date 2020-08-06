@@ -133,10 +133,16 @@ class SpecialUrlShortener extends FormSpecialPage {
 		if ( !$status->isOK() ) {
 			return $status;
 		}
-		$html = new OOUI\TextInputWidget( [
-			'value' => UrlShortenerUtils::makeUrl( $status->getValue() ),
-			'readOnly' => true,
-		] );
+		$html = new OOUI\FieldLayout(
+			new OOUI\TextInputWidget( [
+				'value' => UrlShortenerUtils::makeUrl( $status->getValue() ),
+				'readOnly' => true,
+			] ),
+			[
+				'align' => 'top',
+				'label' => $this->msg( 'urlshortener-shortened-url-label' )->text(),
+			]
+		);
 		$out->addHTML( $html );
 		return true;
 	}
