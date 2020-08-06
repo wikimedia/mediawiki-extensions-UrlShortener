@@ -11,6 +11,8 @@
 
 class SpecialUrlShortener extends FormSpecialPage {
 
+	protected $resultField;
+
 	public function __construct() {
 		parent::__construct( 'UrlShortener', 'urlshortener-create-url' );
 	}
@@ -26,6 +28,14 @@ class SpecialUrlShortener extends FormSpecialPage {
 			$this->getOutput()->addWikiMsg( 'urlshortener-disabled' );
 		} else {
 			parent::execute( $par );
+
+			if ( $this->resultField ) {
+				// Always show form, as in JS mode.
+				// Also show the the results below the form.
+				$form = $this->getForm();
+				$form->showAlways();
+				$this->getOutput()->addHTML( $this->resultField );
+			}
 		}
 	}
 
@@ -133,7 +143,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 		if ( !$status->isOK() ) {
 			return $status;
 		}
-		$html = new OOUI\FieldLayout(
+		$this->resultField = new OOUI\FieldLayout(
 			new OOUI\TextInputWidget( [
 				'value' => UrlShortenerUtils::makeUrl( $status->getValue() ),
 				'readOnly' => true,
@@ -143,7 +153,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 				'label' => $this->msg( 'urlshortener-shortened-url-label' )->text(),
 			]
 		);
-		$out->addHTML( $html );
 		return true;
 	}
 
