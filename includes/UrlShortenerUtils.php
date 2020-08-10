@@ -274,15 +274,80 @@ class UrlShortenerUtils {
 	}
 
 	/**
+	 * Compute the Cartesian product of a list of sets
+	 *
+	 * @param array[] $sets List of sets
+	 * @return array[]
+	 */
+	public static function cartesianProduct( array $sets ) : array {
+		if ( !$sets ) {
+			return [ [] ];
+		}
+
+		$set = array_shift( $sets );
+		$productSet = self::cartesianProduct( $sets );
+
+		$result = [];
+		foreach ( $set as $val ) {
+			foreach ( $productSet as $p ) {
+				array_unshift( $p, $val );
+				$result[] = $p;
+			}
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Compute all shortcode variants by expanding wgUrlShortenerIdMapping
+	 *
+	 * @param string $shortcode
+	 * @return string[]
+	 */
+	public static function getShortcodeVariants( string $shortcode ) : array {
+		global $wgUrlShortenerIdMapping;
+
+		// Reverse the character alias mapping
+		$targetToVariants = [];
+		foreach ( $wgUrlShortenerIdMapping as $variant => $target ) {
+			$targetToVariants[ $target ] = $targetToVariants[ $target ] ?? [];
+			$targetToVariants[ $target ][] = (string)$variant;
+		}
+
+		// Build a set for each character of possible variants
+		$sets = [];
+		$chars = str_split( $shortcode );
+		foreach ( $chars as $char ) {
+			$set = $targetToVariants[ $char ] ?? [];
+			$set[] = $char;
+			$sets[] = $set;
+		}
+
+		// Cartesian product to get all combinations
+		$productSet = self::cartesianProduct( $sets );
+
+		// Flatten to strings
+		return array_map( function ( $set ) {
+			return implode( '', $set );
+		}, $productSet );
+	}
+
+	/**
 	 * If configured, purge CDN for the given ID
 	 *
 	 * @param int $id
 	 */
-	private static function purgeCdnId( int $id ) : void {
+	public static function purgeCdnId( int $id ) : void {
 		global $wgUseCdn;
 		if ( $wgUseCdn ) {
-			self::purgeCdn( self::encodeId( $id ) );
-			self::purgeCdn( self::encodeId( $id, true ) );
+			$codes = array_merge(
+				self::getShortcodeVariants( self::encodeId( $id ) ),
+				self::getShortcodeVariants( self::encodeId( $id, true ) )
+			);
+			foreach ( $codes as $code ) {
+				var_dump( $code );
+				self::purgeCdn( $code );
+			}
 		}
 	}
 
@@ -443,7 +508,7 @@ class UrlShortenerUtils {
 			for ( $i = 0; $i < $n; $i++ ) {
 				self::$decodeMap[$wgUrlShortenerIdSet[$i]] = $i;
 			}
-			foreach ( $wgUrlShortenerIdMapping ?? [] as $k => $v ) {
+			foreach ( $wgUrlShortenerIdMapping as $k => $v ) {
 				self::$decodeMap[$k] = self::$decodeMap[$v];
 			}
 		}

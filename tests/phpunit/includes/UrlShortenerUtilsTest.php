@@ -11,6 +11,77 @@ class UrlShortenerUtilsTest extends MediaWikiTestCase {
 	}
 
 	/**
+	 * @dataProvider provideCartesianProduct
+	 * @covers UrlShortenerUtils::cartesianProduct
+	 */
+	public function testCartesianProduct( $input, $expected ) {
+		$this->assertEquals(
+			$expected,
+			UrlShortenerUtils::cartesianProduct( $input )
+		);
+	}
+
+	public static function provideCartesianProduct() {
+		return [
+			[
+				[
+					[ 'o', 'O', '0' ],
+					[ 'b' ],
+					[ 'e', 'E' ],
+				],
+				[
+					[ 'o', 'b', 'e' ],
+					[ 'o', 'b', 'E' ],
+					[ 'O', 'b', 'e' ],
+					[ 'O', 'b', 'E' ],
+					[ '0', 'b', 'e' ],
+					[ '0', 'b', 'E' ],
+				]
+			],
+		];
+	}
+
+	/**
+	 * @dataProvider provideShortcodeVariants
+	 * @covers UrlShortenerUtils::getShortcodeVariants
+	 */
+	public function testShortcodeVariants( $input, $expected ) {
+		$this->setMwGlobals( [
+			'wgUrlShortenerIdMapping' => [
+				'7' => 'l',
+				'L' => 'l',
+				'3' => 'e',
+			]
+		] );
+		$this->assertEquals(
+			$expected,
+			UrlShortenerUtils::getShortcodeVariants( $input )
+		);
+	}
+
+	public static function provideShortcodeVariants() {
+		return [
+			[
+				'leet',
+				[
+					'733t',
+					'73et',
+					'7e3t',
+					'7eet',
+					'L33t',
+					'L3et',
+					'Le3t',
+					'Leet',
+					'l33t',
+					'l3et',
+					'le3t',
+					'leet',
+				]
+			],
+		];
+	}
+
+	/**
 	 * @dataProvider provideConvertToProtocol
 	 * @covers UrlShortenerUtils::convertToProtocol
 	 */

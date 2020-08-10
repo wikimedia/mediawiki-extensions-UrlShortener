@@ -185,7 +185,7 @@
 			"value": "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$"
 		},
 		"UrlShortenerIdMapping": {
-			"value": []
+			"value": {}
 		},
 		"UrlShortenerAltPrefix": {
 			"value": "_"
