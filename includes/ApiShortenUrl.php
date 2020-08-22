@@ -8,6 +8,8 @@
  * Even though this is a write action sometimes, we still use GET so we can be
  * cached at varnish levels very easily.
  */
+use MediaWiki\MediaWikiServices;
+
 class ApiShortenUrl extends ApiBase {
 
 	public function execute() {
@@ -47,10 +49,12 @@ class ApiShortenUrl extends ApiBase {
 	 * @throws ApiUsageException if the user lacks the rights
 	 */
 	public function checkUserRights() {
-		$user = $this->getUser();
-		if ( !$user->isAllowedAny( 'urlshortener-create-url' ) ) {
+		$permManager = MediaWikiServices::getInstance()->getPermissionManager();
+
+		if ( !$permManager->userHasRight( $this->getUser(), 'urlshortener-create-url' ) ) {
 			$this->dieWithError( [ 'apierror-permissiondenied',
-				$this->msg( "apierror-urlshortener-permissiondenied" ) ] );
+				$this->msg( "apierror-urlshortener-permissiondenied" ) ]
+			);
 		}
 	}
 
