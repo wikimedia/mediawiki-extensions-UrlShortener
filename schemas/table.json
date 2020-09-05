@@ -1,0 +1,35 @@
+[
+	{
+		"name": "urlshortcodes",
+		"columns": [
+			{
+				"name": "usc_id",
+				"type": "integer",
+				"options": { "notnull": true, "autoincrement": true }
+			},
+			{
+				"name": "usc_url_hash",
+				"type": "string",
+				"options": { "notnull": true, "length": 32, "fixed": true }
+			},
+			{
+				"name": "usc_url",
+				"type": "blob",
+				"options": { "notnull": true, "length": 65530 }
+			},
+			{
+				"name": "usc_deleted",
+				"type": "mwtinyint",
+				"options": { "notnull": true, "default": 0 }
+			}
+		],
+		"indexes": [
+			{
+				"name": "urlshortcodes_url_hash",
+				"columns": [ "usc_url_hash" ],
+				"unique": true
+			}
+		],
+		"pk": [ "usc_id" ]
+	}
+]

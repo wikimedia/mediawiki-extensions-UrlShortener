@@ -89,14 +89,33 @@ class UrlShortenerHooks {
 	}
 
 	/**
-	 * @param DatabaseUpdater $du
-	 * @return bool
+	 * @param DatabaseUpdater $updater
 	 */
-	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $du ) : bool {
-		$base = dirname( __DIR__ ) . '/schemas';
-		$du->addExtensionTable( 'urlshortcodes', "$base/urlshortcodes.sql" );
-		$du->addExtensionField( 'urlshortcodes', 'usc_deleted',
-			"$base/patch-usc_deleted.sql" );
-		return true;
+	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $updater ) {
+		$dir = dirname( __DIR__ );
+		$dbType = $updater->getDB()->getType();
+
+		if ( $dbType === 'mysql' ) {
+			$updater->addExtensionTable(
+				'urlshortcodes',
+				$dir . '/schemas/tables-generated.sql'
+			);
+		} elseif ( $dbType === 'sqlite' ) {
+			$updater->addExtensionTable(
+				'urlshortcodes',
+				$dir . '/schemas/sqlite/tables-generated.sql'
+			);
+		} elseif ( $dbType === 'postgres' ) {
+			$updater->addExtensionTable(
+				'urlshortcodes',
+				$dir . '/schemas/postgres/tables-generated.sql'
+			);
+		}
+
+		$updater->addExtensionField(
+			'urlshortcodes',
+			'usc_deleted',
+			$dir . "/schemas/patch-usc_deleted.sql"
+		);
 	}
 }
