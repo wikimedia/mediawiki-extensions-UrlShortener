@@ -16,7 +16,7 @@ class UrlShortenerHooks {
 	 *
 	 * Adds UrlShortener rules to the URL router.
 	 */
-	public static function onWebRequestPathInfoRouter( $router ) {
+	public static function onWebRequestPathInfoRouter( PathRouter $router ) : bool {
 		global $wgUrlShortenerTemplate;
 		// If a template is set, and it is not the root, register it
 		if ( $wgUrlShortenerTemplate && $wgUrlShortenerTemplate !== '/$1' ) {
@@ -81,7 +81,7 @@ class UrlShortenerHooks {
 	 * @param DatabaseUpdater $du
 	 * @return bool
 	 */
-	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $du ) {
+	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $du ) : bool {
 		$base = dirname( __DIR__ ) . '/schemas';
 		$du->addExtensionTable( 'urlshortcodes', "$base/urlshortcodes.sql" );
 		$du->addExtensionField( 'urlshortcodes', 'usc_deleted',

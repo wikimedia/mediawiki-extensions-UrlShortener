@@ -39,9 +39,9 @@ class UrlShortenerUtils {
 	 *
 	 * @param string $url URL to encode
 	 * @param User $user User requesting the url, for rate limiting
-	 * @return Status with value of base36 encoded shortcode that refers to the $url
+	 * @return Status Status with value of base36 encoded shortcode that refers to the $url
 	 */
-	public static function maybeCreateShortCode( $url, User $user ) {
+	public static function maybeCreateShortCode( string $url, User $user ) : Status {
 		global $wgUrlShortenerUrlSizeLimit;
 		$url = self::normalizeUrl( $url );
 
@@ -115,7 +115,7 @@ class UrlShortenerUtils {
 	 * @param string $url might be encoded or decoded (raw user input)
 	 * @return string URL that is saved in DB and used in Location header
 	 */
-	public static function normalizeUrl( $url ) {
+	public static function normalizeUrl( string $url ) : string {
 		global $wgArticlePath;
 		// First, force the protocol to HTTP, we'll convert
 		// it to a different one when redirecting
@@ -155,7 +155,7 @@ class UrlShortenerUtils {
 	 * @param string|int $proto PROTO_* constant
 	 * @return string
 	 */
-	public static function convertToProtocol( $url, $proto = PROTO_RELATIVE ) {
+	public static function convertToProtocol( string $url, $proto = PROTO_RELATIVE ) : string {
 		$parsed = wfParseUrl( $url );
 		unset( $parsed['scheme'] );
 		$parsed['delimiter'] = '//';
@@ -170,7 +170,7 @@ class UrlShortenerUtils {
 	 * @param string|int|null $proto PROTO_* constant
 	 * @return string|false
 	 */
-	public static function getURL( $shortCode, $proto = PROTO_RELATIVE ) {
+	public static function getURL( string $shortCode, $proto = PROTO_RELATIVE ) {
 		$id = self::decodeId( $shortCode );
 		if ( $id === false ) {
 			return false;
@@ -195,9 +195,9 @@ class UrlShortenerUtils {
 	 * Whether a URL is deleted or not
 	 *
 	 * @param string $shortCode
-	 * @return string|bool
+	 * @return bool
 	 */
-	public static function isURLDeleted( $shortCode ) {
+	public static function isURLDeleted( string $shortCode ) : bool {
 		$id = self::decodeId( $shortCode );
 		if ( $id === false ) {
 			return false;
@@ -222,10 +222,9 @@ class UrlShortenerUtils {
 	 * Mark a URL as deleted
 	 *
 	 * @param string $shortcode
-	 *
 	 * @return bool False if the $shortCode was invalid
 	 */
-	public static function deleteURL( $shortcode ) {
+	public static function deleteURL( string $shortcode ) : bool {
 		$id = self::decodeId( $shortcode );
 		if ( $id === false ) {
 			return false;
@@ -248,10 +247,9 @@ class UrlShortenerUtils {
 	 * Mark a URL as undeleted
 	 *
 	 * @param string $shortcode
-	 *
 	 * @return bool False if the $shortCode was invalid
 	 */
-	public static function restoreURL( $shortcode ) {
+	public static function restoreURL( string $shortcode ) : bool {
 		$id = self::decodeId( $shortcode );
 		if ( $id === false ) {
 			return false;
@@ -272,9 +270,10 @@ class UrlShortenerUtils {
 
 	/**
 	 * If configured, purge CDN for the given shortcode
+	 *
 	 * @param string $shortcode
 	 */
-	private static function purgeCdn( $shortcode ) {
+	private static function purgeCdn( string $shortcode ) : void {
 		global $wgUseCdn;
 		if ( $wgUseCdn ) {
 			$update = new CdnCacheUpdate( [ self::makeUrl( $shortcode ) ] );
@@ -286,7 +285,7 @@ class UrlShortenerUtils {
 	 * @param int $type DB_REPLICA or DB_MASTER
 	 * @return IDatabase
 	 */
-	public static function getDB( $type ) {
+	public static function getDB( int $type ) : IDatabase {
 		global $wgUrlShortenerDBName, $wgUrlShortenerDBCluster;
 		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
 		$lb = $wgUrlShortenerDBCluster
@@ -302,7 +301,7 @@ class UrlShortenerUtils {
 	 * @param string $shortCode base64 shortcode to generate URL For.
 	 * @return string The fully qualified URL
 	 */
-	public static function makeUrl( $shortCode ) {
+	public static function makeUrl( string $shortCode ) : string {
 		global $wgUrlShortenerTemplate, $wgUrlShortenerServer, $wgServer;
 
 		if ( $wgUrlShortenerServer === false ) {
@@ -327,7 +326,7 @@ class UrlShortenerUtils {
 	 *
 	 * @return string Regex of allowed domains
 	 */
-	public static function getAllowedDomainsRegex() {
+	public static function getAllowedDomainsRegex() : string {
 		global $wgUrlShortenerAllowedDomains, $wgServer;
 		if ( $wgUrlShortenerAllowedDomains === false ) {
 			// Allowed Domains not configured, default to wgServer
@@ -352,7 +351,7 @@ class UrlShortenerUtils {
 	 * @param string $url Url to Validate
 	 * @return bool|Message true if it is valid, or error Message object if invalid
 	 */
-	public static function validateUrl( $url ) {
+	public static function validateUrl( string $url ) {
 		global $wgUrlShortenerAllowArbitraryPorts;
 
 		$urlParts = wfParseUrl( $url );
@@ -388,10 +387,9 @@ class UrlShortenerUtils {
 	 * @param int $x
 	 * @return string
 	 */
-	public static function encodeId( $x ) {
+	public static function encodeId( int $x ) : string {
 		global $wgUrlShortenerIdSet;
 		$s = '';
-		$x = intval( $x );
 		$n = strlen( $wgUrlShortenerIdSet );
 		while ( $x ) {
 			$remainder = $x % $n;
@@ -407,7 +405,7 @@ class UrlShortenerUtils {
 	 * @param string $s
 	 * @return int|false
 	 */
-	public static function decodeId( $s ) {
+	public static function decodeId( string $s ) {
 		global $wgUrlShortenerIdSet, $wgUrlShortenerIdMapping;
 
 		$n = strlen( $wgUrlShortenerIdSet );
