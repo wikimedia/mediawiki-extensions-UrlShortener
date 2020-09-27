@@ -139,19 +139,27 @@ class SpecialUrlShortener extends FormSpecialPage {
 		if ( $data['url'] === null ) {
 			return false;
 		}
-
 		$status = UrlShortenerUtils::maybeCreateShortCode( $data['url'], $this->getUser() );
 		if ( !$status->isOK() ) {
 			return $status;
 		}
+		$result = $status->getValue();
+		$altUrl = UrlShortenerUtils::makeUrl( $result[ 'alt' ] );
+		$altLink = new OOUI\Tag( 'a' );
+		$altLink->setAttributes( [ 'href' => $altUrl ] );
+		$altLink->appendContent( $altUrl );
 		$this->resultField = new OOUI\FieldLayout(
 			new OOUI\TextInputWidget( [
-				'value' => UrlShortenerUtils::makeUrl( $status->getValue() ),
+				'value' => UrlShortenerUtils::makeUrl( $result[ 'url' ] ),
 				'readOnly' => true,
 			] ),
 			[
 				'align' => 'top',
 				'label' => $this->msg( 'urlshortener-shortened-url-label' )->text(),
+				'help' => new OOUI\HtmlSnippet(
+					$this->msg( 'urlshortener-shortened-url-alt' )->escaped() . ' ' . $altLink
+				),
+				'helpInline' => true,
 			]
 		);
 		return true;

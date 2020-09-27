@@ -77,7 +77,10 @@ class UrlShortenerUtils {
 			if ( $row->usc_deleted ) {
 				return Status::newFatal( 'urlshortener-deleted' );
 			}
-			return Status::newGood( self::encodeId( $row->usc_id ) );
+			return Status::newGood( [
+				'url' => self::encodeId( $row->usc_id ),
+				'alt' => self::encodeId( $row->usc_id, true )
+			] );
 		}
 
 		$rowData = [
@@ -100,11 +103,13 @@ class UrlShortenerUtils {
 			);
 		}
 
-		$shortcode = self::encodeId( $id );
 		// In case our CDN cached an earlier 404/error, purge it
-		self::purgeCdn( $shortcode );
+		self::purgeCdnId( $id );
 
-		return Status::newGood( $shortcode );
+		return Status::newGood( [
+			'url' => self::encodeId( $id ),
+			'alt' => self::encodeId( $id, true )
+		] );
 	}
 
 	/**
@@ -238,7 +243,7 @@ class UrlShortenerUtils {
 			__METHOD__
 		);
 
-		self::purgeCdn( $shortcode );
+		self::purgeCdnId( $id );
 
 		return true;
 	}
@@ -263,9 +268,22 @@ class UrlShortenerUtils {
 			__METHOD__
 		);
 
-		self::purgeCdn( $shortcode );
+		self::purgeCdnId( $id );
 
 		return true;
+	}
+
+	/**
+	 * If configured, purge CDN for the given ID
+	 *
+	 * @param int $id
+	 */
+	private static function purgeCdnId( int $id ) : void {
+		global $wgUseCdn;
+		if ( $wgUseCdn ) {
+			self::purgeCdn( self::encodeId( $id ) );
+			self::purgeCdn( self::encodeId( $id, true ) );
+		}
 	}
 
 	/**
@@ -385,18 +403,19 @@ class UrlShortenerUtils {
 	 * a generalisation of base_convert().
 	 *
 	 * @param int $x
+	 * @param bool $alt Provide an alternate string representation
 	 * @return string
 	 */
-	public static function encodeId( int $x ) : string {
-		global $wgUrlShortenerIdSet;
+	public static function encodeId( int $x, bool $alt = false ) : string {
+		global $wgUrlShortenerIdSet, $wgUrlShortenerAltPrefix;
 		$s = '';
 		$n = strlen( $wgUrlShortenerIdSet );
 		while ( $x ) {
 			$remainder = $x % $n;
 			$x = ( $x - $remainder ) / $n;
-			$s = $wgUrlShortenerIdSet[$remainder] . $s;
+			$s = $wgUrlShortenerIdSet[$alt ? $n - 1 - $remainder : $remainder] . $s;
 		}
-		return $s;
+		return $alt ? $wgUrlShortenerAltPrefix . $s : $s;
 	}
 
 	/**
@@ -406,7 +425,17 @@ class UrlShortenerUtils {
 	 * @return int|false
 	 */
 	public static function decodeId( string $s ) {
-		global $wgUrlShortenerIdSet, $wgUrlShortenerIdMapping;
+		global $wgUrlShortenerIdSet, $wgUrlShortenerIdMapping, $wgUrlShortenerAltPrefix;
+
+		if ( $s === '' ) {
+			return false;
+		}
+
+		$alt = false;
+		if ( $s[0] === $wgUrlShortenerAltPrefix ) {
+			$s = substr( $s, 1 );
+			$alt = true;
+		}
 
 		$n = strlen( $wgUrlShortenerIdSet );
 		if ( self::$decodeMap === null ) {
@@ -418,11 +447,15 @@ class UrlShortenerUtils {
 				self::$decodeMap[$k] = self::$decodeMap[$v];
 			}
 		}
+
 		$x = 0;
 		for ( $i = 0, $len = strlen( $s ); $i < $len; $i++ ) {
 			$x *= $n;
 			if ( isset( self::$decodeMap[$s[$i]] ) ) {
-				$x += self::$decodeMap[$s[$i]];
+				$val = self::$decodeMap[$s[$i]];
+				$x += $alt ?
+					$n - 1 - $val :
+					$val;
 			} else {
 				return false;
 			}

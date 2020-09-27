@@ -82,7 +82,7 @@
 				self.setSubmit( 'submitting' );
 				self.shortenUrl(
 					self.input.getValue()
-				).done( function ( shorturl ) {
+				).done( function ( urls ) {
 					self.setSubmit( 'submit' );
 					self.input.popPending().setReadOnly( false );
 
@@ -90,15 +90,26 @@
 						self.shortened = new mw.widgets.CopyTextLayout( {
 							align: 'top',
 							label: mw.msg( 'urlshortener-shortened-url-label' ),
-							copyText: shorturl,
+							copyText: urls.shorturl,
+							help: mw.msg( 'urlshortener-shortened-url-alt' ),
+							helpInline: true,
 							successMessage: mw.msg( 'urlshortener-copy-success' ),
 							failMessage: mw.msg( 'urlshortener-copy-fail' )
 						} );
+						self.$alt = $( '<a>' );
+						self.shortened.$help.append( ' ', self.$alt );
 						// Wrap in a FieldLayout so we get the label
 						self.fieldLayout.$element.after( self.shortened.$element );
 					} else {
-						self.shortened.textInput.setValue( shorturl );
+						self.shortened.textInput.setValue( urls.shorturl );
 					}
+					self.$alt.attr( 'href', urls.shorturlalt ).text( urls.shorturlalt );
+					self.$alt.off( 'click' ).on( 'click', function ( e ) {
+						self.shortened.textInput.setValue( urls.shorturlalt );
+						self.shortened.onButtonClick();
+						self.shortened.textInput.setValue( urls.shorturl );
+						e.preventDefault();
+					} );
 					self.shortened.textInput.select();
 				} ).fail( function ( err ) {
 					self.setSubmit( 'submit' );
@@ -141,7 +152,7 @@
 				action: 'shortenurl',
 				url: url
 			} ).then( function ( data ) {
-				return data.shortenurl.shorturl;
+				return data.shortenurl;
 			}, function ( errCode, data ) {
 				return $.Deferred().reject( data.error ).promise();
 			} );

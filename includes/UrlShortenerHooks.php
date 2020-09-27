@@ -27,6 +27,17 @@ class UrlShortenerHooks {
 		return true;
 	}
 
+	public static function onRegistration() {
+		global $wgUrlShortenerIdSet, $wgUrlShortenerIdMapping, $wgUrlShortenerAltPrefix;
+
+		if ( strpos( $wgUrlShortenerIdSet, $wgUrlShortenerAltPrefix ) !== false ) {
+			throw new \ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdSet' );
+		}
+		if ( isset( $wgUrlShortenerIdMapping[ $wgUrlShortenerAltPrefix ] ) ) {
+			throw new \ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdMapping' );
+		}
+	}
+
 	/**
 	 * Load toolbar module for the sidebar link
 	 *

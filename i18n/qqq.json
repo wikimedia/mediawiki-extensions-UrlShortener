@@ -45,6 +45,7 @@
 	"urlshortener-ratelimit": "Error message shown when a user shortens too many urls in a short period of time",
 	"urlshortener-short-code-is-not-deleted": "Error when the URL is not deleted (so it can't be restored)",
 	"urlshortener-short-code-not-found": "Error when short URL is not found or already deleted",
+	"urlshortener-shortened-url-alt": "Label for alternative URL",
 	"urlshortener-shortened-url-label": "Message shown to user above the shortened URL",
 	"urlshortener-toolbox": "Text of link in toolbox to get shortened URL",
 	"urlshortener-url-input-label": "Label for the box the user inputs the URL to shorten.\n{{Identical|URL}}",
