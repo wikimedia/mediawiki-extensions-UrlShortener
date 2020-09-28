@@ -39,6 +39,7 @@
 	"urlshortener-ratelimit": "Почекајте некое време пред да ги скратите URL-ата.",
 	"urlshortener-short-code-is-not-deleted": "Краткиот код за URL не е избришан",
 	"urlshortener-short-code-not-found": "Краткиот код за URL не е пронајден или е избришан",
+	"urlshortener-shortened-url-alt": "Можете да ја употребите и оваа алтернативна URL:",
 	"urlshortener-shortened-url-label": "Скратена URL",
 	"urlshortener-toolbox": "Дај скратен URL",
 	"urlshortener-url-input-label": "URL",

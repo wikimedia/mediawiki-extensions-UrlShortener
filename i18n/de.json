@@ -42,6 +42,7 @@
 	"urlshortener-ratelimit": "Bitte warte etwas, bevor du weitere URLs kürzt.",
 	"urlshortener-short-code-is-not-deleted": "Der URL-Kurzcode wurde nicht gelöscht",
 	"urlshortener-short-code-not-found": "Der URL-Kurzcode wurde nicht gefunden oder gelöscht",
+	"urlshortener-shortened-url-alt": "Du kannst auch diese alternative URL verwenden:",
 	"urlshortener-shortened-url-label": "Gekürzte URL:",
 	"urlshortener-toolbox": "Gekürzte URL abrufen",
 	"urlshortener-url-input-label": "URL",
