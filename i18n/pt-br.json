@@ -40,6 +40,7 @@
 	"urlshortener-ratelimit": "Por favor, aguarde algum tempo antes de encurtar mais URLs.",
 	"urlshortener-short-code-is-not-deleted": "O código abreviado do URL não é excluído",
 	"urlshortener-short-code-not-found": "Código abreviado de URL não encontrado ou excluído",
+	"urlshortener-shortened-url-alt": "Você também pode usar este URL alternativo:",
 	"urlshortener-shortened-url-label": "URL encurtado",
 	"urlshortener-toolbox": "Obter URL encurtado",
 	"urlshortener-url-input-label": "URL",

@@ -43,6 +43,7 @@
 	"urlshortener-ratelimit": "נא לחכות זמן־מה לפני קיצור כתובות נוספות.",
 	"urlshortener-short-code-is-not-deleted": "קוד כתובת קצרה לא מחוק",
 	"urlshortener-short-code-not-found": "קוד כתובת קצרה לא נמצא או נמחק",
+	"urlshortener-shortened-url-alt": "אפשר גם להשתמש ב־URL החלופי הזה:",
 	"urlshortener-shortened-url-label": "כתובת מקוצרת",
 	"urlshortener-toolbox": "קבלת כתובת מקוצרת",
 	"urlshortener-url-input-label": "כתובת URL",

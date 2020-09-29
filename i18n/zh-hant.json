@@ -43,6 +43,7 @@
 	"urlshortener-ratelimit": "在縮短更多網址前請稍待。",
 	"urlshortener-short-code-is-not-deleted": "網址短代碼未被刪除",
 	"urlshortener-short-code-not-found": "網址短代碼查無結果或已被刪除",
+	"urlshortener-shortened-url-alt": "您也可以使用此備用網址：",
 	"urlshortener-shortened-url-label": "已縮短的網址",
 	"urlshortener-toolbox": "取得短網址",
 	"urlshortener-url-input-label": "網址",

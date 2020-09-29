@@ -32,6 +32,7 @@
 	"urlshortener-not-found-message": "Przepraszamy, nie znaleziono adresu URL, którego szukasz.",
 	"urlshortener-not-found-title": "Nie znaleziono krótkiego adresu URL",
 	"urlshortener-ratelimit": "Proszę poczekać jakiś czas przed skracaniem kolejnych adresów URL.",
+	"urlshortener-shortened-url-alt": "Możesz także użyć alternatywnego adresu URL:",
 	"urlshortener-shortened-url-label": "Skrócony URL",
 	"urlshortener-toolbox": "Zobacz skrócony adres URL",
 	"urlshortener-url-input-label": "URL",
