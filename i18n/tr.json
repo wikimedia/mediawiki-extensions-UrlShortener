@@ -4,7 +4,8 @@
 			"BaRaN6161 TURK",
 			"Hedda",
 			"JackUKElliott",
-			"Sayginer"
+			"Sayginer",
+			"ToprakM"
 		]
 	},
 	"action-urlshortener-create-url": "kısa URL'ler oluştur",
@@ -42,6 +43,7 @@
 	"urlshortener-ratelimit": "Daha fazla URL kısaltmadan önce lütfen biraz bekleyin.",
 	"urlshortener-short-code-is-not-deleted": "URL kısa kodu silinmedi",
 	"urlshortener-short-code-not-found": "URL kısa kodu bulunamadı veya silinmedi",
+	"urlshortener-shortened-url-alt": "Ayrıca şu alternatif URL'yi de kullanabilirsiniz:",
 	"urlshortener-shortened-url-label": "Kısaltılmış URL",
 	"urlshortener-toolbox": "Kısaltılmış URL'yi al",
 	"urlshortener-url-input-label": "URL",

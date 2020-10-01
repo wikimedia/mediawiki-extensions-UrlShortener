@@ -39,6 +39,7 @@
 	"urlshortener-ratelimit": "Vent litt før du forkorter flere URL-er.",
 	"urlshortener-short-code-is-not-deleted": "URL-kortkode er ikke slettet",
 	"urlshortener-short-code-not-found": "URL-kortkode ble ikke funnet eller slettet",
+	"urlshortener-shortened-url-alt": "Du kan også bruke denne alternative URL-en:",
 	"urlshortener-shortened-url-label": "Forkortet URL",
 	"urlshortener-toolbox": "Hent forkortet URL",
 	"urlshortener-url-input-label": "URL",
