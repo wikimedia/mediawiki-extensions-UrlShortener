@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hanna Tardos",
 			"Misibacsi",
 			"Tacsipacsi",
 			"ViDam"
@@ -39,6 +40,7 @@
 	"urlshortener-ratelimit": "Várj egy kicsit további URL-ek rövidítése előtt.",
 	"urlshortener-short-code-is-not-deleted": "Az URL-rövidkód nincs törölve",
 	"urlshortener-short-code-not-found": "Az URL-rövidkód nem található vagy törölve van",
+	"urlshortener-shortened-url-alt": "Más URL-t is használhatsz:",
 	"urlshortener-shortened-url-label": "Rövidített URL",
 	"urlshortener-toolbox": "Rövidített URL készítése",
 	"urlshortener-url-input-label": "URL",

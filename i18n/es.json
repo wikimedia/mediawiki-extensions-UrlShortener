@@ -30,6 +30,7 @@
 	"urlshortener-not-found-message": "No se encuentra el URL que has solicitado.",
 	"urlshortener-not-found-title": "No se encontró el URL corto",
 	"urlshortener-ratelimit": "Espera un poco antes de acortar más URL.",
+	"urlshortener-shortened-url-alt": "También se puede utilizar este URL alternativo:",
 	"urlshortener-shortened-url-label": "URL acortado",
 	"urlshortener-toolbox": "Obtener URL acortado",
 	"urlshortener-url-input-label": "URL",
