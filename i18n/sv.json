@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Jopparn",
+			"Sabelöga",
 			"Skalman",
 			"WikiPhoenix",
 			"Wikimon"
@@ -38,6 +39,7 @@
 	"urlshortener-ratelimit": "Var vänlig vänta en viss tid innan du kortar ned fler webbadresser.",
 	"urlshortener-short-code-is-not-deleted": "Url:ens korta kod är inte raderad",
 	"urlshortener-short-code-not-found": "Url:ens korta kod hittas inte eller har raderats",
+	"urlshortener-shortened-url-alt": "Du kan också använda den här alternativa webbadressen:",
 	"urlshortener-shortened-url-label": "Förkortad URL",
 	"urlshortener-toolbox": "Hämta förkortad url",
 	"urlshortener-url-input-label": "URL",
