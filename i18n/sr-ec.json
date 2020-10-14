@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
+			"Kizule",
 			"Milicevic01",
 			"Rancher"
 		]
 	},
+	"action-urlshortener-create-url": "прављење кратких веза",
 	"urlshortener": "Скраћивач URL-а",
 	"urlshortener-approved-domains": "Везе ка {{PLURAL:$1|следећем домену|следећим доменима}} могу да се скрате: $2.",
 	"urlshortener-desc": "Скраћивач произвољних URL адреса",
@@ -16,6 +18,7 @@
 	"urlshortener-error-nouserpass": "Скраћивање URL адреса које садрже корисничко име или лозинку није дозвољено",
 	"urlshortener-failed-try-again": "Није успело. Покушати поново?",
 	"urlshortener-form-header": "Овде налепите дугачку URL адресу",
+	"urlshortener-manage-reason": "Разлог",
 	"urlshortener-not-found-message": "Није пронађена URL адреса коју сте тражили.",
 	"urlshortener-not-found-title": "Није пронађена кратка URL адреса",
 	"urlshortener-ratelimit": "Сачекајте неко време пре него што наставите са скраћивањем URL адреса.",
