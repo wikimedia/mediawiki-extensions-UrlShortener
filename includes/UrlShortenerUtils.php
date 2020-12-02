@@ -345,7 +345,6 @@ class UrlShortenerUtils {
 				self::getShortcodeVariants( self::encodeId( $id, true ) )
 			);
 			foreach ( $codes as $code ) {
-				var_dump( $code );
 				self::purgeCdn( $code );
 			}
 		}
