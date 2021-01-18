@@ -44,5 +44,9 @@
 	"urlshortener-url-input-submit": "Accorce",
 	"urlshortener-url-input-submitting": "Stoche accorce...",
 	"urlshortener-url-too-long": "'A URL jè troppe longhe, 'a dimenzione mssime jè de {{PLURAL:$1|'nu|$1}} carattere",
-	"urlshortener-badaccessgroups": "Non ge tìne le deritte pe ccrejà le URL curte"
+	"urlshortener-badaccessgroups": "Non ge tìne le deritte pe ccrejà le URL curte",
+	"logeventslist-urlshortener-log": "Archivije de gestione de le URL curte",
+	"log-action-filter-urlshortener": "Tipe de gestione",
+	"log-action-filter-urlshortener-delete": "Scangellazione de l'URL",
+	"log-action-filter-urlshortener-restore": "Repristine de l'URL"
 }

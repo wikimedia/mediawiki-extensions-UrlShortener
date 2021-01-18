@@ -3,6 +3,7 @@
 		"authors": [
 			"Derugon",
 			"Gomoko",
+			"Kropotkine 113",
 			"Pamputt",
 			"Pols12",
 			"Thibaut120094",
@@ -38,7 +39,7 @@
 	"urlshortener-failed-try-again": "Échec. Réessayer ?",
 	"urlshortener-form-header": "Copiez votre URL longue ici",
 	"urlshortener-manage-text": "Utilisez le formulaire ci-dessous pour supprimer une URL courte ou restaurer une URL supprimée.<br>Après avoir supprimé une URL courte ici, le lien court ne redirigera plus vers la page à laquelle il était destiné. Tous les liens créés avec ce lien seront rompus. Veuillez utiliser cette fonction avec précaution. Cette action sera [[Special:Log/urlshortener|enregistrée]].",
-	"urlshortener-manage-delete-failed": "Erreur durant la supression d'URL",
+	"urlshortener-manage-delete-failed": "Erreur durant la suppression d'URL",
 	"urlshortener-manage-not-enough-data": "Vous devez indiquer un code court d’URL à supprimer ou à restaurer",
 	"urlshortener-manage-restore-failed": "La restauration de l’URL a échoué",
 	"urlshortener-manage-reason": "Motif",
