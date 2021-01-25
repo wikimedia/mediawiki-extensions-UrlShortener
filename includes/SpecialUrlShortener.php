@@ -155,6 +155,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 			] ),
 			[
 				'align' => 'top',
+				'classes' => [ 'ext-urlshortener-result' ],
 				'label' => $this->msg( 'urlshortener-shortened-url-label' )->text(),
 				'help' => new OOUI\HtmlSnippet(
 					$this->msg( 'urlshortener-shortened-url-alt' )->escaped() . ' ' . $altLink
