@@ -87,6 +87,7 @@
 						self.shortened = new mw.widgets.CopyTextLayout( {
 							align: 'top',
 							label: mw.msg( 'urlshortener-shortened-url-label' ),
+							classes: [ '.ext-urlshortener-result' ],
 							copyText: urls.shorturl,
 							help: mw.msg( 'urlshortener-shortened-url-alt' ),
 							helpInline: true,
@@ -95,6 +96,9 @@
 						} );
 						self.$alt = $( '<a>' );
 						self.shortened.$help.append( ' ', self.$alt );
+						// Remove PHP result widget if present
+						// eslint-disable-next-line no-jquery/no-global-selector
+						$( '.ext-urlshortener-result' ).remove();
 						// Wrap in a FieldLayout so we get the label
 						self.fieldLayout.$element.after( self.shortened.$element );
 					} else {
