@@ -108,6 +108,7 @@
 						self.shortened.textInput.setValue( urls.shorturlalt );
 						self.shortened.onButtonClick();
 						self.shortened.textInput.setValue( urls.shorturl );
+						self.$alt[ 0 ].focus();
 						e.preventDefault();
 					} );
 					self.shortened.textInput.select();
