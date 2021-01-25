@@ -83,9 +83,6 @@
 				self.shortenUrl(
 					self.input.getValue()
 				).done( function ( urls ) {
-					self.setSubmit( 'submit' );
-					self.input.popPending().setReadOnly( false );
-
 					if ( !self.shortened ) {
 						self.shortened = new mw.widgets.CopyTextLayout( {
 							align: 'top',
@@ -112,9 +109,10 @@
 					} );
 					self.shortened.textInput.select();
 				} ).fail( function ( err ) {
+					self.fieldLayout.setErrors( [ err.info ] );
+				} ).always( function () {
 					self.setSubmit( 'submit' );
 					self.input.popPending().setReadOnly( false );
-					self.fieldLayout.setErrors( [ err.info ] );
 				} );
 			} );
 		},
@@ -139,6 +137,7 @@
 			// * urlshortener-url-input-submitting
 			// * urlshortener-url-input-submit
 			this.submit.setLabel( mw.message( 'urlshortener-url-input-' + status ).text() );
+			this.submit.setDisabled( status === 'submitting' );
 		},
 
 		/**
