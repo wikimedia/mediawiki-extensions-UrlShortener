@@ -327,7 +327,7 @@ class UrlShortenerUtils {
 		$productSet = self::cartesianProduct( $sets );
 
 		// Flatten to strings
-		return array_map( function ( $set ) {
+		return array_map( static function ( $set ) {
 			return implode( '', $set );
 		}, $productSet );
 	}
@@ -417,7 +417,7 @@ class UrlShortenerUtils {
 		} else {
 			// Collapse the allowed domains into a single string, so we have to run regex check only once
 			$allowedDomains = implode( '|', array_map(
-				function ( $item ) {
+				static function ( $item ) {
 					return '^' . $item . '$';
 				},
 				$wgUrlShortenerAllowedDomains

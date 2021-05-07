@@ -62,7 +62,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 		$lang = $this->getLanguage();
 		return $this->msg( 'urlshortener-approved-domains' )
 			->numParams( count( $domains ) )
-			->params( $lang->listToText( array_map( function ( $i ) {
+			->params( $lang->listToText( array_map( static function ( $i ) {
 				return "<code>$i</code>";
 			}, $domains ) ) );
 	}
