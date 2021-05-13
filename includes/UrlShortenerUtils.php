@@ -87,7 +87,7 @@ class UrlShortenerUtils {
 			'usc_url' => $url,
 			'usc_url_hash' => md5( $url )
 		];
-		$dbw = self::getDB( DB_MASTER );
+		$dbw = self::getDB( DB_PRIMARY );
 		$dbw->insert( 'urlshortcodes', $rowData, __METHOD__, [ 'IGNORE' ] );
 
 		if ( $dbw->affectedRows() ) {
@@ -235,7 +235,7 @@ class UrlShortenerUtils {
 			return false;
 		}
 
-		$dbw = self::getDB( DB_MASTER );
+		$dbw = self::getDB( DB_PRIMARY );
 		$dbw->update(
 			'urlshortcodes',
 			[ 'usc_deleted' => 1 ],
@@ -260,7 +260,7 @@ class UrlShortenerUtils {
 			return false;
 		}
 
-		$dbw = self::getDB( DB_MASTER );
+		$dbw = self::getDB( DB_PRIMARY );
 		$dbw->update(
 			'urlshortcodes',
 			[ 'usc_deleted' => 0 ],
@@ -364,7 +364,7 @@ class UrlShortenerUtils {
 	}
 
 	/**
-	 * @param int $type DB_REPLICA or DB_MASTER
+	 * @param int $type DB_REPLICA or DB_PRIMARY
 	 * @return IDatabase
 	 */
 	public static function getDB( int $type ) : IDatabase {
