@@ -16,7 +16,7 @@ class UrlShortenerHooks {
 	 *
 	 * Adds UrlShortener rules to the URL router.
 	 */
-	public static function onWebRequestPathInfoRouter( PathRouter $router ) : bool {
+	public static function onWebRequestPathInfoRouter( PathRouter $router ): bool {
 		global $wgUrlShortenerTemplate;
 		// If a template is set, and it is not the root, register it
 		if ( $wgUrlShortenerTemplate && $wgUrlShortenerTemplate !== '/$1' ) {
