@@ -76,14 +76,11 @@
 				10,
 				120
 			],
-			"newbie": [
-				10,
-				120
-			],
 			"user-global": [
 				50,
-				120
-			]
+				300
+			],
+			"&can-bypass": false
 		}
 	},
 	"ResourceModules": {
