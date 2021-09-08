@@ -91,18 +91,18 @@ class SpecialManageShortUrls extends FormSpecialPage {
 				$errors[] = [ 'urlshortener-short-code-not-found' ];
 			}
 			$success = UrlShortenerUtils::deleteURL( $delete );
-			if ( $success !== true ) {
+			if ( !$success ) {
 				$errors[] = [ 'urlshortener-manage-delete-failed' ];
 			}
 		}
 
 		if ( $restore ) {
 			$deleted = UrlShortenerUtils::isURLDeleted( $restore );
-			if ( $deleted === false ) {
+			if ( !$deleted ) {
 				$errors[] = [ 'urlshortener-short-code-is-not-deleted' ];
 			}
 			$success = UrlShortenerUtils::restoreURL( $restore );
-			if ( $success !== true ) {
+			if ( !$success ) {
 				$errors[] = [ 'urlshortener-manage-restore-failed' ];
 			}
 		}
