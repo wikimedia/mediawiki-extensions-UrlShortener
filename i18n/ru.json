@@ -26,5 +26,7 @@
 	"urlshortener-toolbox": "Получить сокращённый URL-адрес",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Сократить",
-	"urlshortener-url-input-submitting": "Сокращение…"
+	"urlshortener-url-input-submitting": "Сокращение…",
+	"log-action-filter-urlshortener-delete": "Удаление URL-адреса",
+	"log-action-filter-urlshortener-restore": "Восстановление URL-адреса"
 }
