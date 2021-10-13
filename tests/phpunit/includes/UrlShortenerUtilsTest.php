@@ -3,7 +3,7 @@
 /**
  * @group Database
  */
-class UrlShortenerUtilsTest extends MediaWikiTestCase {
+class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	protected function setUp(): void {
 		parent::setUp();
