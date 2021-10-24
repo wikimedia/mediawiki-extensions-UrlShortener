@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Block\AbstractBlock;
+
 /**
  * @group Database
  */
@@ -363,13 +365,18 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testGetURLBlocked() {
 		$url = 'http://example.org/75';
+
+		$block = $this->getMockBuilder( AbstractBlock::class )
+			->disableOriginalConstructor()
+			->getMock();
+
 		$user = $this->getMockBuilder( User::class )
 			->disableOriginalConstructor()
 			->getMock();
 
 		$user->expects( $this->atLeastOnce() )
-			->method( 'isBlocked' )
-			->willReturn( true );
+			->method( 'getBlock' )
+			->willReturn( $block );
 
 		$status = UrlShortenerUtils::maybeCreateShortCode( $url, $user );
 
