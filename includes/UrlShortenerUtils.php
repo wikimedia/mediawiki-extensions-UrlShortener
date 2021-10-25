@@ -45,7 +45,7 @@ class UrlShortenerUtils {
 		global $wgUrlShortenerUrlSizeLimit;
 		$url = self::normalizeUrl( $url );
 
-		if ( $user->isBlocked() || $user->isBlockedGlobally() ) {
+		if ( $user->getBlock() || $user->isBlockedGlobally() ) {
 			return Status::newFatal( 'urlshortener-blocked' );
 		}
 
