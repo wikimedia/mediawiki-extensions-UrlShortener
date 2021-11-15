@@ -4,7 +4,10 @@
 			"Умар"
 		]
 	},
+	"urlshortener": "URL-адресаш дацдириг",
+	"urlshortener-approved-domains": "{{PLURAL:$1|Лахара домен|Лахара доменаш}} тӀе йолу хьажоргаш йацйан мега: $2.",
 	"urlshortener-desc": "Шен лаамера URL-адресаш дацдийриг",
+	"urlshortener-form-header": "Деха URL-адрес дилла кхуза",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Дацдан",
 	"urlshortener-url-input-submitting": "Дацдар…"
