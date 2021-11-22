@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"Winston Sung"
 		]
 	},
 	"apihelp-shortenurl-description": "將長的 URL 給縮短。",
 	"apihelp-shortenurl-summary": "將長的 URL 給縮短。",
 	"apihelp-shortenurl-param-url": "要縮短的 URL。",
 	"apihelp-shortenurl-example-1": "取得 <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> 的縮短 URL。",
-	"apierror-urlshortener-disabled": "無法創建出新的短 Url",
+	"apierror-urlshortener-disabled": "無法建立新的短網址",
 	"apierror-urlshortener-permissiondenied": "您沒有權限來建立簡短的 URL"
 }
