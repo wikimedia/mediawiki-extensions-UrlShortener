@@ -5,14 +5,18 @@
 			"Sabelöga",
 			"Skalman",
 			"WikiPhoenix",
-			"Wikimon"
+			"Wikimon",
+			"Dhallin"
 		]
 	},
 	"action-urlshortener-create-url": "skapa korta url:er",
 	"right-urlshortener-create-url": "Skapa korta url:er",
 	"action-urlshortener-manage-url": "hantera korta webbadresser",
+	"action-urlshortener-view-log": "visa kort webbadresshanteringslogg",
 	"manageshorturls": "Hantera korta webbadresser",
 	"right-urlshortener-manage-url": "Hantera korta webbadresser",
+	"grant-shortenurls": "Skapa kortas URL's",
+	"right-urlshortener-view-log": "Visa kort URL's hanteringslogg",
 	"urlshortener": "URL-förkortare",
 	"urlshortener-action-done": "Webbadresser har raderats och/eller återställts",
 	"urlshortener-approved-domains": "Länkar till följande {{PLURAL:$1|domän|domäner}} kan kortas: $2",
@@ -30,6 +34,7 @@
 	"urlshortener-error-nouserpass": "Url:er som innehåller ett användarnamn eller lösenord får inte förkortas",
 	"urlshortener-failed-try-again": "Misslyckades. Försök igen?",
 	"urlshortener-form-header": "Klistra in din långa URL här",
+	"urlshortener-manage-text": "Använd formuläret nedan för att radera en kort URL eller återställa en borttagen. <br> Efter att ha tagit bort en kort URL här kommer den korta länken inte längre att omdirigera till den sida den brukade. Alla länkar som görs med det kommer att brytas. Använd den här funktionen noggrant. Denna åtgärd kommer att vara [[Special:Log/urlshortener|logged]].",
 	"urlshortener-manage-delete-failed": "Misslyckades att radera webbadressen",
 	"urlshortener-manage-not-enough-data": "Du måste bestämma en url:s korta kod att radera eller återställa",
 	"urlshortener-manage-restore-failed": "Misslyckades att återställa webbadressen",
@@ -45,5 +50,14 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Förkorta",
 	"urlshortener-url-input-submitting": "Förkortar...",
-	"urlshortener-url-too-long": "Url:en är för lång, maxlängden är {{PLURAL:$1|ett tecken|$1 tecken}}"
+	"urlshortener-url-too-long": "Url:en är för lång, maxlängden är {{PLURAL:$1|ett tecken|$1 tecken}}",
+	"urlshortener-badaccessgroups": "Du har inte rätt att skapa korta URLs",
+	"log-name-urlshortener": "Kort URLs hanteringslogg",
+	"log-description-urlshortener": "Denna logg visar radering och återställning av korta URLs. Det visar inte skapandet av nya",
+	"logentry-urlshortener-delete": "$1 {{GENDER:$2|deleted}} den korta URL \"$4\"",
+	"logentry-urlshortener-restore": "$1 {{GENDER:$2|restored}} den korta URL \"$4\"",
+	"logeventslist-urlshortener-log": "Kort URL-hanteringslogg",
+	"log-action-filter-urlshortener": "Typ av ledning",
+	"log-action-filter-urlshortener-delete": "URL Radering",
+	"log-action-filter-urlshortener-restore": "URL Återställande"
 }
