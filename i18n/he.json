@@ -38,7 +38,7 @@
 	"urlshortener-manage-not-enough-data": "חובה להגדיר קוד כתובת קצרה אחד למחוק או לשחזר",
 	"urlshortener-manage-restore-failed": "שחזור הכתובת נכשל",
 	"urlshortener-manage-reason": "סיבה",
-	"urlshortener-not-found-message": "סליחה, הכתובת שחיפשת לא נמצאה.",
+	"urlshortener-not-found-message": "מצטערים, הכתובת שחיפשת לא נמצאה.",
 	"urlshortener-not-found-title": "לא נמצאה כתובת מקוצרת",
 	"urlshortener-ratelimit": "נא לחכות זמן־מה לפני קיצור כתובות נוספות.",
 	"urlshortener-short-code-is-not-deleted": "קוד כתובת קצרה לא מחוק",
