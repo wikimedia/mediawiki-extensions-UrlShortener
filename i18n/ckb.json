@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Muhammed taha"
+		]
+	},
+	"action-urlshortener-create-url": "دروستکردنی کورتە ناونیشانەکان",
+	"urlshortener-error-malformed-url": "ناونیشانی دروست نیە",
+	"urlshortener-failed-try-again": "شکستی ھێنا. ھەوڵدەدەیتەوە؟",
+	"urlshortener-form-header": "ناونیشانە درێژەکەت لێرە دابنێ",
+	"urlshortener-manage-delete-failed": "سڕینەوەی ناونیشان شکستی ھێنا",
+	"urlshortener-manage-restore-failed": "گێڕانەوەی بەستەر شکستی ھێنا",
+	"urlshortener-manage-reason": "ھۆکار",
+	"urlshortener-not-found-title": "کورتە ناونیشان نەدۆزرایەوە",
+	"urlshortener-url-input-label": "ناونیشانی ئینتەرنێتی",
+	"urlshortener-url-input-submit": "کورتی بکەرەوە",
+	"urlshortener-url-input-submitting": "کورتی دەکاتەوە..."
+}

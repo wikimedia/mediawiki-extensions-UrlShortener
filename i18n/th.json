@@ -2,9 +2,25 @@
 	"@metadata": {
 		"authors": [
 			"Aefgh39622",
-			"Geonuch"
+			"Geonuch",
+			"Patsagorn Y."
 		]
 	},
-	"right-urlshortener-create-url": "สร้าง URL สั้น",
+	"action-urlshortener-create-url": "สร้างยูอาร์แอลย่อ",
+	"right-urlshortener-create-url": "สร้างการย่อยูอาร์แอล",
+	"action-urlshortener-manage-url": "จัดการการย่อยูอาร์แอล",
+	"action-urlshortener-view-log": "ดูปูมการจัดการยูอาร์แอลแบบย่อ",
+	"manageshorturls": "จัดการยูอาร์แอลแบบย่อ",
+	"right-urlshortener-manage-url": "จัดการการย่อยูอาร์แอล",
+	"grant-shortenurls": "สร้างยูอาร์แอลแบบย่อ",
+	"right-urlshortener-view-log": "ดูปูมการจัดการยูอาร์แอลแบบย่อ",
+	"urlshortener": "ย่อยูอาร์แอล",
+	"urlshortener-action-done": "ยูอาร์แอลถูกลบและ/หรือกู้คืนแล้ว",
+	"urlshortener-approved-domains": "ลิงก์ที่อยู่ภายใต้{{PLURAL:$1|โดเมนนี้|โดเมนเหล่านี้}}สามารถย่อได้: $2",
+	"urlshortener-blocked": "ผู้ใช้ที่ถูกบล็อกไม่สามารถสร้างยูอาร์แอลแบบย่อได้",
+	"urlshortener-copy-fail": "เกิดข้อผิดพลาดและไม่สามารถคัดลอกไปที่คลิปบอร์ดได้",
+	"urlshortener-copy-success": "ยูอาร์แอลถูกคัดลอกไปทึ่คลิปบอร์ดแล้ว",
+	"urlshortener-deleted": "ยูอาร์แอลแบบย่อนี้ถูกลบแล้ว",
+	"urlshortener-desc": "ตัวสร้าง URL แบบสั้นสำหรับผู้ใช้ทึ่ต้องการได้ทันที",
 	"urlshortener-failed-try-again": "ล้มเหลว ลองอีกครั้ง?"
 }

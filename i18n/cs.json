@@ -4,7 +4,9 @@
 			"Dvorapa",
 			"Kvetoslav47",
 			"Martin Urbanec",
-			"Mormegil"
+			"Mormegil",
+			"Patriccck",
+			"Patrik L."
 		]
 	},
 	"action-urlshortener-create-url": "vytvářet zkrácená URL",
@@ -52,7 +54,7 @@
 	"log-name-urlshortener": "Protokol správy krátkých URL",
 	"log-description-urlshortener": "Tento protokol zobrazuje mazání a obnovení krátkých URL. Nezobrazuje vytváření nových",
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|smazal|smazala}} zkrácené URL „$4“",
-	"logentry-urlshortener-restore": "$1 {{GENDER:$2|obnovil|obnovila}} zkrácené URL „$4“",
+	"logentry-urlshortener-restore": "$1 {{GENDER:$2|obnovil|obnovila|obnovil(a)}} zkrácené URL „$4“",
 	"logeventslist-urlshortener-log": "Protokol správy krátkých URL",
 	"log-action-filter-urlshortener": "Typ správy",
 	"log-action-filter-urlshortener-delete": "Mazání URL",

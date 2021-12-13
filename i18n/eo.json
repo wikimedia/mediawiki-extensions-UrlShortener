@@ -2,14 +2,37 @@
 	"@metadata": {
 		"authors": [
 			"Luis Miguel Obando",
-			"Tlustulimu"
+			"Tlustulimu",
+			"Robin van der Vliet"
 		]
 	},
-	"urlshortener": "URL-mallongigo",
-	"urlshortener-blocked": "Blokitaj uzantoj ne povas fari mallongan URLs.",
-	"urlshortener-desc": "URL-mallongigilo por ajnaj URLoj",
-	"urlshortener-error-disallowed-url": "URLoj al la domajno $1 ne rajtas esti mallongigataj",
+	"action-urlshortener-create-url": "krei mallongajn URL-ojn",
+	"right-urlshortener-create-url": "Krei mallongajn URL-ojn",
+	"action-urlshortener-manage-url": "administri mallongajn URL-ojn",
+	"manageshorturls": "Administri mallongajn URL-ojn",
+	"right-urlshortener-manage-url": "Administri mallongajn URL-ojn",
+	"grant-shortenurls": "Krei mallongajn URL-ojn",
+	"urlshortener": "URL-mallongigilo",
+	"urlshortener-approved-domains": "Ligiloj al la {{PLURAL:$1|sekva domajno|sekvaj domajnoj}} povas esti mallongigitaj: $2.",
+	"urlshortener-blocked": "Blokitaj uzantoj ne povas fari mallongan URL-ojn.",
+	"urlshortener-copy-fail": "Kopiado de la URL al la tondujo malsukcesis.",
+	"urlshortener-copy-success": "URL kopiita al la tondujo.",
+	"urlshortener-deleted": "Ĉi tiu mallonga URL estas forigita.",
+	"urlshortener-desc": "URL-mallongigilo por arbitraj URL-oj",
+	"urlshortener-disabled": "Kreado de novaj mallongaj URL-oj estas provizore malŝaltita.",
+	"urlshortener-error-disallowed-url": "URL-oj al la domajno $1 ne rajtas esti mallongigitaj",
+	"urlshortener-error-malformed-url": "Nevalida URL",
+	"urlshortener-form-header": "Alglui vian longan URL ĉi tie",
+	"urlshortener-manage-reason": "Kialo",
 	"urlshortener-not-found-title": "Mallonga URL ne trovita",
 	"urlshortener-shortened-url-label": "Mallongigita URL",
-	"urlshortener-url-input-submit": "Mallongigi"
+	"urlshortener-toolbox": "Akiri mallongigitan URL",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Mallongigi",
+	"urlshortener-url-input-submitting": "Mallongigado…",
+	"urlshortener-badaccessgroups": "Vi ne havas la rajton krei mallongajn URL-ojn",
+	"logentry-urlshortener-delete": "$1 {{GENDER:$2|forigis}} la mallongan URL \"$4\"",
+	"logentry-urlshortener-restore": "$1 {{GENDER:$2|restarigis}} la mallongan URL \"$4\"",
+	"log-action-filter-urlshortener-delete": "URL-forigado",
+	"log-action-filter-urlshortener-restore": "URL-restarigado"
 }

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dhallin"
+		]
+	},
+	"apihelp-shortenurl-description": "Korta ner en lång URL till en kortare.",
+	"apihelp-shortenurl-summary": "Korta ner en lång URL till en kortare.",
+	"apihelp-shortenurl-param-url": "URL som ska förkortas.",
+	"apihelp-shortenurl-example-1": "Skaffa den korta URL:en för <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Inga nya korta URLs får skapas",
+	"apierror-urlshortener-permissiondenied": "Du har inte rätt att skapa korta URLs"
+}

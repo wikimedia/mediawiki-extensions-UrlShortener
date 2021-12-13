@@ -9,6 +9,7 @@
 	"action-urlshortener-manage-url": "hallata lühendatud URL-e",
 	"manageshorturls": "Lühendatud URL-ide haldamine",
 	"right-urlshortener-manage-url": "Hallata lühendatud URL-e",
+	"grant-shortenurls": "Lühendatud URL-ide loomine",
 	"urlshortener": "URL-i lühendamine",
 	"urlshortener-approved-domains": "Lühendada saab linke {{PLURAL:$1|järgmisesse domeeni|järgmistesse domeenidesse}}: $2.",
 	"urlshortener-copy-fail": "URL-i kopeerimine lõikelauale ei õnnestunud.",
