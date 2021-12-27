@@ -3,6 +3,7 @@
 		"authors": [
 			"A Retired User",
 			"Liuxinyu970226",
+			"Stang",
 			"予弦",
 			"神樂坂秀吉"
 		]
@@ -11,5 +12,6 @@
 	"apihelp-shortenurl-summary": "将一个长URL缩短。",
 	"apihelp-shortenurl-param-url": "将缩短的URL。",
 	"apihelp-shortenurl-example-1": "获取用于<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>的短URL。",
-	"apierror-urlshortener-disabled": "不能新建短url"
+	"apierror-urlshortener-disabled": "不能新建短url",
+	"apierror-urlshortener-permissiondenied": "您没有创建短url的权限"
 }
