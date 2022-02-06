@@ -9,7 +9,15 @@
  * @license Apache-2.0
  */
 
+namespace MediaWiki\Extension\UrlShortener;
+
+use CdnCacheUpdate;
+use DeferredUpdates;
 use MediaWiki\MediaWikiServices;
+use Message;
+use SpecialPage;
+use Status;
+use User;
 use Wikimedia\Rdbms\IDatabase;
 
 class UrlShortenerUtils {
@@ -216,11 +224,7 @@ class UrlShortenerUtils {
 			__METHOD__
 		);
 
-		if ( $url === false ) {
-			return false;
-		}
-
-		return true;
+		return $url !== false;
 	}
 
 	/**
@@ -398,9 +402,7 @@ class UrlShortenerUtils {
 		$url = str_replace( '$1', $shortCode, $urlTemplate );
 
 		// Make sure the URL is fully qualified
-		$url = wfExpandUrl( $url );
-
-		return $url;
+		return wfExpandUrl( $url );
 	}
 
 	/**

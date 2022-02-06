@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Extension\UrlShortener\UrlShortenerUtils;
+
 $IP = getenv( 'MW_INSTALL_PATH' );
 if ( $IP === false ) {
 	$IP = __DIR__ . '/../../..';

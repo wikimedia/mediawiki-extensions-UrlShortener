@@ -8,7 +8,13 @@
  * Even though this is a write action sometimes, we still use GET so we can be
  * cached at varnish levels very easily.
  */
+
+namespace MediaWiki\Extension\UrlShortener;
+
+use ApiBase;
+use ApiUsageException;
 use MediaWiki\MediaWikiServices;
+use Status;
 
 class ApiShortenUrl extends ApiBase {
 
