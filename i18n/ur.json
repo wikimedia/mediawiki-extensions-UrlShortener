@@ -4,6 +4,14 @@
 			"Muhammad Shuaib"
 		]
 	},
+	"action-urlshortener-create-url": "مختصر روابط (URL) کی تخلیق کرنے",
+	"right-urlshortener-create-url": "مختصر روابط (URL) کی تخلیق",
+	"action-urlshortener-manage-url": "مختصر روابط (URL) کے انتظام",
+	"action-urlshortener-view-log": "مختصر روابط کا نوشتۂ انتظام دیکھنے",
+	"manageshorturls": "مختصر روابط کا انتظام",
+	"right-urlshortener-manage-url": "مختصر روابط کا انتظام",
+	"grant-shortenurls": "مختصر روابط (URL) کی تخلیق",
+	"right-urlshortener-view-log": "مختصر روابط کے نوشتۂ انتظام کا معائنہ",
 	"urlshortener": "یوآرایل مختصر کنندہ",
 	"urlshortener-desc": "یوآرایل مختصر کنندہ برائے خود ساختہ یوآرایل",
 	"urlshortener-disabled": "نئے مختصر یوآرایل کی تخلیق عارضی طور پر بند کی گئی ہے۔",
