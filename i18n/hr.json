@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Bugoslav",
+			"MaGa",
 			"Neptune, the Mystic"
 		]
 	},
@@ -39,6 +40,7 @@
 	"urlshortener-ratelimit": "Molimo Vas, pričekajte neko vrijeme prije skraćivanja daljnjih URL-ova.",
 	"urlshortener-short-code-is-not-deleted": "Kratki kôd URL-a nije izbrisan",
 	"urlshortener-short-code-not-found": "Kratki kôd URL-a nije pronađen ili je izbrisan",
+	"urlshortener-shortened-url-alt": "Možete rabiti i ovaj alternativni URL:",
 	"urlshortener-shortened-url-label": "Skraćeni URL",
 	"urlshortener-toolbox": "Skraćeni URL",
 	"urlshortener-url-input-label": "URL adresa",
