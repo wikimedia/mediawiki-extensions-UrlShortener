@@ -9,7 +9,15 @@
  * @license Apache-2.0
  */
 
-class UrlShortenerHooks {
+namespace MediaWiki\Extension\UrlShortener;
+
+use DatabaseUpdater;
+use OutputPage;
+use PathRouter;
+use Skin;
+use SpecialPage;
+
+class Hooks {
 	/**
 	 * @param PathRouter $router
 	 * @return bool

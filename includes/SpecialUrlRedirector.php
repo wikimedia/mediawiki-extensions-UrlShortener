@@ -1,5 +1,10 @@
 <?php
 
+namespace MediaWiki\Extension\UrlShortener;
+
+use SpecialPage;
+use UnlistedSpecialPage;
+
 class SpecialUrlRedirector extends UnlistedSpecialPage {
 
 	public function __construct() {

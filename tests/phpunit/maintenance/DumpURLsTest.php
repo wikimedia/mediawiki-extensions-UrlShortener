@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Extension\UrlShortener\UrlShortenerUtils;
 use MediaWiki\Tests\Maintenance\MaintenanceBaseTestCase;
 
 /**

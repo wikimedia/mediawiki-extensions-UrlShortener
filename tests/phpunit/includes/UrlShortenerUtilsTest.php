@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Block\AbstractBlock;
+use MediaWiki\Extension\UrlShortener\UrlShortenerUtils;
 
 /**
  * @group Database
@@ -14,7 +15,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @dataProvider provideCartesianProduct
-	 * @covers UrlShortenerUtils::cartesianProduct
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::cartesianProduct
 	 */
 	public function testCartesianProduct( $input, $expected ) {
 		$this->assertEquals(
@@ -45,7 +46,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @dataProvider provideShortcodeVariants
-	 * @covers UrlShortenerUtils::getShortcodeVariants
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::getShortcodeVariants
 	 */
 	public function testShortcodeVariants( $input, $expected ) {
 		$this->setMwGlobals( [
@@ -85,7 +86,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @dataProvider provideConvertToProtocol
-	 * @covers UrlShortenerUtils::convertToProtocol
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::convertToProtocol
 	 */
 	public function testConvertToProtocol( $input, $proto, $expected ) {
 		$this->setMwGlobals( [ 'wgScript' => '/w' ] );
@@ -129,7 +130,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @dataProvider provideNormalizeUrl
-	 * @covers URLShortenerUtils::normalizeUrl
+	 * @covers \MediaWiki\Extension\UrlShortener\URLShortenerUtils::normalizeUrl
 	 */
 	public function testNormalizeUrl( $url, $expected ) {
 		$this->setMwGlobals( [
@@ -234,8 +235,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * Test that ids round-trip through encode/decode properly
 	 *
-	 * @covers UrlShortenerUtils::encodeId
-	 * @covers UrlShortenerUtils::decodeId
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::encodeId
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::decodeId
 	 */
 	public function testEncodeAndDecodeIds() {
 		// Set default
@@ -259,8 +260,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * Test that decode performs ID mapping
 	 *
-	 * @covers UrlShortenerUtils::encodeId
-	 * @covers UrlShortenerUtils::decodeId
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::encodeId
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::decodeId
 	 */
 	public function testDecodeIdMapping() {
 		$this->setMwGlobals(
@@ -304,7 +305,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers UrlShortenerUtils::getURL
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::getURL
 	 */
 	public function testGetURL() {
 		$url = 'http://example.org/1';
@@ -317,7 +318,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers UrlShortenerUtils::maybeCreateShortCode
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::maybeCreateShortCode
 	 */
 	public function testTooLongURL() {
 		$url = 'http://example.org/1';
@@ -331,8 +332,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers UrlShortenerUtils::deleteURL
-	 * @covers UrlShortenerUtils::isURLDeleted
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::deleteURL
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::isURLDeleted
 	 */
 	public function testDeleteURL() {
 		$url = 'http://example.org/1';
@@ -346,7 +347,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers UrlShortenerUtils::restoreURL
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::restoreURL
 	 */
 	public function testRestoreURL() {
 		$url = 'http://example.org/1';
@@ -361,7 +362,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers UrlShortenerUtils::maybeCreateShortCode
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::maybeCreateShortCode
 	 */
 	public function testGetURLBlocked() {
 		$url = 'http://example.org/75';
@@ -386,7 +387,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers UrlShortenerUtils::getAllowedDomainsRegex
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::getAllowedDomainsRegex
 	 */
 	public function testGetAllowedDomainsRegex() {
 		$this->setContentLang( 'qqx' );
@@ -403,7 +404,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers UrlShortenerUtils::getAllowedDomainsRegex
+	 * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils::getAllowedDomainsRegex
 	 */
 	public function testGetAllowedDomainsRegex2() {
 		$this->setContentLang( 'qqx' );

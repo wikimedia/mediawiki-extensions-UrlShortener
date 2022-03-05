@@ -15,34 +15,31 @@
 		"MediaWiki": ">= 1.37.0"
 	},
 	"APIModules": {
-		"shortenurl": "ApiShortenUrl"
+		"shortenurl": "MediaWiki\\Extension\\UrlShortener\\ApiShortenUrl"
 	},
 	"AutoloadClasses": {
-		"UrlShortenerUtils": "includes/UrlShortenerUtils.php",
-		"UrlShortenerHooks": "includes/UrlShortenerHooks.php",
-		"SpecialUrlShortener": "includes/SpecialUrlShortener.php",
-		"SpecialUrlRedirector": "includes/SpecialUrlRedirector.php",
-		"SpecialManageShortUrls": "includes/SpecialManageShortUrls.php",
-		"ApiShortenUrl": "includes/ApiShortenUrl.php",
 		"DumpURLs": "maintenance/dumpURLs.php"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\UrlShortener\\": "includes/"
 	},
 	"ExtensionMessagesFiles": {
 		"UrlShortenerAlias": "UrlShortener.alias.php",
 		"UrlShortenerNoTranslateAlias": "UrlShortener.notranslate-alias.php"
 	},
-	"callback": "UrlShortenerHooks::onRegistration",
+	"callback": "MediaWiki\\Extension\\UrlShortener\\Hooks::onRegistration",
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": [
-			"UrlShortenerHooks::onLoadExtensionSchemaUpdates"
+			"MediaWiki\\Extension\\UrlShortener\\Hooks::onLoadExtensionSchemaUpdates"
 		],
 		"WebRequestPathInfoRouter": [
-			"UrlShortenerHooks::onWebRequestPathInfoRouter"
+			"MediaWiki\\Extension\\UrlShortener\\Hooks::onWebRequestPathInfoRouter"
 		],
 		"BeforePageDisplay": [
-			"UrlShortenerHooks::onBeforePageDisplay"
+			"MediaWiki\\Extension\\UrlShortener\\Hooks::onBeforePageDisplay"
 		],
 		"SidebarBeforeOutput": [
-			"UrlShortenerHooks::onSidebarBeforeOutput"
+			"MediaWiki\\Extension\\UrlShortener\\Hooks::onSidebarBeforeOutput"
 		]
 	},
 	"LogTypes": [
@@ -136,9 +133,9 @@
 		"remoteExtPath": "UrlShortener"
 	},
 	"SpecialPages": {
-		"UrlShortener": "SpecialUrlShortener",
-		"UrlRedirector": "SpecialUrlRedirector",
-		"ManageShortUrls": "SpecialManageShortUrls"
+		"UrlShortener": "MediaWiki\\Extension\\UrlShortener\\SpecialUrlShortener",
+		"UrlRedirector": "MediaWiki\\Extension\\UrlShortener\\SpecialUrlRedirector",
+		"ManageShortUrls": "MediaWiki\\Extension\\UrlShortener\\SpecialManageShortUrls"
 	},
 	"AvailableRights": [
 		"urlshortener-manage-url",

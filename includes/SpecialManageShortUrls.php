@@ -9,6 +9,12 @@
  * @license Apache-2.0
  */
 
+namespace MediaWiki\Extension\UrlShortener;
+
+use FormSpecialPage;
+use ManualLogEntry;
+use User;
+
 class SpecialManageShortUrls extends FormSpecialPage {
 
 	public function __construct() {

@@ -9,6 +9,17 @@
  * @license Apache-2.0
  */
 
+namespace MediaWiki\Extension\UrlShortener;
+
+use FormSpecialPage;
+use HTMLForm;
+use OOUI\FieldLayout;
+use OOUI\HtmlSnippet;
+use OOUI\Tag;
+use OOUI\TextInputWidget;
+use PermissionsError;
+use Status;
+
 class SpecialUrlShortener extends FormSpecialPage {
 
 	protected $resultField;
@@ -145,11 +156,11 @@ class SpecialUrlShortener extends FormSpecialPage {
 		}
 		$result = $status->getValue();
 		$altUrl = UrlShortenerUtils::makeUrl( $result[ 'alt' ] );
-		$altLink = new OOUI\Tag( 'a' );
+		$altLink = new Tag( 'a' );
 		$altLink->setAttributes( [ 'href' => $altUrl ] );
 		$altLink->appendContent( $altUrl );
-		$this->resultField = new OOUI\FieldLayout(
-			new OOUI\TextInputWidget( [
+		$this->resultField = new FieldLayout(
+			new TextInputWidget( [
 				'value' => UrlShortenerUtils::makeUrl( $result[ 'url' ] ),
 				'readOnly' => true,
 			] ),
@@ -157,7 +168,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 				'align' => 'top',
 				'classes' => [ 'ext-urlshortener-result' ],
 				'label' => $this->msg( 'urlshortener-shortened-url-label' )->text(),
-				'help' => new OOUI\HtmlSnippet(
+				'help' => new HtmlSnippet(
 					$this->msg( 'urlshortener-shortened-url-alt' )->escaped() . ' ' . $altLink
 				),
 				'helpInline' => true,
