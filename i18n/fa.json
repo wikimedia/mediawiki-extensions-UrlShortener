@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Alireza Ivaz",
+			"Beginneruser",
 			"FarsiNevis",
 			"Jeeputer",
 			"Ladsgroup",
 			"Reza1615"
 		]
 	},
-	"action-urlshortener-create-url": "ساختن نشانی‌های کوتاه",
+	"action-urlshortener-create-url": "ایجاد نشانی‌های کوتاه",
 	"right-urlshortener-create-url": "ساختن نشانی‌های کوتاه",
 	"action-urlshortener-manage-url": "مدیریت نشانی‌های کوتاه",
 	"action-urlshortener-view-log": "مشاهدهٔ سیاههٔ مدیریت نشانی‌های کوتاه‌شده",
@@ -50,7 +51,7 @@
 	"urlshortener-url-input-submit": "کوتاه کن",
 	"urlshortener-url-input-submitting": "در حال کوتاه کردن",
 	"urlshortener-url-too-long": "نشانی بسیار بلند است؛ بیشینهٔ اندازه برابر با {{PLURAL:$1|یک نویسه|$1 نویسه}} است",
-	"urlshortener-badaccessgroups": "شما اختیارات لازم برای ایجاد نشانی‌های کوتاه را ندارید",
+	"urlshortener-badaccessgroups": "شما امتیازات لازم برای ایجاد نشانی‌های کوتاه را ندارید",
 	"log-name-urlshortener": "سیاههٔ مدیریت نشانی‌های کوتاه‌شده",
 	"log-description-urlshortener": "این سیاهه حذف و احیاهای نشانی‌های کوتاه را نمایش می‌دهد. اما نشانی‌های کوتاه ایجاد شده را نشان نمی‌دهد",
 	"logentry-urlshortener-delete": "$1 نشانی کوتاه‌شدهٔ «$4» را {{GENDER:$2|حذف کرد}}",
