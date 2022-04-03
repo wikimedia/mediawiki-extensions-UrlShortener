@@ -15,6 +15,7 @@ use ApiBase;
 use ApiUsageException;
 use MediaWiki\MediaWikiServices;
 use Status;
+use Wikimedia\ParamValidator\ParamValidator;
 
 class ApiShortenUrl extends ApiBase {
 
@@ -74,7 +75,7 @@ class ApiShortenUrl extends ApiBase {
 	protected function getAllowedParams() {
 		return [
 			'url' => [
-				ApiBase::PARAM_REQUIRED => true,
+				ParamValidator::PARAM_REQUIRED => true,
 			]
 		];
 	}
