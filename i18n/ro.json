@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dan Mihai Pitea"
+			"Dan Mihai Pitea",
+			"NGC 54"
 		]
 	},
 	"urlshortener-manage-reason": "Motiv",
+	"urlshortener-toolbox": "Obține URL scurtat",
 	"urlshortener-url-input-label": "URL"
 }
