@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mehtab ahmed"
+		]
+	},
+	"apihelp-shortenurl-description": "ڪنھن ڊگهي يورآرايل کي مختصرتر طور مختصرڪريو",
+	"apihelp-shortenurl-summary": "ڪنھن ڊگهي يورآرايل کي مختصرتر طور مختصرڪريو",
+	"apihelp-shortenurl-param-url": "يوآرايل جنھن کي مخصرڪبو.",
+	"apierror-urlshortener-disabled": "نيون مختصر يوآرايلون نٿيون جوڙي سگهجن"
+}
