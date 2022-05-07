@@ -42,7 +42,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 
 			if ( $this->resultField ) {
 				// Always show form, as in JS mode.
-				// Also show the the results below the form.
+				// Also show the results below the form.
 				$form = $this->getForm();
 				$form->showAlways();
 				$this->getOutput()->addHTML( $this->resultField );
