@@ -29,7 +29,7 @@ class DumpURLs extends Maintenance {
 		$this->output( "Writing to $file...\n" );
 		$handle = fopen( $file, 'w' );
 		if ( $handle === false ) {
-			$this->error( "Error opening $file. Check permissions?", 1 );
+			$this->fatalError( "Error opening $file. Check permissions?" );
 		}
 		$id = 0;
 		do {
