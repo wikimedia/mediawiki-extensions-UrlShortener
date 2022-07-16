@@ -32,7 +32,7 @@ class DumpURLsTest extends MaintenanceBaseTestCase {
 			$this->assertTrue( $status->isGood() );
 		}
 
-		$this->maintenance->mArgs = [ $this->tmp ];
+		$this->maintenance->loadWithArgv( [ $this->tmp ] );
 		// Set batchsize smaller than total results
 		// so we test batching
 		$this->maintenance->setBatchSize( 3 );
