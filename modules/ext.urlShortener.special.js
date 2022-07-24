@@ -141,7 +141,7 @@
 			// The following messages are used here:
 			// * urlshortener-url-input-submitting
 			// * urlshortener-url-input-submit
-			this.submit.setLabel( mw.message( 'urlshortener-url-input-' + status ).text() );
+			this.submit.setLabel( mw.msg( 'urlshortener-url-input-' + status ) );
 			this.submit.setDisabled( status === 'submitting' );
 		},
 
