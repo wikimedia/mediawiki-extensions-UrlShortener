@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"urlshortener": "Skrajševalnik URL-jev",
+	"urlshortener-approved-domains": "Skrajšajo se lahko povezave na {{PLURAL:$1|naslednjo domeno|naslednji domeni|naslednje domene}}: $2.",
+	"urlshortener-copy-success": "URL skopiran v odložišče",
+	"urlshortener-desc": "Skrajševalnik URL-jev za poljubne URL-je",
+	"urlshortener-error-badports": "URL-jev, ki vsebujejo vrata, ni dovoljeno skrajševati",
+	"urlshortener-error-disallowed-url": "URL-jev na domeno $1 ni dovoljeno skrajševati",
+	"urlshortener-error-nouserpass": "URL-jev, ki vsebujejo uporabniško ime ali geslo, ni dovoljeno skrajševati",
+	"urlshortener-form-header": "Tu prilepite svoj dolgi URL",
+	"urlshortener-shortened-url-alt": "Uporabite lahko tudi ta alternativni URL:",
+	"urlshortener-shortened-url-label": "Skrajšani URL",
+	"urlshortener-url-input-submit": "Skrajšaj"
+}
