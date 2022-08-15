@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"apihelp-shortenurl-description": "Скараціць доўгі URL-адрас у больш кароткі.",
+	"apihelp-shortenurl-summary": "Скараціць доўгі URL-адрас у больш кароткі.",
+	"apihelp-shortenurl-param-url": "URL, які трэба скараціць.",
+	"apihelp-shortenurl-example-1": "Атрымаць кароткі URL для <nowiki> <kbd>https://en.wikipedia.org/wiki/Arctica</kbd></nowiki>.",
+	"apierror-urlshortener-disabled": "Нельга ствараць новыя кароткія URL-адрасы",
+	"apierror-urlshortener-permissiondenied": "Вы не маеце права ствараць кароткія URL-адрасы"
+}
