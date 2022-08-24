@@ -8,5 +8,6 @@
 	"apihelp-shortenurl-summary": "Skraćivanje dugačke URL-e u kraćem obliku.",
 	"apihelp-shortenurl-param-url": "URL za skraćivanje.",
 	"apihelp-shortenurl-example-1": "Daj kraću URL za <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
-	"apierror-urlshortener-disabled": "Ne mogu stvoriti kratke URL-ove"
+	"apierror-urlshortener-disabled": "Ne mogu stvoriti kratke URL-ove",
+	"apierror-urlshortener-permissiondenied": "Nemate pravo stvarati kratke URL-ove"
 }
