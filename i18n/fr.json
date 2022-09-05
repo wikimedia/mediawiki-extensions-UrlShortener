@@ -55,7 +55,7 @@
 	"urlshortener-url-input-submitting": "En cours…",
 	"urlshortener-url-too-long": "L’URL est trop longue, la taille maximale est de {{PLURAL:$1|un caractère|$1 caractères}}",
 	"urlshortener-badaccessgroups": "Vous n’êtes pas autorisé{{GENDER:||e}} à créer des URL raccourcies.",
-	"log-name-urlshortener": "Journal de gestion des URLs courtes",
+	"log-name-urlshortener": "Journal de gestion des URL courtes",
 	"log-description-urlshortener": "Ce journal affiche la suppression et la restauration des URL courtes. Il n’affiche pas la création de nouveaux",
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|a supprimé}} l'URL courte « $4 »",
 	"logentry-urlshortener-restore": "$1 {{GENDER:$2|a restauré}} l'URL courte « $4 »",
