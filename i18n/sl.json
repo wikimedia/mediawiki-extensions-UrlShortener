@@ -5,6 +5,9 @@
 			"Eleassar"
 		]
 	},
+	"action-urlshortener-create-url": "ustvarjati kratkih URL-jev",
+	"right-urlshortener-create-url": "Ustvarjanje kratkih URL-jev",
+	"grant-shortenurls": "Ustvarjanje kratkih URL-jev",
 	"urlshortener": "Skrajševalnik URL-jev",
 	"urlshortener-approved-domains": "Skrajšajo se lahko povezave na {{PLURAL:$1|naslednjo domeno|naslednji domeni|naslednje domene}}: $2.",
 	"urlshortener-copy-success": "URL skopiran v odložišče",
@@ -14,5 +17,6 @@
 	"urlshortener-error-nouserpass": "URL-jev, ki vsebujejo uporabniško ime ali geslo, ni dovoljeno skrajševati",
 	"urlshortener-form-header": "Tu prilepite svoj dolgi URL",
 	"urlshortener-shortened-url-label": "Skrajšani URL",
-	"urlshortener-url-input-submit": "Skrajšaj"
+	"urlshortener-url-input-submit": "Skrajšaj",
+	"urlshortener-badaccessgroups": "Nimate pravice ustvarjati kratkih URL-jev"
 }
