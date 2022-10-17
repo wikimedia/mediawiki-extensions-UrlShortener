@@ -17,6 +17,7 @@
 	"urlshortener-error-nouserpass": "URL-jev, ki vsebujejo uporabniško ime ali geslo, ni dovoljeno skrajševati",
 	"urlshortener-form-header": "Tu prilepite svoj dolgi URL",
 	"urlshortener-shortened-url-label": "Skrajšani URL",
+	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Skrajšaj",
 	"urlshortener-badaccessgroups": "Nimate pravice ustvarjati kratkih URL-jev"
 }
