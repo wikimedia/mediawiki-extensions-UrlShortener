@@ -17,6 +17,7 @@
 	"urlshortener-form-header": "Tu prilepite svoj dolgi URL",
 	"urlshortener-shortened-url-alt": "Uporabite lahko tudi ta alternativni URL:",
 	"urlshortener-shortened-url-label": "Skrajšani URL",
+	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Skrajšaj",
 	"urlshortener-badaccessgroups": "Nimate pravice ustvarjati kratkih URL-jev"
 }
