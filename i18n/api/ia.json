@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"apihelp-shortenurl-description": "Reducer un URL longe in un plus curte.",
+	"apihelp-shortenurl-summary": "Reducer un URL longe in un plus curte.",
+	"apihelp-shortenurl-param-url": "Le URL a accurtar.",
+	"apihelp-shortenurl-example-1": "Obtener le URL curte pro <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Nulle nove URL curte pote esser create",
+	"apierror-urlshortener-permissiondenied": "Tu non es autorisate a crear URLs curte."
+}
