@@ -5,7 +5,8 @@
 			"Kly",
 			"LNDDYL",
 			"Liuxinyu970226",
-			"Xiplus"
+			"Xiplus",
+			"捍粵者"
 		]
 	},
 	"action-urlshortener-create-url": "建立短網址",
@@ -49,7 +50,7 @@
 	"urlshortener-url-input-label": "網址",
 	"urlshortener-url-input-submit": "縮短",
 	"urlshortener-url-input-submitting": "縮短中…",
-	"urlshortener-url-too-long": "網址太長，最大長度是{{PLURAL:$1|1個字元|$1個字元}}",
+	"urlshortener-url-too-long": "網址太長，最長$1{{PLURAL:$1|字元}}",
 	"urlshortener-badaccessgroups": "您沒有權限來建立短網址",
 	"log-name-urlshortener": "短網址管理日誌",
 	"log-description-urlshortener": "此日誌顯示出有關短網址的刪除與修復操作，新建的短網址則不會顯示。",
