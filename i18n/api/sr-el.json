@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"apihelp-shortenurl-description": "Skraćivanje dugačke URL adrese na kraću.",
+	"apihelp-shortenurl-summary": "Skraćivanje dugačke URL adrese na kraću.",
+	"apihelp-shortenurl-param-url": "URL adresa za skraćivanje.",
+	"apihelp-shortenurl-example-1": "Nabavljanje kratke URL adrese za <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Ne mogu se napraviti nove kratke URL adrese"
+}
