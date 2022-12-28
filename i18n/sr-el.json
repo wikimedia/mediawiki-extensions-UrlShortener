@@ -4,10 +4,24 @@
 			"Milicevic01"
 		]
 	},
-	"urlshortener": "URL skraćivač",
-	"urlshortener-error-malformed-url": "Neispravan URL",
-	"urlshortener-form-header": "Nalepite dugački URL ovde",
-	"urlshortener-shortened-url-label": "Skraćeni URL",
+	"action-urlshortener-create-url": "pravljenje kratkih veza",
+	"urlshortener": "Skraćivač URL-a",
+	"urlshortener-approved-domains": "Veze ka {{PLURAL:$1|sledećem domenu|sledećim domenima}} mogu da se skrate: $2.",
+	"urlshortener-desc": "Skraćivač proizvoljnih URL adresa",
+	"urlshortener-disabled": "Pravljenje novih kratkih URL adresa je trenutno onemogućeno.",
+	"urlshortener-error-badports": "Skraćivanje URL adresa koje sadrže portove nije dozvoljeno",
+	"urlshortener-error-disallowed-url": "Skraćivanje URL adresa za domen $1 nije dozvoljeno",
+	"urlshortener-error-malformed-url": "Nevažeća URL adresa",
+	"urlshortener-error-nouserpass": "Skraćivanje URL adresa koje sadrže korisničko ime ili lozinku nije dozvoljeno",
+	"urlshortener-failed-try-again": "Nije uspelo. Pokušati ponovo?",
+	"urlshortener-form-header": "Ovde nalepite dugačku URL adresu",
+	"urlshortener-manage-reason": "Razlog",
+	"urlshortener-not-found-message": "Nije pronađena URL adresa koju ste tražili.",
+	"urlshortener-not-found-title": "Nije pronađena kratka URL adresa",
+	"urlshortener-ratelimit": "Sačekajte neko vreme pre nego što nastavite sa skraćivanjem URL adresa.",
+	"urlshortener-shortened-url-label": "Skraćena URL adresa",
+	"urlshortener-toolbox": "Skraćena URL adresa",
+	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Skrati",
-	"urlshortener-url-input-submitting": "Skraćujem..."
+	"urlshortener-url-input-submitting": "Skraćujem…"
 }
