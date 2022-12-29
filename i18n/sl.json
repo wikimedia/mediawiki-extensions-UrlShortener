@@ -22,7 +22,7 @@
 	"urlshortener-desc": "Skrajševalnik URL-jev za poljubne URL-je",
 	"urlshortener-disabled": "Ustvarjanje novih kratkih URL-jev je trenutno onemogočeno.",
 	"urlshortener-enter-short-code-delete": "Kratka koda URL-ja za izbris",
-	"urlshortener-enter-short-code-restore": "Kratka koda URL-ja za obnovitev",
+	"urlshortener-enter-short-code-restore": "Kratka URL-koda za obnovitev",
 	"urlshortener-error-badports": "URL-jev, ki vsebujejo vrata, ni dovoljeno skrajševati",
 	"urlshortener-error-disallowed-url": "URL-jev na domeno $1 ni dovoljeno skrajševati",
 	"urlshortener-error-malformed-url": "Ni veljaven URL",
