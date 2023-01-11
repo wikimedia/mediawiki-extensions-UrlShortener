@@ -1,8 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"NegativeTwelveDollars"
+			"NegativeTwelveDollars",
+			"Eleassar"
 		]
 	},
-	"apierror-urlshortener-disabled": "Ni mogoče ustvariti novih kratkih URL-jev"
+	"apihelp-shortenurl-description": "Skrajša dolg URL v krajšega.",
+	"apihelp-shortenurl-summary": "Skrajša dolg URL v krajšega.",
+	"apihelp-shortenurl-param-url": "URL za skrajšanje.",
+	"apihelp-shortenurl-example-1": "Pridobi kratki URL za <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Ni mogoče ustvariti novih kratkih URL-jev",
+	"apierror-urlshortener-permissiondenied": "Nimate pravice za ustvarjanje kratkih URL-jev"
 }
