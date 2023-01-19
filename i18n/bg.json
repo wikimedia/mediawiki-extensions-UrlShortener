@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"StanProg",
 			"Ted Masters"
 		]
 	},
 	"action-urlshortener-create-url": "създаване на кратки URL адреси",
-	"right-urlshortener-create-url": "Създаване на кратки URL адреси"
+	"right-urlshortener-create-url": "Създаване на кратки URL адреси",
+	"urlshortener": "Скъсител на URL-адреси"
 }
