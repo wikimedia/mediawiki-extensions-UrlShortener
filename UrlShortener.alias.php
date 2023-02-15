@@ -34,6 +34,12 @@ $specialPageAliases['de'] = [
 	'UrlShortener' => [ 'URL-Kürzung' ],
 ];
 
+/** Spanish (Español) */
+$specialPageAliases['es'] = [
+	'UrlShortener' => [ 'Acortador_de_URL', 'Acortar_URL' ],
+	'ManageShortUrls' => [ 'Administrar_URL_corta', 'Gestionar_URL_corta' ],
+];
+
 /** Hebrew (עברית) */
 $specialPageAliases['he'] = [
 	'UrlShortener' => [ 'מקצר_כתובות' ],
