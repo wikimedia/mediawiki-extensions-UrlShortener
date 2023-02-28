@@ -17,7 +17,7 @@
 	"urlshortener-approved-domains": "Skrajšajo se lahko povezave na {{PLURAL:$1|naslednjo domeno|naslednji domeni|naslednje domene}}: $2.",
 	"urlshortener-blocked": "Blokirani uporabniki ne morejo ustvarjati kratkih URL-jev",
 	"urlshortener-copy-fail": "Kopiranje URL-ja v odložišče je spodletelo.",
-	"urlshortener-copy-success": "URL skopiran v odložišče",
+	"urlshortener-copy-success": "URL kopiran v odložišče.",
 	"urlshortener-deleted": "Ta kratki URL je bil izbrisan.",
 	"urlshortener-desc": "Skrajševalnik URL-jev za poljubne URL-je",
 	"urlshortener-disabled": "Ustvarjanje novih kratkih URL-jev je trenutno onemogočeno.",
