@@ -51,8 +51,8 @@ C|http://example.org/9
 
 EXPECTED;
 		$this->assertEquals(
-			file_get_contents( $this->tmp ),
-			$expected
+			$expected,
+			file_get_contents( $this->tmp )
 		);
 	}
 }
