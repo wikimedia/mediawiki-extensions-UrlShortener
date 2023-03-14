@@ -12,7 +12,7 @@
 	"license-name": "Apache-2.0",
 	"type": "specialpage",
 	"requires": {
-		"MediaWiki": ">= 1.37.0"
+		"MediaWiki": ">= 1.39.0"
 	},
 	"APIModules": {
 		"shortenurl": "MediaWiki\\Extension\\UrlShortener\\ApiShortenUrl"
