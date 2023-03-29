@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"EdoAug"
 		]
 	},
 	"action-urlshortener-create-url": "opprette korte URL-er",
@@ -44,7 +45,7 @@
 	"urlshortener-toolbox": "Hent forkortet URL",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Forkort",
-	"urlshortener-url-input-submitting": "Forkorter ...",
+	"urlshortener-url-input-submitting": "Forkorter …",
 	"urlshortener-url-too-long": "URL-en er for lang, den maksimale mulige lengden er {{PLURAL:$1|ett|$1}} tegn",
 	"urlshortener-badaccessgroups": "Du har ikke rettigheter til å opprette korte URL-er",
 	"log-name-urlshortener": "Behandlingslogg for korte URL-er",
