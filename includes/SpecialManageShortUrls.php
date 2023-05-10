@@ -22,10 +22,9 @@ class SpecialManageShortUrls extends FormSpecialPage {
 	}
 
 	public function execute( $par ) {
-		global $wgUrlShortenerReadOnly;
 		$this->addHelpLink( 'Help:UrlShortener' );
 
-		if ( $wgUrlShortenerReadOnly ) {
+		if ( $this->getConfig()->get( 'UrlShortenerReadOnly' ) ) {
 			$this->setHeaders();
 			$this->getOutput()->addWikiMsg( 'urlshortener-disabled' );
 		} else {
@@ -70,9 +69,7 @@ class SpecialManageShortUrls extends FormSpecialPage {
 	 * @return bool
 	 */
 	public function isListed() {
-		global $wgUrlShortenerReadOnly;
-
-		return !$wgUrlShortenerReadOnly;
+		return !$this->getConfig()->get( 'UrlShortenerReadOnly' );
 	}
 
 	/**

@@ -20,11 +20,9 @@ use Wikimedia\ParamValidator\ParamValidator;
 class ApiShortenUrl extends ApiBase {
 
 	public function execute() {
-		global $wgUrlShortenerReadOnly;
-
 		$this->checkUserRights();
 
-		if ( $wgUrlShortenerReadOnly ) {
+		if ( $this->getConfig()->get( 'UrlShortenerReadOnly' ) ) {
 			$this->dieWithError( 'apierror-urlshortener-disabled' );
 		}
 

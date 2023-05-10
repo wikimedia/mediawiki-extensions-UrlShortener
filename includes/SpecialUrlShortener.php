@@ -29,12 +29,11 @@ class SpecialUrlShortener extends FormSpecialPage {
 	}
 
 	public function execute( $par ) {
-		global $wgUrlShortenerReadOnly;
 		$this->addHelpLink( 'Help:UrlShortener' );
 
 		$this->checkPermissions();
 
-		if ( $wgUrlShortenerReadOnly ) {
+		if ( $this->getConfig()->get( 'UrlShortenerReadOnly' ) ) {
 			$this->setHeaders();
 			$this->getOutput()->addWikiMsg( 'urlshortener-disabled' );
 		} else {
@@ -62,11 +61,11 @@ class SpecialUrlShortener extends FormSpecialPage {
 	}
 
 	private function getApprovedDomainsMessage() {
-		global $wgUrlShortenerApprovedDomains, $wgServer;
-		if ( $wgUrlShortenerApprovedDomains ) {
-			$domains = $wgUrlShortenerApprovedDomains;
+		$urlShortenerApprovedDomains = $this->getConfig()->get( 'UrlShortenerApprovedDomains' );
+		if ( $urlShortenerApprovedDomains ) {
+			$domains = $urlShortenerApprovedDomains;
 		} else {
-			$parsed = wfParseUrl( $wgServer );
+			$parsed = wfParseUrl( $this->getConfig()->get( 'Server' ) );
 			$domains = [ $parsed['host'] ];
 		}
 
@@ -82,12 +81,11 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 * @param HTMLForm $form
 	 */
 	protected function alterForm( HTMLForm $form ) {
-		global $wgUrlShortenerAllowArbitraryPorts;
 		$form->suppressDefaultSubmit();
 		$this->getOutput()->addModules( 'ext.urlShortener.special' );
 		$this->getOutput()->addJsConfigVars( [
 			'wgUrlShortenerAllowedDomains' => UrlShortenerUtils::getAllowedDomainsRegex(),
-			'wgUrlShortenerAllowArbitraryPorts' => $wgUrlShortenerAllowArbitraryPorts,
+			'wgUrlShortenerAllowArbitraryPorts' => $this->getConfig()->get( 'UrlShortenerAllowArbitraryPorts' ),
 		] );
 	}
 
@@ -191,8 +189,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 * @return bool
 	 */
 	public function isListed() {
-		global $wgUrlShortenerReadOnly;
-
-		return !$wgUrlShortenerReadOnly;
+		return !$this->getConfig()->get( 'UrlShortenerReadOnly' );
 	}
 }

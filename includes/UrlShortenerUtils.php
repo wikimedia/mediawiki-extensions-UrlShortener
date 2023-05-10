@@ -107,7 +107,8 @@ class UrlShortenerUtils {
 				'usc_id',
 				[ 'usc_url_hash' => md5( $url ) ],
 				__METHOD__,
-				[ 'LOCK IN SHARE MODE' ] // ignore snapshot
+				 // ignore snapshot
+				[ 'LOCK IN SHARE MODE' ]
 			);
 		}
 
