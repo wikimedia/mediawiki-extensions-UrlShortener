@@ -13,6 +13,7 @@ namespace MediaWiki\Extension\UrlShortener;
 
 use FormSpecialPage;
 use HTMLForm;
+use Message;
 use OOUI\FieldLayout;
 use OOUI\HtmlSnippet;
 use OOUI\Tag;
@@ -22,12 +23,16 @@ use Status;
 
 class SpecialUrlShortener extends FormSpecialPage {
 
+	/** @var FieldLayout */
 	protected $resultField;
 
 	public function __construct() {
 		parent::__construct( 'UrlShortener', 'urlshortener-create-url' );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function execute( $par ) {
 		$this->addHelpLink( 'Help:UrlShortener' );
 
@@ -56,11 +61,17 @@ class SpecialUrlShortener extends FormSpecialPage {
 		throw new PermissionsError( 'urlshortener-create-url', [ 'urlshortener-badaccessgroups' ] );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function getDisplayFormat() {
 		return 'ooui';
 	}
 
-	private function getApprovedDomainsMessage() {
+	/**
+	 * @return Message
+	 */
+	private function getApprovedDomainsMessage(): Message {
 		$urlShortenerApprovedDomains = $this->getConfig()->get( 'UrlShortenerApprovedDomains' );
 		if ( $urlShortenerApprovedDomains ) {
 			$domains = $urlShortenerApprovedDomains;
@@ -175,6 +186,9 @@ class SpecialUrlShortener extends FormSpecialPage {
 		return true;
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function getGroupName() {
 		return 'pagetools';
 	}

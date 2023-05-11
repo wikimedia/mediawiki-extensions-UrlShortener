@@ -70,6 +70,9 @@ class ApiShortenUrl extends ApiBase {
 		return true;
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function getAllowedParams() {
 		return [
 			'url' => [
@@ -78,6 +81,9 @@ class ApiShortenUrl extends ApiBase {
 		];
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function getExamplesMessages() {
 		return [
 			'action=shortenurl&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FArctica'

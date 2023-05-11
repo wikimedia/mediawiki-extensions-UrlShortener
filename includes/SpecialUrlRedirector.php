@@ -11,6 +11,9 @@ class SpecialUrlRedirector extends UnlistedSpecialPage {
 		parent::__construct( 'UrlRedirector' );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		if ( $par === null ) {

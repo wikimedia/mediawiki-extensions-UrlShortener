@@ -36,6 +36,7 @@ class UrlShortenerUtils {
 	 */
 	public const CACHE_TTL_INVALID = 900;
 
+	/** @var int[] */
 	public static $decodeMap;
 
 	/**

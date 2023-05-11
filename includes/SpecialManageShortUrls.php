@@ -21,6 +21,9 @@ class SpecialManageShortUrls extends FormSpecialPage {
 		parent::__construct( 'ManageShortUrls', 'urlshortener-manage-url' );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function execute( $par ) {
 		$this->addHelpLink( 'Help:UrlShortener' );
 
@@ -33,6 +36,9 @@ class SpecialManageShortUrls extends FormSpecialPage {
 		}
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function getDisplayFormat() {
 		return 'ooui';
 	}
@@ -142,10 +148,16 @@ class SpecialManageShortUrls extends FormSpecialPage {
 		$this->requireLogin();
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function doesWrites() {
 		return true;
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function getGroupName() {
 		return 'pagetools';
 	}

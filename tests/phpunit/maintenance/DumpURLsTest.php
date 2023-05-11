@@ -8,6 +8,8 @@ use MediaWiki\Tests\Maintenance\MaintenanceBaseTestCase;
  * @group Database
  */
 class DumpURLsTest extends MaintenanceBaseTestCase {
+
+	/** @var string|bool */
 	protected $tmp;
 
 	protected function getMaintenanceClass() {
