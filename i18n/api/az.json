@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"NMW03"
+		]
+	},
+	"apihelp-shortenurl-description": "Uzun URL-i daha qısa birinə qısaldın.",
+	"apihelp-shortenurl-summary": "Uzun URL-i daha qısa birinə qısaldın.",
+	"apihelp-shortenurl-param-url": "Qısaldılmalı URL.",
+	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> üçün qısa URL əldə edin",
+	"apierror-urlshortener-disabled": "Yeni qısa URL-lər yaradıla bilməz",
+	"apierror-urlshortener-permissiondenied": "Qısa URL-lər yaratmaq hüququnuz yoxdur"
+}
