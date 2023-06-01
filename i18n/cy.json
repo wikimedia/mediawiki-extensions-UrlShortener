@@ -5,6 +5,7 @@
 		]
 	},
 	"urlshortener": "Byrhau URL",
+	"urlshortener-blocked": "Ni all ddefnyddwyr wedi'u blocio greu URLs byrion.",
 	"urlshortener-manage-reason": "Rheswm",
 	"urlshortener-shortened-url-label": "URL byr",
 	"urlshortener-toolbox": "Cael URL byr",
