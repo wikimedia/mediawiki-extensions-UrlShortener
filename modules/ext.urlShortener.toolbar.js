@@ -1,7 +1,7 @@
 ( function () {
 	// eslint-disable-next-line no-jquery/no-global-selector
-	var $shortenUrlLink = $( '#t-urlshortener' ).find( 'a' ),
-		$qrCodeLink,
+	const $shortenUrlLink = $( '#t-urlshortener' ).find( 'a' );
+	let $qrCodeLink,
 		widgetPromise;
 
 	if ( mw.config.get( 'skin' ) === 'minerva' ) {
@@ -16,19 +16,19 @@
 	$shortenUrlLink.on( 'click', function ( e ) {
 		e.preventDefault();
 		if ( !widgetPromise ) {
-			var linkText = $shortenUrlLink.html();
+			const linkText = $shortenUrlLink.html();
 			$shortenUrlLink.text( mw.msg( 'urlshortener-url-input-submitting' ) );
 			widgetPromise = mw.loader.using( [
 				'oojs-ui-windows',
 				'mediawiki.api',
 				'mediawiki.widgets'
 			] ).then( function () {
-				var api = new mw.Api();
+				const api = new mw.Api();
 				return api.post( {
 					action: 'shortenurl',
 					url: window.location.href
 				} ).then( function ( data ) {
-					var widget = new mw.widgets.CopyTextLayout( {
+					const widget = new mw.widgets.CopyTextLayout( {
 						align: 'top',
 						label: mw.msg( 'urlshortener-shortened-url-label' ),
 						classes: [ 'ext-urlshortener-result', 'ext-urlshortener-result-dialog' ],
@@ -38,7 +38,7 @@
 						successMessage: mw.msg( 'urlshortener-copy-success' ),
 						failMessage: mw.msg( 'urlshortener-copy-fail' )
 					} );
-					var $alt = $( '<a>' );
+					const $alt = $( '<a>' );
 					widget.$help.append( ' ', $alt );
 					$alt.attr( 'href', data.shortenurl.shorturlalt )
 						.text( data.shortenurl.shorturlalt );
@@ -76,7 +76,7 @@
 		mw.loader.using( 'mediawiki.api' ).done( function () {
 			$qrCodeLink.find( '.toggle-list-item__label' )
 				.text( mw.msg( 'urlshortener-url-input-submitting' ) );
-			var api = new mw.Api();
+			const api = new mw.Api();
 			api.post( {
 				action: 'shortenurl',
 				url: window.location.href,
@@ -84,7 +84,7 @@
 			} ).done( function ( data ) {
 				// Create hidden anchor and force a download. This seems hacky,
 				// but we'd otherwise we need a specialized API with the proper response header.
-				var downloadLink = document.createElement( 'a' );
+				const downloadLink = document.createElement( 'a' );
 				downloadLink.download = 'qrcode.svg';
 				downloadLink.href = 'data:image/svg+xml,' + encodeURIComponent( data.shortenurl.qrcode );
 				document.body.appendChild( downloadLink );

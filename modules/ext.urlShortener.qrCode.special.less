@@ -1,0 +1,31 @@
+@import 'mediawiki.skin.variables.less';
+
+.ext-urlshortener-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.mw-htmlform-ooui-wrapper {
+	flex-grow: 1;
+}
+
+.ext-urlshortener-qrcode-container {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.ext-urlshortener-qrcode {
+	background-color: @background-color-interactive-subtle;
+	border: @border-width-base @border-style-base @border-color-subtle;
+	padding: 20px;
+}
+
+.ext-urlshortener-download-qr-button {
+	margin-top: 25px;
+
+	.cdx-icon {
+		.cdx-mixin-css-icon( @cdx-icon-download );
+		margin-right: 6px;
+	}
+}

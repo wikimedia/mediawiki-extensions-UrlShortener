@@ -1,12 +1,13 @@
 {
 	"name": "UrlShortener",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"author": [
 		"Yuvi Panda",
 		"Prateek Saxena",
 		"Tim Starling",
 		"Kunal Mehta",
-		"MusikAnimal"
+		"MusikAnimal",
+		"Susana Molinar"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:UrlShortener",
 	"descriptionmsg": "urlshortener-desc",
@@ -95,7 +96,7 @@
 	},
 	"ResourceModules": {
 		"ext.urlShortener.special": {
-			"scripts": [
+			"packageFiles": [
 				"modules/ext.urlShortener.special.js"
 			],
 			"messages": [
@@ -119,6 +120,32 @@
 				"mediawiki.widgets"
 			]
 		},
+		"ext.qrCode.special": {
+			"packageFiles": [
+				"modules/ext.urlShortener.special.js"
+			],
+			"styles": [
+				"modules/ext.urlShortener.qrCode.special.less"
+			],
+			"messages": [
+				"urlshortener-copy-fail",
+				"urlshortener-copy-success",
+				"urlshortener-error-badports",
+				"urlshortener-error-disallowed-url",
+				"urlshortener-error-malformed-url",
+				"urlshortener-error-nouserpass",
+				"urlshortener-shortened-url-alt",
+				"urlshortener-shortened-url-label",
+				"urlshortener-qrcode-form-submit",
+				"urlshortener-url-input-submitting"
+			],
+			"dependencies": [
+				"mediawiki.api",
+				"mediawiki.Uri",
+				"mediawiki.htmlform.ooui",
+				"mediawiki.widgets"
+			]
+		},
 		"ext.urlShortener.toolbar": {
 			"scripts": [
 				"modules/ext.urlShortener.toolbar.js"
@@ -127,7 +154,6 @@
 				"modules/ext.urlShortener.toolbar.less"
 			],
 			"messages": [
-				"urlshortener-url-input-submitting",
 				"urlshortener-failed-try-again",
 				"urlshortener-qrcode-downloaded",
 				"urlshortener-copy-fail",
@@ -146,7 +172,13 @@
 	"SpecialPages": {
 		"UrlShortener": "MediaWiki\\Extension\\UrlShortener\\SpecialUrlShortener",
 		"UrlRedirector": "MediaWiki\\Extension\\UrlShortener\\SpecialUrlRedirector",
-		"ManageShortUrls": "MediaWiki\\Extension\\UrlShortener\\SpecialManageShortUrls"
+		"ManageShortUrls": "MediaWiki\\Extension\\UrlShortener\\SpecialManageShortUrls",
+		"QrCode": {
+			"class": "MediaWiki\\Extension\\UrlShortener\\SpecialQrCode",
+			"services": [
+				"ConfigFactory"
+			]
+		}
 	},
 	"AvailableRights": [
 		"urlshortener-manage-url",

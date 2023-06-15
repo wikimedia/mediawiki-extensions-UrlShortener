@@ -451,16 +451,19 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider provideGetQrCode
 	 * @covers ::getQrCode
 	 * @param int $limit If 'https://example.org' is longer than this, it should be shortened.
+	 * @param bool $dataUri Whether 'qrCode' should be a data URI instead of XML.
 	 * @param array $expectedKeys Key names expected to be in the array of the returned StatusValue.
 	 * @param int $expectedLength Expected length of the QR code in bytes.
 	 */
-	public function testGetQrCode( int $limit, array $expectedKeys, int $expectedLength ): void {
-		$qrCode = UrlShortenerUtils::getQrCode( 'https://example.org', $limit, $this->getTestUser()->getUser() )
-			->getValue();
+	public function testGetQrCode( int $limit, bool $dataUri, array $expectedKeys, int $expectedLength ): void {
+		$qrCode = UrlShortenerUtils::getQrCode(
+			'https://example.org', $limit, $this->getTestUser()->getUser(), $dataUri
+		)->getValue();
 		foreach ( $expectedKeys as $key ) {
 			$this->assertArrayHasKey( $key, $qrCode );
 		}
-		$this->assertStringContainsString( '<?xml version="1.0"?>', $qrCode['qrcode'] );
+		$startsWith = $dataUri ? 'data:image/svg+xml;base64' : '<?xml version="1.0"?>';
+		$this->assertStringStartsWith( $startsWith, $qrCode['qrcode'] );
 		$this->assertSame( $expectedLength, strlen( $qrCode['qrcode'] ) );
 	}
 
@@ -468,16 +471,10 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @return Generator
 	 */
 	public static function provideGetQrCode(): Generator {
-		yield 'Should not be shortened' => [ 500, [ 'qrcode' ], 21403 ];
-		yield 'Should be shortened' => [ 5, [ 'qrcode', 'url', 'alt' ], 14783 ];
-	}
-
-	/**
-	 * @covers ::getQrCodeDataUri
-	 */
-	public function testGetQrCodeDataUri(): void {
-		$qrCode = UrlShortenerUtils::getQrCodeDataUri( 'https://example.org' );
-		$this->assertStringStartsWith( 'data:image/svg+xml;base64', $qrCode );
+		yield 'Should not be shortened' => [ 500, false, [ 'qrcode' ], 21403 ];
+		yield 'Should be shortened' => [ 5, false, [ 'qrcode', 'url', 'alt' ], 14783 ];
+		yield 'Should not be shortened, data URI' => [ 500, true, [ 'qrcode' ], 28566 ];
+		yield 'Should be shortened, data URI' => [ 5, true, [ 'qrcode' ], 19738 ];
 	}
 
 	private function getDomains() {

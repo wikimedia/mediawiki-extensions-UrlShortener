@@ -547,9 +547,10 @@ class UrlShortenerUtils {
 	 * @param string $url
 	 * @param int $limit The value of $wgUrlShortenerQrCodeShortenLimit
 	 * @param User $user User requesting the url, for rate limiting
+	 * @param bool $dataUri Return 'qrcode' as a data URI instead of XML.
 	 * @return Status Status with 'qrcode' (XML of the SVG) and if applicable, the shortened 'url' and 'alt'.
 	 */
-	public static function getQrCode( string $url, int $limit, User $user ): Status {
+	public static function getQrCode( string $url, int $limit, User $user, bool $dataUri = false ): Status {
 		$shortUrl = null;
 		$shortUrlAlt = null;
 		if ( self::shouldShortenUrl( true, $url, $limit ) ) {
@@ -560,24 +561,15 @@ class UrlShortenerUtils {
 			$shortUrl = $status->getValue()['url'];
 			$shortUrlAlt = $status->getValue()['alt'];
 		}
+		$qrCode = self::getQrCodeInternal( $shortUrl ?: $url );
 		$res = [
-			'qrcode' => self::getQrCodeInternal( $shortUrl ?: $url )->getString(),
+			'qrcode' => $dataUri ? $qrCode->getDataUri() : $qrCode->getString(),
 		];
 		if ( $shortUrl ) {
 			$res['url'] = $shortUrl;
 			$res['alt'] = $shortUrlAlt;
 		}
 		return Status::newGood( $res );
-	}
-
-	/**
-	 * Builds a QR code for the given URL and returns it as a base64 data URI.
-	 *
-	 * @param string $url
-	 * @return string
-	 */
-	public static function getQrCodeDataUri( string $url ): string {
-		return self::getQrCodeInternal( $url )->getDataUri();
 	}
 
 	private static function getQrCodeInternal( string $url ): ResultInterface {

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Yuvi Panda",
-			"Ammar Abdulhamid"
+			"Ammar Abdulhamid",
+			"MusikAnimal"
 		]
 	},
 	"action-urlshortener-create-url": "create short URLs",
@@ -14,6 +15,7 @@
 	"grant-shortenurls": "Create short URLs",
 	"right-urlshortener-view-log": "View short URLs management log",
 	"urlshortener": "URL Shortener",
+	"qrcode": "QR Code Generator",
 	"urlshortener-action-done": "URLs have been deleted and/or restored",
 	"urlshortener-approved-domains": "Links to the following {{PLURAL:$1|domain|domains}} may be shortened: $2.",
 	"urlshortener-blocked": "Blocked users can't make short URLs.",
@@ -37,6 +39,8 @@
 	"urlshortener-manage-reason": "Reason",
 	"urlshortener-not-found-message": "Sorry, the URL you are looking for has not been found.",
 	"urlshortener-not-found-title": "Short URL not found",
+	"urlshortener-qrcode-url-label": "URL:",
+	"urlshortener-qrcode-form-submit": "Submit",
 	"urlshortener-ratelimit": "Please wait some time before shortening more URLs.",
 	"urlshortener-short-code-is-not-deleted": "URL short code is not deleted",
 	"urlshortener-short-code-not-found": "URL short code is not found or deleted",

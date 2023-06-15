@@ -12,6 +12,7 @@
 namespace MediaWiki\Extension\UrlShortener;
 
 use HTMLForm;
+use MediaWiki\Html\Html;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Status\Status;
 use Message;
@@ -23,11 +24,15 @@ use PermissionsError;
 
 class SpecialUrlShortener extends FormSpecialPage {
 
-	/** @var FieldLayout */
-	protected $resultField;
+	protected FieldLayout $resultField;
+	protected Status $resultStatus;
 
-	public function __construct() {
-		parent::__construct( 'UrlShortener', 'urlshortener-create-url' );
+	/**
+	 * @param string $name
+	 * @param string $restriction
+	 */
+	public function __construct( $name = 'UrlShortener', $restriction = 'urlshortener-create-url' ) {
+		parent::__construct( $name, $restriction );
 	}
 
 	/**
@@ -41,16 +46,17 @@ class SpecialUrlShortener extends FormSpecialPage {
 		if ( $this->getConfig()->get( 'UrlShortenerReadOnly' ) ) {
 			$this->setHeaders();
 			$this->getOutput()->addWikiMsg( 'urlshortener-disabled' );
-		} else {
-			parent::execute( $par );
+			return;
+		}
 
-			if ( $this->resultField ) {
-				// Always show form, as in JS mode.
-				// Also show the results below the form.
-				$form = $this->getForm();
-				$form->showAlways();
-				$this->getOutput()->addHTML( $this->resultField );
-			}
+		parent::execute( $par );
+
+		// @phan-suppress-next-line PhanRedundantCondition
+		if ( isset( $this->resultStatus ) ) {
+			// Always show form, as in JS mode.
+			$form = $this->getForm();
+			$form->showAlways();
+			$form->addPostHtml( Html::closeElement( 'div' ) );
 		}
 	}
 
@@ -71,7 +77,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 	/**
 	 * @return Message
 	 */
-	private function getApprovedDomainsMessage(): Message {
+	protected function getApprovedDomainsMessage(): Message {
 		$urlShortenerApprovedDomains = $this->getConfig()->get( 'UrlShortenerApprovedDomains' );
 		if ( $urlShortenerApprovedDomains ) {
 			$domains = $urlShortenerApprovedDomains;
@@ -90,24 +96,35 @@ class SpecialUrlShortener extends FormSpecialPage {
 
 	/**
 	 * @param HTMLForm $form
+	 * @param string $module
 	 */
-	protected function alterForm( HTMLForm $form ) {
+	protected function alterForm( HTMLForm $form, string $module = 'ext.urlShortener.special' ) {
+		// HACK: There's apparently no way to add a container around the form, barring more
+		// egregious tactics like manipulating the whole OutputPage. Here we leave an open <div>
+		// in the pre-HTML, and close the tag later both in this class and SpecialQrCode,
+		// as the latter needs to append more content before closing the tag.
+		$form->addPreHtml(
+			Html::openElement( 'div', [ 'class' => 'ext-urlshortener-container' ] )
+		);
 		$form->suppressDefaultSubmit();
-		$this->getOutput()->addModules( 'ext.urlShortener.special' );
+		$this->getOutput()->addModules( $module );
 		$this->getOutput()->addJsConfigVars( [
 			'wgUrlShortenerAllowedDomains' => UrlShortenerUtils::getAllowedDomainsRegex(),
 			'wgUrlShortenerAllowArbitraryPorts' => $this->getConfig()->get( 'UrlShortenerAllowArbitraryPorts' ),
 		] );
+		// @phan-suppress-next-line PhanRedundantCondition
+		if ( isset( $this->resultField ) ) {
+			$form->addFooterHtml( $this->resultField );
+		}
 	}
 
 	/**
 	 * Validate the URL to ensure that we are allowed to create a shorturl for this.
 	 *
 	 * @param string|null $url The URL to validate
-	 * @param array $allData All the form fields
 	 * @return bool|string true if url is valid, error message otherwise
 	 */
-	public function validateURL( ?string $url, array $allData ) {
+	public function validateURL( ?string $url ) {
 		// $url is null when the form hasn't been posted
 		if ( $url === null ) {
 			// No input
@@ -170,7 +187,20 @@ class SpecialUrlShortener extends FormSpecialPage {
 		if ( !$status->isOK() ) {
 			return $status;
 		}
-		$result = $status->getValue();
+		$this->setShortenedUrlResultField( $status->getValue() );
+		$this->resultStatus = $status;
+		return true;
+	}
+
+	/**
+	 * @param array $result
+	 */
+	protected function setShortenedUrlResultField( array $result ): void {
+		if ( !isset( $result['url'] ) ) {
+			// 'url' is only present if it was shortened, which isn't always the case
+			// when using Special:QrCode which extends this class.
+			return;
+		}
 		$altUrl = UrlShortenerUtils::makeUrl( $result[ 'alt' ] );
 		$altLink = new Tag( 'a' );
 		$altLink->setAttributes( [ 'href' => $altUrl ] );
@@ -190,7 +220,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 				'helpInline' => true,
 			]
 		);
-		return true;
 	}
 
 	/**

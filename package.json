@@ -1,11 +1,11 @@
 {
-	"name": "UrlShortener",
+	"name": "urlshortener",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
 	},
 	"devDependencies": {
-		"eslint-config-wikimedia": "0.25.1",
+		"eslint-config-wikimedia": "0.26.0",
 		"grunt": "1.6.1",
 		"grunt-banana-checker": "0.11.0",
 		"grunt-eslint": "24.3.0",
