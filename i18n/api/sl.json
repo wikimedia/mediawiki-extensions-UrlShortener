@@ -5,7 +5,6 @@
 			"NegativeTwelveDollars"
 		]
 	},
-	"apihelp-shortenurl-description": "Skrajša dolg URL v krajšega.",
 	"apihelp-shortenurl-summary": "Skrajša dolg URL v krajšega.",
 	"apihelp-shortenurl-param-url": "URL za skrajšanje.",
 	"apihelp-shortenurl-example-1": "Pridobi kratki URL za <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",

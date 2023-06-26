@@ -4,7 +4,6 @@
 			"Tacsipacsi"
 		]
 	},
-	"apihelp-shortenurl-description": "Egy hosszú URL rövidítése.",
 	"apihelp-shortenurl-summary": "Egy hosszú URL rövidítése.",
 	"apihelp-shortenurl-param-url": "A rövidítendő URL.",
 	"apihelp-shortenurl-example-1": "Rövid URL lekérése a <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> URL-hez.",

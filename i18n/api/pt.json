@@ -5,7 +5,6 @@
 			"Hamilton Abreu"
 		]
 	},
-	"apihelp-shortenurl-description": "Reduzir um URL longo para um mais curto.",
 	"apihelp-shortenurl-summary": "Reduzir um URL longo para um mais curto.",
 	"apihelp-shortenurl-param-url": "URL a ser encurtado.",
 	"apihelp-shortenurl-example-1": "Obter o URL curto para <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",

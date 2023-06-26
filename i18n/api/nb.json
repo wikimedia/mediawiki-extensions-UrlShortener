@@ -4,7 +4,6 @@
 			"Jon Harald Søby"
 		]
 	},
-	"apihelp-shortenurl-description": "Forkort en lang URL.",
 	"apihelp-shortenurl-summary": "Gjør en lang URL kort.",
 	"apihelp-shortenurl-param-url": "URL som skal forkortes.",
 	"apihelp-shortenurl-example-1": "Hent kort URL for <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",

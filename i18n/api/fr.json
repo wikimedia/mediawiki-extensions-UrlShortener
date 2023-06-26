@@ -6,7 +6,6 @@
 			"Wladek92"
 		]
 	},
-	"apihelp-shortenurl-description": "Raccourcir une URL longue en une autre plus courte.",
 	"apihelp-shortenurl-summary": "Raccourcir une longue URL en une autre plus courte.",
 	"apihelp-shortenurl-param-url": "URL à raccourcir.",
 	"apihelp-shortenurl-example-1": "Obtenir l'URL courte pour <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",

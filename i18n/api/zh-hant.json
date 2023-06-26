@@ -5,7 +5,6 @@
 			"Winston Sung"
 		]
 	},
-	"apihelp-shortenurl-description": "將長的 URL 給縮短。",
 	"apihelp-shortenurl-summary": "將長的 URL 給縮短。",
 	"apihelp-shortenurl-param-url": "要縮短的 URL。",
 	"apihelp-shortenurl-example-1": "取得 <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> 的縮短 URL。",

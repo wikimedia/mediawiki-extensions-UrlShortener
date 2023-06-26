@@ -5,7 +5,6 @@
 			"Guycn2"
 		]
 	},
-	"apihelp-shortenurl-description": "קיצור URL ארוך",
 	"apihelp-shortenurl-summary": "קיצור כתובת URL ארוכה.",
 	"apihelp-shortenurl-param-url": "איזה URL לקצר.",
 	"apihelp-shortenurl-example-1": "קבלת URL קצר עבור <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
