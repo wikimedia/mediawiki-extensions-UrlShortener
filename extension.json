@@ -12,7 +12,7 @@
 	"license-name": "Apache-2.0",
 	"type": "specialpage",
 	"requires": {
-		"MediaWiki": ">= 1.40.0"
+		"MediaWiki": ">= 1.41.0"
 	},
 	"APIModules": {
 		"shortenurl": "MediaWiki\\Extension\\UrlShortener\\ApiShortenUrl"
@@ -104,27 +104,19 @@
 				"mediawiki.Uri",
 				"mediawiki.htmlform.ooui",
 				"mediawiki.widgets"
-			],
-			"targets": [
-				"desktop",
-				"mobile"
 			]
 		},
 		"ext.urlShortener.toolbar": {
 			"scripts": [
 				"modules/ext.urlShortener.toolbar.js"
 			],
-			"styles": [
-				"modules/ext.urlShortener.toolbar.less"
-			],
 			"messages": [
+				"urlshortener-url-input-submitting",
 				"urlshortener-failed-try-again",
-				"urlshortener-ratelimit",
-				"urlshortener-shortened-url-label",
-				"urlshortener-url-input-submitting"
-			],
-			"dependencies": [
-				"mediawiki.api"
+				"urlshortener-copy-fail",
+				"urlshortener-copy-success",
+				"urlshortener-shortened-url-alt",
+				"urlshortener-shortened-url-label"
 			]
 		}
 	},
