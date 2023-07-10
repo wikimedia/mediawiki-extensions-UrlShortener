@@ -8,6 +8,8 @@
 		]
 	},
 	"action-urlshortener-create-url": "прављење кратких веза",
+	"right-urlshortener-create-url": "прављење кратких URL-а",
+	"grant-shortenurls": "прављење кратких URL-а",
 	"urlshortener": "Скраћивач URL-а",
 	"urlshortener-approved-domains": "Везе ка {{PLURAL:$1|следећем домену|следећим доменима}} могу да се скрате: $2.",
 	"urlshortener-desc": "Скраћивач произвољних URL адреса",
