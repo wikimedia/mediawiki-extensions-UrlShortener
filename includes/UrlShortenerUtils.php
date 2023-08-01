@@ -380,7 +380,7 @@ class UrlShortenerUtils {
 			? $lbFactory->getExternalLB( $wgUrlShortenerDBCluster )
 			: $lbFactory->getMainLB( $wgUrlShortenerDBName );
 
-		return $lb->getConnectionRef( $type, [], $wgUrlShortenerDBName );
+		return $lb->getConnection( $type, [], $wgUrlShortenerDBName );
 	}
 
 	/**
