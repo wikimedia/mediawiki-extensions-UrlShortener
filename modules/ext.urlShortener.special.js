@@ -7,8 +7,10 @@
 		api: new mw.Api(),
 
 		/**
-		 * @member {RegExp}
+		 * @member {RegExp} regex
 		 */
+		// Defined server-side using UrlShortenerUtils::getAllowedDomainsRegex
+		// eslint-disable-next-line security/detect-non-literal-regexp
 		regex: new RegExp( mw.config.get( 'wgUrlShortenerAllowedDomains' ) ),
 
 		/**
