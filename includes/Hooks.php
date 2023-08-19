@@ -12,8 +12,8 @@
 namespace MediaWiki\Extension\UrlShortener;
 
 use DatabaseUpdater;
+use MediaWiki\Request\PathRouter;
 use OutputPage;
-use PathRouter;
 use Skin;
 use SpecialPage;
 
