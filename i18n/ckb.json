@@ -1,10 +1,25 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aram",
 			"Muhammed taha"
 		]
 	},
 	"action-urlshortener-create-url": "دروستکردنی کورتە ناونیشانەکان",
+	"right-urlshortener-create-url": "بەستەرە کورتەکان دروست بکە",
+	"action-urlshortener-manage-url": "بەستەرە کورتەکان بەڕێوە ببە",
+	"action-urlshortener-view-log": "لۆگی بەڕێوەبردنی بەستەرە کورتەکان ببینە",
+	"manageshorturls": "بەستەرە کورتەکان بەڕێوە ببە",
+	"right-urlshortener-manage-url": "بەستەرە کورتەکان بەڕێوە ببە",
+	"grant-shortenurls": "بەستەرە کورتەکان دروست بکە",
+	"right-urlshortener-view-log": "لۆگی بەڕێوەبردنی بەستەرە کورتەکان ببینە",
+	"urlshortener": "کورتکەرەوەی بەستەر",
+	"urlshortener-action-done": "بەستەرەکان سڕانەوە و/یان ھێنرانەوە",
+	"urlshortener-blocked": "بەکارھێنەرە بەربەستکراوەکان ناتوانن بەستەرگەلی کورت دروست بکەن",
+	"urlshortener-copy-fail": "لەبەرگرتنەوەی بەستەر بۆ کلیپبۆرد شکستی ھێنا.",
+	"urlshortener-copy-success": "بەستەر بۆ کلیپبۆرد گوێزرایەوە.",
+	"urlshortener-deleted": "ئەم بەستەرە کورتە سڕاوەتەوە.",
+	"urlshortener-disabled": "دروستکردنی بەستەرگەلی کورتی نوێ بە شێوەیەکی کاتی ناچالاک کراوە.",
 	"urlshortener-error-malformed-url": "ناونیشانی دروست نیە",
 	"urlshortener-failed-try-again": "شکستی ھێنا. ھەوڵدەدەیتەوە؟",
 	"urlshortener-form-header": "ناونیشانە درێژەکەت لێرە دابنێ",
@@ -12,7 +27,14 @@
 	"urlshortener-manage-restore-failed": "گێڕانەوەی بەستەر شکستی ھێنا",
 	"urlshortener-manage-reason": "ھۆکار",
 	"urlshortener-not-found-title": "کورتە ناونیشان نەدۆزرایەوە",
+	"urlshortener-shortened-url-alt": "دەشتوانی ئەم بەستەرە جێگرەوە بەکاربێنیت:",
+	"urlshortener-shortened-url-label": "بەستەری کورتکراوە",
+	"urlshortener-toolbox": "بەستەری کورتکراوە بەدەست بێنە",
 	"urlshortener-url-input-label": "ناونیشانی ئینتەرنێتی",
 	"urlshortener-url-input-submit": "کورتی بکەرەوە",
-	"urlshortener-url-input-submitting": "کورتی دەکاتەوە..."
+	"urlshortener-url-input-submitting": "کورتی دەکاتەوە...",
+	"urlshortener-badaccessgroups": "تۆ ئەو مافەت نییە تا بەستەرە کورتەکان دروست بکەیت",
+	"log-name-urlshortener": "لۆگی بەڕێوەبردنی بەستەرە کورتەکان",
+	"log-description-urlshortener": "ئەم لۆگە سڕینەوە و ھێنانەوەی بەستەرە کورتەکان پیشان دەدات. دروستکردنی نوێیەکان پیشان نادات.",
+	"logeventslist-urlshortener-log": "لۆگی بەڕێوەبردنی بەستەرە کورتەکان"
 }
