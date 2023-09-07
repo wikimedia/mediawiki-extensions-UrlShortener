@@ -41,6 +41,7 @@
 	"urlshortener-ratelimit": "URL을 축약하는 동안 기다려 주세요.",
 	"urlshortener-short-code-is-not-deleted": "URL 단축 코드를 삭제하지 못했습니다",
 	"urlshortener-short-code-not-found": "URL 단축 코드를 찾을 수 없거나 단축 코드가 삭제되었습니다",
+	"urlshortener-shortened-url-alt": "이 URL을 대신 사용해도 됩니다:",
 	"urlshortener-shortened-url-label": "축약된 URL",
 	"urlshortener-toolbox": "축약된 URL 얻기",
 	"urlshortener-url-input-label": "URL",
