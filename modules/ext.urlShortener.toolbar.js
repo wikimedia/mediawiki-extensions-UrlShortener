@@ -10,8 +10,7 @@
 			var linkText = $link.html();
 			$link.text( mw.msg( 'urlshortener-url-input-submitting' ) );
 			widgetPromise = mw.loader.using( [
-				'oojs-ui',
-				'oojs-ui.styles.icons-content',
+				'oojs-ui-windows',
 				'mediawiki.api',
 				'mediawiki.widgets'
 			] ).then( function () {
