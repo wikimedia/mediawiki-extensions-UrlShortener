@@ -32,6 +32,8 @@
 						successMessage: mw.msg( 'urlshortener-copy-success' ),
 						failMessage: mw.msg( 'urlshortener-copy-fail' )
 					} );
+					// Adjust for MessageDialog's 1.1em font size
+					widget.$element.css( 'font-size', '0.90909em' );
 					var $alt = $( '<a>' );
 					widget.$help.append( ' ', $alt );
 					$alt.attr( 'href', data.shortenurl.shorturlalt )
