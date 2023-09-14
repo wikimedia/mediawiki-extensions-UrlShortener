@@ -52,6 +52,10 @@
 		widgetPromise.then(
 			function ( widget ) {
 				OO.ui.alert( widget.$element );
+				// HACK: Wait for setup and ready processes to complete
+				setTimeout( function () {
+					widget.button.focus();
+				}, 500 );
 			},
 			function () {
 				// Point the link to Special:UrlShortener
