@@ -1,28 +1,26 @@
 ( function () {
 	// eslint-disable-next-line no-jquery/no-global-selector
 	var $link = $( '#t-urlshortener' ).find( 'a' ),
-		widget;
+		widgetPromise;
 
 	$link.attr( 'aria-haspopup', 'dialog' );
 	$link.on( 'click', function ( e ) {
 		e.preventDefault();
-		if ( widget ) {
-			OO.ui.alert( widget.$element );
-		} else {
+		if ( !widgetPromise ) {
 			var linkText = $link.html();
 			$link.text( mw.msg( 'urlshortener-url-input-submitting' ) );
-			mw.loader.using( [
+			widgetPromise = mw.loader.using( [
 				'oojs-ui',
 				'oojs-ui.styles.icons-content',
 				'mediawiki.api',
 				'mediawiki.widgets'
-			] ).done( function () {
+			] ).then( function () {
 				var api = new mw.Api();
-				api.post( {
+				return api.post( {
 					action: 'shortenurl',
 					url: window.location.href
-				} ).done( function ( data ) {
-					widget = new mw.widgets.CopyTextLayout( {
+				} ).then( function ( data ) {
+					var widget = new mw.widgets.CopyTextLayout( {
 						align: 'top',
 						label: mw.msg( 'urlshortener-shortened-url-label' ),
 						classes: [ 'ext-urlshortener-result' ],
@@ -46,18 +44,21 @@
 						widget.textInput.setValue( data.shortenurl.shorturl );
 						$alt[ 0 ].focus();
 					} );
-					OO.ui.alert( widget.$element );
 					$link.html( linkText );
-				} ).fail( function () {
-					// Point the link to Special:UrlShortener
-					$link.html( mw.msg( 'urlshortener-failed-try-again' ) );
-					$link.off( 'click' ).removeAttr( 'aria-haspopup' );
+					return widget;
 				} );
-			} ).fail( function () {
-				$link.html( mw.msg( 'urlshortener-failed-try-again' ) );
-				$link.off( 'click' ).removeAttr( 'aria-haspopup' );
 			} );
 		}
+		widgetPromise.then(
+			function ( widget ) {
+				OO.ui.alert( widget.$element );
+			},
+			function () {
+				// Point the link to Special:UrlShortener
+				$link.html( mw.msg( 'urlshortener-failed-try-again' ) );
+				$link.off( 'click' ).removeAttr( 'aria-haspopup' );
+			}
+		);
 		return false;
 	} );
 }() );
