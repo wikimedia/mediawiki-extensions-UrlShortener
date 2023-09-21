@@ -146,6 +146,13 @@ class SpecialUrlShortener extends FormSpecialPage {
 	}
 
 	/**
+	 * @return string
+	 */
+	protected function getSubpageField() {
+		return 'url';
+	}
+
+	/**
 	 * Process the form on POST submission.
 	 *
 	 * Creates the short URL and displays it back to the user.
