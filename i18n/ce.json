@@ -8,7 +8,12 @@
 	"urlshortener-approved-domains": "{{PLURAL:$1|Лахара домен|Лахара доменаш}} тӀе йолу хьажоргаш йацйан мега: $2.",
 	"urlshortener-desc": "Шен лаамера URL-адресаш дацдийриг",
 	"urlshortener-form-header": "Деха URL-адрес дилла кхуза",
+	"urlshortener-manage-reason": "Бахьана",
+	"urlshortener-shortened-url-label": "Дацдина URL-адрес",
+	"urlshortener-toolbox": "Схьаэца дацдина URL-адрес",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Дацдан",
-	"urlshortener-url-input-submitting": "Дацдар…"
+	"urlshortener-url-input-submitting": "Дацдар…",
+	"log-action-filter-urlshortener-delete": "URL-адрес дӀадаккхар",
+	"log-action-filter-urlshortener-restore": "URL-адрес меттахӀоттор"
 }
