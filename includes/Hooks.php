@@ -11,20 +11,25 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use DatabaseUpdater;
+use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Hook\SidebarBeforeOutputHook;
+use MediaWiki\Hook\WebRequestPathInfoRouterHook;
 use MediaWiki\Request\PathRouter;
 use OutputPage;
 use Skin;
 use SpecialPage;
 
-class Hooks {
+class Hooks implements
+	WebRequestPathInfoRouterHook,
+	BeforePageDisplayHook,
+	SidebarBeforeOutputHook
+{
 	/**
 	 * @param PathRouter $router
-	 * @return bool
 	 *
 	 * Adds UrlShortener rules to the URL router.
 	 */
-	public static function onWebRequestPathInfoRouter( PathRouter $router ): bool {
+	public function onWebRequestPathInfoRouter( $router ) {
 		global $wgUrlShortenerTemplate;
 		// If a template is set, and it is not the root, register it
 		if ( $wgUrlShortenerTemplate && $wgUrlShortenerTemplate !== '/$1' ) {
@@ -32,7 +37,6 @@ class Hooks {
 				[ 'title' => SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getPrefixedText() ]
 			);
 		}
-		return true;
 	}
 
 	public static function onRegistration() {
@@ -50,8 +54,9 @@ class Hooks {
 	 * Load toolbar module for the sidebar link
 	 *
 	 * @param OutputPage $out
+	 * @param Skin $skin
 	 */
-	public static function onBeforePageDisplay( OutputPage $out ) {
+	public function onBeforePageDisplay( $out, $skin ): void {
 		global $wgUrlShortenerReadOnly, $wgUrlShortenerEnableSidebar;
 
 		if ( $wgUrlShortenerReadOnly || !$wgUrlShortenerEnableSidebar ) {
@@ -67,7 +72,7 @@ class Hooks {
 	 * @param Skin $skin
 	 * @param array &$sidebar
 	 */
-	public static function onSidebarBeforeOutput( Skin $skin, array &$sidebar ) {
+	public function onSidebarBeforeOutput( $skin, &$sidebar ): void {
 		global $wgUrlShortenerReadOnly, $wgUrlShortenerEnableSidebar;
 
 		if ( $wgUrlShortenerReadOnly || !$wgUrlShortenerEnableSidebar ) {
@@ -94,36 +99,5 @@ class Hooks {
 			'href' => $localURL,
 			'text' => $message
 		];
-	}
-
-	/**
-	 * @param DatabaseUpdater $updater
-	 */
-	public static function onLoadExtensionSchemaUpdates( DatabaseUpdater $updater ) {
-		$dir = dirname( __DIR__ );
-		$dbType = $updater->getDB()->getType();
-
-		if ( $dbType === 'mysql' ) {
-			$updater->addExtensionTable(
-				'urlshortcodes',
-				$dir . '/schemas/tables-generated.sql'
-			);
-		} elseif ( $dbType === 'sqlite' ) {
-			$updater->addExtensionTable(
-				'urlshortcodes',
-				$dir . '/schemas/sqlite/tables-generated.sql'
-			);
-		} elseif ( $dbType === 'postgres' ) {
-			$updater->addExtensionTable(
-				'urlshortcodes',
-				$dir . '/schemas/postgres/tables-generated.sql'
-			);
-		}
-
-		$updater->addExtensionField(
-			'urlshortcodes',
-			'usc_deleted',
-			$dir . "/schemas/patch-usc_deleted.sql"
-		);
 	}
 }

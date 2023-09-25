@@ -29,18 +29,18 @@
 	},
 	"callback": "MediaWiki\\Extension\\UrlShortener\\Hooks::onRegistration",
 	"Hooks": {
-		"LoadExtensionSchemaUpdates": [
-			"MediaWiki\\Extension\\UrlShortener\\Hooks::onLoadExtensionSchemaUpdates"
-		],
-		"WebRequestPathInfoRouter": [
-			"MediaWiki\\Extension\\UrlShortener\\Hooks::onWebRequestPathInfoRouter"
-		],
-		"BeforePageDisplay": [
-			"MediaWiki\\Extension\\UrlShortener\\Hooks::onBeforePageDisplay"
-		],
-		"SidebarBeforeOutput": [
-			"MediaWiki\\Extension\\UrlShortener\\Hooks::onSidebarBeforeOutput"
-		]
+		"LoadExtensionSchemaUpdates": "schema",
+		"WebRequestPathInfoRouter": "main",
+		"BeforePageDisplay": "main",
+		"SidebarBeforeOutput": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\UrlShortener\\Hooks"
+		},
+		"schema": {
+			"class": "MediaWiki\\Extension\\UrlShortener\\SchemaHooks"
+		}
 	},
 	"LogTypes": [
 		"urlshortener"
