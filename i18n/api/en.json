@@ -1,12 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yuvi Panda"
+			"Yuvi Panda",
+			"MusikAnimal"
 		]
 	},
 	"apihelp-shortenurl-summary": "Shorten a long URL into a shorter one.",
 	"apihelp-shortenurl-param-url": "URL to be shortened.",
+	"apihelp-shortenurl-param-qrcode": "Get a QR code. The linked URL will only be shortened if it is very long.",
 	"apihelp-shortenurl-example-1": "Get the short URL for <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "Get a QR code for <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "No new short urls may be created",
 	"apierror-urlshortener-permissiondenied": "You do not have the right to create short urls"
 }

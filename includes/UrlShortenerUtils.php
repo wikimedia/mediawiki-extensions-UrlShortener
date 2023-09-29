@@ -13,6 +13,10 @@ namespace MediaWiki\Extension\UrlShortener;
 
 use CdnCacheUpdate;
 use DeferredUpdates;
+use Endroid\QrCode\Builder\Builder;
+use Endroid\QrCode\Encoding\Encoding;
+use Endroid\QrCode\Writer\Result\ResultInterface;
+use Endroid\QrCode\Writer\SvgWriter;
 use MediaWiki\MediaWikiServices;
 use Message;
 use SpecialPage;
@@ -529,5 +533,68 @@ class UrlShortenerUtils {
 			}
 		}
 		return $x;
+	}
+
+	/**
+	 * Given the context of whether we want a QR code, should the URL be shortened?
+	 *
+	 * @param bool $qrCode
+	 * @param string $url
+	 * @param int $limit The value of $wgUrlShortenerQrCodeShortenLimit
+	 * @return bool
+	 */
+	public static function shouldShortenUrl( bool $qrCode, string $url, int $limit ): bool {
+		return !$qrCode || strlen( $url ) > $limit;
+	}
+
+	/**
+	 * Build a QR code for the given URL. If the URL is longer than $limit in bytes,
+	 * it will first be shortened to prevent the QR code density from being too high.
+	 *
+	 * @param string $url
+	 * @param int $limit The value of $wgUrlShortenerQrCodeShortenLimit
+	 * @param User $user User requesting the url, for rate limiting
+	 * @return Status Status with 'qrcode' (XML of the SVG) and if applicable, the shortened 'url' and 'alt'.
+	 */
+	public static function getQrCode( string $url, int $limit, User $user ): Status {
+		$shortUrl = null;
+		$shortUrlAlt = null;
+		if ( self::shouldShortenUrl( true, $url, $limit ) ) {
+			$status = self::maybeCreateShortCode( $url, $user );
+			if ( !$status->isOK() ) {
+				return $status;
+			}
+			$shortUrl = $status->getValue()['url'];
+			$shortUrlAlt = $status->getValue()['alt'];
+		}
+		$res = [
+			'qrcode' => self::getQrCodeInternal( $shortUrl ?: $url )->getString(),
+		];
+		if ( $shortUrl ) {
+			$res['url'] = $shortUrl;
+			$res['alt'] = $shortUrlAlt;
+		}
+		return Status::newGood( $res );
+	}
+
+	/**
+	 * Builds a QR code for the given URL and returns it as a base64 data URI.
+	 *
+	 * @param string $url
+	 * @return string
+	 */
+	public static function getQrCodeDataUri( string $url ): string {
+		return self::getQrCodeInternal( $url )->getDataUri();
+	}
+
+	private static function getQrCodeInternal( string $url ): ResultInterface {
+		return Builder::create()
+			->writer( new SvgWriter() )
+			->writerOptions( [] )
+			->data( $url )
+			->encoding( new Encoding( 'UTF-8' ) )
+			->size( 300 )
+			->margin( 10 )
+			->build();
 	}
 }

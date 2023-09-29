@@ -48,6 +48,7 @@
 	"urlshortener-shortened-url-alt": "Label for alternative URL",
 	"urlshortener-shortened-url-label": "Message shown to user above the shortened URL",
 	"urlshortener-toolbox": "Text of link in toolbox to get shortened URL",
+	"urlshortener-toolbox-qrcode": "Text of link in toolbox to get QR code",
 	"urlshortener-url-input-label": "Label for the box the user inputs the URL to shorten.\n{{Identical|URL}}",
 	"urlshortener-url-input-submit": "Label for the submit button that shortens the URL",
 	"urlshortener-url-input-submitting": "Label for the submit button while the user waits for the result",
@@ -60,5 +61,6 @@
 	"logeventslist-urlshortener-log": "Option label to select URL management log that appears in dropdown at [[Special:Log]]",
 	"log-action-filter-urlshortener": "{{doc-log-action-filter-type|urlshortener}}\nLabel message for filtering log",
 	"log-action-filter-urlshortener-delete": "{{doc-log-action-filter-action|urlshortener|delete}}\nOption to filter URL deletions at [[Special:Log]]",
-	"log-action-filter-urlshortener-restore": "{{doc-log-action-filter-action|urlshortener|restore}}\nOption to filter URL restorations at [[Special:Log]]"
+	"log-action-filter-urlshortener-restore": "{{doc-log-action-filter-action|urlshortener|restore}}\nOption to filter URL restorations at [[Special:Log]]",
+	"urlshortener-qrcode-downloaded": "Success message after a QR code was downloaded."
 }

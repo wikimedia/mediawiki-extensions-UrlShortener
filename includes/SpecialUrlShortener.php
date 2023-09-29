@@ -138,9 +138,9 @@ class SpecialUrlShortener extends FormSpecialPage {
 				'name' => 'url',
 				'label-message' => 'urlshortener-form-header',
 				'autofocus' => true,
-				'id' => 'mw-urlshortener-url-input',
+				'id' => 'ext-urlshortener-url-input',
 				'help' => $this->getApprovedDomainsMessage()->parse(),
-				'placeholder' => $this->msg( 'urlshortener-url-input-label' )->text()
+				'placeholder' => $this->msg( 'urlshortener-url-input-label' )->text(),
 			],
 		];
 	}

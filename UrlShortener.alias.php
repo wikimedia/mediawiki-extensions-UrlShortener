@@ -12,6 +12,7 @@ $specialPageAliases = [];
 $specialPageAliases['en'] = [
 	'UrlShortener' => [ 'UrlShortener' ],
 	'ManageShortUrls' => [ 'ManageShortUrls' ],
+	'QrCode' => [ 'QrCode' ],
 ];
 
 /** Arabic (العربية) */

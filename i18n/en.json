@@ -43,6 +43,7 @@
 	"urlshortener-shortened-url-alt": "You can also use this alternative URL:",
 	"urlshortener-shortened-url-label": "Shortened URL",
 	"urlshortener-toolbox": "Get shortened URL",
+	"urlshortener-toolbox-qrcode": "Download QR code",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Shorten",
 	"urlshortener-url-input-submitting": "Shortening…",
@@ -55,5 +56,6 @@
 	"logeventslist-urlshortener-log": "Short URLs management log",
 	"log-action-filter-urlshortener": "Type of management",
 	"log-action-filter-urlshortener-delete": "URL Deletion",
-	"log-action-filter-urlshortener-restore": "URL Restoration"
+	"log-action-filter-urlshortener-restore": "URL Restoration",
+	"urlshortener-qrcode-downloaded": "QR code downloaded as SVG file"
 }

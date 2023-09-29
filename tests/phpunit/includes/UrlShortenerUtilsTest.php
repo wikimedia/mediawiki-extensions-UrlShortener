@@ -419,6 +419,71 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $disallowedUrl );
 	}
 
+	/**
+	 * @dataProvider provideShouldShortenUrl
+	 * @covers ::shouldShortenUrl
+	 * @param bool $qrCodeRequested Whether we're shortening within the context of creating QR codes.
+	 * @param int $limit If 'https://example.org' is longer than this, it should be shortened.
+	 * @param bool $expected
+	 */
+	public function testShouldShortenUrl( bool $qrCodeRequested, int $limit, bool $expected ): void {
+		$this->assertEquals(
+			$expected,
+			UrlShortenerUtils::shouldShortenUrl( $qrCodeRequested, 'https://example.org', $limit )
+		);
+	}
+
+	/**
+	 * @return Generator
+	 */
+	public static function provideShouldShortenUrl(): Generator {
+		yield 'Short URL, not asking for QR code, should shorten' => [
+			false, 500, true,
+		];
+		yield 'Long URL, not asking for QR code, should shorten' => [
+			false, 5, true,
+		];
+		yield 'Short URL, are asking for QR code, should not shorten' => [
+			true, 500, false,
+		];
+		yield 'Long URL, are asking for QR code, should shorten' => [
+			true, 5, true,
+		];
+	}
+
+	/**
+	 * @dataProvider provideGetQrCode
+	 * @covers ::getQrCode
+	 * @param int $limit If 'https://example.org' is longer than this, it should be shortened.
+	 * @param array $expectedKeys Key names expected to be in the array of the returned StatusValue.
+	 * @param int $expectedLength Expected length of the QR code in bytes.
+	 */
+	public function testGetQrCode( int $limit, array $expectedKeys, int $expectedLength ): void {
+		$qrCode = UrlShortenerUtils::getQrCode( 'https://example.org', $limit, $this->getTestUser()->getUser() )
+			->getValue();
+		foreach ( $expectedKeys as $key ) {
+			$this->assertArrayHasKey( $key, $qrCode );
+		}
+		$this->assertStringContainsString( '<?xml version="1.0"?>', $qrCode['qrcode'] );
+		$this->assertSame( $expectedLength, strlen( $qrCode['qrcode'] ) );
+	}
+
+	/**
+	 * @return Generator
+	 */
+	public static function provideGetQrCode(): Generator {
+		yield 'Should not be shortened' => [ 500, [ 'qrcode' ], 21403 ];
+		yield 'Should be shortened' => [ 5, [ 'qrcode', 'url', 'alt' ], 14783 ];
+	}
+
+	/**
+	 * @covers ::getQrCodeDataUri
+	 */
+	public function testGetQrCodeDataUri(): void {
+		$qrCode = UrlShortenerUtils::getQrCodeDataUri( 'https://example.org' );
+		$this->assertStringStartsWith( 'data:image/svg+xml;base64', $qrCode );
+	}
+
 	private function getDomains() {
 		return [
 			'(.*\.)?wikipedia\.org',

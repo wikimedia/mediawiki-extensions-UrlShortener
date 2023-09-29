@@ -1,14 +1,23 @@
 ( function () {
 	// eslint-disable-next-line no-jquery/no-global-selector
-	var $link = $( '#t-urlshortener' ).find( 'a' ),
+	var $shortenUrlLink = $( '#t-urlshortener' ).find( 'a' ),
+		$qrCodeLink,
 		widgetPromise;
 
-	$link.attr( 'aria-haspopup', 'dialog' );
-	$link.on( 'click', function ( e ) {
+	if ( mw.config.get( 'skin' ) === 'minerva' ) {
+		// eslint-disable-next-line no-jquery/no-global-selector
+		$qrCodeLink = $( '.ext-urlshortener-qrcode-download-minerva' );
+	} else {
+		// eslint-disable-next-line no-jquery/no-global-selector
+		$qrCodeLink = $( '#t-urlshortener-qrcode' ).find( 'a' );
+	}
+
+	$shortenUrlLink.attr( 'aria-haspopup', 'dialog' );
+	$shortenUrlLink.on( 'click', function ( e ) {
 		e.preventDefault();
 		if ( !widgetPromise ) {
-			var linkText = $link.html();
-			$link.text( mw.msg( 'urlshortener-url-input-submitting' ) );
+			var linkText = $shortenUrlLink.html();
+			$shortenUrlLink.text( mw.msg( 'urlshortener-url-input-submitting' ) );
 			widgetPromise = mw.loader.using( [
 				'oojs-ui-windows',
 				'mediawiki.api',
@@ -43,7 +52,7 @@
 						widget.textInput.setValue( data.shortenurl.shorturl );
 						$alt[ 0 ].focus();
 					} );
-					$link.html( linkText );
+					$shortenUrlLink.html( linkText );
 					return widget;
 				} );
 			} );
@@ -58,10 +67,42 @@
 			},
 			function () {
 				// Point the link to Special:UrlShortener
-				$link.html( mw.msg( 'urlshortener-failed-try-again' ) );
-				$link.off( 'click' ).removeAttr( 'aria-haspopup' );
+				$shortenUrlLink.html( mw.msg( 'urlshortener-failed-try-again' ) );
+				$shortenUrlLink.off( 'click' ).removeAttr( 'aria-haspopup' );
 			}
 		);
+		return false;
+	} );
+
+	$qrCodeLink.on( 'click', function ( e ) {
+		e.preventDefault();
+		mw.loader.using( 'mediawiki.api' ).done( function () {
+			$qrCodeLink.find( '.toggle-list-item__label' )
+				.text( mw.msg( 'urlshortener-url-input-submitting' ) );
+			var api = new mw.Api();
+			api.post( {
+				action: 'shortenurl',
+				url: window.location.href,
+				qrcode: true
+			} ).done( function ( data ) {
+				// Create hidden anchor and force a download. This seems hacky,
+				// but we'd otherwise we need a specialized API with the proper response header.
+				var downloadLink = document.createElement( 'a' );
+				downloadLink.download = 'qrcode.svg';
+				downloadLink.href = 'data:image/svg+xml,' + encodeURIComponent( data.shortenurl.qrcode );
+				document.body.appendChild( downloadLink );
+				downloadLink.click();
+				document.body.removeChild( downloadLink );
+				// Restore original copy to link and notify user of the download.
+				$qrCodeLink.find( '.toggle-list-item__label' )
+					.text( mw.msg( 'urlshortener-toolbox-qrcode' ) );
+				mw.notify( mw.msg( 'urlshortener-qrcode-downloaded' ), { type: 'success' } );
+			} ).fail( function () {
+				$qrCodeLink.find( '.toggle-list-item__label' )
+					.text( mw.msg( 'urlshortener-failed-try-again' ) );
+			} );
+		} );
+
 		return false;
 	} );
 }() );

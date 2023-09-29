@@ -12,12 +12,29 @@
 namespace MediaWiki\Extension\UrlShortener;
 
 use ApiBase;
+use ApiMain;
 use ApiUsageException;
+use Liuggio\StatsdClient\Factory\StatsdDataFactoryInterface;
 use MediaWiki\MediaWikiServices;
 use Status;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class ApiShortenUrl extends ApiBase {
+
+	private bool $qrCodeEnabled;
+	private int $qrCodeShortenLimit;
+	private StatsdDataFactoryInterface $statsdDataFactory;
+
+	/**
+	 * @inheritDoc
+	 */
+	public function __construct( ApiMain $mainModule, $moduleName, StatsdDataFactoryInterface $statsdDataFactory ) {
+		parent::__construct( $mainModule, $moduleName );
+
+		$this->qrCodeEnabled = (bool)$this->getConfig()->get( 'UrlShortenerEnableQrCode' );
+		$this->qrCodeShortenLimit = (int)$this->getConfig()->get( 'UrlShortenerQrCodeShortenLimit' );
+		$this->statsdDataFactory = $statsdDataFactory;
+	}
 
 	public function execute() {
 		$this->checkUserRights();
@@ -29,27 +46,62 @@ class ApiShortenUrl extends ApiBase {
 		$params = $this->extractRequestParams();
 
 		$url = $params['url'];
+		$qrCode = $this->qrCodeEnabled && $params['qrcode'];
 
-		$validity_check = UrlShortenerUtils::validateUrl( $url );
-		if ( $validity_check !== true ) {
-			$this->dieStatus( Status::newFatal( $validity_check ) );
+		$validityCheck = UrlShortenerUtils::validateUrl( $url );
+		if ( $validityCheck !== true ) {
+			$this->dieStatus( Status::newFatal( $validityCheck ) );
 		}
-		$status = UrlShortenerUtils::maybeCreateShortCode( $url, $this->getUser() );
+
+		if ( $qrCode ) {
+			$status = UrlShortenerUtils::getQrCode( $url, $this->qrCodeShortenLimit, $this->getUser() );
+		} else {
+			$status = UrlShortenerUtils::maybeCreateShortCode( $url, $this->getUser() );
+		}
+
 		if ( !$status->isOK() ) {
 			$this->dieStatus( $status );
 		}
-		$shortUrls = $status->getValue();
+
+		$shortUrlsOrQrCode = $status->getValue();
+		$urlShortened = isset( $shortUrlsOrQrCode[ 'url' ] );
+
+		$ret = [];
+
+		// QR codes may not have short URLs, in which case we don't want them in the response.
+		if ( $urlShortened ) {
+			$ret['shorturl'] = UrlShortenerUtils::makeUrl( $shortUrlsOrQrCode[ 'url' ] );
+			$ret['shorturlalt'] = UrlShortenerUtils::makeUrl( $shortUrlsOrQrCode[ 'alt' ] );
+		}
+
+		if ( $qrCode ) {
+			$ret['qrcode'] = $shortUrlsOrQrCode['qrcode'];
+		}
+
+		$this->recordInStatsD( $urlShortened, $qrCode );
 
 		// You get the cached response, YOU get the cached response, EVERYONE gets the cached response.
 		$this->getMain()->setCacheMode( "public" );
 		$this->getMain()->setCacheMaxAge( UrlShortenerUtils::CACHE_TTL_VALID );
 
-		$this->getResult()->addValue( null, $this->getModuleName(),
-			[
-				'shorturl' => UrlShortenerUtils::makeUrl( $shortUrls[ 'url' ] ),
-				'shorturlalt' => UrlShortenerUtils::makeUrl( $shortUrls[ 'alt' ] )
-			]
-		);
+		$this->getResult()->addValue( null, $this->getModuleName(), $ret );
+	}
+
+	/**
+	 * Record simple usage counts in statsd.
+	 *
+	 * @param bool $urlShortened
+	 * @param bool $qrCode
+	 * @return void
+	 */
+	private function recordInStatsD( bool $urlShortened, bool $qrCode ): void {
+		if ( $qrCode && $urlShortened ) {
+			$this->statsdDataFactory->increment( 'extension.UrlShortener.api.shorturl_and_qrcode' );
+		} elseif ( $qrCode ) {
+			$this->statsdDataFactory->increment( 'extension.UrlShortener.api.qrcode' );
+		} else {
+			$this->statsdDataFactory->increment( 'extension.UrlShortener.api.shorturl' );
+		}
 	}
 
 	/**
@@ -74,11 +126,18 @@ class ApiShortenUrl extends ApiBase {
 	 * @inheritDoc
 	 */
 	protected function getAllowedParams() {
-		return [
+		$params = [
 			'url' => [
 				ParamValidator::PARAM_REQUIRED => true,
-			]
+			],
 		];
+		if ( $this->qrCodeEnabled ) {
+			$params['qrcode'] = [
+				ParamValidator::PARAM_TYPE => 'boolean',
+				ParamValidator::PARAM_DEFAULT => false,
+			];
+		}
+		return $params;
 	}
 
 	/**
@@ -88,6 +147,8 @@ class ApiShortenUrl extends ApiBase {
 		return [
 			'action=shortenurl&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FArctica'
 				=> 'apihelp-shortenurl-example-1',
+			'action=shortenurl&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FArctica&qrcode=1'
+				=> 'apihelp-shortenurl-example-2',
 		];
 	}
 }
