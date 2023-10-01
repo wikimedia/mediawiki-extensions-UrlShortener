@@ -83,7 +83,7 @@ class Hooks implements
 	 * @param Skin $skin
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		if ( $this->readOnly || !$this->enableSidebar ) {
+		if ( $this->readOnly || !$this->enableSidebar || $skin->getTitle()->isSpecial( 'UrlShortener' ) ) {
 			return;
 		}
 
