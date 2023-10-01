@@ -22,20 +22,17 @@
 					var widget = new mw.widgets.CopyTextLayout( {
 						align: 'top',
 						label: mw.msg( 'urlshortener-shortened-url-label' ),
-						classes: [ 'ext-urlshortener-result' ],
+						classes: [ 'ext-urlshortener-result', 'ext-urlshortener-result-dialog' ],
 						copyText: data.shortenurl.shorturl,
 						help: mw.msg( 'urlshortener-shortened-url-alt' ),
 						helpInline: true,
 						successMessage: mw.msg( 'urlshortener-copy-success' ),
 						failMessage: mw.msg( 'urlshortener-copy-fail' )
 					} );
-					// Adjust for MessageDialog's 1.1em font size
-					widget.$element.css( 'font-size', '0.90909em' );
 					var $alt = $( '<a>' );
 					widget.$help.append( ' ', $alt );
 					$alt.attr( 'href', data.shortenurl.shorturlalt )
-						.text( data.shortenurl.shorturlalt )
-						.css( 'overflow-wrap', 'break-word' );
+						.text( data.shortenurl.shorturlalt );
 					$alt.off( 'click' ).on( 'click', function ( event ) {
 						event.preventDefault();
 						widget.textInput.setValue( data.shortenurl.shorturlalt );
