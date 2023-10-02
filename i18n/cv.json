@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Astahar",
 			"Chuvash"
 		]
 	},
-	"urlshortener-not-found-title": "Кĕске URL тупăнмарĕ"
+	"urlshortener-not-found-title": "Кĕске URL тупăнмарĕ",
+	"urlshortener-toolbox": "Кӗске URL адреса ил"
 }
