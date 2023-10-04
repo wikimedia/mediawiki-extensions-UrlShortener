@@ -174,12 +174,6 @@
 		"UrlShortenerApprovedDomains": {
 			"value": false
 		},
-		"UrlShortenerDBCluster": {
-			"value": false
-		},
-		"UrlShortenerDBName": {
-			"value": false
-		},
 		"UrlShortenerAllowedDomains": {
 			"value": false
 		},
@@ -228,6 +222,9 @@
 	"ConfigRegistry": {
 		"urlshortener": "GlobalVarConfig::newInstance"
 	},
+	"DatabaseVirtualDomains": [
+		"urlshortener"
+	],
 	"load_composer_autoloader": true,
 	"manifest_version": 2
 }

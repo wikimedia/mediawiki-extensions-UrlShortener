@@ -23,6 +23,7 @@ use SpecialPage;
 use Status;
 use User;
 use Wikimedia\Rdbms\IDatabase;
+use Wikimedia\Rdbms\IReadableDatabase;
 
 class UrlShortenerUtils {
 
@@ -79,7 +80,7 @@ class UrlShortenerUtils {
 			return Status::newFatal( 'urlshortener-ratelimit' );
 		}
 
-		$dbr = self::getDB( DB_REPLICA );
+		$dbr = self::getReplicaDB();
 		$row = $dbr->selectRow(
 			'urlshortcodes',
 			[ 'usc_id', 'usc_deleted' ],
@@ -100,7 +101,7 @@ class UrlShortenerUtils {
 			'usc_url' => $url,
 			'usc_url_hash' => md5( $url )
 		];
-		$dbw = self::getDB( DB_PRIMARY );
+		$dbw = self::getPrimaryDB();
 		$dbw->insert( 'urlshortcodes', $rowData, __METHOD__, [ 'IGNORE' ] );
 
 		if ( $dbw->affectedRows() ) {
@@ -195,7 +196,7 @@ class UrlShortenerUtils {
 			return false;
 		}
 
-		$dbr = self::getDB( DB_REPLICA );
+		$dbr = self::getReplicaDB();
 		$url = $dbr->selectField(
 			'urlshortcodes',
 			'usc_url',
@@ -222,7 +223,7 @@ class UrlShortenerUtils {
 			return false;
 		}
 
-		$dbr = self::getDB( DB_REPLICA );
+		$dbr = self::getReplicaDB();
 		$url = $dbr->selectField(
 			'urlshortcodes',
 			'usc_url',
@@ -245,7 +246,7 @@ class UrlShortenerUtils {
 			return false;
 		}
 
-		$dbw = self::getDB( DB_PRIMARY );
+		$dbw = self::getPrimaryDB();
 		$dbw->update(
 			'urlshortcodes',
 			[ 'usc_deleted' => 1 ],
@@ -270,7 +271,7 @@ class UrlShortenerUtils {
 			return false;
 		}
 
-		$dbw = self::getDB( DB_PRIMARY );
+		$dbw = self::getPrimaryDB();
 		$dbw->update(
 			'urlshortcodes',
 			[ 'usc_deleted' => 0 ],
@@ -373,18 +374,16 @@ class UrlShortenerUtils {
 		}
 	}
 
-	/**
-	 * @param int $type DB_REPLICA or DB_PRIMARY
-	 * @return IDatabase
-	 */
-	public static function getDB( int $type ): IDatabase {
-		global $wgUrlShortenerDBName, $wgUrlShortenerDBCluster;
-		$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
-		$lb = $wgUrlShortenerDBCluster
-			? $lbFactory->getExternalLB( $wgUrlShortenerDBCluster )
-			: $lbFactory->getMainLB( $wgUrlShortenerDBName );
+	public static function getPrimaryDB(): IDatabase {
+		return MediaWikiServices::getInstance()
+			->getDBLoadBalancerFactory()
+			->getPrimaryDatabase( 'urlshortener' );
+	}
 
-		return $lb->getConnection( $type, [], $wgUrlShortenerDBName );
+	public static function getReplicaDB(): IReadableDatabase {
+		return MediaWikiServices::getInstance()
+			->getDBLoadBalancerFactory()
+			->getReplicaDatabase( 'urlshortener' );
 	}
 
 	/**
