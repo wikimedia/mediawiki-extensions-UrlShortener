@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Римма"
+		]
+	},
+	"apihelp-shortenurl-param-qrcode": "Босьтӧ QR код. Йитӧм URL адрес ёна кӧ кузь, лоас чинталӧм",
+	"apihelp-shortenurl-example-2": "Босьтӧ QR код<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> вылӧ"
+}

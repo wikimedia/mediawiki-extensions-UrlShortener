@@ -36,8 +36,10 @@
 	"urlshortener-shortened-url-alt": "Możesz także użyć alternatywnego adresu URL:",
 	"urlshortener-shortened-url-label": "Skrócony URL",
 	"urlshortener-toolbox": "Zobacz skrócony adres URL",
+	"urlshortener-toolbox-qrcode": "Pobierz kod QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Skróć",
 	"urlshortener-url-input-submitting": "Skracanie…",
-	"urlshortener-url-too-long": "Adres URL jest zbyt długi. Maksymalny rozmiar to {{PLURAL:$1|jeden znak|$1 znaki|$1 znaków}}"
+	"urlshortener-url-too-long": "Adres URL jest zbyt długi. Maksymalny rozmiar to {{PLURAL:$1|jeden znak|$1 znaki|$1 znaków}}",
+	"urlshortener-qrcode-downloaded": "Pobrano kod QR jako plik SVG"
 }

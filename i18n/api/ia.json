@@ -6,7 +6,9 @@
 	},
 	"apihelp-shortenurl-summary": "Reducer un URL longe in un plus curte.",
 	"apihelp-shortenurl-param-url": "Le URL a accurtar.",
+	"apihelp-shortenurl-param-qrcode": "Obtener un codice QR. Le URL ligate essera abbreviate solmente si es multo longe.",
 	"apihelp-shortenurl-example-1": "Obtener le URL curte pro <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "Obtener un codice QR pro <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "Nulle nove URL curte pote esser create",
 	"apierror-urlshortener-permissiondenied": "Tu non es autorisate a crear URLs curte."
 }

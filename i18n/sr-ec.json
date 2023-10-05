@@ -26,6 +26,7 @@
 	"urlshortener-ratelimit": "Сачекајте неко време пре него што наставите са скраћивањем URL адреса.",
 	"urlshortener-shortened-url-label": "Скраћена URL адреса",
 	"urlshortener-toolbox": "Скраћена URL адреса",
+	"urlshortener-toolbox-qrcode": "Преузми QR код",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Скрати",
 	"urlshortener-url-input-submitting": "Скраћујем…"

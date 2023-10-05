@@ -42,6 +42,7 @@
 	"urlshortener-shortened-url-alt": "Tu pote tamben usar iste URL alternative:",
 	"urlshortener-shortened-url-label": "URL accurtate",
 	"urlshortener-toolbox": "Obtener URL accurtate",
+	"urlshortener-toolbox-qrcode": "Discargar codice QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Accurtar",
 	"urlshortener-url-input-submitting": "Accurtante…",
@@ -54,5 +55,6 @@
 	"logeventslist-urlshortener-log": "Registro de gestion de URLs curte",
 	"log-action-filter-urlshortener": "Typo de gestion",
 	"log-action-filter-urlshortener-delete": "Deletion de URLs",
-	"log-action-filter-urlshortener-restore": "Restauration de URLs"
+	"log-action-filter-urlshortener-restore": "Restauration de URLs",
+	"urlshortener-qrcode-downloaded": "Codice QR discargate como file SVG"
 }

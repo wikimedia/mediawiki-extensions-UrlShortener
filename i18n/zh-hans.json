@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"94rain",
+			"LittlePaw365",
 			"Liuxinyu970226",
 			"Shizhao",
-			"Viztor"
+			"Viztor",
+			"Xyb"
 		]
 	},
 	"action-urlshortener-create-url": "创建短链接",
@@ -15,7 +17,7 @@
 	"right-urlshortener-manage-url": "管理短链接",
 	"grant-shortenurls": "创建短链接",
 	"right-urlshortener-view-log": "查看短链接管理日志",
-	"urlshortener": "短网址",
+	"urlshortener": "URL缩短器",
 	"urlshortener-action-done": "URL已被删除和/或恢复",
 	"urlshortener-approved-domains": "至以下{{PLURAL:$1|域名}}的链接可被缩短：$2。",
 	"urlshortener-blocked": "被封禁的用户无法创建短链接。",
@@ -44,9 +46,10 @@
 	"urlshortener-short-code-not-found": "未找到或已删除URL短码",
 	"urlshortener-shortened-url-alt": "您还可以使用此替代URL：",
 	"urlshortener-shortened-url-label": "已缩短的URL",
-	"urlshortener-toolbox": "获取缩短的URL",
+	"urlshortener-toolbox": "获取短URL",
+	"urlshortener-toolbox-qrcode": "下载二维码",
 	"urlshortener-url-input-label": "URL",
-	"urlshortener-url-input-submit": "简短",
+	"urlshortener-url-input-submit": "缩短",
 	"urlshortener-url-input-submitting": "缩短中…",
 	"urlshortener-url-too-long": "URL太长，最大为{{PLURAL:$1|一个字符|$1个字符}}",
 	"urlshortener-badaccessgroups": "您无权创建短链接",
@@ -57,5 +60,6 @@
 	"logeventslist-urlshortener-log": "短链接管理日志",
 	"log-action-filter-urlshortener": "管理类型",
 	"log-action-filter-urlshortener-delete": "网址删除",
-	"log-action-filter-urlshortener-restore": "网址恢复"
+	"log-action-filter-urlshortener-restore": "网址恢复",
+	"urlshortener-qrcode-downloaded": "二维码下载为 SVG 文件"
 }

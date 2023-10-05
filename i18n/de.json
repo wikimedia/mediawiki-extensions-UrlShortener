@@ -46,6 +46,7 @@
 	"urlshortener-shortened-url-alt": "Du kannst auch diese alternative URL verwenden:",
 	"urlshortener-shortened-url-label": "Gekürzte URL:",
 	"urlshortener-toolbox": "Gekürzte URL abrufen",
+	"urlshortener-toolbox-qrcode": "QR-Code runterladen",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Kürzen",
 	"urlshortener-url-input-submitting": "Kürze …",
@@ -58,5 +59,6 @@
 	"logeventslist-urlshortener-log": "Kurz-URL-Verwaltungs-Logbuch",
 	"log-action-filter-urlshortener": "Verwaltungsart",
 	"log-action-filter-urlshortener-delete": "URL-Löschung",
-	"log-action-filter-urlshortener-restore": "URL-Wiederherstellung"
+	"log-action-filter-urlshortener-restore": "URL-Wiederherstellung",
+	"urlshortener-qrcode-downloaded": "QR-Code als SVG-Datei heruntergeladen"
 }

@@ -42,6 +42,7 @@
 	"urlshortener-shortened-url-alt": "Можете да ја употребите и оваа алтернативна URL:",
 	"urlshortener-shortened-url-label": "Скратена URL",
 	"urlshortener-toolbox": "Дај скратен URL",
+	"urlshortener-toolbox-qrcode": "Преземи QR-код",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Скрати",
 	"urlshortener-url-input-submitting": "Скратувам…",
@@ -54,5 +55,6 @@
 	"logeventslist-urlshortener-log": "Дневникот за раководење со кратки URL-а",
 	"log-action-filter-urlshortener": "Вид раководство",
 	"log-action-filter-urlshortener-delete": "Бришење на URL",
-	"log-action-filter-urlshortener-restore": "Повраток на URL"
+	"log-action-filter-urlshortener-restore": "Повраток на URL",
+	"urlshortener-qrcode-downloaded": "QR-кодот е преземен како SVG-податотека"
 }

@@ -7,7 +7,9 @@
 	},
 	"apihelp-shortenurl-summary": "קיצור כתובת URL ארוכה.",
 	"apihelp-shortenurl-param-url": "איזה URL לקצר.",
+	"apihelp-shortenurl-param-qrcode": "קבלת קוד QR. כתובת ה־URL המקושרת תקוצר רק אם היא ארוכה מאוד.",
 	"apihelp-shortenurl-example-1": "קבלת URL קצר עבור <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "קבלת קוד QR עבור <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "לא ניתן ליצור כתובות מקוצרות",
 	"apierror-urlshortener-permissiondenied": "אין לך הרשאה ליצור כתובות URL קצרות"
 }

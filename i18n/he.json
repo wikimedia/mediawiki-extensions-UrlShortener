@@ -46,6 +46,7 @@
 	"urlshortener-shortened-url-alt": "אפשר גם להשתמש ב־URL החלופי הזה:",
 	"urlshortener-shortened-url-label": "כתובת מקוצרת",
 	"urlshortener-toolbox": "קבלת כתובת מקוצרת",
+	"urlshortener-toolbox-qrcode": "הורדת קוד QR",
 	"urlshortener-url-input-label": "כתובת URL",
 	"urlshortener-url-input-submit": "לקצר",
 	"urlshortener-url-input-submitting": "קיצור...",
@@ -58,5 +59,6 @@
 	"logeventslist-urlshortener-log": "יומן ניהול הכתובות המקוצרות",
 	"log-action-filter-urlshortener": "סוגי ניהול",
 	"log-action-filter-urlshortener-delete": "מחיקת כתובת",
-	"log-action-filter-urlshortener-restore": "שחזור כתובת"
+	"log-action-filter-urlshortener-restore": "שחזור כתובת",
+	"urlshortener-qrcode-downloaded": "קוד QR הורד כקובץ SVG"
 }

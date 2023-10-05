@@ -7,7 +7,9 @@
 	},
 	"apihelp-shortenurl-summary": "Kürzt eine lange URL auf eine kürzere.",
 	"apihelp-shortenurl-param-url": "Zu kürzende URL.",
+	"apihelp-shortenurl-param-qrcode": "Holen eines QR-Codes. Die verlinkte URL wird nur gekürzt, wenn sie sehr lang ist.",
 	"apihelp-shortenurl-example-1": "Ruft die Kurz-URL für <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> ab.",
+	"apihelp-shortenurl-example-2": "Holen eines QR-Codes für <kbd><nowiki>https://de.wikipedia.org/wiki/Artikel</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "Es können keine neuen Kurz-URLs erstellt werden",
 	"apierror-urlshortener-permissiondenied": "Du hast kein Recht zum Erstellen von Kurz-URLs"
 }

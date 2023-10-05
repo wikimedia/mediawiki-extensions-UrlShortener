@@ -6,7 +6,9 @@
 	},
 	"apihelp-shortenurl-summary": "Скратување на долга URL во покус облик.",
 	"apihelp-shortenurl-param-url": "URL за скратување.",
+	"apihelp-shortenurl-param-qrcode": "Добијте QR-код. Сврзаата URL ќе биде скратена само ако е многу долга.",
 	"apihelp-shortenurl-example-1": "Дај пократка URL за <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "Добијте QR-код за for <kbd><nowiki>https://mk.wikipedia.org/wiki/Фосфат</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "Не можам да создадам кратки URL-а",
 	"apierror-urlshortener-permissiondenied": "Немате право да создавање кратки URL-а"
 }
