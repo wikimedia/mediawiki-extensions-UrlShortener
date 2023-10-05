@@ -43,7 +43,13 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "MediaWiki\\Extension\\UrlShortener\\Hooks"
+			"class": "MediaWiki\\Extension\\UrlShortener\\Hooks",
+			"services": [
+				"ConfigFactory"
+			],
+			"optional_services": [
+				"MobileFrontend.Context"
+			]
 		},
 		"schema": {
 			"class": "MediaWiki\\Extension\\UrlShortener\\SchemaHooks"
@@ -218,6 +224,9 @@
 			"value": 200,
 			"description": "If a URL is greater than this length (in bytes), it is first shortened before generating a QR code."
 		}
+	},
+	"ConfigRegistry": {
+		"urlshortener": "GlobalVarConfig::newInstance"
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2

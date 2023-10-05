@@ -11,13 +11,14 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use ExtensionRegistry;
+use ConfigException;
+use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\SidebarBeforeOutputHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Hook\WebRequestPathInfoRouterHook;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Request\PathRouter;
+use MobileContext;
 use OutputPage;
 use Skin;
 use SkinTemplate;
@@ -29,16 +30,36 @@ class Hooks implements
 	SidebarBeforeOutputHook,
 	SkinTemplateNavigation__UniversalHook
 {
+	private bool $enableSidebar;
+	private bool $enableQrCode;
+	private bool $readOnly;
+	/** @var string|false */
+	private $urlTemplate;
+	/** @phan-suppress-next-line PhanUndeclaredTypeProperty */
+	private ?MobileContext $mobileContext;
+
+	public function __construct(
+		ConfigFactory $configFactory,
+		// @phan-suppress-next-line PhanUndeclaredTypeParameter
+		?MobileContext $mobileContext
+	) {
+		$config = $configFactory->makeConfig( 'urlshortener' );
+		$this->enableSidebar = $config->get( 'UrlShortenerEnableSidebar' );
+		$this->enableQrCode = $config->get( 'UrlShortenerEnableQrCode' );
+		$this->readOnly = $config->get( 'UrlShortenerReadOnly' );
+		$this->urlTemplate = $config->get( 'UrlShortenerTemplate' );
+		$this->mobileContext = $mobileContext;
+	}
+
 	/**
 	 * @param PathRouter $router
 	 *
 	 * Adds UrlShortener rules to the URL router.
 	 */
 	public function onWebRequestPathInfoRouter( $router ) {
-		global $wgUrlShortenerTemplate;
 		// If a template is set, and it is not the root, register it
-		if ( $wgUrlShortenerTemplate && $wgUrlShortenerTemplate !== '/$1' ) {
-			$router->add( $wgUrlShortenerTemplate,
+		if ( $this->urlTemplate && $this->urlTemplate !== '/$1' ) {
+			$router->add( $this->urlTemplate,
 				[ 'title' => SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getPrefixedText() ]
 			);
 		}
@@ -48,10 +69,10 @@ class Hooks implements
 		global $wgUrlShortenerIdSet, $wgUrlShortenerIdMapping, $wgUrlShortenerAltPrefix;
 
 		if ( strpos( $wgUrlShortenerIdSet, $wgUrlShortenerAltPrefix ) !== false ) {
-			throw new \ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdSet' );
+			throw new ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdSet' );
 		}
 		if ( isset( $wgUrlShortenerIdMapping[ $wgUrlShortenerAltPrefix ] ) ) {
-			throw new \ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdMapping' );
+			throw new ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdMapping' );
 		}
 	}
 
@@ -62,9 +83,7 @@ class Hooks implements
 	 * @param Skin $skin
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		global $wgUrlShortenerReadOnly, $wgUrlShortenerEnableSidebar;
-
-		if ( $wgUrlShortenerReadOnly || !$wgUrlShortenerEnableSidebar ) {
+		if ( $this->readOnly || !$this->enableSidebar ) {
 			return;
 		}
 
@@ -78,18 +97,12 @@ class Hooks implements
 	 * @param array &$sidebar
 	 */
 	public function onSidebarBeforeOutput( $skin, &$sidebar ): void {
-		global $wgUrlShortenerReadOnly, $wgUrlShortenerEnableSidebar, $wgUrlShortenerEnableQrCode;
-
-		if ( $wgUrlShortenerReadOnly ) {
-			return;
-		}
-
-		if ( !$wgUrlShortenerEnableSidebar && !$wgUrlShortenerEnableQrCode ) {
+		if ( $this->readOnly || ( !$this->enableSidebar && !$this->enableQrCode ) ) {
 			return;
 		}
 
 		$fullURL = self::getFullUrl( $skin );
-		if ( $wgUrlShortenerEnableSidebar && !$skin->getTitle()->isSpecial( 'UrlShortener' ) ) {
+		if ( $this->enableSidebar && !$skin->getTitle()->isSpecial( 'UrlShortener' ) ) {
 			// Append link to generate short URL
 			$sidebar['TOOLBOX']['urlshortener'] = [
 				'id' => 't-urlshortener',
@@ -97,7 +110,8 @@ class Hooks implements
 				'text' => $skin->msg( 'urlshortener-toolbox' )->text(),
 			];
 		}
-		if ( $wgUrlShortenerEnableQrCode ) {
+
+		if ( $this->enableQrCode ) {
 			// Append link to download QR code
 			$sidebar['TOOLBOX']['urlshortener-qrcode'] = [
 				'id' => 't-urlshortener-qrcode',
@@ -115,20 +129,16 @@ class Hooks implements
 	 * @phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 	 */
 	public function onSkinTemplateNavigation__Universal( $sktemplate, &$links ): void {
-		global $wgUrlShortenerEnableQrCode;
-		if ( $wgUrlShortenerEnableQrCode && ExtensionRegistry::getInstance()->isLoaded( 'MobileFrontend' ) ) {
-			$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-			$isMobileView = $mobileContext->shouldDisplayMobileView();
-			if ( $isMobileView ) {
-				$fullURL = self::getFullUrl( $sktemplate );
-				$links['actions']['qrcode'] = [
-					'icon' => 'qrCode',
-					// Needs its own selector to avoid styling clashes.
-					'class' => 'ext-urlshortener-qrcode-download-minerva',
-					'href' => SpecialPage::getTitleFor( 'QrCode' )->getLocalURL( [ 'url' => $fullURL ] ),
-					'text' => $sktemplate->msg( 'urlshortener-toolbox-qrcode' )->plain(),
-				];
-			}
+		// @phan-suppress-next-line PhanUndeclaredClassMethod
+		if ( $this->enableQrCode && $this->mobileContext && $this->mobileContext->shouldDisplayMobileView() ) {
+			$fullURL = self::getFullUrl( $sktemplate );
+			$links['actions']['qrcode'] = [
+				'icon' => 'qrCode',
+				// Needs its own selector to avoid styling clashes.
+				'class' => 'ext-urlshortener-qrcode-download-minerva',
+				'href' => SpecialPage::getTitleFor( 'QrCode' )->getLocalURL( [ 'url' => $fullURL ] ),
+				'text' => $sktemplate->msg( 'urlshortener-toolbox-qrcode' )->plain(),
+			];
 		}
 	}
 
