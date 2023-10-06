@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ukhant Erdemt"
+		]
+	},
+	"apihelp-shortenurl-param-qrcode": "QR код автн. Холвгдсн URL-нь ут болхла, ахрдулҗ болна.",
+	"apihelp-shortenurl-example-2": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>-д зөрүлсн QR код автн."
+}

@@ -4,6 +4,7 @@
 			"1233qwer1234qwer4",
 			"Diman Russkov",
 			"Facenapalm",
+			"Kareyac",
 			"Novichev",
 			"Okras",
 			"Vlad5250"
@@ -39,6 +40,7 @@
 	"urlshortener-shortened-url-alt": "Вы также можете использовать альтернативный URL:",
 	"urlshortener-shortened-url-label": "Сокращённый URL-адрес",
 	"urlshortener-toolbox": "Получить сокращённый URL-адрес",
+	"urlshortener-toolbox-qrcode": "Скачать QR-код",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Сократить",
 	"urlshortener-url-input-submitting": "Сокращение…",

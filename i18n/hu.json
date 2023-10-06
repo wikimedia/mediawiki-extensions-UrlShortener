@@ -43,6 +43,7 @@
 	"urlshortener-shortened-url-alt": "Más URL-t is használhatsz:",
 	"urlshortener-shortened-url-label": "Rövidített URL",
 	"urlshortener-toolbox": "Rövidített URL készítése",
+	"urlshortener-toolbox-qrcode": "QR kód letöltése",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Rövidítés",
 	"urlshortener-url-input-submitting": "Rövidítés…",
@@ -52,5 +53,6 @@
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|törölte}} a(z) „$4” rövid URL-t",
 	"logentry-urlshortener-restore": "$1 {{GENDER:$2|visszaállította}} a(z) „$4” rövid URL-t",
 	"log-action-filter-urlshortener-delete": "URL-törlés",
-	"log-action-filter-urlshortener-restore": "URL-visszaállítás"
+	"log-action-filter-urlshortener-restore": "URL-visszaállítás",
+	"urlshortener-qrcode-downloaded": "QR-kód SVG fájlként letöltve"
 }
