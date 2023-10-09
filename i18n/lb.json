@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
 	"grant-shortenurls": "Kuerz-URLen uleeën",
@@ -15,9 +16,11 @@
 	"urlshortener-ratelimit": "Waart wgl. e bësse ier Dir méi URLe kierzt.",
 	"urlshortener-shortened-url-label": "Gekierzt URL",
 	"urlshortener-toolbox": "Gekierzt URL kréien",
+	"urlshortener-toolbox-qrcode": "QR-Code eroflueden",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Kierzen",
 	"urlshortener-url-input-submitting": "Kierzen...",
 	"log-action-filter-urlshortener-delete": "URL Läschen",
-	"log-action-filter-urlshortener-restore": "URL Restauratioun"
+	"log-action-filter-urlshortener-restore": "URL Restauratioun",
+	"urlshortener-qrcode-downloaded": "QR-Code als SVG-Fichier erofgelueden"
 }
