@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Srđan"
+		]
+	},
+	"urlshortener": "Skraćivač linkova",
+	"urlshortener-blocked": "Blokirani korisnici ne mogu skraćivati linkove.",
+	"urlshortener-copy-fail": "Ne mogu kopirati link u međuspremnik.",
+	"urlshortener-copy-success": "Link kopiran u međuspremnik.",
+	"urlshortener-disabled": "Skraćivanje linkova privremeno je isključeno.",
+	"urlshortener-error-nouserpass": "Nije dozvoljeno skraćivanje linkova koji sadrže korisnička imena ili lozinke",
+	"urlshortener-failed-try-again": "Nije uspjelo. Da probam ponovo?",
+	"urlshortener-shortened-url-label": "Skraćeni link",
+	"urlshortener-toolbox": "Skraćeni link",
+	"urlshortener-url-input-label": "Link",
+	"urlshortener-url-input-submit": "Skrati",
+	"urlshortener-url-input-submitting": "Skraćujem…"
+}

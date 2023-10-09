@@ -4,7 +4,9 @@
 			"94rain",
 			"Liuxinyu970226",
 			"Viztor",
-			"Shizhao"
+			"Shizhao",
+			"LittlePaw365",
+			"Xyb"
 		]
 	},
 	"action-urlshortener-create-url": "创建短链接",
@@ -15,7 +17,7 @@
 	"right-urlshortener-manage-url": "管理短链接",
 	"grant-shortenurls": "创建短链接",
 	"right-urlshortener-view-log": "查看短链接管理日志",
-	"urlshortener": "短网址",
+	"urlshortener": "URL缩短器",
 	"urlshortener-action-done": "URL已被删除和/或恢复",
 	"urlshortener-approved-domains": "至以下{{PLURAL:$1|域名}}的链接可被缩短：$2。",
 	"urlshortener-blocked": "被封禁的用户无法创建短链接。",
@@ -43,9 +45,9 @@
 	"urlshortener-short-code-is-not-deleted": "URL短码不能被删除",
 	"urlshortener-short-code-not-found": "未找到或已删除URL短码",
 	"urlshortener-shortened-url-label": "已缩短的URL",
-	"urlshortener-toolbox": "获取缩短的URL",
+	"urlshortener-toolbox": "获取短URL",
 	"urlshortener-url-input-label": "URL",
-	"urlshortener-url-input-submit": "简短",
+	"urlshortener-url-input-submit": "缩短",
 	"urlshortener-url-input-submitting": "缩短中…",
 	"urlshortener-url-too-long": "URL太长，最大为{{PLURAL:$1|一个字符|$1个字符}}",
 	"urlshortener-badaccessgroups": "您无权创建短链接",
