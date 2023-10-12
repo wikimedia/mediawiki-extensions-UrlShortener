@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kuldeepburjbhalaike"
+		]
+	},
+	"apihelp-shortenurl-summary": "ਇੱਕ ਲੰਬੇ ਯੂਆਰਐੱਲ ਨੂੰ ਇੱਕ ਛੋਟੇ ਵਿੱਚ ਬਦਲੋ।",
+	"apihelp-shortenurl-param-url": "ਯੂਆਰਐੱਲ ਨੂੰ ਛੋਟਾ ਕੀਤਾ ਜਾਣਾ ਹੈ।",
+	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> ਲਈ ਛੋਟਾ ਯੂਆਰਐੱਲ ਪ੍ਰਾਪਤ ਕਰੋ।",
+	"apierror-urlshortener-disabled": "ਕੋਈ ਨਵਾਂ ਛੋਟਾ ਯੂਆਰਐੱਲ ਨਹੀਂ ਬਣਾਇਆ ਜਾ ਸਕਦਾ ਹੈ",
+	"apierror-urlshortener-permissiondenied": "ਤੁਹਾਡੇ ਕੋਲ ਛੋਟੇ ਯੂਆਰਐੱਲ ਬਣਾਉਣ ਦਾ ਅਧਿਕਾਰ ਨਹੀਂ ਹੈ"
+}
