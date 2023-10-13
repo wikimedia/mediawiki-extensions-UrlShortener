@@ -321,7 +321,7 @@ class UrlShortenerUtils {
 		// Reverse the character alias mapping
 		$targetToVariants = [];
 		foreach ( $wgUrlShortenerIdMapping as $variant => $target ) {
-			$targetToVariants[ $target ] = $targetToVariants[ $target ] ?? [];
+			$targetToVariants[ $target ] ??= [];
 			$targetToVariants[ $target ][] = (string)$variant;
 		}
 
