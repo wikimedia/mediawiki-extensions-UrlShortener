@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Გიო ოქრო"
+		]
+	},
+	"apihelp-shortenurl-summary": "გრძელი URL-ის შემოკლეობა უფრო მოკლე URL-დ.",
+	"apihelp-shortenurl-param-url": "URL, რომელიც უნდა შემოკლდეს.",
+	"apihelp-shortenurl-param-qrcode": "QR-კოდის მიღება. დაკავშირებული URL შემოკლდება იმ შემთხვევაში, თუ ის ძალიან გრძელია.",
+	"apihelp-shortenurl-example-1": "მოკლე URL-ის მიღება შემდეგი გვერდისათვის: <nowiki> <kbd>https://en.wikipedia.org/wiki/Arctica</kbd></nowiki>.",
+	"apihelp-shortenurl-example-2": "QR-კოდის მიღება შემდეგი გვერდისათვის: <nowiki> <kbd>https://en.wikipedia.org/wiki/Arctica</kbd></nowiki>.",
+	"apierror-urlshortener-disabled": "ახალი მოკლე URL-ების შექმნა შეუძლებელია",
+	"apierror-urlshortener-permissiondenied": "თქვენ არ გაქვთ მოკლე URL-ების შექმნის უფლება"
+}

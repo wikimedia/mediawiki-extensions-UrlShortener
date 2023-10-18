@@ -41,7 +41,8 @@
 	"urlshortener-short-code-not-found": "ইউআরএল সংক্ষিপ্ত কোড পাওয়া যায়নি বা অপসারিত হয়েছে",
 	"urlshortener-shortened-url-alt": "এছাড়া আপনি এই বিকল্প ইউআরএলটিও ব্যবহার করতে পারেন:",
 	"urlshortener-shortened-url-label": "ইউআরএল সংক্ষিপ্ত করা হয়েছে",
-	"urlshortener-toolbox": "ইউআরএল সংক্ষিপ্ত করুন",
+	"urlshortener-toolbox": "সংক্ষিপ্ত ইউআরএল নিন",
+	"urlshortener-toolbox-qrcode": "কিউআর কোড ডাউনলোড করুন",
 	"urlshortener-url-input-label": "ইউআরএল",
 	"urlshortener-url-input-submit": "সংক্ষিপ্ত করুন",
 	"urlshortener-url-input-submitting": "সংক্ষিপ্ত করা হচ্ছে",
@@ -54,5 +55,6 @@
 	"logeventslist-urlshortener-log": "সংক্ষিপ্ত ইউআরএল পরিচালনা লগ",
 	"log-action-filter-urlshortener": "পরিচালনার ধরন",
 	"log-action-filter-urlshortener-delete": "ইউআরএল অপসারণ",
-	"log-action-filter-urlshortener-restore": "ইউআরএল পুনরুদ্ধার"
+	"log-action-filter-urlshortener-restore": "ইউআরএল পুনরুদ্ধার",
+	"urlshortener-qrcode-downloaded": "কিউআর কোড এসভিজি ফাইল হিসেবে ডাউনলোড করা হয়েছে"
 }
