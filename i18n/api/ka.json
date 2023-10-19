@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Გიო ოქრო"
+		]
+	},
+	"apihelp-shortenurl-summary": "გრძელი URL-ის შემოკლეობა უფრო მოკლე URL-დ.",
+	"apihelp-shortenurl-param-url": "URL, რომელიც უნდა შემოკლდეს.",
+	"apihelp-shortenurl-example-1": "მოკლე URL-ის მიღება შემდეგი გვერდისათვის: <nowiki> <kbd>https://en.wikipedia.org/wiki/Arctica</kbd></nowiki>.",
+	"apierror-urlshortener-disabled": "ახალი მოკლე URL-ების შექმნა შეუძლებელია",
+	"apierror-urlshortener-permissiondenied": "თქვენ არ გაქვთ მოკლე URL-ების შექმნის უფლება"
+}
