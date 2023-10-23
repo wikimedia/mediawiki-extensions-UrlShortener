@@ -44,8 +44,10 @@
 	"urlshortener-ratelimit": "Před zkracováním dalších URL prosím chvíli počkejte.",
 	"urlshortener-short-code-is-not-deleted": "Kód zkráceného URL není smazán",
 	"urlshortener-short-code-not-found": "Kód zkráceného URL nebyl nalezen nebo již byl smazán",
+	"urlshortener-shortened-url-alt": "Také můžete použít toto alternativní URL:",
 	"urlshortener-shortened-url-label": "Zkrácené URL",
 	"urlshortener-toolbox": "Získat zkrácené URL",
+	"urlshortener-toolbox-qrcode": "Stáhnout QR kód",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Zkrátit",
 	"urlshortener-url-input-submitting": "Zkracuje se…",
@@ -58,5 +60,6 @@
 	"logeventslist-urlshortener-log": "Protokol správy krátkých URL",
 	"log-action-filter-urlshortener": "Typ správy",
 	"log-action-filter-urlshortener-delete": "Mazání URL",
-	"log-action-filter-urlshortener-restore": "Obnovení URL"
+	"log-action-filter-urlshortener-restore": "Obnovení URL",
+	"urlshortener-qrcode-downloaded": "QR kód stažen jako SVG soubor"
 }
