@@ -123,6 +123,9 @@
 			"scripts": [
 				"modules/ext.urlShortener.toolbar.js"
 			],
+			"styles": [
+				"modules/ext.urlShortener.toolbar.less"
+			],
 			"messages": [
 				"urlshortener-url-input-submitting",
 				"urlshortener-failed-try-again",
