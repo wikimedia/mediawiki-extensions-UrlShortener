@@ -44,6 +44,7 @@
 	"urlshortener-ratelimit": "Před zkracováním dalších URL prosím chvíli počkejte.",
 	"urlshortener-short-code-is-not-deleted": "Kód zkráceného URL není smazán",
 	"urlshortener-short-code-not-found": "Kód zkráceného URL nebyl nalezen nebo již byl smazán",
+	"urlshortener-shortened-url-alt": "Také můžete použít toto alternativní URL:",
 	"urlshortener-shortened-url-label": "Zkrácené URL",
 	"urlshortener-toolbox": "Získat zkrácené URL",
 	"urlshortener-url-input-label": "URL",

@@ -6,5 +6,6 @@
 	},
 	"action-urlshortener-create-url": "cipta URL pendek",
 	"right-urlshortener-create-url": "Cipta URL pendek",
-	"action-urlshortener-manage-url": "urus URL pendek"
+	"action-urlshortener-manage-url": "urus URL pendek",
+	"urlshortener-toolbox": "Dapatkan URL pendek"
 }
