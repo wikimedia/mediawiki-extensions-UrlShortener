@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Simbu123"
+		]
+	},
+	"action-urlshortener-create-url": "সংক্ষিপ্ত ইউআৰএল সৃষ্টি কৰক",
+	"right-urlshortener-create-url": "সংক্ষিপ্ত ইউআৰএল সৃষ্টি কৰক",
+	"action-urlshortener-manage-url": "সংক্ষিপ্ত ইউআৰএল নিয়ন্ত্ৰণ কৰক",
+	"action-urlshortener-view-log": "সংক্ষিপ্ত ইউআৰএলসমূহৰ নিয়ন্ত্ৰণ ল'গ চাওক",
+	"manageshorturls": "সংক্ষিপ্ত ইউআৰএল নিয়ন্ত্ৰণ কৰক",
+	"right-urlshortener-manage-url": "সংক্ষিপ্ত ইউআৰএল নিয়ন্ত্ৰণ কৰক",
+	"grant-shortenurls": "সংক্ষিপ্ত ইউআৰএল সৃষ্টি কৰক",
+	"right-urlshortener-view-log": "সংক্ষিপ্ত ইউআৰএলসমূহৰ নিয়ন্ত্ৰণ ল'গ চাওক",
+	"urlshortener": "ইউআৰএল সংক্ষেপক",
+	"urlshortener-action-done": "ইউআৰএলসমূহ বিলোপ কৰা হৈছে আৰু/বা পুনৰুদ্ধাৰ কৰা হৈছে",
+	"urlshortener-approved-domains": "নিম্নলিখিত {{PLURAL:$1|ড'মেইন|ড'মেইনসমূহ}} সংক্ষিপ্ত কৰা হ'ব: $2।",
+	"urlshortener-blocked": "অৱৰোধ কৰা সদস্যই ইউআৰএল সংক্ষিপ্ত কৰিব নোৱাৰে।",
+	"urlshortener-copy-fail": "ইউআৰএল ক্লিপবৰ্ডলৈ অনুলিপি কৰিব পৰা নহ'ল।",
+	"urlshortener-copy-success": "ইউআৰএল ক্লিপবৰ্ডলৈ অনুলিপি কৰা হ'ল।",
+	"urlshortener-deleted": "এই সংক্ষিপ্ত ইউআৰএলটো বিলোপ কৰা হৈছে।",
+	"urlshortener-error-malformed-url": "বৈধ ইউআৰএল নহয়",
+	"urlshortener-failed-try-again": "ব্যৰ্থ হ'ল। পুনৰ চেষ্টা কৰক?",
+	"urlshortener-form-header": "আপোনাৰ দীঘল ইউআৰএল ইয়াত প্ৰতিলেপন কৰক",
+	"urlshortener-manage-reason": "কাৰণ",
+	"urlshortener-not-found-title": "সংক্ষিপ্ত ইউআৰএল পোৱা নগ'ল",
+	"urlshortener-ratelimit": "অধিক ইউআৰএল সংক্ষিপ্ত কৰাৰ আগতে অনুগ্ৰহ কৰি কিছু সময় অপেক্ষা কৰক।",
+	"urlshortener-shortened-url-alt": "আপুনি এই বিকল্প ইউআৰএলটোও ব্যৱহাৰ কৰিব পাৰে:",
+	"urlshortener-shortened-url-label": "সংক্ষিপ্ত ইউআৰএল",
+	"urlshortener-toolbox": "সংক্ষিপ্ত ইউআৰএল প্ৰাপ্ত কৰক",
+	"urlshortener-toolbox-qrcode": "কিউআৰ ক'ড ডাউনল'ড কৰক",
+	"urlshortener-url-input-label": "ইউআৰএল",
+	"urlshortener-url-input-submit": "সংক্ষিপ্ত কৰক",
+	"urlshortener-url-input-submitting": "সংক্ষিপ্ত কৰা হৈছে…",
+	"log-name-urlshortener": "সংক্ষিপ্ত ইউআৰএলসমূহৰ নিয়ন্ত্ৰণ ল'গ",
+	"logentry-urlshortener-delete": "$1-এ \"$4\" সংক্ষিপ্ত ইউআৰএলটোক {{GENDER:$2|বিলোপ কৰিলে}}।",
+	"logentry-urlshortener-restore": "$1-এ \"$4\" সংক্ষিপ্ত ইউআৰএলটোক {{GENDER:$2|পুনৰুদ্ধাৰ কৰিলে}}।",
+	"logeventslist-urlshortener-log": "সংক্ষিপ্ত ইউআৰএলসমূহৰ নিয়ন্ত্ৰণ ল'গ",
+	"log-action-filter-urlshortener": "নিয়ন্ত্ৰণৰ প্ৰকাৰ",
+	"log-action-filter-urlshortener-delete": "ইউআৰএল বিলোপন",
+	"log-action-filter-urlshortener-restore": "সংক্ষিপ্ত পুনৰুদ্ধাৰ"
+}
