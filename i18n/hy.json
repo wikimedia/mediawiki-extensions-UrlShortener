@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"23artashes"
 		]
 	},
-	"urlshortener-manage-reason": "Պատճառ"
+	"urlshortener-manage-reason": "Պատճառ",
+	"urlshortener-toolbox": "Ստանալ կարճ URL հասցե"
 }
