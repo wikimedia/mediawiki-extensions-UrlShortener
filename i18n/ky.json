@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bosogo"
+		]
+	},
+	"grant-shortenurls": "Кыска URL'дерди түзүү",
+	"urlshortener": "URL кыскарткыч",
+	"urlshortener-blocked": "Бөгөттөлгөн колдонуучулар URL'ди кыскарта алышпайт",
+	"urlshortener-copy-success": "URL алмашуу буферине көчүрүлдү.",
+	"urlshortener-error-malformed-url": "Жараксыз URL",
+	"urlshortener-form-header": "Узун URL'иңизди бул жерге келтириңиз",
+	"urlshortener-manage-reason": "Себеп",
+	"urlshortener-not-found-title": "Кыска URL табылган жок",
+	"urlshortener-shortened-url-alt": "Альтернативалуу URL'ди да колдонсоңуз болот:",
+	"urlshortener-shortened-url-label": "Кыскартылган URL",
+	"urlshortener-toolbox": "URL'ди кыскартуу",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Кыскартуу",
+	"urlshortener-url-input-submitting": "Кыскартылууда…"
+}
