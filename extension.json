@@ -173,6 +173,9 @@
 	"GrantPermissionGroups": {
 		"shortenurls": "administration"
 	},
+	"GrantRiskGroups": {
+		"shortenurls": "low"
+	},
 	"config": {
 		"UrlShortenerApprovedDomains": {
 			"value": false
