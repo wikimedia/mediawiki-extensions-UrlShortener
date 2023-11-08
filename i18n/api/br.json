@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Huñvreüs"
+		]
+	},
+	"apihelp-shortenurl-summary": "Berraat un URL hir d’un URL berroc’h.",
+	"apihelp-shortenurl-param-url": "URL da vezañ berraet.",
+	"apihelp-shortenurl-param-qrcode": "Kaout ur c’hod QR. Ne vo berraet an URL liammet nemet mard eo hir-kenañ.",
+	"apihelp-shortenurl-example-1": "Kaout an URL berr evit <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "Kaout ur c’hod QR evit <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Ne c’hall ket URLoù berr nevez bezañ krouet",
+	"apierror-urlshortener-permissiondenied": "N’oc’h ket aotreet da grouiñ URLoù berr"
+}

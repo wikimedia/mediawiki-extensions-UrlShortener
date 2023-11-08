@@ -43,6 +43,7 @@
 	"urlshortener-shortened-url-alt": "Du kan også bruke denne alternative URL-en:",
 	"urlshortener-shortened-url-label": "Forkortet URL",
 	"urlshortener-toolbox": "Hent forkortet URL",
+	"urlshortener-toolbox-qrcode": "Last ned QR-kode",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Forkort",
 	"urlshortener-url-input-submitting": "Forkorter …",
@@ -55,5 +56,6 @@
 	"logeventslist-urlshortener-log": "Behandlingslogg for korte URL-er",
 	"log-action-filter-urlshortener": "Type behandling",
 	"log-action-filter-urlshortener-delete": "URL-sletting",
-	"log-action-filter-urlshortener-restore": "URL-gjenoppretting"
+	"log-action-filter-urlshortener-restore": "URL-gjenoppretting",
+	"urlshortener-qrcode-downloaded": "QR-kode lastet ned som SVG-fil"
 }
