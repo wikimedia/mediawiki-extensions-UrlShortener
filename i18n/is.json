@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Snævar",
 			"Sveinn í Felli"
 		]
 	},
+	"urlshortener-toolbox": "Fá styttan tengil",
 	"urlshortener-url-input-label": "Vefslóð"
 }
