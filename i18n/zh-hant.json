@@ -47,6 +47,7 @@
 	"urlshortener-shortened-url-alt": "您也可以使用此備用網址：",
 	"urlshortener-shortened-url-label": "已縮短的網址",
 	"urlshortener-toolbox": "取得短網址",
+	"urlshortener-toolbox-qrcode": "下載QR碼",
 	"urlshortener-url-input-label": "網址",
 	"urlshortener-url-input-submit": "縮短",
 	"urlshortener-url-input-submitting": "縮短中…",
@@ -59,5 +60,6 @@
 	"logeventslist-urlshortener-log": "短網址管理日誌",
 	"log-action-filter-urlshortener": "管理類型",
 	"log-action-filter-urlshortener-delete": "網址刪除",
-	"log-action-filter-urlshortener-restore": "網址修復"
+	"log-action-filter-urlshortener-restore": "網址修復",
+	"urlshortener-qrcode-downloaded": "將QR碼下載為SVG圖檔"
 }
