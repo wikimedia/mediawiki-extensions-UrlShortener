@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ukhant Erdemt"
+			"Ukhant Erdemt",
+			"Алия"
 		]
 	},
+	"urlshortener-toolbox": "Ахр URL үүскх",
 	"urlshortener-toolbox-qrcode": "QR кодыг татад авх",
 	"urlshortener-qrcode-downloaded": "QR код SVG файлар татгдв"
 }
