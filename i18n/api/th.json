@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Octahedron80"
+		]
+	},
+	"apihelp-shortenurl-summary": "ย่อยูอาร์แอลแบบยาวให้สั้นลง",
+	"apihelp-shortenurl-param-url": "ยูอาร์แอลที่จะย่อให้สั้นลง",
+	"apihelp-shortenurl-example-1": "รับยูอาร์แอลแบบสั้นสำหรับ <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>",
+	"apierror-urlshortener-disabled": "ไม่สามารถสร้างยูอาร์แอลแบบสั้นใหม่ได้",
+	"apierror-urlshortener-permissiondenied": "คุณไม่มีสิทธิ์สร้างยูอาร์แอลแบบสั้น"
+}
