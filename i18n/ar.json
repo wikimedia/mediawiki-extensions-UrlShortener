@@ -3,7 +3,9 @@
 		"authors": [
 			"Ayatun",
 			"Meno25",
-			"ديفيد"
+			"ديفيد",
+			"Ideophagous",
+			"علاء"
 		]
 	},
 	"action-urlshortener-create-url": "إنشاء مسارات قصيرة",
@@ -36,6 +38,7 @@
 	"urlshortener-ratelimit": "الرجاء الانتظار بعض الوقت قبل تقصير المزيد من المسارات.",
 	"urlshortener-short-code-is-not-deleted": "لم يتم حذف رمز مسار مختصر",
 	"urlshortener-short-code-not-found": "لم يتم العثور على أو حذف رمز مسار مختصر",
+	"urlshortener-shortened-url-alt": "يمكنك أيضًا استخدام المسار البديل هذا:",
 	"urlshortener-shortened-url-label": "المسار المختصر",
 	"urlshortener-toolbox": "احصل على مسار مختصر",
 	"urlshortener-url-input-label": "المسار",
