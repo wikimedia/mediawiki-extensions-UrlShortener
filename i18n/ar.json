@@ -3,7 +3,9 @@
 		"authors": [
 			"Ayatun",
 			"Meno25",
-			"ديفيد"
+			"ديفيد",
+			"Ideophagous",
+			"علاء"
 		]
 	},
 	"action-urlshortener-create-url": "إنشاء مسارات قصيرة",
@@ -17,7 +19,7 @@
 	"urlshortener-blocked": "لا يمكن للمستخدمين الممنوعين إنشاء مسارات قصيرة.",
 	"urlshortener-copy-fail": "فشل نسخ المسار إلى الحافظة.",
 	"urlshortener-copy-success": "تم نسخ المسار إلى الحافظة.",
-	"urlshortener-deleted": "تم حذف القصير هذا المسار المختصر.",
+	"urlshortener-deleted": "هاد الليان لقصير تحيّد.",
 	"urlshortener-desc": "أداة تقصير مسار للمسارات العشوائية",
 	"urlshortener-disabled": "إحداث وصلات قصيرة جديدة معطل مؤقتا.",
 	"urlshortener-enter-short-code-delete": "المسارات المختصر المراد حذفه",
@@ -36,7 +38,7 @@
 	"urlshortener-ratelimit": "الرجاء الانتظار بعض الوقت قبل تقصير المزيد من المسارات.",
 	"urlshortener-short-code-is-not-deleted": "لم يتم حذف رمز مسار مختصر",
 	"urlshortener-short-code-not-found": "لم يتم العثور على أو حذف رمز مسار مختصر",
-	"urlshortener-shortened-url-label": "المسار المختصر",
+	"urlshortener-shortened-url-label": "الليان لقصير",
 	"urlshortener-toolbox": "احصل على مسار مختصر",
 	"urlshortener-url-input-label": "المسار",
 	"urlshortener-url-input-submit": "تقصير",
