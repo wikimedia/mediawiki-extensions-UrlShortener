@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mirws"
+			"Mirws",
+			"Veracious"
 		]
 	},
-	"urlshortener-approved-domains": "Link ke {{PLURAL:$1|domain|domain}} dapat dipersingkat: $2."
+	"urlshortener-approved-domains": "Link ke {{PLURAL:$1|domain|domain}} dapat dipersingkat: $2.",
+	"urlshortener-toolbox": "Lihat URL pendek"
 }
