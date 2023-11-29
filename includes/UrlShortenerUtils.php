@@ -81,12 +81,11 @@ class UrlShortenerUtils {
 		}
 
 		$dbr = self::getReplicaDB();
-		$row = $dbr->selectRow(
-			'urlshortcodes',
-			[ 'usc_id', 'usc_deleted' ],
-			[ 'usc_url_hash' => md5( $url ) ],
-			__METHOD__
-		);
+		$row = $dbr->newSelectQueryBuilder()
+			->select( [ 'usc_id', 'usc_deleted' ] )
+			->from( 'urlshortcodes' )
+			->where( [ 'usc_url_hash' => md5( $url ) ] )
+			->caller( __METHOD__ )->fetchRow();
 		if ( $row !== false ) {
 			if ( $row->usc_deleted ) {
 				return Status::newFatal( 'urlshortener-deleted' );
@@ -97,25 +96,24 @@ class UrlShortenerUtils {
 			] );
 		}
 
-		$rowData = [
-			'usc_url' => $url,
-			'usc_url_hash' => md5( $url )
-		];
 		$dbw = self::getPrimaryDB();
-		$dbw->insert( 'urlshortcodes', $rowData, __METHOD__, [ 'IGNORE' ] );
+		$dbw->newInsertQueryBuilder()
+			->insertInto( 'urlshortcodes' )
+			->ignore()
+			->row( [ 'usc_url' => $url, 'usc_url_hash' => md5( $url ) ] )
+			->caller( __METHOD__ )->execute();
 
 		if ( $dbw->affectedRows() ) {
 			$id = $dbw->insertId();
 		} else {
 			// Raced out; get the winning ID
-			$id = $dbw->selectField(
-				'urlshortcodes',
-				'usc_id',
-				[ 'usc_url_hash' => md5( $url ) ],
-				__METHOD__,
-				 // ignore snapshot
-				[ 'LOCK IN SHARE MODE' ]
-			);
+			$id = $dbw->newSelectQueryBuilder()
+				->select( 'usc_id' )
+				// ignore snapshot
+				->lockInShareMode()
+				->from( 'urlshortcodes' )
+				->where( [ 'usc_url_hash' => md5( $url ) ] )
+				->caller( __METHOD__ )->fetchField();
 		}
 
 		// In case our CDN cached an earlier 404/error, purge it
@@ -197,12 +195,11 @@ class UrlShortenerUtils {
 		}
 
 		$dbr = self::getReplicaDB();
-		$url = $dbr->selectField(
-			'urlshortcodes',
-			'usc_url',
-			[ 'usc_id' => $id, 'usc_deleted' => 0 ],
-			__METHOD__
-		);
+		$url = $dbr->newSelectQueryBuilder()
+			->select( 'usc_url' )
+			->from( 'urlshortcodes' )
+			->where( [ 'usc_id' => $id, 'usc_deleted' => 0 ] )
+			->caller( __METHOD__ )->fetchField();
 
 		if ( $url === false ) {
 			return false;
@@ -224,12 +221,11 @@ class UrlShortenerUtils {
 		}
 
 		$dbr = self::getReplicaDB();
-		$url = $dbr->selectField(
-			'urlshortcodes',
-			'usc_url',
-			[ 'usc_id' => $id, 'usc_deleted' => 1 ],
-			__METHOD__
-		);
+		$url = $dbr->newSelectQueryBuilder()
+			->select( 'usc_url' )
+			->from( 'urlshortcodes' )
+			->where( [ 'usc_id' => $id, 'usc_deleted' => 1 ] )
+			->caller( __METHOD__ )->fetchField();
 
 		return $url !== false;
 	}
@@ -247,12 +243,11 @@ class UrlShortenerUtils {
 		}
 
 		$dbw = self::getPrimaryDB();
-		$dbw->update(
-			'urlshortcodes',
-			[ 'usc_deleted' => 1 ],
-			[ 'usc_id' => $id ],
-			__METHOD__
-		);
+		$dbw->newUpdateQueryBuilder()
+			->update( 'urlshortcodes' )
+			->set( [ 'usc_deleted' => 1 ] )
+			->where( [ 'usc_id' => $id ] )
+			->caller( __METHOD__ )->execute();
 
 		self::purgeCdnId( $id );
 
@@ -272,12 +267,11 @@ class UrlShortenerUtils {
 		}
 
 		$dbw = self::getPrimaryDB();
-		$dbw->update(
-			'urlshortcodes',
-			[ 'usc_deleted' => 0 ],
-			[ 'usc_id' => $id ],
-			__METHOD__
-		);
+		$dbw->newUpdateQueryBuilder()
+			->update( 'urlshortcodes' )
+			->set( [ 'usc_deleted' => 0 ] )
+			->where( [ 'usc_id' => $id ] )
+			->caller( __METHOD__ )->execute();
 
 		self::purgeCdnId( $id );
 
