@@ -6,5 +6,7 @@
 	},
 	"urlshortener": "مقصر الليانات",
 	"urlshortener-approved-domains": "الليانات يقدرو يتقصّرو ل هاد {{PLURAL:$1|الضومين|الضومينات}}: $2.",
-	"urlshortener-form-header": "دير الليان الطويل هنا"
+	"urlshortener-deleted": "هاد الليان لقصير تحيّد.",
+	"urlshortener-form-header": "دير الليان الطويل هنا",
+	"urlshortener-shortened-url-label": "الليان لقصير"
 }
