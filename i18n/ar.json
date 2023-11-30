@@ -3,6 +3,7 @@
 		"authors": [
 			"Ayatun",
 			"Ideophagous",
+			"Karim185.3",
 			"Meno25",
 			"ديفيد",
 			"علاء"
@@ -19,7 +20,7 @@
 	"urlshortener-blocked": "لا يمكن للمستخدمين الممنوعين إنشاء مسارات قصيرة.",
 	"urlshortener-copy-fail": "فشل نسخ المسار إلى الحافظة.",
 	"urlshortener-copy-success": "تم نسخ المسار إلى الحافظة.",
-	"urlshortener-deleted": "تم حذف القصير هذا المسار المختصر.",
+	"urlshortener-deleted": "حُذِف هذا المسار القصير.",
 	"urlshortener-desc": "أداة تقصير مسار للمسارات العشوائية",
 	"urlshortener-disabled": "إحداث وصلات قصيرة جديدة معطل مؤقتا.",
 	"urlshortener-enter-short-code-delete": "المسارات المختصر المراد حذفه",
