@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Extension\UrlShortener\UrlShortenerUtils;
+use Wikimedia\Rdbms\SelectQueryBuilder;
 
 $IP = getenv( 'MW_INSTALL_PATH' );
 if ( $IP === false ) {
@@ -34,13 +35,13 @@ class DumpURLs extends Maintenance {
 		$id = 0;
 		do {
 			$text = '';
-			$rows = $dbr->select(
-				'urlshortcodes',
-				[ 'usc_url', 'usc_id' ],
-				[ 'usc_id > ' . $dbr->addQuotes( $id ), 'usc_deleted' => 0 ],
-				__METHOD__,
-				[ 'LIMIT' => $this->mBatchSize, 'ORDER BY' => 'usc_id ASC' ]
-			);
+			$rows = $dbr->newSelectQueryBuilder()
+				->select( [ 'usc_url', 'usc_id' ] )
+				->from( 'urlshortcodes' )
+				->where( [ $dbr->expr( 'usc_id', '>', $id ), 'usc_deleted' => 0 ] )
+				->orderBy( 'usc_id', SelectQueryBuilder::SORT_ASC )
+				->limit( $this->mBatchSize )
+				->caller( __METHOD__ )->fetchResultSet();
 			foreach ( $rows as $row ) {
 				$shortCode = UrlShortenerUtils::encodeId( $row->usc_id );
 				$url = UrlShortenerUtils::convertToProtocol( $row->usc_url, PROTO_CANONICAL );
