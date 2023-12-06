@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Balyozxane"
+		]
+	},
+	"urlshortener-copy-success": "URL hat kopîkirin.",
+	"urlshortener-shortened-url-alt": "Herwiha dikarî vê URLya alternatîv bi kar bînî:",
+	"urlshortener-shortened-url-label": "URLya kurt",
+	"urlshortener-toolbox": "URLya kurt çêke",
+	"urlshortener-url-input-submitting": "Tê kurtkirin..."
+}

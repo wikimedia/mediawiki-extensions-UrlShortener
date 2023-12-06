@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eleassar"
+			"Eleassar",
+			"Upwinxp"
 		]
 	},
 	"action-urlshortener-create-url": "ustvarjati kratkih URL-jev",
@@ -50,7 +51,7 @@
 	"urlshortener-badaccessgroups": "Nimate pravice ustvarjati kratkih URL-jev",
 	"log-name-urlshortener": "Dnevnik upravljanja kratkih URL-jev",
 	"log-description-urlshortener": "Ta dnevnik prikazuje brisanje in obnavljanje kratkih URL-jev. Ne prikazuje ustvarjanja novih.",
-	"logentry-urlshortener-delete": "$1 je {{GENDER:$2|izbrisal|izbrisala|izbrisal_a}} kratki URL »$4«",
+	"logentry-urlshortener-delete": "$1 je {{GENDER:$2|izbrisal|izbrisala|izbrisal/a}} kratki URL »$4«",
 	"logentry-urlshortener-restore": "$1 je {{GENDER:$2|obnovil|obnovila|obnovil_a}} kratki URL »$4«",
 	"logeventslist-urlshortener-log": "Dnevnik upravljanja kratkih URL-jev",
 	"log-action-filter-urlshortener": "Vrsta upravljanja",

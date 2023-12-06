@@ -1,10 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"McDutchie"
 		]
 	},
 	"apihelp-shortenurl-summary": "Verkort een lange URL in een kortere.",
 	"apihelp-shortenurl-param-url": "URL om te verkorten.",
-	"apierror-urlshortener-disabled": "Geen nieuwe korte urls mogen worden aangemaakt"
+	"apihelp-shortenurl-param-qrcode": "Een QR-code opvragen. De gekoppelde URL wordt alleen ingekort als deze erg lang is.",
+	"apihelp-shortenurl-example-1": "Vraag de korte URL op voor <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "Vraag een QR-code op voor <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Er mogen geen nieuwe korte URL’s worden aangemaakt",
+	"apierror-urlshortener-permissiondenied": "U hebt geen toestemming om korte URL’s te maken"
 }
