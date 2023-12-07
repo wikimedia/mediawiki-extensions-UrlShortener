@@ -5,7 +5,8 @@
 			"Ideophagous",
 			"Meno25",
 			"ديفيد",
-			"علاء"
+			"علاء",
+			"Karim185.3"
 		]
 	},
 	"action-urlshortener-create-url": "إنشاء مسارات قصيرة",
@@ -19,7 +20,7 @@
 	"urlshortener-blocked": "لا يمكن للمستخدمين الممنوعين إنشاء مسارات قصيرة.",
 	"urlshortener-copy-fail": "فشل نسخ المسار إلى الحافظة.",
 	"urlshortener-copy-success": "تم نسخ المسار إلى الحافظة.",
-	"urlshortener-deleted": "تم حذف القصير هذا المسار المختصر.",
+	"urlshortener-deleted": "حُذِف هذا المسار القصير.",
 	"urlshortener-desc": "أداة تقصير مسار للمسارات العشوائية",
 	"urlshortener-disabled": "إحداث وصلات قصيرة جديدة معطل مؤقتا.",
 	"urlshortener-enter-short-code-delete": "المسارات المختصر المراد حذفه",
