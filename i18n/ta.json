@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Balajijagadesh"
+			"Balajijagadesh",
+			"Fahimrazick"
 		]
 	},
 	"action-urlshortener-create-url": "குறுகிய உரலிகளை உருவாக்குக",
@@ -17,7 +18,7 @@
 	"urlshortener-form-header": "தங்களுடைய நீண்ட உரலியை இங்கு ஒட்டவும்",
 	"urlshortener-not-found-title": "குறுகிய உரலி காணப்பட வில்லை",
 	"urlshortener-shortened-url-label": "குறுக்கப்பட்ட உரலி",
-	"urlshortener-toolbox": "குறுக்கப்பட்ட உரலியைப் பெறுக",
+	"urlshortener-toolbox": "குறுகிய உரலியைப் பெறு",
 	"urlshortener-url-input-label": "உரலி",
 	"urlshortener-url-input-submit": "குறுக்கு",
 	"urlshortener-url-input-submitting": "குறுக்கப்படுகிறது..."
