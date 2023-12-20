@@ -7,6 +7,7 @@
 			"Kareyac",
 			"Novichev",
 			"Okras",
+			"Putnik",
 			"Vlad5250"
 		]
 	},
@@ -39,7 +40,7 @@
 	"urlshortener-ratelimit": "Пожалуйста, подождите некоторое время, прежде чем продолжить сокращать URL-адреса.",
 	"urlshortener-shortened-url-alt": "Вы также можете использовать альтернативный URL:",
 	"urlshortener-shortened-url-label": "Сокращённый URL-адрес",
-	"urlshortener-toolbox": "Получить сокращённый URL-адрес",
+	"urlshortener-toolbox": "Получить короткий URL",
 	"urlshortener-toolbox-qrcode": "Скачать QR-код",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Сократить",
