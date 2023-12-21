@@ -2,9 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Mirws",
+			"Stevannus rua",
 			"Veracious"
 		]
 	},
-	"urlshortener-approved-domains": "Link ke {{PLURAL:$1|domain|domain}} dapat dipersingkat: $2.",
-	"urlshortener-toolbox": "Lihat URL pendek"
+	"action-urlshortener-create-url": "membuat URL pendek",
+	"right-urlshortener-create-url": "Buat URL pendek",
+	"urlshortener-approved-domains": "Pranala ke {{PLURAL:$1|domain|domain}} dapat dipersingkat: $2.",
+	"urlshortener-toolbox": "Lihat URL pendek",
+	"urlshortener-toolbox-qrcode": "Unduh kode QR",
+	"urlshortener-url-input-label": "URL"
 }
