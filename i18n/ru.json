@@ -5,7 +5,10 @@
 			"Diman Russkov",
 			"Facenapalm",
 			"Okras",
-			"Vlad5250"
+			"Vlad5250",
+			"Kareyac",
+			"Novichev",
+			"Putnik"
 		]
 	},
 	"action-urlshortener-create-url": "создание коротких URL-адресов",
@@ -36,7 +39,7 @@
 	"urlshortener-not-found-title": "Короткий URL не найден",
 	"urlshortener-ratelimit": "Пожалуйста, подождите некоторое время, прежде чем продолжить сокращать URL-адреса.",
 	"urlshortener-shortened-url-label": "Сокращённый URL-адрес",
-	"urlshortener-toolbox": "Получить сокращённый URL-адрес",
+	"urlshortener-toolbox": "Получить короткий URL",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Сократить",
 	"urlshortener-url-input-submitting": "Сокращение…",

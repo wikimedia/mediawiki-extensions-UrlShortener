@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"আফতাবুজ্জামান",
-			"খাত্তাব হাসান"
+			"খাত্তাব হাসান",
+			"Aishik Rehman"
 		]
 	},
 	"action-urlshortener-create-url": "সংক্ষিপ্ত ইউআরএল তৈরি করার",
@@ -36,7 +37,7 @@
 	"urlshortener-manage-reason": "কারণ",
 	"urlshortener-not-found-message": "দুঃখিত, আপনি যে ইউআরএলটি খুঁজছেন তা পাওয়া যায় নি।",
 	"urlshortener-not-found-title": "সংক্ষিপ্ত ইউআরএল পাওয়া যায়নি",
-	"urlshortener-ratelimit": "আরো ইউআরএল সংক্ষিপ্ত করার আগে কিছু সময় অপেক্ষা করুন।",
+	"urlshortener-ratelimit": "আরও ইউআরএল সংক্ষিপ্ত করার আগে কিছু সময় অপেক্ষা করুন।",
 	"urlshortener-short-code-is-not-deleted": "ইউআরএল সংক্ষিপ্ত কোড অপসারিত হয়নি",
 	"urlshortener-short-code-not-found": "ইউআরএল সংক্ষিপ্ত কোড পাওয়া যায়নি বা অপসারিত হয়েছে",
 	"urlshortener-shortened-url-label": "ইউআরএল সংক্ষিপ্ত করা হয়েছে",

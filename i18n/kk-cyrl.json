@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Casserium"
+		]
+	},
+	"urlshortener": "URL қысқартқыш",
+	"urlshortener-approved-domains": "Қысқартуға болатын домендерге сілтеме: $2.",
+	"urlshortener-form-header": "URL ұзақ болса, осында жазыңыз",
+	"urlshortener-shortened-url-label": "Қысқартылған URL",
+	"urlshortener-toolbox": "URL мекенжайын қысқарту",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Қысқарту",
+	"urlshortener-url-input-submitting": "Қысқартылуда...",
+	"urlshortener-url-too-long": "URL тым ұзақ, максималды өлшемі $1 таңбадан аспауы қажет",
+	"urlshortener-badaccessgroups": "Қысқартылған URL жасауға құқығыңыз жоқ",
+	"log-name-urlshortener": "Қысқартылған URL басқару журналы"
+}
