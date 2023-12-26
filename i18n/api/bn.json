@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"আফতাবুজ্জামান"
+			"আফতাবুজ্জামান",
+			"Aishik Rehman"
 		]
 	},
 	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://bn.wikipedia.org/wiki/বাংলাদেশ</nowiki></kbd> পাতার জন্য সংক্ষিপ্ত ইউআরএল পান।",
-	"apierror-urlshortener-disabled": "কোন নতুন ছোট ইউআরএল তৈরি করা না যেতে পারে"
+	"apierror-urlshortener-disabled": "কোনো নতুন ছোট ইউআরএল তৈরি করা না যেতে পারে"
 }
