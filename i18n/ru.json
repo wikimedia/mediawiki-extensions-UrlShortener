@@ -7,7 +7,8 @@
 			"Kareyac",
 			"Novichev",
 			"Okras",
-			"Vlad5250"
+			"Vlad5250",
+			"Putnik"
 		]
 	},
 	"action-urlshortener-create-url": "создание коротких URL-адресов",
@@ -39,7 +40,7 @@
 	"urlshortener-ratelimit": "Пожалуйста, подождите некоторое время, прежде чем продолжить сокращать URL-адреса.",
 	"urlshortener-shortened-url-alt": "Вы также можете использовать альтернативный URL:",
 	"urlshortener-shortened-url-label": "Сокращённый URL-адрес",
-	"urlshortener-toolbox": "Получить сокращённый URL-адрес",
+	"urlshortener-toolbox": "Получить короткий URL",
 	"urlshortener-toolbox-qrcode": "Скачать QR-код",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Сократить",
