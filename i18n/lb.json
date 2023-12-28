@@ -2,22 +2,40 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
+	"action-urlshortener-create-url": "Kuerz-URLen uleeën",
+	"right-urlshortener-create-url": "Kuerz-URLen uleeën",
+	"action-urlshortener-manage-url": "Kuerz-URLen geréieren",
 	"grant-shortenurls": "Kuerz-URLen uleeën",
+	"right-urlshortener-view-log": "Log vun der Gestioun vu kuerzen URLe weisen",
+	"urlshortener": "URL Verkiezer",
 	"urlshortener-approved-domains": "Linken op {{PLURAL:$1|dësen Domain|dës Domaine}} kënne gekierzt ginn: $2.",
 	"urlshortener-deleted": "Dës kuerz URL gouf geläscht!",
 	"urlshortener-error-malformed-url": "Keng valabel URL",
 	"urlshortener-failed-try-again": "Huet net fonctionnéiert. Nach eng Kéier probéieren?",
+	"urlshortener-form-header": "Setzt Är laang URL heihin",
 	"urlshortener-manage-reason": "Grond",
+	"urlshortener-not-found-message": "Pardon, d'URL no där Dir sicht gouf net fonnt.",
 	"urlshortener-not-found-title": "Kuerz URL gouf net fonnt",
 	"urlshortener-ratelimit": "Waart wgl. e bësse ier Dir méi URLe kierzt.",
+	"urlshortener-short-code-is-not-deleted": "URL Kuerzcode ass net geläscht",
+	"urlshortener-short-code-not-found": "URL Kuerzcode gouf net fonnt oder geläscht",
+	"urlshortener-shortened-url-alt": "Dir kënnt och dës alternativ URL benotzen:",
 	"urlshortener-shortened-url-label": "Gekierzt URL",
 	"urlshortener-toolbox": "Gekierzt URL kréien",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Kierzen",
 	"urlshortener-url-input-submitting": "Kierzen...",
+	"urlshortener-url-too-long": "D'URL ass ze laang, d'maximal Gréisst ass {{PLURAL:$1|een Zeechen|$1 Zeechen}}",
+	"urlshortener-badaccessgroups": "Dir hutt net d'Recht kuerz URLen ze kreéieren",
+	"log-name-urlshortener": "Log vun der Gestioun vu kuerzen URLen",
+	"logentry-urlshortener-delete": "$1 huet déi kuerz URL \"$4\" {{GENDER:$2|geläscht}}",
+	"logentry-urlshortener-restore": "$1 huet déi kuerz URL \"$4\" {{GENDER:$2| restauréiert}}",
+	"logeventslist-urlshortener-log": "Log vun der Gestioun vu kuerzen URLen",
+	"log-action-filter-urlshortener": "Typ vu Gestioun",
 	"log-action-filter-urlshortener-delete": "URL Läschen",
 	"log-action-filter-urlshortener-restore": "URL Restauratioun"
 }
