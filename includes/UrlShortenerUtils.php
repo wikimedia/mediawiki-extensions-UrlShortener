@@ -371,13 +371,13 @@ class UrlShortenerUtils {
 	public static function getPrimaryDB(): IDatabase {
 		return MediaWikiServices::getInstance()
 			->getDBLoadBalancerFactory()
-			->getPrimaryDatabase( 'urlshortener' );
+			->getPrimaryDatabase( 'virtual-urlshortener' );
 	}
 
 	public static function getReplicaDB(): IReadableDatabase {
 		return MediaWikiServices::getInstance()
 			->getDBLoadBalancerFactory()
-			->getReplicaDatabase( 'urlshortener' );
+			->getReplicaDatabase( 'virtual-urlshortener' );
 	}
 
 	/**

@@ -31,12 +31,12 @@ If set to false (default), it will use $wgServer.
 
 Set this to the name of a database if you wish to use one central database for your wiki farm.
 <source lang="php">
-$wgVirtualDomainsMapping['urlshortener'] = [ 'db' => 'wikishared' ];
+$wgVirtualDomainsMapping['virtual-urlshortener'] = [ 'db' => 'wikishared' ];
 </source>
 
 If the database is on an external cluster, you will also need to configure that.
 <source lang="php">
-$wgVirtualDomainsMapping['urlshortener'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
+$wgVirtualDomainsMapping['virtual-urlshortener'] = [ 'cluster' => 'extension1', 'db' => 'wikishared' ];
 </source>
 
 === Allow arbitrary ports ===
