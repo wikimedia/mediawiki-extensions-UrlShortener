@@ -21,26 +21,25 @@ class SchemaHooks implements LoadExtensionSchemaUpdatesHook {
 		$dbType = $updater->getDB()->getType();
 
 		if ( $dbType === 'mysql' ) {
-			$updater->addExtensionTable(
-				'urlshortcodes',
-				$dir . '/schemas/tables-generated.sql'
+			$updater->addExtensionUpdateOnVirtualDomain(
+				[ 'urlshortener', 'addTable', 'urlshortcodes', $dir . '/schemas/tables-generated.sql', true ]
 			);
 		} elseif ( $dbType === 'sqlite' ) {
-			$updater->addExtensionTable(
-				'urlshortcodes',
-				$dir . '/schemas/sqlite/tables-generated.sql'
+			$updater->addExtensionUpdateOnVirtualDomain(
+				[ 'urlshortener', 'addTable', 'urlshortcodes', $dir . '/schemas/sqlite/tables-generated.sql', true ]
 			);
 		} elseif ( $dbType === 'postgres' ) {
-			$updater->addExtensionTable(
-				'urlshortcodes',
-				$dir . '/schemas/postgres/tables-generated.sql'
+			$updater->addExtensionUpdateOnVirtualDomain(
+				[ 'urlshortener', 'addTable', 'urlshortcodes', $dir . '/schemas/postgres/tables-generated.sql', true ]
 			);
 		}
 
-		$updater->addExtensionField(
+		$updater->addExtensionUpdateOnVirtualDomain( [
+			'urlshortener',
+			'addField',
 			'urlshortcodes',
 			'usc_deleted',
-			$dir . "/schemas/patch-usc_deleted.sql"
-		);
+			$dir . '/schemas/patch-usc_deleted.sql',
+			true ] );
 	}
 }
