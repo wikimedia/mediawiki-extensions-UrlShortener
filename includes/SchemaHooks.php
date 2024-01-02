@@ -20,19 +20,9 @@ class SchemaHooks implements LoadExtensionSchemaUpdatesHook {
 		$dir = dirname( __DIR__ );
 		$dbType = $updater->getDB()->getType();
 
-		if ( $dbType === 'mysql' ) {
-			$updater->addExtensionUpdateOnVirtualDomain(
-				[ 'urlshortener', 'addTable', 'urlshortcodes', $dir . '/schemas/tables-generated.sql', true ]
-			);
-		} elseif ( $dbType === 'sqlite' ) {
-			$updater->addExtensionUpdateOnVirtualDomain(
-				[ 'urlshortener', 'addTable', 'urlshortcodes', $dir . '/schemas/sqlite/tables-generated.sql', true ]
-			);
-		} elseif ( $dbType === 'postgres' ) {
-			$updater->addExtensionUpdateOnVirtualDomain(
-				[ 'urlshortener', 'addTable', 'urlshortcodes', $dir . '/schemas/postgres/tables-generated.sql', true ]
-			);
-		}
+		$updater->addExtensionUpdateOnVirtualDomain(
+			[ 'urlshortener', 'addTable', 'urlshortcodes', "$dir/schemas/$dbType/tables-generated.sql", true ]
+		);
 
 		$updater->addExtensionUpdateOnVirtualDomain( [
 			'urlshortener',
