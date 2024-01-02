@@ -16,7 +16,7 @@ use ApiMain;
 use ApiUsageException;
 use Liuggio\StatsdClient\Factory\StatsdDataFactoryInterface;
 use MediaWiki\MediaWikiServices;
-use Status;
+use MediaWiki\Status\Status;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class ApiShortenUrl extends ApiBase {

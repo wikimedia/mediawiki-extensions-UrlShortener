@@ -11,18 +11,18 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use ConfigException;
+use MediaWiki\Config\ConfigException;
 use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\SidebarBeforeOutputHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Hook\WebRequestPathInfoRouterHook;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\PathRouter;
+use MediaWiki\SpecialPage\SpecialPage;
 use MobileContext;
-use OutputPage;
 use Skin;
 use SkinTemplate;
-use SpecialPage;
 
 class Hooks implements
 	WebRequestPathInfoRouterHook,

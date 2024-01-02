@@ -11,15 +11,15 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use FormSpecialPage;
 use HTMLForm;
+use MediaWiki\SpecialPage\FormSpecialPage;
+use MediaWiki\Status\Status;
 use Message;
 use OOUI\FieldLayout;
 use OOUI\HtmlSnippet;
 use OOUI\Tag;
 use OOUI\TextInputWidget;
 use PermissionsError;
-use Status;
 
 class SpecialUrlShortener extends FormSpecialPage {
 

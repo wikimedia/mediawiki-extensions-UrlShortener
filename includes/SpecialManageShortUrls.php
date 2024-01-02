@@ -11,9 +11,9 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use FormSpecialPage;
 use ManualLogEntry;
-use User;
+use MediaWiki\SpecialPage\FormSpecialPage;
+use MediaWiki\User\User;
 
 class SpecialManageShortUrls extends FormSpecialPage {
 

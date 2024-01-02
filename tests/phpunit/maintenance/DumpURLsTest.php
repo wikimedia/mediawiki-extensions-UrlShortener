@@ -2,6 +2,7 @@
 
 use MediaWiki\Extension\UrlShortener\UrlShortenerUtils;
 use MediaWiki\Tests\Maintenance\MaintenanceBaseTestCase;
+use MediaWiki\User\User;
 
 /**
  * @covers DumpURLs

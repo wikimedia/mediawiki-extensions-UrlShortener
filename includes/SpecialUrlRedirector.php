@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use SpecialPage;
-use UnlistedSpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\SpecialPage\UnlistedSpecialPage;
 
 class SpecialUrlRedirector extends UnlistedSpecialPage {
 

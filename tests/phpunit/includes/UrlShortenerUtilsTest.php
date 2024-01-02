@@ -2,6 +2,7 @@
 
 use MediaWiki\Block\AbstractBlock;
 use MediaWiki\Extension\UrlShortener\UrlShortenerUtils;
+use MediaWiki\User\User;
 
 /**
  * @group Database

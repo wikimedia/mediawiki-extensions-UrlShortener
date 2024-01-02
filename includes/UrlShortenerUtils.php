@@ -11,17 +11,17 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use CdnCacheUpdate;
-use DeferredUpdates;
 use Endroid\QrCode\Builder\Builder;
 use Endroid\QrCode\Encoding\Encoding;
 use Endroid\QrCode\Writer\Result\ResultInterface;
 use Endroid\QrCode\Writer\SvgWriter;
+use MediaWiki\Deferred\CdnCacheUpdate;
+use MediaWiki\Deferred\DeferredUpdates;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\Status\Status;
+use MediaWiki\User\User;
 use Message;
-use SpecialPage;
-use Status;
-use User;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\IReadableDatabase;
 
