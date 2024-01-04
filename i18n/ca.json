@@ -3,17 +3,18 @@
 		"authors": [
 			"Fitoschido",
 			"Paucabot",
-			"Xavier Dengra"
+			"Xavier Dengra",
+			"SMP"
 		]
 	},
-	"action-urlshortener-create-url": "Creau adreces URL abreujades",
-	"right-urlshortener-create-url": "Crea adreces URL abreujades",
-	"action-urlshortener-manage-url": "Gestiona adreces URL abreujades",
-	"action-urlshortener-view-log": "Mostra el registre d'adreces URL abreujades",
+	"action-urlshortener-create-url": "crear adreces URL abreujades",
+	"right-urlshortener-create-url": "Crear adreces URL abreujades",
+	"action-urlshortener-manage-url": "gestionar adreces URL abreujades",
+	"action-urlshortener-view-log": "veure el registre d'adreces URL abreujades",
 	"manageshorturls": "Gestiona adreces URL abreujades",
-	"right-urlshortener-manage-url": "Gestiona les adreces URL abreujades",
+	"right-urlshortener-manage-url": "Gestionar les adreces URL abreujades",
 	"grant-shortenurls": "Crea adreces URL abreujades",
-	"right-urlshortener-view-log": "Mostra el registre d'adreces URL abreujades",
+	"right-urlshortener-view-log": "Veure el registre d'adreces URL abreujades",
 	"urlshortener": "Abreujador d'adreces URL dels projectes Wikimedia",
 	"urlshortener-action-done": "S'han suprimit o restaurat adreces URL",
 	"urlshortener-approved-domains": "Els enllaços cap {{PLURAL:$1|al domini|als dominis}} seran abreujats: $2.",

@@ -11,7 +11,7 @@
 	"action-urlshortener-manage-url": "Kuerz-URLen geréieren",
 	"grant-shortenurls": "Kuerz-URLen uleeën",
 	"right-urlshortener-view-log": "Log vun der Gestioun vu kuerzen URLe weisen",
-	"urlshortener": "URL Verkiezer",
+	"urlshortener": "URL-Verkierzer",
 	"urlshortener-approved-domains": "Linken op {{PLURAL:$1|dësen Domain|dës Domaine}} kënne gekierzt ginn: $2.",
 	"urlshortener-deleted": "Dës kuerz URL gouf geläscht!",
 	"urlshortener-error-malformed-url": "Keng valabel URL",
