@@ -226,7 +226,7 @@
 		"urlshortener": "GlobalVarConfig::newInstance"
 	},
 	"DatabaseVirtualDomains": [
-		"urlshortener"
+		"virtual-urlshortener"
 	],
 	"load_composer_autoloader": true,
 	"manifest_version": 2

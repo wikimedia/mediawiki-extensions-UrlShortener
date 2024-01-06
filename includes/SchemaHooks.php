@@ -21,11 +21,11 @@ class SchemaHooks implements LoadExtensionSchemaUpdatesHook {
 		$dbType = $updater->getDB()->getType();
 
 		$updater->addExtensionUpdateOnVirtualDomain(
-			[ 'urlshortener', 'addTable', 'urlshortcodes', "$dir/schemas/$dbType/tables-generated.sql", true ]
+			[ 'virtual-urlshortener', 'addTable', 'urlshortcodes', "$dir/schemas/$dbType/tables-generated.sql", true ]
 		);
 
 		$updater->addExtensionUpdateOnVirtualDomain( [
-			'urlshortener',
+			'virtual-urlshortener',
 			'addField',
 			'urlshortcodes',
 			'usc_deleted',
