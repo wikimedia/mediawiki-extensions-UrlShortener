@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"NGC 54"
+		]
+	},
+	"apihelp-shortenurl-summary": "Scurtează un URL lung într-unul mai scurt.",
+	"apihelp-shortenurl-param-url": "URL-ul care să fie scurtat.",
+	"apihelp-shortenurl-param-qrcode": "Obțineți un cod QR. URL-ul corelat va fi scurtat numai dacă este foarte lung.",
+	"apihelp-shortenurl-example-1": "Obțineți URL-ul scurt pentru <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "Obțineți un cod QR pentru <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Nu pot fi create noi URL-uri scurte",
+	"apierror-urlshortener-permissiondenied": "Nu aveți dreptul de a crea URL-uri scurte"
+}
