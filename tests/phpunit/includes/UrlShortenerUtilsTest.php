@@ -10,11 +10,6 @@ use MediaWiki\User\User;
  */
 class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
-	protected function setUp(): void {
-		parent::setUp();
-		$this->tablesUsed[] = 'urlshortcodes';
-	}
-
 	/**
 	 * @dataProvider provideCartesianProduct
 	 * @covers ::cartesianProduct

@@ -9,7 +9,6 @@ class ApiShortenUrlTest extends ApiTestCase {
 
 	protected function setUp(): void {
 		parent::setUp();
-		$this->tablesUsed = array_merge( $this->tablesUsed, [ 'urlshortcodes' ] );
 
 		$this->overrideConfigValues( [
 			'UrlShortenerEnableQrCode' => true,
