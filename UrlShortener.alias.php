@@ -56,6 +56,13 @@ $specialPageAliases['mk'] = [
 	'UrlShortener' => [ 'СкратувачНаURL' ],
 ];
 
+/** Polish (polski) */
+$specialPageAliases['pl'] = [
+	'UrlShortener' => [ 'Skróć_adres_URL', 'Skróć_URL' ],
+	'ManageShortUrls' => [ 'Zarządzaj_krótkimi_adresami_URL' ],
+	'QrCode' => [ 'Kod_QR' ],
+];
+
 /** Serbian (Cyrillic script) (српски (ћирилица)) */
 $specialPageAliases['sr-ec'] = [
 	'UrlShortener' => [ 'Скраћивач_адреса', 'Скраћивач_URL_адреса' ],
