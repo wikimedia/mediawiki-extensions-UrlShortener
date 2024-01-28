@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eulalio",
 			"Fitoschido",
 			"Kroji",
 			"Macofe",
@@ -17,6 +18,7 @@
 	"grant-shortenurls": "Crear URL cortos",
 	"right-urlshortener-view-log": "Ver el registro de administración de URL cortas",
 	"urlshortener": "Acortador de URL",
+	"qrcode": "Generador de códigos QR",
 	"urlshortener-approved-domains": "Los enlaces {{PLURAL:$1|al siguiente dominio|a los siguientes dominios}} pueden acortarse: $2.",
 	"urlshortener-blocked": "Los usuarios bloqueados no pueden crear URL cortos.",
 	"urlshortener-copy-fail": "No se pudo copiar la URL al portapapeles.",
@@ -36,6 +38,7 @@
 	"urlshortener-manage-reason": "Motivo",
 	"urlshortener-not-found-message": "No se encuentra el URL que has solicitado.",
 	"urlshortener-not-found-title": "No se encontró el URL corto",
+	"urlshortener-qrcode-form-submit": "Enviar",
 	"urlshortener-ratelimit": "Espera un poco antes de acortar más URL.",
 	"urlshortener-shortened-url-alt": "También se puede utilizar este URL alternativo:",
 	"urlshortener-shortened-url-label": "URL acortado",

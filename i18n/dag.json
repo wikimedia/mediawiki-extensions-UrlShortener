@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Alhassan Peter"
+			"Alhassan Peter",
+			"Kalakpagh"
 		]
 	},
+	"urlshortener-qrcode-form-submit": "Saɣi",
 	"urlshortener-toolbox": "Bɔmi URL ŋmaa"
 }

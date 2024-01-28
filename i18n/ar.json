@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ahmed Alyamoor",
 			"Ayatun",
 			"Ideophagous",
 			"Karim185.3",
@@ -15,6 +16,7 @@
 	"manageshorturls": "إدارة المسارات المختصرة",
 	"right-urlshortener-manage-url": "إدارة المسارات المختصرة",
 	"urlshortener": "مقصر المسار",
+	"qrcode": "مولد رموز ال QR",
 	"urlshortener-action-done": "تم حذف و/أو استعادة المسارات",
 	"urlshortener-approved-domains": "قد يتم اختصار الروابط إلى {{PLURAL:$1|النطاق التالي|النطاقات التالية}}: $2.",
 	"urlshortener-blocked": "لا يمكن للمستخدمين الممنوعين إنشاء مسارات قصيرة.",
@@ -36,6 +38,8 @@
 	"urlshortener-manage-restore-failed": "فشلت استعادة المسار",
 	"urlshortener-not-found-message": "عذرا، لم يتم العثور على المسار الذي تبحث عنه.",
 	"urlshortener-not-found-title": "لم يتم العثور على مسار قصير",
+	"urlshortener-qrcode-url-label": "المسار:",
+	"urlshortener-qrcode-form-submit": "إرسال",
 	"urlshortener-ratelimit": "الرجاء الانتظار بعض الوقت قبل تقصير المزيد من المسارات.",
 	"urlshortener-short-code-is-not-deleted": "لم يتم حذف رمز مسار مختصر",
 	"urlshortener-short-code-not-found": "لم يتم العثور على أو حذف رمز مسار مختصر",
