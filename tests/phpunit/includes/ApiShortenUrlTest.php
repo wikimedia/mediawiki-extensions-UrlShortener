@@ -14,6 +14,7 @@ class ApiShortenUrlTest extends ApiTestCase {
 			'UrlShortenerEnableQrCode' => true,
 			'UrlShortenerAllowedDomains' => [ '(.*\.)?example\.org' ],
 			'UrlShortenerApprovedDomains' => [ '*.example.org' ],
+			'UrlShortenerTemplate' => false
 		] );
 	}
 

@@ -551,23 +551,24 @@ class UrlShortenerUtils {
 	 * @return Status Status with 'qrcode' (XML of the SVG) and if applicable, the shortened 'url' and 'alt'.
 	 */
 	public static function getQrCode( string $url, int $limit, User $user, bool $dataUri = false ): Status {
-		$shortUrl = null;
-		$shortUrlAlt = null;
+		$shortUrlCode = null;
+		$shortUrlCodeAlt = null;
 		if ( self::shouldShortenUrl( true, $url, $limit ) ) {
 			$status = self::maybeCreateShortCode( $url, $user );
 			if ( !$status->isOK() ) {
 				return $status;
 			}
-			$shortUrl = $status->getValue()['url'];
-			$shortUrlAlt = $status->getValue()['alt'];
+			$shortUrlCode = $status->getValue()['url'];
+			$shortUrlCodeAlt = $status->getValue()['alt'];
+			$url = self::makeUrl( $shortUrlCode );
 		}
-		$qrCode = self::getQrCodeInternal( $shortUrl ?: $url );
+		$qrCode = self::getQrCodeInternal( $url );
 		$res = [
 			'qrcode' => $dataUri ? $qrCode->getDataUri() : $qrCode->getString(),
 		];
-		if ( $shortUrl ) {
-			$res['url'] = $shortUrl;
-			$res['alt'] = $shortUrlAlt;
+		if ( $shortUrlCode ) {
+			$res['url'] = $shortUrlCode;
+			$res['alt'] = $shortUrlCodeAlt;
 		}
 		return Status::newGood( $res );
 	}
