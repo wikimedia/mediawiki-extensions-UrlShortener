@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"1233qwer1234qwer4",
+			"Butko",
 			"Diman Russkov",
 			"Facenapalm",
 			"Kareyac",
@@ -37,6 +38,7 @@
 	"urlshortener-manage-reason": "Причина",
 	"urlshortener-not-found-message": "К сожалению, адрес, который вы ищете, не найден.",
 	"urlshortener-not-found-title": "Короткий URL не найден",
+	"urlshortener-qrcode-url-label": "URL:",
 	"urlshortener-ratelimit": "Пожалуйста, подождите некоторое время, прежде чем продолжить сокращать URL-адреса.",
 	"urlshortener-shortened-url-alt": "Вы также можете использовать альтернативный URL:",
 	"urlshortener-shortened-url-label": "Сокращённый URL-адрес",
