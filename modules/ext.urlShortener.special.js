@@ -151,7 +151,7 @@ class UrlShortener {
 					this.shortened.$element.remove();
 					this.shortened = null;
 				}
-				// qrCodeUiHanlder() should only be called for Special:QrCode,
+				// qrCodeUiHandler() should only be called for Special:QrCode,
 				// (but in that case result.qrcode shouldn't be present, anyway)
 				if ( this.isQrCode ) {
 					this.qrCodeUiHandler( result.qrcode );
