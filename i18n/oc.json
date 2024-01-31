@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nicolas Eynaud"
+			"Nicolas Eynaud",
+			"Lhanars"
 		]
 	},
-	"urlshortener-toolbox": "Obtenir una URL acorchida"
+	"urlshortener-toolbox": "Obténer una URL acorchida"
 }
