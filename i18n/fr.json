@@ -23,7 +23,7 @@
 	"grant-shortenurls": "Créer des URL courtes",
 	"right-urlshortener-view-log": "Afficher le journal de gestion des URL courtes",
 	"urlshortener": "Raccourcisseur d’URL",
-	"qrcode": "Générateur de QRCode",
+	"qrcode": "Générateur de code QR",
 	"urlshortener-action-done": "Les URL ont été supprimées et/ou restaurées",
 	"urlshortener-approved-domains": "Les liens vers {{PLURAL:$1|le domaine suivant|les domaines suivants}} peuvent être raccourcis : $2.",
 	"urlshortener-blocked": "Les utilisateurs bloqués ne peuvent pas faire d’URL courtes.",
