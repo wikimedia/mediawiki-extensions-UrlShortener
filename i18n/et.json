@@ -13,14 +13,18 @@
 	"grant-shortenurls": "Lühendatud URL-ide loomine",
 	"right-urlshortener-view-log": "Vaadata lühendatud URL-ide haldamise logi",
 	"urlshortener": "URL-i lühendamine",
+	"qrcode": "QR-koodi koostamine",
 	"urlshortener-approved-domains": "Lühendada saab linke {{PLURAL:$1|järgmisesse domeeni|järgmistesse domeenidesse}}: $2.",
 	"urlshortener-copy-fail": "URL-i kopeerimine lõikelauale ei õnnestunud.",
 	"urlshortener-copy-success": "URL kopeeritud lõikelauale.",
 	"urlshortener-form-header": "Kleebi siia pikk URL",
+	"urlshortener-qrcode-form-submit": "Saada",
 	"urlshortener-shortened-url-alt": "Saad kasutada ka seda alternatiivset URL-i:",
 	"urlshortener-shortened-url-label": "Lühendatud URL",
 	"urlshortener-toolbox": "Hangi lühendatud URL",
+	"urlshortener-toolbox-qrcode": "Laadi alla QR-kood",
 	"urlshortener-url-input-submit": "Lühenda",
 	"urlshortener-url-input-submitting": "Lühendamine...",
-	"urlshortener-url-too-long": "URL on liiga pikk, ülemmäär on {{PLURAL:$1|üks märk|$1 märki}}"
+	"urlshortener-url-too-long": "URL on liiga pikk, ülemmäär on {{PLURAL:$1|üks märk|$1 märki}}",
+	"urlshortener-qrcode-downloaded": "QR-kood alla laaditud SVG-failina."
 }
