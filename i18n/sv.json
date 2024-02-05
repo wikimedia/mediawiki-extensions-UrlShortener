@@ -18,6 +18,7 @@
 	"grant-shortenurls": "Skapa kortas URL:er",
 	"right-urlshortener-view-log": "Visa kort URL's hanteringslogg",
 	"urlshortener": "URL-förkortare",
+	"qrcode": "QR-kodsgenerator",
 	"urlshortener-action-done": "Webbadresser har raderats och/eller återställts",
 	"urlshortener-approved-domains": "Länkar till följande {{PLURAL:$1|domän|domäner}} kan kortas: $2",
 	"urlshortener-blocked": "Blockerade användare kan inte skapa korta webbadresser.",
@@ -41,12 +42,15 @@
 	"urlshortener-manage-reason": "Anledning",
 	"urlshortener-not-found-message": "Beklagar, den URL du söker har inte hittats.",
 	"urlshortener-not-found-title": "Kort URL hittades inte",
+	"urlshortener-qrcode-url-label": "Webbadress:",
+	"urlshortener-qrcode-form-submit": "Skicka in",
 	"urlshortener-ratelimit": "Var vänlig vänta en viss tid innan du kortar ned fler webbadresser.",
 	"urlshortener-short-code-is-not-deleted": "Url:ens korta kod är inte raderad",
 	"urlshortener-short-code-not-found": "Url:ens korta kod hittas inte eller har raderats",
 	"urlshortener-shortened-url-alt": "Du kan också använda den här alternativa webbadressen:",
 	"urlshortener-shortened-url-label": "Förkortad URL",
 	"urlshortener-toolbox": "Hämta förkortad url",
+	"urlshortener-toolbox-qrcode": "Ladda ner QR-kod",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Förkorta",
 	"urlshortener-url-input-submitting": "Förkortar...",
@@ -59,5 +63,6 @@
 	"logeventslist-urlshortener-log": "Kort URL-hanteringslogg",
 	"log-action-filter-urlshortener": "Typ av ledning",
 	"log-action-filter-urlshortener-delete": "URL Radering",
-	"log-action-filter-urlshortener-restore": "URL Återställande"
+	"log-action-filter-urlshortener-restore": "URL Återställande",
+	"urlshortener-qrcode-downloaded": "QR-kod nerladdad som SVG-fil"
 }

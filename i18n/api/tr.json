@@ -2,12 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"Cobija",
 			"JackUKElliott"
 		]
 	},
 	"apihelp-shortenurl-summary": "Kısa bir URL'ye uzun bir URL kısaltın.",
 	"apihelp-shortenurl-param-url": "Kısaltılacak web adresi (URL).",
+	"apihelp-shortenurl-param-qrcode": "Karekodu alın. Bağlantılı URL yalnızca çok uzunsa kısaltılacaktır.",
 	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> için kısaltılmış web adresini (URL) alın.",
+	"apihelp-shortenurl-example-2": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> için karekod alın.",
 	"apierror-urlshortener-disabled": "Yeni kısa url'ler oluşturulamaz",
 	"apierror-urlshortener-permissiondenied": "Kısa url oluşturma hakkınız yok"
 }

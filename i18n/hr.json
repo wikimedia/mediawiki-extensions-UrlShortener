@@ -15,6 +15,7 @@
 	"grant-shortenurls": "Oblikuj kratke URL-ove",
 	"right-urlshortener-view-log": "Pregled evidencije upravljanja kratkim URL-ovima",
 	"urlshortener": "Skraćivač URL-ova",
+	"qrcode": "Generator QR kôda",
 	"urlshortener-action-done": "URL-ovi koji su izbrisani i/ili vraćeni",
 	"urlshortener-approved-domains": "Poveznice što vode na {{PLURAL:$1|sljedeću domenu|sljedeće domene}} mogu biti skraćeni: $2.",
 	"urlshortener-blocked": "Blokirani suradnici ne mogu stvarati kratke URL-ove.",
@@ -37,12 +38,14 @@
 	"urlshortener-manage-reason": "Razlog",
 	"urlshortener-not-found-message": "Oprostite, URL adresu koju ste tražili nije bilo moguće pronaći.",
 	"urlshortener-not-found-title": "Nije pronađena kratka URL adresa",
+	"urlshortener-qrcode-form-submit": "Potvrdi",
 	"urlshortener-ratelimit": "Molimo Vas, pričekajte neko vrijeme prije skraćivanja daljnjih URL-ova.",
 	"urlshortener-short-code-is-not-deleted": "Kratki kôd URL-a nije izbrisan",
 	"urlshortener-short-code-not-found": "Kratki kôd URL-a nije pronađen ili je izbrisan",
 	"urlshortener-shortened-url-alt": "Možete rabiti i ovaj alternativni URL:",
 	"urlshortener-shortened-url-label": "Skraćeni URL",
 	"urlshortener-toolbox": "Skraćeni URL",
+	"urlshortener-toolbox-qrcode": "Preuzmi QR kôd",
 	"urlshortener-url-input-label": "URL adresa",
 	"urlshortener-url-input-submit": "Skrati",
 	"urlshortener-url-input-submitting": "Skraćujem…",
@@ -55,5 +58,6 @@
 	"logeventslist-urlshortener-log": "Evidencija upravljanja kratkim URL-ovima",
 	"log-action-filter-urlshortener": "Vrsta upravljanja",
 	"log-action-filter-urlshortener-delete": "Brisanje URL-a",
-	"log-action-filter-urlshortener-restore": "Vraćanje URL-a"
+	"log-action-filter-urlshortener-restore": "Vraćanje URL-a",
+	"urlshortener-qrcode-downloaded": "QR kôd preuzet kao SVG datoteka"
 }

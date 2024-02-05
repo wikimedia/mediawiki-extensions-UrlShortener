@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Minh Nguyen",
+			"NguyenHung",
 			"Nguyên Lê",
 			"Vinhtantran"
 		]
@@ -44,6 +45,7 @@
 	"urlshortener-shortened-url-alt": "Bạn cũng có thể dùng URL thay thế sau:",
 	"urlshortener-shortened-url-label": "URL ngắn gọn",
 	"urlshortener-toolbox": "Lấy URL ngắn gọn",
+	"urlshortener-toolbox-qrcode": "Tải mã QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Rút gọn",
 	"urlshortener-url-input-submitting": "Đang rút gọn…",

@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"Cobija",
 			"Hedda",
 			"JackUKElliott",
 			"MuratTheTurkish",
@@ -18,6 +19,7 @@
 	"grant-shortenurls": "Kısa URL'ler oluştur",
 	"right-urlshortener-view-log": "Kısa URL yönetim günlüğünü görüntüle",
 	"urlshortener": "URL Kısaltıcı",
+	"qrcode": "Karekod Oluşturucu",
 	"urlshortener-action-done": "URL'ler silindi ve/veya geri yüklendi",
 	"urlshortener-approved-domains": "Aşağıdaki {{PLURAL:$1|alan|alanlar}} bağlantıları kısaltılabilir: $2.",
 	"urlshortener-blocked": "Engellenen kullanıcılar kısa URL oluşturamaz.",
@@ -41,12 +43,15 @@
 	"urlshortener-manage-reason": "Sebep",
 	"urlshortener-not-found-message": "Üzgünüz, aradığınız URL bulunamadı.",
 	"urlshortener-not-found-title": "Kısa URL bulunamadı",
+	"urlshortener-qrcode-url-label": "URL:",
+	"urlshortener-qrcode-form-submit": "Gönder",
 	"urlshortener-ratelimit": "Daha fazla URL kısaltmadan önce lütfen biraz bekleyin.",
 	"urlshortener-short-code-is-not-deleted": "URL kısa kodu silinmedi",
 	"urlshortener-short-code-not-found": "URL kısa kodu bulunamadı veya silinmedi",
 	"urlshortener-shortened-url-alt": "Ayrıca şu alternatif URL'yi de kullanabilirsiniz:",
 	"urlshortener-shortened-url-label": "Kısaltılmış URL",
 	"urlshortener-toolbox": "Kısaltılmış URL'yi al",
+	"urlshortener-toolbox-qrcode": "Karekodunu indir",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Kısaltın",
 	"urlshortener-url-input-submitting": "Kısaltılıyor...",
@@ -59,5 +64,6 @@
 	"logeventslist-urlshortener-log": "Kısa URL yönetim günlüğü",
 	"log-action-filter-urlshortener": "Yönetim türü",
 	"log-action-filter-urlshortener-delete": "URL Silinmesi",
-	"log-action-filter-urlshortener-restore": "URL Geri Yükleme"
+	"log-action-filter-urlshortener-restore": "URL Geri Yükleme",
+	"urlshortener-qrcode-downloaded": "Karekod SVG biçiminde indirildi"
 }

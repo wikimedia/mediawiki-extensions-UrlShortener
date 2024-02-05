@@ -18,6 +18,7 @@
 	"grant-shortenurls": "ایجاد نشانی‌های کوتاه",
 	"right-urlshortener-view-log": "مشاهدهٔ سیاههٔ مدیریت نشانی‌های کوتاه‌شده",
 	"urlshortener": "کوتاه‌کنندهٔ نشانی",
+	"qrcode": "ایجادگر کیوآر کد",
 	"urlshortener-action-done": "نشانی‌ها حذف و/یا احیا شدند",
 	"urlshortener-approved-domains": "{{PLURAL:$1|پیوند به این دامنه می‌تواند کوتاه شود|پیوندها به این دامنه‌ها می‌توانند کوتاه شوند}}: $2",
 	"urlshortener-blocked": "کاربران بسته‌شده نمی‌توانند نشانی‌های کوتاه‌شده بسازند.",
@@ -41,12 +42,15 @@
 	"urlshortener-manage-reason": "دلیل",
 	"urlshortener-not-found-message": "متاسفانه نشانی که دنبالش هستید یافت نشد.",
 	"urlshortener-not-found-title": "نشانی کوتاه یافت نشد",
+	"urlshortener-qrcode-url-label": "نشانی وب:",
+	"urlshortener-qrcode-form-submit": "ثبت",
 	"urlshortener-ratelimit": "لطفا قبل از کوتاه کردن پیوندهای بیشتر کمی صبر کنید.",
 	"urlshortener-short-code-is-not-deleted": "کد نشانی کوتاه حذف نشده‌است",
 	"urlshortener-short-code-not-found": "کد نشانی کوتاه یافت نشد یا حذف شده‌است",
 	"urlshortener-shortened-url-alt": "همچنین می‌توانید از این نشانی جایگزین استفاده کنید:",
 	"urlshortener-shortened-url-label": "نشانی کوتاه‌شده",
 	"urlshortener-toolbox": "دریافت نشانی کوتاه‌شده",
+	"urlshortener-toolbox-qrcode": "دریافت کیوآر کد",
 	"urlshortener-url-input-label": "نشانی اینترنتی",
 	"urlshortener-url-input-submit": "کوتاه کن",
 	"urlshortener-url-input-submitting": "در حال کوتاه کردن",
@@ -59,5 +63,6 @@
 	"logeventslist-urlshortener-log": "سیاههٔ مدیریت نشانی‌های کوتاه‌شده",
 	"log-action-filter-urlshortener": "نوع مدیریت",
 	"log-action-filter-urlshortener-delete": "حذف نشانی",
-	"log-action-filter-urlshortener-restore": "احیای نشانی"
+	"log-action-filter-urlshortener-restore": "احیای نشانی",
+	"urlshortener-qrcode-downloaded": "کیوآر کد در قالب پروندهٔ اس‌وی‌جی بارگیری شد"
 }
