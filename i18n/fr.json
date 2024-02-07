@@ -10,7 +10,9 @@
 			"Titip1995",
 			"Verdy p",
 			"Wladek92",
-			"Zarisi"
+			"Zarisi",
+			"Metamorforme42",
+			"Momo50WM"
 		]
 	},
 	"action-urlshortener-create-url": "créer des URL courtes",
@@ -51,6 +53,7 @@
 	"urlshortener-shortened-url-alt": "Vous pouvez aussi utiliser cette URL alternative :",
 	"urlshortener-shortened-url-label": "URL raccourcie",
 	"urlshortener-toolbox": "Obtenir l'URL raccourcie",
+	"urlshortener-toolbox-qrcode": "Télécharger le code QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Raccourcir",
 	"urlshortener-url-input-submitting": "En cours…",

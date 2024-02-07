@@ -3,14 +3,19 @@
 		"authors": [
 			"Moj",
 			"Pitke",
-			"Stryn"
+			"Stryn",
+			"Samoasambia"
 		]
 	},
 	"urlshortener": "URL-lyhentäjä",
+	"urlshortener-copy-success": "URL kopioitu leikepöydälle.",
 	"urlshortener-ratelimit": "Odota jonkin aikaa ennen kuin lyhennät lisää verkko-osoitteita.",
+	"urlshortener-shortened-url-alt": "Voit myös käyttää tätä vaihtoehtoista URL-osoitetta:",
 	"urlshortener-shortened-url-label": "Lyhennetty URL",
 	"urlshortener-toolbox": "Lyhennä URL-osoite",
+	"urlshortener-toolbox-qrcode": "Lataa QR-koodi",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Lyhennä",
-	"urlshortener-url-input-submitting": "Lyhennetään…"
+	"urlshortener-url-input-submitting": "Lyhennetään…",
+	"urlshortener-qrcode-downloaded": "QR-koodi ladattu SVG-tiedostona"
 }

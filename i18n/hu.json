@@ -4,7 +4,8 @@
 			"Hanna Tardos",
 			"Misibacsi",
 			"Tacsipacsi",
-			"ViDam"
+			"ViDam",
+			"Bean49"
 		]
 	},
 	"action-urlshortener-create-url": "rövid URL-ek készítése",
@@ -43,7 +44,7 @@
 	"urlshortener-shortened-url-alt": "Más URL-t is használhatsz:",
 	"urlshortener-shortened-url-label": "Rövidített URL",
 	"urlshortener-toolbox": "Rövidített URL készítése",
-	"urlshortener-toolbox-qrcode": "QR kód letöltése",
+	"urlshortener-toolbox-qrcode": "QR-kód letöltése",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Rövidítés",
 	"urlshortener-url-input-submitting": "Rövidítés…",

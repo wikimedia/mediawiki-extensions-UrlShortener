@@ -10,7 +10,8 @@
 			"Shirayuki",
 			"Sujiniku",
 			"Takot",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Ant176"
 		]
 	},
 	"action-urlshortener-create-url": "短縮URLの作成",
@@ -51,6 +52,7 @@
 	"urlshortener-shortened-url-alt": "こちらの URL も使用できます:",
 	"urlshortener-shortened-url-label": "短縮後のURL",
 	"urlshortener-toolbox": "短縮URLを取得する",
+	"urlshortener-toolbox-qrcode": "QR コードをダウンロード",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "短縮",
 	"urlshortener-url-input-submitting": "短縮中…",

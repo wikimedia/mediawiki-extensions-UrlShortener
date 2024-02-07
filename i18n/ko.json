@@ -44,11 +44,13 @@
 	"urlshortener-shortened-url-alt": "이 URL을 대신 사용해도 됩니다:",
 	"urlshortener-shortened-url-label": "축약된 URL",
 	"urlshortener-toolbox": "축약된 URL 얻기",
+	"urlshortener-toolbox-qrcode": "QR 코드 다운로드",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "단축",
 	"urlshortener-url-input-submitting": "단축하는 중...",
 	"urlshortener-url-too-long": "URL이 너무 깁니다, 최대 크기는 {{PLURAL:$1|1개 문자|$1개 문자}}입니다.",
 	"urlshortener-badaccessgroups": "단축 URL을 만들 권한이 없습니다",
 	"log-action-filter-urlshortener-delete": "URL 삭제",
-	"log-action-filter-urlshortener-restore": "URL 복원"
+	"log-action-filter-urlshortener-restore": "URL 복원",
+	"urlshortener-qrcode-downloaded": "QR 코드를 SVG 파일로 다운로드했습니다"
 }

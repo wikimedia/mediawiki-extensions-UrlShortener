@@ -5,7 +5,8 @@
 			"Dars",
 			"Piramidion",
 			"Vlad5250",
-			"Ата"
+			"Ата",
+			"Andriy.v"
 		]
 	},
 	"action-urlshortener-create-url": "створення коротких URL-адрес",
@@ -46,6 +47,7 @@
 	"urlshortener-shortened-url-alt": "Ви також можете використовувати цей альтернативний URL:",
 	"urlshortener-shortened-url-label": "Скорочений URL",
 	"urlshortener-toolbox": "Отримати вкорочену URL-адресу",
+	"urlshortener-toolbox-qrcode": "Завантажити QR-код",
 	"urlshortener-url-input-label": "URL-адреса",
 	"urlshortener-url-input-submit": "Скоротити",
 	"urlshortener-url-input-submitting": "Скорочення…",

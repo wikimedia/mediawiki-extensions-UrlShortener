@@ -20,7 +20,9 @@
 	"urlshortener-shortened-url-alt": "Saad kasutada ka seda alternatiivset URL-i:",
 	"urlshortener-shortened-url-label": "Lühendatud URL",
 	"urlshortener-toolbox": "Hangi lühendatud URL",
+	"urlshortener-toolbox-qrcode": "Laadi alla QR-kood",
 	"urlshortener-url-input-submit": "Lühenda",
 	"urlshortener-url-input-submitting": "Lühendamine...",
-	"urlshortener-url-too-long": "URL on liiga pikk, ülemmäär on {{PLURAL:$1|üks märk|$1 märki}}"
+	"urlshortener-url-too-long": "URL on liiga pikk, ülemmäär on {{PLURAL:$1|üks märk|$1 märki}}",
+	"urlshortener-qrcode-downloaded": "QR-kood alla laaditud SVG-failina."
 }

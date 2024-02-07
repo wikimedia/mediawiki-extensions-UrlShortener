@@ -43,6 +43,7 @@
 	"urlshortener-shortened-url-alt": "Možete rabiti i ovaj alternativni URL:",
 	"urlshortener-shortened-url-label": "Skraćeni URL",
 	"urlshortener-toolbox": "Skraćeni URL",
+	"urlshortener-toolbox-qrcode": "Preuzmi QR kôd",
 	"urlshortener-url-input-label": "URL adresa",
 	"urlshortener-url-input-submit": "Skrati",
 	"urlshortener-url-input-submitting": "Skraćujem…",
@@ -55,5 +56,6 @@
 	"logeventslist-urlshortener-log": "Evidencija upravljanja kratkim URL-ovima",
 	"log-action-filter-urlshortener": "Vrsta upravljanja",
 	"log-action-filter-urlshortener-delete": "Brisanje URL-a",
-	"log-action-filter-urlshortener-restore": "Vraćanje URL-a"
+	"log-action-filter-urlshortener-restore": "Vraćanje URL-a",
+	"urlshortener-qrcode-downloaded": "QR kôd preuzet kao SVG datoteka"
 }
