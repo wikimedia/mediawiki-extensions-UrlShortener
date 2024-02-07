@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"NMW03"
+			"NMW03",
+			"Serkanland"
 		]
 	},
 	"action-urlshortener-create-url": "qısa URL-lər yaratmaq",
@@ -13,6 +14,7 @@
 	"grant-shortenurls": "Qısa URL-lər yaratmaq",
 	"right-urlshortener-view-log": "Qısa URL-lərin idarə jurnalına baxmaq",
 	"urlshortener": "URL Qısaldıcı",
+	"qrcode": "QR kodu generatoru",
 	"urlshortener-action-done": "URL-lər silinmiş və/və ya bərpa edilmişdir",
 	"urlshortener-approved-domains": "Aşağıdakı {{PLURAL:$1|domenə|domenlərə}} aid linklər qısaldıla bilər: $2 .",
 	"urlshortener-blocked": "Bloklanmış istifadəçilər qısa URL-lər yarada bilməz.",
@@ -36,12 +38,15 @@
 	"urlshortener-manage-reason": "Səbəb",
 	"urlshortener-not-found-message": "Üzr istəyirik, axtardığınız URL tapılmadı.",
 	"urlshortener-not-found-title": "Qısa URL tapılmadı",
+	"urlshortener-qrcode-url-label": "URL",
+	"urlshortener-qrcode-form-submit": "Təsdiq et",
 	"urlshortener-ratelimit": "Lütfən, daha çox URL qısaltmazdan əvvəl bir müddət gözləyin.",
 	"urlshortener-short-code-is-not-deleted": "URL qısa kodu silinmədi",
 	"urlshortener-short-code-not-found": "URL qısa kodu tapılmadı və ya silinmədi",
 	"urlshortener-shortened-url-alt": "Bu alternativ URL-dən də istifadə edə bilərsiniz:",
 	"urlshortener-shortened-url-label": "Qısaldılmış URL",
 	"urlshortener-toolbox": "Qısaldılmış URL əldə edin",
+	"urlshortener-toolbox-qrcode": "QR kodunu yüklə",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Qısalt",
 	"urlshortener-url-input-submitting": "Qısaldılır...",
@@ -54,5 +59,6 @@
 	"logeventslist-urlshortener-log": "Qısa URL idarəetmə jurnalı",
 	"log-action-filter-urlshortener": "İdarəetmə növü",
 	"log-action-filter-urlshortener-delete": "URL silinməsi",
-	"log-action-filter-urlshortener-restore": "URL bərpası"
+	"log-action-filter-urlshortener-restore": "URL bərpası",
+	"urlshortener-qrcode-downloaded": "QR kodu SVG faylı olaraq yükləndi"
 }

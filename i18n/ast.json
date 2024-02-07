@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xuacu"
+			"Xuacu",
+			"YoaR"
 		]
 	},
 	"urlshortener": "Acurtiador d'URL",
+	"qrcode": "Xenerador de códigos QR",
 	"urlshortener-approved-domains": "Los enllaces {{PLURAL:$1|al siguiente dominiu|a los siguientes dominios}} pueden encurtiase: $2.",
 	"urlshortener-desc": "Acurtiador pa URLs cualesquiera",
 	"urlshortener-disabled": "La creación de nueves URLs curties ta desactivada temporalmente.",
@@ -19,6 +21,7 @@
 	"urlshortener-ratelimit": "Espera un poco de tiempu antes d'encurtiar más URL.",
 	"urlshortener-shortened-url-label": "URL encurtiada",
 	"urlshortener-toolbox": "Llograr la URL encurtiada",
+	"urlshortener-toolbox-qrcode": "Xenerar códigu QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Encurtiar",
 	"urlshortener-url-input-submitting": "Encurtiando…"
