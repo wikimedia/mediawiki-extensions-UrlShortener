@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hakimi97",
 			"Tofeiku"
 		]
 	},
 	"action-urlshortener-create-url": "cipta URL pendek",
 	"right-urlshortener-create-url": "Cipta URL pendek",
 	"action-urlshortener-manage-url": "urus URL pendek",
+	"qrcode": "Penjana Kod QR",
 	"urlshortener-toolbox": "Dapatkan URL pendek"
 }

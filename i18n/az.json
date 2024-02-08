@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"NMW03",
-			"Serkanland"
+			"Serkanland",
+			"Wertuose"
 		]
 	},
 	"action-urlshortener-create-url": "qısa URL-lər yaratmaq",
@@ -45,8 +46,8 @@
 	"urlshortener-short-code-not-found": "URL qısa kodu tapılmadı və ya silinmədi",
 	"urlshortener-shortened-url-alt": "Bu alternativ URL-dən də istifadə edə bilərsiniz:",
 	"urlshortener-shortened-url-label": "Qısaldılmış URL",
-	"urlshortener-toolbox": "Qısaldılmış URL əldə edin",
-	"urlshortener-toolbox-qrcode": "QR kodunu yüklə",
+	"urlshortener-toolbox": "Qısaldılmış URL əldə et",
+	"urlshortener-toolbox-qrcode": "QR-kodu endir",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Qısalt",
 	"urlshortener-url-input-submitting": "Qısaldılır...",
