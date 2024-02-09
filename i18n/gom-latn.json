@@ -4,6 +4,17 @@
 			"The Discoverer"
 		]
 	},
+	"action-urlshortener-create-url": "dhakte URL roch",
+	"right-urlshortener-create-url": "Dhake URL roch",
+	"grant-shortenurls": "Dhake URL roch",
+	"urlshortener-deleted": "Hem dhaktem URL kadun udoilelem asa.",
+	"urlshortener-error-malformed-url": "URL void na",
+	"urlshortener-manage-reason": "Karonn",
+	"urlshortener-not-found-title": "Dhaktem URL mellunk na",
+	"urlshortener-qrcode-url-label": "URL:",
 	"urlshortener-toolbox": "Dhaktem URL",
-	"urlshortener-toolbox-qrcode": "QR sonket download kor"
+	"urlshortener-toolbox-qrcode": "QR sonket download kor",
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Dhaktem kor",
+	"urlshortener-url-input-submitting": "Dhaktem korta..."
 }
