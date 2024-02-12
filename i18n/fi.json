@@ -3,11 +3,14 @@
 		"authors": [
 			"Moj",
 			"Pitke",
-			"Stryn"
+			"Stryn",
+			"Samoasambia"
 		]
 	},
 	"urlshortener": "URL-lyhentäjä",
+	"urlshortener-copy-success": "URL kopioitu leikepöydälle.",
 	"urlshortener-ratelimit": "Odota jonkin aikaa ennen kuin lyhennät lisää verkko-osoitteita.",
+	"urlshortener-shortened-url-alt": "Voit myös käyttää tätä vaihtoehtoista URL-osoitetta:",
 	"urlshortener-shortened-url-label": "Lyhennetty URL",
 	"urlshortener-toolbox": "Lyhennä URL-osoite",
 	"urlshortener-url-input-label": "URL",

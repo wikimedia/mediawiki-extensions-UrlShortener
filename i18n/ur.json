@@ -4,7 +4,7 @@
 			"Muhammad Shuaib"
 		]
 	},
-	"action-urlshortener-create-url": "مختصر روابط (URL) کی تخلیق کرنے",
+	"action-urlshortener-create-url": "مختصر روابط (URL) تخلیق کرنے",
 	"right-urlshortener-create-url": "مختصر روابط (URL) کی تخلیق",
 	"action-urlshortener-manage-url": "مختصر روابط (URL) کے انتظام",
 	"action-urlshortener-view-log": "مختصر روابط کا نوشتۂ انتظام دیکھنے",
@@ -13,6 +13,8 @@
 	"grant-shortenurls": "مختصر روابط (URL) کی تخلیق",
 	"right-urlshortener-view-log": "مختصر روابط کے نوشتۂ انتظام کا معائنہ",
 	"urlshortener": "یوآرایل مختصر کنندہ",
+	"urlshortener-copy-success": "یوآرایل کو کلپ بورڈ پر نقل کر دیا گیا۔",
+	"urlshortener-deleted": "اس مختصر یوآرایل کو حذف کر دیا گیا ہے۔",
 	"urlshortener-desc": "یوآرایل مختصر کنندہ برائے خود ساختہ یوآرایل",
 	"urlshortener-disabled": "نئے مختصر یوآرایل کی تخلیق عارضی طور پر بند کی گئی ہے۔",
 	"urlshortener-error-disallowed-url": "$1 ڈومین کے یوآرایل کو مختصر کرنے کی اجازت نہیں ہے",
@@ -20,6 +22,7 @@
 	"urlshortener-error-nouserpass": "صارف نام یا پاسورڈ پر مشتمل یوآرایل کو مختصر کرنے کی اجازت نہیں ہے",
 	"urlshortener-failed-try-again": "ناکام۔ دوبارہ کوشش کریں؟",
 	"urlshortener-form-header": "اپنے طویل یوآرایل کو یہاں چسپاں کیجیے",
+	"urlshortener-manage-reason": "وجہ",
 	"urlshortener-not-found-message": "معذرت، جس یوآرایل کو آپ تلاش کر رہے ہیں وہ نہیں مل سکا۔",
 	"urlshortener-not-found-title": "مختصر یوآرایل نہیں مل سکا",
 	"urlshortener-shortened-url-label": "مختصر کردہ یوآرایل",

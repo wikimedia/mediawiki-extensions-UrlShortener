@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Luky001"
+			"Luky001",
+			"Teslaton"
 		]
 	},
-	"urlshortener-desc": "Skracovač pre ľubovoľné URL"
+	"urlshortener-copy-success": "URL skopírované do schránky.",
+	"urlshortener-desc": "Skracovač pre ľubovoľné URL",
+	"urlshortener-shortened-url-alt": "Môžete tiež použiť toto alternatívne URL:",
+	"urlshortener-shortened-url-label": "Skrátené URL",
+	"urlshortener-toolbox": "Získať skrátené URL"
 }
