@@ -24,6 +24,7 @@
 	"urlshortener-deleted": "This short URL has been deleted.",
 	"urlshortener-desc": "URL shortener for arbitrary URLs",
 	"urlshortener-disabled": "Creating new short URLs is temporarily disabled.",
+	"urlshortener-qrcode-disabled": "Creation of QR codes is disabled.",
 	"urlshortener-enter-short-code-delete": "URL short code to delete",
 	"urlshortener-enter-short-code-restore": "URL short code to restore",
 	"urlshortener-error-badports": "URLs that contain ports are not allowed to be shortened",

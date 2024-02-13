@@ -31,6 +31,11 @@ class SpecialQrCode extends SpecialUrlShortener {
 	 * @param string|null $par
 	 */
 	public function execute( $par ) {
+		if ( !$this->getConfig()->get( 'UrlShortenerEnableQrCode' ) ) {
+			$this->setHeaders();
+			$this->getOutput()->addWikiMsg( 'urlshortener-qrcode-disabled' );
+			return;
+		}
 		parent::execute( $par );
 		$this->addHelpLink( 'Help:QrCode' );
 	}
