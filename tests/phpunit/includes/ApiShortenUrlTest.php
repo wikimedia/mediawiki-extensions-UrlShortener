@@ -37,7 +37,7 @@ class ApiShortenUrlTest extends ApiTestCase {
 		] )[0]['shortenurl'];
 
 		$this->assertStringContainsString( '<?xml version="1.0"?>', $apiResult['qrcode'] );
-		$this->assertSame( 21403, strlen( $apiResult['qrcode'] ) );
+		$this->assertSame( 21651, strlen( $apiResult['qrcode'] ) );
 		$this->assertArrayNotHasKey( 'shorturl', $apiResult );
 	}
 }

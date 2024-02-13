@@ -561,6 +561,8 @@ class UrlShortenerUtils {
 			$shortUrlCode = $status->getValue()['url'];
 			$shortUrlCodeAlt = $status->getValue()['alt'];
 			$url = self::makeUrl( $shortUrlCode );
+		} else {
+			$url = self::normalizeUrl( $url );
 		}
 		$qrCode = self::getQrCodeInternal( $url );
 		$res = [
