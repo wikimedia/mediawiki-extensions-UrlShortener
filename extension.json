@@ -120,12 +120,9 @@
 				"mediawiki.widgets"
 			]
 		},
-		"ext.qrCode.special": {
+		"ext.urlShortener.qrCode.special": {
 			"packageFiles": [
 				"modules/ext.urlShortener.special.js"
-			],
-			"styles": [
-				"modules/ext.urlShortener.qrCode.special.less"
 			],
 			"messages": [
 				"urlshortener-copy-fail",
@@ -143,7 +140,13 @@
 				"mediawiki.api",
 				"mediawiki.Uri",
 				"mediawiki.htmlform.ooui",
-				"mediawiki.widgets"
+				"mediawiki.widgets",
+				"ext.urlShortener.qrCode.special.styles"
+			]
+		},
+		"ext.urlShortener.qrCode.special.styles": {
+			"styles": [
+				"modules/ext.urlShortener.qrCode.special.less"
 			]
 		},
 		"ext.urlShortener.toolbar": {

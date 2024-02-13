@@ -40,7 +40,7 @@ class SpecialQrCode extends SpecialUrlShortener {
 	 * @param string $module
 	 */
 	protected function alterForm( HTMLForm $form, string $module = 'ext.urlShortener.special' ) {
-		parent::alterForm( $form, 'ext.qrCode.special' );
+		parent::alterForm( $form, 'ext.urlShortener.qrCode.special' );
 
 		// @phan-suppress-next-line PhanRedundantCondition
 		if ( isset( $this->resultStatus ) ) {
@@ -89,7 +89,10 @@ class SpecialQrCode extends SpecialUrlShortener {
 	public function onSubmit( array $data ) {
 		$out = $this->getOutput();
 		$out->enableOOUI();
-		$out->addModuleStyles( 'codex-styles' );
+		$out->addModuleStyles( [
+			'codex-styles',
+			'ext.urlShortener.qrCode.special.styles'
+		] );
 		if ( $data['url'] === null ) {
 			return false;
 		}
