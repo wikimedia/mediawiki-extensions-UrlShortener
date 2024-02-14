@@ -12,7 +12,8 @@
 			"Wladek92",
 			"Zarisi",
 			"Metamorforme42",
-			"Momo50WM"
+			"Momo50WM",
+			"Ayack"
 		]
 	},
 	"action-urlshortener-create-url": "créer des URL courtes",
@@ -66,5 +67,6 @@
 	"logeventslist-urlshortener-log": "Journal de gestion des URL courtes",
 	"log-action-filter-urlshortener": "Type de gestion",
 	"log-action-filter-urlshortener-delete": "Supression d'URL",
-	"log-action-filter-urlshortener-restore": "Restauration d’URL"
+	"log-action-filter-urlshortener-restore": "Restauration d’URL",
+	"urlshortener-qrcode-downloaded": "Code QR téléchargé en fichier SVG"
 }

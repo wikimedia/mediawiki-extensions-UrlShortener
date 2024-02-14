@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"NMW03"
+			"NMW03",
+			"Serkanland",
+			"Wertuose"
 		]
 	},
 	"action-urlshortener-create-url": "qısa URL-lər yaratmaq",
@@ -41,7 +43,8 @@
 	"urlshortener-short-code-not-found": "URL qısa kodu tapılmadı və ya silinmədi",
 	"urlshortener-shortened-url-alt": "Bu alternativ URL-dən də istifadə edə bilərsiniz:",
 	"urlshortener-shortened-url-label": "Qısaldılmış URL",
-	"urlshortener-toolbox": "Qısaldılmış URL əldə edin",
+	"urlshortener-toolbox": "Qısaldılmış URL əldə et",
+	"urlshortener-toolbox-qrcode": "QR-kodu endir",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Qısalt",
 	"urlshortener-url-input-submitting": "Qısaldılır...",
@@ -54,5 +57,6 @@
 	"logeventslist-urlshortener-log": "Qısa URL idarəetmə jurnalı",
 	"log-action-filter-urlshortener": "İdarəetmə növü",
 	"log-action-filter-urlshortener-delete": "URL silinməsi",
-	"log-action-filter-urlshortener-restore": "URL bərpası"
+	"log-action-filter-urlshortener-restore": "URL bərpası",
+	"urlshortener-qrcode-downloaded": "QR kodu SVG faylı olaraq yükləndi"
 }

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xuacu"
+			"Xuacu",
+			"YoaR"
 		]
 	},
 	"urlshortener": "Acurtiador d'URL",
@@ -19,6 +20,7 @@
 	"urlshortener-ratelimit": "Espera un poco de tiempu antes d'encurtiar más URL.",
 	"urlshortener-shortened-url-label": "URL encurtiada",
 	"urlshortener-toolbox": "Llograr la URL encurtiada",
+	"urlshortener-toolbox-qrcode": "Xenerar códigu QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Encurtiar",
 	"urlshortener-url-input-submitting": "Encurtiando…"

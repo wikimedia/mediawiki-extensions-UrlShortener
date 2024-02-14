@@ -5,5 +5,7 @@
 			"Lhanars"
 		]
 	},
-	"urlshortener-toolbox": "Obténer una URL acorchida"
+	"urlshortener-shortened-url-alt": "Podètz tanben utilizar l'URL alternativa:",
+	"urlshortener-toolbox": "Obténer una URL acorchida",
+	"urlshortener-toolbox-qrcode": "Telecargar lo còdi QR"
 }

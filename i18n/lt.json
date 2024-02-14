@@ -2,10 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Eitvys200",
-			"Nokeoo"
+			"Nokeoo",
+			"Hugo.arg"
 		]
 	},
 	"action-urlshortener-create-url": "kurti trumpus URL",
 	"right-urlshortener-create-url": "Kurti trumpus URL",
-	"action-urlshortener-manage-url": "tvarkyti trumpus URL"
+	"action-urlshortener-manage-url": "tvarkyti trumpus URL",
+	"urlshortener-toolbox": "Gauti sutrumpintą URL nuorodą",
+	"urlshortener-toolbox-qrcode": "Atsisiųsti QR kodą"
 }
