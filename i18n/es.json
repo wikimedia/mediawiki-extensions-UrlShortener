@@ -6,7 +6,8 @@
 			"Kroji",
 			"Macofe",
 			"MarcoAurelio",
-			"No se"
+			"No se",
+			"Rodney Araujo"
 		]
 	},
 	"action-urlshortener-create-url": "crear URL cortos",
@@ -19,6 +20,7 @@
 	"right-urlshortener-view-log": "Ver el registro de administración de URL cortas",
 	"urlshortener": "Acortador de URL",
 	"qrcode": "Generador de códigos QR",
+	"urlshortener-action-done": "Las direcciones URL se han eliminado y/o restaurado.",
 	"urlshortener-approved-domains": "Los enlaces {{PLURAL:$1|al siguiente dominio|a los siguientes dominios}} pueden acortarse: $2.",
 	"urlshortener-blocked": "Los usuarios bloqueados no pueden crear URL cortos.",
 	"urlshortener-copy-fail": "No se pudo copiar la URL al portapapeles.",
@@ -34,18 +36,27 @@
 	"urlshortener-error-nouserpass": "No se permiten acortar URL que contengan un nombre de usuario o una contraseña",
 	"urlshortener-failed-try-again": "Fallido. ¿Intentar otra vez?",
 	"urlshortener-form-header": "Pega el URL largo aquí",
+	"urlshortener-manage-text": "Utilice el siguiente formulario para eliminar una URL corta o restaurar una eliminada. <br> Después de eliminar una URL corta aquí, el enlace corto ya no redirigirá a la página que solía redirigir. Todos los enlaces establecidos con él se perderán. Por favor, utilice esta función con cuidado. Esta acción será [[Special:Log/urlshortener|registrada]].",
+	"urlshortener-manage-delete-failed": "Falló la eliminación de la URL",
+	"urlshortener-manage-not-enough-data": "Debes determinar un código corto de URL  para eliminar o restaurar",
 	"urlshortener-manage-restore-failed": "Falló la restauración del URL",
 	"urlshortener-manage-reason": "Motivo",
 	"urlshortener-not-found-message": "No se encuentra el URL que has solicitado.",
 	"urlshortener-not-found-title": "No se encontró el URL corto",
+	"urlshortener-qrcode-url-label": "URL:",
 	"urlshortener-qrcode-form-submit": "Enviar",
 	"urlshortener-ratelimit": "Espera un poco antes de acortar más URL.",
+	"urlshortener-short-code-is-not-deleted": "El código corto de URL no está eliminado",
+	"urlshortener-short-code-not-found": "El código corto de URL no se encuentra o está eliminado",
 	"urlshortener-shortened-url-alt": "También se puede utilizar este URL alternativo:",
 	"urlshortener-shortened-url-label": "URL acortado",
 	"urlshortener-toolbox": "Obtener URL acortado",
+	"urlshortener-toolbox-qrcode": "Descargar código QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Acortar",
 	"urlshortener-url-input-submitting": "Acortando…",
+	"urlshortener-url-too-long": "La URL es demasiado larga, el tamaño máximo es {{PLURAL:$1|un caracter|$1 caracteres}}",
+	"urlshortener-badaccessgroups": "No tienes el permiso para crear URL cortas",
 	"log-name-urlshortener": "Registro de gestión de URL cortos",
 	"log-description-urlshortener": "Este registro muestra la eliminación y restauración de los URL cortos. No muestra la creación de URL nuevos",
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|eliminó}} el URL corto «$4»",
@@ -53,5 +64,6 @@
 	"logeventslist-urlshortener-log": "Registro de gestión de URL cortos",
 	"log-action-filter-urlshortener": "Tipo de gestión",
 	"log-action-filter-urlshortener-delete": "Eliminación de URL",
-	"log-action-filter-urlshortener-restore": "Restauración de URL"
+	"log-action-filter-urlshortener-restore": "Restauración de URL",
+	"urlshortener-qrcode-downloaded": "Código QR descargado como archivo SVG"
 }
