@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eitvys200"
+			"Eitvys200",
+			"Hugo.arg",
+			"Nokeoo"
 		]
 	},
 	"action-urlshortener-create-url": "kurti trumpus URL",
 	"right-urlshortener-create-url": "Kurti trumpus URL",
-	"action-urlshortener-manage-url": "tvarkyti trumpus URL"
+	"action-urlshortener-manage-url": "tvarkyti trumpus URL",
+	"urlshortener-toolbox": "Gauti sutrumpintą URL nuorodą"
 }
