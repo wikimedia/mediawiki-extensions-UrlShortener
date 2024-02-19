@@ -24,6 +24,7 @@
 	"urlshortener-deleted": "Questo URL breve è stato cancellato",
 	"urlshortener-desc": "Abbreviatore URL per URL arbitrari",
 	"urlshortener-disabled": "La creazione di nuovi URL brevi è temporaneamente disabilitata.",
+	"urlshortener-qrcode-disabled": "La creazione di codici QR è disabilitata.",
 	"urlshortener-enter-short-code-delete": "Codice URL breve da cancellare",
 	"urlshortener-enter-short-code-restore": "Codice URL breve da ripristinare",
 	"urlshortener-error-badports": "Gli URL che contengono porte non possono essere abbreviati",

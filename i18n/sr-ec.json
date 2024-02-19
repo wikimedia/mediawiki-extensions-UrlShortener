@@ -13,6 +13,7 @@
 	"urlshortener": "Скраћивач URL-а",
 	"qrcode": "Генератор QR кода",
 	"urlshortener-approved-domains": "Везе ка {{PLURAL:$1|следећем домену|следећим доменима}} могу да се скрате: $2.",
+	"urlshortener-deleted": "Овај кратки URL је обрисан.",
 	"urlshortener-desc": "Скраћивач произвољних URL адреса",
 	"urlshortener-disabled": "Прављење нових кратких URL адреса је тренутно онемогућено.",
 	"urlshortener-error-badports": "Скраћивање URL адреса које садрже портове није дозвољено",
@@ -32,5 +33,8 @@
 	"urlshortener-toolbox-qrcode": "Преузми QR код",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Скрати",
-	"urlshortener-url-input-submitting": "Скраћујем…"
+	"urlshortener-url-input-submitting": "Скраћујем…",
+	"logentry-urlshortener-delete": "$1 је {{GENDER:$2|обрисао|обрисала}} кратки URL „$4”",
+	"logentry-urlshortener-restore": "$1 је {{GENDER:$2|вратио|вратила}} кратки URL „$4”",
+	"urlshortener-qrcode-downloaded": "QR код преузет као SVG датотека"
 }

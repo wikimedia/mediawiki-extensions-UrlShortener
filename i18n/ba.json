@@ -24,6 +24,7 @@
 	"urlshortener-deleted": "Был ҡыҫҡа URL юйылған.",
 	"urlshortener-desc": "Төрлө URL ҡыҫҡартҡыс",
 	"urlshortener-disabled": "Яңы ҡыҫҡа URL яһау ваҡытлыса тыйылған.",
+	"urlshortener-qrcode-disabled": "QR кодтар булдырыу ғәмәлдә түгел.",
 	"urlshortener-enter-short-code-delete": "Юйыу өсөн ҡыҫҡа URL коды",
 	"urlshortener-enter-short-code-restore": "Тергеҙеү өсөн ҡыҫҡа URL коды",
 	"urlshortener-error-badports": "Порт номерҙары булған URL ҡыҫҡартыу рөхсәт ителмәй",

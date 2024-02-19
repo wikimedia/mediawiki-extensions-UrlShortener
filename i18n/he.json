@@ -26,6 +26,7 @@
 	"urlshortener-deleted": "הכתובת הקצרה הזאת נמחקה.",
 	"urlshortener-desc": "מקצר כתובות לכל URL",
 	"urlshortener-disabled": "יצירת כתובות מקוצרות מוגבלת באופן זמני.",
+	"urlshortener-qrcode-disabled": "יצירת קודי QR מושבתת.",
 	"urlshortener-enter-short-code-delete": "איזה קוד כתובת קצרה למחוק",
 	"urlshortener-enter-short-code-restore": "איזה קוד כתובת קצרה לשחזר",
 	"urlshortener-error-badports": "לא ניתן לקצר כתובות שמכילות פתחות",

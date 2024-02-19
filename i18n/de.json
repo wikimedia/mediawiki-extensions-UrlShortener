@@ -26,6 +26,7 @@
 	"urlshortener-deleted": "Diese Kurz-URL wurde gelöscht.",
 	"urlshortener-desc": "Stellt ein Kurz-URL-Werkzeug für beliebige URLs bereit",
 	"urlshortener-disabled": "Das Erstellen neuer Kurz-URLs ist derzeit deaktiviert.",
+	"urlshortener-qrcode-disabled": "Die Erstellung von QR-Codes ist deaktiviert.",
 	"urlshortener-enter-short-code-delete": "Zu löschender URL-Kurzcode",
 	"urlshortener-enter-short-code-restore": "Wiederherzustellender URL-Kurzcode",
 	"urlshortener-error-badports": "URLs, die Ports enthalten, dürfen nicht gekürzt werden.",

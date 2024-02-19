@@ -8,6 +8,9 @@
 	"urlshortener-approved-domains": "ھيٺين {{PLURAL:$1|ڊومين|ڊومينس}} ڏانھن ڳنڍڻن کي مختصرڪري سگهجي ٿو: $2.",
 	"urlshortener-failed-try-again": "ناڪام. ٻيهر ڪوشش ڪريو؟",
 	"urlshortener-form-header": "پنھنجي ڊگهي يوآرايل ھتي لڳايو",
+	"urlshortener-shortened-url-label": "مختصر یوآرایل",
+	"urlshortener-toolbox": "مختصر یوآرایل وٺو",
+	"urlshortener-toolbox-qrcode": "ڪيوآر ڪوڊ ڊائونلوڊ ڪريو",
 	"urlshortener-url-input-label": "يوآرايل",
 	"urlshortener-url-input-submit": "مختصرڪريو"
 }

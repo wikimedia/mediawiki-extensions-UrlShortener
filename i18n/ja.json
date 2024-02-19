@@ -7,6 +7,7 @@
 			"Afaz",
 			"Ant176",
 			"Chqaz",
+			"Kokage si",
 			"Omotecho",
 			"Portal18",
 			"Shirayuki",
@@ -24,6 +25,7 @@
 	"grant-shortenurls": "短縮URLを作成",
 	"right-urlshortener-view-log": "短縮URLの管理記録を閲覧",
 	"urlshortener": "URL短縮",
+	"qrcode": "QRコードジェネレーター",
 	"urlshortener-action-done": "URLが削除または復元されました",
 	"urlshortener-approved-domains": "以下の{{PLURAL:$1|ドメイン}}へのリンクのみが短縮可能です。 $2",
 	"urlshortener-blocked": "ブロックされた利用者は短縮 URL を作成できません。",
@@ -32,6 +34,7 @@
 	"urlshortener-deleted": "このURLは削除されました。",
 	"urlshortener-desc": "任意の URL を短縮する",
 	"urlshortener-disabled": "新しい短縮URLの作成は一時的に無効になっています。",
+	"urlshortener-qrcode-disabled": "QRコードの作成は無効化されています。",
 	"urlshortener-enter-short-code-delete": "削除するURLのショートコード",
 	"urlshortener-enter-short-code-restore": "復元するURLのショートコード",
 	"urlshortener-error-badports": "ポートを含むURLは短縮できません",
@@ -66,5 +69,6 @@
 	"logeventslist-urlshortener-log": "短縮URLの管理記録",
 	"log-action-filter-urlshortener": "管理の種類",
 	"log-action-filter-urlshortener-delete": "URL削除",
-	"log-action-filter-urlshortener-restore": "URL復元"
+	"log-action-filter-urlshortener-restore": "URL復元",
+	"urlshortener-qrcode-downloaded": "QRコードをSVGファイルとしてダウンロードしました"
 }

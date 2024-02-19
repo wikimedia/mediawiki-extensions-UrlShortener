@@ -22,6 +22,7 @@
 	"urlshortener-deleted": "Оваа картка URL е избришана.",
 	"urlshortener-desc": "Скратувач на произволни URL-адреси",
 	"urlshortener-disabled": "Создавањето на URL-адреси е времено оневозможено.",
+	"urlshortener-qrcode-disabled": "Создавањето QR-кодови е оневозможено.",
 	"urlshortener-enter-short-code-delete": "Краток код за бришење на URL",
 	"urlshortener-enter-short-code-restore": "Краток код за повраток на URL",
 	"urlshortener-error-badports": "URL-а што содржат порти кои не е допуштено да се кратат",
