@@ -12,7 +12,8 @@
 			"Takot",
 			"Yusuke1109",
 			"Ant176",
-			"Chqaz"
+			"Chqaz",
+			"Kokage si"
 		]
 	},
 	"action-urlshortener-create-url": "短縮URLの作成",
@@ -66,5 +67,6 @@
 	"logeventslist-urlshortener-log": "短縮URLの管理記録",
 	"log-action-filter-urlshortener": "管理の種類",
 	"log-action-filter-urlshortener-delete": "URL削除",
-	"log-action-filter-urlshortener-restore": "URL復元"
+	"log-action-filter-urlshortener-restore": "URL復元",
+	"urlshortener-qrcode-downloaded": "QRコードをSVGファイルとしてダウンロードしました"
 }
