@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Aram",
+			"Lolekek",
 			"Muhammed taha"
 		]
 	},
@@ -14,6 +15,7 @@
 	"grant-shortenurls": "بەستەرە کورتەکان دروست بکە",
 	"right-urlshortener-view-log": "لۆگی بەڕێوەبردنی بەستەرە کورتەکان ببینە",
 	"urlshortener": "کورتکەرەوەی بەستەر",
+	"qrcode": "کیوئاڕکۆد جێنەرەیتەر",
 	"urlshortener-action-done": "بەستەرەکان سڕانەوە و/یان ھێنرانەوە",
 	"urlshortener-blocked": "بەکارھێنەرە بەربەستکراوەکان ناتوانن بەستەرگەلی کورت دروست بکەن",
 	"urlshortener-copy-fail": "لەبەرگرتنەوەی بەستەر بۆ کلیپبۆرد شکستی ھێنا.",
@@ -30,6 +32,7 @@
 	"urlshortener-shortened-url-alt": "دەشتوانی ئەم بەستەرە جێگرەوە بەکاربێنیت:",
 	"urlshortener-shortened-url-label": "بەستەری کورتکراوە",
 	"urlshortener-toolbox": "بەستەری کورتکراوە بەدەست بێنە",
+	"urlshortener-toolbox-qrcode": "داگرتن بە کیوئاڕکۆد",
 	"urlshortener-url-input-label": "ناونیشانی ئینتەرنێتی",
 	"urlshortener-url-input-submit": "کورتی بکەرەوە",
 	"urlshortener-url-input-submitting": "کورتی دەکاتەوە...",
