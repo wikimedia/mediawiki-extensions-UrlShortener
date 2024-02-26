@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Aefgh39622",
+			"Ekminarin",
 			"Geonuch",
 			"Octahedron80",
 			"Patsagorn Y."
@@ -16,6 +17,7 @@
 	"grant-shortenurls": "สร้างยูอาร์แอลแบบสั้น",
 	"right-urlshortener-view-log": "ดูปูมการจัดการยูอาร์แอลแบบสั้น",
 	"urlshortener": "ตัวสร้างยูอาร์แอลแบบสั้น",
+	"qrcode": "ตัวสร้างคิวอาร์โค้ด",
 	"urlshortener-action-done": "ยูอาร์แอลถูกลบและ/หรือกู้คืนแล้ว",
 	"urlshortener-approved-domains": "ลิงก์ที่อยู่ภายใต้{{PLURAL:$1|โดเมนนี้|โดเมนเหล่านี้}}สามารถย่อได้: $2",
 	"urlshortener-blocked": "ผู้ใช้ที่ถูกบล็อกไม่สามารถสร้างยูอาร์แอลแบบสั้นได้",
@@ -24,6 +26,7 @@
 	"urlshortener-deleted": "ยูอาร์แอลแบบสั้นนี้ถูกลบแล้ว",
 	"urlshortener-desc": "ตัวสร้างยูอาร์แอลแบบสั้นสำหรับยูอาร์แอลที่กำหนดเอง",
 	"urlshortener-disabled": "การสร้างยูอาร์แอลแบบสั้นใหม่ถูกปิดใช้งานชั่วคราว",
+	"urlshortener-qrcode-disabled": "การสร้างคิวอาร์โค้ดถูกปิดใช้งาน",
 	"urlshortener-enter-short-code-delete": "รหัสยูอาร์แอลแบบสั้นที่จะลบ",
 	"urlshortener-enter-short-code-restore": "รหัสยูอาร์แอลแบบสั้นที่จะกู้คืน",
 	"urlshortener-error-badports": "ยูอาร์แอลที่มีพอร์ตไม่อนุญาตให้ทำการย่อ",
@@ -39,6 +42,8 @@
 	"urlshortener-manage-reason": "เหตุผล",
 	"urlshortener-not-found-message": "ขออภัย ไม่พบยูอาร์แอลที่คุณกำลังค้นหา",
 	"urlshortener-not-found-title": "ไม่พบยูอาร์แอลแบบสั้น",
+	"urlshortener-qrcode-url-label": "ยูอาร์แอล:",
+	"urlshortener-qrcode-form-submit": "ส่ง",
 	"urlshortener-ratelimit": "โปรดรอสักครู่ก่อนที่จะย่อยูอาร์แอลเพิ่มเติม",
 	"urlshortener-short-code-is-not-deleted": "รหัสยูอาร์แอลแบบสั้นไม่ถูกลบ",
 	"urlshortener-short-code-not-found": "ไม่พบรหัสยูอาร์แอลแบบสั้นหรือถูกลบไปแล้ว",

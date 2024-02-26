@@ -4,6 +4,7 @@
 			"Bosogo"
 		]
 	},
+	"action-urlshortener-create-url": "Кыска URL'дерди түзүү",
 	"grant-shortenurls": "Кыска URL'дерди түзүү",
 	"urlshortener": "URL кыскарткыч",
 	"urlshortener-blocked": "Бөгөттөлгөн колдонуучулар URL'ди кыскарта алышпайт",
@@ -15,6 +16,7 @@
 	"urlshortener-shortened-url-alt": "Альтернативалуу URL'ди да колдонсоңуз болот:",
 	"urlshortener-shortened-url-label": "Кыскартылган URL",
 	"urlshortener-toolbox": "URL'ди кыскартуу",
+	"urlshortener-toolbox-qrcode": "QR-кодду жүктөп алуу",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Кыскартуу",
 	"urlshortener-url-input-submitting": "Кыскартылууда…"
