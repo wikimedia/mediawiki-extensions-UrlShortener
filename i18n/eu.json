@@ -1,8 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Subi"
+			"Subi",
+			"Demonocrazy"
 		]
 	},
+	"action-urlshortener-create-url": "URL laburra sortu",
+	"right-urlshortener-create-url": "URL laburra sortu",
+	"action-urlshortener-manage-url": "URL laburrak kudeatu",
+	"action-urlshortener-view-log": "ikusi URL laburrak kudeatzeko erregistroa",
+	"manageshorturls": "Kudeatu URL laburrak",
 	"urlshortener-failed-try-again": "Huts egib du. Berriro saiatu?"
 }

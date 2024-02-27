@@ -4,12 +4,30 @@
 			"Mehtab ahmed"
 		]
 	},
+	"action-urlshortener-create-url": "مختصر یوآرایل ٺاھيو",
+	"right-urlshortener-create-url": "مختصر یوآرایل ٺاھيو",
+	"action-urlshortener-manage-url": "مختصر یوآرایلن کي سنڀاليو",
+	"action-urlshortener-view-log": "مختصر یوآرایلن جو انتظام لاگ ڏسو",
+	"manageshorturls": "مختصر یوآرایلن کي سنڀاليو",
+	"right-urlshortener-manage-url": "مختصر یوآرایلن کي سنڀاليو",
+	"grant-shortenurls": "مختصر یوآرایل ٺاھيو",
+	"right-urlshortener-view-log": "مختصر یوآرایلن جو انتظام لاگ ڏسو",
 	"urlshortener": "يوآرايل مختصرڪار",
+	"urlshortener-action-done": "يوآرايلس ڊاھيون يا بحال ڪيون ويون آھن",
 	"urlshortener-approved-domains": "ھيٺين {{PLURAL:$1|ڊومين|ڊومينس}} ڏانھن ڳنڍڻن کي مختصرڪري سگهجي ٿو: $2.",
+	"urlshortener-blocked": "بندش وڌل واپرائيندڙ مختصر یوآرایلس نٿا ٺاھي سگهن.",
+	"urlshortener-copy-fail": "ڪلپبورڊ تي يوآرايل نقل ڪرڻ ۾ ناڪامي ٿي.",
+	"urlshortener-copy-success": "يوآرايل ڪلپبورڊ تي نقل ڪئي وئي.",
+	"urlshortener-deleted": "ھي مختصر یوآرایل ڊاھي وئي آھي.",
+	"urlshortener-disabled": "نئين مختصر یوآرایل ٺاھڻ عارضی طور غير فعال آھي.",
+	"urlshortener-enter-short-code-delete": "ڊاھڻ لاءِ مختصر یوآرایل ڪوڊ",
+	"urlshortener-enter-short-code-restore": "بحال ڪرڻ لاءِ يوآرايل مختصر ڪوڊ",
 	"urlshortener-failed-try-again": "ناڪام. ٻيهر ڪوشش ڪريو؟",
 	"urlshortener-form-header": "پنھنجي ڊگهي يوآرايل ھتي لڳايو",
+	"urlshortener-shortened-url-alt": "توھان ھي متبادل يوآرايل پڻ استعمال ڪري سگهو ٿا:",
 	"urlshortener-shortened-url-label": "مختصر یوآرایل",
 	"urlshortener-toolbox": "مختصر یوآرایل وٺو",
 	"urlshortener-url-input-label": "يوآرايل",
-	"urlshortener-url-input-submit": "مختصرڪريو"
+	"urlshortener-url-input-submit": "مختصرڪريو",
+	"urlshortener-url-input-submitting": "مختصر ڪندي…"
 }
