@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Aram",
-			"Muhammed taha"
+			"Muhammed taha",
+			"Lolekek"
 		]
 	},
 	"action-urlshortener-create-url": "دروستکردنی کورتە ناونیشانەکان",
@@ -30,6 +31,7 @@
 	"urlshortener-shortened-url-alt": "دەشتوانی ئەم بەستەرە جێگرەوە بەکاربێنیت:",
 	"urlshortener-shortened-url-label": "بەستەری کورتکراوە",
 	"urlshortener-toolbox": "بەستەری کورتکراوە بەدەست بێنە",
+	"urlshortener-toolbox-qrcode": "داگرتن بە کیوئاڕکۆد",
 	"urlshortener-url-input-label": "ناونیشانی ئینتەرنێتی",
 	"urlshortener-url-input-submit": "کورتی بکەرەوە",
 	"urlshortener-url-input-submitting": "کورتی دەکاتەوە...",

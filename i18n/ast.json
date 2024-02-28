@@ -23,5 +23,6 @@
 	"urlshortener-toolbox-qrcode": "Xenerar códigu QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Encurtiar",
-	"urlshortener-url-input-submitting": "Encurtiando…"
+	"urlshortener-url-input-submitting": "Encurtiando…",
+	"urlshortener-qrcode-downloaded": "Códigu QR descargáu como archivu SVG"
 }
