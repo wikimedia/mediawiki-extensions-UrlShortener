@@ -4,6 +4,7 @@
 			"Bosogo"
 		]
 	},
+	"action-urlshortener-create-url": "Кыска URL'дерди түзүү",
 	"grant-shortenurls": "Кыска URL'дерди түзүү",
 	"urlshortener": "URL кыскарткыч",
 	"urlshortener-blocked": "Бөгөттөлгөн колдонуучулар URL'ди кыскарта алышпайт",
