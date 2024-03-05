@@ -7,7 +7,9 @@
 			"Shirayuki",
 			"Skalman",
 			"Umherirrender",
-			"Yuvi Panda"
+			"Yuvi Panda",
+			"Amire80",
+			"MusikAnimal"
 		]
 	},
 	"action-urlshortener-create-url": "{{doc-action|urlshortener-create-url}}",
@@ -20,7 +22,7 @@
 	"right-urlshortener-view-log": "{{doc-right|urlshortener-view-log}}",
 	"urlshortener": "{{doc-special|UrlShortner}}",
 	"urlshortener-action-done": "Message when the action is done",
-	"urlshortener-approved-domains": "Help message displayed on Special:UrlShortener showing which domains can be shortened. $1 is the number of domains, $2 is a comma separated list of domains.",
+	"urlshortener-approved-domains": "Help message displayed on Special:UrlShortener showing which domains can be shortened.\n* $1 is the number of domains.\n* $2 is a comma-separated list of domains.",
 	"urlshortener-blocked": "Error message shown when the user is blocked",
 	"urlshortener-copy-fail": "Message shown when copying to clipboard failed.",
 	"urlshortener-copy-success": "Message shown when copyging to clipboard was successful.",
