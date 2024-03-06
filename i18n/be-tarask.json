@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Renessaince"
+		]
+	},
+	"action-urlshortener-create-url": "стварэньне кароткіх URL",
+	"right-urlshortener-create-url": "Стварэньне кароткіх URL",
+	"action-urlshortener-manage-url": "кіраваньне кароткімі URL",
+	"manageshorturls": "Кіраваньне кароткімі URL",
+	"right-urlshortener-manage-url": "Кіраваньне кароткімі URL",
+	"grant-shortenurls": "Стварэньне кароткіх URL",
+	"urlshortener": "Скарачальнік URL",
+	"qrcode": "Генэратар QR-кодаў",
+	"urlshortener-toolbox-qrcode": "Спампаваць QR-код",
+	"urlshortener-qrcode-downloaded": "QR-код спампаваны ў SVG-файл"
+}
