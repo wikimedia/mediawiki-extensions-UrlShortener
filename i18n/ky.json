@@ -19,5 +19,6 @@
 	"urlshortener-toolbox-qrcode": "QR-кодду жүктөп алуу",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Кыскартуу",
-	"urlshortener-url-input-submitting": "Кыскартылууда…"
+	"urlshortener-url-input-submitting": "Кыскартылууда…",
+	"urlshortener-qrcode-downloaded": "QR-код SVG форматында жүктөлүп алынды"
 }
