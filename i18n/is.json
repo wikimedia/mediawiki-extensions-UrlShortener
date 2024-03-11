@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Sveinn í Felli",
-			"Snævar"
+			"Snævar",
+			"Stefán Örvar Sigmundsson"
 		]
 	},
+	"urlshortener": "Veflóðarstyttir",
+	"urlshortener-desc": "Veflóðarstyttir fyrir ótilteknar vefslóðir",
 	"urlshortener-toolbox": "Fá styttan tengil",
 	"urlshortener-url-input-label": "Vefslóð"
 }
