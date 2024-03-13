@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chadyka"
+			"Chadyka",
+			"Plaga med"
 		]
 	},
 	"action-urlshortener-create-url": "ствараць кароткія URL-адрасы",
@@ -42,6 +43,7 @@
 	"urlshortener-shortened-url-alt": "Вы таксама можаце выкарыстоўваць гэты альтэрнатыўны URL-адрас:",
 	"urlshortener-shortened-url-label": "Скарочаны URL-адрас",
 	"urlshortener-toolbox": "Атрымаць скарочаны URL-адрас",
+	"urlshortener-toolbox-qrcode": "Спампаваць QR-код",
 	"urlshortener-url-input-label": "URL-адрас",
 	"urlshortener-url-input-submit": "Скараціць",
 	"urlshortener-url-input-submitting": "Скарачэнне...",
@@ -54,5 +56,6 @@
 	"logeventslist-urlshortener-log": "Журнал кіравання кароткімі URL-адрасамі",
 	"log-action-filter-urlshortener": "Тып кіравання",
 	"log-action-filter-urlshortener-delete": "Выдаленне URL-адраса",
-	"log-action-filter-urlshortener-restore": "Аднаўленне URL-адраса"
+	"log-action-filter-urlshortener-restore": "Аднаўленне URL-адраса",
+	"urlshortener-qrcode-downloaded": "QR-код спампаваны як SVG-файл"
 }
