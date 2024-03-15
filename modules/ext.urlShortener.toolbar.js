@@ -6,6 +6,8 @@
 	// eslint-disable-next-line no-jquery/no-global-selector
 	const $qrCodeLink = $( '#t-urlshortener-qrcode a, .menu__item--page-actions-overflow-qrcode' );
 
+	const filename = mw.config.get( 'wgPageName' ) + '.svg';
+
 	$shortenUrlLink.attr( 'aria-haspopup', 'dialog' );
 	$shortenUrlLink.on( 'click', ( e ) => {
 		e.preventDefault();
@@ -59,7 +61,7 @@
 							href: '.'
 						} );
 						download.$button.attr( {
-							download: 'qrcode.svg',
+							download: filename,
 							// OOUI prefixes './' for security, so set the attribute directly
 							href: qrCodeUri
 						} );
@@ -114,7 +116,7 @@
 				// Create hidden anchor and force a download. This seems hacky,
 				// but we'd otherwise we need a specialized API with the proper response header.
 				const downloadLink = document.createElement( 'a' );
-				downloadLink.download = 'qrcode.svg';
+				downloadLink.download = filename;
 				downloadLink.href = 'data:image/svg+xml,' + encodeURIComponent( data.shortenurl.qrcode );
 				document.body.appendChild( downloadLink );
 				downloadLink.click();

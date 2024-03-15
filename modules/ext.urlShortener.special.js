@@ -111,8 +111,9 @@ class UrlShortener {
 	 * Update the QR code in the UI, creating it if necessary.
 	 *
 	 * @param {string} [qrCodeSvg] SVG string. If not provided the existing QR code will be removed.
+	 * @param {string} [url] The URL that was shortened. Used for the download filename.
 	 */
-	qrCodeUiHandler( qrCodeSvg ) {
+	qrCodeUiHandler( qrCodeSvg, url ) {
 		if ( !qrCodeSvg ) {
 			// eslint-disable-next-line no-jquery/no-global-selector
 			$( '.ext-urlshortener-qrcode-container' ).remove();
@@ -120,36 +121,53 @@ class UrlShortener {
 			this.qrCodeDownloadButton = null;
 			return;
 		}
-		const qrCodeUri = `data:image/svg+xml;charset=utf-8,${ encodeURIComponent( qrCodeSvg ) }`;
-		if ( this.$qrCodeImage ) {
-			this.$qrCodeImage.attr( 'src', qrCodeUri );
-			this.qrCodeDownloadButton.$button.attr( 'href', qrCodeUri );
-			return;
+
+		if ( !this.$qrCodeImage ) {
+			// Remove PHP result if present
+			// eslint-disable-next-line no-jquery/no-global-selector
+			$( '.ext-urlshortener-qrcode-container' ).remove();
+			this.$qrCodeImage = $( '<img>' );
+			this.qrCodeDownloadButton = new OO.ui.ButtonWidget( {
+				icon: 'download',
+				label: mw.msg( 'urlshortener-toolbox-qrcode' ),
+				href: '.'
+			} );
+			// eslint-disable-next-line no-jquery/no-global-selector
+			$( '.ext-urlshortener-container' ).append(
+				$( '<div>' ).addClass( 'ext-urlshortener-qrcode-container' ).append(
+					$( '<div>' ).addClass( 'ext-urlshortener-qrcode' ).append( this.$qrCodeImage ),
+					this.qrCodeDownloadButton.$element
+				)
+			);
 		}
-		// Remove PHP result if present
-		// eslint-disable-next-line no-jquery/no-global-selector
-		$( '.ext-urlshortener-qrcode-container' ).remove();
-		this.$qrCodeImage = $( '<img>' ).attr( 'src', qrCodeUri );
 
-		this.qrCodeDownloadButton = new OO.ui.ButtonWidget( {
-			icon: 'download',
-			label: mw.msg( 'urlshortener-toolbox-qrcode' ),
-			href: '.'
-		} );
+		const filename = this.getFilenameFromUrl( url );
 
+		const qrCodeUri = `data:image/svg+xml;charset=utf-8,${ encodeURIComponent( qrCodeSvg ) }`;
+
+		this.$qrCodeImage.attr( 'src', qrCodeUri );
 		this.qrCodeDownloadButton.$button.attr( {
-			download: 'qrcode.svg',
+			download: filename,
 			// OOUI prefixes './' for security, so set the attribute directly
 			href: qrCodeUri
 		} );
+	}
 
-		// eslint-disable-next-line no-jquery/no-global-selector
-		$( '.ext-urlshortener-container' ).append(
-			$( '<div>' ).addClass( 'ext-urlshortener-qrcode-container' ).append(
-				$( '<div>' ).addClass( 'ext-urlshortener-qrcode' ).append( this.$qrCodeImage ),
-				this.qrCodeDownloadButton.$element
-			)
-		);
+	/**
+	 * Get a filename for the QR code download based on the URL.
+	 *
+	 * @param {string} url The URL that was shortened.
+	 * @return {string} The filename for the QR code download.
+	 */
+	getFilenameFromUrl( url ) {
+		const urlObj = new URL( url );
+		const parts = urlObj.pathname.split( '/' ).filter( Boolean );
+		if ( parts.length > 0 ) {
+			return parts[ parts.length - 1 ] + '.svg';
+		} else {
+			// Use domain as filename if URL doesn't have a path
+			return urlObj.hostname + '.svg';
+		}
 	}
 
 	/**
@@ -159,9 +177,8 @@ class UrlShortener {
 		this.input.getValidity().then( () => {
 			this.input.pushPending().setReadOnly( true );
 			this.setSubmit( 'submitting' );
-			this.shortenUrl(
-				this.input.getValue()
-			).then( ( result ) => {
+			const url = this.input.getValue();
+			this.shortenUrl( url ).then( ( result ) => {
 				if ( result.shorturl ) {
 					this.shortUrlUiHandler( result );
 				} else if ( this.shortened ) {
@@ -169,7 +186,7 @@ class UrlShortener {
 					this.shortened.$element.remove();
 					this.shortened = null;
 				}
-				this.qrCodeUiHandler( result.qrcode );
+				this.qrCodeUiHandler( result.qrcode, url );
 			}, ( err ) => {
 				this.fieldLayout.setErrors( [ err.info ] );
 			} ).always( () => {

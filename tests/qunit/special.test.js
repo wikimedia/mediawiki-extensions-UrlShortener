@@ -63,6 +63,22 @@ QUnit.module( 'ext.urlShortener.special', ( hooks ) => {
 		assert.strictEqual( actualErr, expectError, 'error' );
 	} );
 
+	QUnit.test.each( 'UrlShortener.getFilenameFromUrl', eachEntry( {
+		'http://example.org/test': [ 'test.svg' ],
+		'https://example.org/test': [ 'test.svg' ],
+		'http://example.org/path/to/file': [ 'file.svg' ],
+		'http://example.org/path/to/file/': [ 'file.svg' ],
+		'http://example.org': [ 'example.org.svg' ],
+		'https://example.org/': [ 'example.org.svg' ],
+		'http://example.org/document.pdf': [ 'document.pdf.svg' ],
+		'http://subdomain.example.org/article': [ 'article.svg' ],
+		'http://example.org/path/with-dashes/file': [ 'file.svg' ],
+		'http://example.org/path/with_underscores/file': [ 'file.svg' ]
+	} ), ( assert, [ url, [ expectedFilename ] ] ) => {
+		const shortener = new UrlShortener();
+		assert.strictEqual( shortener.getFilenameFromUrl( url ), expectedFilename );
+	} );
+
 	// https://github.com/qunitjs/qunit/issues/1764
 	function eachEntry( dataset ) {
 		return Object.entries( dataset ).reduce( ( obj, [ key, val ] ) => {
