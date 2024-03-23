@@ -21,6 +21,11 @@ class SpecialUrlRedirector extends UnlistedSpecialPage {
 			$out->redirect( SpecialPage::getTitleFor( 'UrlShortener' )->getFullURL() );
 			return;
 		}
+
+		// Redirect destinations are public information
+		// Allow redirects to be resolved across domains (T358049).
+		$this->getRequest()->response()->header( 'Access-Control-Allow-Origin: *' );
+
 		$url = UrlShortenerUtils::getURL( $par, PROTO_CURRENT );
 		if ( $url !== false ) {
 			$out->setCdnMaxage( UrlShortenerUtils::CACHE_TTL_VALID );
