@@ -5,6 +5,7 @@
 		]
 	},
 	"action-urlshortener-create-url": "Кыска URL'дерди түзүү",
+	"right-urlshortener-create-url": "URL'дерди кыскартуу",
 	"grant-shortenurls": "Кыска URL'дерди түзүү",
 	"urlshortener": "URL кыскарткыч",
 	"urlshortener-blocked": "Бөгөттөлгөн колдонуучулар URL'ди кыскарта алышпайт",
@@ -13,7 +14,7 @@
 	"urlshortener-form-header": "Узун URL'иңизди бул жерге келтириңиз",
 	"urlshortener-manage-reason": "Себеп",
 	"urlshortener-not-found-title": "Кыска URL табылган жок",
-	"urlshortener-shortened-url-alt": "Альтернативалуу URL'ди да колдонсоңуз болот:",
+	"urlshortener-shortened-url-alt": "Бөлөк URL'ди да колдонсоңуз болот:",
 	"urlshortener-shortened-url-label": "Кыскартылган URL",
 	"urlshortener-toolbox": "URL'ди кыскартуу",
 	"urlshortener-url-input-label": "URL",
