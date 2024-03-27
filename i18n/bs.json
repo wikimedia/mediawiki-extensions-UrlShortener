@@ -11,10 +11,13 @@
 	"urlshortener-disabled": "Skraćivanje linkova privremeno je isključeno.",
 	"urlshortener-error-nouserpass": "Nije dozvoljeno skraćivanje linkova koji sadrže korisnička imena ili lozinke",
 	"urlshortener-failed-try-again": "Nije uspjelo. Da probam ponovo?",
+	"urlshortener-manage-reason": "Razlog",
 	"urlshortener-shortened-url-alt": "Također možete koristiti sljedeći link:",
 	"urlshortener-shortened-url-label": "Skraćeni link",
 	"urlshortener-toolbox": "Skraćeni link",
+	"urlshortener-toolbox-qrcode": "Preuzmi QR kod",
 	"urlshortener-url-input-label": "Link",
 	"urlshortener-url-input-submit": "Skrati",
-	"urlshortener-url-input-submitting": "Skraćujem…"
+	"urlshortener-url-input-submitting": "Skraćujem…",
+	"urlshortener-qrcode-downloaded": "QR kod preuzet u formatu SVG"
 }
