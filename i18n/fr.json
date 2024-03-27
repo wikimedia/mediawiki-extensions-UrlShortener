@@ -11,6 +11,7 @@
 			"Pols12",
 			"Thibaut120094",
 			"Titip1995",
+			"Urhixidur",
 			"Verdy p",
 			"Wladek92",
 			"Zarisi"
@@ -69,7 +70,7 @@
 	"logentry-urlshortener-restore": "$1 {{GENDER:$2|a restauré}} l'URL courte « $4 »",
 	"logeventslist-urlshortener-log": "Journal de gestion des URL courtes",
 	"log-action-filter-urlshortener": "Type de gestion",
-	"log-action-filter-urlshortener-delete": "Supression d'URL",
+	"log-action-filter-urlshortener-delete": "Suppression d’URL",
 	"log-action-filter-urlshortener-restore": "Restauration d’URL",
 	"urlshortener-qrcode-downloaded": "Code QR téléchargé en fichier SVG"
 }
