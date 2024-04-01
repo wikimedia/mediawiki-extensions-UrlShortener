@@ -10,7 +10,11 @@
 			"Titip1995",
 			"Verdy p",
 			"Wladek92",
-			"Zarisi"
+			"Zarisi",
+			"Ayack",
+			"Metamorforme42",
+			"Momo50WM",
+			"Urhixidur"
 		]
 	},
 	"action-urlshortener-create-url": "créer des URL courtes",
@@ -62,6 +66,6 @@
 	"logentry-urlshortener-restore": "$1 {{GENDER:$2|a restauré}} l'URL courte « $4 »",
 	"logeventslist-urlshortener-log": "Journal de gestion des URL courtes",
 	"log-action-filter-urlshortener": "Type de gestion",
-	"log-action-filter-urlshortener-delete": "Supression d'URL",
+	"log-action-filter-urlshortener-delete": "Suppression d’URL",
 	"log-action-filter-urlshortener-restore": "Restauration d’URL"
 }
