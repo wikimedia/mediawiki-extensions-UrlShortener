@@ -9,5 +9,6 @@
 	"urlshortener": "Veflóðarstyttir",
 	"urlshortener-desc": "Veflóðarstyttir fyrir ótilteknar vefslóðir",
 	"urlshortener-toolbox": "Fá styttan tengil",
+	"urlshortener-toolbox-qrcode": "Niðurhlaða QR-kóða",
 	"urlshortener-url-input-label": "Vefslóð"
 }
