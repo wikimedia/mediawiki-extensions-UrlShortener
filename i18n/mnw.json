@@ -4,5 +4,19 @@
 			"咽頭べさ"
 		]
 	},
-	"urlshortener-toolbox": "မကေတ်URLဗီုပြၚ်ဂၠေံဂၠေံ"
+	"action-urlshortener-create-url": "မခၞံ URL ဗီုပြၚ်ဂၠေံဂၠေံဂမၠိုၚ်",
+	"right-urlshortener-create-url": "မခၞံ URL ဗီုပြၚ်ဂၠေံဂၠေံဂမၠိုၚ်",
+	"action-urlshortener-manage-url": "မသ္ပ URL ဗီုပြၚ်ဂၠေံဂၠေံဂမၠိုၚ်",
+	"manageshorturls": "မသ္ပ URL ဗီုပြၚ်ဂၠေံဂၠေံဂမၠိုၚ်",
+	"right-urlshortener-manage-url": "မသ္ပ URL ဗီုပြၚ်ဂၠေံဂၠေံဂမၠိုၚ်",
+	"grant-shortenurls": "မခၞံ URL ဗီုပြၚ်ဂၠေံဂၠေံဂမၠိုၚ်",
+	"right-urlshortener-view-log": "မစၟဳမသ္ပ URL ဗီုပြၚ်ဂၠေံဂၠေံဂမၠိုၚ်",
+	"urlshortener-manage-reason": "ဟိုတ်",
+	"urlshortener-qrcode-form-submit": "ဗပေၚ်",
+	"urlshortener-toolbox": "မကေတ်URLဗီုပြၚ်ဂၠေံဂၠေံ",
+	"urlshortener-toolbox-qrcode": "တံၚ်ဂြဲကေတ်မလိက်ပၞုက် QR",
+	"urlshortener-url-input-submit": "ခမၞန်ကဵုဂၠေံစှ်ေ",
+	"log-action-filter-urlshortener-delete": "မပလီုထောံ URL",
+	"log-action-filter-urlshortener-restore": "မကလေၚ်ကေတ် URL",
+	"urlshortener-qrcode-downloaded": "တံၚ်ဂြဲကေတ်မလိက်ပၞုက် QR မဒှ်ဝှာၚ် SVG"
 }

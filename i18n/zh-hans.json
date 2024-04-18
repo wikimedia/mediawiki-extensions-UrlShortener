@@ -6,7 +6,8 @@
 			"Liuxinyu970226",
 			"Shizhao",
 			"Viztor",
-			"Xyb"
+			"Xyb",
+			"Anterdc99"
 		]
 	},
 	"action-urlshortener-create-url": "创建短链接",
@@ -18,6 +19,7 @@
 	"grant-shortenurls": "创建短链接",
 	"right-urlshortener-view-log": "查看短链接管理日志",
 	"urlshortener": "URL缩短器",
+	"qrcode": "二维码生成器",
 	"urlshortener-action-done": "URL已被删除和/或恢复",
 	"urlshortener-approved-domains": "至以下{{PLURAL:$1|域名}}的链接可被缩短：$2。",
 	"urlshortener-blocked": "被封禁的用户无法创建短链接。",
@@ -26,6 +28,7 @@
 	"urlshortener-deleted": "此短链接已被删除。",
 	"urlshortener-desc": "任意URL的缩短器",
 	"urlshortener-disabled": "创建新的缩短URL被临时禁用。",
+	"urlshortener-qrcode-disabled": "二维码的生成被禁用。",
 	"urlshortener-enter-short-code-delete": "要删除的URL短码",
 	"urlshortener-enter-short-code-restore": "要恢复的URL短码",
 	"urlshortener-error-badports": "包含端口的URL不允许被缩短",
@@ -41,6 +44,8 @@
 	"urlshortener-manage-reason": "原因",
 	"urlshortener-not-found-message": "抱歉，找不到您要查找的URL。",
 	"urlshortener-not-found-title": "未找到短网址",
+	"urlshortener-qrcode-url-label": "URL：",
+	"urlshortener-qrcode-form-submit": "提交",
 	"urlshortener-ratelimit": "在缩短更多URL前，请等待一段时间。",
 	"urlshortener-short-code-is-not-deleted": "URL短码不能被删除",
 	"urlshortener-short-code-not-found": "未找到或已删除URL短码",
