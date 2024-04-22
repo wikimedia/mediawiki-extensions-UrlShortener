@@ -15,7 +15,7 @@ use ApiBase;
 use ApiMain;
 use ApiUsageException;
 use Liuggio\StatsdClient\Factory\StatsdDataFactoryInterface;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Status\Status;
 use Wikimedia\ParamValidator\ParamValidator;
 
@@ -23,16 +23,23 @@ class ApiShortenUrl extends ApiBase {
 
 	private bool $qrCodeEnabled;
 	private int $qrCodeShortenLimit;
+	private PermissionManager $permissionManager;
 	private StatsdDataFactoryInterface $statsdDataFactory;
 
 	/**
 	 * @inheritDoc
 	 */
-	public function __construct( ApiMain $mainModule, $moduleName, StatsdDataFactoryInterface $statsdDataFactory ) {
+	public function __construct(
+		ApiMain $mainModule,
+		$moduleName,
+		PermissionManager $permissionManager,
+		StatsdDataFactoryInterface $statsdDataFactory
+	) {
 		parent::__construct( $mainModule, $moduleName );
 
 		$this->qrCodeEnabled = (bool)$this->getConfig()->get( 'UrlShortenerEnableQrCode' );
 		$this->qrCodeShortenLimit = (int)$this->getConfig()->get( 'UrlShortenerQrCodeShortenLimit' );
+		$this->permissionManager = $permissionManager;
 		$this->statsdDataFactory = $statsdDataFactory;
 	}
 
@@ -109,9 +116,7 @@ class ApiShortenUrl extends ApiBase {
 	 * @throws ApiUsageException if the user lacks the rights
 	 */
 	public function checkUserRights() {
-		$permManager = MediaWikiServices::getInstance()->getPermissionManager();
-
-		if ( !$permManager->userHasRight( $this->getUser(), 'urlshortener-create-url' ) ) {
+		if ( !$this->permissionManager->userHasRight( $this->getUser(), 'urlshortener-create-url' ) ) {
 			$this->dieWithError( [ 'apierror-permissiondenied',
 				$this->msg( "apierror-urlshortener-permissiondenied" ) ]
 			);

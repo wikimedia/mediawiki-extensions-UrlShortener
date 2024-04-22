@@ -20,6 +20,7 @@
 		"shortenurl": {
 			"class": "MediaWiki\\Extension\\UrlShortener\\ApiShortenUrl",
 			"services": [
+				"PermissionManager",
 				"StatsdDataFactory"
 			]
 		}
