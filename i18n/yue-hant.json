@@ -7,5 +7,6 @@
 	},
 	"urlshortener": "URL縮短器",
 	"urlshortener-not-found-title": "揾唔到短嘅URL",
-	"urlshortener-toolbox": "攞短網址"
+	"urlshortener-toolbox": "攞短網址",
+	"urlshortener-toolbox-qrcode": "下載QR code"
 }

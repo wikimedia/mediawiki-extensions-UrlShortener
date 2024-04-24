@@ -42,10 +42,12 @@
 	"urlshortener-shortened-url-alt": "Puoi anche usare questo URL alternativo:",
 	"urlshortener-shortened-url-label": "URL abbreviato",
 	"urlshortener-toolbox": "Ottieni URL breve",
+	"urlshortener-toolbox-qrcode": "Scarica codice QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Abbrevia",
 	"urlshortener-url-input-submitting": "Abbreviando…",
 	"urlshortener-url-too-long": "L'URL è troppo lungo, la dimensione massima è di {{PLURAL:$1|un carattere|$1 caratteri}}",
 	"log-name-urlshortener": "Gestione URL abbreviati",
-	"logeventslist-urlshortener-log": "Gestione URL abbreviati"
+	"logeventslist-urlshortener-log": "Gestione URL abbreviati",
+	"urlshortener-qrcode-downloaded": "Codice QR scaricato come file SVG"
 }
