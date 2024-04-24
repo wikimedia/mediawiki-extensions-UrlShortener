@@ -10,14 +10,19 @@ use MediaWiki\User\User;
  */
 class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
+	private function getUtils(): UrlShortenerUtils {
+		return $this->getServiceContainer()->get( 'UrlShortener.Utils' );
+	}
+
 	/**
 	 * @dataProvider provideCartesianProduct
 	 * @covers ::cartesianProduct
 	 */
 	public function testCartesianProduct( $input, $expected ) {
+		$utils = $this->getUtils();
 		$this->assertEquals(
 			$expected,
-			UrlShortenerUtils::cartesianProduct( $input )
+			$utils->cartesianProduct( $input )
 		);
 	}
 
@@ -53,9 +58,10 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 				'3' => 'e',
 			]
 		] );
+		$utils = $this->getUtils();
 		$this->assertEquals(
 			$expected,
-			UrlShortenerUtils::getShortcodeVariants( $input )
+			$utils->getShortcodeVariants( $input )
 		);
 	}
 
@@ -87,7 +93,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testConvertToProtocol( $input, $proto, $expected ) {
 		$this->overrideConfigValue( 'Script', '/w' );
-		$this->assertEquals( $expected, UrlShortenerUtils::convertToProtocol( $input, $proto ) );
+		$utils = $this->getUtils();
+		$this->assertEquals( $expected, $utils->convertToProtocol( $input, $proto ) );
 	}
 
 	public static function provideConvertToProtocol() {
@@ -134,7 +141,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 			'ArticlePath' => '/wiki/$1',
 			'Script' => '/w/index.php',
 		] );
-		$this->assertEquals( $expected, UrlShortenerUtils::normalizeUrl( $url ) );
+		$utils = $this->getUtils();
+		$this->assertEquals( $expected, $utils->normalizeUrl( $url ) );
 	}
 
 	public static function provideNormalizeUrl() {
@@ -242,14 +250,15 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 			'UrlShortenerIdSet',
 			'23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$'
 		);
+		$utils = $this->getUtils();
 		for ( $i = 0; $i < 1000; $i++ ) {
 			$int = rand();
-			$encoded = UrlShortenerUtils::encodeId( $int );
-			$decoded = UrlShortenerUtils::decodeId( $encoded );
+			$encoded = $utils->encodeId( $int );
+			$decoded = $utils->decodeId( $encoded );
 			$this->assertEquals( $int, $decoded );
 			// Alternative URLs
-			$encoded = UrlShortenerUtils::encodeId( $int, true );
-			$decoded = UrlShortenerUtils::decodeId( $encoded );
+			$encoded = $utils->encodeId( $int, true );
+			$decoded = $utils->decodeId( $encoded );
 			$this->assertEquals( $int, $decoded );
 		}
 	}
@@ -275,12 +284,13 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 				'0' => 'o'
 			]
 		);
+		$utils = $this->getUtils();
 		$int = 198463;
-		$encoded = UrlShortenerUtils::encodeId( $int );
+		$encoded = $utils->encodeId( $int );
 		$this->assertEquals( '32-o', $encoded );
-		$decoded = UrlShortenerUtils::decodeId( '32$0' );
+		$decoded = $utils->decodeId( '32$0' );
 		$this->assertEquals( $int, $decoded );
-		$decoded = UrlShortenerUtils::decodeId( '32-o' );
+		$decoded = $utils->decodeId( '32-o' );
 		$this->assertEquals( $int, $decoded );
 
 		// Clear static cache
@@ -296,8 +306,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 			]
 		);
 		$this->assertEquals(
-			UrlShortenerUtils::decodeId( 'o0OiIl1' ),
-			UrlShortenerUtils::decodeId( 'oooiiii' )
+			$utils->decodeId( 'o0OiIl1' ),
+			$utils->decodeId( 'oooiiii' )
 		);
 	}
 
@@ -305,11 +315,12 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::getURL
 	 */
 	public function testGetURL() {
+		$utils = $this->getUtils();
 		$url = 'http://example.org/1';
-		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
+		$status = $utils->maybeCreateShortCode( $url, new User );
 		$this->assertTrue( $status->isGood() );
 		$id = $status->getValue()['url'];
-		$storedUrl = UrlShortenerUtils::getURL( $id, PROTO_HTTP );
+		$storedUrl = $utils->getURL( $id, PROTO_HTTP );
 
 		$this->assertEquals( $url, $storedUrl );
 	}
@@ -321,7 +332,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$url = 'http://example.org/1';
 		$this->overrideConfigValue( 'UrlShortenerUrlSizeLimit', 5 );
 
-		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
+		$utils = $this->getUtils();
+		$status = $utils->maybeCreateShortCode( $url, new User );
 
 		$this->assertFalse( $status->isGood() );
 		$this->assertEquals( 'urlshortener-url-too-long', $status->getErrors()[0]['message']->getKey() );
@@ -333,28 +345,30 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::isURLDeleted
 	 */
 	public function testDeleteURL() {
+		$utils = $this->getUtils();
 		$url = 'http://example.org/1';
-		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
+		$status = $utils->maybeCreateShortCode( $url, new User );
 		$id = $status->getValue()['url'];
 
-		UrlShortenerUtils::deleteURL( $id );
+		$utils->deleteURL( $id );
 
-		$this->assertFalse( UrlShortenerUtils::getURL( $id, PROTO_HTTP ) );
-		$this->assertTrue( UrlShortenerUtils::isURLDeleted( $id ) );
+		$this->assertFalse( $utils->getURL( $id, PROTO_HTTP ) );
+		$this->assertTrue( $utils->isURLDeleted( $id ) );
 	}
 
 	/**
 	 * @covers ::restoreURL
 	 */
 	public function testRestoreURL() {
+		$utils = $this->getUtils();
 		$url = 'http://example.org/1';
-		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
+		$status = $utils->maybeCreateShortCode( $url, new User );
 		$id = $status->getValue()['url'];
-		UrlShortenerUtils::deleteURL( $id );
+		$utils->deleteURL( $id );
 
-		UrlShortenerUtils::restoreURL( $id );
+		$utils->restoreURL( $id );
 
-		$storedUrl = UrlShortenerUtils::getURL( $id, PROTO_HTTP );
+		$storedUrl = $utils->getURL( $id, PROTO_HTTP );
 		$this->assertEquals( $url, $storedUrl );
 	}
 
@@ -362,6 +376,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::maybeCreateShortCode
 	 */
 	public function testGetURLBlocked() {
+		$utils = $this->getUtils();
 		$url = 'http://example.org/75';
 
 		$block = $this->getMockBuilder( AbstractBlock::class )
@@ -376,7 +391,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 			->method( 'getBlock' )
 			->willReturn( $block );
 
-		$status = UrlShortenerUtils::maybeCreateShortCode( $url, $user );
+		$status = $utils->maybeCreateShortCode( $url, $user );
 
 		$this->assertFalse( $status->isGood() );
 		$this->assertEquals( 'urlshortener-blocked', $status->getErrors()[0]['message'] );
@@ -390,9 +405,10 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->setContentLang( 'qqx' );
 		$this->overrideConfigValue( 'UrlShortenerAllowedDomains', $this->getDomains() );
 
-		$allowedUrl = UrlShortenerUtils::validateUrl( 'https://en.wikipedia.org/wiki/A' );
-		$disallowedUrl = UrlShortenerUtils::validateUrl( 'http://example.org/75' );
-		$allowedDomainsRegex = UrlShortenerUtils::getAllowedDomainsRegex();
+		$utils = $this->getUtils();
+		$allowedUrl = $utils->validateUrl( 'https://en.wikipedia.org/wiki/A' );
+		$disallowedUrl = $utils->validateUrl( 'http://example.org/75' );
+		$allowedDomainsRegex = $utils->getAllowedDomainsRegex();
 
 		$this->assertTrue( $allowedUrl );
 		$this->assertStringEndsWith( '$', $allowedDomainsRegex );
@@ -407,11 +423,12 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->setContentLang( 'qqx' );
 		$this->overrideConfigValue( 'Server', 'http://example.org' );
 
-		$allowedUrl = UrlShortenerUtils::validateUrl( 'http://example.org/test' );
-		$disallowedUrl = UrlShortenerUtils::validateUrl( 'https://en.wikipedia.org/wiki/A' );
+		$utils = $this->getUtils();
+		$allowedUrl = $utils->validateUrl( 'http://example.org/test' );
+		$disallowedUrl = $utils->validateUrl( 'https://en.wikipedia.org/wiki/A' );
 
 		$this->assertTrue( $allowedUrl );
-		$this->assertSame( 'example\.org', UrlShortenerUtils::getAllowedDomainsRegex() );
+		$this->assertSame( 'example\.org', $utils->getAllowedDomainsRegex() );
 		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $disallowedUrl );
 	}
 
@@ -423,9 +440,10 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @param bool $expected
 	 */
 	public function testShouldShortenUrl( bool $qrCodeRequested, int $limit, bool $expected ): void {
+		$utils = $this->getUtils();
 		$this->assertEquals(
 			$expected,
-			UrlShortenerUtils::shouldShortenUrl( $qrCodeRequested, 'https://example.org', $limit )
+			$utils->shouldShortenUrl( $qrCodeRequested, 'https://example.org', $limit )
 		);
 	}
 
@@ -464,7 +482,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 			'UrlShortenerServer' => 'https://example.org',
 			'UrlShortenerTemplate' => '/r/$1'
 		] );
-		$qrCode = UrlShortenerUtils::getQrCode(
+		$utils = $this->getUtils();
+		$qrCode = $utils->getQrCode(
 			'https://example.org', $limit, $this->getTestUser()->getUser(), $useDataUri
 		)->getValue();
 		foreach ( $expectedKeys as $key ) {

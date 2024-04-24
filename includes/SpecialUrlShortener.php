@@ -27,19 +27,23 @@ class SpecialUrlShortener extends FormSpecialPage {
 
 	protected ?FieldLayout $resultField = null;
 	protected ?Status $resultStatus = null;
+	private UrlShortenerUtils $utils;
 	private UrlUtils $urlUtils;
 
 	/**
+	 * @param UrlShortenerUtils $utils
 	 * @param UrlUtils $urlUtils
 	 * @param string $name
 	 * @param string $restriction
 	 */
 	public function __construct(
+		UrlShortenerUtils $utils,
 		UrlUtils $urlUtils,
 		$name = 'UrlShortener',
 		$restriction = 'urlshortener-create-url'
 	) {
 		parent::__construct( $name, $restriction );
+		$this->utils = $utils;
 		$this->urlUtils = $urlUtils;
 	}
 
@@ -112,7 +116,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 			->suppressDefaultSubmit();
 		$this->getOutput()->addModules( $module );
 		$this->getOutput()->addJsConfigVars( [
-			'wgUrlShortenerAllowedDomains' => UrlShortenerUtils::getAllowedDomainsRegex(),
+			'wgUrlShortenerAllowedDomains' => $this->utils->getAllowedDomainsRegex(),
 			'wgUrlShortenerAllowArbitraryPorts' => $this->getConfig()->get( 'UrlShortenerAllowArbitraryPorts' ),
 		] );
 		if ( $this->resultField !== null ) {
@@ -132,7 +136,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 			// No input
 			return true;
 		}
-		$validity_check = UrlShortenerUtils::validateUrl( $url );
+		$validity_check = $this->utils->validateUrl( $url );
 		if ( $validity_check === true ) {
 			return true;
 		}
@@ -185,7 +189,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 		if ( $data['url'] === null ) {
 			return false;
 		}
-		$status = UrlShortenerUtils::maybeCreateShortCode( $data['url'], $this->getUser() );
+		$status = $this->utils->maybeCreateShortCode( $data['url'], $this->getUser() );
 		if ( !$status->isOK() ) {
 			return $status;
 		}
@@ -203,13 +207,13 @@ class SpecialUrlShortener extends FormSpecialPage {
 			// when using Special:QrCode which extends this class.
 			return;
 		}
-		$altUrl = UrlShortenerUtils::makeUrl( $result[ 'alt' ] );
+		$altUrl = $this->utils->makeUrl( $result[ 'alt' ] );
 		$altLink = new Tag( 'a' );
 		$altLink->setAttributes( [ 'href' => $altUrl ] );
 		$altLink->appendContent( $altUrl );
 		$this->resultField = new FieldLayout(
 			new TextInputWidget( [
-				'value' => UrlShortenerUtils::makeUrl( $result[ 'url' ] ),
+				'value' => $this->utils->makeUrl( $result[ 'url' ] ),
 				'readOnly' => true,
 			] ),
 			[

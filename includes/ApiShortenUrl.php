@@ -25,12 +25,14 @@ class ApiShortenUrl extends ApiBase {
 	private int $qrCodeShortenLimit;
 	private PermissionManager $permissionManager;
 	private StatsFactory $statsFactory;
+	private UrlShortenerUtils $utils;
 
 	public function __construct(
 		ApiMain $mainModule,
 		string $moduleName,
 		PermissionManager $permissionManager,
-		StatsFactory $statsFactory
+		StatsFactory $statsFactory,
+		UrlShortenerUtils $utils
 	) {
 		parent::__construct( $mainModule, $moduleName );
 
@@ -38,6 +40,7 @@ class ApiShortenUrl extends ApiBase {
 		$this->qrCodeShortenLimit = (int)$this->getConfig()->get( 'UrlShortenerQrCodeShortenLimit' );
 		$this->permissionManager = $permissionManager;
 		$this->statsFactory = $statsFactory->withComponent( 'UrlShortener' );
+		$this->utils = $utils;
 	}
 
 	public function execute() {
@@ -52,15 +55,15 @@ class ApiShortenUrl extends ApiBase {
 		$url = $params['url'];
 		$qrCode = $this->qrCodeEnabled && $params['qrcode'];
 
-		$validityCheck = UrlShortenerUtils::validateUrl( $url );
+		$validityCheck = $this->utils->validateUrl( $url );
 		if ( $validityCheck !== true ) {
 			$this->dieStatus( Status::newFatal( $validityCheck ) );
 		}
 
 		if ( $qrCode ) {
-			$status = UrlShortenerUtils::getQrCode( $url, $this->qrCodeShortenLimit, $this->getUser() );
+			$status = $this->utils->getQrCode( $url, $this->qrCodeShortenLimit, $this->getUser() );
 		} else {
-			$status = UrlShortenerUtils::maybeCreateShortCode( $url, $this->getUser() );
+			$status = $this->utils->maybeCreateShortCode( $url, $this->getUser() );
 		}
 
 		if ( !$status->isOK() ) {
@@ -74,8 +77,8 @@ class ApiShortenUrl extends ApiBase {
 
 		// QR codes may not have short URLs, in which case we don't want them in the response.
 		if ( $urlShortened ) {
-			$ret['shorturl'] = UrlShortenerUtils::makeUrl( $shortUrlsOrQrCode[ 'url' ] );
-			$ret['shorturlalt'] = UrlShortenerUtils::makeUrl( $shortUrlsOrQrCode[ 'alt' ] );
+			$ret['shorturl'] = $this->utils->makeUrl( $shortUrlsOrQrCode[ 'url' ] );
+			$ret['shorturlalt'] = $this->utils->makeUrl( $shortUrlsOrQrCode[ 'alt' ] );
 		}
 
 		if ( $qrCode ) {

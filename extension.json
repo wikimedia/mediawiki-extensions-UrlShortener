@@ -21,7 +21,8 @@
 			"class": "MediaWiki\\Extension\\UrlShortener\\ApiShortenUrl",
 			"services": [
 				"PermissionManager",
-				"StatsFactory"
+				"StatsFactory",
+				"UrlShortener.Utils"
 			]
 		}
 	},
@@ -173,18 +174,33 @@
 		"localBasePath": "",
 		"remoteExtPath": "UrlShortener"
 	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
 	"SpecialPages": {
 		"UrlShortener": {
 			"class": "MediaWiki\\Extension\\UrlShortener\\SpecialUrlShortener",
 			"services": [
+				"UrlShortener.Utils",
 				"UrlUtils"
 			]
 		},
-		"UrlRedirector": "MediaWiki\\Extension\\UrlShortener\\SpecialUrlRedirector",
-		"ManageShortUrls": "MediaWiki\\Extension\\UrlShortener\\SpecialManageShortUrls",
+		"UrlRedirector": {
+			"class": "MediaWiki\\Extension\\UrlShortener\\SpecialUrlRedirector",
+			"services": [
+				"UrlShortener.Utils"
+			]
+		},
+		"ManageShortUrls": {
+			"class": "MediaWiki\\Extension\\UrlShortener\\SpecialManageShortUrls",
+			"services": [
+				"UrlShortener.Utils"
+			]
+		},
 		"QrCode": {
 			"class": "MediaWiki\\Extension\\UrlShortener\\SpecialQrCode",
 			"services": [
+				"UrlShortener.Utils",
 				"UrlUtils",
 				"ConfigFactory"
 			]

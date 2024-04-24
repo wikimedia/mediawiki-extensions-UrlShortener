@@ -1,6 +1,5 @@
 <?php
 
-use MediaWiki\Extension\UrlShortener\UrlShortenerUtils;
 use MediaWiki\Tests\Maintenance\MaintenanceBaseTestCase;
 use MediaWiki\User\User;
 
@@ -15,10 +14,11 @@ class DumpURLsTest extends MaintenanceBaseTestCase {
 	}
 
 	public function testExecute() {
+		$utils = $this->getServiceContainer()->get( 'UrlShortener.Utils' );
 		// Populate the database
 		for ( $i = 0; $i < 10; $i++ ) {
 			$url = 'http://example.org/' . $i;
-			$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
+			$status = $utils->maybeCreateShortCode( $url, new User );
 			$this->assertTrue( $status->isGood() );
 		}
 

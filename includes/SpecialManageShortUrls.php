@@ -17,8 +17,13 @@ use MediaWiki\User\User;
 
 class SpecialManageShortUrls extends FormSpecialPage {
 
-	public function __construct() {
+	private UrlShortenerUtils $utils;
+
+	public function __construct(
+		UrlShortenerUtils $utils
+	) {
 		parent::__construct( 'ManageShortUrls', 'urlshortener-manage-url' );
+		$this->utils = $utils;
 	}
 
 	/**
@@ -95,22 +100,22 @@ class SpecialManageShortUrls extends FormSpecialPage {
 		}
 
 		if ( $delete ) {
-			$url = UrlShortenerUtils::getURL( $delete );
+			$url = $this->utils->getURL( $delete );
 			if ( $url === false ) {
 				$errors[] = [ 'urlshortener-short-code-not-found' ];
 			}
-			$success = UrlShortenerUtils::deleteURL( $delete );
+			$success = $this->utils->deleteURL( $delete );
 			if ( !$success ) {
 				$errors[] = [ 'urlshortener-manage-delete-failed' ];
 			}
 		}
 
 		if ( $restore ) {
-			$deleted = UrlShortenerUtils::isURLDeleted( $restore );
+			$deleted = $this->utils->isURLDeleted( $restore );
 			if ( !$deleted ) {
 				$errors[] = [ 'urlshortener-short-code-is-not-deleted' ];
 			}
-			$success = UrlShortenerUtils::restoreURL( $restore );
+			$success = $this->utils->restoreURL( $restore );
 			if ( !$success ) {
 				$errors[] = [ 'urlshortener-manage-restore-failed' ];
 			}

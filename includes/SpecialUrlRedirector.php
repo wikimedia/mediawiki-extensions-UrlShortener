@@ -7,8 +7,13 @@ use MediaWiki\SpecialPage\UnlistedSpecialPage;
 
 class SpecialUrlRedirector extends UnlistedSpecialPage {
 
-	public function __construct() {
+	private UrlShortenerUtils $utils;
+
+	public function __construct(
+		UrlShortenerUtils $utils
+	) {
 		parent::__construct( 'UrlRedirector' );
+		$this->utils = $utils;
 	}
 
 	/**
@@ -26,7 +31,7 @@ class SpecialUrlRedirector extends UnlistedSpecialPage {
 		// Allow redirects to be resolved across domains (T358049).
 		$this->getRequest()->response()->header( 'Access-Control-Allow-Origin: *' );
 
-		$url = UrlShortenerUtils::getURL( $par, PROTO_CURRENT );
+		$url = $this->utils->getURL( $par, PROTO_CURRENT );
 		if ( $url !== false ) {
 			$out->setCdnMaxage( UrlShortenerUtils::CACHE_TTL_VALID );
 			$out->redirect( $url, '301' );
