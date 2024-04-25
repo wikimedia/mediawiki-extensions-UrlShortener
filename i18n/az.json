@@ -3,7 +3,8 @@
 		"authors": [
 			"NMW03",
 			"Serkanland",
-			"Wertuose"
+			"Wertuose",
+			"Nemoralis"
 		]
 	},
 	"action-urlshortener-create-url": "qısa URL-lər yaratmaq",
@@ -24,6 +25,7 @@
 	"urlshortener-deleted": "Bu qısa URL silindi.",
 	"urlshortener-desc": "Təsadüfi URL-lər üçün qısaldıcı",
 	"urlshortener-disabled": "Yeni qısa URL-lərin yaradılması müvəqqəti olaraq deaktiv edilib.",
+	"urlshortener-qrcode-disabled": "QR kodların yaradılması deaktiv edilib.",
 	"urlshortener-enter-short-code-delete": "Silmək üçün URL qısa kodu",
 	"urlshortener-enter-short-code-restore": "bərpa etmək üçün URL qısa kodu",
 	"urlshortener-error-badports": "Port ehtiva edən URL-lərin qısaldılmasına icazə verilmir",
