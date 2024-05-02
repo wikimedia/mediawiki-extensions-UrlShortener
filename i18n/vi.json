@@ -58,5 +58,6 @@
 	"logeventslist-urlshortener-log": "Nhật trình quản lý URL rút gọn",
 	"log-action-filter-urlshortener": "Kiểu quản lý",
 	"log-action-filter-urlshortener-delete": "Xóa URL",
-	"log-action-filter-urlshortener-restore": "Phục hồi URL"
+	"log-action-filter-urlshortener-restore": "Phục hồi URL",
+	"urlshortener-qrcode-downloaded": "Mã QR được tải xuống dưới dạng tệp SVG"
 }
