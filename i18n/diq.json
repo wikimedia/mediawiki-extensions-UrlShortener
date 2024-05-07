@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"GolyatGeri",
 			"Mirzali"
 		]
 	},
-	"urlshortener-toolbox": "URL'o kılmkerde bıgê"
+	"urlshortener-toolbox": "URL'o kılmkerde bıgê",
+	"urlshortener-toolbox-qrcode": "Kodê QR ronen",
+	"urlshortener-qrcode-downloaded": "Kodê QR sey SVG roniya"
 }
