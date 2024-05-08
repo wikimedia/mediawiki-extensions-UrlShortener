@@ -4,5 +4,7 @@
 			"Es Krim 5 Juta Rasa"
 		]
 	},
-	"urlshortener-toolbox": "Dapokko URL sai tibuntak'i"
+	"urlshortener-toolbox": "Dapokko URL sai tibuntak'i",
+	"urlshortener-toolbox-qrcode": "Unduh kode QR",
+	"urlshortener-qrcode-downloaded": "Kode QR tidownload sabagai file SVG"
 }

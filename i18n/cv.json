@@ -6,5 +6,7 @@
 		]
 	},
 	"urlshortener-not-found-title": "Кĕске URL тупăнмарĕ",
-	"urlshortener-toolbox": "Кӗске URL адреса ил"
+	"urlshortener-toolbox": "Кӗске URL адреса ил",
+	"urlshortener-toolbox-qrcode": "QR-код уҫласа ил",
+	"urlshortener-qrcode-downloaded": "QR-кода SVG-файл пек уҫласа илтӗр"
 }

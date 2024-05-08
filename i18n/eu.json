@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Subi",
-			"Demonocrazy"
+			"Demonocrazy",
+			"Theklan"
 		]
 	},
 	"action-urlshortener-create-url": "URL laburra sortu",
@@ -10,5 +11,8 @@
 	"action-urlshortener-manage-url": "URL laburrak kudeatu",
 	"action-urlshortener-view-log": "ikusi URL laburrak kudeatzeko erregistroa",
 	"manageshorturls": "Kudeatu URL laburrak",
-	"urlshortener-failed-try-again": "Huts egib du. Berriro saiatu?"
+	"urlshortener-failed-try-again": "Huts egib du. Berriro saiatu?",
+	"urlshortener-toolbox": "URL laburra lortu",
+	"urlshortener-toolbox-qrcode": "QR kodea jaitsi",
+	"urlshortener-qrcode-downloaded": "QR kodea jaitsi da SVG fitxategi gisa"
 }
