@@ -22,7 +22,9 @@
 	"urlshortener-ratelimit": "Agarde uns intres antes de acurtar máis enderezos URL.",
 	"urlshortener-shortened-url-label": "URL acurtado",
 	"urlshortener-toolbox": "Xerar URL acurtado",
+	"urlshortener-toolbox-qrcode": "Descargar o código QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Acurtar",
-	"urlshortener-url-input-submitting": "Acurtando…"
+	"urlshortener-url-input-submitting": "Acurtando…",
+	"urlshortener-qrcode-downloaded": "Código QR descargado como ficheiro SVG"
 }

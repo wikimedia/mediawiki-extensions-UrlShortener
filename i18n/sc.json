@@ -4,5 +4,7 @@
 			"L2212"
 		]
 	},
-	"urlshortener-toolbox": "Otene un'URL incurtzadu"
+	"urlshortener-toolbox": "Otene un'URL incurtzadu",
+	"urlshortener-toolbox-qrcode": "Iscàrriga su còdighe QR",
+	"urlshortener-qrcode-downloaded": "Còdighe QR iscarrigadu comente documentu SVG"
 }

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChrisPtDe"
+		]
+	},
+	"urlshortener-toolbox": "Avêr n’URL racorciêe",
+	"urlshortener-toolbox-qrcode": "Dèchargiér lo code QR",
+	"urlshortener-qrcode-downloaded": "Code QR dèchargiê en fichiér SVG"
+}

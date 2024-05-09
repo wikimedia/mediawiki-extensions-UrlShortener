@@ -50,5 +50,15 @@
 	"urlshortener-url-input-label": "യൂ.ആർ.എൽ.",
 	"urlshortener-url-input-submit": "ചെറുതാക്കുക",
 	"urlshortener-url-input-submitting": "ചെറുതാക്കുന്നു...",
-	"urlshortener-url-too-long": "യൂ.ആർ.എല്ലിന് നീളം വളരെ കൂടുതലാണ്, പരമാവധി വലിപ്പം {{PLURAL:$1|ഒരു അക്ഷരം|$1 അക്ഷരങ്ങൾ}} ആണ്."
+	"urlshortener-url-too-long": "യൂ.ആർ.എല്ലിന് നീളം വളരെ കൂടുതലാണ്, പരമാവധി വലിപ്പം {{PLURAL:$1|ഒരു അക്ഷരം|$1 അക്ഷരങ്ങൾ}} ആണ്.",
+	"urlshortener-badaccessgroups": "താങ്കൾക്ക് ചെറു യു.ആർ.എല്ലുകൾ സൃഷ്ടിക്കാനുള്ള അനുമതി ഇല്ല",
+	"log-name-urlshortener": "ചെറു യൂ.ആർ.എല്ലുകളുടെ കൈകാര്യ രേഖ",
+	"log-description-urlshortener": "ചെറു യൂ.ആർ.എല്ലുകളുടെ മായ്ക്കലും പുനഃസ്ഥാപനവും സംബന്ധിച്ച രേഖകൾ ഇവിടെ കാണാവുന്നതാണ്. ഇതിൽ പുതുതായി സൃഷ്ടിക്കുന്നവയുടെ വിവരങ്ങൾ പ്രദർശിപ്പിക്കുന്നില്ല.",
+	"logentry-urlshortener-delete": " \"$4\" എന്ന ചെറു യൂ.ആർ.എൽ. $1 {{GENDER:$2|മായ്ച്ചു}}",
+	"logentry-urlshortener-restore": " \"$4\" എന്ന ചെറു യൂ.ആർ.എൽ. $1 {{GENDER:$2|പുനഃസ്ഥാപിച്ചു}}",
+	"logeventslist-urlshortener-log": "ചെറു യൂ.ആർ.എല്ലുകളുടെ കൈകാര്യ രേഖ",
+	"log-action-filter-urlshortener": "കൈകാര്യ തരം",
+	"log-action-filter-urlshortener-delete": "യൂ.ആർ.എൽ. മായ്ക്കൽ",
+	"log-action-filter-urlshortener-restore": "യൂ.ആർ.എൽ. പുനഃസ്ഥാപനം",
+	"urlshortener-qrcode-downloaded": "ക്യൂ.ആർ. കോഡ് എസ്.വി.ജി. പ്രമാണമായി ഡൗൺലോഡ് ചെയ്യുക"
 }
