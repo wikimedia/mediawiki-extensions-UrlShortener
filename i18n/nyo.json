@@ -4,5 +4,7 @@
 			"Ahiise2"
 		]
 	},
-	"urlshortener-toolbox": "Tunga URL ngufu"
+	"urlshortener-toolbox": "Tunga URL ngufu",
+	"urlshortener-toolbox-qrcode": "Yetweka ekyemanyiikirizo kya QR",
+	"urlshortener-qrcode-downloaded": "Ekyemanyiikirizo kya QR kyetwekwa nka fayiro ya SVG"
 }

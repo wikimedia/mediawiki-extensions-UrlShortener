@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lifeway"
+			"Lifeway",
+			"Mxalexandrov86"
 		]
 	},
-	"urlshortener-toolbox": "Кӱчык URL-адресым налаш"
+	"urlshortener-toolbox": "Кӱчык URL-адресым налаш",
+	"urlshortener-toolbox-qrcode": "QR кодым возен налаш",
+	"urlshortener-qrcode-downloaded": "QR код SVG файл семын тулен налме"
 }
