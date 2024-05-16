@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Marwan Mohamad"
+		]
+	},
+	"urlshortener-toolbox": "Hamawa limbu'o URL",
+	"urlshortener-toolbox-qrcode": "Detohe kode QR",
+	"urlshortener-qrcode-downloaded": "Kode QR diletohu lowali berkas SVG"
+}
