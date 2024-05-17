@@ -28,6 +28,7 @@
 	"urlshortener-deleted": "Deze korte URL is verwijderd.",
 	"urlshortener-desc": "URL-verkorter voor willekeurige URL’s",
 	"urlshortener-disabled": "Het aanmaken van nieuwe korte URL's is tijdelijk uitgeschakeld.",
+	"urlshortener-qrcode-disabled": "Het aanmaken van QR-codes is uitgeschakeld.",
 	"urlshortener-enter-short-code-delete": "Code van de te verwijderen korte URL",
 	"urlshortener-enter-short-code-restore": "Code van de te herstellen korte URL",
 	"urlshortener-error-badports": "URL's die poortnummers bevatten mogen niet worden verkort",
