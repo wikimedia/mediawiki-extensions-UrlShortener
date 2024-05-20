@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aandeginini"
+			"Aandeginini",
+			"Akiimazinaigan"
 		]
 	},
-	"urlshortener-toolbox": "Gashkitaw dakwaa mazinaabikiwebinigan-ganoodan"
+	"urlshortener-toolbox": "Gashkitaw dakwaa mazinaabikiwebinigan-ganoodan",
+	"urlshortener-toolbox-qrcode": "Niisaabiiginan bangii'makaked",
+	"urlshortener-qrcode-downloaded": "Bangii'makaked niisaabiiginan biindig gaawin waabam azhi zisiboojigan"
 }
