@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Olve Utne"
+		]
+	},
+	"urlshortener-toolbox": "Viedtja ånedam URL'av",
+	"urlshortener-toolbox-qrcode": "Lässti vulus QR-kuvdav",
+	"urlshortener-qrcode-downloaded": "QR-kuvvda lässtij vulus dugu SVG-fijjlan"
+}
