@@ -6,14 +6,15 @@
 			"Stang",
 			"Xyb",
 			"予弦",
-			"神樂坂秀吉"
+			"神樂坂秀吉",
+			"LittlePaw365"
 		]
 	},
-	"apihelp-shortenurl-summary": "将一个长URL缩短。",
-	"apihelp-shortenurl-param-url": "将缩短的URL。",
-	"apihelp-shortenurl-param-qrcode": "获取二维码。仅当链接的 URL 很长时才会被缩短。",
-	"apihelp-shortenurl-example-1": "获取用于<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>的短URL。",
-	"apihelp-shortenurl-example-2": "获取用于<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>的二维码。",
-	"apierror-urlshortener-disabled": "不能新建短url",
-	"apierror-urlshortener-permissiondenied": "您没有创建短url的权限"
+	"apihelp-shortenurl-summary": "把较长的URL缩短为短URL。",
+	"apihelp-shortenurl-param-url": "要缩短的URL。",
+	"apihelp-shortenurl-param-qrcode": "获取二维码。链接的URL只在过长时才会缩短。",
+	"apihelp-shortenurl-example-1": "获取<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>的短URL。",
+	"apihelp-shortenurl-example-2": "获取<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>的二维码。",
+	"apierror-urlshortener-disabled": "不能创建新的短URL",
+	"apierror-urlshortener-permissiondenied": "您没有权限创建短URL"
 }

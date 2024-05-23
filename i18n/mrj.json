@@ -4,5 +4,7 @@
 			"Nadezhda"
 		]
 	},
-	"urlshortener-toolbox": "Кӹтӹк URL-адресӹм нӓлӓш"
+	"urlshortener-toolbox": "Кӹтӹк URL-адресӹм нӓлӓш",
+	"urlshortener-toolbox-qrcode": "QR кодым крузаш",
+	"urlshortener-qrcode-downloaded": "QR кодым SVG файл семӹнь крузымы"
 }
