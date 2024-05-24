@@ -4,6 +4,7 @@
 			"Andriy.v",
 			"Base",
 			"Dars",
+			"Keneris",
 			"Piramidion",
 			"Vlad5250",
 			"Ата"
@@ -60,5 +61,6 @@
 	"logeventslist-urlshortener-log": "Журнал керування короткими URL-адресами",
 	"log-action-filter-urlshortener": "Різновид дії",
 	"log-action-filter-urlshortener-delete": "Вилучення URL-адреси",
-	"log-action-filter-urlshortener-restore": "Відновлення URL-адреси"
+	"log-action-filter-urlshortener-restore": "Відновлення URL-адреси",
+	"urlshortener-qrcode-downloaded": "QR-код завантажено у вигляді SVG-файлу"
 }
