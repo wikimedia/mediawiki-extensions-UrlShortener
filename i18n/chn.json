@@ -4,5 +4,7 @@
 			"POSSUM chowg"
 		]
 	},
-	"urlshortener-toolbox": "iskam iləp-tənas URL"
+	"urlshortener-toolbox": "iskam iləp-tənas URL",
+	"urlshortener-toolbox-qrcode": "iskam QR-t’səm",
+	"urlshortener-qrcode-downloaded": "mayka iskam ukuk \"QR\" t’səm kakwa SVG pʰikcha"
 }

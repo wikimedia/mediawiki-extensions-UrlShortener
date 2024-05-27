@@ -6,6 +6,7 @@
 			"Diman Russkov",
 			"Facenapalm",
 			"Kareyac",
+			"Merrahtar",
 			"Novichev",
 			"Okras",
 			"Pacha Tchernof",
@@ -62,5 +63,5 @@
 	"logeventslist-urlshortener-log": "Журнал управления короткими URL-адресами",
 	"log-action-filter-urlshortener-delete": "Удаление URL-адреса",
 	"log-action-filter-urlshortener-restore": "Восстановление URL-адреса",
-	"urlshortener-qrcode-downloaded": "QR-код скачен в виде SVG-файла"
+	"urlshortener-qrcode-downloaded": "QR-код скачан в виде SVG-файла"
 }
