@@ -10,7 +10,8 @@
 			"Okras",
 			"Pacha Tchernof",
 			"Putnik",
-			"Vlad5250"
+			"Vlad5250",
+			"Merrahtar"
 		]
 	},
 	"action-urlshortener-create-url": "создание коротких URL-адресов",
@@ -62,5 +63,5 @@
 	"logeventslist-urlshortener-log": "Журнал управления короткими URL-адресами",
 	"log-action-filter-urlshortener-delete": "Удаление URL-адреса",
 	"log-action-filter-urlshortener-restore": "Восстановление URL-адреса",
-	"urlshortener-qrcode-downloaded": "QR-код скачен в виде SVG-файла"
+	"urlshortener-qrcode-downloaded": "QR-код скачан в виде SVG-файла"
 }
