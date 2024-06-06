@@ -4,5 +4,7 @@
 			"N. Longo"
 		]
 	},
-	"urlshortener-toolbox": "Òtegnî l'URL cùrto"
+	"urlshortener-toolbox": "Òtegnî l'URL cùrto",
+	"urlshortener-toolbox-qrcode": "Descàrega o còdice QR",
+	"urlshortener-qrcode-downloaded": "Còdice QR descaregòu cómme file SVG"
 }
