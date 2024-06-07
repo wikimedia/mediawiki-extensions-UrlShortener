@@ -3,7 +3,7 @@ class UrlShortener {
 	constructor() {
 		this.api = new mw.Api();
 		// Defined server-side using UrlShortenerUtils::getAllowedDomainsRegex
-		// eslint-disable-next-line security/detect-non-literal-regexp
+
 		this.regex = new RegExp( mw.config.get( 'wgUrlShortenerAllowedDomains' ) );
 		this.allowArbitraryPorts = mw.config.get( 'wgUrlShortenerAllowArbitraryPorts' );
 		this.isQrCode = mw.config.get( 'wgCanonicalSpecialPageName' ) === 'QrCode';
@@ -206,11 +206,7 @@ class UrlShortener {
 		if ( this.isQrCode ) {
 			params.qrcode = true;
 		}
-		return this.api.post( params ).then( ( data ) => {
-			return data.shortenurl;
-		}, ( errCode, data ) => {
-			return $.Deferred().reject( data.error ).promise();
-		} );
+		return this.api.post( params ).then( ( data ) => data.shortenurl, ( errCode, data ) => $.Deferred().reject( data.error ).promise() );
 	}
 }
 

@@ -13,7 +13,7 @@
 	}
 
 	$shortenUrlLink.attr( 'aria-haspopup', 'dialog' );
-	$shortenUrlLink.on( 'click', function ( e ) {
+	$shortenUrlLink.on( 'click', ( e ) => {
 		e.preventDefault();
 		if ( !widgetPromise ) {
 			const linkText = $shortenUrlLink.html();
@@ -22,12 +22,12 @@
 				'oojs-ui-windows',
 				'mediawiki.api',
 				'mediawiki.widgets'
-			] ).then( function () {
+			] ).then( () => {
 				const api = new mw.Api();
 				return api.post( {
 					action: 'shortenurl',
 					url: window.location.href
-				} ).then( function ( data ) {
+				} ).then( ( data ) => {
 					const widget = new mw.widgets.CopyTextLayout( {
 						align: 'top',
 						label: mw.msg( 'urlshortener-shortened-url-label' ),
@@ -42,7 +42,7 @@
 					widget.$help.append( ' ', $alt );
 					$alt.attr( 'href', data.shortenurl.shorturlalt )
 						.text( data.shortenurl.shorturlalt );
-					$alt.off( 'click' ).on( 'click', function ( event ) {
+					$alt.off( 'click' ).on( 'click', ( event ) => {
 						event.preventDefault();
 						widget.textInput.setValue( data.shortenurl.shorturlalt );
 						widget.onButtonClick();
@@ -55,14 +55,14 @@
 			} );
 		}
 		widgetPromise.then(
-			function ( widget ) {
+			( widget ) => {
 				OO.ui.alert( widget.$element );
 				// HACK: Wait for setup and ready processes to complete
-				setTimeout( function () {
+				setTimeout( () => {
 					widget.button.focus();
 				}, 500 );
 			},
-			function () {
+			() => {
 				// Point the link to Special:UrlShortener
 				$shortenUrlLink.html( mw.msg( 'urlshortener-failed-try-again' ) );
 				$shortenUrlLink.off( 'click' ).removeAttr( 'aria-haspopup' );
@@ -71,9 +71,9 @@
 		return false;
 	} );
 
-	$qrCodeLink.on( 'click', function ( e ) {
+	$qrCodeLink.on( 'click', ( e ) => {
 		e.preventDefault();
-		mw.loader.using( 'mediawiki.api' ).done( function () {
+		mw.loader.using( 'mediawiki.api' ).done( () => {
 			$qrCodeLink.find( '.toggle-list-item__label' )
 				.text( mw.msg( 'urlshortener-url-input-submitting' ) );
 			const api = new mw.Api();
@@ -81,7 +81,7 @@
 				action: 'shortenurl',
 				url: window.location.href,
 				qrcode: true
-			} ).done( function ( data ) {
+			} ).done( ( data ) => {
 				// Create hidden anchor and force a download. This seems hacky,
 				// but we'd otherwise we need a specialized API with the proper response header.
 				const downloadLink = document.createElement( 'a' );
@@ -94,7 +94,7 @@
 				$qrCodeLink.find( '.toggle-list-item__label' )
 					.text( mw.msg( 'urlshortener-toolbox-qrcode' ) );
 				mw.notify( mw.msg( 'urlshortener-qrcode-downloaded' ), { type: 'success' } );
-			} ).fail( function () {
+			} ).fail( () => {
 				$qrCodeLink.find( '.toggle-list-item__label' )
 					.text( mw.msg( 'urlshortener-failed-try-again' ) );
 			} );
