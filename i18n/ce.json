@@ -42,7 +42,7 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Дацдан",
 	"urlshortener-url-input-submitting": "Дацдар…",
-	"log-description-urlshortener": "ХӀокху тептар чохь гойту URL-адресаш дӀадахар а, меттахӀоттор а. Керла кхоллар ца гойту",
+	"log-description-urlshortener": "ХӀокху журнал чохь гойту URL-адресаш дӀадахар а, меттахӀоттор а. Керла кхоллар ца гойту",
 	"log-action-filter-urlshortener-delete": "URL-адрес дӀадаккхар",
 	"log-action-filter-urlshortener-restore": "URL-адрес меттахӀоттор",
 	"urlshortener-qrcode-downloaded": "QR -код схьаэцна SVG файл санна"
