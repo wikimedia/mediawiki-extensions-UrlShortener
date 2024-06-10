@@ -46,8 +46,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::getShortcodeVariants
 	 */
 	public function testShortcodeVariants( $input, $expected ) {
-		$this->setMwGlobals( [
-			'wgUrlShortenerIdMapping' => [
+		$this->overrideConfigValues( [
+			'UrlShortenerIdMapping' => [
 				'7' => 'l',
 				'L' => 'l',
 				'3' => 'e',
@@ -86,7 +86,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::convertToProtocol
 	 */
 	public function testConvertToProtocol( $input, $proto, $expected ) {
-		$this->setMwGlobals( [ 'wgScript' => '/w' ] );
+		$this->overrideConfigValue( 'Script', '/w' );
 		$this->assertEquals( $expected, UrlShortenerUtils::convertToProtocol( $input, $proto ) );
 	}
 
@@ -130,9 +130,9 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::normalizeUrl
 	 */
 	public function testNormalizeUrl( $url, $expected ) {
-		$this->setMwGlobals( [
-			'wgArticlePath' => '/wiki/$1',
-			'wgScript' => '/w/index.php',
+		$this->overrideConfigValues( [
+			'ArticlePath' => '/wiki/$1',
+			'Script' => '/w/index.php',
 		] );
 		$this->assertEquals( $expected, UrlShortenerUtils::normalizeUrl( $url ) );
 	}
@@ -238,8 +238,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	public function testEncodeAndDecodeIds() {
 		// Set default
 		UrlShortenerUtils::$decodeMap = null;
-		$this->setMwGlobals(
-			'wgUrlShortenerIdSet',
+		$this->overrideConfigValue(
+			'UrlShortenerIdSet',
 			'23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz$'
 		);
 		for ( $i = 0; $i < 1000; $i++ ) {
@@ -261,15 +261,15 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::decodeId
 	 */
 	public function testDecodeIdMapping() {
-		$this->setMwGlobals(
-			'wgUrlShortenerIdSet',
+		$this->overrideConfigValue(
+			'UrlShortenerIdSet',
 			'23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz-'
 		);
 
 		// Clear static cache
 		UrlShortenerUtils::$decodeMap = null;
-		$this->setMwGlobals(
-			'wgUrlShortenerIdMapping',
+		$this->overrideConfigValue(
+			'UrlShortenerIdMapping',
 			[
 				'$' => '-',
 				'0' => 'o'
@@ -285,8 +285,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 		// Clear static cache
 		UrlShortenerUtils::$decodeMap = null;
-		$this->setMwGlobals(
-			'wgUrlShortenerIdMapping',
+		$this->overrideConfigValue(
+			'UrlShortenerIdMapping',
 			[
 				'0' => 'o',
 				'O' => 'o',
@@ -319,7 +319,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testTooLongURL() {
 		$url = 'http://example.org/1';
-		$this->setMwGlobals( 'wgUrlShortenerUrlSizeLimit', 5 );
+		$this->overrideConfigValue( 'UrlShortenerUrlSizeLimit', 5 );
 
 		$status = UrlShortenerUtils::maybeCreateShortCode( $url, new User );
 
@@ -388,7 +388,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testGetAllowedDomainsRegex() {
 		$this->setContentLang( 'qqx' );
-		$this->setMwGlobals( [ 'wgUrlShortenerAllowedDomains' => $this->getDomains() ] );
+		$this->overrideConfigValue( 'UrlShortenerAllowedDomains', $this->getDomains() );
 
 		$allowedUrl = UrlShortenerUtils::validateUrl( 'https://en.wikipedia.org/wiki/A' );
 		$disallowedUrl = UrlShortenerUtils::validateUrl( 'http://example.org/75' );
@@ -405,7 +405,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testGetAllowedDomainsRegex2() {
 		$this->setContentLang( 'qqx' );
-		$this->setMwGlobals( [ 'wgServer' => 'http://example.org' ] );
+		$this->overrideConfigValue( 'Server', 'http://example.org' );
 
 		$allowedUrl = UrlShortenerUtils::validateUrl( 'http://example.org/test' );
 		$disallowedUrl = UrlShortenerUtils::validateUrl( 'https://en.wikipedia.org/wiki/A' );
@@ -458,11 +458,11 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	public function testGetQrCode(
 		int $limit, bool $useDataUri, array $expectedKeys, string $expectedSha
 	): void {
-		$this->setMwGlobals( [
-			'wgServer' => 'https://example.org',
-			'wgUrlShortenerEnableQrCode' => true,
-			'wgUrlShortenerServer' => 'https://example.org',
-			'wgUrlShortenerTemplate' => '/r/$1'
+		$this->overrideConfigValues( [
+			'Server' => 'https://example.org',
+			'UrlShortenerEnableQrCode' => true,
+			'UrlShortenerServer' => 'https://example.org',
+			'UrlShortenerTemplate' => '/r/$1'
 		] );
 		$qrCode = UrlShortenerUtils::getQrCode(
 			'https://example.org', $limit, $this->getTestUser()->getUser(), $useDataUri

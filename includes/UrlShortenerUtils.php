@@ -17,6 +17,7 @@ use Endroid\QrCode\Writer\Result\ResultInterface;
 use Endroid\QrCode\Writer\SvgWriter;
 use MediaWiki\Deferred\CdnCacheUpdate;
 use MediaWiki\Deferred\DeferredUpdates;
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Status\Status;
@@ -56,23 +57,23 @@ class UrlShortenerUtils {
 	 * @return Status Status with value of base36 encoded shortcode that refers to the $url
 	 */
 	public static function maybeCreateShortCode( string $url, User $user ): Status {
-		global $wgUrlShortenerUrlSizeLimit;
 		$url = self::normalizeUrl( $url );
 
 		if ( $user->getBlock() ) {
 			return Status::newFatal( 'urlshortener-blocked' );
 		}
 
-		global $wgUrlShortenerReadOnly;
-		if ( $wgUrlShortenerReadOnly ) {
+		$config = MediaWikiServices::getInstance()->getMainConfig();
+		if ( $config->get( 'UrlShortenerReadOnly' ) ) {
 			// All code paths should already have checked for this,
 			// but lets be on the safe side.
 			return Status::newFatal( 'urlshortener-disabled' );
 		}
 
-		if ( mb_strlen( $url ) > $wgUrlShortenerUrlSizeLimit ) {
+		$urlSizeLimit = $config->get( 'UrlShortenerUrlSizeLimit' );
+		if ( mb_strlen( $url ) > $urlSizeLimit ) {
 			return Status::newFatal(
-				wfMessage( 'urlshortener-url-too-long' )->numParams( $wgUrlShortenerUrlSizeLimit )
+				wfMessage( 'urlshortener-url-too-long' )->numParams( $urlSizeLimit )
 			);
 		}
 
@@ -134,7 +135,6 @@ class UrlShortenerUtils {
 	 * @return string URL that is saved in DB and used in Location header
 	 */
 	public static function normalizeUrl( string $url ): string {
-		global $wgArticlePath;
 		// First, force the protocol to HTTP, we'll convert
 		// it to a different one when redirecting
 		$url = self::convertToProtocol( $url, PROTO_HTTP );
@@ -154,10 +154,11 @@ class UrlShortenerUtils {
 			// T220718: Ensure each URL has a / after the domain name
 			$parsed['path'] = '/';
 		}
-		if ( $wgArticlePath !== false && isset( $parsed['query'] ) ) {
+		$articlePath = MediaWikiServices::getInstance()->getMainConfig()->get( MainConfigNames::ArticlePath );
+		if ( $articlePath !== false && isset( $parsed['query'] ) ) {
 			$query = wfCgiToArray( $parsed['query'] );
 			if ( count( $query ) === 1 && isset( $query['title'] ) && $parsed['path'] === wfScript() ) {
-				$parsed['path'] = str_replace( '$1', $query['title'], $wgArticlePath );
+				$parsed['path'] = str_replace( '$1', $query['title'], $articlePath );
 				unset( $parsed['query'] );
 			}
 		}
@@ -310,11 +311,11 @@ class UrlShortenerUtils {
 	 * @return string[]
 	 */
 	public static function getShortcodeVariants( string $shortcode ): array {
-		global $wgUrlShortenerIdMapping;
+		$idMapping = MediaWikiServices::getInstance()->getMainConfig()->get( 'UrlShortenerIdMapping' );
 
 		// Reverse the character alias mapping
 		$targetToVariants = [];
-		foreach ( $wgUrlShortenerIdMapping as $variant => $target ) {
+		foreach ( $idMapping as $variant => $target ) {
 			$targetToVariants[ $target ] ??= [];
 			$targetToVariants[ $target ][] = (string)$variant;
 		}
@@ -343,8 +344,7 @@ class UrlShortenerUtils {
 	 * @param int $id
 	 */
 	public static function purgeCdnId( int $id ): void {
-		global $wgUseCdn;
-		if ( $wgUseCdn ) {
+		if ( MediaWikiServices::getInstance()->getMainConfig()->get( MainConfigNames::UseCdn ) ) {
 			$codes = array_merge(
 				self::getShortcodeVariants( self::encodeId( $id ) ),
 				self::getShortcodeVariants( self::encodeId( $id, true ) )
@@ -361,8 +361,7 @@ class UrlShortenerUtils {
 	 * @param string $shortcode
 	 */
 	private static function purgeCdn( string $shortcode ): void {
-		global $wgUseCdn;
-		if ( $wgUseCdn ) {
+		if ( MediaWikiServices::getInstance()->getMainConfig()->get( MainConfigNames::UseCdn ) ) {
 			$update = new CdnCacheUpdate( [ self::makeUrl( $shortcode ) ] );
 			DeferredUpdates::addUpdate( $update, DeferredUpdates::PRESEND );
 		}
@@ -387,17 +386,19 @@ class UrlShortenerUtils {
 	 * @return string The fully qualified URL
 	 */
 	public static function makeUrl( string $shortCode ): string {
-		global $wgUrlShortenerTemplate, $wgUrlShortenerServer, $wgServer;
-
-		if ( $wgUrlShortenerServer === false ) {
-			$wgUrlShortenerServer = $wgServer;
+		$config = MediaWikiServices::getInstance()->getMainConfig();
+		$server = $config->get( 'UrlShortenerServer' );
+		if ( $server === false ) {
+			$server = $config->get( MainConfigNames::Server );
 		}
 
-		if ( !is_string( $wgUrlShortenerTemplate ) ) {
+		$template = $config->get( 'UrlShortenerTemplate' );
+		if ( !is_string( $template ) ) {
 			$urlTemplate = SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getFullUrl();
 		} else {
-			$urlTemplate = $wgUrlShortenerServer . $wgUrlShortenerTemplate;
+			$urlTemplate = $server . $template;
 		}
+
 		$url = str_replace( '$1', $shortCode, $urlTemplate );
 
 		// Make sure the URL is fully qualified
@@ -410,22 +411,20 @@ class UrlShortenerUtils {
 	 * @return string Regex of allowed domains
 	 */
 	public static function getAllowedDomainsRegex(): string {
-		global $wgUrlShortenerAllowedDomains, $wgServer;
-		if ( $wgUrlShortenerAllowedDomains === false ) {
+		$config = MediaWikiServices::getInstance()->getMainConfig();
+		$allowedDomains = $config->get( 'UrlShortenerAllowedDomains' );
+		if ( $allowedDomains === false ) {
 			// Allowed Domains not configured, default to wgServer
-			$serverParts = wfParseUrl( $wgServer );
-			$allowedDomains = preg_quote( $serverParts['host'], '/' );
-		} else {
-			// Collapse the allowed domains into a single string, so we have to run regex check only once
-			$allowedDomains = implode( '|', array_map(
-				static function ( $item ) {
-					return '^' . $item . '$';
-				},
-				$wgUrlShortenerAllowedDomains
-			) );
+			$serverParts = wfParseUrl( $config->get( MainConfigNames::Server ) );
+			return preg_quote( $serverParts['host'], '/' );
 		}
-
-		return $allowedDomains;
+		// Collapse the allowed domains into a single string, so we have to run regex check only once
+		return implode( '|', array_map(
+			static function ( $item ) {
+				return '^' . $item . '$';
+			},
+			$allowedDomains
+		) );
 	}
 
 	/**
@@ -435,13 +434,13 @@ class UrlShortenerUtils {
 	 * @return bool|Message true if it is valid, or error Message object if invalid
 	 */
 	public static function validateUrl( string $url ) {
-		global $wgUrlShortenerAllowArbitraryPorts;
-
 		$urlParts = wfParseUrl( $url );
 		if ( $urlParts === false ) {
 			return wfMessage( 'urlshortener-error-malformed-url' );
 		} else {
-			if ( isset( $urlParts['port'] ) && !$wgUrlShortenerAllowArbitraryPorts ) {
+			$allowArbitraryPorts = MediaWikiServices::getInstance()->getMainConfig()
+				->get( 'UrlShortenerAllowArbitraryPorts' );
+			if ( isset( $urlParts['port'] ) && !$allowArbitraryPorts ) {
 				if ( $urlParts['port'] === 80 || $urlParts['port'] === 443 ) {
 					unset( $urlParts['port'] );
 				} else {
@@ -472,15 +471,16 @@ class UrlShortenerUtils {
 	 * @return string
 	 */
 	public static function encodeId( int $x, bool $alt = false ): string {
-		global $wgUrlShortenerIdSet, $wgUrlShortenerAltPrefix;
+		$config = MediaWikiServices::getInstance()->getMainConfig();
+		$idSet = $config->get( 'UrlShortenerIdSet' );
 		$s = '';
-		$n = strlen( $wgUrlShortenerIdSet );
+		$n = strlen( $idSet );
 		while ( $x ) {
 			$remainder = $x % $n;
 			$x = ( $x - $remainder ) / $n;
-			$s = $wgUrlShortenerIdSet[$alt ? $n - 1 - $remainder : $remainder] . $s;
+			$s = $idSet[$alt ? $n - 1 - $remainder : $remainder] . $s;
 		}
-		return $alt ? $wgUrlShortenerAltPrefix . $s : $s;
+		return $alt ? $config->get( 'UrlShortenerAltPrefix' ) . $s : $s;
 	}
 
 	/**
@@ -490,25 +490,26 @@ class UrlShortenerUtils {
 	 * @return int|false
 	 */
 	public static function decodeId( string $s ) {
-		global $wgUrlShortenerIdSet, $wgUrlShortenerIdMapping, $wgUrlShortenerAltPrefix;
-
 		if ( $s === '' ) {
 			return false;
 		}
 
+		$config = MediaWikiServices::getInstance()->getMainConfig();
+		$altPrefix = $config->get( 'UrlShortenerAltPrefix' );
 		$alt = false;
-		if ( $s[0] === $wgUrlShortenerAltPrefix ) {
+		if ( $s[0] === $altPrefix ) {
 			$s = substr( $s, 1 );
 			$alt = true;
 		}
 
-		$n = strlen( $wgUrlShortenerIdSet );
+		$idSet = $config->get( 'UrlShortenerIdSet' );
+		$n = strlen( $idSet );
 		if ( self::$decodeMap === null ) {
 			self::$decodeMap = [];
 			for ( $i = 0; $i < $n; $i++ ) {
-				self::$decodeMap[$wgUrlShortenerIdSet[$i]] = $i;
+				self::$decodeMap[$idSet[$i]] = $i;
 			}
-			foreach ( $wgUrlShortenerIdMapping as $k => $v ) {
+			foreach ( $config->get( 'UrlShortenerIdMapping' ) as $k => $v ) {
 				self::$decodeMap[$k] = self::$decodeMap[$v];
 			}
 		}
