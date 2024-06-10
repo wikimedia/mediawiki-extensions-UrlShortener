@@ -11,11 +11,11 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use HTMLForm;
 use MediaWiki\Html\Html;
+use MediaWiki\HTMLForm\HTMLForm;
+use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Status\Status;
-use Message;
 use OOUI\FieldLayout;
 use OOUI\HtmlSnippet;
 use OOUI\Tag;

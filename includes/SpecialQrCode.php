@@ -9,10 +9,10 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use HTMLForm;
 use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Html\Html;
-use Status;
+use MediaWiki\HTMLForm\HTMLForm;
+use MediaWiki\Status\Status;
 
 class SpecialQrCode extends SpecialUrlShortener {
 
