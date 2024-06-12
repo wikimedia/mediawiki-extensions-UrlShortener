@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"IJzeren Jan"
+		]
+	},
+	"urlshortener-toolbox": "Skračeny URL-adres",
+	"urlshortener-toolbox-qrcode": "Daunlodovati QR-kod",
+	"urlshortener-qrcode-downloaded": "QR-kod daunlodovany kako SVG-fajl"
+}
