@@ -8,7 +8,9 @@
 	"urlshortener-failed-try-again": "Neizdevās. Mēģināt vēlreiz?",
 	"urlshortener-shortened-url-label": "Saīsinātais URL",
 	"urlshortener-toolbox": "Iegūt saīsinātu URL",
+	"urlshortener-toolbox-qrcode": "Lejupielādēt QR kodu",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Saīsināt",
-	"urlshortener-url-input-submitting": "Saīsina..."
+	"urlshortener-url-input-submitting": "Saīsina...",
+	"urlshortener-qrcode-downloaded": "QR kods ir lejupielādēts kā SVG fails"
 }
