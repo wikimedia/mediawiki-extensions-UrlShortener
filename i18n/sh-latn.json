@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"BadDog",
 			"Winston Sung"
 		]
 	},
@@ -41,7 +42,8 @@
 	"urlshortener-short-code-not-found": "Kratki kôd za URL nije pronađen ili je izbrisan",
 	"urlshortener-shortened-url-alt": "Također možete koristiti ovaj alternativni URL:",
 	"urlshortener-shortened-url-label": "Skraćena URL",
-	"urlshortener-toolbox": "Daj skraćeni URL",
+	"urlshortener-toolbox": "Skraćeni link",
+	"urlshortener-toolbox-qrcode": "Preuzmi QR kod",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Skrati",
 	"urlshortener-url-input-submitting": "Skraćujem…",
