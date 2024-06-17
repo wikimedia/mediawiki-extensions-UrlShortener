@@ -7,11 +7,11 @@
 	"action-urlshortener-create-url": "доца URL-адресаш кхоллар",
 	"right-urlshortener-create-url": "Доца URL-адресаш кхоллар",
 	"action-urlshortener-manage-url": "доца URL-адресашна урхалладар",
-	"action-urlshortener-view-log": "доца URL-адресашна урхалладаран тептаре хьажар",
+	"action-urlshortener-view-log": "доца URL-адресашна урхалладаран журнале хьажар",
 	"manageshorturls": "Доца URL-адресашна урхалладар",
 	"right-urlshortener-manage-url": "Доца URL-адресашна урхалладар",
 	"grant-shortenurls": "Доца URL-адресаш кхоллар",
-	"right-urlshortener-view-log": "Доца URL-адресашна урхалладаран тептаре хьажар",
+	"right-urlshortener-view-log": "Доца URL-адресашна урхалладаран журнале хьажар",
 	"urlshortener": "URL-адресаш дацдириг",
 	"urlshortener-action-done": "URL-адресаш дӀадаьхна/йа меттахӀоттина",
 	"urlshortener-approved-domains": "{{PLURAL:$1|Лахара домен|Лахара доменаш}} тӀе йолу хьажоргаш йацйан мега: $2.",
@@ -41,7 +41,7 @@
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Дацдан",
 	"urlshortener-url-input-submitting": "Дацдар…",
-	"log-description-urlshortener": "ХӀокху тептар чохь гойту URL-адресаш дӀадахар а, меттахӀоттор а. Керла кхоллар ца гойту",
+	"log-description-urlshortener": "ХӀокху журнал чохь гойту URL-адресаш дӀадахар а, меттахӀоттор а. Керла кхоллар ца гойту",
 	"log-action-filter-urlshortener-delete": "URL-адрес дӀадаккхар",
 	"log-action-filter-urlshortener-restore": "URL-адрес меттахӀоттор"
 }

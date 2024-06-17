@@ -6,6 +6,7 @@
 	},
 	"urlshortener": "URL қысқартқыш",
 	"urlshortener-approved-domains": "Қысқартуға болатын домендерге сілтеме: $2.",
+	"urlshortener-copy-success": "URL алмасу буферіне көшірілді",
 	"urlshortener-form-header": "URL ұзақ болса, осында жазыңыз",
 	"urlshortener-shortened-url-alt": "Сондай-ақ балама URL мекенжайын пайдалануға болады:",
 	"urlshortener-shortened-url-label": "Қысқартылған URL",
