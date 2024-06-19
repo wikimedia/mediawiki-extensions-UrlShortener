@@ -3,12 +3,15 @@
 		"authors": [
 			"Omotecho",
 			"RYOUMA1117",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Foomin10"
 		]
 	},
 	"apihelp-shortenurl-summary": "長いURLを短いURLに短縮します。",
 	"apihelp-shortenurl-param-url": "短縮する対象のURL。",
+	"apihelp-shortenurl-param-qrcode": "QR コードを生成する。URL リンクが長すぎるときに限り短縮されます。",
 	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>の短縮URLを生成。",
+	"apihelp-shortenurl-example-2": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> の QR コードを生成する。",
 	"apierror-urlshortener-disabled": "短縮URLは新規に生成されません",
 	"apierror-urlshortener-permissiondenied": "短縮 URL を作成する権限がありません"
 }

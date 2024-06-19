@@ -9,14 +9,16 @@
 			"Umherirrender",
 			"Yuvi Panda",
 			"Amire80",
-			"MusikAnimal"
+			"MusikAnimal",
+			"Jack who built the house",
+			"咽頭べさ"
 		]
 	},
 	"action-urlshortener-create-url": "{{doc-action|urlshortener-create-url}}",
 	"right-urlshortener-create-url": "{{doc-right|urlshortener-create-url}}",
 	"action-urlshortener-manage-url": "{{doc-action|urlshortener-manage-url}}",
 	"action-urlshortener-view-log": "{{doc-action|urlshortener-view-log}}",
-	"manageshorturls": "Title of the special page",
+	"manageshorturls": "{{doc-special|ManageShortUrls}}",
 	"right-urlshortener-manage-url": "{{doc-right|urlshortener-manage-url}}",
 	"grant-shortenurls": "Name for grant \"shortenurls\".\n{{Related|Grant}}",
 	"right-urlshortener-view-log": "{{doc-right|urlshortener-view-log}}",
