@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tofeiku"
+			"Tofeiku",
+			"Ultron90"
 		]
 	},
-	"urlshortener-toolbox": "Niendo’ URL penependok"
+	"urlshortener-toolbox": "Niendo’ URL penependok",
+	"urlshortener-toolbox-qrcode": "Ngendo' kod QR",
+	"urlshortener-qrcode-downloaded": "Kod QR boi nindo' jadi pail SVG"
 }

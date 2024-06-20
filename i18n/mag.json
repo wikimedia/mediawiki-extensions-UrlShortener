@@ -4,5 +4,7 @@
 			"ऐक्टिवेटेड्"
 		]
 	},
-	"urlshortener-toolbox": "सङ्क्षिप्त URL प्राप्त करी"
+	"urlshortener-toolbox": "सङ्क्षिप्त URL प्राप्त करी",
+	"urlshortener-toolbox-qrcode": "QR कोड् डाउन्लोड् करी",
+	"urlshortener-qrcode-downloaded": "एसभीजी सञ्चिकाके रूपमे QR कोड् डाउन्लोड् कैल गेल"
 }

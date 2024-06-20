@@ -4,6 +4,11 @@
 			"Ajiniyaz Nurniyazov"
 		]
 	},
+	"urlshortener": "URL qısqartqısh",
+	"urlshortener-shortened-url-alt": "Sonday-aq alternativ URL adresin paydalanıw múmkin:",
+	"urlshortener-shortened-url-label": "Qısqartılǵan URL",
 	"urlshortener-toolbox": "Qısqartılǵan URL alıw",
-	"urlshortener-toolbox-qrcode": "QR-kod júklep alıw"
+	"urlshortener-toolbox-qrcode": "QR kod júklep alıw",
+	"urlshortener-badaccessgroups": "Qısqartılǵan URL jaratıwǵa huqıqıńız joq",
+	"log-name-urlshortener": "Qısqartılǵan URL basqarıw jurnalı"
 }

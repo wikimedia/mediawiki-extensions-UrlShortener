@@ -10,5 +10,6 @@
 	"action-urlshortener-manage-url": "urus URL pendek",
 	"qrcode": "Penjana Kod QR",
 	"urlshortener-toolbox": "Dapatkan URL pendek",
-	"urlshortener-toolbox-qrcode": "Muat turun kod QR"
+	"urlshortener-toolbox-qrcode": "Muat turun kod QR",
+	"urlshortener-qrcode-downloaded": "Kod QR dimuat naik sebagai fail SVG"
 }
