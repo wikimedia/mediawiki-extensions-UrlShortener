@@ -19,5 +19,5 @@
 	"urlshortener-url-too-long": "URL тым ұзақ, максималды өлшемі $1 таңбадан аспауы қажет",
 	"urlshortener-badaccessgroups": "Қысқартылған URL жасауға құқығыңыз жоқ",
 	"log-name-urlshortener": "Қысқартылған URL басқару журналы",
-	"urlshortener-qrcode-downloaded": "QR kod SVG fayl retinde júklep alındı"
+	"urlshortener-qrcode-downloaded": "QR код SVG файл ретінде жүктелді"
 }
