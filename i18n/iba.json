@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Song GK"
+		]
+	},
+	"urlshortener-toolbox": "Bulihka URL pandak",
+	"urlshortener-toolbox-qrcode": "Download kod QR",
+	"urlshortener-qrcode-downloaded": "Kod QR didownload nyadi fail SVG"
+}
