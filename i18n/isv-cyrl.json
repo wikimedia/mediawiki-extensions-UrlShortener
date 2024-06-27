@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Qiorly"
+		]
+	},
+	"urlshortener-toolbox": "Скрачены URL-адрес",
+	"urlshortener-toolbox-qrcode": "Даунлодовати QR-код",
+	"urlshortener-qrcode-downloaded": "QR-код даунлодованы како SVG-фајл"
+}

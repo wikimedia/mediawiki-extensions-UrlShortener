@@ -7,7 +7,9 @@
 			"FarsiNevis",
 			"Jeeputer",
 			"Ladsgroup",
-			"Reza1615"
+			"Reza1615",
+			"Darafsh",
+			"Ebrahim"
 		]
 	},
 	"action-urlshortener-create-url": "ایجاد نشانی‌های کوتاه",
@@ -51,7 +53,7 @@
 	"urlshortener-shortened-url-alt": "همچنین می‌توانید از این نشانی جایگزین استفاده کنید:",
 	"urlshortener-shortened-url-label": "نشانی کوتاه‌شده",
 	"urlshortener-toolbox": "دریافت نشانی کوتاه‌شده",
-	"urlshortener-toolbox-qrcode": "دریافت کیوآر کد",
+	"urlshortener-toolbox-qrcode": "بارگیری کد QR",
 	"urlshortener-url-input-label": "نشانی اینترنتی",
 	"urlshortener-url-input-submit": "کوتاه کن",
 	"urlshortener-url-input-submitting": "در حال کوتاه کردن",
@@ -65,5 +67,5 @@
 	"log-action-filter-urlshortener": "نوع مدیریت",
 	"log-action-filter-urlshortener-delete": "حذف نشانی",
 	"log-action-filter-urlshortener-restore": "احیای نشانی",
-	"urlshortener-qrcode-downloaded": "کیوآر کد در قالب پروندهٔ اس‌وی‌جی بارگیری شد"
+	"urlshortener-qrcode-downloaded": "کد QR در قالب پروندهٔ اس‌وی‌جی بارگیری شد"
 }
