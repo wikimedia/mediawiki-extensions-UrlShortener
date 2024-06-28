@@ -4,5 +4,7 @@
 			"Katelem"
 		]
 	},
-	"urlshortener-toolbox": "Bọkọ mgbidim ugọbọ"
+	"urlshortener-toolbox": "Bọkọ mgbidim ugọbọ",
+	"urlshortener-toolbox-qrcode": "Bọkọ iman̄ QR tap",
+	"urlshortener-qrcode-downloaded": "Mîbọkọ iman̄ QR itap kubọk failu SVG"
 }
