@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Elvonudinium",
 			"Баир Балданов"
 		]
 	},
-	"urlshortener-toolbox": "Богони URL-хаяг абаха"
+	"urlshortener-toolbox": "Богони URL-хаяг абаха",
+	"urlshortener-toolbox-qrcode": "QR кодые татаха",
+	"urlshortener-qrcode-downloaded": "SVG файл болгон татажа абаһан QR код"
 }
