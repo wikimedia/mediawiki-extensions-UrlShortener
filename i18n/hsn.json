@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"孟天皓"
+		]
+	},
+	"urlshortener-toolbox": "取得短網址",
+	"urlshortener-toolbox-qrcode": "下載QR碼",
+	"urlshortener-qrcode-downloaded": "將QR碼下載為SVG圖檔"
+}

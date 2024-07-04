@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Saosukham"
+			"Saosukham",
+			"Saimawnkham"
 		]
 	},
-	"urlshortener-toolbox": "ဢဝ်ယဝ်ႉ လၢႆးပွတ်း URL"
+	"urlshortener-toolbox": "ဢဝ်ယဝ်ႉ လၢႆးပွတ်း URL",
+	"urlshortener-toolbox-qrcode": "လူတ်ႇလူင်း ၶူတ်ႉ QR"
 }
