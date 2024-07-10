@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mehtab ahmed"
+			"Mehtab ahmed",
+			"Charoo"
 		]
 	},
 	"action-urlshortener-create-url": "مختصر یوآرایل ٺاھيو",
@@ -39,8 +40,8 @@
 	"urlshortener-ratelimit": "وڌيڪ يوآرايلس کي مختصر ڪرڻ کان اڳ مھرباني ڪري ڪجهہ وقت انتظار ڪريو.",
 	"urlshortener-short-code-is-not-deleted": "يوآرايل مختصر ڪوڊ ناھي ڊاھيو ويو",
 	"urlshortener-short-code-not-found": "مختصر يوآرايل ڪوڊ ناھي لڌو يا نہ ڊاھيو ويو",
-	"urlshortener-shortened-url-alt": "توھان ھي متبادل يوآرايل پڻ استعمال ڪري سگهو ٿا:",
-	"urlshortener-shortened-url-label": "مختصر یوآرایل",
+	"urlshortener-shortened-url-alt": "توھان ھيٺيون متبادل ڳنڍڻو پڻ استعمال ڪري سگهو ٿا:",
+	"urlshortener-shortened-url-label": "مختصر ڳنڍڻو",
 	"urlshortener-toolbox": "مختصر یوآرایل وٺو",
 	"urlshortener-toolbox-qrcode": "ڪيوآر ڪوڊ ڊائونلوڊ ڪريو",
 	"urlshortener-url-input-label": "يوآرايل",
