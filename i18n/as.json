@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Simbu123"
+			"Simbu123",
+			"Gitartha.bordoloi"
 		]
 	},
 	"action-urlshortener-create-url": "সংক্ষিপ্ত ইউআৰএল সৃষ্টি কৰক",
@@ -38,5 +39,6 @@
 	"logeventslist-urlshortener-log": "সংক্ষিপ্ত ইউআৰএলসমূহৰ নিয়ন্ত্ৰণ ল'গ",
 	"log-action-filter-urlshortener": "নিয়ন্ত্ৰণৰ প্ৰকাৰ",
 	"log-action-filter-urlshortener-delete": "ইউআৰএল বিলোপন",
-	"log-action-filter-urlshortener-restore": "সংক্ষিপ্ত পুনৰুদ্ধাৰ"
+	"log-action-filter-urlshortener-restore": "সংক্ষিপ্ত পুনৰুদ্ধাৰ",
+	"urlshortener-qrcode-downloaded": "QR ক'ড SVG ফাইল হিচাপে ডাউনলোড কৰা হৈছে"
 }
