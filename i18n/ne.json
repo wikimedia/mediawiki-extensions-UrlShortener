@@ -3,7 +3,8 @@
 		"authors": [
 			"बिप्लब आनन्द",
 			"सरोज कुमार ढकाल",
-			"बडा काजी"
+			"बडा काजी",
+			"पर्वत सुबेदी"
 		]
 	},
 	"action-urlshortener-create-url": "छोटो युआरएलहरू सिर्जना गर्नुहोस्",
@@ -13,8 +14,8 @@
 	"manageshorturls": "छोटो युआरएल प्रबन्ध गर्नुहोस्",
 	"right-urlshortener-manage-url": "छोटो युआरएल प्रबन्ध गर्नुहोस्",
 	"grant-shortenurls": "छोटो युआरएलहरू सिर्जना गर्नुहोस्",
-	"urlshortener": "यूआरएल संक्षिप्तीकरण",
-	"urlshortener-desc": "स्वेच्छा अनुसारको यूआरएलको लागि यूआरएल संक्षिप्तीकरण",
+	"urlshortener": "युआरएल संक्षिप्तीकरण",
+	"urlshortener-desc": "स्वेच्छा अनुसारको युआरएलको लागि युआरएल संक्षिप्तीकरण",
 	"urlshortener-error-disallowed-url": "डोमेन $1 को लागि यूआरएलहरू संक्षिप्तीकरण असमर्थ गरिएको छ",
 	"urlshortener-error-malformed-url": "अमान्य यूआरएल",
 	"urlshortener-form-header": "तपाईँ आफ्नो लामो युआरएल यहाँ पेस्ट गर्नुहोस",
