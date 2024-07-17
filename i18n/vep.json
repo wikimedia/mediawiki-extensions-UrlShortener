@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Лариса Чиркова"
+			"Лариса Чиркова",
+			"Ростислав Мельников"
 		]
 	},
-	"urlshortener-toolbox": "Sa lühenzoittud URL-adres"
+	"urlshortener-toolbox": "Sa lühenzoittud URL-adres",
+	"urlshortener-toolbox-qrcode": "Pompata QR-kod",
+	"urlshortener-qrcode-downloaded": "QR-kod om pompatud kut SVG-fail"
 }

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajiniyaz Nurniyazov"
+			"Ajiniyaz Nurniyazov",
+			"Inabat Allanova"
 		]
 	},
 	"urlshortener": "URL qısqartqısh",
@@ -11,5 +12,6 @@
 	"urlshortener-toolbox-qrcode": "QR kod júklep alıw",
 	"urlshortener-url-input-submitting": "Qısqartılmaqta...",
 	"urlshortener-badaccessgroups": "Qısqartılǵan URL jaratıwǵa huqıqıńız joq",
-	"log-name-urlshortener": "Qısqartılǵan URL basqarıw jurnalı"
+	"log-name-urlshortener": "Qısqartılǵan URL basqarıw jurnalı",
+	"urlshortener-qrcode-downloaded": "QR kod SVG fayl sıpatında saqlandı"
 }
