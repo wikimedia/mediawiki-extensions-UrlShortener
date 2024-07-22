@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Brazal.dang",
-			"Leeheonjin"
+			"Leeheonjin",
+			"Qwrop"
 		]
 	},
 	"action-urlshortener-create-url": "Gumawa ng mas maikling mga URL",
 	"right-urlshortener-create-url": "Gumawa ng mas maikling mga URL",
-	"urlshortener-failed-try-again": "Nabigo. Subukang muli?"
+	"urlshortener-failed-try-again": "Nabigo. Subukang muli?",
+	"urlshortener-toolbox": "Kumuha ng pinaikling URL"
 }

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"IJzeren Jan"
+		]
+	},
+	"apihelp-shortenurl-summary": "Skračenje dolgogo URL-adresa na kratši.",
+	"apihelp-shortenurl-param-url": "URL-adres do skračenja.",
+	"apihelp-shortenurl-example-1": "Dobyti kratky URL-adres za <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Tvorjenje novyh kratkyh URL-adresov nemožno",
+	"apierror-urlshortener-permissiondenied": "Tvorjenje kratkyh URL-adresov ne jest vam dozvoljeno"
+}
