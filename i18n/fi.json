@@ -7,8 +7,13 @@
 			"Stryn"
 		]
 	},
+	"action-urlshortener-create-url": "luoda lyhyitä URL-osoitteita",
+	"right-urlshortener-create-url": "Luoda lyhyitä URL-osoitteita",
+	"action-urlshortener-manage-url": "hallinnoida lyhyitä URL-osoitteita",
 	"urlshortener": "URL-lyhentäjä",
+	"qrcode": "QR-koodigeneraattori",
 	"urlshortener-copy-success": "URL kopioitu leikepöydälle.",
+	"urlshortener-form-header": "Liitä pitkä URL:si tähän",
 	"urlshortener-qrcode-url-label": "URL:",
 	"urlshortener-qrcode-form-submit": "Lähetä",
 	"urlshortener-ratelimit": "Odota jonkin aikaa ennen kuin lyhennät lisää verkko-osoitteita.",

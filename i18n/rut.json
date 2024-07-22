@@ -4,5 +4,7 @@
 			"Rut"
 		]
 	},
-	"urlshortener-toolbox": "Джикды URL лешун"
+	"urlshortener-toolbox": "Джикды URL лешун",
+	"urlshortener-toolbox-qrcode": "QR-код скачать гьыъын",
+	"urlshortener-qrcode-downloaded": "QR-код скачан SVG-файл кIалыба"
 }
