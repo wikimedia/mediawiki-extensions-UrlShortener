@@ -7,8 +7,12 @@
 			"Samoasambia"
 		]
 	},
+	"action-urlshortener-create-url": "luoda lyhyitä URL-osoitteita",
+	"right-urlshortener-create-url": "Luoda lyhyitä URL-osoitteita",
+	"action-urlshortener-manage-url": "hallinnoida lyhyitä URL-osoitteita",
 	"urlshortener": "URL-lyhentäjä",
 	"urlshortener-copy-success": "URL kopioitu leikepöydälle.",
+	"urlshortener-form-header": "Liitä pitkä URL:si tähän",
 	"urlshortener-ratelimit": "Odota jonkin aikaa ennen kuin lyhennät lisää verkko-osoitteita.",
 	"urlshortener-shortened-url-alt": "Voit myös käyttää tätä vaihtoehtoista URL-osoitetta:",
 	"urlshortener-shortened-url-label": "Lyhennetty URL",
