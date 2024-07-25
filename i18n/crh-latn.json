@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Don Alessandro"
+		]
+	},
+	"urlshortener-toolbox": "Qısqartılğan URL-ni elde et",
+	"urlshortener-toolbox-qrcode": "QR kodu endir",
+	"urlshortener-qrcode-downloaded": "QR kodu SVG faylı olaraq endirildi"
+}
