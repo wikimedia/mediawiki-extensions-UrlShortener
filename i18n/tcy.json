@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vishwanatha Badikana"
+			"Vishwanatha Badikana",
+			"Mahaveer Indra"
 		]
 	},
-	"urlshortener-toolbox": "ಸಂಕ್ಷಿಪ್ತೊ ಯುಆರ್‌ಎಲ್ ಪಡೆಲೆ"
+	"urlshortener-toolbox": "ಎಲ್ಯ ಯುಆರ್‌ಎಲ್ ಪಡೆಲೆ",
+	"urlshortener-toolbox-qrcode": "ಕ್ಯೂಆರ್ ಕೋಡ್ ಡೌನ್‌ಲೋಡ್ ಮಲ್ಪುಲೆ",
+	"urlshortener-qrcode-downloaded": "ಕ್ಯೂಆರ್ ಕೋಡ್, ಎಸ್‌ವಿಜಿ ರೂಪೊಡು ಡೌನ್‌ಲೋಡ್ ಆಂಡ್"
 }
