@@ -4,5 +4,6 @@
 			"Mbee-wiki"
 		]
 	},
-	"urlshortener-toolbox-qrcode": "Unduh kode QR"
+	"urlshortener-toolbox-qrcode": "Unduh kode QR",
+	"urlshortener-qrcode-downloaded": "Kode QR so ta unduh jadi fail SVG"
 }

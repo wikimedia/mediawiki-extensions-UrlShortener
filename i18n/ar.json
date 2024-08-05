@@ -8,11 +8,12 @@
 			"Karim185.3",
 			"Lolekek",
 			"Meno25",
+			"Michel Bakni",
 			"ديفيد",
 			"علاء"
 		]
 	},
-	"action-urlshortener-create-url": "إنشاء مسارات قصيرة",
+	"action-urlshortener-create-url": "إنشاء مسارات مختصرة",
 	"right-urlshortener-create-url": "إنشاء مسارات قصيرة",
 	"action-urlshortener-manage-url": "إدارة المسارات المختصرة",
 	"manageshorturls": "إدارة المسارات المختصرة",
@@ -38,6 +39,7 @@
 	"urlshortener-manage-delete-failed": "فشل حذف المسار",
 	"urlshortener-manage-not-enough-data": "تحتاج إلى تحديد رمز مسار مختصر لحذفه أو استعادته",
 	"urlshortener-manage-restore-failed": "فشلت استعادة المسار",
+	"urlshortener-manage-reason": "السبب",
 	"urlshortener-not-found-message": "عذرا، لم يتم العثور على المسار الذي تبحث عنه.",
 	"urlshortener-not-found-title": "لم يتم العثور على مسار قصير",
 	"urlshortener-qrcode-url-label": "المسار:",
@@ -48,11 +50,11 @@
 	"urlshortener-shortened-url-alt": "يمكنك أيضًا استخدام المسار البديل هذا:",
 	"urlshortener-shortened-url-label": "المسار المختصر",
 	"urlshortener-toolbox": "احصل على مسار مختصر",
-	"urlshortener-toolbox-qrcode": "تحميل رمز ال QR",
+	"urlshortener-toolbox-qrcode": "تنزيل رمز الاستجابة السريعة (QR)",
 	"urlshortener-url-input-label": "المسار",
 	"urlshortener-url-input-submit": "تقصير",
 	"urlshortener-url-input-submitting": "جارِ التقصير…",
 	"urlshortener-url-too-long": "المسار طويل جدا، والحد الأقصى للحجم هو {{PLURAL:$1|حرف واحد|$1 حروف}}",
 	"urlshortener-badaccessgroups": "ليس لديك صلاحية لإنشاء مسارات قصيرة",
-	"urlshortener-qrcode-downloaded": "تم تنزيل رمز الاستجابة السريعة كملف SVG"
+	"urlshortener-qrcode-downloaded": "نُزِّل رمز الاستجابة السريعة بصيغة متجهيَّة (SVG)"
 }
