@@ -13,6 +13,7 @@
 	"urlshortener": "URL-lyhentäjä",
 	"qrcode": "QR-koodigeneraattori",
 	"urlshortener-copy-success": "URL kopioitu leikepöydälle.",
+	"urlshortener-desc": "URL-lyhentäjä pitkille URL:eille",
 	"urlshortener-form-header": "Liitä pitkä URL:si tähän",
 	"urlshortener-qrcode-url-label": "URL:",
 	"urlshortener-qrcode-form-submit": "Lähetä",
