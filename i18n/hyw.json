@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Շահէն"
+		]
+	},
+	"urlshortener-toolbox": "Ստանալ կարճացած URL",
+	"urlshortener-toolbox-qrcode": "QR քոտը ներբեռնել",
+	"urlshortener-qrcode-downloaded": "QR քոտը ներբեռնուած է իբր SVG"
+}

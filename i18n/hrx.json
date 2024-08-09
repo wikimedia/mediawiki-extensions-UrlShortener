@@ -4,5 +4,7 @@
 			"Iohanen"
 		]
 	},
-	"urlshortener-toolbox": "Gekerzd URL akzesseere"
+	"urlshortener-toolbox": "Gekerzd URL akzesseere",
+	"urlshortener-toolbox-qrcode": "QR-Code runnerlaade",
+	"urlshortener-qrcode-downloaded": "QR-Code als SVG-Arkiv runnergelaad"
 }
