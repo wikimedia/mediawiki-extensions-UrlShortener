@@ -99,14 +99,10 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 * @param string $module
 	 */
 	protected function alterForm( HTMLForm $form, string $module = 'ext.urlShortener.special' ) {
-		// HACK: There's apparently no way to add a container around the form, barring more
-		// egregious tactics like manipulating the whole OutputPage. Here we leave an open <div>
-		// in the pre-HTML, and close the tag later both in this class and SpecialQrCode,
-		// as the latter needs to append more content before closing the tag.
-		$form->addPreHtml(
-			Html::openElement( 'div', [ 'class' => 'ext-urlshortener-container' ] )
-		);
-		$form->suppressDefaultSubmit();
+		$form
+			->setPreHtml( Html::openElement( 'div', [ 'class' => 'ext-urlshortener-container' ] ) )
+			->setPostHtml( Html::closeElement( 'div' ) )
+			->suppressDefaultSubmit();
 		$this->getOutput()->addModules( $module );
 		$this->getOutput()->addJsConfigVars( [
 			'wgUrlShortenerAllowedDomains' => UrlShortenerUtils::getAllowedDomainsRegex(),

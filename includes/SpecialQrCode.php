@@ -49,12 +49,15 @@ class SpecialQrCode extends SpecialUrlShortener {
 
 		// @phan-suppress-next-line PhanRedundantCondition
 		if ( isset( $this->resultStatus ) ) {
+			// Once remove the closing tag for the .ext-urlshortener-container element opened
+			// in parent::alterForm() because we want to add another element into the wrapper
+			$form->setPostHtml( '' );
 			// We have to use Html::rawElement() because we need to link to a data URI,
 			// which is disallowed by OOUI\Tag::isSafeUrl().
 			// @phan-suppress-next-line SecurityCheck-XSS
 			$form->addPostHtml( $this->getQrCodeHtml() );
-			// Closes the .ext-urlshortener-container element opened in parent::alterForm()
-			$form->addPostHtml( Html::closeElement( 'div' ) );
+			// Closes the .ext-urlshortener-container element again
+			$form->setPostHtml( Html::closeElement( 'div' ) );
 		}
 	}
 
