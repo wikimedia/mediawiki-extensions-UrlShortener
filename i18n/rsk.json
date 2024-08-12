@@ -4,5 +4,7 @@
 			"Keresturec"
 		]
 	},
-	"urlshortener-toolbox": "Достац кратки URL"
+	"urlshortener-toolbox": "Достац кратки URL",
+	"urlshortener-toolbox-qrcode": "Превежнї QR код",
+	"urlshortener-qrcode-downloaded": "QR код превжати як SVG файл"
 }

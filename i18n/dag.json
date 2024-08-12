@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alhassan Abdul-Manan",
 			"Alhassan Peter",
 			"Kalakpagh"
 		]
 	},
 	"urlshortener-qrcode-form-submit": "Saɣi",
-	"urlshortener-toolbox": "Bɔmi URL ŋmaa"
+	"urlshortener-toolbox": "Bɔmi URL ŋmaa",
+	"urlshortener-toolbox-qrcode": "Kpuɣmi QR anfooni",
+	"urlshortener-qrcode-downloaded": "QR anfooni kpuɣya Knyela SVG buku"
 }
