@@ -12,6 +12,7 @@
 	"action-urlshortener-manage-url": "hallinnoida lyhyitä URL-osoitteita",
 	"urlshortener": "URL-lyhentäjä",
 	"urlshortener-copy-success": "URL kopioitu leikepöydälle.",
+	"urlshortener-desc": "URL-lyhentäjä pitkille URL:eille",
 	"urlshortener-form-header": "Liitä pitkä URL:si tähän",
 	"urlshortener-ratelimit": "Odota jonkin aikaa ennen kuin lyhennät lisää verkko-osoitteita.",
 	"urlshortener-shortened-url-alt": "Voit myös käyttää tätä vaihtoehtoista URL-osoitetta:",
