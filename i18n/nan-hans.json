@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"SupaplexTW"
+		]
+	},
+	"urlshortener-toolbox": "予人短网址",
+	"urlshortener-toolbox-qrcode": "予人下载二维码",
+	"urlshortener-qrcode-downloaded": "共二维码下载做SVG档案"
+}

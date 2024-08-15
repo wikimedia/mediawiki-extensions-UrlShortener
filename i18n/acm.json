@@ -5,6 +5,6 @@
 		]
 	},
 	"urlshortener-toolbox": "حصللك مسار مختصر",
-	"urlshortener-toolbox-qrcode": "تنزيل رمز QR",
-	"urlshortener-qrcode-downloaded": "رمز QR نزل كملف SVG"
+	"urlshortener-toolbox-qrcode": "نزل رمز QR",
+	"urlshortener-qrcode-downloaded": "رمز QR نزل ملف SVG"
 }
