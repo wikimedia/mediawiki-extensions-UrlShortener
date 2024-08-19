@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Brazal.dang",
+			"Jojit fb",
 			"Leeheonjin",
 			"Qwrop"
 		]
@@ -9,5 +10,6 @@
 	"action-urlshortener-create-url": "Gumawa ng mas maikling mga URL",
 	"right-urlshortener-create-url": "Gumawa ng mas maikling mga URL",
 	"urlshortener-failed-try-again": "Nabigo. Subukang muli?",
-	"urlshortener-toolbox": "Kumuha ng pinaikling URL"
+	"urlshortener-toolbox": "Kumuha ng pinaikling URL",
+	"urlshortener-toolbox-qrcode": "I-download ang QR code"
 }
