@@ -3,7 +3,8 @@
 		"authors": [
 			"NMW03",
 			"Serkanland",
-			"Wertuose"
+			"Wertuose",
+			"Nemoralis"
 		]
 	},
 	"action-urlshortener-create-url": "qısa URL-lər yaratmaq",
@@ -11,9 +12,9 @@
 	"action-urlshortener-manage-url": "qısa URL-ləri idarə etmək",
 	"action-urlshortener-view-log": "qısa URL-lərin idarə jurnalına baxmaq",
 	"manageshorturls": "Qısa URL-ləri idarə et",
-	"right-urlshortener-manage-url": "Qısa URL-ləri idarə etmək",
+	"right-urlshortener-manage-url": "Qısaldılmış URL-ləri idarə etmək",
 	"grant-shortenurls": "Qısa URL-lər yaratmaq",
-	"right-urlshortener-view-log": "Qısa URL-lərin idarə jurnalına baxmaq",
+	"right-urlshortener-view-log": "Qısaldılmış URL-lərin idarə jurnalına baxmaq",
 	"urlshortener": "URL Qısaldıcı",
 	"urlshortener-action-done": "URL-lər silinmiş və/və ya bərpa edilmişdir",
 	"urlshortener-approved-domains": "Aşağıdakı {{PLURAL:$1|domenə|domenlərə}} aid linklər qısaldıla bilər: $2 .",

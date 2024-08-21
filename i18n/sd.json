@@ -57,5 +57,5 @@
 	"log-action-filter-urlshortener": "انتظام جو قسم",
 	"log-action-filter-urlshortener-delete": "يوآرايل جي ڊاھ",
 	"log-action-filter-urlshortener-restore": "يوآرايل جي بحالي",
-	"urlshortener-qrcode-downloaded": "ڪيوآر ڪوڊ بطور ايسويجي فائيل لاٿو ويو آھي"
+	"urlshortener-qrcode-downloaded": "ڪيوآر ڪوڊ بطور SVG فائيل لاٿو ويو آھي"
 }
