@@ -15,7 +15,7 @@
 	"right-urlshortener-view-log": "Pregled evidencije upravljanja kratkim URL-ovima",
 	"urlshortener": "Skraćivač URL-ova",
 	"urlshortener-action-done": "URL-ovi su izbrisani i/ili vraćeni",
-	"urlshortener-approved-domains": "Linkovi što vode na {{PLURAL:$1|sljedeću domenu|sljedeće domene}} mogu biti skraćeni: $2.",
+	"urlshortener-approved-domains": "Veze do {{PLURAL:$1|sljedećeg domena|sljedećih domena}} mogu biti skraćene: $2.",
 	"urlshortener-blocked": "Skraćivanje URL-ova nisu dopušteni blokoranima korisnicima.",
 	"urlshortener-copy-fail": "Nije uspjelo iskopirati URL u međuspremnik.",
 	"urlshortener-copy-success": "URL je iskopirano u međuspremnik.",
