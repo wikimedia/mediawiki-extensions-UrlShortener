@@ -10,21 +10,8 @@ use MediaWiki\User\User;
  */
 class DumpURLsTest extends MaintenanceBaseTestCase {
 
-	/** @var string|bool */
-	protected $tmp;
-
 	protected function getMaintenanceClass() {
 		return DumpURLs::class;
-	}
-
-	public function setUp(): void {
-		parent::setUp();
-		$this->tmp = tempnam( wfTempDir(), __CLASS__ );
-	}
-
-	public function tearDown(): void {
-		unlink( $this->tmp );
-		parent::tearDown();
 	}
 
 	public function testExecute() {
@@ -35,7 +22,8 @@ class DumpURLsTest extends MaintenanceBaseTestCase {
 			$this->assertTrue( $status->isGood() );
 		}
 
-		$this->maintenance->loadWithArgv( [ $this->tmp ] );
+		$tmpFile = $this->getNewTempFile();
+		$this->maintenance->loadWithArgv( [ $tmpFile ] );
 		// Set batchsize smaller than total results
 		// so we test batching
 		$this->maintenance->setBatchSize( 3 );
@@ -55,7 +43,7 @@ C|http://example.org/9
 EXPECTED;
 		$this->assertEquals(
 			$expected,
-			file_get_contents( $this->tmp )
+			file_get_contents( $tmpFile )
 		);
 	}
 }
