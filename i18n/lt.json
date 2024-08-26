@@ -10,5 +10,6 @@
 	"right-urlshortener-create-url": "Kurti trumpus URL",
 	"action-urlshortener-manage-url": "tvarkyti trumpus URL",
 	"urlshortener-toolbox": "Gauti sutrumpintą URL nuorodą",
-	"urlshortener-toolbox-qrcode": "Atsisiųsti QR kodą"
+	"urlshortener-toolbox-qrcode": "Atsisiųsti QR kodą",
+	"urlshortener-qrcode-downloaded": "QR kodas atsisiųstas kaip SVG failas"
 }
