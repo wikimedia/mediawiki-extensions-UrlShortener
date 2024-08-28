@@ -4,5 +4,7 @@
 			"Rooiratel"
 		]
 	},
-	"urlshortener-toolbox": "Kry verkorte URL"
+	"urlshortener-toolbox": "Kry verkorte URL",
+	"urlshortener-toolbox-qrcode": "Laai QR-kode af",
+	"urlshortener-qrcode-downloaded": "QR-kode afgelaai as SVG-lêer"
 }
