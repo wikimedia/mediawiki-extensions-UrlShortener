@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Aishik Rehman",
+			"ZeetBaral",
 			"আফতাবুজ্জামান",
 			"খাত্তাব হাসান"
 		]
@@ -24,7 +25,7 @@
 	"urlshortener-deleted": "এই সংক্ষিপ্ত ইউআরএল মুছে ফেলা হয়েছে।",
 	"urlshortener-desc": "অবাধ ইউআরএলগুলির জন্য ইউআরএল সংক্ষেপক",
 	"urlshortener-disabled": "নতুন সংক্ষিপ্ত ইউআরএল তৈরি করা সাময়িকভাবে নিষ্ক্রিয়।",
-	"urlshortener-qrcode-disabled": "QR কোড তৈরি করা নিষ্ক্রিয় আছে।",
+	"urlshortener-qrcode-disabled": "QR কোড তৈরি করা বন্ধ আছে।",
 	"urlshortener-enter-short-code-delete": "অপসারণ করার জন্য ইউআরএল সংক্ষিপ্ত কোড",
 	"urlshortener-enter-short-code-restore": "পুনরুদ্ধার করার জন্য ইউআরএল সংক্ষিপ্ত কোড",
 	"urlshortener-error-badports": "পোর্ট ধারণকারী ইউআরএলগুলি সংক্ষিপ্ত করার জন্য অনুমোদিত নয়",
