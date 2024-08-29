@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nadezhda"
+			"Nadezhda",
+			"Angelika"
 		]
 	},
 	"urlshortener-toolbox": "Кӹтӹк URL-адресӹм нӓлӓш",
-	"urlshortener-toolbox-qrcode": "QR кодым крузаш",
-	"urlshortener-qrcode-downloaded": "QR кодым SVG файл семӹнь крузымы"
+	"urlshortener-toolbox-qrcode": "QR кодым вӓрӓнгдӓш",
+	"urlshortener-qrcode-downloaded": "QR кодым SVG файл семӹнь вӓрӓнгдӹмӹ"
 }
