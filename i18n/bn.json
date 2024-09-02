@@ -3,7 +3,8 @@
 		"authors": [
 			"আফতাবুজ্জামান",
 			"খাত্তাব হাসান",
-			"Aishik Rehman"
+			"Aishik Rehman",
+			"ZeetBaral"
 		]
 	},
 	"action-urlshortener-create-url": "সংক্ষিপ্ত ইউআরএল তৈরি করার",
@@ -26,7 +27,7 @@
 	"urlshortener-enter-short-code-delete": "অপসারণ করার জন্য ইউআরএল সংক্ষিপ্ত কোড",
 	"urlshortener-enter-short-code-restore": "পুনরুদ্ধার করার জন্য ইউআরএল সংক্ষিপ্ত কোড",
 	"urlshortener-error-badports": "পোর্ট ধারণকারী ইউআরএলগুলি সংক্ষিপ্ত করার জন্য অনুমোদিত নয়",
-	"urlshortener-error-disallowed-url": "$1 ডোমেইনের ইউআরএল সংক্ষিপ্ত করার জন্য মঞ্জুরিপ্রাপ্ত নয়",
+	"urlshortener-error-disallowed-url": "সংক্ষিপ্ত করার জন্য $1 ডোমেইনের ইউআরএল অনুমোদিত নয়",
 	"urlshortener-error-malformed-url": "বৈধ ইউআরএল নয়",
 	"urlshortener-error-nouserpass": "ইউআরএল যা ব্যবহারকারীর নাম বা পাসওয়ার্ড ধারণ করে তা সংক্ষিপ্ত করার জন্য অনুমোদিত নয়।",
 	"urlshortener-failed-try-again": "ব্যর্থ হয়েছে। আবার চেষ্টা করবেন?",
