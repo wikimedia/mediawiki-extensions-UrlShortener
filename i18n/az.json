@@ -17,7 +17,7 @@
 	"right-urlshortener-view-log": "Qısaldılmış URL-lərin idarə jurnalına baxmaq",
 	"urlshortener": "URL Qısaldıcı",
 	"urlshortener-action-done": "URL-lər silinmiş və/və ya bərpa edilmişdir",
-	"urlshortener-approved-domains": "Aşağıdakı {{PLURAL:$1|domenə|domenlərə}} aid linklər qısaldıla bilər: $2 .",
+	"urlshortener-approved-domains": "Yalnız şağıdakı {{PLURAL:$1|domenə|domenlərə}} aid linklər qısaldıla bilər: $2.",
 	"urlshortener-blocked": "Bloklanmış istifadəçilər qısa URL-lər yarada bilməz.",
 	"urlshortener-copy-fail": "Kopyalamaq alınmadı.",
 	"urlshortener-copy-success": "Mübadilə buferinə kopyalandı.",
