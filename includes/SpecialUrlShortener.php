@@ -16,6 +16,7 @@ use MediaWiki\HTMLForm\HTMLForm;
 use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Status\Status;
+use MediaWiki\Utils\UrlUtils;
 use OOUI\FieldLayout;
 use OOUI\HtmlSnippet;
 use OOUI\Tag;
@@ -26,13 +27,20 @@ class SpecialUrlShortener extends FormSpecialPage {
 
 	protected FieldLayout $resultField;
 	protected Status $resultStatus;
+	private UrlUtils $urlUtils;
 
 	/**
+	 * @param UrlUtils $urlUtils
 	 * @param string $name
 	 * @param string $restriction
 	 */
-	public function __construct( $name = 'UrlShortener', $restriction = 'urlshortener-create-url' ) {
+	public function __construct(
+		UrlUtils $urlUtils,
+		$name = 'UrlShortener',
+		$restriction = 'urlshortener-create-url'
+	) {
 		parent::__construct( $name, $restriction );
+		$this->urlUtils = $urlUtils;
 	}
 
 	/**
@@ -82,8 +90,8 @@ class SpecialUrlShortener extends FormSpecialPage {
 		if ( $urlShortenerApprovedDomains ) {
 			$domains = $urlShortenerApprovedDomains;
 		} else {
-			$parsed = wfParseUrl( $this->getConfig()->get( 'Server' ) );
-			$domains = [ $parsed['host'] ];
+			$parsed = $this->urlUtils->parse( $this->getConfig()->get( 'Server' ) );
+			$domains = [ $parsed['host'] ?? '' ];
 		}
 
 		$lang = $this->getLanguage();

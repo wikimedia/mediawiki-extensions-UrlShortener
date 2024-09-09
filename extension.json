@@ -174,12 +174,18 @@
 		"remoteExtPath": "UrlShortener"
 	},
 	"SpecialPages": {
-		"UrlShortener": "MediaWiki\\Extension\\UrlShortener\\SpecialUrlShortener",
+		"UrlShortener": {
+			"class": "MediaWiki\\Extension\\UrlShortener\\SpecialUrlShortener",
+			"services": [
+				"UrlUtils"
+			]
+		},
 		"UrlRedirector": "MediaWiki\\Extension\\UrlShortener\\SpecialUrlRedirector",
 		"ManageShortUrls": "MediaWiki\\Extension\\UrlShortener\\SpecialManageShortUrls",
 		"QrCode": {
 			"class": "MediaWiki\\Extension\\UrlShortener\\SpecialQrCode",
 			"services": [
+				"UrlUtils",
 				"ConfigFactory"
 			]
 		}
