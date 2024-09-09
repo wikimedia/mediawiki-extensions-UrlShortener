@@ -13,18 +13,20 @@ use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Html\Html;
 use MediaWiki\HTMLForm\HTMLForm;
 use MediaWiki\Status\Status;
+use MediaWiki\Utils\UrlUtils;
 
 class SpecialQrCode extends SpecialUrlShortener {
 
 	private int $shortenLimit;
 
 	/**
+	 * @param UrlUtils $urlUtils
 	 * @param ConfigFactory $configFactory
 	 */
-	public function __construct( ConfigFactory $configFactory ) {
+	public function __construct( UrlUtils $urlUtils, ConfigFactory $configFactory ) {
 		$config = $configFactory->makeConfig( 'urlshortener' );
 		$this->shortenLimit = $config->get( 'UrlShortenerQrCodeShortenLimit' );
-		parent::__construct( 'QrCode' );
+		parent::__construct( $urlUtils, 'QrCode' );
 	}
 
 	/**

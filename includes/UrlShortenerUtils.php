@@ -23,6 +23,7 @@ use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Status\Status;
 use MediaWiki\User\User;
+use MediaWiki\Utils\UrlUtils;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\IReadableDatabase;
 
@@ -162,7 +163,7 @@ class UrlShortenerUtils {
 				unset( $parsed['query'] );
 			}
 		}
-		$url = wfAssembleUrl( $parsed );
+		$url = UrlUtils::assemble( $parsed );
 
 		return $url;
 	}
