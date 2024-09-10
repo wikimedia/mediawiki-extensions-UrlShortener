@@ -8,7 +8,8 @@ return [
 	'UrlShortener.Utils' => static function ( MediaWikiServices $services ): UrlShortenerUtils {
 		return new UrlShortenerUtils(
 			$services->getMainConfig(),
-			$services->getDBLoadBalancerFactory()
+			$services->getDBLoadBalancerFactory(),
+			$services->getUrlUtils()
 		);
 	},
 ];

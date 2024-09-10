@@ -31,13 +31,16 @@ use Wikimedia\Rdbms\IReadableDatabase;
 class UrlShortenerUtils {
 	private Config $config;
 	private IConnectionProvider $lbFactory;
+	private UrlUtils $urlUtils;
 
 	public function __construct(
 		Config $config,
-		IConnectionProvider $lbFactory
+		IConnectionProvider $lbFactory,
+		UrlUtils $urlUtils
 	) {
 		$this->config = $config;
 		$this->lbFactory = $lbFactory;
+		$this->urlUtils = $urlUtils;
 	}
 
 	/**
@@ -160,7 +163,7 @@ class UrlShortenerUtils {
 
 		// If the wiki is using an article path (e.g. /wiki/$1) try
 		// and convert plain index.php?title=$1 URLs to the canonical form
-		$parsed = wfParseUrl( $url );
+		$parsed = $this->urlUtils->parse( $url );
 		if ( !isset( $parsed['path'] ) ) {
 			// T220718: Ensure each URL has a / after the domain name
 			$parsed['path'] = '/';
@@ -186,11 +189,11 @@ class UrlShortenerUtils {
 	 * @return string
 	 */
 	public function convertToProtocol( string $url, $proto = PROTO_RELATIVE ): string {
-		$parsed = wfParseUrl( $url );
+		$parsed = $this->urlUtils->parse( $url ) ?? [];
 		unset( $parsed['scheme'] );
 		$parsed['delimiter'] = '//';
 
-		return wfExpandUrl( wfAssembleUrl( $parsed ), $proto );
+		return $this->urlUtils->expand( UrlUtils::assemble( $parsed ), $proto ) ?? '';
 	}
 
 	/**
@@ -410,7 +413,7 @@ class UrlShortenerUtils {
 		$url = str_replace( '$1', $shortCode, $urlTemplate );
 
 		// Make sure the URL is fully qualified
-		return wfExpandUrl( $url );
+		return $this->urlUtils->expand( $url ) ?? '';
 	}
 
 	/**
@@ -422,7 +425,7 @@ class UrlShortenerUtils {
 		$allowedDomains = $this->config->get( 'UrlShortenerAllowedDomains' );
 		if ( $allowedDomains === false ) {
 			// Allowed Domains not configured, default to wgServer
-			$serverParts = wfParseUrl( $this->config->get( MainConfigNames::Server ) );
+			$serverParts = $this->urlUtils->parse( $this->config->get( MainConfigNames::Server ) ) ?? [];
 			return preg_quote( $serverParts['host'], '/' );
 		}
 		// Collapse the allowed domains into a single string, so we have to run regex check only once
@@ -441,8 +444,8 @@ class UrlShortenerUtils {
 	 * @return bool|Message true if it is valid, or error Message object if invalid
 	 */
 	public function validateUrl( string $url ) {
-		$urlParts = wfParseUrl( $url );
-		if ( $urlParts === false ) {
+		$urlParts = $this->urlUtils->parse( $url );
+		if ( $urlParts === null ) {
 			return wfMessage( 'urlshortener-error-malformed-url' );
 		} else {
 			$allowArbitraryPorts = $this->config
