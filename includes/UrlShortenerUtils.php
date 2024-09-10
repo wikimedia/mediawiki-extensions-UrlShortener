@@ -171,7 +171,9 @@ class UrlShortenerUtils {
 		$articlePath = $this->config->get( MainConfigNames::ArticlePath );
 		if ( $articlePath !== false && isset( $parsed['query'] ) ) {
 			$query = wfCgiToArray( $parsed['query'] );
-			if ( count( $query ) === 1 && isset( $query['title'] ) && $parsed['path'] === wfScript() ) {
+			if ( count( $query ) === 1 && isset( $query['title'] ) &&
+				$parsed['path'] === $this->config->get( MainConfigNames::Script )
+			) {
 				$parsed['path'] = str_replace( '$1', $query['title'], $articlePath );
 				unset( $parsed['query'] );
 			}
