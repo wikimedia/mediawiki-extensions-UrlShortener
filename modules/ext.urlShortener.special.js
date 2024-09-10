@@ -32,28 +32,28 @@ class UrlShortener {
 	 *                         returned by the API in case of error.
 	 */
 	validateInput( input ) {
-		let parsed, url;
+		let url;
 
 		try {
-			parsed = new mw.Uri( input );
+			url = new URL( input );
 		} catch ( e ) {
 			this.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-malformed-url' ) ] );
 			return false;
 		}
-		if ( !parsed.host.match( this.regex ) ) {
-			url = parsed.protocol + '://' + mw.html.escape( parsed.host );
-			this.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-disallowed-url', url ) ] );
+		if ( !url.host.match( this.regex ) ) {
+			const origin = mw.html.escape( url.origin );
+			this.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-disallowed-url', origin ) ] );
 			return false;
 		}
-		if ( parsed.port &&
+		if ( url.port &&
 			!this.allowArbitraryPorts &&
-			!( parsed.port === '80' || parsed.port === '443' )
+			!( url.port === '80' || url.port === '443' )
 		) {
 			this.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-badports' ) ] );
 			return false;
 		}
 
-		if ( parsed.user || parsed.password ) {
+		if ( url.username || url.password ) {
 			this.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-nouserpass' ) ] );
 			return false;
 		}

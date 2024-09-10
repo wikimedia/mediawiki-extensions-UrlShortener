@@ -113,10 +113,10 @@
 				"urlshortener-url-input-submitting"
 			],
 			"dependencies": [
+				"web2017-polyfills",
 				"oojs-ui",
 				"oojs-ui.styles.icons-content",
 				"mediawiki.api",
-				"mediawiki.Uri",
 				"mediawiki.htmlform.ooui",
 				"mediawiki.widgets"
 			]
