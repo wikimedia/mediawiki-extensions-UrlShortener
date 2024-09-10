@@ -2,6 +2,7 @@
 
 use MediaWiki\Block\AbstractBlock;
 use MediaWiki\Extension\UrlShortener\UrlShortenerUtils;
+use MediaWiki\MainConfigNames;
 use MediaWiki\User\User;
 
 /**
@@ -92,7 +93,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::convertToProtocol
 	 */
 	public function testConvertToProtocol( $input, $proto, $expected ) {
-		$this->overrideConfigValue( 'Script', '/w' );
+		$this->overrideConfigValue( MainConfigNames::Script, '/w' );
 		$utils = $this->getUtils();
 		$this->assertEquals( $expected, $utils->convertToProtocol( $input, $proto ) );
 	}
@@ -138,8 +139,8 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testNormalizeUrl( $url, $expected ) {
 		$this->overrideConfigValues( [
-			'ArticlePath' => '/wiki/$1',
-			'Script' => '/w/index.php',
+			MainConfigNames::ArticlePath => '/wiki/$1',
+			MainConfigNames::Script => '/w/index.php',
 		] );
 		$utils = $this->getUtils();
 		$this->assertEquals( $expected, $utils->normalizeUrl( $url ) );
@@ -421,7 +422,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testGetAllowedDomainsRegex2() {
 		$this->setContentLang( 'qqx' );
-		$this->overrideConfigValue( 'Server', 'http://example.org' );
+		$this->overrideConfigValue( MainConfigNames::Server, 'http://example.org' );
 
 		$utils = $this->getUtils();
 		$allowedUrl = $utils->validateUrl( 'http://example.org/test' );
@@ -477,7 +478,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		int $limit, bool $useDataUri, array $expectedKeys, string $expectedSha
 	): void {
 		$this->overrideConfigValues( [
-			'Server' => 'https://example.org',
+			MainConfigNames::Server => 'https://example.org',
 			'UrlShortenerEnableQrCode' => true,
 			'UrlShortenerServer' => 'https://example.org',
 			'UrlShortenerTemplate' => '/r/$1'
