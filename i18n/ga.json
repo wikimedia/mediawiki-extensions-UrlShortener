@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kscanne"
+		]
+	},
+	"urlshortener-toolbox": "Faigh URL giorraithe",
+	"urlshortener-toolbox-qrcode": "Íoslódáil cód QR",
+	"urlshortener-qrcode-downloaded": "Íoslódáladh an cód QR mar chomhad SVG"
+}
