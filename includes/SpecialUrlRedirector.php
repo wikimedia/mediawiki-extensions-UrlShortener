@@ -29,7 +29,7 @@ class SpecialUrlRedirector extends UnlistedSpecialPage {
 		$this->getRequest()->response()->header( 'Access-Control-Allow-Origin: *' );
 
 		$url = $this->utils->getURL( $par, PROTO_CURRENT );
-		if ( $url !== false ) {
+		if ( $url !== null ) {
 			$out->setCdnMaxage( UrlShortenerUtils::CACHE_TTL_VALID );
 			$out->redirect( $url, '301' );
 		} else {

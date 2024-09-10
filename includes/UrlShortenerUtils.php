@@ -192,16 +192,16 @@ class UrlShortenerUtils {
 	}
 
 	/**
-	 * Retrieves a URL for the given shortcode, or false if there's none.
+	 * Retrieves a URL for the given shortcode, or null if there's none.
 	 *
 	 * @param string $shortCode
 	 * @param string|int|null $proto PROTO_* constant
-	 * @return string|false
+	 * @return string|null
 	 */
-	public function getURL( string $shortCode, $proto = PROTO_RELATIVE ) {
+	public function getURL( string $shortCode, $proto = PROTO_RELATIVE ): ?string {
 		$id = $this->decodeId( $shortCode );
-		if ( $id === false ) {
-			return false;
+		if ( $id === null ) {
+			return null;
 		}
 
 		$dbr = $this->getReplicaDB();
@@ -212,7 +212,7 @@ class UrlShortenerUtils {
 			->caller( __METHOD__ )->fetchField();
 
 		if ( $url === false ) {
-			return false;
+			return null;
 		}
 
 		return $this->convertToProtocol( $url, $proto );
@@ -226,7 +226,7 @@ class UrlShortenerUtils {
 	 */
 	public function isURLDeleted( string $shortCode ): bool {
 		$id = $this->decodeId( $shortCode );
-		if ( $id === false ) {
+		if ( $id === null ) {
 			return false;
 		}
 
@@ -248,7 +248,7 @@ class UrlShortenerUtils {
 	 */
 	public function deleteURL( string $shortcode ): bool {
 		$id = $this->decodeId( $shortcode );
-		if ( $id === false ) {
+		if ( $id === null ) {
 			return false;
 		}
 
@@ -272,7 +272,7 @@ class UrlShortenerUtils {
 	 */
 	public function restoreURL( string $shortcode ): bool {
 		$id = $this->decodeId( $shortcode );
-		if ( $id === false ) {
+		if ( $id === null ) {
 			return false;
 		}
 
@@ -497,14 +497,14 @@ class UrlShortenerUtils {
 	}
 
 	/**
-	 * Decode a compact string to produce an integer, or false if the input is invalid.
+	 * Decode a compact string to produce an integer, or null if the input is invalid.
 	 *
 	 * @param string $s
-	 * @return int|false
+	 * @return int|null
 	 */
-	public function decodeId( string $s ) {
+	public function decodeId( string $s ): ?int {
 		if ( $s === '' ) {
-			return false;
+			return null;
 		}
 
 		$altPrefix = $this->config->get( 'UrlShortenerAltPrefix' );
@@ -529,14 +529,13 @@ class UrlShortenerUtils {
 		$x = 0;
 		for ( $i = 0, $len = strlen( $s ); $i < $len; $i++ ) {
 			$x *= $n;
-			if ( isset( self::$decodeMap[$s[$i]] ) ) {
-				$val = self::$decodeMap[$s[$i]];
-				$x += $alt ?
-					$n - 1 - $val :
-					$val;
-			} else {
-				return false;
+			if ( !isset( self::$decodeMap[$s[$i]] ) ) {
+				return null;
 			}
+			$val = self::$decodeMap[$s[$i]];
+			$x += $alt ?
+				$n - 1 - $val :
+				$val;
 		}
 		return $x;
 	}

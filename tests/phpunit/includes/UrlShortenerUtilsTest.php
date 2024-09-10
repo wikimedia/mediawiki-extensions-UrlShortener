@@ -333,7 +333,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 		$utils->deleteURL( $id );
 
-		$this->assertFalse( $utils->getURL( $id, PROTO_HTTP ) );
+		$this->assertNull( $utils->getURL( $id, PROTO_HTTP ) );
 		$this->assertTrue( $utils->isURLDeleted( $id ) );
 	}
 

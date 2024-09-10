@@ -99,7 +99,7 @@ class SpecialManageShortUrls extends FormSpecialPage {
 
 		if ( $delete ) {
 			$url = $this->utils->getURL( $delete );
-			if ( $url === false ) {
+			if ( $url === null ) {
 				$errors[] = [ 'urlshortener-short-code-not-found' ];
 			}
 			$success = $this->utils->deleteURL( $delete );
