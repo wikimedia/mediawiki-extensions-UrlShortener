@@ -10,5 +10,7 @@
 	"urlshortener-deleted": "هاد الليان لقصير تحيّد.",
 	"urlshortener-form-header": "دير الليان الطويل هنا",
 	"urlshortener-shortened-url-label": "الليان لقصير",
-	"urlshortener-toolbox": "ليان مختاصر"
+	"urlshortener-toolbox": "ليان مختاصر",
+	"urlshortener-toolbox-qrcode": "طيليشارجي لكوض QR",
+	"urlshortener-qrcode-downloaded": "لكوض QR تطيليشارجا على شكل فيشي SVG"
 }
