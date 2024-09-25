@@ -5,5 +5,6 @@
 		]
 	},
 	"urlshortener-toolbox": "Ambil URL pindik",
-	"urlshortener-toolbox-qrcode": "Donlod kod QR"
+	"urlshortener-toolbox-qrcode": "Donlod kod QR",
+	"urlshortener-qrcode-downloaded": "Didonlod kod QR sabagai pail SVG"
 }
