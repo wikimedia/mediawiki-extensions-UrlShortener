@@ -3,7 +3,8 @@
 		"authors": [
 			"Luis Miguel Obando",
 			"Robin van der Vliet",
-			"Tlustulimu"
+			"Tlustulimu",
+			"Stefangrotz"
 		]
 	},
 	"action-urlshortener-create-url": "krei mallongajn URL-ojn",
@@ -27,6 +28,7 @@
 	"urlshortener-not-found-title": "Mallonga URL ne trovita",
 	"urlshortener-shortened-url-label": "Mallongigita URL",
 	"urlshortener-toolbox": "Akiri mallongigitan URL",
+	"urlshortener-toolbox-qrcode": "Elŝutu QR-kodon",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Mallongigi",
 	"urlshortener-url-input-submitting": "Mallongigado…",
@@ -34,5 +36,6 @@
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|forigis}} la mallongan URL \"$4\"",
 	"logentry-urlshortener-restore": "$1 {{GENDER:$2|restarigis}} la mallongan URL \"$4\"",
 	"log-action-filter-urlshortener-delete": "URL-forigado",
-	"log-action-filter-urlshortener-restore": "URL-restarigado"
+	"log-action-filter-urlshortener-restore": "URL-restarigado",
+	"urlshortener-qrcode-downloaded": "QR-kodo elŝutita kiel SVG-dosiero"
 }
