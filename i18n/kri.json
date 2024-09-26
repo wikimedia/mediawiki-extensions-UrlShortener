@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"122112ê"
+			"122112ê",
+			"Protostar"
 		]
 	},
-	"urlshortener-toolbox": "Gɛt URL we dɛn dɔn shɔt"
+	"urlshortener-toolbox": "Gɛt URL we dɛn dɔn shɔt",
+	"urlshortener-toolbox-qrcode": "Dɔnglod QR kod",
+	"urlshortener-qrcode-downloaded": "QR kod dɔn dɔnglod as SVG fayl"
 }

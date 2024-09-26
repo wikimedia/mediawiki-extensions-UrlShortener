@@ -4,5 +4,7 @@
 			"Brahim-essaidi"
 		]
 	},
-	"urlshortener-toolbox": "ⵟⵟⴼ URL ⵓⴳⵣⵉⵍ"
+	"urlshortener-toolbox": "ⵟⵟⴼ URL ⵓⴳⵣⵉⵍ",
+	"urlshortener-toolbox-qrcode": "ⴰⴳⵯⵎ ⵜⴰⵏⴳⴰⵍⵜ ⵏ QR",
+	"urlshortener-qrcode-downloaded": "ⵜⴻⵜⵜⵢⴰⴳⴰⵎ ⵜⵏⴳⴰⵍⵜ ⵏ QR ⵙ ⵜⴰⵍⵖⴰ ⵏ SVG"
 }

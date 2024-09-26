@@ -50,7 +50,7 @@
 	"urlshortener-url-input-label": "URL-adres",
 	"urlshortener-url-input-submit": "Skratiti",
 	"urlshortener-url-input-submitting": "Skračanje...",
-	"urlshortener-url-too-long": "URL-adres jest prěmnogo dolgy, maksimalna dolžina jest {{PLURAL:$1|jedin znak|$1 znakov}}",
+	"urlshortener-url-too-long": "URL-adres jest prěmnogo dolgy, maksimalna dolžina jest {{PLURAL:$1|jedin znak|$1 znaky|$1 znakov}}",
 	"urlshortener-badaccessgroups": "Tvorjenje kratkyh URL-adresov ne jest vam dozvoljeno",
 	"log-name-urlshortener": "Dnevnik upravjenja kratkymi URL-adresami",
 	"log-description-urlshortener": "Tutoj dnevnik pokazyvaje odstranjene i odnovjene kratke URL-adresy. On ne pokazyvaje novoiztvorjene.",
