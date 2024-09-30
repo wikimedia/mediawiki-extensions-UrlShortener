@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chulsu463"
+			"Amire80",
+			"Chulsu463",
+			"MiiCii"
 		]
 	},
-	"urlshortener-toolbox": "foholon oho URL",
-	"urlshortener-toolbox-qrcode": "QR code be sindambi",
-	"urlshortener-qrcode-downloaded": "QR code be SVG file i sindambi"
+	"urlshortener-toolbox": "Foholon URL be gaire",
+	"urlshortener-toolbox-qrcode": "QR kode be danglotlara",
+	"urlshortener-qrcode-downloaded": "QR kode -i SVG dangse be emgeri danglotlara"
 }
