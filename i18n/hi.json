@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Abijeet Patro",
-			"गोपाल"
+			"गोपाल",
+			"Srishakatux"
 		]
 	},
 	"action-urlshortener-view-log": "लघु URL प्रबंधन लॉग देखें",
 	"urlshortener-manage-reason": "कारण",
+	"urlshortener-toolbox": "संक्षिप्त URL प्राप्त करें",
 	"log-action-filter-urlshortener": "प्रबंधन का प्रकार"
 }
