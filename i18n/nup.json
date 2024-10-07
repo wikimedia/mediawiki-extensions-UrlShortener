@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"787IYO",
 			"Umar Ahmad2345"
 		]
 	},
-	"urlshortener-toolbox": "La tinya/wa tinya"
+	"urlshortener-toolbox": "La tinya/wa tinya",
+	"urlshortener-toolbox-qrcode": "Fifecin nya egikagi-pagi QR",
+	"urlshortener-qrcode-downloaded": "Fifecin nya egikagi-pagi QR ke gbofa SVG na."
 }
