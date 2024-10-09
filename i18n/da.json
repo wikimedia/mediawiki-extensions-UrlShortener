@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dipsacus fullonum"
+			"Dipsacus fullonum",
+			"Steenth"
 		]
 	},
 	"action-urlshortener-create-url": "oprette korte URL'er",
@@ -42,6 +43,7 @@
 	"urlshortener-shortened-url-alt": "Du kan også bruge denne alternative URL:",
 	"urlshortener-shortened-url-label": "Forkortet URL",
 	"urlshortener-toolbox": "Hent forkortet URL",
+	"urlshortener-toolbox-qrcode": "Download QR-kode",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Forkort",
 	"urlshortener-url-input-submitting": "Forkorter …",
@@ -54,5 +56,6 @@
 	"logeventslist-urlshortener-log": "Behandlingslog for korte URL'er",
 	"log-action-filter-urlshortener": "Type behandling",
 	"log-action-filter-urlshortener-delete": "URL-sletning",
-	"log-action-filter-urlshortener-restore": "URL-genopretning"
+	"log-action-filter-urlshortener-restore": "URL-genopretning",
+	"urlshortener-qrcode-downloaded": "QR-kode downloadet som SVG-fil"
 }
