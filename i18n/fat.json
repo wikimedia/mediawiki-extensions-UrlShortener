@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Assilidjoe",
 			"Gregorynelsonmensah1"
 		]
 	},
-	"urlshortener-toolbox": "Nya URL a wɔatwa no tsiaba"
+	"urlshortener-toolbox": "Nya URL a wɔatwa no tsiaba",
+	"urlshortener-toolbox-qrcode": "Twe QR kokoamu ahyɛnsewdze",
+	"urlshortener-qrcode-downloaded": "QR kokoamu ahyɛnsewdze a wɔtwe no dɛ SVG adze"
 }
