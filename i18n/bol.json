@@ -4,5 +4,7 @@
 			"El-hussain14"
 		]
 	},
-	"urlshortener-toolbox": "Wena URL nduɓɓa"
+	"urlshortener-toolbox": "Wena URL nduɓɓa",
+	"urlshortener-toolbox-qrcode": "Download QR code",
+	"urlshortener-qrcode-downloaded": "QR code downloaded as SVG file"
 }
