@@ -11,20 +11,20 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use Liuggio\StatsdClient\Factory\StatsdDataFactoryInterface;
 use MediaWiki\Api\ApiBase;
 use MediaWiki\Api\ApiMain;
 use MediaWiki\Api\ApiUsageException;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Status\Status;
 use Wikimedia\ParamValidator\ParamValidator;
+use Wikimedia\Stats\StatsFactory;
 
 class ApiShortenUrl extends ApiBase {
 
 	private bool $qrCodeEnabled;
 	private int $qrCodeShortenLimit;
 	private PermissionManager $permissionManager;
-	private StatsdDataFactoryInterface $statsdDataFactory;
+	private StatsFactory $statsFactory;
 
 	/**
 	 * @inheritDoc
@@ -33,14 +33,14 @@ class ApiShortenUrl extends ApiBase {
 		ApiMain $mainModule,
 		$moduleName,
 		PermissionManager $permissionManager,
-		StatsdDataFactoryInterface $statsdDataFactory
+		StatsFactory $statsFactory
 	) {
 		parent::__construct( $mainModule, $moduleName );
 
 		$this->qrCodeEnabled = (bool)$this->getConfig()->get( 'UrlShortenerEnableQrCode' );
 		$this->qrCodeShortenLimit = (int)$this->getConfig()->get( 'UrlShortenerQrCodeShortenLimit' );
 		$this->permissionManager = $permissionManager;
-		$this->statsdDataFactory = $statsdDataFactory;
+		$this->statsFactory = $statsFactory->withComponent( 'UrlShortener' );
 	}
 
 	public function execute() {
@@ -85,7 +85,7 @@ class ApiShortenUrl extends ApiBase {
 			$ret['qrcode'] = $shortUrlsOrQrCode['qrcode'];
 		}
 
-		$this->recordInStatsD( $urlShortened, $qrCode );
+		$this->recordInStats( $urlShortened, $qrCode );
 
 		// You get the cached response, YOU get the cached response, EVERYONE gets the cached response.
 		$this->getMain()->setCacheMode( "public" );
@@ -95,20 +95,25 @@ class ApiShortenUrl extends ApiBase {
 	}
 
 	/**
-	 * Record simple usage counts in statsd.
+	 * Record simple usage metrics
 	 *
 	 * @param bool $urlShortened
 	 * @param bool $qrCode
 	 * @return void
 	 */
-	private function recordInStatsD( bool $urlShortened, bool $qrCode ): void {
+	private function recordInStats( bool $urlShortened, bool $qrCode ): void {
 		if ( $qrCode && $urlShortened ) {
-			$this->statsdDataFactory->increment( 'extension.UrlShortener.api.shorturl_and_qrcode' );
+			$type = 'shorturl_and_qrcode';
 		} elseif ( $qrCode ) {
-			$this->statsdDataFactory->increment( 'extension.UrlShortener.api.qrcode' );
+			$type = 'qrcode';
 		} else {
-			$this->statsdDataFactory->increment( 'extension.UrlShortener.api.shorturl' );
+			$type = 'shorturl';
 		}
+
+		$statsdKey = 'extension.UrlShortener.api.';
+		$counter = $this->statsFactory->getCounter( 'api_hits_total' );
+		$counter->setLabel( 'type', $type )->copyToStatsdAt( $statsdKey . $type );
+		$counter->increment();
 	}
 
 	/**
