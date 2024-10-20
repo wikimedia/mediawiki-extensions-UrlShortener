@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Extension\UrlShortener\UrlShortenerUtils;
+use MediaWiki\Maintenance\Maintenance;
 use Wikimedia\Rdbms\SelectQueryBuilder;
 
 $IP = getenv( 'MW_INSTALL_PATH' );

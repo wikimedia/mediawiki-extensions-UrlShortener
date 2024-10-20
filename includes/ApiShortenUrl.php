@@ -11,10 +11,10 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use ApiBase;
-use ApiMain;
-use ApiUsageException;
 use Liuggio\StatsdClient\Factory\StatsdDataFactoryInterface;
+use MediaWiki\Api\ApiBase;
+use MediaWiki\Api\ApiMain;
+use MediaWiki\Api\ApiUsageException;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Status\Status;
 use Wikimedia\ParamValidator\ParamValidator;
