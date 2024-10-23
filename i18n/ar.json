@@ -10,7 +10,8 @@
 			"Ahmed Alyamoor",
 			"Lolekek",
 			"Hhaboh162002",
-			"Michel Bakni"
+			"Michel Bakni",
+			"جودت"
 		]
 	},
 	"action-urlshortener-create-url": "إنشاء مسارات مختصرة",
@@ -47,7 +48,7 @@
 	"urlshortener-shortened-url-alt": "يمكنك أيضًا استخدام المسار البديل هذا:",
 	"urlshortener-shortened-url-label": "المسار المختصر",
 	"urlshortener-toolbox": "احصل على مسار مختصر",
-	"urlshortener-toolbox-qrcode": "تنزيل رمز الاستجابة السريعة (QR)",
+	"urlshortener-toolbox-qrcode": "تنزيل رمز الاستجابة السريعة",
 	"urlshortener-url-input-label": "المسار",
 	"urlshortener-url-input-submit": "تقصير",
 	"urlshortener-url-input-submitting": "جارِ التقصير…",
