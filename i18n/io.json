@@ -29,5 +29,6 @@
 	"urlshortener-manage-reason": "Motivo",
 	"urlshortener-toolbox": "Obtenar kurta URL",
 	"urlshortener-toolbox-qrcode": "Descharjar QR-kodexo",
-	"urlshortener-url-input-submit": "Diminutez URL"
+	"urlshortener-url-input-submit": "Diminutez URL",
+	"urlshortener-qrcode-downloaded": "Kodexo QR descharjika kom arkivo SVG"
 }
