@@ -26,12 +26,9 @@ class ApiShortenUrl extends ApiBase {
 	private PermissionManager $permissionManager;
 	private StatsFactory $statsFactory;
 
-	/**
-	 * @inheritDoc
-	 */
 	public function __construct(
 		ApiMain $mainModule,
-		$moduleName,
+		string $moduleName,
 		PermissionManager $permissionManager,
 		StatsFactory $statsFactory
 	) {
