@@ -25,8 +25,8 @@ use PermissionsError;
 
 class SpecialUrlShortener extends FormSpecialPage {
 
-	protected FieldLayout $resultField;
-	protected Status $resultStatus;
+	protected ?FieldLayout $resultField = null;
+	protected ?Status $resultStatus = null;
 	private UrlUtils $urlUtils;
 
 	/**
@@ -59,8 +59,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 
 		parent::execute( $par );
 
-		// @phan-suppress-next-line PhanRedundantCondition
-		if ( isset( $this->resultStatus ) ) {
+		if ( $this->resultStatus !== null ) {
 			// Always show form, as in JS mode.
 			$form = $this->getForm();
 			$form->showAlways();
@@ -116,8 +115,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 			'wgUrlShortenerAllowedDomains' => UrlShortenerUtils::getAllowedDomainsRegex(),
 			'wgUrlShortenerAllowArbitraryPorts' => $this->getConfig()->get( 'UrlShortenerAllowArbitraryPorts' ),
 		] );
-		// @phan-suppress-next-line PhanRedundantCondition
-		if ( isset( $this->resultField ) ) {
+		if ( $this->resultField !== null ) {
 			$form->addFooterHtml( $this->resultField );
 		}
 	}

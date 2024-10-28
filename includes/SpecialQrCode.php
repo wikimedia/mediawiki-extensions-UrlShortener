@@ -49,8 +49,7 @@ class SpecialQrCode extends SpecialUrlShortener {
 	protected function alterForm( HTMLForm $form, string $module = 'ext.urlShortener.special' ) {
 		parent::alterForm( $form, 'ext.urlShortener.qrCode.special' );
 
-		// @phan-suppress-next-line PhanRedundantCondition
-		if ( isset( $this->resultStatus ) ) {
+		if ( $this->resultStatus !== null ) {
 			// Once remove the closing tag for the .ext-urlshortener-container element opened
 			// in parent::alterForm() because we want to add another element into the wrapper
 			$form->setPostHtml( '' );
