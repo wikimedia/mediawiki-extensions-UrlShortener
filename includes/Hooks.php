@@ -19,6 +19,7 @@ use MediaWiki\Hook\WebRequestPathInfoRouterHook;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\PathRouter;
+use MediaWiki\Settings\SettingsBuilder;
 use MediaWiki\SpecialPage\SpecialPage;
 use MobileContext;
 use Skin;
@@ -65,13 +66,16 @@ class Hooks implements
 		}
 	}
 
-	public static function onRegistration() {
-		global $wgUrlShortenerIdSet, $wgUrlShortenerIdMapping, $wgUrlShortenerAltPrefix;
+	public static function onRegistration( array $extInfo, SettingsBuilder $settings ) {
+		$config = $settings->getConfig();
+		$idSet = $config->get( 'UrlShortenerIdSet' );
+		$idMapping = $config->get( 'UrlShortenerIdMapping' );
+		$altPrefix = $config->get( 'UrlShortenerAltPrefix' );
 
-		if ( strpos( $wgUrlShortenerIdSet, $wgUrlShortenerAltPrefix ) !== false ) {
+		if ( strpos( $idSet, $altPrefix ) !== false ) {
 			throw new ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdSet' );
 		}
-		if ( isset( $wgUrlShortenerIdMapping[ $wgUrlShortenerAltPrefix ] ) ) {
+		if ( isset( $idMapping[ $altPrefix ] ) ) {
 			throw new ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdMapping' );
 		}
 	}
