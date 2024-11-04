@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Simbu123"
+			"Simbu123",
+			"Gitartha.bordoloi"
 		]
 	},
 	"action-urlshortener-create-url": "সংক্ষিপ্ত ইউআৰএল সৃষ্টি কৰক",
