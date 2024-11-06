@@ -3,12 +3,15 @@
 		"authors": [
 			"Derugon",
 			"Verdy p",
-			"Wladek92"
+			"Wladek92",
+			"Mahabarata"
 		]
 	},
 	"apihelp-shortenurl-summary": "Raccourcir une longue URL en une autre plus courte.",
 	"apihelp-shortenurl-param-url": "URL à raccourcir.",
+	"apihelp-shortenurl-param-qrcode": "Obtenez un code QR. L'URL liée ne sera raccourcie que si elle est très longue.",
 	"apihelp-shortenurl-example-1": "Obtenir l'URL courte pour <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "Obtenez un code QR pour <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "Aucune nouvelle url courte ne peut être créée",
 	"apierror-urlshortener-permissiondenied": "Vous n’êtes pas autorisé{{GENDER:||e}} à créer des URL raccourcies."
 }
