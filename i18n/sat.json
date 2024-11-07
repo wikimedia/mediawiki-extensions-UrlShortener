@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"ᱢᱩᱨᱢᱩ"
+			"ᱢᱩᱨᱢᱩ",
+			"ᱯᱨᱚᱯᱷᱮᱥᱥᱚᱨ"
 		]
 	},
 	"urlshortener-toolbox": "ᱦᱩᱰᱤᱧ ᱭᱩᱹᱟᱨᱹᱮᱞᱹ",
-	"urlshortener-toolbox-qrcode": "ᱠᱤᱭᱩᱹᱟᱨᱹ ᱠᱚᱰ ᱰᱟᱩᱱᱞᱚᱰ ᱢᱮ"
+	"urlshortener-toolbox-qrcode": "ᱠᱤᱭᱩᱹᱟᱨᱹ ᱠᱚᱰ ᱰᱟᱩᱱᱞᱚᱰ ᱢᱮ",
+	"urlshortener-qrcode-downloaded": "ᱠᱭᱩᱟᱨ ᱠᱚᱰ ᱮᱥᱵᱷᱤᱡᱤ ᱨᱮᱫ ᱞᱮᱠᱟᱛᱮ ᱟᱹᱛᱩᱨᱟᱬᱜᱚᱭᱮᱱᱟ"
 }
