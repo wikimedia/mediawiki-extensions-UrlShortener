@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kuldeepburjbhalaike"
+			"Kuldeepburjbhalaike",
+			"Cabal"
 		]
 	},
 	"action-urlshortener-create-url": "ਛੋਟੇ ਯੂਆਰਐੱਲ ਬਣਾਓ",
@@ -16,8 +17,8 @@
 	"urlshortener-action-done": "ਯੂਆਰਐੱਲ ਨੂੰ ਮਿਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ ਅਤੇ/ਜਾਂ ਰੀਸਟੋਰ ਕੀਤਾ ਗਿਆ ਹੈ",
 	"urlshortener-approved-domains": "ਹੇਠਾਂ ਦਿੱਤੇ {{PLURAL:$1|ਡੋਮੇਨ ਦੇ ਲਿੰਕ|ਡੋਮੇਨਾਂ ਦੇ ਲਿੰਕਾਂ}} ਨੂੰ ਛੋਟਾ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ: $2 .",
 	"urlshortener-blocked": "ਬਲੌਕ ਕੀਤੇ ਵਰਤੋਂਕਾਰ ਛੋਟੇ ਯੂਆਰਐੱਲ ਨਹੀਂ ਬਣਾ ਸਕਦੇ ਹਨ।",
-	"urlshortener-copy-fail": "ਯੂਆਰਐੱਲ ਨੂੰ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰਨ ਵਿੱਚ ਅਸਫਲ।",
-	"urlshortener-copy-success": "ਯੂਆਰਐੱਲ ਨੂੰ ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਕਾਪੀ ਕੀਤਾ ਗਿਆ।",
+	"urlshortener-copy-fail": "ਯੂਆਰਐੱਲ ਨੂੰ ਚੂੰਢੀ-ਤਖਤੀ ਉੱਤੇ ਲਿਖਨ ਵਿੱਚ ਅਸਫਲ।",
+	"urlshortener-copy-success": "ਯੂਆਰਐੱਲ ਨੂੰ ਚੂੰਢੀ-ਤਖਤੀ 'ਤੇ ਲਿਖਿਆ ਗਿਆ।",
 	"urlshortener-deleted": "ਇਹ ਛੋਟਾ ਯੂਆਰਐੱਲ ਮਿਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ।",
 	"urlshortener-disabled": "ਨਵੇਂ ਛੋਟੇ ਯੂਆਰਐੱਲ ਬਣਾਉਣਾ ਅਸਥਾਈ ਤੌਰ 'ਤੇ ਬੰਦ ਹੈ।",
 	"urlshortener-enter-short-code-delete": "ਮਿਟਾਉਣ ਲਈ ਯੂਆਰਐੱਲ ਛੋਟਾ ਕੋਡ",
