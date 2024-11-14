@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tamzin"
+		]
+	},
+	"urlshortener-toolbox": "o pana e linja URL lili",
+	"urlshortener-toolbox-qrcode": "o pana e sitelen QR",
+	"urlshortener-qrcode-downloaded": "sitelen SVG la sitelen QR li kama"
+}
