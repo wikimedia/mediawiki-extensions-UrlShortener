@@ -11,7 +11,8 @@
 			"Lolekek",
 			"Hhaboh162002",
 			"Michel Bakni",
-			"جودت"
+			"جودت",
+			"Gerges"
 		]
 	},
 	"action-urlshortener-create-url": "إنشاء مسارات مختصرة",
@@ -21,7 +22,7 @@
 	"right-urlshortener-manage-url": "إدارة المسارات المختصرة",
 	"urlshortener": "مقصر المسار",
 	"urlshortener-action-done": "تم حذف و/أو استعادة المسارات",
-	"urlshortener-approved-domains": "قد يتم اختصار الروابط إلى {{PLURAL:$1|النطاق التالي|النطاقات التالية}}: $2.",
+	"urlshortener-approved-domains": "يمكن اختصار الروابط إلى النطاقات التالية {{PLURAL:$1| |||النطاقات}}: $2 .",
 	"urlshortener-blocked": "لا يمكن للمستخدمين الممنوعين إنشاء مسارات قصيرة.",
 	"urlshortener-copy-fail": "فشل نسخ المسار إلى الحافظة.",
 	"urlshortener-copy-success": "تم نسخ المسار إلى الحافظة.",
