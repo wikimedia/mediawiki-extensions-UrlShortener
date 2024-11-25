@@ -16,7 +16,7 @@
 	"urlshortener-action-done": "URL-адресле кетерилгендиле эмда/неда кери джюкленнгендиле",
 	"urlshortener-approved-domains": "Тюбюндеги {{PLURAL:$1|доменге|доменлеге}} джибериуле къысхартылырчады: $2.",
 	"urlshortener-blocked": "Блок этилген хайырланыучула къысха URL-адрес болдураллыкъ тюлдюле.",
-	"urlshortener-copy-fail": "URL-адрес алмашдырыу буферги копия этилалмады.",
+	"urlshortener-copy-fail": "URL-адрес алмашдырыу буферге копия этилелмеди.",
 	"urlshortener-copy-success": "URL-адрес алмашдырыу буферге копия этилгенди.",
 	"urlshortener-deleted": "Бу къысха URL-адрес кетерилгенди.",
 	"urlshortener-desc": "Бир алада тюшген URL-адреслени къысхартычучу",
