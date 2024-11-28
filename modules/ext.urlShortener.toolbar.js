@@ -56,7 +56,7 @@
 		}
 		widgetPromise.then(
 			( widget ) => {
-				OO.ui.alert( widget.$element );
+				OO.ui.alert( widget.$element, { size: 'medium' } );
 				// HACK: Wait for setup and ready processes to complete
 				setTimeout( () => {
 					widget.button.focus();
