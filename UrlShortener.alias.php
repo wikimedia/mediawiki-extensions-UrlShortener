@@ -25,6 +25,13 @@ $specialPageAliases['arz'] = [
 	'UrlShortener' => [ 'تقصير_المسار' ],
 ];
 
+/** Azerbaijani (Azərbaycanca) */
+$specialPageAliases['en'] = [
+	'UrlShortener' => [ 'UrlQısaldıcısı' ],
+	'ManageShortUrls' => [ 'QısaUrlləriİdarəEt' ],
+	'QrCode' => [ 'QrKodu' ],
+];
+
 /** Bosnian (bosanski) */
 $specialPageAliases['bs'] = [
 	'UrlShortener' => [ 'Skraćivač_adresa', 'Skraćivač_URL_adresa' ],
