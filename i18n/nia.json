@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Slaia"
+		]
+	},
+	"urlshortener-toolbox": "Halö URL sadogo",
+	"urlshortener-toolbox-qrcode": "Failo kode QR",
+	"urlshortener-qrcode-downloaded": "No mufailo berkas SVG kode QR"
+}
