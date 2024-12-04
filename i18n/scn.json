@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"GianAntonucci"
 		]
 	},
-	"urlshortener-toolbox": "Utteni URL brevi",
+	"urlshortener-toolbox": "Accanza l'URL curtu",
+	"urlshortener-toolbox-qrcode": "Scàrrica u còdici QR",
 	"urlshortener-url-input-label": "URL",
-	"urlshortener-url-input-submit": "Accurza"
+	"urlshortener-url-input-submit": "Accurza",
+	"urlshortener-qrcode-downloaded": "Còdici QR scarricatu comu pricu SVG"
 }
