@@ -5,5 +5,7 @@
 		]
 	},
 	"urlshortener-shortened-url-label": "పొట్టి URL",
-	"urlshortener-toolbox": "పొట్టి URL ని పొందండి"
+	"urlshortener-toolbox": "పొట్టి URL ని పొందండి",
+	"urlshortener-toolbox-qrcode": "క్యూఆర్ కోడ్ డౌన్‌లోడు చేసుకోండి",
+	"urlshortener-qrcode-downloaded": "QR కోడ్‌ను SVG ఫైలుగా డౌన్‌లోడ్ చేసాం"
 }
