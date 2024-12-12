@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chinneeb"
+			"Chinneeb",
+			"Enkhsaihan2005"
 		]
 	},
 	"urlshortener-toolbox": "Богино URL үүсгэх",
-	"urlshortener-toolbox-qrcode": "QR код татаж авах"
+	"urlshortener-toolbox-qrcode": "QR код татаж авах",
+	"urlshortener-qrcode-downloaded": "QR кодыг SVG файлаар татсан"
 }
