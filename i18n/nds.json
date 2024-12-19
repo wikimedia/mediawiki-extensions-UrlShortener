@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ameisenigel"
+		]
+	},
+	"urlshortener-toolbox": "Afkört URL afropen",
+	"urlshortener-toolbox-qrcode": "QR-Code dalladen",
+	"urlshortener-qrcode-downloaded": "QR-Code as SVG-Dotei dallaadt"
+}
