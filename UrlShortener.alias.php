@@ -26,7 +26,7 @@ $specialPageAliases['arz'] = [
 ];
 
 /** Azerbaijani (Azərbaycanca) */
-$specialPageAliases['en'] = [
+$specialPageAliases['az'] = [
 	'UrlShortener' => [ 'UrlQısaldıcısı' ],
 	'ManageShortUrls' => [ 'QısaUrlləriİdarəEt' ],
 	'QrCode' => [ 'QrKodu' ],
