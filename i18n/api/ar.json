@@ -3,12 +3,15 @@
 		"authors": [
 			"Ideophagous",
 			"ديفيد",
-			"علاء"
+			"علاء",
+			"Meno25"
 		]
 	},
 	"apihelp-shortenurl-summary": "اختصر مسارا طويلا إلى واحد قصير.",
 	"apihelp-shortenurl-param-url": "مسار لتقصيره.",
+	"apihelp-shortenurl-param-qrcode": "احصل على رمز الاستجابة السريعة (QR code). سيتم اختصار عنوان URL المرتبط فقط إذا كان طويلاً جدا.",
 	"apihelp-shortenurl-example-1": "احصل على المسار المختصر لـ<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "احصل على رمز الاستجابة السريعة لـ<nowiki> <kbd>https://en.wikipedia.org/wiki/Arctica</kbd></nowiki> .",
 	"apierror-urlshortener-disabled": "لا يجوز إنشاء مسارات قصيرة جديدة",
 	"apierror-urlshortener-permissiondenied": "ليس لديك صلاحية لإنشاء مسارات قصيرة"
 }
