@@ -3,6 +3,7 @@
 		"authors": [
 			"Snævar",
 			"Stefán Örvar Sigmundsson",
+			"Sveinki",
 			"Sveinn í Felli"
 		]
 	},
@@ -11,5 +12,6 @@
 	"urlshortener-desc": "Veflóðarstyttir fyrir ótilteknar vefslóðir",
 	"urlshortener-toolbox": "Fá styttan tengil",
 	"urlshortener-toolbox-qrcode": "Niðurhlaða QR-kóða",
-	"urlshortener-url-input-label": "Vefslóð"
+	"urlshortener-url-input-label": "Vefslóð",
+	"urlshortener-qrcode-downloaded": "QR-kóði sóttur sem SVG skrá"
 }
