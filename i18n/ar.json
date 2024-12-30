@@ -18,8 +18,11 @@
 	"action-urlshortener-create-url": "إنشاء مسارات مختصرة",
 	"right-urlshortener-create-url": "إنشاء مسارات قصيرة",
 	"action-urlshortener-manage-url": "إدارة المسارات المختصرة",
+	"action-urlshortener-view-log": "عرض سجل إدارة عناوين URL القصيرة",
 	"manageshorturls": "إدارة المسارات المختصرة",
 	"right-urlshortener-manage-url": "إدارة المسارات المختصرة",
+	"grant-shortenurls": "إنشاء عناوين URL قصيرة",
+	"right-urlshortener-view-log": "عرض سجل إدارة عناوين URL القصيرة",
 	"urlshortener": "مقصر المسار",
 	"urlshortener-action-done": "تم حذف و/أو استعادة المسارات",
 	"urlshortener-approved-domains": "يمكن اختصار الروابط إلى النطاقات التالية {{PLURAL:$1| |||النطاقات}}: $2 .",
@@ -53,5 +56,11 @@
 	"urlshortener-url-input-submit": "تقصير",
 	"urlshortener-url-input-submitting": "جارِ التقصير…",
 	"urlshortener-url-too-long": "المسار طويل جدا، والحد الأقصى للحجم هو {{PLURAL:$1|حرف واحد|$1 حروف}}",
-	"urlshortener-badaccessgroups": "ليس لديك صلاحية لإنشاء مسارات قصيرة"
+	"urlshortener-badaccessgroups": "ليس لديك صلاحية لإنشاء مسارات قصيرة",
+	"log-name-urlshortener": "سجل إدارة عناوين URL القصيرة",
+	"log-description-urlshortener": "يُظهر هذا السجل حذف واستعادة عناوين URL القصيرة. ولا يُظهر إنشاء عناوين URL جديدة",
+	"logeventslist-urlshortener-log": "سجل إدارة عناوين URL القصيرة",
+	"log-action-filter-urlshortener": "نوع الإدارة",
+	"log-action-filter-urlshortener-delete": "حذف عنوان URL",
+	"log-action-filter-urlshortener-restore": "استعادة عنوان URL"
 }
