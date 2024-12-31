@@ -13,6 +13,7 @@
 	"grant-shortenurls": "Krear kurta URL-i",
 	"right-urlshortener-view-log": "Vidar etiketi pri kurta URL",
 	"urlshortener": "Diminuto di URL",
+	"qrcode": "Kreanto di QR-kodexo",
 	"urlshortener-action-done": "URL efacesis e/o restauresis",
 	"urlshortener-approved-domains": "Ligilo a sequanta {{PLURAL:$1|domeno|domeni}} povas diminutesar: $2.",
 	"urlshortener-blocked": "Blokusita uzeri ne povas krear kurta URL.",
