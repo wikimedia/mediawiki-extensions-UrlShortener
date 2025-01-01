@@ -4,5 +4,7 @@
 			"KartikMistry"
 		]
 	},
-	"urlshortener-toolbox": "ટૂંકું URL મેળવો"
+	"urlshortener-toolbox": "ટૂંકું URL મેળવો",
+	"urlshortener-toolbox-qrcode": "QR કોડ ડાઉનલોડ કરો",
+	"urlshortener-qrcode-downloaded": "QR કોડ SVG ફાઇલ તરીકે ડાઉનલોડ કરેલ છે"
 }
