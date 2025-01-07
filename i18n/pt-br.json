@@ -4,7 +4,8 @@
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Felipe L. Ewald",
-			"Flaviane da Silva"
+			"Flaviane da Silva",
+			"Fúlvio"
 		]
 	},
 	"action-urlshortener-create-url": "criar URL curtos",
@@ -45,7 +46,7 @@
 	"urlshortener-shortened-url-alt": "Você também pode usar este URL alternativo:",
 	"urlshortener-shortened-url-label": "URL encurtado",
 	"urlshortener-toolbox": "Obter URL encurtado",
-	"urlshortener-toolbox-qrcode": "Baixar o código QR.",
+	"urlshortener-toolbox-qrcode": "Baixar o código QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Encurtar",
 	"urlshortener-url-input-submitting": "Encurtando...",
