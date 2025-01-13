@@ -13,5 +13,5 @@
 	"apihelp-shortenurl-example-1": "Obtenir l'URL courte pour <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
 	"apihelp-shortenurl-example-2": "Obtenez un code QR pour <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "Aucune nouvelle url courte ne peut être créée",
-	"apierror-urlshortener-permissiondenied": "Vous n’êtes pas autorisé{{GENDER:||e}} à créer des URL raccourcies."
+	"apierror-urlshortener-permissiondenied": "Vous n’êtes pas {{GENDER:|autorisé|autorisée}} à créer des URL raccourcies."
 }
