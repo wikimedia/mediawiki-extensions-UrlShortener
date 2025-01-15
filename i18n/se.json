@@ -1,9 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kimberli Mäkäräinen (WMNO)"
+			"Kimberli Mäkäräinen (WMNO)",
+			"Yupik"
 		]
 	},
+	"action-urlshortener-create-url": "ráhkadit oaniduvvon URL-čujuhusaid",
+	"right-urlshortener-create-url": "Ráhkadit oaniduvvon URL-čujuhusaid",
+	"grant-shortenurls": "Ráhkadit oaniduvvon URL-čujuhusaid",
+	"urlshortener-deleted": "Dát oaniduvvon URL-čujuhus lea sihkkojuvvon.",
+	"urlshortener-manage-reason": "Sivva",
+	"urlshortener-not-found-title": "Oaniduvvon URL-čujuhus ii gávdnon",
+	"urlshortener-shortened-url-label": "Oaniduvvon URL-čujuhus",
+	"urlshortener-toolbox": "Oanit URL-čujuhusa",
 	"urlshortener-toolbox-qrcode": "Viečča QR-koda",
-	"urlshortener-url-input-label": "URL"
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-submit": "Oanit",
+	"urlshortener-url-input-submitting": "Oanideame…"
 }
