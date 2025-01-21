@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Enkhsaihan2005"
+			"Enkhsaihan2005",
+			"Anand.orkhon"
 		]
 	},
-	"urlshortener-toolbox": "ᠪᠣᠭᠤᠨᠢ URL ᠡᢉᠦᠰᢈᠡᢈᠦ"
+	"urlshortener-toolbox": "ᠪᠣᠭᠤᠨᠢ URL ᠡᢉᠦᠰᢈᠡᢈᠦ",
+	"urlshortener-toolbox-qrcode": "QR ᠻᠤᠳ᠋ ‍ᠢ ᠲᠠᠲᠠᠵᠤ ᠠᠪᠬᠤ",
+	"urlshortener-qrcode-downloaded": "QR ᠻᠤᠳ᠋ ᠨᠢ SVG ᠬᠡᠯᠪᠡᠷᠢᠲᠡᠢ ᠲᠠᠲᠠᠭᠳᠠᠭᠰᠠᠨ"
 }
