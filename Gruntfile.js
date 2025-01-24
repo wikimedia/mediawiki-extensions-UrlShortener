@@ -32,6 +32,9 @@ module.exports = function ( grunt ) {
 		},
 		banana: conf.MessagesDirs,
 		stylelint: {
+			options: {
+				cache: true
+			},
 			all: [
 				'**/*.less',
 				'!node_modules/**',
