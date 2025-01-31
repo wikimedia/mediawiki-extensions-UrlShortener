@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Af420"
+			"Af420",
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
 		]
 	},
 	"urlshortener-toolbox": "لنډ URL ترلاسه کړئ",
-	"urlshortener-toolbox-qrcode": "د QR کوډ يې ډاونلوډ کړئ"
+	"urlshortener-toolbox-qrcode": "د QR کوډ يې ډاونلوډ کړئ",
+	"urlshortener-qrcode-downloaded": "QR کوډ د SVG دوتنې په توگه ښکته شو"
 }
