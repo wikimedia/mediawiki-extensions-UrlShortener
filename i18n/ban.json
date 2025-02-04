@@ -48,5 +48,6 @@
 	"urlshortener-url-input-submitting": "Nyutetin…",
 	"urlshortener-url-too-long": "URL punika lantang pesan, ukuran maksimal inggih punika {{PLURAL:$1|a karakter|$1 karakter}}",
 	"urlshortener-badaccessgroups": "Ragane nenten wenang ngardi URL cutet",
-	"log-name-urlshortener": "Log ménéjemen URL cutet"
+	"log-name-urlshortener": "Log ménéjemen URL cutet",
+	"urlshortener-qrcode-downloaded": "Kode QR kaunduh dados berkas SVG"
 }
