@@ -43,7 +43,7 @@
 	"urlshortener-manage-not-enough-data": "برای حذف یا احیا باید یک کد کوتاه نشانی تعیین کنید",
 	"urlshortener-manage-restore-failed": "احیای نشانی شکست خورد",
 	"urlshortener-manage-reason": "دلیل",
-	"urlshortener-not-found-message": "متاسفانه نشانی که دنبالش هستید یافت نشد.",
+	"urlshortener-not-found-message": "متأسفانه نشانی که دنبالش هستید یافت نشد.",
 	"urlshortener-not-found-title": "نشانی کوتاه یافت نشد",
 	"urlshortener-qrcode-url-label": "نشانی وب:",
 	"urlshortener-qrcode-form-submit": "ثبت",
