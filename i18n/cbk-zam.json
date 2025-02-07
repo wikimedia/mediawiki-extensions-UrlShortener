@@ -4,7 +4,7 @@
 			"Aristorkle"
 		]
 	},
-	"urlshortener-toolbox": "Saca el corto URL",
-	"urlshortener-toolbox-qrcode": "Saca el QR del pagina",
+	"urlshortener-toolbox": "Saca con el corto URL",
+	"urlshortener-toolbox-qrcode": "Saca con el QR del pagina",
 	"urlshortener-qrcode-downloaded": "El QR ya puede recibi que un SVG"
 }
