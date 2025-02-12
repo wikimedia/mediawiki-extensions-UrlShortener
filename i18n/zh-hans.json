@@ -21,7 +21,7 @@
 	"right-urlshortener-view-log": "查看短链接管理日志",
 	"urlshortener": "URL缩短器",
 	"urlshortener-action-done": "已删除和/或还原URL",
-	"urlshortener-approved-domains": "可以缩短指向以下{{PLURAL:$1|域}}的链接：$2。",
+	"urlshortener-approved-domains": "可以缩短指向以下{{PLURAL:$1|域名}}的链接：$2。",
 	"urlshortener-blocked": "封禁的用户无法创建短链接。",
 	"urlshortener-copy-fail": "复制URL到剪贴板失败。",
 	"urlshortener-copy-success": "已复制URL到剪贴板。",

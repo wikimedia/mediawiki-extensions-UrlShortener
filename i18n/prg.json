@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nērtiks Jōrgesuns"
+		]
+	},
+	"urlshortener-toolbox": "Gaūneis īnsintan URL",
+	"urlshortener-toolbox-qrcode": "Izkraūneis QR kōdan",
+	"urlshortener-qrcode-downloaded": "QR kōds izkraūtan kāigi SVG zūrbrukis"
+}
