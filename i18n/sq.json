@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liridon"
+			"Liridon",
+			"INNERLMNT"
 		]
 	},
-	"urlshortener-failed-try-again": "Dështoi. Provoni përsëri?"
+	"urlshortener-failed-try-again": "Dështoi. Provoni përsëri?",
+	"urlshortener-toolbox": "Merre adresën e shkurtuar"
 }
