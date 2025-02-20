@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Exec8"
+		]
+	},
+	"urlshortener-toolbox": "Alaen ti napaababa nga URL",
+	"urlshortener-toolbox-qrcode": "I-download ti QR code",
+	"urlshortener-qrcode-downloaded": "QR code a nai-download kas SVG file"
+}
