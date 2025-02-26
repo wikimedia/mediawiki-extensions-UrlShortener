@@ -3,12 +3,14 @@
 		"authors": [
 			"Abijeet Patro",
 			"गोपाल",
-			"Srishakatux"
+			"Srishakatux",
+			"Mithun 477"
 		]
 	},
 	"action-urlshortener-view-log": "लघु URL प्रबंधन लॉग देखें",
 	"urlshortener-manage-reason": "कारण",
 	"urlshortener-toolbox": "संक्षिप्त URL प्राप्त करें",
+	"urlshortener-toolbox-qrcode": "QR कोड डाउनलोड करें",
 	"log-action-filter-urlshortener": "प्रबंधन का प्रकार",
 	"urlshortener-qrcode-downloaded": "QR कोड SVG फ़ाइल के रूप में डाउनलोड किया गया"
 }

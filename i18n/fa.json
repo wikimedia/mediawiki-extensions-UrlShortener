@@ -9,7 +9,8 @@
 			"Reza1615",
 			"Ebraminio",
 			"Darafsh",
-			"Ebrahim"
+			"Ebrahim",
+			"Huji"
 		]
 	},
 	"action-urlshortener-create-url": "ایجاد نشانی‌های کوتاه",
@@ -50,7 +51,7 @@
 	"urlshortener-shortened-url-alt": "همچنین می‌توانید از این نشانی جایگزین استفاده کنید:",
 	"urlshortener-shortened-url-label": "نشانی کوتاه‌شده",
 	"urlshortener-toolbox": "دریافت نشانی کوتاه‌شده",
-	"urlshortener-toolbox-qrcode": "بارگیری کد QR",
+	"urlshortener-toolbox-qrcode": "بارگیری کیوآر کد",
 	"urlshortener-url-input-label": "نشانی اینترنتی",
 	"urlshortener-url-input-submit": "کوتاه کن",
 	"urlshortener-url-input-submitting": "در حال کوتاه کردن",
