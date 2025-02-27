@@ -12,6 +12,7 @@
 	"grant-shortenurls": "Стварэньне кароткіх URL",
 	"urlshortener": "Скарачальнік URL",
 	"qrcode": "Генэратар QR-кодаў",
+	"urlshortener-toolbox": "Атрымаць скарочаны URL",
 	"urlshortener-toolbox-qrcode": "Спампаваць QR-код",
 	"urlshortener-qrcode-downloaded": "QR-код спампаваны ў SVG-файл"
 }
