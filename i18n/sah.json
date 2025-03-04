@@ -5,5 +5,7 @@
 			"MARKSDNW"
 		]
 	},
-	"urlshortener-toolbox": "Кылгас URL-аадырыһы тут"
+	"urlshortener-toolbox": "Кылгас URL-аадырыһы тут",
+	"urlshortener-toolbox-qrcode": "QR-куоду хачайдан",
+	"urlshortener-qrcode-downloaded": "QR-куод SVG-билэ быһыытынан хачайданна"
 }
