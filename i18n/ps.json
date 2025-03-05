@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Af420",
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
 	"urlshortener-toolbox": "لنډ URL ترلاسه کړئ",
-	"urlshortener-toolbox-qrcode": "د QR کوډ يې ډاونلوډ کړئ",
+	"urlshortener-toolbox-qrcode": "QR کوډ يې راکښته کړئ",
 	"urlshortener-qrcode-downloaded": "QR کوډ د SVG دوتنې په توگه ښکته شو"
 }
