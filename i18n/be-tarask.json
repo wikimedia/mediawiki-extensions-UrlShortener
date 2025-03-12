@@ -7,11 +7,17 @@
 	"action-urlshortener-create-url": "стварэньне кароткіх URL",
 	"right-urlshortener-create-url": "Стварэньне кароткіх URL",
 	"action-urlshortener-manage-url": "кіраваньне кароткімі URL",
+	"action-urlshortener-view-log": "прагляд журналу кіраваньня кароткімі URL",
 	"manageshorturls": "Кіраваньне кароткімі URL",
 	"right-urlshortener-manage-url": "Кіраваньне кароткімі URL",
 	"grant-shortenurls": "Стварэньне кароткіх URL",
+	"right-urlshortener-view-log": "Прагляд журналу кіраваньня кароткімі URL",
 	"urlshortener": "Скарачальнік URL",
+	"urlshortener-action-done": "URL былі выдаленыя і/або адноўленыя",
+	"urlshortener-approved-domains": "Спасылкі на {{PLURAL:$1|гэты дамэн|гэтыя дамэны}} могуць быць скарочаныя: $2.",
 	"urlshortener-toolbox": "Атрымаць скарочаны URL",
 	"urlshortener-toolbox-qrcode": "Спампаваць QR-код",
+	"log-action-filter-urlshortener-delete": "Выдаленьне URL",
+	"log-action-filter-urlshortener-restore": "Аднаўленьне URL",
 	"urlshortener-qrcode-downloaded": "QR-код спампаваны ў SVG-файл"
 }
