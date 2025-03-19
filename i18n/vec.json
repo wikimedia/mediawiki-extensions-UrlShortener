@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Candalua"
+		]
+	},
+	"urlshortener-toolbox": "Ciapa un URL scurcià",
+	"urlshortener-toolbox-qrcode": "Descarga el còdese QR",
+	"urlshortener-qrcode-downloaded": "Còdese QR descargà come file SVG"
+}
