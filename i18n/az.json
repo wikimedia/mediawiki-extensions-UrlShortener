@@ -4,7 +4,8 @@
 			"NMW03",
 			"Nemoralis",
 			"Serkanland",
-			"Wertuose"
+			"Wertuose",
+			"Əkrəm"
 		]
 	},
 	"action-urlshortener-create-url": "qısa URL-lər yaratmaq",
@@ -20,7 +21,7 @@
 	"urlshortener-action-done": "URL-lər silinmiş və/və ya bərpa edilmişdir",
 	"urlshortener-approved-domains": "Yalnız şağıdakı {{PLURAL:$1|domenə|domenlərə}} aid linklər qısaldıla bilər: $2.",
 	"urlshortener-blocked": "Bloklanmış istifadəçilər qısa URL-lər yarada bilməz.",
-	"urlshortener-copy-fail": "Kopyalamaq alınmadı.",
+	"urlshortener-copy-fail": "Kopiyalamaq alınmadı.",
 	"urlshortener-copy-success": "Mübadilə buferinə kopyalandı.",
 	"urlshortener-deleted": "Bu qısa URL silindi.",
 	"urlshortener-desc": "Təsadüfi URL-lər üçün qısaldıcı",
