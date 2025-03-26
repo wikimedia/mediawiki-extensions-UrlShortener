@@ -7,7 +7,8 @@
 			"MuratTheTurkish",
 			"Sayginer",
 			"ToprakM",
-			"Cobija"
+			"Cobija",
+			"Joseph"
 		]
 	},
 	"action-urlshortener-create-url": "kısa URL'leri oluştur",
@@ -39,7 +40,7 @@
 	"urlshortener-manage-delete-failed": "URL silinemedi",
 	"urlshortener-manage-not-enough-data": "Silmek veya geri yüklemek için bir URL kısa kodu belirlemeniz gerekir",
 	"urlshortener-manage-restore-failed": "URL geri yüklenemedi",
-	"urlshortener-manage-reason": "Sebep",
+	"urlshortener-manage-reason": "Gerekçe",
 	"urlshortener-not-found-message": "Üzgünüz, aradığınız URL bulunamadı.",
 	"urlshortener-not-found-title": "Kısa URL bulunamadı",
 	"urlshortener-ratelimit": "Daha fazla URL kısaltmadan önce lütfen biraz bekleyin.",
