@@ -15,7 +15,7 @@
 	"right-urlshortener-view-log": "ਛੋਟੇ ਯੂਆਰਐੱਲ ਦਾ ਪ੍ਰਬੰਧਨ ਲੌਗ ਵੇਖੋ",
 	"urlshortener": "ਯੂਆਰਐੱਲ ਛੋਟਾ ਕਰਨ ਵਾਲਾ",
 	"urlshortener-action-done": "ਯੂਆਰਐੱਲ ਨੂੰ ਮਿਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ ਅਤੇ/ਜਾਂ ਰੀਸਟੋਰ ਕੀਤਾ ਗਿਆ ਹੈ",
-	"urlshortener-approved-domains": "ਹੇਠਾਂ ਦਿੱਤੇ {{PLURAL:$1|ਡੋਮੇਨ ਦੇ ਲਿੰਕ|ਡੋਮੇਨਾਂ ਦੇ ਲਿੰਕਾਂ}} ਨੂੰ ਛੋਟਾ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ: $2 .",
+	"urlshortener-approved-domains": "ਹੇਠਾਂ ਦਿੱਤਿਆ {{PLURAL:$1|ਡੋਮੇਨ|ਡੋਮੇਨਾਂ}} ਕੜੀਆਂ ਨੂੰ ਛੋਟਾ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ: $2 .",
 	"urlshortener-blocked": "ਪਾਬੰਦੀਸ਼ੁਦਾ ਵਰਤੋਂਕਾਰ ਛੋਟੇ ਯੂਆਰਐੱਲ ਨਹੀਂ ਬਣਾ ਸਕਦੇ ਹਨ।",
 	"urlshortener-copy-fail": "ਯੂਆਰਐੱਲ ਨੂੰ ਚੂੰਢੀ-ਤਖਤੀ ਉੱਤੇ ਲਿਖਨ ਵਿੱਚ ਅਸਫਲ।",
 	"urlshortener-copy-success": "ਯੂਆਰਐੱਲ ਨੂੰ ਚੂੰਢੀ-ਤਖਤੀ 'ਤੇ ਲਿਖਿਆ ਗਿਆ।",
