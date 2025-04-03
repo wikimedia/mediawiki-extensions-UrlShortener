@@ -235,6 +235,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 		return 'pagetools';
 	}
 
+	/** @inheritDoc */
 	public function doesWrites() {
 		return true;
 	}
