@@ -27,7 +27,7 @@
 	"urlshortener-enter-short-code-delete": "URL-kortkode som skal slettes",
 	"urlshortener-enter-short-code-restore": "URL-kortkode som skal gjenopprettes",
 	"urlshortener-error-badports": "URL-er som inneholder porter kan ikke forkortes",
-	"urlshortener-error-disallowed-url": "URL-er til domenet $1 tillates ikke å forkortes",
+	"urlshortener-error-disallowed-url": "Man kan ikke forkorte URL-er fra domenet $1",
 	"urlshortener-error-malformed-url": "Ikke en gyldig URL",
 	"urlshortener-error-nouserpass": "URL-er som inneholder brukernavn eller passord kan ikke forkortes",
 	"urlshortener-failed-try-again": "Mislyktes. Prøve igjen?",
