@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eruedin"
+			"Eruedin",
+			"Lydie maliki"
 		]
 	},
-	"urlshortener-toolbox-qrcode": "Kokɔ́ngɔlɔ kɔ́́de QR"
+	"urlshortener-toolbox": "Zua URL oyo ekómi mokuse",
+	"urlshortener-toolbox-qrcode": "Kokɔ́ngɔlɔ kɔ́́de QR",
+	"urlshortener-qrcode-downloaded": "Code QR oyo ezwami lokola fichier SVG"
 }
