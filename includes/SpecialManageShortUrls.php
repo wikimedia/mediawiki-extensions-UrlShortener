@@ -11,7 +11,7 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
-use ManualLogEntry;
+use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\User\User;
 

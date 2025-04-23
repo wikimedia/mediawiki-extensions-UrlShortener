@@ -11,6 +11,7 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
+use MediaWiki\Exception\PermissionsError;
 use MediaWiki\Html\Html;
 use MediaWiki\HTMLForm\HTMLForm;
 use MediaWiki\Message\Message;
@@ -21,7 +22,6 @@ use OOUI\FieldLayout;
 use OOUI\HtmlSnippet;
 use OOUI\Tag;
 use OOUI\TextInputWidget;
-use PermissionsError;
 
 class SpecialUrlShortener extends FormSpecialPage {
 

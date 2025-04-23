@@ -20,10 +20,10 @@ use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\PathRouter;
 use MediaWiki\Settings\SettingsBuilder;
+use MediaWiki\Skin\Skin;
+use MediaWiki\Skin\SkinTemplate;
 use MediaWiki\SpecialPage\SpecialPage;
 use MobileContext;
-use Skin;
-use SkinTemplate;
 
 class Hooks implements
 	WebRequestPathInfoRouterHook,
