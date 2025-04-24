@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"FunnyYellowDog",
 			"Minh Nguyen",
 			"NguyenHung",
 			"Nguyên Lê",
@@ -23,7 +24,7 @@
 	"urlshortener-copy-success": "URL đã được chép vào clipboard.",
 	"urlshortener-deleted": "URL rút gọn này đã bị xóa.",
 	"urlshortener-desc": "Rút gọn bất cứ URL nào đó",
-	"urlshortener-disabled": "Chức năng tạo URL ngắn gọn mới bị tắt tạm thời.",
+	"urlshortener-disabled": "Chức năng tạo URL rút gọn mới bị tắt tạm thời.",
 	"urlshortener-enter-short-code-delete": "Mã URL rút gọn sẽ bị xóa",
 	"urlshortener-enter-short-code-restore": "Mã URL rút gọn sẽ được phục hồi",
 	"urlshortener-error-badports": "Không cho phép rút gọn các URL có cổng",
@@ -38,13 +39,13 @@
 	"urlshortener-manage-restore-failed": "Phục hồi URL thất bại",
 	"urlshortener-manage-reason": "Lý do",
 	"urlshortener-not-found-message": "Rất tiếc, không tìm thấy được URL mà bạn muốn xem.",
-	"urlshortener-not-found-title": "Không tìm thấy URL ngắn gọn",
+	"urlshortener-not-found-title": "Không tìm thấy URL rút gọn",
 	"urlshortener-ratelimit": "Xin vui lòng chờ một chút trước khi rút gọn thêm URL.",
 	"urlshortener-short-code-is-not-deleted": "Mã rút gọn URL không bị xóa",
 	"urlshortener-short-code-not-found": "Mã rút gọn URL không tìm thấy hoặc đã bị xóa",
 	"urlshortener-shortened-url-alt": "Bạn cũng có thể dùng URL thay thế sau:",
-	"urlshortener-shortened-url-label": "URL ngắn gọn",
-	"urlshortener-toolbox": "Lấy URL ngắn gọn",
+	"urlshortener-shortened-url-label": "URL rút gọn",
+	"urlshortener-toolbox": "Lấy URL rút gọn",
 	"urlshortener-toolbox-qrcode": "Tải mã QR",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Rút gọn",
