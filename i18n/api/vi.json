@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Minh Nguyen"
+			"Minh Nguyen",
+			"FunnyYellowDog"
 		]
 	},
 	"apihelp-shortenurl-param-url": "URL để rút gọn.",
-	"apihelp-shortenurl-example-1": "Lấy URL ngắn gọn của <kbd><nowiki>https://vi.wikipedia.org/wiki/Arctica</nowiki></kbd>."
+	"apihelp-shortenurl-example-1": "Lấy URL rút gọn của <kbd><nowiki>https://vi.wikipedia.org/wiki/Arctica</nowiki></kbd>."
 }
