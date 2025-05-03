@@ -3,7 +3,7 @@
 .ext-urlshortener-container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 20px;
+	gap: @spacing-100;
 }
 
 .mw-htmlform-ooui-wrapper {
@@ -16,16 +16,9 @@
 }
 
 .ext-urlshortener-qrcode {
-	background-color: @background-color-interactive-subtle;
-	border: @border-width-base @border-style-base @border-color-subtle;
-	padding: 20px;
-}
+	margin-bottom: @spacing-100;
 
-.ext-urlshortener-download-qr-button {
-	margin-top: 25px;
-
-	.cdx-icon {
-		.cdx-mixin-css-icon( @cdx-icon-download );
-		margin-right: 6px;
+	> img {
+		border: @border-width-base @border-style-base @border-color-subtle;
 	}
 }

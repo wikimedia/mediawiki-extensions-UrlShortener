@@ -15,9 +15,9 @@ class UrlShortener {
 		this.shortened = null;
 		/** @type {OO.ui.ButtonInputWidget} */
 		this.submit = null;
-		/** @type {HTMLImageElement} */
-		this.qrCodeImage = null;
-		/** @type {HTMLAnchorElement} */
+		/** @type {jQuery} */
+		this.$qrCodeImage = null;
+		/** @type {OO.ui.ButtonWidget} */
 		this.qrCodeDownloadButton = null;
 	}
 
@@ -98,39 +98,35 @@ class UrlShortener {
 
 	qrCodeUiHandler( qrCodeSvg ) {
 		const qrCodeUri = `data:image/svg+xml;charset=utf-8,${ encodeURIComponent( qrCodeSvg ) }`;
-		if ( this.qrCodeImage ) {
-			this.qrCodeImage.src = qrCodeUri;
-			this.qrCodeDownloadButton.href = qrCodeUri;
+		if ( this.$qrCodeImage ) {
+			this.$qrCodeImage.attr( 'src', qrCodeUri );
+			this.qrCodeDownloadButton.$button.attr( 'href', qrCodeUri );
 			return;
 		}
 		// Remove PHP result if present
 		// eslint-disable-next-line no-jquery/no-global-selector
 		$( '.ext-urlshortener-qrcode-container' ).remove();
-		this.qrCodeImage = document.createElement( 'img' );
-		this.qrCodeImage.src = qrCodeUri;
-		const qrCodeNode = document.createElement( 'div' );
-		qrCodeNode.className = 'ext-urlshortener-qrcode';
-		qrCodeNode.append( this.qrCodeImage );
-		const qrCodeDownloadIcon = document.createElement( 'span' );
-		qrCodeDownloadIcon.className = 'cdx-icon cdx-icon--medium';
-		this.qrCodeDownloadButton = document.createElement( 'a' );
-		this.qrCodeDownloadButton.classList.add(
-			'ext-urlshortener-download-qr-button',
-			'cdx-button',
-			'cdx-button--fake-button',
-			'cdx-button--fake-button--enabled'
+		this.$qrCodeImage = $( '<img>' ).attr( 'src', qrCodeUri );
+
+		this.qrCodeDownloadButton = new OO.ui.ButtonWidget( {
+			icon: 'download',
+			label: mw.msg( 'urlshortener-toolbox-qrcode' ),
+			href: '.'
+		} );
+
+		this.qrCodeDownloadButton.$button.attr( {
+			download: 'qrcode.svg',
+			// OOUI prefixes './' for security, so set the attribute directly
+			href: qrCodeUri
+		} );
+
+		// eslint-disable-next-line no-jquery/no-global-selector
+		$( '.ext-urlshortener-container' ).append(
+			$( '<div>' ).addClass( 'ext-urlshortener-qrcode-container' ).append(
+				$( '<div>' ).addClass( 'ext-urlshortener-qrcode' ).append( this.$qrCodeImage ),
+				this.qrCodeDownloadButton.$element
+			)
 		);
-		this.qrCodeDownloadButton.href = qrCodeUri;
-		this.qrCodeDownloadButton.download = 'qrcode.svg';
-		this.qrCodeDownloadButton.append(
-			qrCodeDownloadIcon,
-			mw.msg( 'urlshortener-toolbox-qrcode' )
-		);
-		const qrCodeContainer = document.createElement( 'div' );
-		qrCodeContainer.className = 'ext-urlshortener-qrcode-container';
-		qrCodeContainer.append( qrCodeNode, this.qrCodeDownloadButton );
-		document.querySelector( '.ext-urlshortener-container' )
-			.append( qrCodeContainer );
 	}
 
 	/**
