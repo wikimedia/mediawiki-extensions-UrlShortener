@@ -97,7 +97,7 @@ class UrlShortener {
 	}
 
 	qrCodeUiHandler( qrCodeSvg ) {
-		const qrCodeUri = `data:image/svg+xml,${ encodeURIComponent( qrCodeSvg ) }`;
+		const qrCodeUri = `data:image/svg+xml;charset=utf-8,${ encodeURIComponent( qrCodeSvg ) }`;
 		if ( this.qrCodeImage ) {
 			this.qrCodeImage.src = qrCodeUri;
 			this.qrCodeDownloadButton.href = qrCodeUri;

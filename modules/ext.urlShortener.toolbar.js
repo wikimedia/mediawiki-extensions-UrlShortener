@@ -24,15 +24,17 @@
 				'mediawiki.widgets'
 			] ).then( () => {
 				const api = new mw.Api();
-				return api.post( {
+				return Promise.all( [ undefined, 1 ].map( ( qr ) => api.post( {
 					action: 'shortenurl',
-					url: window.location.href
-				} ).then( ( data ) => {
+					url: window.location.href,
+					qrcode: qr
+				} ) ) ).then( ( data ) => {
+					const urlRepsonse = data[ 0 ].shortenurl;
 					const widget = new mw.widgets.CopyTextLayout( {
 						align: 'top',
 						label: mw.msg( 'urlshortener-shortened-url-label' ),
 						classes: [ 'ext-urlshortener-result', 'ext-urlshortener-result-dialog' ],
-						copyText: data.shortenurl.shorturl,
+						copyText: urlRepsonse.shorturl,
 						help: mw.msg( 'urlshortener-shortened-url-alt' ),
 						helpInline: true,
 						successMessage: mw.msg( 'urlshortener-copy-success' ),
@@ -40,16 +42,36 @@
 					} );
 					const $alt = $( '<a>' );
 					widget.$help.append( ' ', $alt );
-					$alt.attr( 'href', data.shortenurl.shorturlalt )
-						.text( data.shortenurl.shorturlalt );
+					$alt.attr( 'href', urlRepsonse.shorturlalt )
+						.text( urlRepsonse.shorturlalt );
 					$alt.off( 'click' ).on( 'click', ( event ) => {
 						event.preventDefault();
-						widget.textInput.setValue( data.shortenurl.shorturlalt );
+						widget.textInput.setValue( urlRepsonse.shorturlalt );
 						widget.onButtonClick();
-						widget.textInput.setValue( data.shortenurl.shorturl );
+						widget.textInput.setValue( urlRepsonse.shorturl );
 						$alt[ 0 ].focus();
 					} );
-					$shortenUrlLink.html( linkText );
+					const qrResponse = data[ 1 ].shortenurl;
+					if ( qrResponse.qrcode ) {
+						$shortenUrlLink.html( linkText );
+						const qrCodeUri = `data:image/svg+xml;charset=utf-8,${ encodeURIComponent( qrResponse.qrcode ) }`;
+						const download = new OO.ui.ButtonWidget( {
+							icon: 'download',
+							label: mw.msg( 'urlshortener-toolbox-qrcode' ),
+							href: '.'
+						} );
+						download.$button.attr( {
+							download: 'qrcode.svg',
+							// OOUI prefixes './' for security, so set the attribute directly
+							href: qrCodeUri
+						} );
+						widget.$element.append(
+							$( '<div>' ).addClass( 'ext-urlshortener-qrcode' ).append(
+								$( '<img>' ).attr( 'src', qrCodeUri ),
+								download.$element
+							)
+						);
+					}
 					return widget;
 				} );
 			} );
