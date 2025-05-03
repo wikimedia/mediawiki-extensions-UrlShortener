@@ -95,7 +95,7 @@
 
 	$qrCodeLink.on( 'click', ( e ) => {
 		e.preventDefault();
-		mw.loader.using( 'mediawiki.api' ).done( () => {
+		mw.loader.using( 'mediawiki.api' ).then( () => {
 			$qrCodeLink.find( '.toggle-list-item__label' )
 				.text( mw.msg( 'urlshortener-url-input-submitting' ) );
 			const api = new mw.Api();
@@ -103,7 +103,7 @@
 				action: 'shortenurl',
 				url: window.location.href,
 				qrcode: true
-			} ).done( ( data ) => {
+			} ).then( ( data ) => {
 				// Create hidden anchor and force a download. This seems hacky,
 				// but we'd otherwise we need a specialized API with the proper response header.
 				const downloadLink = document.createElement( 'a' );
@@ -116,7 +116,7 @@
 				$qrCodeLink.find( '.toggle-list-item__label' )
 					.text( mw.msg( 'urlshortener-toolbox-qrcode' ) );
 				mw.notify( mw.msg( 'urlshortener-qrcode-downloaded' ), { type: 'success' } );
-			} ).fail( () => {
+			}, () => {
 				$qrCodeLink.find( '.toggle-list-item__label' )
 					.text( mw.msg( 'urlshortener-failed-try-again' ) );
 			} );
