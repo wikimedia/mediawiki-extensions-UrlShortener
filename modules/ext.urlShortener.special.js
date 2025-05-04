@@ -133,12 +133,12 @@ class UrlShortener {
 	 * Click handler for the submit button
 	 */
 	onSubmit() {
-		this.input.getValidity().done( () => {
+		this.input.getValidity().then( () => {
 			this.input.pushPending().setReadOnly( true );
 			this.setSubmit( 'submitting' );
 			this.shortenUrl(
 				this.input.getValue()
-			).done( ( result ) => {
+			).then( ( result ) => {
 				// shortUrlUiHandler() *may* be called for Special:QrCode, not always
 				if ( result.shorturl ) {
 					this.shortUrlUiHandler( result );
@@ -152,7 +152,7 @@ class UrlShortener {
 				if ( this.isQrCode ) {
 					this.qrCodeUiHandler( result.qrcode );
 				}
-			} ).fail( ( err ) => {
+			}, ( err ) => {
 				this.fieldLayout.setErrors( [ err.info ] );
 			} ).always( () => {
 				this.setSubmit( 'submit' );
@@ -202,7 +202,10 @@ class UrlShortener {
 		if ( this.isQrCode ) {
 			params.qrcode = true;
 		}
-		return this.api.post( params ).then( ( data ) => data.shortenurl, ( errCode, data ) => $.Deferred().reject( data.error ).promise() );
+		return this.api.post( params ).then(
+			( data ) => data.shortenurl,
+			( errCode, data ) => $.Deferred().reject( data.error ).promise()
+		);
 	}
 }
 
