@@ -52,6 +52,7 @@
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|дӀадаьккхина}} доца URL-адрес «$4»",
 	"logentry-urlshortener-restore": "$1 {{GENDER:$2|меттахӀоттина}} доца URL-адрес «$4»",
 	"logeventslist-urlshortener-log": "Доца URL-адресашна урхалладаран журнал",
+	"log-action-filter-urlshortener": "Урхаллин тайпа",
 	"log-action-filter-urlshortener-delete": "URL-адрес дӀадаккхар",
 	"log-action-filter-urlshortener-restore": "URL-адрес меттахӀоттор"
 }
