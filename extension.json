@@ -140,7 +140,6 @@
 			],
 			"dependencies": [
 				"mediawiki.api",
-				"mediawiki.Uri",
 				"mediawiki.htmlform.ooui",
 				"mediawiki.widgets",
 				"ext.urlShortener.qrCode.special.styles"
