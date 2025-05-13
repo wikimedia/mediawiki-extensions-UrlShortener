@@ -134,6 +134,16 @@ class ApiShortenUrl extends ApiBase {
 	}
 
 	/**
+	 * Does writes when inserting to the urlshortcodes table.
+	 *
+	 * @inheritDoc
+	 * @codeCoverageIgnore Merely declarative
+	 */
+	public function isWriteMode() {
+		return true;
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	protected function getAllowedParams() {
