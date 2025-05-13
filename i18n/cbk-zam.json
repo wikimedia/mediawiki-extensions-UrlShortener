@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aristorkle"
+			"Aristorkle",
+			"Noooote"
 		]
 	},
 	"urlshortener-toolbox": "Saca con el corto URL",
-	"urlshortener-toolbox-qrcode": "Saca con el QR del pagina",
-	"urlshortener-qrcode-downloaded": "El QR ya puede recibi como SVG"
+	"urlshortener-toolbox-qrcode": "Man download con el QR code",
+	"urlshortener-qrcode-downloaded": "El QR code ya'n download ya como SVG file"
 }
