@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pingponging"
+		]
+	},
+	"urlshortener-toolbox": "Get shot URL",
+	"urlshortener-toolbox-qrcode": "Download QR code",
+	"urlshortener-qrcode-downloaded": "QR code downloaded as SVG file"
+}
