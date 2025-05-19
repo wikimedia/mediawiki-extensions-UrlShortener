@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Biema"
+		]
+	},
+	"urlshortener-toolbox": "Nya URL tika",
+	"urlshortener-toolbox-qrcode": "Chin QR kodi",
+	"urlshortener-qrcode-downloaded": "QR kodi chinwa ka SVG fili"
+}
