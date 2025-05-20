@@ -1,16 +1,10 @@
 ( function () {
-	// eslint-disable-next-line no-jquery/no-global-selector
-	const $shortenUrlLink = $( '#t-urlshortener' ).find( 'a' );
-	let $qrCodeLink,
-		widgetPromise;
+	let widgetPromise;
 
-	if ( mw.config.get( 'skin' ) === 'minerva' ) {
-		// eslint-disable-next-line no-jquery/no-global-selector
-		$qrCodeLink = $( '.ext-urlshortener-qrcode-download-minerva' );
-	} else {
-		// eslint-disable-next-line no-jquery/no-global-selector
-		$qrCodeLink = $( '#t-urlshortener-qrcode' ).find( 'a' );
-	}
+	// eslint-disable-next-line no-jquery/no-global-selector
+	const $shortenUrlLink = $( '#t-urlshortener a' );
+	// eslint-disable-next-line no-jquery/no-global-selector
+	const $qrCodeLink = $( '#t-urlshortener-qrcode a, .menu__item--page-actions-overflow-qrcode' );
 
 	$shortenUrlLink.attr( 'aria-haspopup', 'dialog' );
 	$shortenUrlLink.on( 'click', ( e ) => {
