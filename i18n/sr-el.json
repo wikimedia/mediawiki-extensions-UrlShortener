@@ -5,8 +5,12 @@
 		]
 	},
 	"action-urlshortener-create-url": "pravljenje kratkih veza",
+	"right-urlshortener-create-url": "pravljenje kratkih URL-a",
+	"grant-shortenurls": "pravljenje kratkih URL-a",
 	"urlshortener": "Skraćivač URL-a",
+	"qrcode": "Generator QR koda",
 	"urlshortener-approved-domains": "Veze ka {{PLURAL:$1|sledećem domenu|sledećim domenima}} mogu da se skrate: $2.",
+	"urlshortener-deleted": "Ovaj kratki URL je obrisan.",
 	"urlshortener-desc": "Skraćivač proizvoljnih URL adresa",
 	"urlshortener-disabled": "Pravljenje novih kratkih URL adresa je trenutno onemogućeno.",
 	"urlshortener-error-badports": "Skraćivanje URL adresa koje sadrže portove nije dozvoljeno",
@@ -18,10 +22,16 @@
 	"urlshortener-manage-reason": "Razlog",
 	"urlshortener-not-found-message": "Nije pronađena URL adresa koju ste tražili.",
 	"urlshortener-not-found-title": "Nije pronađena kratka URL adresa",
+	"urlshortener-qrcode-form-submit": "Prosledi",
 	"urlshortener-ratelimit": "Sačekajte neko vreme pre nego što nastavite sa skraćivanjem URL adresa.",
+	"urlshortener-shortened-url-alt": "Alternativni URL:",
 	"urlshortener-shortened-url-label": "Skraćena URL adresa",
-	"urlshortener-toolbox": "Skraćena URL adresa",
+	"urlshortener-toolbox": "Kratki URL",
+	"urlshortener-toolbox-qrcode": "Preuzmi QR kod",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Skrati",
-	"urlshortener-url-input-submitting": "Skraćujem…"
+	"urlshortener-url-input-submitting": "Skraćujem…",
+	"logentry-urlshortener-delete": "$1 je {{GENDER:$2|obrisao|obrisala}} kratki URL „$4”",
+	"logentry-urlshortener-restore": "$1 je {{GENDER:$2|vratio|vratila}} kratki URL „$4”",
+	"urlshortener-qrcode-downloaded": "QR kod preuzet kao SVG datoteka"
 }
