@@ -9,5 +9,6 @@
 	"urlshortener-desc": "Skracovač pre ľubovoľné URL",
 	"urlshortener-shortened-url-alt": "Môžete tiež použiť toto alternatívne URL:",
 	"urlshortener-shortened-url-label": "Skrátené URL",
-	"urlshortener-toolbox": "Získať skrátené URL"
+	"urlshortener-toolbox": "Získať skrátené URL",
+	"urlshortener-url-input-submitting": "Skracuje sa..."
 }
