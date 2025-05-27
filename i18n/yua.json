@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Abby95"
+			"Abby95",
+			"VicenteCancheM"
 		]
 	},
-	"urlshortener-toolbox": "K'amik jump'éel URL xóota'an",
-	"urlshortener-toolbox-qrcode": "Descargartej codigo url"
+	"urlshortener-toolbox": "K'am jump'éel kóom URL",
+	"urlshortener-toolbox-qrcode": "Éems codigo QR",
+	"urlshortener-qrcode-downloaded": "A código QRe' éem bey archivo SVG"
 }

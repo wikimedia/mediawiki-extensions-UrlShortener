@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joanmp17"
+		]
+	},
+	"urlshortener": "መሕጸሪ URL",
+	"urlshortener-copy-success": "URL ናብ ቅንጥብጣብ ሰሌዳ ተቐዲሑ።",
+	"urlshortener-manage-reason": "ምኽንያት",
+	"urlshortener-qrcode-url-label": "URL፦",
+	"urlshortener-qrcode-form-submit": "ኣረክብ",
+	"urlshortener-shortened-url-label": "ዝተሓጽረ URL",
+	"urlshortener-toolbox": "ዝተሓጽረ URL ርኸብ",
+	"urlshortener-toolbox-qrcode": "ኮድ QR ኣውርድ",
+	"urlshortener-url-input-submit": "ኣሕጽር",
+	"urlshortener-url-input-submitting": "ይሓጽር ኣሎ…"
+}
