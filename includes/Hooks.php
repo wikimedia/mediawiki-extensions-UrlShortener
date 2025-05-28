@@ -138,8 +138,6 @@ class Hooks implements
 			$fullURL = self::getFullUrl( $sktemplate );
 			$links['actions']['qrcode'] = [
 				'icon' => 'qrCode',
-				// Needs its own selector to avoid styling clashes.
-				'class' => 'ext-urlshortener-qrcode-download-minerva',
 				'href' => SpecialPage::getTitleFor( 'QrCode' )->getLocalURL( [ 'url' => $fullURL ] ),
 				'text' => $sktemplate->msg( 'urlshortener-toolbox-qrcode' )->plain(),
 			];
