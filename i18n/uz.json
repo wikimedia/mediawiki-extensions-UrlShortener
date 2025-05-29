@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Malikxan"
+			"Malikxan",
+			"Mainculprit"
 		]
 	},
 	"action-urlshortener-create-url": "qisqa URL-manzillar yaratish",
@@ -17,5 +18,6 @@
 	"urlshortener-toolbox": "Qisqartirilgan URL-manzilni olish",
 	"urlshortener-toolbox-qrcode": "QR-kodni yuklab olish",
 	"urlshortener-url-input-submit": "Qisqartirish",
-	"urlshortener-url-input-submitting": "Qisqartirilmoqda…"
+	"urlshortener-url-input-submitting": "Qisqartirilmoqda…",
+	"urlshortener-qrcode-downloaded": "QR kodi SVG fayl sifatida yuklab olindi"
 }
