@@ -10,7 +10,11 @@
 			"Shirayuki",
 			"Sujiniku",
 			"Takot",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Ant176",
+			"Chqaz",
+			"Foomin10",
+			"Kokage si"
 		]
 	},
 	"action-urlshortener-create-url": "短縮URLの作成",
@@ -58,8 +62,8 @@
 	"urlshortener-badaccessgroups": "短縮 URL を作成する権限がありません",
 	"log-name-urlshortener": "短縮URLの管理記録",
 	"log-description-urlshortener": "このページには短縮URL の除去と復元が記録されています。新規作成は表示されません",
-	"logentry-urlshortener-delete": "$1さんが短縮URL「$4」を{{GENDER:$2|削除しました}}",
-	"logentry-urlshortener-restore": "$1さんが短縮URL「$4」を{{GENDER:$2|復元しました}}",
+	"logentry-urlshortener-delete": "$1 が短縮 URL「$4」を{{GENDER:$2|削除しました}}",
+	"logentry-urlshortener-restore": "$1 が短縮 URL「$4」を{{GENDER:$2|復元しました}}",
 	"logeventslist-urlshortener-log": "短縮URLの管理記録",
 	"log-action-filter-urlshortener": "管理の種類",
 	"log-action-filter-urlshortener-delete": "URL削除",
