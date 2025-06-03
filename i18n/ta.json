@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Balajijagadesh",
-			"Fahimrazick"
+			"Fahimrazick",
+			"Matrix"
 		]
 	},
 	"action-urlshortener-create-url": "குறுகிய உரலிகளை உருவாக்குக",
@@ -19,7 +20,9 @@
 	"urlshortener-not-found-title": "குறுகிய உரலி காணப்பட வில்லை",
 	"urlshortener-shortened-url-label": "குறுக்கப்பட்ட உரலி",
 	"urlshortener-toolbox": "குறுகிய உரலியைப் பெறு",
+	"urlshortener-toolbox-qrcode": "QR குறியீட்டைப் பதிவிறக்கு",
 	"urlshortener-url-input-label": "உரலி",
 	"urlshortener-url-input-submit": "குறுக்கு",
-	"urlshortener-url-input-submitting": "குறுக்கப்படுகிறது..."
+	"urlshortener-url-input-submitting": "குறுக்கப்படுகிறது...",
+	"urlshortener-qrcode-downloaded": "QR குறியீடு SVG கோப்பாக பதிவிறக்கப்பட்டது"
 }
