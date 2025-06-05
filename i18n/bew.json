@@ -4,5 +4,7 @@
 			"Bangrapip"
 		]
 	},
-	"urlshortener-toolbox": "Dapetin URL pongèsan"
+	"urlshortener-toolbox": "Dapetin URL pongèsan",
+	"urlshortener-toolbox-qrcode": "Comot kode keresek (QR)",
+	"urlshortener-qrcode-downloaded": "Kode keresek udah dicomot jadi gepokan SVG"
 }
