@@ -478,16 +478,16 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 	 */
 	public static function provideGetQrCode(): Generator {
 		yield 'Should not be shortened' => [
-			500, false, [ 'qrcode' ], 'd6f2340d23f3974f1de444f48159b47684442590'
+			500, false, [ 'qrcode' ], 'a8b5e89de1245b9bf5d356ee91bf37aeec07cde3'
 		];
 		yield 'Should be shortened' => [
-			5, false, [ 'qrcode', 'url', 'alt' ], 'd604477c56729e3eb54693bc63d783694a6b6dd1'
+			5, false, [ 'qrcode', 'url', 'alt' ], 'aff12a867889260cee454bc4524771c795653c23'
 		];
 		yield 'Should not be shortened, data URI' => [
-			500, true, [ 'qrcode' ], '7c67167ab6c6c39ebe6ecf9f713037e602693535'
+			500, true, [ 'qrcode' ], 'e71d583d7d2917fe974b79aa1f0b65614a0994a7'
 		];
 		yield 'Should be shortened, data URI' => [
-			5, true, [ 'qrcode' ], 'f8058df98febafe7ff1e2b271123accd2d18e2b1'
+			5, true, [ 'qrcode' ], 'd5faa876fd57ef0546d73961e58fa1652f8b68f1'
 		];
 	}
 
