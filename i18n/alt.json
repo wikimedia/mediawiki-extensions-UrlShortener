@@ -4,5 +4,7 @@
 			"Батыр Комдошев"
 		]
 	},
-	"urlshortener-toolbox": "Кыскарткан URL-адрести алар"
+	"urlshortener-toolbox": "Кыскарткан URL-адрести алар",
+	"urlshortener-toolbox-qrcode": "QR-кодты артызып алар",
+	"urlshortener-qrcode-downloaded": "QR-код SVG файл этире артызылды"
 }

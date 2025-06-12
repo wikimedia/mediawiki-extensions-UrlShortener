@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sauit"
+		]
+	},
+	"urlshortener-toolbox": "Кылгатыллыбыт URL-адрес ыл",
+	"urlshortener-toolbox-qrcode": "QR-куоду ыл",
+	"urlshortener-qrcode-downloaded": "QR-куод SVG-файл курдук качайданна"
+}

@@ -4,5 +4,7 @@
 			"Teitei Para"
 		]
 	},
-	"urlshortener-toolbox": "URL chyupa la"
+	"urlshortener-toolbox": "URL chyupa la",
+	"urlshortener-toolbox-qrcode": "QR code adao",
+	"urlshortener-qrcode-downloaded": "QR code kha SVG file ta adao"
 }

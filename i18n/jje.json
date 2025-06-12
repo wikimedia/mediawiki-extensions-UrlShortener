@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Whatback11"
+		]
+	},
+	"urlshortener-toolbox": "토막난 URL 얻기",
+	"urlshortener-toolbox-qrcode": "QR코드 나리워받기",
+	"urlshortener-qrcode-downloaded": "QR코드를 SVG 파일로 나리워받앗수다"
+}
