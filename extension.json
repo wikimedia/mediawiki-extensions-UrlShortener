@@ -14,7 +14,7 @@
 	"license-name": "Apache-2.0",
 	"type": "specialpage",
 	"requires": {
-		"MediaWiki": ">= 1.44"
+		"MediaWiki": ">= 1.45"
 	},
 	"APIModules": {
 		"shortenurl": {
