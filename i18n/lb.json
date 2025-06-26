@@ -15,7 +15,7 @@
 	"qrcode": "QR-Code-Generator",
 	"urlshortener-approved-domains": "Linken op {{PLURAL:$1|dësen Domain|dës Domaine}} kënne gekierzt ginn: $2.",
 	"urlshortener-deleted": "Dës kuerz URL gouf geläscht!",
-	"urlshortener-error-malformed-url": "Keng valabel URL",
+	"urlshortener-error-malformed-url": "Keng gülteg URL",
 	"urlshortener-failed-try-again": "Huet net fonctionnéiert. Nach eng Kéier probéieren?",
 	"urlshortener-form-header": "Setzt Är laang URL heihin",
 	"urlshortener-manage-reason": "Grond",
