@@ -80,7 +80,7 @@
 			},
 			() => {
 				// Point the link to Special:UrlShortener
-				$shortenUrlLink.html( mw.msg( 'urlshortener-failed-try-again' ) );
+				$shortenUrlLink.text( mw.msg( 'urlshortener-failed-try-again' ) );
 				$shortenUrlLink.off( 'click' ).removeAttr( 'aria-haspopup' );
 			}
 		);
