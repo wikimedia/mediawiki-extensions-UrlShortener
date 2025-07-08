@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"CROIX2"
+		]
+	},
+	"urlshortener-toolbox": "Git likl URL",
+	"urlshortener-toolbox-qrcode": "Put dong QR kuod",
+	"urlshortener-qrcode-downloaded": "QR kuod min put dong a SVG fail"
+}
