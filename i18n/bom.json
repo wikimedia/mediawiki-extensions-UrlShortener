@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rwang PS"
+		]
+	},
+	"urlshortener-toolbox": "Tet we kiong e URL",
+	"urlshortener-toolbox-qrcode": "Te QR jot",
+	"urlshortener-qrcode-downloaded": "QR jot ku te e SVG duk"
+}
