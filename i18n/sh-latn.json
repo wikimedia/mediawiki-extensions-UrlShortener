@@ -57,5 +57,6 @@
 	"logeventslist-urlshortener-log": "Evidencija upravljanja kratkim URL-ovima",
 	"log-action-filter-urlshortener": "Vrsta upravljanja",
 	"log-action-filter-urlshortener-delete": "Brisanje URL-a",
-	"log-action-filter-urlshortener-restore": "Vraćanje URL-a"
+	"log-action-filter-urlshortener-restore": "Vraćanje URL-a",
+	"urlshortener-qrcode-downloaded": "QR kod preuzet je u formatu SVG"
 }
