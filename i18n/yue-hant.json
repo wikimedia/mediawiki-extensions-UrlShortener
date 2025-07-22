@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"H78c67c",
-			"Winston Sung"
+			"Winston Sung",
+			"JeffreyKim"
 		]
 	},
 	"urlshortener": "URL縮短器",
 	"qrcode": "QR Code生成器",
 	"urlshortener-not-found-title": "揾唔到短嘅URL",
 	"urlshortener-toolbox": "攞短網址",
-	"urlshortener-toolbox-qrcode": "下載QR code"
+	"urlshortener-toolbox-qrcode": "下載QR code",
+	"urlshortener-qrcode-downloaded": "二維碼單撈咗做 SVG 快勞"
 }
