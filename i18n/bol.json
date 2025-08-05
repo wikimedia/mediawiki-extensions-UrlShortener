@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"El-hussain14"
+			"El-hussain14",
+			"Mbfika"
 		]
 	},
 	"urlshortener-toolbox": "Wena URL nduɓɓa",
-	"urlshortener-toolbox-qrcode": "Download QR code",
+	"urlshortener-toolbox-qrcode": "Yauto QR code",
 	"urlshortener-qrcode-downloaded": "QR code downloaded as SVG file"
 }
