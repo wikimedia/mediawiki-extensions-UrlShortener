@@ -1,11 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ladsgroup"
+			"Ladsgroup",
+			"Darafsh"
 		]
 	},
 	"apihelp-shortenurl-summary": "کوتاه کردن یک نشانی اینترنتی بلند به یک نشانی اینترنتی کوتاه",
 	"apihelp-shortenurl-param-url": "آدرس اینترنتی برای کوتاه شدن",
+	"apihelp-shortenurl-param-qrcode": "یک کد QR دریافت کنید. نشانی پیوند تنها در صورتی کوتاه می‌شود که بسیار طولانی باشد.",
 	"apihelp-shortenurl-example-1": "آدرس اینترنتی کوتاه شده <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> را بگیر",
-	"apierror-urlshortener-disabled": "امکان ایجاد نشانی اینترنتی کوتاه جدید نیست."
+	"apihelp-shortenurl-example-2": "یک کد QR برای <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> دریافت کنید.",
+	"apierror-urlshortener-disabled": "امکان ایجاد نشانی اینترنتی کوتاه جدید نیست.",
+	"apierror-urlshortener-permissiondenied": "اجازهٔ ایجاد نشانی‌های کوتاه را ندارید."
 }
