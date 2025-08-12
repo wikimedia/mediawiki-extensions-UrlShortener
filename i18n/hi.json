@@ -4,9 +4,12 @@
 			"Abijeet Patro",
 			"Srishakatux",
 			"गोपाल",
-			"Mithun 477"
+			"Mithun 477",
+			"Saurmandal"
 		]
 	},
+	"action-urlshortener-create-url": "छोटे URL बनाने",
+	"right-urlshortener-create-url": "छोटे URL बनाना",
 	"action-urlshortener-view-log": "लघु URL प्रबंधन लॉग देखें",
 	"urlshortener-manage-reason": "कारण",
 	"urlshortener-toolbox": "संक्षिप्त URL प्राप्त करें",
