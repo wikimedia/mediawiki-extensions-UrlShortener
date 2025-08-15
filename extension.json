@@ -283,7 +283,7 @@
 		}
 	},
 	"ConfigRegistry": {
-		"urlshortener": "GlobalVarConfig::newInstance"
+		"urlshortener": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
 	},
 	"DatabaseVirtualDomains": [
 		"virtual-urlshortener"
