@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"咽頭べさ"
+			"咽頭べさ",
+			"Htawmonzel"
 		]
 	},
 	"action-urlshortener-create-url": "မခၞံ URL ဗီုပြၚ်ဂၠေံဂၠေံဂမၠိုၚ်",
@@ -12,7 +13,7 @@
 	"grant-shortenurls": "မခၞံ URL ဗီုပြၚ်ဂၠေံဂၠေံဂမၠိုၚ်",
 	"right-urlshortener-view-log": "မစၟဳမသ္ပ URL ဗီုပြၚ်ဂၠေံဂၠေံဂမၠိုၚ်",
 	"urlshortener-manage-reason": "ဟိုတ်",
-	"urlshortener-toolbox": "မကေတ်URLဗီုပြၚ်ဂၠေံဂၠေံ",
+	"urlshortener-toolbox": "ကေတ် URL ဇမၠေအ်",
 	"urlshortener-url-input-submit": "ခမၞန်ကဵုဂၠေံစှ်ေ",
 	"log-action-filter-urlshortener-delete": "မပလီုထောံ URL",
 	"log-action-filter-urlshortener-restore": "မကလေၚ်ကေတ် URL"
