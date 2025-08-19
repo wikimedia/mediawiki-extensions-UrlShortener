@@ -4,5 +4,7 @@
 			"NikolasKHF"
 		]
 	},
-	"urlshortener-toolbox": "Èngat URL kodéq"
+	"urlshortener-toolbox": "Èngat URL kodéq",
+	"urlshortener-toolbox-qrcode": "Bau kode QR",
+	"urlshortener-qrcode-downloaded": "Kode QR wah te bau jari gempoqan SVG"
 }
