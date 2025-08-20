@@ -5,5 +5,7 @@
 		]
 	},
 	"grant-shortenurls": "အင်တာနက်လိပ်စာ အတိုများ ဖန်တီးခြင်း",
-	"urlshortener-toolbox": "အတိုကောက် URL ရယူရန်"
+	"urlshortener-toolbox": "အတိုကောက် URL ရယူရန်",
+	"urlshortener-toolbox-qrcode": "QR ကုဒ်ကို ဒေါင်းလုဒ်ရန်",
+	"urlshortener-qrcode-downloaded": "QR ကုဒ်ကို SVG ဖိုင်အဖြစ် ဒေါင်းလုဒ်လုပ်ထားသည်"
 }
