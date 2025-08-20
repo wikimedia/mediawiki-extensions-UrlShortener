@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Shvermer",
 			"וויקיפּעדלער"
 		]
 	},
 	"urlshortener-shortened-url-alt": "איר קענט אויך נוצן דעם אָלטערנאַטיוון URL:",
 	"urlshortener-shortened-url-label": "קורצע URL:",
-	"urlshortener-toolbox": "באַקומען קורצער URL"
+	"urlshortener-toolbox": "באַקומען קורצער URL",
+	"urlshortener-toolbox-qrcode": "אַראָפּלאָדנען QR קאָד",
+	"urlshortener-qrcode-downloaded": "QR קאָד אַראָפּגעלאָדנט אַלס SVG טעקע"
 }
