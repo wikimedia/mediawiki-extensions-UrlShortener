@@ -4,7 +4,8 @@
 			"H78c67c",
 			"JeffreyKim",
 			"Ktchankt",
-			"Winston Sung"
+			"Winston Sung",
+			"Yueman"
 		]
 	},
 	"action-urlshortener-create-url": "整短網址",
@@ -14,14 +15,14 @@
 	"right-urlshortener-manage-url": "管理短網址",
 	"grant-shortenurls": "整短網址",
 	"urlshortener": "URL縮短器",
-	"qrcode": "QR Code生成器",
+	"qrcode": "QR碼生成器",
 	"urlshortener-not-found-title": "揾唔到短嘅URL",
 	"urlshortener-qrcode-url-label": "網址：",
 	"urlshortener-qrcode-form-submit": "遞交",
 	"urlshortener-shortened-url-alt": "你亦都可以用呢個替代網址：",
 	"urlshortener-shortened-url-label": "短網址",
 	"urlshortener-toolbox": "攞短網址",
-	"urlshortener-toolbox-qrcode": "下載QR code",
+	"urlshortener-toolbox-qrcode": "下載QR碼",
 	"urlshortener-url-input-label": "網址",
 	"urlshortener-url-input-submit": "縮短",
 	"urlshortener-url-input-submitting": "縮短緊...",
