@@ -5,7 +5,8 @@
 			"Ekminarin",
 			"Geonuch",
 			"Octahedron80",
-			"Patsagorn Y."
+			"Patsagorn Y.",
+			"Wutkh"
 		]
 	},
 	"action-urlshortener-create-url": "สร้างยูอาร์แอลแบบสั้น",
@@ -64,5 +65,5 @@
 	"log-action-filter-urlshortener": "ประเภทของการจัดการ",
 	"log-action-filter-urlshortener-delete": "การลบยูอาร์แอล",
 	"log-action-filter-urlshortener-restore": "การกู้คืนยูอาร์แอล",
-	"urlshortener-qrcode-downloaded": "คิวอาร์โค้ดได้ดาวน์โหลดเป็นไฟล์เอสวีจี"
+	"urlshortener-qrcode-downloaded": "ดาวน์โหลดคิวอาร์โค้ดเป็นไฟล์เอสวีจีแล้ว"
 }
