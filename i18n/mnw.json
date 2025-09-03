@@ -15,9 +15,9 @@
 	"urlshortener-manage-reason": "ဟိုတ်",
 	"urlshortener-qrcode-form-submit": "ဗပေၚ်",
 	"urlshortener-toolbox": "ကေတ် URL ဇမၠေအ်",
-	"urlshortener-toolbox-qrcode": "တံၚ်ဂြဲကေတ် QR ကောဒ်",
+	"urlshortener-toolbox-qrcode": "တံင်ဂြဲကေတ် QR ကောဒ်",
 	"urlshortener-url-input-submit": "ခမၞန်ကဵုဂၠေံစှ်ေ",
 	"log-action-filter-urlshortener-delete": "မပလီုထောံ URL",
 	"log-action-filter-urlshortener-restore": "မကလေၚ်ကေတ် URL",
-	"urlshortener-qrcode-downloaded": "QR ကောဒ် တံၚ်ဂြဲလဝ် နဝှာၚ် SVG"
+	"urlshortener-qrcode-downloaded": "QR ကောဒ် တံင်ဂြဲလဝ် နဝှာင်SVG"
 }
