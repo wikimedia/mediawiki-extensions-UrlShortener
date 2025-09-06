@@ -27,8 +27,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 
 	protected ?FieldLayout $resultField = null;
 	protected ?Status $resultStatus = null;
-	private UrlShortenerUtils $utils;
-	private UrlUtils $urlUtils;
 
 	/**
 	 * @param UrlShortenerUtils $utils
@@ -37,14 +35,12 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 * @param string $restriction
 	 */
 	public function __construct(
-		UrlShortenerUtils $utils,
-		UrlUtils $urlUtils,
+		private readonly UrlShortenerUtils $utils,
+		private readonly UrlUtils $urlUtils,
 		$name = 'UrlShortener',
 		$restriction = 'urlshortener-create-url'
 	) {
 		parent::__construct( $name, $restriction );
-		$this->utils = $utils;
-		$this->urlUtils = $urlUtils;
 	}
 
 	/**

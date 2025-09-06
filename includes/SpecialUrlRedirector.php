@@ -7,13 +7,10 @@ use MediaWiki\SpecialPage\UnlistedSpecialPage;
 
 class SpecialUrlRedirector extends UnlistedSpecialPage {
 
-	private UrlShortenerUtils $utils;
-
 	public function __construct(
-		UrlShortenerUtils $utils
+		private readonly UrlShortenerUtils $utils,
 	) {
 		parent::__construct( 'UrlRedirector' );
-		$this->utils = $utils;
 	}
 
 	/**

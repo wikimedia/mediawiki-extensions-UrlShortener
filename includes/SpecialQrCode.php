@@ -19,17 +19,14 @@ class SpecialQrCode extends SpecialUrlShortener {
 
 	private int $shortenLimit;
 
-	private UrlShortenerUtils $utils;
-
 	public function __construct(
-		UrlShortenerUtils $utils,
+		private readonly UrlShortenerUtils $utils,
 		UrlUtils $urlUtils,
 		ConfigFactory $configFactory
 	) {
 		$config = $configFactory->makeConfig( 'urlshortener' );
 		$this->shortenLimit = $config->get( 'UrlShortenerQrCodeShortenLimit' );
 		parent::__construct( $utils, $urlUtils, 'QrCode' );
-		$this->utils = $utils;
 	}
 
 	/**

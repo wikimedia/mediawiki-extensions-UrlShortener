@@ -23,24 +23,20 @@ class ApiShortenUrl extends ApiBase {
 
 	private bool $qrCodeEnabled;
 	private int $qrCodeShortenLimit;
-	private PermissionManager $permissionManager;
-	private StatsFactory $statsFactory;
-	private UrlShortenerUtils $utils;
+	private readonly StatsFactory $statsFactory;
 
 	public function __construct(
 		ApiMain $mainModule,
 		string $moduleName,
-		PermissionManager $permissionManager,
+		private readonly PermissionManager $permissionManager,
 		StatsFactory $statsFactory,
-		UrlShortenerUtils $utils
+		private readonly UrlShortenerUtils $utils,
 	) {
 		parent::__construct( $mainModule, $moduleName );
 
 		$this->qrCodeEnabled = (bool)$this->getConfig()->get( 'UrlShortenerEnableQrCode' );
 		$this->qrCodeShortenLimit = (int)$this->getConfig()->get( 'UrlShortenerQrCodeShortenLimit' );
-		$this->permissionManager = $permissionManager;
 		$this->statsFactory = $statsFactory->withComponent( 'UrlShortener' );
-		$this->utils = $utils;
 	}
 
 	public function execute() {

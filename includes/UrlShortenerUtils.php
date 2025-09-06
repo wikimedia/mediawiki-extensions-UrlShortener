@@ -29,18 +29,11 @@ use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\IReadableDatabase;
 
 class UrlShortenerUtils {
-	private Config $config;
-	private IConnectionProvider $lbFactory;
-	private UrlUtils $urlUtils;
-
 	public function __construct(
-		Config $config,
-		IConnectionProvider $lbFactory,
-		UrlUtils $urlUtils
+		private readonly Config $config,
+		private readonly IConnectionProvider $lbFactory,
+		private readonly UrlUtils $urlUtils,
 	) {
-		$this->config = $config;
-		$this->lbFactory = $lbFactory;
-		$this->urlUtils = $urlUtils;
 	}
 
 	/**

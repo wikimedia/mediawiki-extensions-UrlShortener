@@ -17,13 +17,10 @@ use MediaWiki\User\User;
 
 class SpecialManageShortUrls extends FormSpecialPage {
 
-	private UrlShortenerUtils $utils;
-
 	public function __construct(
-		UrlShortenerUtils $utils
+		private readonly UrlShortenerUtils $utils,
 	) {
 		parent::__construct( 'ManageShortUrls', 'urlshortener-manage-url' );
-		$this->utils = $utils;
 	}
 
 	/**
