@@ -36,20 +36,16 @@ class Hooks implements
 	private bool $readOnly;
 	/** @var string|false */
 	private $urlTemplate;
-	/** @phan-suppress-next-line PhanUndeclaredTypeProperty */
-	private ?MobileContext $mobileContext;
 
 	public function __construct(
 		ConfigFactory $configFactory,
-		// @phan-suppress-next-line PhanUndeclaredTypeParameter
-		?MobileContext $mobileContext
+		private readonly ?MobileContext $mobileContext,
 	) {
 		$config = $configFactory->makeConfig( 'urlshortener' );
 		$this->enableSidebar = $config->get( 'UrlShortenerEnableSidebar' );
 		$this->enableQrCode = $config->get( 'UrlShortenerEnableQrCode' );
 		$this->readOnly = $config->get( 'UrlShortenerReadOnly' );
 		$this->urlTemplate = $config->get( 'UrlShortenerTemplate' );
-		$this->mobileContext = $mobileContext;
 	}
 
 	/**
@@ -132,7 +128,6 @@ class Hooks implements
 	 * @param array &$links
 	 */
 	public function onSkinTemplateNavigation__Universal( $sktemplate, &$links ): void {
-		// @phan-suppress-next-line PhanUndeclaredClassMethod
 		if ( $this->enableQrCode && $this->mobileContext && $this->mobileContext->shouldDisplayMobileView() ) {
 			$fullURL = self::getFullUrl( $sktemplate );
 			$links['actions']['qrcode'] = [
