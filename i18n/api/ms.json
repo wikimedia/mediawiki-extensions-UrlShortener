@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hakimi97"
+		]
+	},
+	"apihelp-shortenurl-summary": "Pendekkan URL yang panjang menjadi lebih pendek.",
+	"apihelp-shortenurl-param-url": "URL untuk dipendekkan.",
+	"apihelp-shortenurl-example-1": "Dapatkan URL pendek untuk <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Tiada url pendek baharu boleh dicipta",
+	"apierror-urlshortener-permissiondenied": "Anda tidak mempunyai hak untuk mencipta URL pendek"
+}
