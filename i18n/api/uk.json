@@ -1,12 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Piramidion"
+			"Piramidion",
+			"Ата"
 		]
 	},
 	"apihelp-shortenurl-summary": "Перетворити довгу URL-адресу в коротку",
 	"apihelp-shortenurl-param-url": "URL-адреса, яку треба скоротити.",
+	"apihelp-shortenurl-param-qrcode": "Отримайте QR-код. Посилання буде скорочене, тільки якщо воно дуже довге.",
 	"apihelp-shortenurl-example-1": "Отримати коротку URL-адресу для <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "Отримати QR-код  для <kbd><nowiki>https://uk.wikipedia.org/wiki/Арктика</nowiki></kbd>.",
 	"apierror-urlshortener-disabled": "Не можна створювати нових коротких URL-адрес",
 	"apierror-urlshortener-permissiondenied": "У вас немає прав на створення коротких URL-адрес"
 }
