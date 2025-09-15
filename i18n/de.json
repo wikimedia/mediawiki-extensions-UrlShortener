@@ -44,7 +44,7 @@
 	"urlshortener-not-found-title": "Die Kurz-URL wurde nicht gefunden",
 	"urlshortener-qrcode-url-label": "URL:",
 	"urlshortener-qrcode-form-submit": "Übermitteln",
-	"urlshortener-ratelimit": "Bitte warte etwas, bevor du weitere URLs kürzt.",
+	"urlshortener-ratelimit": "Bitte {{#FORMAL:warte|warten Sie}} etwas, bevor {{#FORMAL:du|Sie}} weitere URLs {{#FORMAL:kürzt|kürzen}}.",
 	"urlshortener-short-code-is-not-deleted": "Der URL-Kurzcode wurde nicht gelöscht",
 	"urlshortener-short-code-not-found": "Der URL-Kurzcode wurde nicht gefunden oder gelöscht",
 	"urlshortener-shortened-url-alt": "Du kannst auch diese alternative URL verwenden:",
