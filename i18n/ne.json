@@ -4,7 +4,8 @@
 			"पर्वत सुबेदी",
 			"बडा काजी",
 			"बिप्लब आनन्द",
-			"सरोज कुमार ढकाल"
+			"सरोज कुमार ढकाल",
+			"Nirajan pant"
 		]
 	},
 	"action-urlshortener-create-url": "छोटो युआरएलहरू सिर्जना गर्नुहोस्",
@@ -27,5 +28,6 @@
 	"urlshortener-toolbox-qrcode": "क्युआर कोड डाउनलोड गर्नुहोस्",
 	"urlshortener-url-input-label": "यूआरएल",
 	"urlshortener-url-input-submit": "संक्षिप्त",
-	"urlshortener-url-input-submitting": "संक्षिप्तीकरण गर्दै..."
+	"urlshortener-url-input-submitting": "संक्षिप्तीकरण गर्दै...",
+	"urlshortener-qrcode-downloaded": "QR कोड SVG फाइलको रूपमा डाउनलोड गरियो"
 }
