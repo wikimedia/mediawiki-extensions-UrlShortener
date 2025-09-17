@@ -130,7 +130,6 @@ class Hooks implements
 	 *
 	 * @param SkinTemplate $sktemplate
 	 * @param array &$links
-	 * @phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 	 */
 	public function onSkinTemplateNavigation__Universal( $sktemplate, &$links ): void {
 		// @phan-suppress-next-line PhanUndeclaredClassMethod
