@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"さきじょーぐー"
+		]
+	},
+	"urlshortener-toolbox": "いんちゃさるURL取得すん",
+	"urlshortener-toolbox-qrcode": "QRコードダウンロードすん",
+	"urlshortener-qrcode-downloaded": "QRコードぬSVGファイルダウンロードさびたん。"
+}
