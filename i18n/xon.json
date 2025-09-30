@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Abdul Fatawu 352"
+			"Abdul Fatawu 352",
+			"Andani Inusah"
 		]
 	},
 	"urlshortener-toolbox": "Yiŋ yɛ URL kpɛlaa",
-	"urlshortener-toolbox-qrcode": "Yiŋ bɔɔli QR code"
+	"urlshortener-toolbox-qrcode": "Yiŋ bɔɔli QR code",
+	"urlshortener-qrcode-downloaded": "“QR code ka bɔla ka SVG file”"
 }
