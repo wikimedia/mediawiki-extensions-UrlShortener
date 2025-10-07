@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"ITZQing"
+		]
+	},
+	"urlshortener-toolbox": "Skraćeni URL",
+	"urlshortener-toolbox-qrcode": "Preuzmi QR kod",
+	"urlshortener-qrcode-downloaded": "QR kod preuzet kao SVG datoteka."
+}
