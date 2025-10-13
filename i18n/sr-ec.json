@@ -21,7 +21,7 @@
 	"urlshortener-error-malformed-url": "Неважећа URL адреса",
 	"urlshortener-error-nouserpass": "Скраћивање URL адреса које садрже корисничко име или лозинку није дозвољено",
 	"urlshortener-failed-try-again": "Није успело. Покушати поново?",
-	"urlshortener-form-header": "Овде налепите дугачку URL адресу",
+	"urlshortener-form-header": "Налепите дугачки URL овде",
 	"urlshortener-manage-reason": "Разлог",
 	"urlshortener-not-found-message": "Није пронађена URL адреса коју сте тражили.",
 	"urlshortener-not-found-title": "Није пронађена кратка URL адреса",
