@@ -4,5 +4,7 @@
 			"Ooswesthoesbes"
 		]
 	},
-	"urlshortener-toolbox": "Krieg korteren URL"
+	"urlshortener-toolbox": "Krieg korteren URL",
+	"urlshortener-toolbox-qrcode": "Download QR-code",
+	"urlshortener-qrcode-downloaded": "QR-code gedownload es SVG-bestandj"
 }
