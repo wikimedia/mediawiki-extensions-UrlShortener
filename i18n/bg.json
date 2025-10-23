@@ -31,5 +31,6 @@
 	"urlshortener-url-input-submitting": "Скъсяване…",
 	"urlshortener-badaccessgroups": "Нямате право да създавате кратки URL адреси",
 	"log-action-filter-urlshortener-delete": "Изтриване на URL адрес",
-	"log-action-filter-urlshortener-restore": "Възстановяване на URL адрес"
+	"log-action-filter-urlshortener-restore": "Възстановяване на URL адрес",
+	"urlshortener-qrcode-downloaded": "QR кодът е изтеглен като SVG файл"
 }
