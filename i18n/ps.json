@@ -45,7 +45,7 @@
 	"urlshortener-shortened-url-label": "لنډشوی وېبتړ",
 	"urlshortener-toolbox": "لنډ وېبتړ ترلاسه‌کول",
 	"urlshortener-url-input-label": "وېبتړ",
-	"urlshortener-url-input-submit": "لنډشوی",
+	"urlshortener-url-input-submit": "لنډول",
 	"urlshortener-url-input-submitting": "لنډول...",
 	"urlshortener-url-too-long": "دا وېبتړ ډېر اوږد دی، ډېره کچه يې {{PLURAL:$1|{{PLURAL:$1|يو لوښه|لوښې}}}} ده",
 	"urlshortener-badaccessgroups": "تاسو د لنډ وېبتړونو جوړولو رښته نه لرئ",
