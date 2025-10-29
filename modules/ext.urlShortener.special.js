@@ -22,14 +22,18 @@ class UrlShortener {
 	}
 
 	/**
-	 * Validate the input URL clientside. Note that this is not the
-	 * only check - they are checked serverside too.
+	 * Validate the input URL clientside.
+	 *
+	 * NOTE: This an optional enhancement for faster UI feedback.
+	 * When in doubt, allow it here and let the server do the stricter check.
+	 *
+	 * NOTE: Keep in sync with UrlShortenerUtils.php#validateUrl
 	 *
 	 * Checks for both URL validity and AllowedDomains matching.
 	 *
-	 * @param {string} input the URL that is to be shortened
-	 * @return {boolean|Object} true if object is validated, an object matching what is
-	 *                         returned by the API in case of error.
+	 * @param {string} input The URL that is to be shortened
+	 * @return {boolean|Object} True if object is validated, an object matching what is
+	 *  returned by the API in case of error.
 	 */
 	validateInput( input ) {
 		let url;
@@ -47,7 +51,8 @@ class UrlShortener {
 		}
 		if ( url.port &&
 			!this.allowArbitraryPorts &&
-			!( url.port === '80' || url.port === '443' )
+			!( url.port === '80' || url.port === '443' ) &&
+			url.hostname !== mw.config.get( 'wgServerName' )
 		) {
 			this.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-badports' ) ] );
 			return false;

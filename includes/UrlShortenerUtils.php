@@ -435,6 +435,8 @@ class UrlShortenerUtils {
 	/**
 	 * Validates a given URL to see if it is allowed to be used to create a short URL
 	 *
+	 * NOTE: Keep in sync with ext.urlShortener.special.js
+	 *
 	 * @param string $url Url to Validate
 	 * @return bool|Message true if it is valid, or error Message object if invalid
 	 */
@@ -446,9 +448,16 @@ class UrlShortenerUtils {
 			$allowArbitraryPorts = $this->config
 				->get( 'UrlShortenerAllowArbitraryPorts' );
 			if ( isset( $urlParts['port'] ) && !$allowArbitraryPorts ) {
+				$wikiServerParts = $this->urlUtils->parse( $this->urlUtils->getCanonicalServer() );
 				if ( $urlParts['port'] === 80 || $urlParts['port'] === 443 ) {
 					unset( $urlParts['port'] );
-				} else {
+				} elseif ( !(
+					// Always allow shortening of $wgCanonicalServer,
+					// especially in local development where it tends to contain a port
+					isset( $wikiServerParts['port'] )
+						&& $urlParts['host'] === $wikiServerParts['host']
+						&& $urlParts['port'] === $wikiServerParts['port']
+				) ) {
 					return wfMessage( 'urlshortener-error-badports' );
 				}
 			}

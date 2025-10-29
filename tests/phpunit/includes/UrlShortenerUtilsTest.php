@@ -7,7 +7,7 @@ use MediaWiki\User\User;
 
 /**
  * @group Database
- * @coversDefaultClass \MediaWiki\Extension\UrlShortener\UrlShortenerUtils
+ * @covers \MediaWiki\Extension\UrlShortener\UrlShortenerUtils
  */
 class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
@@ -17,7 +17,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @dataProvider provideCartesianProduct
-	 * @covers ::cartesianProduct
 	 */
 	public function testCartesianProduct( $input, $expected ) {
 		$utils = $this->getUtils();
@@ -49,7 +48,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @dataProvider provideShortcodeVariants
-	 * @covers ::getShortcodeVariants
 	 */
 	public function testShortcodeVariants( $input, $expected ) {
 		$this->overrideConfigValues( [
@@ -90,7 +88,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @dataProvider provideConvertToProtocol
-	 * @covers ::convertToProtocol
 	 */
 	public function testConvertToProtocol( $input, $proto, $expected ) {
 		$this->overrideConfigValue( MainConfigNames::Script, '/w' );
@@ -135,7 +132,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @dataProvider provideNormalizeUrl
-	 * @covers ::normalizeUrl
 	 */
 	public function testNormalizeUrl( $url, $expected ) {
 		$this->overrideConfigValues( [
@@ -240,9 +236,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * Test that ids round-trip through encode/decode properly
-	 *
-	 * @covers ::encodeId
-	 * @covers ::decodeId
 	 */
 	public function testEncodeAndDecodeIds() {
 		// Set default
@@ -266,9 +259,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * Test that decode performs ID mapping
-	 *
-	 * @covers ::encodeId
-	 * @covers ::decodeId
 	 */
 	public function testDecodeIdMapping() {
 		$this->overrideConfigValue(
@@ -312,9 +302,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		);
 	}
 
-	/**
-	 * @covers ::getURL
-	 */
 	public function testGetURL() {
 		$utils = $this->getUtils();
 		$url = 'http://example.org/1';
@@ -326,9 +313,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $url, $storedUrl );
 	}
 
-	/**
-	 * @covers ::maybeCreateShortCode
-	 */
 	public function testTooLongURL() {
 		$url = 'http://example.org/1';
 		$this->overrideConfigValue( 'UrlShortenerUrlSizeLimit', 5 );
@@ -341,10 +325,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( 'error', $status->getErrors()[0]['type'] );
 	}
 
-	/**
-	 * @covers ::deleteURL
-	 * @covers ::isURLDeleted
-	 */
 	public function testDeleteURL() {
 		$utils = $this->getUtils();
 		$url = 'http://example.org/1';
@@ -357,9 +337,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->assertTrue( $utils->isURLDeleted( $id ) );
 	}
 
-	/**
-	 * @covers ::restoreURL
-	 */
 	public function testRestoreURL() {
 		$utils = $this->getUtils();
 		$url = 'http://example.org/1';
@@ -373,9 +350,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $url, $storedUrl );
 	}
 
-	/**
-	 * @covers ::maybeCreateShortCode
-	 */
 	public function testGetURLBlocked() {
 		$utils = $this->getUtils();
 		$url = 'http://example.org/75';
@@ -399,9 +373,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( 'error', $status->getErrors()[0]['type'] );
 	}
 
-	/**
-	 * @covers ::getAllowedDomainsRegex
-	 */
 	public function testGetAllowedDomainsRegex() {
 		$this->setContentLang( 'qqx' );
 		$this->overrideConfigValue( 'UrlShortenerAllowedDomains', $this->getDomains() );
@@ -417,25 +388,59 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $disallowedUrl );
 	}
 
-	/**
-	 * @covers ::getAllowedDomainsRegex
-	 */
-	public function testGetAllowedDomainsRegex2() {
+	public function testGetAllowedDomainsRegex_wgServer() {
 		$this->setContentLang( 'qqx' );
-		$this->overrideConfigValue( MainConfigNames::Server, 'http://example.org' );
+		$this->overrideConfigValues( [
+			'UrlShortenerAllowArbitraryPorts' => false,
+			MainConfigNames::Server => 'http://example.org',
+			MainConfigNames::CanonicalServer => 'http://example.org',
+		] );
 
 		$utils = $this->getUtils();
-		$allowedUrl = $utils->validateUrl( 'http://example.org/test' );
-		$disallowedUrl = $utils->validateUrl( 'https://en.wikipedia.org/wiki/A' );
 
-		$this->assertTrue( $allowedUrl );
+		$this->assertTrue( $utils->validateUrl( 'http://example.org/test' ) );
 		$this->assertSame( 'example\.org', $utils->getAllowedDomainsRegex() );
-		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $disallowedUrl );
+		$this->assertStringContainsString(
+			'urlshortener-error-disallowed-url',
+			$utils->validateUrl( 'https://en.wikipedia.org/wiki/A' )
+		);
+		$this->assertStringContainsString(
+			'urlshortener-error-badports',
+			$utils->validateUrl( 'http://localhost:4000/wiki/B' )
+		);
+		$this->assertStringContainsString(
+			'urlshortener-error-badports',
+			$utils->validateUrl( 'http://localhost:8080/wiki/C' )
+		);
+		$this->assertStringContainsString(
+			'urlshortener-error-badports',
+			$utils->validateUrl( 'https://en.wikipedia.org:8080/wiki/B' )
+		);
+	}
+
+	public function testGetAllowedDomainsRegex_wgServer_with_port() {
+		$this->setContentLang( 'qqx' );
+		$this->overrideConfigValues( [
+			'UrlShortenerAllowArbitraryPorts' => false,
+			MainConfigNames::Server => 'http://localhost:4000',
+			MainConfigNames::CanonicalServer => 'http://localhost:4000',
+		] );
+
+		$utils = $this->getUtils();
+
+		$this->assertTrue( $utils->validateUrl( 'http://localhost:4000/wiki/B' ) );
+		$this->assertStringContainsString(
+			'urlshortener-error-badports',
+			$utils->validateUrl( 'http://localhost:8080/wiki/C' )
+		);
+		$this->assertStringContainsString(
+			'urlshortener-error-badports',
+			$utils->validateUrl( 'https://en.wikipedia.org:8080/wiki/B' )
+		);
 	}
 
 	/**
 	 * @dataProvider provideShouldShortenUrl
-	 * @covers ::shouldShortenUrl
 	 * @param bool $qrCodeRequested Whether we're shortening within the context of creating QR codes.
 	 * @param int $limit If 'https://example.org' is longer than this, it should be shortened.
 	 * @param bool $expected
@@ -448,9 +453,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		);
 	}
 
-	/**
-	 * @return Generator
-	 */
 	public static function provideShouldShortenUrl(): Generator {
 		yield 'Short URL, not asking for QR code, should shorten' => [
 			false, 500, true,
@@ -468,7 +470,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @dataProvider provideGetQrCode
-	 * @covers ::getQrCode
 	 * @param int $limit If 'https://example.org' is longer than this, it should be shortened.
 	 * @param bool $useDataUri Whether 'qrCode' should be a data URI instead of XML.
 	 * @param array $expectedKeys Key names expected to be in the array of the returned StatusValue.
@@ -493,9 +494,6 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame( $expectedSha, sha1( $qrCode['qrcode'] ) );
 	}
 
-	/**
-	 * @return Generator
-	 */
 	public static function provideGetQrCode(): Generator {
 		yield 'Should not be shortened' => [
 			500, false, [ 'qrcode' ], 'a8b5e89de1245b9bf5d356ee91bf37aeec07cde3'
