@@ -70,6 +70,13 @@ $specialPageAliases['pl'] = [
 	'QrCode' => [ 'Kod_QR' ],
 ];
 
+/** Slovak (slovenčina) */
+$specialPageAliases['sk'] = [
+	'UrlShortener' => [ 'SkracovačURL' ],
+	'ManageShortUrls' => [ 'SprávaSkrátenýchURL' ],
+	'QrCode' => [ 'GenerátorQRKódov' ],
+];
+
 /** Serbian (Cyrillic script) (српски (ћирилица)) */
 $specialPageAliases['sr-ec'] = [
 	'UrlShortener' => [ 'Скраћивач_адреса', 'Скраћивач_URL_адреса' ],
