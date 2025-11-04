@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"IND-ANP"
+		]
+	},
+	"urlshortener-toolbox": "संक्षिप्त URL प्राप्त करौ",
+	"urlshortener-toolbox-qrcode": "QR कोड डाउनलोड करौ",
+	"urlshortener-qrcode-downloaded": "QR कोड SVG फ़ाइल केरौ रूप मँ डाउनलोड करलौ गेलै"
+}
