@@ -3,6 +3,7 @@
 		"authors": [
 			"BaRaN6161 TURK",
 			"Cobija",
+			"Eleman",
 			"Hedda",
 			"JackUKElliott",
 			"Joseph",
@@ -66,5 +67,5 @@
 	"log-action-filter-urlshortener": "Yönetim türü",
 	"log-action-filter-urlshortener-delete": "URL Silinmesi",
 	"log-action-filter-urlshortener-restore": "URL Geri Yükleme",
-	"urlshortener-qrcode-downloaded": "Karekod SVG biçiminde indirildi"
+	"urlshortener-qrcode-downloaded": "Karekod SVG dosyası olarak indirildi"
 }
