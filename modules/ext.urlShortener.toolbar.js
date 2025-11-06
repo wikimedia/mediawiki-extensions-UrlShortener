@@ -89,9 +89,16 @@
 
 	$qrCodeLink.on( 'click', ( e ) => {
 		e.preventDefault();
+
+		const updateLabel = ( msg ) => {
+			let $link = $qrCodeLink.find( '.toggle-list-item__label' );
+			$link = $link.length ? $link : $qrCodeLink;
+			$link.text( msg );
+		};
+
 		mw.loader.using( 'mediawiki.api' ).then( () => {
-			$qrCodeLink.find( '.toggle-list-item__label' )
-				.text( mw.msg( 'urlshortener-url-input-submitting' ) );
+			updateLabel( mw.msg( 'urlshortener-url-input-submitting' ) );
+
 			const api = new mw.Api();
 			api.post( {
 				action: 'shortenurl',
@@ -107,12 +114,11 @@
 				downloadLink.click();
 				document.body.removeChild( downloadLink );
 				// Restore original copy to link and notify user of the download.
-				$qrCodeLink.find( '.toggle-list-item__label' )
-					.text( mw.msg( 'urlshortener-toolbox-qrcode' ) );
+				updateLabel( mw.msg( 'urlshortener-toolbox-qrcode' ) );
 				mw.notify( mw.msg( 'urlshortener-qrcode-downloaded' ), { type: 'success' } );
 			}, () => {
-				$qrCodeLink.find( '.toggle-list-item__label' )
-					.text( mw.msg( 'urlshortener-failed-try-again' ) );
+				updateLabel( mw.msg( 'urlshortener-failed-try-again' ) );
+				$qrCodeLink.off( 'click' );
 			} );
 		} );
 
