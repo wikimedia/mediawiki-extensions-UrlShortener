@@ -3,7 +3,8 @@
 		"authors": [
 			"Anggoro",
 			"NoiX180",
-			"Sumbukompor"
+			"Sumbukompor",
+			"Bennylin"
 		]
 	},
 	"action-urlshortener-create-url": "gawé URL cekak",
@@ -57,5 +58,6 @@
 	"logeventslist-urlshortener-log": "Cathetan panataning URL cekak",
 	"log-action-filter-urlshortener": "Jinis tatanan",
 	"log-action-filter-urlshortener-delete": "Pambusakan URL",
-	"log-action-filter-urlshortener-restore": "Pamulihan URL"
+	"log-action-filter-urlshortener-restore": "Pamulihan URL",
+	"urlshortener-qrcode-downloaded": "Kodhe QR diundhuh minangka berkas SVG"
 }
