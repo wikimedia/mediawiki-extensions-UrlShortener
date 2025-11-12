@@ -8,7 +8,8 @@
 			"Joseph",
 			"MuratTheTurkish",
 			"Sayginer",
-			"ToprakM"
+			"ToprakM",
+			"Eleman"
 		]
 	},
 	"action-urlshortener-create-url": "kısa URL'leri oluştur",
@@ -66,5 +67,5 @@
 	"log-action-filter-urlshortener": "Yönetim türü",
 	"log-action-filter-urlshortener-delete": "URL Silinmesi",
 	"log-action-filter-urlshortener-restore": "URL Geri Yükleme",
-	"urlshortener-qrcode-downloaded": "Karekod SVG biçiminde indirildi"
+	"urlshortener-qrcode-downloaded": "Karekod SVG dosyası olarak indirildi"
 }
