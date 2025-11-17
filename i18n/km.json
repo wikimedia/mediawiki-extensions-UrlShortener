@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"គីមស៊្រុន"
+		]
+	},
+	"urlshortener-toolbox": "ចម្លង URL ខ្លី",
+	"urlshortener-toolbox-qrcode": "ទាញយកកូដ QR",
+	"urlshortener-qrcode-downloaded": "កូដ QR ត្រូវបានទាញយកជាឯកសារ SVG"
+}
