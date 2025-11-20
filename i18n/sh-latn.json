@@ -41,7 +41,7 @@
 	"urlshortener-ratelimit": "Pričekajte neko vrijeme prije skraćivanja URL-ova.",
 	"urlshortener-short-code-is-not-deleted": "Kratki kôd za URL nije izbrisan",
 	"urlshortener-short-code-not-found": "Kratki kôd za URL nije pronađen ili je izbrisan",
-	"urlshortener-shortened-url-alt": "Možete upotrijebiti i ovaj alternativni URL:",
+	"urlshortener-shortened-url-alt": "Možete koristiti i ovaj alternativni URL:",
 	"urlshortener-shortened-url-label": "Skraćeni URL",
 	"urlshortener-toolbox": "Skrati URL",
 	"urlshortener-toolbox-qrcode": "Preuzmi QR kod",
