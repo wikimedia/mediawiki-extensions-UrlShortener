@@ -12,7 +12,8 @@
 			"جودت",
 			"ديفيد",
 			"علاء",
-			"Gerges"
+			"Gerges",
+			"Mohammed Qays"
 		]
 	},
 	"action-urlshortener-create-url": "إنشاء مسارات مختصرة",
@@ -29,7 +30,7 @@
 	"urlshortener-approved-domains": "يمكن اختصار الروابط إلى النطاقات التالية {{PLURAL:$1| |||النطاقات}}: $2 .",
 	"urlshortener-blocked": "لا يمكن للمستخدمين الممنوعين إنشاء مسارات قصيرة.",
 	"urlshortener-copy-fail": "فشل نسخ المسار إلى الحافظة.",
-	"urlshortener-copy-success": "تم نسخ المسار إلى الحافظة.",
+	"urlshortener-copy-success": "نُسخ المسار إلى الحافظة.",
 	"urlshortener-deleted": "حُذِف هذا المسار القصير.",
 	"urlshortener-desc": "أداة تقصير مسار للمسارات العشوائية",
 	"urlshortener-disabled": "إحداث وصلات قصيرة جديدة معطل مؤقتا.",
