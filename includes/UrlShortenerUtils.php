@@ -580,13 +580,12 @@ class UrlShortenerUtils {
 	}
 
 	private function getQrCodeInternal( string $url ): ResultInterface {
-		return Builder::create()
-			->writer( new SvgWriter() )
-			->writerOptions( [] )
-			->data( $url )
-			->encoding( new Encoding( 'UTF-8' ) )
-			->size( 300 )
-			->margin( 10 )
-			->build();
+		return ( new Builder(
+			writer: new SvgWriter(),
+			data: $url,
+			encoding: new Encoding( 'UTF-8' ),
+			size: 300,
+			margin: 10,
+		) )->build();
 	}
 }
