@@ -1,6 +1,6 @@
 {
 	"require": {
-		"endroid/qr-code": "5.1.0"
+		"endroid/qr-code": "6.0.9"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "48.0.0",
