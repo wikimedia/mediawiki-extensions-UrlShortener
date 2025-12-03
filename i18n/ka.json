@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"David1010",
-			"Გიო ოქრო"
+			"Გიო ოქრო",
+			"Mehman97"
 		]
 	},
 	"action-urlshortener-create-url": "მოკლე URL-ების შექმნა",
@@ -14,6 +15,7 @@
 	"grant-shortenurls": "მოკლე URL-ების შექმნა",
 	"right-urlshortener-view-log": "მოკლე URL-ების მართვის ჟურნალის ნახვა",
 	"urlshortener": "URL-ების შემმოკლებელი",
+	"qrcode": "QR კოდის შექმნა",
 	"urlshortener-action-done": "URL-ები წაიშალა ან/და აღდგა",
 	"urlshortener-approved-domains": "შესაძლებელია შემდეგი {{PLURAL:$1|დომენის|დომენების}} ბმულების შემოკლება: $2.",
 	"urlshortener-blocked": "დაბლოკილ მომხმარებლებს არ შეუძლიათ მოკლე URL-ების შექმნა.",
