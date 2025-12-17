@@ -17,6 +17,8 @@ class SchemaHooks implements LoadExtensionSchemaUpdatesHook {
 	 * @param DatabaseUpdater $updater
 	 */
 	public function onLoadExtensionSchemaUpdates( $updater ) {
+		global $wgUrlShortenerLegacyTemplate;
+
 		$dir = dirname( __DIR__ );
 		$dbType = $updater->getDB()->getType();
 
@@ -31,5 +33,10 @@ class SchemaHooks implements LoadExtensionSchemaUpdatesHook {
 			'usc_deleted',
 			$dir . '/schemas/patch-usc_deleted.sql',
 			true ] );
+
+		if ( $wgUrlShortenerLegacyTemplate || defined( 'MW_PHPUNIT_TEST' ) || defined( 'MW_QUIBBLE_CI' ) ) {
+			// Local database (per-wiki)
+			$updater->addExtensionTable( 'shorturls', "$dir/schemas/$dbType/legacy.sql" );
+		}
 	}
 }

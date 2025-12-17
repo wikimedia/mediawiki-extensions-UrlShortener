@@ -266,6 +266,10 @@
 		"UrlShortenerQrCodeShortenLimit": {
 			"value": 200,
 			"description": "If a URL is greater than this length (in bytes), it is first shortened before generating a QR code."
+		},
+		"UrlShortenerLegacyTemplate": {
+			"value": false,
+			"description": "Enable routing of short URLs as previously defined via the legacy ShortUrl extension. Set this to your $wgShortUrlTemplate value, such as '/s/$1'. This registers a Special:ShortUrl page with a read-only resolver to a local 'shorturls' database table, and honors $wgShortUrlTemplate for backwards-compatibility with previously published URLs. Once enabled, the table schema will be owned and maintained by this extension going forward. This flag must be enabled at the same time as disabling the ShortUrl extension (i.e. remove its wfLoadExtension call from LocalSettings.php)."
 		}
 	},
 	"ConfigRegistry": {

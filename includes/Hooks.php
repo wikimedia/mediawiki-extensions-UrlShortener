@@ -16,6 +16,7 @@ use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Hook\WebRequestPathInfoRouterHook;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Request\PathRouter;
 use MediaWiki\Settings\SettingsBuilder;
 use MediaWiki\Skin\Hook\SidebarBeforeOutputHook;
@@ -34,6 +35,8 @@ class Hooks implements
 	private bool $enableSidebar;
 	/** @var string|false */
 	private $urlTemplate;
+	/** @var string|false */
+	private $legacyTemplate;
 
 	public function __construct(
 		ConfigFactory $configFactory,
@@ -43,6 +46,13 @@ class Hooks implements
 		$this->enableSidebar = $config->get( 'UrlShortenerEnableSidebar' ) &&
 			( !$config->get( 'UrlShortenerReadOnly' ) || $config->get( 'UrlShortenerEnableQrCode' ) );
 		$this->urlTemplate = $config->get( 'UrlShortenerTemplate' );
+
+		$this->legacyTemplate = $config->get( 'UrlShortenerLegacyTemplate' );
+
+		if ( $this->legacyTemplate && ExtensionRegistry::getInstance()->isLoaded( 'ShortUrl' ) ) {
+			wfLogWarning( 'Ignoring wgUrlShortenerLegacyTemplate because ShortUrl is still enabled.' );
+			$this->legacyTemplate = false;
+		}
 	}
 
 	/**
@@ -57,19 +67,31 @@ class Hooks implements
 				[ 'title' => SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getPrefixedText() ]
 			);
 		}
+
+		if ( $this->legacyTemplate ) {
+			// Hardcode title to avoid T78018. It doesn't matter because the redirect is immediate.
+			$router->add( $this->legacyTemplate, [ 'title' => 'Special:ShortUrl/$1' ] );
+		}
 	}
 
 	public static function onRegistration( array $extInfo, SettingsBuilder $settings ) {
+		global $wgSpecialPages;
+
 		$config = $settings->getConfig();
 		$idSet = $config->get( 'UrlShortenerIdSet' );
 		$idMapping = $config->get( 'UrlShortenerIdMapping' );
 		$altPrefix = $config->get( 'UrlShortenerAltPrefix' );
+		$legacyTemplate = $config->get( 'UrlShortenerLegacyTemplate' );
 
 		if ( str_contains( $idSet, $altPrefix ) ) {
 			throw new ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdSet' );
 		}
 		if ( isset( $idMapping[ $altPrefix ] ) ) {
 			throw new ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdMapping' );
+		}
+
+		if ( $legacyTemplate ) {
+			$wgSpecialPages['ShortUrl'] = SpecialLegacyShortUrl::class;
 		}
 	}
 
