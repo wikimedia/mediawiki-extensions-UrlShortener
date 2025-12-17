@@ -20,7 +20,6 @@ use MediaWiki\Deferred\CdnCacheUpdate;
 use MediaWiki\Deferred\DeferredUpdates;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Message\Message;
-use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Status\Status;
 use MediaWiki\User\User;
 use MediaWiki\Utils\UrlUtils;
@@ -400,7 +399,11 @@ class UrlShortenerUtils {
 
 		$template = $this->config->get( 'UrlShortenerTemplate' );
 		if ( !is_string( $template ) ) {
-			$urlTemplate = SpecialPage::getTitleFor( 'UrlRedirector', '$1' )->getFullUrl();
+			$articlePath = $this->config->get( MainConfigNames::ArticlePath );
+
+			// This is a cross-wiki action, so we don't want to localize the special page.
+			$localUrl = str_replace( '$1', 'Special:UrlRedirector/$1', $articlePath );
+			$urlTemplate = $server . $localUrl;
 		} else {
 			$urlTemplate = $server . $template;
 		}
