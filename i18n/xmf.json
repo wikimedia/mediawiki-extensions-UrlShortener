@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Narazeni"
+		]
+	},
+	"urlshortener-toolbox": "დაკუნტარებულ URL-შ მეღება",
+	"urlshortener-toolbox-qrcode": "QR-კოდიშ გჷმოხარგუა",
+	"urlshortener-qrcode-downloaded": "QR-კოდ გჷმოხარგილ რე SVG-ფაილიშ სახეთ"
+}
