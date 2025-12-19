@@ -447,36 +447,39 @@ class UrlShortenerUtils {
 		$urlParts = $this->urlUtils->parse( $url );
 		if ( $urlParts === null ) {
 			return wfMessage( 'urlshortener-error-malformed-url' );
-		} else {
-			$allowArbitraryPorts = $this->config
-				->get( 'UrlShortenerAllowArbitraryPorts' );
-			if ( isset( $urlParts['port'] ) && !$allowArbitraryPorts ) {
-				$wikiServerParts = $this->urlUtils->parse( $this->urlUtils->getCanonicalServer() );
-				if ( $urlParts['port'] === 80 || $urlParts['port'] === 443 ) {
-					unset( $urlParts['port'] );
-				} elseif ( !(
-					// Always allow shortening of $wgCanonicalServer,
-					// especially in local development where it tends to contain a port
-					isset( $wikiServerParts['port'] )
-						&& $urlParts['host'] === $wikiServerParts['host']
-						&& $urlParts['port'] === $wikiServerParts['port']
-				) ) {
-					return wfMessage( 'urlshortener-error-badports' );
-				}
-			}
+		}
 
-			if ( isset( $urlParts['user'] ) || isset( $urlParts['pass'] ) ) {
-				return wfMessage( 'urlshortener-error-nouserpass' );
-			}
-
-			$domain = $urlParts['host'];
-
-			if ( preg_match( '/' . $this->getAllowedDomainsRegex() . '/', $domain ) === 1 ) {
-				return true;
-			}
-
+		$domain = $urlParts['host'];
+		if ( preg_match( '/' . $this->getAllowedDomainsRegex() . '/', $domain ) !== 1 ) {
 			return wfMessage( 'urlshortener-error-disallowed-url' )->params( htmlentities( $domain ) );
 		}
+
+		$allowArbitraryPorts = $this->config->get( 'UrlShortenerAllowArbitraryPorts' );
+		$wikiServerParts = $this->urlUtils->parse( $this->urlUtils->getCanonicalServer() );
+		if (
+			isset( $urlParts['port'] ) &&
+			!$allowArbitraryPorts &&
+			!(
+				// Always allowed
+				$urlParts['port'] === 80 ||
+				$urlParts['port'] === 443 ||
+				// Always allow shortening of $wgCanonicalServer,
+				// especially in local development where it tends to contain a port
+				(
+					isset( $wikiServerParts['port'] ) &&
+					$urlParts['host'] === $wikiServerParts['host'] &&
+					$urlParts['port'] === $wikiServerParts['port']
+				)
+			)
+		) {
+			return wfMessage( 'urlshortener-error-badports' );
+		}
+
+		if ( isset( $urlParts['user'] ) || isset( $urlParts['pass'] ) ) {
+			return wfMessage( 'urlshortener-error-nouserpass' );
+		}
+
+		return true;
 	}
 
 	/**

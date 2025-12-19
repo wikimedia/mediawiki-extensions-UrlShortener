@@ -173,6 +173,14 @@
 		"localBasePath": "",
 		"remoteExtPath": "UrlShortener"
 	},
+	"QUnitTestModule": {
+		"localBasePath": "",
+		"remoteExtPath": "UrlShortener",
+		"scripts": "tests/qunit/special.test.js",
+		"dependencies": [
+			"ext.urlShortener.special"
+		]
+	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
 	],

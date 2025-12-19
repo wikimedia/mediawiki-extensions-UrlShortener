@@ -44,15 +44,21 @@ class UrlShortener {
 			this.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-malformed-url' ) ] );
 			return false;
 		}
-		if ( !url.host.match( this.regex ) ) {
+
+		if ( !url.hostname.match( this.regex ) ) {
 			const origin = mw.html.escape( url.origin );
 			this.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-disallowed-url', origin ) ] );
 			return false;
 		}
-		if ( url.port &&
+
+		if (
+			url.port &&
 			!this.allowArbitraryPorts &&
-			!( url.port === '80' || url.port === '443' ) &&
-			url.hostname !== mw.config.get( 'wgServerName' )
+			!(
+				url.port === '80' ||
+				url.port === '443' ||
+				url.hostname === mw.config.get( 'wgServerName' )
+			)
 		) {
 			this.fieldLayout.setErrors( [ mw.msg( 'urlshortener-error-badports' ) ] );
 			return false;
@@ -214,7 +220,11 @@ class UrlShortener {
 	}
 }
 
-$( () => {
-	const urlShortener = new UrlShortener();
-	urlShortener.init();
-} );
+if ( window.QUnit ) {
+	module.exports = { UrlShortener };
+} else {
+	$( () => {
+		const shortener = new UrlShortener();
+		shortener.init();
+	} );
+}

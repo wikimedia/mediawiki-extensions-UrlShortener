@@ -428,14 +428,28 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->overrideConfigValue( 'UrlShortenerAllowedDomains', $this->getDomains() );
 
 		$utils = $this->getUtils();
-		$allowedUrl = $utils->validateUrl( 'https://en.wikipedia.org/wiki/A' );
-		$disallowedUrl = $utils->validateUrl( 'http://example.org/75' );
 		$allowedDomainsRegex = $utils->getAllowedDomainsRegex();
 
-		$this->assertTrue( $allowedUrl );
 		$this->assertStringEndsWith( '$', $allowedDomainsRegex );
 		$this->assertStringContainsString( '(.*\.)?wikivoyage\.org', $allowedDomainsRegex );
-		$this->assertStringContainsString( 'urlshortener-error-disallowed-url', $disallowedUrl );
+
+		$this->assertTrue( $utils->validateUrl( 'http://en.wikipedia.org/wiki/A' ) );
+		$this->assertTrue( $utils->validateUrl( 'https://en.wikipedia.org/wiki/A' ) );
+		$this->assertTrue( $utils->validateUrl( 'http://en.wikipedia.org:80/wiki/A' ) );
+		$this->assertTrue( $utils->validateUrl( 'https://en.wikipedia.org:443/wiki/A' ) );
+
+		$this->assertStringContainsString(
+			'urlshortener-error-disallowed-url',
+			$utils->validateUrl( 'http://example.org/75' )
+		);
+		$this->assertStringContainsString(
+			'urlshortener-error-badports',
+			$utils->validateUrl( 'http://en.wikipedia.org:8080/wiki/A' )
+		);
+		$this->assertStringContainsString(
+			'urlshortener-error-badports',
+			$utils->validateUrl( 'https://en.wikipedia.org:4000/wiki/A' )
+		);
 	}
 
 	public function testGetAllowedDomainsRegex_wgServer() {
@@ -455,16 +469,31 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 			$utils->validateUrl( 'https://en.wikipedia.org/wiki/A' )
 		);
 		$this->assertStringContainsString(
-			'urlshortener-error-badports',
+			'urlshortener-error-disallowed-url',
 			$utils->validateUrl( 'http://localhost:4000/wiki/B' )
 		);
 		$this->assertStringContainsString(
-			'urlshortener-error-badports',
+			'urlshortener-error-disallowed-url',
 			$utils->validateUrl( 'http://localhost:8080/wiki/C' )
 		);
 		$this->assertStringContainsString(
-			'urlshortener-error-badports',
+			'urlshortener-error-disallowed-url',
 			$utils->validateUrl( 'https://en.wikipedia.org:8080/wiki/B' )
+		);
+		$this->assertStringContainsString(
+			'urlshortener-error-badports',
+			$utils->validateUrl( 'http://example.org:8080/wiki/A' ),
+			'allowed domain with disallowed port'
+		);
+		// FIXME: Default lacks start/end match
+		$this->assertTrue(
+			$utils->validateUrl( 'http://example.org.imposter.invalid/wiki/A' )
+		);
+		$this->assertTrue(
+			$utils->validateUrl( 'http://imposter-example.org/wiki/A' )
+		);
+		$this->assertTrue(
+			$utils->validateUrl( 'http://admin.example.org/wiki/A' )
 		);
 	}
 
@@ -479,12 +508,17 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$utils = $this->getUtils();
 
 		$this->assertTrue( $utils->validateUrl( 'http://localhost:4000/wiki/B' ) );
-		$this->assertStringContainsString(
-			'urlshortener-error-badports',
-			$utils->validateUrl( 'http://localhost:8080/wiki/C' )
+		$this->assertTrue(
+			$utils->validateUrl( 'http://localhost/wiki/B' ),
+			'allowed domain without expected port'
 		);
 		$this->assertStringContainsString(
 			'urlshortener-error-badports',
+			$utils->validateUrl( 'http://localhost:8080/wiki/C' ),
+			'allowed domain with disallowed port'
+		);
+		$this->assertStringContainsString(
+			'urlshortener-error-disallowed-url',
 			$utils->validateUrl( 'https://en.wikipedia.org:8080/wiki/B' )
 		);
 	}
