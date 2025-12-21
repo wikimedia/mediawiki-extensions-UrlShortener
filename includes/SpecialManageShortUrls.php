@@ -13,6 +13,7 @@ namespace MediaWiki\Extension\UrlShortener;
 
 use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\SpecialPage\FormSpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\User;
 
 class SpecialManageShortUrls extends FormSpecialPage {
@@ -126,7 +127,7 @@ class SpecialManageShortUrls extends FormSpecialPage {
 			$logEntry = new ManualLogEntry( 'urlshortener', $subtype );
 			$logEntry->setPerformer( $this->getUser() );
 			// Set some dummy title. It is required to be set, otherwise we're not using it.
-			$logEntry->setTarget( $this->getTitleFor( 'UrlShortener' ) );
+			$logEntry->setTarget( SpecialPage::getTitleFor( 'UrlShortener' ) );
 			$logEntry->setComment( $reason );
 			$logEntry->setParameters(
 				[ '4::realtarget' => $target ]
