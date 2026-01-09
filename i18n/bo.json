@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Pecha-Tsewang",
 			"Tenzin Thoesam"
 		]
 	},
-	"urlshortener-toolbox": "དྲ་ལམ་སྦྲེལ་མཐུད་ཐུང་དུ་གཏོང་།"
+	"urlshortener-toolbox": "དྲ་ལམ་སྦྲེལ་མཐུད་ཐུང་དུ་གཏོང་།",
+	"urlshortener-toolbox-qrcode": "QR བརྡ་རྟགས་ཕབ་ལེན་བྱོས།"
 }
