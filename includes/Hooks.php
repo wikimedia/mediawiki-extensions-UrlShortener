@@ -122,14 +122,29 @@ class Hooks implements
 	}
 
 	/**
-	 * Display the "Download QR code" link in the Minerva overflow menu.
+	 * Display the "Get shortened URL" and "Download QR code" links in the Minerva overflow menu.
 	 *
 	 * @param SkinTemplate $sktemplate
 	 * @param array &$links
 	 */
 	public function onSkinTemplateNavigation__Universal( $sktemplate, &$links ): void {
-		if ( $this->enableQrCode && $this->mobileContext && $this->mobileContext->shouldDisplayMobileView() ) {
-			$fullURL = self::getFullUrl( $sktemplate );
+		if ( $this->readOnly || $this->mobileContext === null || !$this->mobileContext->shouldDisplayMobileView() ) {
+			return;
+		}
+
+		$fullURL = self::getFullUrl( $sktemplate );
+
+		if ( $this->enableSidebar && !$sktemplate->getTitle()->isSpecial( 'UrlShortener' ) ) {
+			// Add "Get shortened URL" link
+			$links['actions']['urlshortener'] = [
+				'icon' => 'link',
+				'href' => SpecialPage::getTitleFor( 'UrlShortener' )->getLocalURL( [ 'url' => $fullURL ] ),
+				'text' => $sktemplate->msg( 'urlshortener-toolbox' )->plain(),
+			];
+		}
+
+		if ( $this->enableQrCode ) {
+			// Add "Download QR code" link
 			$links['actions']['qrcode'] = [
 				'icon' => 'qrCode',
 				'href' => SpecialPage::getTitleFor( 'QrCode' )->getLocalURL( [ 'url' => $fullURL ] ),

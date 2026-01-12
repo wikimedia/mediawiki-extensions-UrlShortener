@@ -2,7 +2,7 @@
 	let widgetPromise;
 
 	// eslint-disable-next-line no-jquery/no-global-selector
-	const $shortenUrlLink = $( '#t-urlshortener a' );
+	const $shortenUrlLink = $( '#t-urlshortener a, .menu__item--page-actions-overflow-urlshortener' );
 	// eslint-disable-next-line no-jquery/no-global-selector
 	const $qrCodeLink = $( '#t-urlshortener-qrcode a, .menu__item--page-actions-overflow-qrcode' );
 
