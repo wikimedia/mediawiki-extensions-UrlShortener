@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Earldridge Jazzed Pineda",
 			"Elefentiste"
 		]
 	},
+	"urlshortener-toolbox": "Oteni adirije ueb cortida",
 	"urlshortener-toolbox-qrcode": "Descarga codigo QR",
 	"urlshortener-qrcode-downloaded": "Cogido QR descargada como fix SVG"
 }

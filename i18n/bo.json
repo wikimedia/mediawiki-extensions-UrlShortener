@@ -6,5 +6,6 @@
 		]
 	},
 	"urlshortener-toolbox": "དྲ་ལམ་སྦྲེལ་མཐུད་ཐུང་དུ་གཏོང་།",
-	"urlshortener-toolbox-qrcode": "QR བརྡ་རྟགས་ཕབ་ལེན་བྱོས།"
+	"urlshortener-toolbox-qrcode": "QR བརྡ་རྟགས་ཕབ་ལེན་བྱོས།",
+	"urlshortener-qrcode-downloaded": "QR བརྡ་རྟགས་འདི་ SVG ཡིག་ཆའི་ཚུལ་དུ་ཕབ་ལེན་བྱས།"
 }
