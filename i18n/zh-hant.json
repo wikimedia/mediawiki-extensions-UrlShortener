@@ -7,7 +7,8 @@
 			"Liuxinyu970226",
 			"Winston Sung",
 			"Xiplus",
-			"捍粵者"
+			"捍粵者",
+			"Peterxy12"
 		]
 	},
 	"action-urlshortener-create-url": "建立短網址",
@@ -51,7 +52,7 @@
 	"urlshortener-short-code-not-found": "網址短代碼查無結果或已被刪除",
 	"urlshortener-shortened-url-alt": "您也可以使用此備用網址：",
 	"urlshortener-shortened-url-label": "已縮短的網址",
-	"urlshortener-toolbox": "取得短網址",
+	"urlshortener-toolbox": "取得短連結",
 	"urlshortener-toolbox-qrcode": "下載QR碼",
 	"urlshortener-url-input-label": "網址",
 	"urlshortener-url-input-submit": "縮短",
