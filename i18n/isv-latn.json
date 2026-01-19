@@ -21,7 +21,7 @@
 	"urlshortener-copy-success": "URL-adres kopirovany v bufer obměna.",
 	"urlshortener-deleted": "Tutoj kratky URL-adres byl odstranjeny.",
 	"urlshortener-desc": "Skračač za proizvoljne URL-adresy",
-	"urlshortener-disabled": "Tvorjenje novy kratkyh URL-adresov jest vrěmenno unemožnjeno.",
+	"urlshortener-disabled": "Tvorjenje novy kratkyh URL-adresov jest začasno unemožnjeno.",
 	"urlshortener-qrcode-disabled": "Tvorjenje QR-kodov jest unemožnjeno.",
 	"urlshortener-enter-short-code-delete": "Kratky kod URL-adresa za odstranjenje",
 	"urlshortener-enter-short-code-restore": "Kratky kod URL-adresa za odnovjenje",
