@@ -6,7 +6,8 @@
 			"Sabelöga",
 			"Skalman",
 			"WikiPhoenix",
-			"Wikimon"
+			"Wikimon",
+			"Stefan2255"
 		]
 	},
 	"action-urlshortener-create-url": "skapa korta url:er",
@@ -27,6 +28,7 @@
 	"urlshortener-deleted": "Denna korta url har raderats.",
 	"urlshortener-desc": "URL-förkortare för arbiträra URL:er",
 	"urlshortener-disabled": "Skapande av korta url:er har temporärt inaktiverats.",
+	"urlshortener-qrcode-disabled": "Skapandet av QR-koder är inaktiverat.",
 	"urlshortener-enter-short-code-delete": "Kort kod att radera",
 	"urlshortener-enter-short-code-restore": "Kort kod att återställa",
 	"urlshortener-error-badports": "Url:er som innehåller portar får inte förkortas",
