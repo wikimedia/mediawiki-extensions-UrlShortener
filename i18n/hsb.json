@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"J budissin"
+			"J budissin",
+			"Michawiki"
 		]
 	},
 	"urlshortener-toolbox": "Skrótšenu URL wotwołać",
-	"urlshortener-toolbox-qrcode": "QR-code sćahnyć"
+	"urlshortener-toolbox-qrcode": "QR-code sćahnyć",
+	"urlshortener-qrcode-downloaded": "QR-kod jako SVG-dataja sćehnjeny"
 }
