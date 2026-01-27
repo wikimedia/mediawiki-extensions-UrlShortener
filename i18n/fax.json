@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Caro de Segeda"
+		]
+	},
+	"urlshortener-toolbox": "Obtél URL acortau",
+	"urlshortener-toolbox-qrcode": "Descargal códigu QR",
+	"urlshortener-qrcode-downloaded": "Códigu QR descargau comu archivu SVG"
+}
