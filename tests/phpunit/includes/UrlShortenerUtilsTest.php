@@ -305,6 +305,15 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		);
 	}
 
+	public function testDecodeIdError() {
+		$utils = $this->getUtils();
+		$decoded = $utils->decodeId( '' );
+		$this->assertNull( $decoded, 'Empty input is ignored' );
+
+		$decoded = $utils->decodeId( 'ThisIsAVeryLongExampleInputThatIsJustAttemptingAnOverflow' );
+		$this->assertNull( $decoded, 'Excessive input is ignored' );
+	}
+
 	public function testGetURL() {
 		$utils = $this->getUtils();
 		$url = 'http://example.org/1';
