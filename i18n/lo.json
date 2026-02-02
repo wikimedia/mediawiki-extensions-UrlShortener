@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lookruk"
+		]
+	},
+	"urlshortener-toolbox": "ຮັບ URL ທີ່ຫຍໍ້ລົງ",
+	"urlshortener-toolbox-qrcode": "ດາວໂຫລດລະຫັດ QR",
+	"urlshortener-qrcode-downloaded": "ດາວໂຫຼດລະຫັດ QR ເປັນໄຟລ໌ SVG"
+}
