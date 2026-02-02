@@ -255,6 +255,9 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 			$decoded = $utils->decodeId( $encoded );
 			$this->assertEquals( $int, $decoded );
 		}
+
+		$this->assertNull( $utils->decodeId( '123456789012345678901' ) );
+		$this->assertNull( $utils->decodeId( 'environment' ) );
 	}
 
 	/**

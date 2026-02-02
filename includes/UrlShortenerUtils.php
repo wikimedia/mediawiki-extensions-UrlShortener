@@ -503,7 +503,8 @@ class UrlShortenerUtils {
 	 * @return int|null
 	 */
 	public function decodeId( string $s ): ?int {
-		if ( $s === '' ) {
+		// Very basic overflow protection against non-sensical input
+		if ( $s === '' || strlen( $s ) > 20 ) {
 			return null;
 		}
 
@@ -529,7 +530,8 @@ class UrlShortenerUtils {
 		$x = 0;
 		for ( $i = 0, $len = strlen( $s ); $i < $len; $i++ ) {
 			$x *= $n;
-			if ( !isset( self::$decodeMap[$s[$i]] ) ) {
+			// Overflow protection when the calculation exceeded PHP's int range
+			if ( !isset( self::$decodeMap[$s[$i]] ) || !is_int( $x ) ) {
 				return null;
 			}
 			$val = self::$decodeMap[$s[$i]];
