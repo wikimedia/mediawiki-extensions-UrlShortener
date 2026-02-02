@@ -4,11 +4,12 @@ use MediaWiki\Tests\Maintenance\MaintenanceBaseTestCase;
 use MediaWiki\User\User;
 
 /**
- * @covers DumpURLs
+ * @covers \DumpURLs
  * @group Database
  */
 class DumpURLsTest extends MaintenanceBaseTestCase {
 
+	/** @inheritDoc */
 	protected function getMaintenanceClass() {
 		return DumpURLs::class;
 	}

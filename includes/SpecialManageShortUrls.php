@@ -143,8 +143,6 @@ class SpecialManageShortUrls extends FormSpecialPage {
 
 	/**
 	 * Require users to be logged in and have the rights
-	 *
-	 * @param User $user
 	 */
 	protected function checkExecutePermissions( User $user ) {
 		parent::checkExecutePermissions( $user );

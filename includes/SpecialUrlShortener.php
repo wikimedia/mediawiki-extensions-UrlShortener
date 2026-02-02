@@ -31,17 +31,11 @@ class SpecialUrlShortener extends FormSpecialPage {
 	protected ?FieldLayout $resultField = null;
 	protected ?Status $resultStatus = null;
 
-	/**
-	 * @param UrlShortenerUtils $utils
-	 * @param UrlUtils $urlUtils
-	 * @param string $name
-	 * @param string $restriction
-	 */
 	public function __construct(
 		private readonly UrlShortenerUtils $utils,
 		private readonly UrlUtils $urlUtils,
-		$name = 'UrlShortener',
-		$restriction = 'urlshortener-create-url'
+		string $name = 'UrlShortener',
+		string $restriction = 'urlshortener-create-url'
 	) {
 		$this->shortenLimit = $this->getConfig()->get( 'UrlShortenerQrCodeShortenLimit' );
 		$this->enabled = !$this->getConfig()->get( 'UrlShortenerReadOnly' ) ||
@@ -91,9 +85,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 		return 'ooui';
 	}
 
-	/**
-	 * @return Message
-	 */
 	protected function getApprovedDomainsMessage(): Message {
 		$urlShortenerApprovedDomains = $this->getConfig()->get( 'UrlShortenerApprovedDomains' );
 		if ( $urlShortenerApprovedDomains ) {
@@ -106,15 +97,12 @@ class SpecialUrlShortener extends FormSpecialPage {
 		$lang = $this->getLanguage();
 		return $this->msg( 'urlshortener-approved-domains' )
 			->numParams( count( $domains ) )
-			->params( $lang->listToText( array_map( static function ( $i ) {
-				return "<code>$i</code>";
-			}, $domains ) ) );
+			->params( $lang->listToText( array_map(
+				static fn ( $domain ) => "<code>$domain</code>",
+				$domains
+			) ) );
 	}
 
-	/**
-	 * @param HTMLForm $form
-	 * @param string $module
-	 */
 	protected function alterForm( HTMLForm $form, string $module = 'ext.urlShortener.special' ) {
 		$form
 			->setPreHtml( Html::openElement( 'div', [ 'class' => 'ext-urlshortener-container' ] ) )
@@ -165,7 +153,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 	protected function getFormFields() {
 		return [
 			'url' => [
-				'validation-callback' => [ $this, 'validateURL' ],
+				'validation-callback' => $this->validateURL( ... ),
 				'required' => true,
 				'type' => 'textwithbutton',
 				'inputtype' => 'url',
@@ -229,8 +217,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 
 	/**
 	 * Create the QR Code HTML based on the current result.
-	 *
-	 * @return string
 	 */
 	private function getQrCodeHtml(): string {
 		$qrCodeUri = $this->resultStatus->getValue()['qrcode'];
@@ -247,10 +233,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 		);
 	}
 
-	/**
-	 * @param string $qrCodeUri
-	 * @return string
-	 */
 	private function getDownloadButton( string $qrCodeUri ): string {
 		// OOUI button
 		$buttonElement = new \OOUI\Tag( 'a' );
@@ -268,9 +250,6 @@ class SpecialUrlShortener extends FormSpecialPage {
 		return str_replace( './data:image/', 'data:image/', $downloadButtonHtml );
 	}
 
-	/**
-	 * @param array $result
-	 */
 	protected function setShortenedUrlResultField( array $result ): void {
 		if ( !isset( $result['url'] ) ) {
 			return;

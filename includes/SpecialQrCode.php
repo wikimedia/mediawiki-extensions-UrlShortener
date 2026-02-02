@@ -37,11 +37,7 @@ class SpecialQrCode extends SpecialUrlShortener {
 		$this->getOutput()->redirect( $target );
 	}
 
-	/**
-	 * Don't list this page if in read only mode or QR Codes are not enabled.
-	 *
-	 * @return bool
-	 */
+	/** @inheritDoc */
 	public function isListed() {
 		return false;
 	}

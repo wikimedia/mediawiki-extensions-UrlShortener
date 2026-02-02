@@ -95,10 +95,6 @@ class ApiShortenUrl extends ApiBase {
 
 	/**
 	 * Record simple usage metrics
-	 *
-	 * @param bool $urlShortened
-	 * @param bool $qrCode
-	 * @return void
 	 */
 	private function recordInStats( bool $urlShortened, bool $qrCode ): void {
 		if ( $qrCode && $urlShortened ) {

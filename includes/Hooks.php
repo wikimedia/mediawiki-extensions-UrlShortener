@@ -65,7 +65,7 @@ class Hooks implements
 		$idMapping = $config->get( 'UrlShortenerIdMapping' );
 		$altPrefix = $config->get( 'UrlShortenerAltPrefix' );
 
-		if ( strpos( $idSet, $altPrefix ) !== false ) {
+		if ( str_contains( $idSet, $altPrefix ) ) {
 			throw new ConfigException( 'UrlShortenerAltPrefix cannot be contained in UrlShortenerIdSet' );
 		}
 		if ( isset( $idMapping[ $altPrefix ] ) ) {
@@ -133,16 +133,10 @@ class Hooks implements
 		}
 	}
 
-	/**
-	 * @param Skin $skin
-	 * @return string
-	 */
 	private static function getFullUrl( Skin $skin ): string {
 		$query = $skin->getRequest()->getQueryValues();
-		if ( isset( $query['title'] ) ) {
-			// We already know the title
-			unset( $query['title'] );
-		}
+		// We already know the title
+		unset( $query['title'] );
 
 		return $skin->getTitle()->getFullURL( $query, false, PROTO_CANONICAL );
 	}

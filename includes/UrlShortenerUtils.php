@@ -16,6 +16,7 @@ use Endroid\QrCode\Encoding\Encoding;
 use Endroid\QrCode\Writer\Result\ResultInterface;
 use Endroid\QrCode\Writer\SvgWriter;
 use MediaWiki\Config\Config;
+use MediaWiki\Config\ConfigException;
 use MediaWiki\Deferred\CdnCacheUpdate;
 use MediaWiki\Deferred\DeferredUpdates;
 use MediaWiki\MainConfigNames;
@@ -49,8 +50,8 @@ class UrlShortenerUtils {
 	 */
 	public const CACHE_TTL_INVALID = 900;
 
-	/** @var int[] */
-	public static $decodeMap;
+	/** @var array<string,int>|null */
+	public static ?array $decodeMap = null;
 
 	/**
 	 * Gets the short code for the given URL, creating if it doesn't
@@ -156,10 +157,8 @@ class UrlShortenerUtils {
 		// If the wiki is using an article path (e.g. /wiki/$1) try
 		// and convert plain index.php?title=$1 URLs to the canonical form
 		$parsed = $this->urlUtils->parse( $url );
-		if ( !isset( $parsed['path'] ) ) {
-			// T220718: Ensure each URL has a / after the domain name
-			$parsed['path'] = '/';
-		}
+		// T220718: Ensure each URL has a / after the domain name
+		$parsed['path'] ??= '/';
 		$articlePath = $this->config->get( MainConfigNames::ArticlePath );
 		if ( $articlePath !== false && isset( $parsed['query'] ) ) {
 			$query = wfCgiToArray( $parsed['query'] );
@@ -219,9 +218,6 @@ class UrlShortenerUtils {
 
 	/**
 	 * Whether a URL is deleted or not
-	 *
-	 * @param string $shortCode
-	 * @return bool
 	 */
 	public function isURLDeleted( string $shortCode ): bool {
 		$id = $this->decodeId( $shortCode );
@@ -319,37 +315,33 @@ class UrlShortenerUtils {
 	 * @return string[]
 	 */
 	public function getShortcodeVariants( string $shortcode ): array {
+		/** @var array<string|int,string> $idMapping */
 		$idMapping = $this->config->get( 'UrlShortenerIdMapping' );
 
 		// Reverse the character alias mapping
 		$targetToVariants = [];
 		foreach ( $idMapping as $variant => $target ) {
-			$targetToVariants[ $target ] ??= [];
 			$targetToVariants[ $target ][] = (string)$variant;
 		}
 
 		// Build a set for each character of possible variants
 		$sets = [];
-		$chars = str_split( $shortcode );
-		foreach ( $chars as $char ) {
-			$set = $targetToVariants[ $char ] ?? [];
-			$set[] = $char;
-			$sets[] = $set;
+		foreach ( str_split( $shortcode ) as $char ) {
+			$sets[] = [
+				...$targetToVariants[$char] ?? [],
+				$char
+			];
 		}
 
 		// Cartesian product to get all combinations
 		$productSet = $this->cartesianProduct( $sets );
 
 		// Flatten to strings
-		return array_map( static function ( $set ) {
-			return implode( '', $set );
-		}, $productSet );
+		return array_map( static fn ( array $set ) => implode( '', $set ), $productSet );
 	}
 
 	/**
 	 * If configured, purge CDN for the given ID
-	 *
-	 * @param int $id
 	 */
 	public function purgeCdnId( int $id ): void {
 		if ( $this->config->get( MainConfigNames::UseCdn ) ) {
@@ -365,8 +357,6 @@ class UrlShortenerUtils {
 
 	/**
 	 * If configured, purge CDN for the given shortcode
-	 *
-	 * @param string $shortcode
 	 */
 	private function purgeCdn( string $shortcode ): void {
 		if ( $this->config->get( MainConfigNames::UseCdn ) ) {
@@ -427,12 +417,7 @@ class UrlShortenerUtils {
 			return preg_quote( $serverParts['host'], '/' );
 		}
 		// Collapse the allowed domains into a single string, so we have to run regex check only once
-		return implode( '|', array_map(
-			static function ( $item ) {
-				return '^' . $item . '$';
-			},
-			$allowedDomains
-		) );
+		return '^(?:' . implode( '|', $allowedDomains ) . ')$';
 	}
 
 	/**
@@ -504,9 +489,6 @@ class UrlShortenerUtils {
 
 	/**
 	 * Decode a compact string to produce an integer, or null if the input is invalid.
-	 *
-	 * @param string $s
-	 * @return int|null
 	 */
 	public function decodeId( string $s ): ?int {
 		// Very basic overflow protection against non-sensical input
@@ -524,12 +506,15 @@ class UrlShortenerUtils {
 		$idSet = $this->config->get( 'UrlShortenerIdSet' );
 		$n = strlen( $idSet );
 		if ( self::$decodeMap === null ) {
-			self::$decodeMap = [];
-			for ( $i = 0; $i < $n; $i++ ) {
-				self::$decodeMap[$idSet[$i]] = $i;
-			}
-			foreach ( $this->config->get( 'UrlShortenerIdMapping' ) as $k => $v ) {
-				self::$decodeMap[$k] = self::$decodeMap[$v];
+			self::$decodeMap = array_flip( str_split( $idSet ) );
+			/** @var array<string|int,string> $idMapping */
+			$idMapping = $this->config->get( 'UrlShortenerIdMapping' );
+			foreach ( $idMapping as $variant => $target ) {
+				if ( isset( self::$decodeMap[$variant] ) || !isset( self::$decodeMap[$target] ) ) {
+					throw new ConfigException( 'Invalid wgUrlShortenerIdMapping' );
+				}
+				// @phan-suppress-next-line PhanTypeArraySuspiciousNullable
+				self::$decodeMap[$variant] = self::$decodeMap[$target];
 			}
 		}
 
@@ -540,6 +525,7 @@ class UrlShortenerUtils {
 			if ( !isset( self::$decodeMap[$s[$i]] ) || !is_int( $x ) ) {
 				return null;
 			}
+			// @phan-suppress-next-line PhanTypeArraySuspiciousNullable
 			$val = self::$decodeMap[$s[$i]];
 			$x += $alt ?
 				$n - 1 - $val :

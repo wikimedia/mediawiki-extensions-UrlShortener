@@ -5,7 +5,7 @@ use MediaWiki\Tests\Api\ApiTestCase;
 /**
  * @group API
  * @group Database
- * @covers MediaWiki\Extension\UrlShortener\ApiShortenUrl
+ * @covers \MediaWiki\Extension\UrlShortener\ApiShortenUrl
  */
 class ApiShortenUrlTest extends ApiTestCase {
 
