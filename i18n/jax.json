@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pitchrigi"
+		]
+	},
+	"urlshortener-toolbox": "Tengok URL yang dipendeki",
+	"urlshortener-toolbox-qrcode": "Ambik kode QR",
+	"urlshortener-qrcode-downloaded": "Kode QR lah diambik jadi berkas SVG"
+}

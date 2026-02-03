@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Кумнац"
+		]
+	},
+	"urlshortener-toolbox": "Гиччи URLны алмакъ",
+	"urlshortener-toolbox-qrcode": "Эндирмек QR-кодну",
+	"urlshortener-qrcode-downloaded": "QR-код къошулгъан SVG-файл кюйде."
+}
