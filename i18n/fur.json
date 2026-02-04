@@ -4,5 +4,7 @@
 			"Klenje"
 		]
 	},
-	"urlshortener-toolbox": "Recupere URL scurtade"
+	"urlshortener-toolbox": "Recupere URL scurtade",
+	"urlshortener-toolbox-qrcode": "Discjame il codiç QR",
+	"urlshortener-qrcode-downloaded": "Codiç QR discjamât come file SVG"
 }
