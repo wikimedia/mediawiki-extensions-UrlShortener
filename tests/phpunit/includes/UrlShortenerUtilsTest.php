@@ -325,7 +325,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $url, $storedUrl );
 	}
 
-	public function testCrossWikiShortUrl() {
+	public function testCrossWikiShortUrlDefault() {
 		$utils = $this->getUtils();
 		$this->overrideConfigValues( [
 			MainConfigNames::Server => 'http://foo.example.org',
@@ -342,6 +342,25 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$shortUrl = $utils->makeUrl( $id );
 
 		$this->assertSame( 'http://central.example.org/wiki/Special:UrlRedirector/' . $id, $shortUrl );
+	}
+
+	public function testCrossWikiShortUrlWithUrlTemplate() {
+		$utils = $this->getUtils();
+		$this->overrideConfigValues( [
+			MainConfigNames::Server => 'http://foo.example.org',
+			MainConfigNames::ArticlePath => '/wiki/$1',
+			'UrlShortenerTemplate' => '/r/$1',
+			'UrlShortenerServer' => 'http://central.example.org',
+		] );
+
+		$urlToShorten = 'http://test.example.org/wiki/Unshortened_Url';
+		$status = $utils->maybeCreateShortCode( $urlToShorten, new User );
+		$this->assertTrue( $status->isGood() );
+
+		$id = $status->getValue()['url'];
+		$shortUrl = $utils->makeUrl( $id );
+
+		$this->assertSame( 'http://central.example.org/r/' . $id, $shortUrl );
 	}
 
 	public function testTooLongURL() {
