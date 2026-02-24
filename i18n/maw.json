@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Christian Yakubu"
+			"Christian Yakubu",
+			"Yambutigra"
 		]
 	},
-	"urlshortener-toolbox": "Boam URL maa"
+	"urlshortener-toolbox": "Boam URL maa",
+	"urlshortener-toolbox-qrcode": "Yis QR lamba ŋɔ",
+	"urlshortener-qrcode-downloaded": "Yis QR lamba ŋɔ ka di nyɛ SVG gbaŋ"
 }
