@@ -4,6 +4,11 @@
 			"Merrahtar"
 		]
 	},
+	"action-urlshortener-create-url": "оанҍхэсь URL-а̄дрезэтҍ лыһкэ",
+	"right-urlshortener-create-url": "Лыһкэ оанҍхэсь URL-а̄дрезэтҍ",
+	"urlshortener-failed-try-again": "Эйй выййтма. О̄дтсэ кӣһчлэ?",
+	"urlshortener-shortened-url-alt": "То̄нн ныдтҍшэ вуаяк альтэрнативнэ URL-а̄дрез оаннӭ:",
+	"urlshortener-shortened-url-label": "Оанҍха URL-а̄дресс",
 	"urlshortener-toolbox": "Ва̄лльтэ оанҍхэсь URL-а̄дрез",
 	"urlshortener-toolbox-qrcode": "QR-ко̄д лоа̄дтэ",
 	"urlshortener-url-input-submitting": "Оаннънан...",
