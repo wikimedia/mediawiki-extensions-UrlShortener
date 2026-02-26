@@ -32,7 +32,6 @@ class Hooks implements
 	SkinTemplateNavigation__UniversalHook
 {
 	private bool $enableSidebar;
-	private bool $enableQrCode;
 	private bool $readOnly;
 	/** @var string|false */
 	private $urlTemplate;
@@ -43,7 +42,6 @@ class Hooks implements
 	) {
 		$config = $configFactory->makeConfig( 'urlshortener' );
 		$this->enableSidebar = $config->get( 'UrlShortenerEnableSidebar' );
-		$this->enableQrCode = $config->get( 'UrlShortenerEnableQrCode' );
 		$this->readOnly = $config->get( 'UrlShortenerReadOnly' );
 		$this->urlTemplate = $config->get( 'UrlShortenerTemplate' );
 	}
@@ -97,7 +95,7 @@ class Hooks implements
 	 * @param array &$sidebar
 	 */
 	public function onSidebarBeforeOutput( $skin, &$sidebar ): void {
-		if ( $this->readOnly || ( !$this->enableSidebar && !$this->enableQrCode ) ) {
+		if ( $this->readOnly || !$this->enableSidebar ) {
 			return;
 		}
 
@@ -110,19 +108,10 @@ class Hooks implements
 				'text' => $skin->msg( 'urlshortener-toolbox' )->text(),
 			];
 		}
-
-		if ( $this->enableQrCode ) {
-			// Append link to download QR code
-			$sidebar['TOOLBOX']['urlshortener-qrcode'] = [
-				'id' => 't-urlshortener-qrcode',
-				'href' => SpecialPage::getTitleFor( 'QrCode' )->getLocalURL( [ 'url' => $fullURL ] ),
-				'text' => $skin->msg( 'urlshortener-toolbox-qrcode' )->text(),
-			];
-		}
 	}
 
 	/**
-	 * Display the "Get shortened URL" and "Download QR code" links in the Minerva overflow menu.
+	 * Display the "Get shortened URL" link in the Minerva overflow menu.
 	 *
 	 * @param SkinTemplate $sktemplate
 	 * @param array &$links
@@ -137,18 +126,10 @@ class Hooks implements
 		if ( $this->enableSidebar && !$sktemplate->getTitle()->isSpecial( 'UrlShortener' ) ) {
 			// Add "Get shortened URL" link
 			$links['actions']['urlshortener'] = [
-				'icon' => 'link',
+				// Use the QR code icon to distinguish this from the "Permanent link" icon
+				'icon' => 'qrCode',
 				'href' => SpecialPage::getTitleFor( 'UrlShortener' )->getLocalURL( [ 'url' => $fullURL ] ),
 				'text' => $sktemplate->msg( 'urlshortener-toolbox' )->plain(),
-			];
-		}
-
-		if ( $this->enableQrCode ) {
-			// Add "Download QR code" link
-			$links['actions']['qrcode'] = [
-				'icon' => 'qrCode',
-				'href' => SpecialPage::getTitleFor( 'QrCode' )->getLocalURL( [ 'url' => $fullURL ] ),
-				'text' => $sktemplate->msg( 'urlshortener-toolbox-qrcode' )->plain(),
 			];
 		}
 	}
