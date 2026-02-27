@@ -318,7 +318,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$utils = $this->getUtils();
 		$url = 'http://example.org/1';
 		$status = $utils->maybeCreateShortCode( $url, new User );
-		$this->assertTrue( $status->isGood() );
+		$this->assertStatusGood( $status );
 		$id = $status->getValue()['url'];
 		$storedUrl = $utils->getURL( $id, PROTO_HTTP );
 
@@ -336,7 +336,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 		$urlToShorten = 'http://test.example.org/wiki/Unshortened_Url';
 		$status = $utils->maybeCreateShortCode( $urlToShorten, new User );
-		$this->assertTrue( $status->isGood() );
+		$this->assertStatusGood( $status );
 
 		$id = $status->getValue()['url'];
 		$shortUrl = $utils->makeUrl( $id );
@@ -355,7 +355,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 		$urlToShorten = 'http://test.example.org/wiki/Unshortened_Url';
 		$status = $utils->maybeCreateShortCode( $urlToShorten, new User );
-		$this->assertTrue( $status->isGood() );
+		$this->assertStatusGood( $status );
 
 		$id = $status->getValue()['url'];
 		$shortUrl = $utils->makeUrl( $id );
@@ -370,9 +370,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$utils = $this->getUtils();
 		$status = $utils->maybeCreateShortCode( $url, new User );
 
-		$this->assertFalse( $status->isGood() );
-		$this->assertEquals( 'urlshortener-url-too-long', $status->getErrors()[0]['message']->getKey() );
-		$this->assertEquals( 'error', $status->getErrors()[0]['type'] );
+		$this->assertStatusError( 'urlshortener-url-too-long', $status );
 	}
 
 	public function testDeleteURL() {
@@ -418,9 +416,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 
 		$status = $utils->maybeCreateShortCode( $url, $user );
 
-		$this->assertFalse( $status->isGood() );
-		$this->assertEquals( 'urlshortener-blocked', $status->getErrors()[0]['message'] );
-		$this->assertEquals( 'error', $status->getErrors()[0]['type'] );
+		$this->assertStatusError( 'urlshortener-blocked', $status );
 	}
 
 	public function testGetAllowedDomainsRegex() {

@@ -19,7 +19,7 @@ class DumpURLsTest extends MaintenanceBaseTestCase {
 		for ( $i = 0; $i < 10; $i++ ) {
 			$url = 'http://example.org/' . $i;
 			$status = $utils->maybeCreateShortCode( $url, new User );
-			$this->assertTrue( $status->isGood() );
+			$this->assertStatusGood( $status );
 		}
 
 		$tmpFile = $this->getNewTempFile();
