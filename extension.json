@@ -282,7 +282,7 @@
 			"value": 2000
 		},
 		"UrlShortenerEnableQrCode": {
-			"value": false,
+			"value": true,
 			"description": "Enables the QR Code sharing functionality."
 		},
 		"UrlShortenerQrCodeShortenLimit": {
