@@ -62,7 +62,7 @@
 		"urlshortener"
 	],
 	"LogActionsHandlers": {
-		"urlshortener/*": "LogFormatter"
+		"urlshortener/*": "MediaWiki\\Logging\\LogFormatter"
 	},
 	"ActionFilteredLogs": {
 		"urlshortener": {
