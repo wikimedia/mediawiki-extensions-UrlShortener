@@ -1,5 +1,5 @@
 ( function () {
-	let widgetPromise;
+	let panelPromise;
 
 	// eslint-disable-next-line no-jquery/no-global-selector
 	const $shortenUrlLink = $( '#t-urlshortener a, .menu__item--page-actions-overflow-urlshortener' );
@@ -9,46 +9,50 @@
 	$shortenUrlLink.attr( 'aria-haspopup', 'dialog' );
 	$shortenUrlLink.on( 'click', ( e ) => {
 		e.preventDefault();
-		if ( !widgetPromise ) {
+		if ( !panelPromise ) {
 			const linkText = $shortenUrlLink.html();
 			$shortenUrlLink.text( mw.msg( 'urlshortener-url-input-submitting' ) );
-			widgetPromise = mw.loader.using( [
+			panelPromise = mw.loader.using( [
 				'oojs-ui-windows',
 				'mediawiki.api',
 				'mediawiki.widgets'
 			] ).then( () => {
 				const api = new mw.Api();
-				return Promise.all( [ undefined, 1 ].map( ( qr ) => api.post( {
+				return api.post( {
 					action: 'shortenurl',
 					url: window.location.href,
-					qrcode: qr
-				} ) ) ).then( ( data ) => {
-					const urlRepsonse = data[ 0 ].shortenurl;
-					const widget = new mw.widgets.CopyTextLayout( {
-						align: 'top',
-						label: mw.msg( 'urlshortener-shortened-url-label' ),
-						classes: [ 'ext-urlshortener-result', 'ext-urlshortener-result-dialog' ],
-						copyText: urlRepsonse.shorturl,
-						help: mw.msg( 'urlshortener-shortened-url-alt' ),
-						helpInline: true,
-						successMessage: mw.msg( 'urlshortener-copy-success' ),
-						failMessage: mw.msg( 'urlshortener-copy-fail' )
-					} );
-					const $alt = $( '<a>' );
-					widget.$help.append( ' ', $alt );
-					$alt.attr( 'href', urlRepsonse.shorturlalt )
-						.text( urlRepsonse.shorturlalt );
-					$alt.off( 'click' ).on( 'click', ( event ) => {
-						event.preventDefault();
-						widget.textInput.setValue( urlRepsonse.shorturlalt );
-						widget.onButtonClick();
-						widget.textInput.setValue( urlRepsonse.shorturl );
-						$alt[ 0 ].focus();
-					} );
-					const qrResponse = data[ 1 ].shortenurl;
-					if ( qrResponse.qrcode ) {
+					qrcode: true
+				} ).then( ( response ) => {
+					const data = response.shortenurl;
+					const panel = new OO.ui.PanelLayout( { expanded: false } );
+					if ( data.shorturl ) {
+						const widget = new mw.widgets.CopyTextLayout( {
+							align: 'top',
+							label: mw.msg( 'urlshortener-shortened-url-label' ),
+							classes: [ 'ext-urlshortener-result', 'ext-urlshortener-result-dialog' ],
+							copyText: data.shorturl,
+							help: mw.msg( 'urlshortener-shortened-url-alt' ),
+							helpInline: true,
+							successMessage: mw.msg( 'urlshortener-copy-success' ),
+							failMessage: mw.msg( 'urlshortener-copy-fail' )
+						} );
+						const $alt = $( '<a>' );
+						widget.$help.append( ' ', $alt );
+						$alt.attr( 'href', data.shorturlalt )
+							.text( data.shorturlalt );
+						$alt.off( 'click' ).on( 'click', ( event ) => {
+							event.preventDefault();
+							widget.textInput.setValue( data.shorturlalt );
+							widget.onButtonClick();
+							widget.textInput.setValue( data.shorturl );
+							$alt[ 0 ].focus();
+						} );
+						panel.$element.append( widget.$element );
+						panel.copyTextWidget = widget;
+					}
+					if ( data.qrcode ) {
 						$shortenUrlLink.html( linkText );
-						const qrCodeUri = `data:image/svg+xml;charset=utf-8,${ encodeURIComponent( qrResponse.qrcode ) }`;
+						const qrCodeUri = `data:image/svg+xml;charset=utf-8,${ encodeURIComponent( data.qrcode ) }`;
 						const download = new OO.ui.ButtonWidget( {
 							icon: 'download',
 							label: mw.msg( 'urlshortener-toolbox-qrcode' ),
@@ -59,24 +63,26 @@
 							// OOUI prefixes './' for security, so set the attribute directly
 							href: qrCodeUri
 						} );
-						widget.$element.append(
+						panel.$element.append(
 							$( '<div>' ).addClass( 'ext-urlshortener-qrcode' ).append(
 								$( '<img>' ).attr( 'src', qrCodeUri ),
 								download.$element
 							)
 						);
 					}
-					return widget;
+					return panel;
 				} );
 			} );
 		}
-		widgetPromise.then(
-			( widget ) => {
-				OO.ui.alert( widget.$element, { size: 'medium' } );
-				// HACK: Wait for setup and ready processes to complete
-				setTimeout( () => {
-					widget.button.focus();
-				}, 500 );
+		panelPromise.then(
+			( panel ) => {
+				OO.ui.alert( panel.$element, { size: 'medium' } );
+				if ( panel.copyTextWidget ) {
+					// HACK: Wait for setup and ready processes to complete
+					setTimeout( () => {
+						panel.copyTextWidget.button.focus();
+					}, 500 );
+				}
 			},
 			() => {
 				// Point the link to Special:UrlShortener

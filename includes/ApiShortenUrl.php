@@ -21,6 +21,7 @@ use Wikimedia\Stats\StatsFactory;
 
 class ApiShortenUrl extends ApiBase {
 
+	private bool $shortUrlEnabled;
 	private bool $qrCodeEnabled;
 	private int $qrCodeShortenLimit;
 	private readonly StatsFactory $statsFactory;
@@ -34,6 +35,7 @@ class ApiShortenUrl extends ApiBase {
 	) {
 		parent::__construct( $mainModule, $moduleName );
 
+		$this->shortUrlEnabled = !(bool)$this->getConfig()->get( 'UrlShortenerReadOnly' );
 		$this->qrCodeEnabled = (bool)$this->getConfig()->get( 'UrlShortenerEnableQrCode' );
 		$this->qrCodeShortenLimit = (int)$this->getConfig()->get( 'UrlShortenerQrCodeShortenLimit' );
 		$this->statsFactory = $statsFactory->withComponent( 'UrlShortener' );
@@ -42,46 +44,47 @@ class ApiShortenUrl extends ApiBase {
 	public function execute() {
 		$this->checkUserRights();
 
-		if ( $this->getConfig()->get( 'UrlShortenerReadOnly' ) ) {
-			$this->dieWithError( 'apierror-urlshortener-disabled' );
-		}
-
 		$params = $this->extractRequestParams();
 
 		$url = $params['url'];
-		$qrCode = $this->qrCodeEnabled && $params['qrcode'];
 
 		$validityCheck = $this->utils->validateUrl( $url );
 		if ( $validityCheck !== true ) {
 			$this->dieStatus( Status::newFatal( $validityCheck ) );
 		}
 
-		if ( $qrCode ) {
-			$status = $this->utils->getQrCode( $url, $this->qrCodeShortenLimit, $this->getUser() );
-		} else {
-			$status = $this->utils->maybeCreateShortCode( $url, $this->getUser() );
-		}
-
-		if ( !$status->isOK() ) {
-			$this->dieStatus( $status );
-		}
-
-		$shortUrlsOrQrCode = $status->getValue();
-		$urlShortened = isset( $shortUrlsOrQrCode[ 'url' ] );
-
 		$ret = [];
+		$qrCodeGenerated = false;
+		$urlShortened = false;
 
-		// QR codes may not have short URLs, in which case we don't want them in the response.
-		if ( $urlShortened ) {
-			$ret['shorturl'] = $this->utils->makeUrl( $shortUrlsOrQrCode[ 'url' ] );
-			$ret['shorturlalt'] = $this->utils->makeUrl( $shortUrlsOrQrCode[ 'alt' ] );
+		if ( !$this->shortUrlEnabled ) {
+			$this->addWarning( 'apierror-urlshortener-disabled' );
+		} else {
+			$urlStatus = $this->utils->maybeCreateShortCode( $url, $this->getUser() );
+			if ( !$urlStatus->isOK() ) {
+				$this->dieStatus( $urlStatus );
+			}
+			$shortUrls = $urlStatus->getValue();
+			$urlShortened = isset( $shortUrls[ 'url' ] );
+			if ( $urlShortened ) {
+				$ret['shorturl'] = $this->utils->makeUrl( $shortUrls[ 'url' ] );
+				$ret['shorturlalt'] = $this->utils->makeUrl( $shortUrls[ 'alt' ] );
+			}
 		}
 
-		if ( $qrCode ) {
-			$ret['qrcode'] = $shortUrlsOrQrCode['qrcode'];
+		if ( $this->qrCodeEnabled && $params['qrcode'] ) {
+			$qrCodeStatus = $this->utils->getQrCode( $url, $this->qrCodeShortenLimit, $this->getUser() );
+			if ( !$qrCodeStatus->isOK() ) {
+				$this->dieStatus( $qrCodeStatus );
+			}
+			$qrCodeValue = $qrCodeStatus->getValue();
+			$qrCodeGenerated = isset( $qrCodeValue['qrcode'] );
+			if ( $qrCodeGenerated ) {
+				$ret['qrcode'] = $qrCodeValue['qrcode'];
+			}
 		}
 
-		$this->recordInStats( $urlShortened, $qrCode );
+		$this->recordInStats( $urlShortened, $qrCodeGenerated );
 
 		// You get the cached response, YOU get the cached response, EVERYONE gets the cached response.
 		$this->getMain()->setCacheMode( "public" );
