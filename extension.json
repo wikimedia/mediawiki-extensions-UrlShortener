@@ -110,6 +110,7 @@
 				"urlshortener-error-nouserpass",
 				"urlshortener-shortened-url-alt",
 				"urlshortener-shortened-url-label",
+				"urlshortener-toolbox-qrcode",
 				"urlshortener-url-input-submit",
 				"urlshortener-url-input-submitting"
 			],
@@ -122,32 +123,9 @@
 				"mediawiki.widgets"
 			]
 		},
-		"ext.urlShortener.qrCode.special": {
-			"packageFiles": [
-				"modules/ext.urlShortener.special.js"
-			],
-			"messages": [
-				"urlshortener-copy-fail",
-				"urlshortener-copy-success",
-				"urlshortener-error-badports",
-				"urlshortener-error-disallowed-url",
-				"urlshortener-error-malformed-url",
-				"urlshortener-error-nouserpass",
-				"urlshortener-shortened-url-alt",
-				"urlshortener-shortened-url-label",
-				"urlshortener-qrcode-form-submit",
-				"urlshortener-url-input-submitting"
-			],
-			"dependencies": [
-				"mediawiki.api",
-				"mediawiki.htmlform.ooui",
-				"mediawiki.widgets",
-				"ext.urlShortener.qrCode.special.styles"
-			]
-		},
-		"ext.urlShortener.qrCode.special.styles": {
+		"ext.urlShortener.special.styles": {
 			"styles": [
-				"modules/ext.urlShortener.qrCode.special.less"
+				"modules/ext.urlShortener.special.less"
 			]
 		},
 		"ext.urlShortener.toolbar": {

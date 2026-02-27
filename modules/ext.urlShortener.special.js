@@ -6,7 +6,7 @@ class UrlShortener {
 
 		this.regex = new RegExp( mw.config.get( 'wgUrlShortenerAllowedDomains' ) );
 		this.allowArbitraryPorts = mw.config.get( 'wgUrlShortenerAllowArbitraryPorts' );
-		this.isQrCode = mw.config.get( 'wgCanonicalSpecialPageName' ) === 'QrCode';
+		this.enableQrCode = !!mw.config.get( 'wgUrlShortenerEnableQrCode' );
 		/** @type {OO.ui.FieldLayout} */
 		this.fieldLayout = null;
 		/** @type {OO.ui.TextInputWidget} */
@@ -107,7 +107,19 @@ class UrlShortener {
 		this.shortened.textInput.select();
 	}
 
+	/**
+	 * Update the QR code in the UI, creating it if necessary.
+	 *
+	 * @param {string} [qrCodeSvg] SVG string. If not provided the existing QR code will be removed.
+	 */
 	qrCodeUiHandler( qrCodeSvg ) {
+		if ( !qrCodeSvg ) {
+			// eslint-disable-next-line no-jquery/no-global-selector
+			$( '.ext-urlshortener-qrcode-container' ).remove();
+			this.$qrCodeImage = null;
+			this.qrCodeDownloadButton = null;
+			return;
+		}
 		const qrCodeUri = `data:image/svg+xml;charset=utf-8,${ encodeURIComponent( qrCodeSvg ) }`;
 		if ( this.$qrCodeImage ) {
 			this.$qrCodeImage.attr( 'src', qrCodeUri );
@@ -150,7 +162,6 @@ class UrlShortener {
 			this.shortenUrl(
 				this.input.getValue()
 			).then( ( result ) => {
-				// shortUrlUiHandler() *may* be called for Special:QrCode, not always
 				if ( result.shorturl ) {
 					this.shortUrlUiHandler( result );
 				} else if ( this.shortened ) {
@@ -158,11 +169,7 @@ class UrlShortener {
 					this.shortened.$element.remove();
 					this.shortened = null;
 				}
-				// qrCodeUiHandler() should only be called for Special:QrCode,
-				// (but in that case result.qrcode shouldn't be present, anyway)
-				if ( this.isQrCode ) {
-					this.qrCodeUiHandler( result.qrcode );
-				}
+				this.qrCodeUiHandler( result.qrcode );
 			}, ( err ) => {
 				this.fieldLayout.setErrors( [ err.info ] );
 			} ).always( () => {
@@ -208,11 +215,9 @@ class UrlShortener {
 	shortenUrl( url ) {
 		const params = {
 			action: 'shortenurl',
+			qrcode: this.enableQrCode,
 			url
 		};
-		if ( this.isQrCode ) {
-			params.qrcode = true;
-		}
 		return this.api.post( params ).then(
 			( data ) => data.shortenurl,
 			( errCode, data ) => $.Deferred().reject( data.error ).promise()

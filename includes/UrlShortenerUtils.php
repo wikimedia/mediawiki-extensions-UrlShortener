@@ -595,6 +595,24 @@ class UrlShortenerUtils {
 		return Status::newGood( $res );
 	}
 
+	/**
+	 * Build a QR code for an existing short code.
+	 *
+	 * This avoids a second call to maybeCreateShortCode() (and thus a second rate-limit
+	 * hit) when the short code already exists.
+	 *
+	 * @param string $shortUrlCode The short code (not a full URL)
+	 * @param bool $dataUri Return 'qrcode' as a data URI instead of XML.
+	 * @return Status Status with 'qrcode' (XML of the SVG or a data URI).
+	 */
+	public function getQrCodeForShortCode( string $shortUrlCode, bool $dataUri = false ): Status {
+		$url = $this->makeUrl( $shortUrlCode );
+		$qrCode = $this->getQrCodeInternal( $url );
+		return Status::newGood( [
+			'qrcode' => $dataUri ? $qrCode->getDataUri() : $qrCode->getString(),
+		] );
+	}
+
 	private function getQrCodeInternal( string $url ): ResultInterface {
 		return ( new Builder(
 			writer: new SvgWriter(),

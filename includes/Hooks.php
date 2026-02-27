@@ -32,7 +32,6 @@ class Hooks implements
 	SkinTemplateNavigation__UniversalHook
 {
 	private bool $enableSidebar;
-	private bool $readOnly;
 	/** @var string|false */
 	private $urlTemplate;
 
@@ -41,8 +40,8 @@ class Hooks implements
 		private readonly ?MobileContext $mobileContext,
 	) {
 		$config = $configFactory->makeConfig( 'urlshortener' );
-		$this->enableSidebar = $config->get( 'UrlShortenerEnableSidebar' );
-		$this->readOnly = $config->get( 'UrlShortenerReadOnly' );
+		$this->enableSidebar = $config->get( 'UrlShortenerEnableSidebar' ) &&
+			( !$config->get( 'UrlShortenerReadOnly' ) || $config->get( 'UrlShortenerEnableQrCode' ) );
 		$this->urlTemplate = $config->get( 'UrlShortenerTemplate' );
 	}
 
@@ -81,7 +80,7 @@ class Hooks implements
 	 * @param Skin $skin
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		if ( $this->readOnly || !$this->enableSidebar || $skin->getTitle()->isSpecial( 'UrlShortener' ) ) {
+		if ( !$this->enableSidebar || $skin->getTitle()->isSpecial( 'UrlShortener' ) ) {
 			return;
 		}
 
@@ -95,7 +94,7 @@ class Hooks implements
 	 * @param array &$sidebar
 	 */
 	public function onSidebarBeforeOutput( $skin, &$sidebar ): void {
-		if ( $this->readOnly || !$this->enableSidebar ) {
+		if ( !$this->enableSidebar ) {
 			return;
 		}
 
@@ -117,7 +116,7 @@ class Hooks implements
 	 * @param array &$links
 	 */
 	public function onSkinTemplateNavigation__Universal( $sktemplate, &$links ): void {
-		if ( $this->readOnly || $this->mobileContext === null || !$this->mobileContext->shouldDisplayMobileView() ) {
+		if ( $this->mobileContext === null || !$this->mobileContext->shouldDisplayMobileView() ) {
 			return;
 		}
 

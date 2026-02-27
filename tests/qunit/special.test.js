@@ -6,6 +6,7 @@ QUnit.module( 'ext.urlShortener.special', ( hooks ) => {
 			// See UrlShortenerUtils::getAllowedDomainsRegex
 			wgUrlShortenerAllowedDomains: 'example.org',
 			wgUrlShortenerAllowArbitraryPorts: false,
+			wgUrlShortenerEnableQrCode: false,
 			wgCanonicalSpecialPageName: false
 		} );
 	} );
