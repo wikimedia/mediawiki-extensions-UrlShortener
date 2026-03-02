@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yaw tuba"
+		]
+	},
+	"urlshortener-toolbox": "Get shortened URL",
+	"urlshortener-toolbox-qrcode": "Make you Download QR code",
+	"urlshortener-qrcode-downloaded": "QR code download as SVG file"
+}
