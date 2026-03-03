@@ -464,7 +464,7 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 		$utils = $this->getUtils();
 
 		$this->assertTrue( $utils->validateUrl( 'http://example.org/test' ) );
-		$this->assertSame( 'example\.org', $utils->getAllowedDomainsRegex() );
+		$this->assertSame( '^(.*\.)?example\.org$', $utils->getAllowedDomainsRegex() );
 		$this->assertStringContainsString(
 			'urlshortener-error-disallowed-url',
 			$utils->validateUrl( 'https://en.wikipedia.org/wiki/A' )
@@ -486,16 +486,39 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 			$utils->validateUrl( 'http://example.org:8080/wiki/A' ),
 			'allowed domain with disallowed port'
 		);
-		// FIXME: Default lacks start/end match
-		$this->assertTrue(
+
+		// Imposter URLs should fail.
+		$this->assertStringContainsString(
+			'urlshortener-error-disallowed-url',
 			$utils->validateUrl( 'http://example.org.imposter.invalid/wiki/A' )
 		);
-		$this->assertTrue(
+
+		$this->assertStringContainsString(
+			'urlshortener-error-disallowed-url',
 			$utils->validateUrl( 'http://imposter-example.org/wiki/A' )
 		);
+
+		// This should work since it's a valid subdomain to the wgServer URL.
 		$this->assertTrue(
 			$utils->validateUrl( 'http://admin.example.org/wiki/A' )
 		);
+
+		// Let's try a server URL with a subdomain in it
+		$this->overrideConfigValues( [
+			MainConfigNames::Server => 'http://en.example.org',
+			MainConfigNames::CanonicalServer => 'http://en.example.org',
+		] );
+
+		$this->assertTrue( $utils->validateUrl( 'http://en.example.org/test' ) );
+		$this->assertSame( '^(.*\.)?en\.example\.org$', $utils->getAllowedDomainsRegex() );
+
+		$this->overrideConfigValues( [
+			MainConfigNames::Server => 'http://en.main.example.org',
+			MainConfigNames::CanonicalServer => 'http://en.main.example.org',
+		] );
+
+		$this->assertTrue( $utils->validateUrl( 'http://en.main.example.org/test' ) );
+		$this->assertSame( '^(.*\.)?en\.main\.example\.org$', $utils->getAllowedDomainsRegex() );
 	}
 
 	public function testGetAllowedDomainsRegex_wgServer_with_port() {
