@@ -418,7 +418,8 @@ class UrlShortenerUtils {
 		if ( $allowedDomains === false ) {
 			// Allowed Domains not configured, default to wgServer
 			$serverParts = $this->urlUtils->parse( $this->config->get( MainConfigNames::Server ) ) ?? [];
-			return preg_quote( $serverParts['host'], '/' );
+
+			return '^(.*\.)?' . preg_quote( $serverParts['host'], '/' ) . '$';
 		}
 		// Collapse the allowed domains into a single string, so we have to run regex check only once
 		return '^(?:' . implode( '|', $allowedDomains ) . ')$';
