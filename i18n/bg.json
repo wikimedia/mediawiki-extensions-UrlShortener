@@ -14,7 +14,6 @@
 	"grant-shortenurls": "Създаване на кратки URL адреси",
 	"right-urlshortener-view-log": "Преглед на дневника за управление на кратки URL адреси",
 	"urlshortener": "Скъсител на URL-адреси",
-	"qrcode": "Генератор на QR код",
 	"urlshortener-action-done": "URL адресите са изтрити и/или възстановени",
 	"urlshortener-approved-domains": "Връзки към {{PLURAL:$1|следния домейн може да бъде съкратен|следните домейни могат да бъдат съкратявани}}: $2.",
 	"urlshortener-copy-success": "URL адресът е копиран в системния буфер.",

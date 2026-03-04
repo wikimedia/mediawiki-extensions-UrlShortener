@@ -1,9 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Akbar Soepadhi"
+			"Akbar Soepadhi",
+			"Kandar"
 		]
 	},
+	"urlshortener": "Pamondok URL",
+	"urlshortener-qrcode-enabled": "Jieun URL pondok jeung kode QR.",
+	"urlshortener-form-header": "Tapelkeun URL anjeun di dieu",
 	"urlshortener-toolbox": "URL pondok",
 	"urlshortener-toolbox-qrcode": "Unduh kode QR"
 }

@@ -14,7 +14,6 @@
 	"grant-shortenurls": "Стварэнне кароткіх URL-адрасоў",
 	"right-urlshortener-view-log": "Прагляд журналу кіравання кароткімі URL-адрасамі",
 	"urlshortener": "Скарачальнік URL-адрасоў",
-	"qrcode": "Генератар QR-кодаў",
 	"urlshortener-action-done": "URL-адрасы былі выдалены або адноўлены",
 	"urlshortener-approved-domains": "Спасылкі на {{PLURAL:$1|наступны дамен|наступныя дамены}} могуць быць скарочаныя: $2.",
 	"urlshortener-blocked": "Заблакаваныя ўдзельнікі не могуць ствараць кароткія URL-адрасы.",

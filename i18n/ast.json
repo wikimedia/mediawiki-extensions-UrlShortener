@@ -6,7 +6,6 @@
 		]
 	},
 	"urlshortener": "Acurtiador d'URL",
-	"qrcode": "Xenerador de códigos QR",
 	"urlshortener-approved-domains": "Los enllaces {{PLURAL:$1|al siguiente dominiu|a los siguientes dominios}} pueden encurtiase: $2.",
 	"urlshortener-desc": "Acurtiador pa URLs cualesquiera",
 	"urlshortener-disabled": "La creación de nueves URLs curties ta desactivada temporalmente.",

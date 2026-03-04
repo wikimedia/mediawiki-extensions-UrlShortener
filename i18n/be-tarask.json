@@ -13,7 +13,6 @@
 	"grant-shortenurls": "Стварэньне кароткіх URL",
 	"right-urlshortener-view-log": "Прагляд журналу кіраваньня кароткімі URL",
 	"urlshortener": "Скарачальнік URL",
-	"qrcode": "Генэратар QR-кодаў",
 	"urlshortener-action-done": "URL былі выдаленыя і/або адноўленыя",
 	"urlshortener-approved-domains": "Спасылкі на {{PLURAL:$1|гэты дамэн|гэтыя дамэны}} могуць быць скарочаныя: $2.",
 	"urlshortener-toolbox": "Атрымаць скарочаны URL",
