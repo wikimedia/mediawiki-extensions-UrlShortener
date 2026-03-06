@@ -28,7 +28,7 @@
 	"urlshortener-error-malformed-url": "Non es un URL valide",
 	"urlshortener-error-nouserpass": "URLs que contine un nomine de usator o un contrasigno non es autorisate a esser accurtate",
 	"urlshortener-failed-try-again": "Fallite. Tentar lo de novo?",
-	"urlshortener-form-header": "Colla tu URL longe hic",
+	"urlshortener-form-header": "Colla tu URL hic",
 	"urlshortener-manage-text": "Usa le formulario hic infra pro deler un URL curte o pro restaurar un URL delite.<br>Post deler un URL curte hic, le URL curte non plus redirigera al pagina al qual illo redirigeva anteriormente. Tote le ligamines facite con illo rumpera. Per favor usa iste function con cautela. Iste action essera [[Special:Log/urlshortener|registrate]].",
 	"urlshortener-manage-delete-failed": "Le deletion del URL ha fallite",
 	"urlshortener-manage-not-enough-data": "Tu debe determinar un codice curte de URL a deler o a restaurar",
