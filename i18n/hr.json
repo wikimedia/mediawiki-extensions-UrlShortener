@@ -30,7 +30,7 @@
 	"urlshortener-error-malformed-url": "Nevrijedeća URL adresa",
 	"urlshortener-error-nouserpass": "Nije dopušteno skraćivanje URL-ova koji sadrže suradnička imena ili zaporke",
 	"urlshortener-failed-try-again": "Neuspješno. Pokušati ponovo?",
-	"urlshortener-form-header": "Ovdje zalijepite Vaš dugačak URL",
+	"urlshortener-form-header": "Ovdje zalijepite Vaš URL",
 	"urlshortener-manage-delete-failed": "Brisanje URL-a nije uspjelo",
 	"urlshortener-manage-not-enough-data": "Trebate utvrditi jedan kratki kôd URL-a koji želite izbrisati ili vratiti",
 	"urlshortener-manage-restore-failed": "Vraćanje URL-a nije uspjelo",

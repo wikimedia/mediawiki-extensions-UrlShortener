@@ -30,7 +30,7 @@
 	"urlshortener-error-malformed-url": "URL direizh",
 	"urlshortener-error-nouserpass": "Ne c’haller ket berraat URLoù a zo un anv implijer pe ur ger-tremen enno",
 	"urlshortener-failed-try-again": "C’hwitet. Klask en-dro?",
-	"urlshortener-form-header": "Pegit hoc’h URL hir amañ",
+	"urlshortener-form-header": "Pegit hoc’h URL amañ",
 	"urlshortener-manage-text": "Grit gant ar furmskrid a-is evit dilemel un URL berr pe resteurel unan a zo bet dilamet.<br>Goude bezañ dilamet an URL berr, ne gaso ket al liamm berr war-zu ar bajenn. An holl liammoù graet gantañ a vo torret. Taolit evezh en ur ober gant an arc’hwel-mañ mar plij. [[Special:Log/urlshortener|Marilhet]] a vo an obererezh-mañ.",
 	"urlshortener-manage-delete-failed": "Dilemel URL c’hwitet",
 	"urlshortener-manage-not-enough-data": "Rankout a rit dibab ur c’hod berr URL da vezañ dilamet pe restaolet",
