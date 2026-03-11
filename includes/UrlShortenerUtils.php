@@ -513,7 +513,6 @@ class UrlShortenerUtils {
 				if ( isset( self::$decodeMap[$variant] ) || !isset( self::$decodeMap[$target] ) ) {
 					throw new ConfigException( 'Invalid wgUrlShortenerIdMapping' );
 				}
-				// @phan-suppress-next-line PhanTypeArraySuspiciousNullable
 				self::$decodeMap[$variant] = self::$decodeMap[$target];
 			}
 		}
@@ -525,7 +524,6 @@ class UrlShortenerUtils {
 			if ( !isset( self::$decodeMap[$s[$i]] ) || !is_int( $x ) ) {
 				return null;
 			}
-			// @phan-suppress-next-line PhanTypeArraySuspiciousNullable
 			$val = self::$decodeMap[$s[$i]];
 			$x += $alt ?
 				$n - 1 - $val :

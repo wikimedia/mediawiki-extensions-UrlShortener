@@ -119,11 +119,10 @@ class SpecialUrlShortener extends FormSpecialPage {
 			'wgUrlShortenerEnableQrCode' => (bool)$this->getConfig()->get( 'UrlShortenerEnableQrCode' ),
 		] );
 		if ( $this->resultField !== null ) {
-			$form->addFooterHtml( $this->resultField );
+			$form->addFooterHtml( (string)$this->resultField );
 		}
 		if ( $this->resultStatus !== null && isset( $this->resultStatus->getValue()['qrcode'] ) ) {
-			// We have to use raw HTML because we need to link to a data URI.
-			$form->addFooterHtml( new HtmlSnippet( $this->getQrCodeHtml() ) );
+			$form->addFooterHtml( $this->getQrCodeHtml() );
 		}
 	}
 
