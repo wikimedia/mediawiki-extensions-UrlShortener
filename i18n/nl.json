@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Elderson",
+			"HanV",
 			"Jeroen N",
 			"Mainframe98",
 			"Mar(c)",
@@ -20,6 +21,7 @@
 	"grant-shortenurls": "Korte URL’s aanmaken",
 	"right-urlshortener-view-log": "Het beheerlogboek korte URL’s bekijken",
 	"urlshortener": "URL-verkorter",
+	"urlshortener-qrcode-enabled": "Korte URL's en QR-codes genereren.",
 	"urlshortener-action-done": "De URL’s zijn verwijderd en/of hersteld",
 	"urlshortener-approved-domains": "Koppelingen naar {{PLURAL:$1|het volgende domein|de volgende domeinen}} mogen verkort worden: $2.",
 	"urlshortener-blocked": "Geblokkeerde gebruikers kunnen geen korte URL’s maken.",
