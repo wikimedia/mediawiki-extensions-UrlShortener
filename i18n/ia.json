@@ -13,6 +13,7 @@
 	"grant-shortenurls": "Crear URLs curte",
 	"right-urlshortener-view-log": "Vider le registro de gestion de URLs curte",
 	"urlshortener": "Accurtator de URLs",
+	"urlshortener-qrcode-enabled": "Genera URLs curte e codices QR.",
 	"urlshortener-action-done": "URLs que ha essite delite e/o restaurate",
 	"urlshortener-approved-domains": "Le ligamines al sequente dominio{{PLURAL:$1||s}} pote esser accurtate: $2.",
 	"urlshortener-blocked": "Le usatores blocate non pote facer URLs curte.",
