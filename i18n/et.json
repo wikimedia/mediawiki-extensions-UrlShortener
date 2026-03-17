@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Pikne"
+			"Pikne",
+			"Rivoz"
 		]
 	},
 	"action-urlshortener-create-url": "luua lühendatud URL-e",
@@ -16,7 +17,7 @@
 	"urlshortener-approved-domains": "Lühendada saab linke {{PLURAL:$1|järgmisesse domeeni|järgmistesse domeenidesse}}: $2.",
 	"urlshortener-copy-fail": "URL-i kopeerimine lõikelauale ei õnnestunud.",
 	"urlshortener-copy-success": "URL kopeeritud lõikelauale.",
-	"urlshortener-form-header": "Kleebi siia pikk URL",
+	"urlshortener-form-header": "Kleebi oma URL siia",
 	"urlshortener-shortened-url-alt": "Saad kasutada ka seda alternatiivset URL-i:",
 	"urlshortener-shortened-url-label": "Lühendatud URL",
 	"urlshortener-toolbox": "Hangi lühendatud URL",
