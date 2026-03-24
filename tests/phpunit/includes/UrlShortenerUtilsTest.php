@@ -235,6 +235,11 @@ class UrlShortenerUtilsTest extends MediaWikiIntegrationTestCase {
 				'http://example.org/this/is/#anchor',
 				'http://example.org/this/is/#anchor',
 			],
+			// slash spoofing domain name
+			[
+				'http://example.org\.wikipedia.org/foo.html',
+				'http://example.org.wikipedia.org/foo.html'
+			],
 		];
 	}
 

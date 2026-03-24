@@ -171,6 +171,10 @@ class UrlShortenerUtils {
 				unset( $parsed['query'] );
 			}
 		}
+
+		// T418533 - eventually migrate to WHATWG-compliant url parser
+		$parsed['host'] = str_replace( '\\', '', $parsed['host'] );
+
 		$url = UrlUtils::assemble( $parsed );
 
 		return $url;
