@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Pikne"
+			"Pikne",
+			"Rivoz"
 		]
 	},
 	"action-urlshortener-create-url": "luua lühendatud URL-e",
