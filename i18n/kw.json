@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Flynn"
+		]
+	},
+	"urlshortener-toolbox": "Kerghes gorgevren kott",
+	"urlshortener-toolbox-qrcode": "Iskarga QR-kod",
+	"urlshortener-qrcode-downloaded": "QR-kod iskargys avel restren SVG"
+}
