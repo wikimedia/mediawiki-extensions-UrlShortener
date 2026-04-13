@@ -36,7 +36,7 @@
 	"urlshortener-error-malformed-url": "Недопустимый URL-адрес",
 	"urlshortener-error-nouserpass": "URL-адреса, содержащие имя пользователя или пароль, не разрешены для сокращения",
 	"urlshortener-failed-try-again": "Не получилось. Попробовать снова?",
-	"urlshortener-form-header": "Вставьте длинный URL-адрес сюда",
+	"urlshortener-form-header": "Вставьте URL-адрес сюда",
 	"urlshortener-manage-restore-failed": "Не удалось восстановить URL-адрес",
 	"urlshortener-manage-reason": "Причина",
 	"urlshortener-not-found-message": "К сожалению, адрес, который вы ищете, не найден.",
@@ -57,6 +57,7 @@
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|удалил|удалила|удалил:а}} короткий URL-адрес «$4»",
 	"logentry-urlshortener-restore": "$1 {{GENDER:$2|восстановил|восстановила|восстановил:а}} короткий URL-адрес «$4»",
 	"logeventslist-urlshortener-log": "Журнал управления короткими URL-адресами",
+	"log-action-filter-urlshortener": "Тип управления",
 	"log-action-filter-urlshortener-delete": "Удаление URL-адреса",
 	"log-action-filter-urlshortener-restore": "Восстановление URL-адреса",
 	"urlshortener-qrcode-downloaded": "QR-код скачан в виде SVG-файла"
