@@ -61,6 +61,7 @@
 	"logentry-urlshortener-delete": "$1 {{GENDER:$2|удалил|удалила|удалил:а}} короткий URL-адрес «$4»",
 	"logentry-urlshortener-restore": "$1 {{GENDER:$2|восстановил|восстановила|восстановил:а}} короткий URL-адрес «$4»",
 	"logeventslist-urlshortener-log": "Журнал управления короткими URL-адресами",
+	"log-action-filter-urlshortener": "Тип управления",
 	"log-action-filter-urlshortener-delete": "Удаление URL-адреса",
 	"log-action-filter-urlshortener-restore": "Восстановление URL-адреса",
 	"urlshortener-qrcode-downloaded": "QR-код скачан в виде SVG-файла"
