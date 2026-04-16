@@ -13,13 +13,13 @@ namespace MediaWiki\Extension\UrlShortener;
 
 use MediaWiki\Config\ConfigException;
 use MediaWiki\Config\ConfigFactory;
-use MediaWiki\Hook\SidebarBeforeOutputHook;
-use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Hook\WebRequestPathInfoRouterHook;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\PathRouter;
 use MediaWiki\Settings\SettingsBuilder;
+use MediaWiki\Skin\Hook\SidebarBeforeOutputHook;
+use MediaWiki\Skin\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Skin\Skin;
 use MediaWiki\Skin\SkinTemplate;
 use MediaWiki\SpecialPage\SpecialPage;
