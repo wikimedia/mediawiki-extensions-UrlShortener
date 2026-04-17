@@ -35,12 +35,16 @@ class SpecialUrlShortener extends FormSpecialPage {
 		private readonly UrlShortenerUtils $utils,
 		private readonly UrlUtils $urlUtils,
 		string $name = 'UrlShortener',
-		string $restriction = 'urlshortener-create-url'
 	) {
 		$this->shortenLimit = $this->getConfig()->get( 'UrlShortenerQrCodeShortenLimit' );
 		$this->enabled = !$this->getConfig()->get( 'UrlShortenerReadOnly' ) ||
 			$this->getConfig()->get( 'UrlShortenerEnableQrCode' );
-		parent::__construct( $name, $restriction );
+		parent::__construct( $name );
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'urlshortener-create-url';
 	}
 
 	/**

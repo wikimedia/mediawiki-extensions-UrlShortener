@@ -21,7 +21,12 @@ class SpecialManageShortUrls extends FormSpecialPage {
 	public function __construct(
 		private readonly UrlShortenerUtils $utils,
 	) {
-		parent::__construct( 'ManageShortUrls', 'urlshortener-manage-url' );
+		parent::__construct( 'ManageShortUrls' );
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'urlshortener-manage-url';
 	}
 
 	/**
