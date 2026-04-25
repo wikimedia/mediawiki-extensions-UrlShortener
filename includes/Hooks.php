@@ -80,7 +80,10 @@ class Hooks implements
 	 * @param Skin $skin
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		if ( !$this->enableSidebar || $skin->getTitle()->isSpecial( 'UrlShortener' ) ) {
+		if ( !$this->enableSidebar
+			|| $skin->getTitle()->isSpecial( 'UrlShortener' )
+			|| !$out->getAuthority()->isAllowed( 'urlshortener-create-url' )
+		) {
 			return;
 		}
 
@@ -99,7 +102,10 @@ class Hooks implements
 		}
 
 		$fullURL = self::getFullUrl( $skin );
-		if ( $this->enableSidebar && !$skin->getTitle()->isSpecial( 'UrlShortener' ) ) {
+		if ( $this->enableSidebar
+			&& !$skin->getTitle()->isSpecial( 'UrlShortener' )
+			&& $skin->getAuthority()->isAllowed( 'urlshortener-create-url' )
+		) {
 			// Append link to generate short URL
 			$sidebar['TOOLBOX']['urlshortener'] = [
 				'id' => 't-urlshortener',
