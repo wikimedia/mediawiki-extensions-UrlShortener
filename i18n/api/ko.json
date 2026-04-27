@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Tensama0415",
 			"Ykhwong"
 		]
 	},
 	"apihelp-shortenurl-summary": "긴 URL을 짧게 줄입니다.",
+	"apihelp-shortenurl-param-url": "단축시킬 URL입니다.",
 	"apierror-urlshortener-permissiondenied": "단축 URL을 만들 권한이 없습니다"
 }
