@@ -1,9 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Tensama0415"
 		]
 	},
 	"apihelp-shortenurl-summary": "긴 URL을 짧게 줄입니다.",
+	"apihelp-shortenurl-param-url": "단축시킬 URL입니다.",
+	"apihelp-shortenurl-param-qrcode": "QR 코드를 얻습니다. 링크된 URL은 매우 긴 경우에만 단축됩니다.",
+	"apihelp-shortenurl-example-1": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>에 대한 단축 URL을 얻습니다.",
+	"apihelp-shortenurl-example-2": "<kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>에 대한 QR 코드를 얻습니다.",
+	"apierror-urlshortener-disabled": "새로운 단축 URL을 생성할 수 없습니다.",
 	"apierror-urlshortener-permissiondenied": "단축 URL을 만들 권한이 없습니다"
 }

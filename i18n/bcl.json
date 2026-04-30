@@ -1,10 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Brazal.dang"
+			"Brazal.dang",
+			"ShiminUfesoj"
 		]
 	},
 	"action-urlshortener-create-url": "Maggibo nin halipot na URL",
 	"right-urlshortener-create-url": "Maggibo ni halipot na URL",
-	"action-urlshortener-manage-url": "Manehiron an halipot na URL"
+	"action-urlshortener-manage-url": "Manehiron an halipot na URL",
+	"urlshortener-toolbox": "Magkua nin pinahalipot na URL",
+	"urlshortener-toolbox-qrcode": "I-download an QR code",
+	"urlshortener-qrcode-downloaded": "QR code na na-download bilang SVG file"
 }
