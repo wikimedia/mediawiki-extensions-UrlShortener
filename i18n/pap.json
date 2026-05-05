@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kallmemel"
+		]
+	},
+	"urlshortener-toolbox": "Haña URL kòrtiku",
+	"urlshortener-toolbox-qrcode": "Deskargá kódigo di QR",
+	"urlshortener-qrcode-downloaded": "Kódigo di QR deskargá komo SVG fail"
+}

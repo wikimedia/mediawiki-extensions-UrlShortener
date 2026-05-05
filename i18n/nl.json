@@ -7,7 +7,9 @@
 			"Mar(c)",
 			"McDutchie",
 			"Robin van der Vliet",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"HanV",
+			"Siebrand"
 		]
 	},
 	"action-urlshortener-create-url": "korte URL’s aan te maken",
@@ -53,7 +55,7 @@
 	"urlshortener-shortened-url-label": "Verkorte URL",
 	"urlshortener-toolbox": "Verkorte URL verkrijgen",
 	"urlshortener-toolbox-qrcode": "QR-code downloaden",
-	"urlshortener-url-input-label": "URL",
+	"urlshortener-url-input-label": "Url",
 	"urlshortener-url-input-submit": "Verkorten",
 	"urlshortener-url-input-submitting": "Wordt verkort…",
 	"urlshortener-url-too-long": "De URL is te lang, de maximale grootte is {{PLURAL:$1|één teken|$1 tekens}}",
