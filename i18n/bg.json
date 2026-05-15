@@ -17,7 +17,7 @@
 	"urlshortener-action-done": "URL адресите са изтрити и/или възстановени",
 	"urlshortener-approved-domains": "Връзки към {{PLURAL:$1|следния домейн може да бъде съкратен|следните домейни могат да бъдат съкратявани}}: $2.",
 	"urlshortener-copy-success": "URL адресът е копиран в системния буфер.",
-	"urlshortener-form-header": "Поставете дългия URL адрес тук",
+	"urlshortener-form-header": "Поставете URL адреса тук",
 	"urlshortener-manage-reason": "Причина",
 	"urlshortener-ratelimit": "Моля, изчакайте известно време, преди да скъсите още URL адреси.",
 	"urlshortener-short-code-is-not-deleted": "Краткият код на URL адреса не е изтрит",
