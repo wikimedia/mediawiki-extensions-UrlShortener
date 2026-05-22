@@ -11,14 +11,14 @@
 			"아라"
 		]
 	},
-	"action-urlshortener-create-url": "단축 URL을 만들",
+	"action-urlshortener-create-url": "단축 URL 만들기",
 	"right-urlshortener-create-url": "단축 URL 만들기",
-	"action-urlshortener-manage-url": "단축 URL을 관리할",
-	"action-urlshortener-view-log": "단축 URL 관리 기록을 볼",
+	"action-urlshortener-manage-url": "단축 URL 관리하기",
+	"action-urlshortener-view-log": "단축 URL 관리 기록 보기",
 	"manageshorturls": "단축 URL 관리하기",
 	"right-urlshortener-manage-url": "단축 URL 관리하기",
 	"grant-shortenurls": "단축 URL 만들기",
-	"right-urlshortener-view-log": "단축 URL 관리 기록을 볼",
+	"right-urlshortener-view-log": "단축 URL 관리 기록 보기",
 	"urlshortener": "URL 단축기",
 	"urlshortener-qrcode-enabled": "단축 URL과 QR 코드를 생성합니다.",
 	"urlshortener-action-done": "URL이 삭제 또는 복구되었습니다",
