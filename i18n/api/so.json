@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"apihelp-shortenurl-summary": "U beddel URL dheer mid gaaban.",
+	"apihelp-shortenurl-param-url": "URL la gaabinayo",
+	"apihelp-shortenurl-param-qrcode": "Hel koodh QR ah. URL-ka ku xiran waxaa la gaabin doonaa oo keliya haddii uu aad u dheer yahay.",
+	"apihelp-shortenurl-example-1": "Hel URL-ga gaaban ee <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "Hel koodh QR ah ee <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Lama abuuri karo URL-yada gaagaaban cusub",
+	"apierror-urlshortener-permissiondenied": "Ma lihid oggolaansho aad ku abuurto URL-yada gaagaaban"
+}
