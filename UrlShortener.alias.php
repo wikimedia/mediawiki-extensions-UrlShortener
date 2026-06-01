@@ -87,6 +87,11 @@ $specialPageAliases['sr-el'] = [
 	'UrlShortener' => [ 'Skraćivač_adresa', 'Skraćivač_URL_adresa' ],
 ];
 
+/** Ukrainian (Українська) */
+$specialPageAliases['uk'] = [
+	'UrlShortener' => [ 'Скорочувач_URL-адрес', 'Скорочувач_URL' ],
+];
+
 /** Urdu (اردو) */
 $specialPageAliases['ur'] = [
 	'UrlShortener' => [ 'یوآرایل_مختصر_کنندہ' ],
