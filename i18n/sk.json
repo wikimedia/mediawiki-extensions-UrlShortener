@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Luky001",
-			"Teslaton"
+			"Teslaton",
+			"Wizzard"
 		]
 	},
 	"action-urlshortener-create-url": "vytvárať skrátené URL adresy",
@@ -18,7 +19,7 @@
 	"urlshortener-copy-success": "URL skopírované do schránky.",
 	"urlshortener-desc": "Skracovač pre ľubovoľné URL",
 	"urlshortener-error-malformed-url": "Neplatná URL adresa",
-	"urlshortener-form-header": "Vložte dlhú URL adresu sem",
+	"urlshortener-form-header": "Sem vložte svoju URL adresu",
 	"urlshortener-manage-delete-failed": "URL adresu sa nepodarilo vymazať",
 	"urlshortener-manage-restore-failed": "Obnova URL adresy sa nepodarila",
 	"urlshortener-manage-reason": "Dôvod",

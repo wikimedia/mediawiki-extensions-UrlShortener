@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Akbar Soepadhi",
+			"Deepturquoise",
 			"Kandar"
 		]
 	},
@@ -9,5 +10,6 @@
 	"urlshortener-qrcode-enabled": "Jieun URL pondok jeung kode QR.",
 	"urlshortener-form-header": "Tapelkeun URL anjeun di dieu",
 	"urlshortener-toolbox": "URL pondok",
-	"urlshortener-toolbox-qrcode": "Unduh kode QR"
+	"urlshortener-toolbox-qrcode": "Unduh kode QR",
+	"urlshortener-qrcode-downloaded": "Kode QR diundeur salaku berkas SVG"
 }
