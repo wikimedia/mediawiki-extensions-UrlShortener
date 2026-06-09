@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Akbar Soepadhi",
-			"Kandar"
+			"Kandar",
+			"Deepturquoise"
 		]
 	},
 	"urlshortener-toolbox": "URL pondok",
-	"urlshortener-toolbox-qrcode": "Unduh kode QR"
+	"urlshortener-toolbox-qrcode": "Unduh kode QR",
+	"urlshortener-qrcode-downloaded": "Kode QR diundeur salaku berkas SVG"
 }
