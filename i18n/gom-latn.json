@@ -15,5 +15,6 @@
 	"urlshortener-toolbox-qrcode": "QR sonket download kor",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "Dhaktem kor",
-	"urlshortener-url-input-submitting": "Dhaktem korta..."
+	"urlshortener-url-input-submitting": "Dhaktem korta...",
+	"urlshortener-qrcode-downloaded": "QR sonket SVG faylichea rupan download kela"
 }
