@@ -8,7 +8,8 @@
 			"Revi",
 			"Tensama0415",
 			"Ykhwong",
-			"아라"
+			"아라",
+			"解浪"
 		]
 	},
 	"action-urlshortener-create-url": "단축 URL 만들기",
@@ -50,7 +51,7 @@
 	"urlshortener-shortened-url-alt": "이 URL을 대신 사용해도 됩니다:",
 	"urlshortener-shortened-url-label": "축약된 URL",
 	"urlshortener-toolbox": "축약된 URL 얻기",
-	"urlshortener-toolbox-qrcode": "QR코드 다운로드",
+	"urlshortener-toolbox-qrcode": "QR 코드 다운로드",
 	"urlshortener-url-input-label": "URL",
 	"urlshortener-url-input-submit": "단축",
 	"urlshortener-url-input-submitting": "단축하는 중...",
@@ -64,5 +65,5 @@
 	"log-action-filter-urlshortener": "관리 유형",
 	"log-action-filter-urlshortener-delete": "URL 삭제",
 	"log-action-filter-urlshortener-restore": "URL 복원",
-	"urlshortener-qrcode-downloaded": "QR코드를 SVG 파일로 다운로드했습니다"
+	"urlshortener-qrcode-downloaded": "QR 코드를 SVG 파일로 다운로드했습니다"
 }

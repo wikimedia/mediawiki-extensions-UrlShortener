@@ -15,7 +15,8 @@
 			"Shirayuki",
 			"Sujiniku",
 			"Takot",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Tensama0415"
 		]
 	},
 	"action-urlshortener-create-url": "短縮URLの作成",
@@ -27,6 +28,7 @@
 	"grant-shortenurls": "短縮URLを作成",
 	"right-urlshortener-view-log": "短縮URLの管理記録を閲覧",
 	"urlshortener": "URL短縮",
+	"urlshortener-qrcode-enabled": "短縮URLとQRコードを生成します。",
 	"urlshortener-action-done": "URLが削除または復元されました",
 	"urlshortener-approved-domains": "以下の{{PLURAL:$1|ドメイン}}へのリンクのみが短縮可能です。 $2",
 	"urlshortener-blocked": "ブロックされた利用者は短縮 URL を作成できません。",
