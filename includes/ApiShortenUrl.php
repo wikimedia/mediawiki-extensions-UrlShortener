@@ -105,9 +105,8 @@ class ApiShortenUrl extends ApiBase {
 			$type = 'shorturl';
 		}
 
-		$statsdKey = 'extension.UrlShortener.api.';
 		$counter = $this->statsFactory->getCounter( 'api_hits_total' );
-		$counter->setLabel( 'type', $type )->copyToStatsdAt( $statsdKey . $type );
+		$counter->setLabel( 'type', $type );
 		$counter->increment();
 	}
 
