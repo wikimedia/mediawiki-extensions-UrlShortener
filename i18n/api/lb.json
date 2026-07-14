@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
-	"apihelp-shortenurl-param-url": "URL fir ze kierzen",
-	"apierror-urlshortener-disabled": "Et kënne keng nei kuerz URLen ugeluecht ginn"
+	"apihelp-shortenurl-param-url": "URL fir ze kierzen.",
+	"apierror-urlshortener-disabled": "Et kënne keng nei Kuerz-URLe generéiert ginn",
+	"apierror-urlshortener-permissiondenied": "Dir hutt net d'Recht, fir Kuerz-URLen ze generéieren"
 }
