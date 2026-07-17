@@ -1,12 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
+			"Dj",
 			"Tacsipacsi"
 		]
 	},
 	"apihelp-shortenurl-summary": "Egy hosszú URL rövidítése.",
 	"apihelp-shortenurl-param-url": "A rövidítendő URL.",
+	"apihelp-shortenurl-param-qrcode": "QR-kód lekérése. A hivatkozott URL csak akkor lesz lerövidítve, ha nagyon hosszú.",
 	"apihelp-shortenurl-example-1": "Rövid URL lekérése a <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> URL-hez.",
+	"apihelp-shortenurl-example-2": "QR-kód lekérése a <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> URL-hez.",
 	"apierror-urlshortener-disabled": "Nem készíthetők új rövid URL-ek",
 	"apierror-urlshortener-permissiondenied": "Nincs jogosultságod rövid URL-ek készítéséhez"
 }
