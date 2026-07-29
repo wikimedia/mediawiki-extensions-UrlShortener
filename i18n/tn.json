@@ -4,5 +4,7 @@
 			"Sekhomba"
 		]
 	},
-	"urlshortener-toolbox": "Tsenya URL e khutshwafaditsweng"
+	"urlshortener-toolbox": "Tsenya URL e khutshwafaditsweng",
+	"urlshortener-toolbox-qrcode": "Laisolola khoutu ya QR",
+	"urlshortener-qrcode-downloaded": "Khoutu ya QR e laisolotswe jaaka faele ya SVG"
 }
