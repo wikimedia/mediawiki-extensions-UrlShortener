@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"apihelp-shortenurl-summary": "اوږده وېبتړونه په لنډه بڼه لنډ کړئ.",
+	"apihelp-shortenurl-param-url": "وېبتړ چې بايد لنډ شي.",
+	"apihelp-shortenurl-param-qrcode": "کيوار کوډ ترلاسه کړئ. تړونی شوی وېبتړ به يوازې هغه وخت لنډ شي چې کله دا ډېر اوږد وي.",
+	"apihelp-shortenurl-example-1": "د <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> لنډ وېبتړ ترلاسه کړئ.",
+	"apihelp-shortenurl-example-2": "د <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd> کيوار کوډ ترلاسه کړئ.",
+	"apierror-urlshortener-disabled": "هېڅ نوی لنډ وېبتړ ښايي جوړ نشي",
+	"apierror-urlshortener-permissiondenied": "تاسو د لنډ وېبتړونو جوړولو رښته نه لرئ"
+}
