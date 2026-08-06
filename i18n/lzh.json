@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Davidzdh"
+			"Davidzdh",
+			"XiaoAnIsMe"
 		]
 	},
-	"urlshortener-toolbox": "短鏈"
+	"urlshortener-toolbox": "短鏈",
+	"urlshortener-toolbox-qrcode": "下傳二維碼",
+	"urlshortener-qrcode-downloaded": "既下傳二維碼爲可縮放矢量圖"
 }
