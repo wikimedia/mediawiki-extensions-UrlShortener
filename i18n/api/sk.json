@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"apihelp-shortenurl-summary": "Skrátiť dlhú URL na kratšiu.",
+	"apihelp-shortenurl-param-url": "URL, ktorá sa má skrátiť.",
+	"apihelp-shortenurl-param-qrcode": "Získať QR kód. Odkazovaná URL sa skráti, len ak je veľmi dlhá.",
+	"apihelp-shortenurl-example-1": "Získať skrátenú URL pre <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apihelp-shortenurl-example-2": "Získať QR kód pre <kbd><nowiki>https://en.wikipedia.org/wiki/Arctica</nowiki></kbd>.",
+	"apierror-urlshortener-disabled": "Nové skrátené URL sa nedajú vytvárať",
+	"apierror-urlshortener-permissiondenied": "Nemáte oprávnenie vytvárať skrátené URL"
+}
