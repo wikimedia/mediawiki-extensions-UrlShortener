@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Lhanars",
-			"Nicolas Eynaud"
+			"Nicolas Eynaud",
+			"Diabétos"
 		]
 	},
 	"urlshortener-shortened-url-alt": "Podètz tanben utilizar l'URL alternativa:",
 	"urlshortener-toolbox": "Obténer una URL acorchida",
-	"urlshortener-toolbox-qrcode": "Telecargar lo còdi QR"
+	"urlshortener-toolbox-qrcode": "Telecargar lo còdi QR",
+	"urlshortener-qrcode-downloaded": "Còdi QR telecargat coma fichièr SVG"
 }
