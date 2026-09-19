@@ -26,6 +26,7 @@
 			]
 		}
 	},
+	"load_composer_autoloader": true,
 	"AutoloadClasses": {
 		"DumpURLs": "maintenance/dumpURLs.php"
 	},
@@ -278,6 +279,5 @@
 	"DatabaseVirtualDomains": [
 		"virtual-urlshortener"
 	],
-	"load_composer_autoloader": true,
 	"manifest_version": 2
 }

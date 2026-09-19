@@ -14,6 +14,7 @@ namespace MediaWiki\Extension\UrlShortener;
 use MediaWiki\Exception\PermissionsError;
 use MediaWiki\Html\Html;
 use MediaWiki\HTMLForm\HTMLForm;
+use MediaWiki\MainConfigNames;
 use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Status\Status;
@@ -94,7 +95,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 		if ( $urlShortenerApprovedDomains ) {
 			$domains = $urlShortenerApprovedDomains;
 		} else {
-			$parsed = $this->urlUtils->parse( $this->getConfig()->get( 'Server' ) );
+			$parsed = $this->urlUtils->parse( $this->getConfig()->get( MainConfigNames::Server ) );
 			$domains = [ $parsed['host'] ?? '' ];
 		}
 
