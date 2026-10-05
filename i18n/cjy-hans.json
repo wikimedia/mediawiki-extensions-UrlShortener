@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Villager-bloc-h"
+		]
+	},
+	"urlshortener-toolbox": "拿到短链接",
+	"urlshortener-toolbox-qrcode": "下载二维码",
+	"urlshortener-qrcode-downloaded": "已经下载二维码个SVG文件"
+}
