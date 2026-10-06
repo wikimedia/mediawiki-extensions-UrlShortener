@@ -91,7 +91,13 @@ class Hooks implements
 		}
 
 		if ( $legacyTemplate ) {
-			$wgSpecialPages['ShortUrl'] = SpecialLegacyShortUrl::class;
+			$wgSpecialPages['ShortUrl'] = [
+				'class' => SpecialLegacyShortUrl::class,
+				'services' => [
+					'ConnectionProvider',
+					'WANObjectCache'
+				],
+			];
 		}
 	}
 

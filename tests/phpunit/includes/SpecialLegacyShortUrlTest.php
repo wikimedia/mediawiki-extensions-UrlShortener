@@ -50,7 +50,12 @@ class SpecialLegacyShortUrlTest extends MediaWikiIntegrationTestCase {
 			MainConfigNames::ArticlePath => '/wiki/$1',
 			MainConfigNames::Script => '/w/index.php',
 		] );
-		$this->assertSame( $expected, SpecialLegacyShortUrl::decodeURL( $id ) );
+		$services = $this->getServiceContainer();
+		$specialLegacyShortUrl = new SpecialLegacyShortUrl(
+			$services->getConnectionProvider(),
+			$services->getWANObjectCache()
+		);
+		$this->assertSame( $expected, $specialLegacyShortUrl->decodeURL( $id ) );
 	}
 
 	public static function provideDecodeURL() {

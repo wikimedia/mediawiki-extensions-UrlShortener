@@ -39,13 +39,17 @@
 namespace MediaWiki\Extension\UrlShortener;
 
 use MediaWiki\Exception\HttpError;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\SpecialPage\UnlistedSpecialPage;
 use MediaWiki\Title\Title;
+use Wikimedia\ObjectCache\WANObjectCache;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 class SpecialLegacyShortUrl extends UnlistedSpecialPage {
 
-	public function __construct() {
+	public function __construct(
+		private readonly IConnectionProvider $connectionProvider,
+		private readonly WANObjectCache $cache,
+	) {
 		parent::__construct( 'ShortUrl' );
 	}
 
@@ -55,7 +59,7 @@ class SpecialLegacyShortUrl extends UnlistedSpecialPage {
 	public function execute( $par ) {
 		$out = $this->getOutput();
 
-		$url = self::decodeURL( $par );
+		$url = $this->decodeURL( $par );
 		if ( $url !== null ) {
 			$out->redirect( $url, 301 );
 		} else {
@@ -78,7 +82,7 @@ class SpecialLegacyShortUrl extends UnlistedSpecialPage {
 	 * @param string|null $urlFragment
 	 * @return string|null
 	 */
-	public static function decodeURL( $urlFragment ) {
+	public function decodeURL( $urlFragment ) {
 		if ( $urlFragment === null
 			|| !preg_match( '/^[0-9a-z]+$/i', $urlFragment )
 		) {
@@ -88,14 +92,11 @@ class SpecialLegacyShortUrl extends UnlistedSpecialPage {
 		$id = intval( base_convert( $urlFragment, 36, 10 ) );
 
 		$fname = __METHOD__;
-		$services = MediaWikiServices::getInstance();
-		$cache = $services->getMainWANObjectCache();
-		$connectionProvider = $services->getConnectionProvider();
-		$row = $cache->getWithSetCallback(
-			$cache->makeKey( 'shorturls-id', $id ),
-			$cache::TTL_MONTH,
-			static function () use ( $id, $fname, $connectionProvider ) {
-				$dbr = $connectionProvider->getReplicaDatabase();
+		$row = $this->cache->getWithSetCallback(
+			$this->cache->makeKey( 'shorturls-id', $id ),
+			$this->cache::TTL_MONTH,
+			function () use ( $id, $fname ) {
+				$dbr = $this->connectionProvider->getReplicaDatabase();
 				$row = $dbr->newSelectQueryBuilder()
 					->select( [ 'su_namespace', 'su_title' ] )
 					->from( 'shorturls' )
