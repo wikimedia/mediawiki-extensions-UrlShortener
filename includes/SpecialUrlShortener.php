@@ -124,7 +124,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 	 * Validate the URL to ensure that we are allowed to create a shorturl for this.
 	 *
 	 * @param string|null $url The URL to validate
-	 * @return bool|string true if url is valid, error message otherwise
+	 * @return bool|Message true if url is valid, error message otherwise
 	 */
 	public function validateURL( ?string $url ) {
 		// $url is null when the form hasn't been posted
@@ -132,11 +132,7 @@ class SpecialUrlShortener extends FormSpecialPage {
 			// No input
 			return true;
 		}
-		$validity_check = $this->utils->validateUrl( $url );
-		if ( $validity_check === true ) {
-			return true;
-		}
-		return $validity_check->text();
+		return $this->utils->validateUrl( $url );
 	}
 
 	/**
