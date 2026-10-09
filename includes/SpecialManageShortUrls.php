@@ -11,6 +11,7 @@
 
 namespace MediaWiki\Extension\UrlShortener;
 
+use MediaWiki\Language\RawMessage;
 use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\SpecialPage\SpecialPage;
@@ -100,6 +101,10 @@ class SpecialManageShortUrls extends FormSpecialPage {
 
 		if ( !$delete && !$restore ) {
 			return [ 'urlshortener-manage-not-enough-data' ];
+		}
+
+		if ( $delete && $restore ) {
+			return [ new RawMessage( 'You can only delete or restore one URL short code at a time.' ) ];
 		}
 
 		if ( $delete ) {
