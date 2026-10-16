@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Thakurji"
+			"Thakurji",
+			"Girmitya"
 		]
 	},
-	"urlshortener-toolbox": "Get shortened URL"
+	"urlshortener-toolbox": "Get shortened URL",
+	"urlshortener-toolbox-qrcode": "QR code ke download karo",
+	"urlshortener-qrcode-downloaded": "QR code ke SVG file me download kar lewa gais hae"
 }
