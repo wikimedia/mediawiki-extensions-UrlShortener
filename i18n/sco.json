@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Monospaced"
+		]
+	},
+	"urlshortener-toolbox": "Get shortened URL",
+	"urlshortener-toolbox-qrcode": "Download QR code",
+	"urlshortener-qrcode-downloaded": "QR code downloaded as SVG file"
+}
