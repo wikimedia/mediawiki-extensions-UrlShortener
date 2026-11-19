@@ -1,11 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Miilehti"
 		]
 	},
 	"urlshortener-manage-reason": "Mäinn",
 	"urlshortener-qrcode-form-submit": "Vuõlttâd",
+	"urlshortener-toolbox": "Vuäʹned URL-addrõõzz",
 	"urlshortener-toolbox-qrcode": "Laadd QR-koodd",
-	"urlshortener-url-input-label": "URL"
+	"urlshortener-url-input-label": "URL",
+	"urlshortener-qrcode-downloaded": "QR-kood laddum SVG-teâttõssân"
 }
